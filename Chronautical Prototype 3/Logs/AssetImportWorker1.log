@@ -137,3 +137,4 @@ Received Import Request.
 Start importing Assets/Plugins/Pixel Crushers/Dialogue System/Third Party Support/Ink Support.unitypackage using Guid(8a6eaa4e4e356664da332e906c4116ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4abb71341f1adab398472317691b4e45') in 0.357947 seconds 
   Import took 0.397215 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
