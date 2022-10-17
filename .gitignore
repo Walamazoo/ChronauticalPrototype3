@@ -60,3 +60,5 @@ crashlytics-build.properties
 
 Chronautical Prototype 3/Library/
 Chronautical Prototype 3/Temp/
+*.log
+Chronautical Prototype 3/Logs/
