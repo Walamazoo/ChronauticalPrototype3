@@ -354,7 +354,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkAsset: {fileID: 4900000, guid: fbf66865665238f488f96b49c2b7fc51, type: 3}
-  num: 0
   text: {fileID: 628403374}
 --- !u!1 &788270726
 GameObject:

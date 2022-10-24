@@ -17,16 +17,21 @@ public class numberUpdater : MonoBehaviour
     void Awake()
     {
         story = new Story(inkAsset.text);
-        story.BindExternalFunction("TextUpdate", () => { TextUpdate(); });
+        story.BindExternalFunction("SetVariables", () => { this.SetVariables(); });
     }
 
     public void NumUpdate(){
         int num=(int)DialogueSystemInkIntegration.GetInkNumber("number")+1;
         DialogueSystemInkIntegration.SetInkNumber("number", num);
+        story.variablesState["number"] = (double)num;
     }
 
     public void TextUpdate(){
         text.text = "Number: " + (int)DialogueSystemInkIntegration.GetInkNumber("number");
+    }
+
+    public void SetVariables(){
+        story.variablesState["number"] = DialogueSystemInkIntegration.GetInkNumber("number");
     }
 
 }
