@@ -43,23 +43,33 @@ VAR oldladyPresent = false
 //Darling tells Alistair that he has to save what's important "treasure" from vault and bring up finding the "treasure" for "him"
 //Give player some branching dialogue though it doesn't have much of an impact, just changes Darling's responses
 //Darling explains that Alistair has to go back in time to find a way to get into the vault, he can start by going back and examining it before time 10 when it is pretty much already destroyed
-//Darling till tell Alistair to go to time 3
+//Darling will tell Alistair to go to time 3
 -> library
     
     
 ===library===
 //Room Description for Journal
 { time:
-- 1:    ~ roomDescription = "something"
-- 2:    ~ roomDescription = "something"
-- 3:    ~ roomDescription = "something"
-- 4:    ~ roomDescription = "something"
-- 5:    ~ roomDescription = "something"
-- 6:    ~ roomDescription = "something"
-- 7:    ~ roomDescription = "something"
-- 8:    ~ roomDescription = "something"
-- 9:    ~ roomDescription = "something"
-- 10:   ~ roomDescription = "something"
+- 1:    
+        ~ roomDescription = "Bustling with rumors and security won't let me close to the vault."
+- 2:    
+        ~ roomDescription = "Under rennovations and filled with security."
+- 3:    
+        ~ roomDescription = "Under rennovations and filled with security,"
+- 4:    
+        ~ roomDescription = "Nealy done with rennovations but filled with security."
+- 5:    
+        ~ roomDescription = "Library is quiet and the vault is undisturbed."
+- 6:    
+        ~ roomDescription = "There's a huge crowd in the room because of the election."
+- 7:    
+        ~ roomDescription = "Library is quiet and the vault is undisturbed."
+- 8:    
+        ~ roomDescription = "Library is empty and the vault is abandoned."
+- 9:    
+        ~ roomDescription = "Library is empty and the vault is abandoned. I feel rumbling below me."
+- 10:   
+        ~ roomDescription = "Library is lost. Fire everywhere, metal melting, vault too hot to touch."
 }
 
 //Content Start
@@ -68,20 +78,22 @@ What should I do?
         //Room Description for Player
         //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
         { time:
-        - 1:    What does the room look like?
-        - 2:    What does the room look like? 
-        - 3:    What does the room look like? 
-        - 4:    What does the room look like? 
-        - 5:    What does the room look like? 
-        - 6:    What does the room look like? 
-        - 7:    What does the room look like? 
-        - 8:    What does the room look like?
-        - 9:    What does the room look like?
-        - 10:   What does the room look like?
+        - 1:    Employees sit in tight circles around the library. There's no reading to be done, instead, there's an electricity in the air in the form of hush whispers.
+        - 2:    Scaffolding grazes the arched cielings of the library and the smell of paint, hard wood, and oil linger in the air as carpenters navigate the space. Lab security keeps a close eye on the newcomers. 
+        - 3:    Carpenters dip their brushes into fine oils and touch up the shelving and masons repair chips in the floor. The room is sectioned off and lab security stands at attention. //something messed up here
+                * [Investigate the vault] -> InvestigateVault
+                * [Keep looking around] -> library
+        - 4:    A foreman walks around the newly rennovated library with a clip board and lab security following her everystep. Looks like rennovations are almost done. 
+        - 5:    The library shines with newfound gusto and even the books seem a little newer. Lab employees gather around to marvel at it. 
+        - 6:    People stand shoulder to shoulder, all looking at a group of lab board members sitting in a circle toward the front of the room. Everyone is eager to listen and some even stand on ladders to get the best vantage point. 
+        - 7:    The library sits silently and shines coldly. Lab employees huddle like silent vultures over their books.
+        - 8:    The library is gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
+        - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly then hold still once more.
+        - 10:   Flames have claimed the library. Any metal is now liquid and only aids the fire in its quest for destruction.
         }
         -> library
     + [Look for someone to talk to]
-        //NPC Description for Player
+        //NPC Description for Player and variable changes
         { time:
         - 1:    Who is there? (Add variable changes for NPCs present)
         - 2:    Who is there?
@@ -89,8 +101,13 @@ What should I do?
         - 4:    Who is there?
         - 5:    Who is there?
         - 6:    Who is there?
+                ~shopownerPresent = true
+                ~childPresent = true
+                ~oldladyPresent = true
         - 7:    Who is there?
+                ~julesPresent = true
         - 8:    Who is there?
+                ~childPresent = true
         - 9:    Who is there?
         - 10:   Who is there?
         }
@@ -150,3 +167,11 @@ Who should I talk to?
 //repeat for times 2-10
 
 //Knots will be added for specific quest events/actions
+
+//Quest Specific Knots
+===InvestigateVault===
+//Get shooed out of the vault area (only current employees can get into vault or with permission of the director)
+->DarlingPepTalk
+===DarlingPepTalk===
+//Pep talk with Darling and plant leads
+//Talk to current lab head (in a different location)
