@@ -26,24 +26,81 @@ VAR shopownerPresent = false
 VAR childPresent = false
 VAR oldladyPresent = false
 
-//Knots Start
+//Sets up if player has seen opening, if has seen it, skips the beginning knot
+{seenBeginning: -> library|-> beginning}
 
-{seenBeginning:
-
-    -> library
-    - else:
-    -> beginning
-}
-
+//Knots start
 ===beginning===
 ~ time = 10
 ~ seenBeginning = true
-//Similar to Yarn opening
-//Alistair is trying to prevent planet from exploding, cannot do it (imply that he's done this many times before and failed)
-//Darling tells Alistair that he has to save what's important "treasure" from vault and bring up finding the "treasure" for "him"
-//Give player some branching dialogue though it doesn't have much of an impact, just changes Darling's responses
-//Darling explains that Alistair has to go back in time to find a way to get into the vault, he can start by going back and examining it before time 10 when it is pretty much already destroyed
-//Darling will tell Alistair to go to time 3
+#background: outsideCity
+//placeholder for music and GMOD stuff
+
+When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
+It was full of what I would become. Dreams of adventure in the stars piercing through the dark.
+I was gripped with a frenzy to explore beyond my bubble of libraries and teahouses.
+But, most of all, I dreamed of the universe lost.
+Atlantis.
+
+#background: library
+//placeholder for flame effects, or general destruction stuff
+//placeholder for sound/music
+#sprite: Alistair Sad
+#speaker: Alistair
+My colleagues are all gone. 
+(The library will be lost.)
+(The planet will be lost.)
+(But perhaps there's still a book I haven't seen.)
+(There must be something I'm missing.)
+(All this mustn't end in failure.)
+I throw myself to a bookshelf nearby and yank out tomes. There are so few left. Most have been consumed by fire.
+(Perhaps I haven't tried this yet.)
+
+#sprite: Darling Neutral
+#speaker: D4RL1N6
+"Alistair."
+
+#speaker: Alistair
+'There's still time. I can still fix this, I just need to-'
+
+#speaker: D4RL1N6
+"Alistair, it's unwise to ignore me."
+
+#speaker: Alistair
+"I'm sorry, I'm not- I just need to find this book, I think I remember it saying something about the core."
+
+#speaker: D4RL1N6
+"The core is gone."
+
+#speaker: Alistair
+"It's not, I know better now, I can find a way to-"
+
+#speaker: D4RL1N6
+"This is attempt 37 Alistair. The core is gone. Isn't it clear we can't do anything about the planet's destruction?"
+"The last attempt was too much of a close call."
+
+#speaker: Alistair
+* [I'm a failure] "If I can't even save this planet, what's the point?"
+* [There must be a way] "There must be something I'm just not thinking of."
+
+#speaker: D4RL1N6
+- "You've done everything you can."
+"I'm sorry, Alistair. You just need to save what's important."
+
+#speaker: Alistair
+"..."
+"The vault. I need to get something out of there for him. He'll need it."
+The vault shimmers under the immense heat in the library. It's tucked into the back of the room. It's clear even from this distance that touching the handle would burn my skin.
+
+#speaker: D4RL1N6
+"We'll have to return to a time before all this destruction. One year in the past should be sufficient."
+
+#speaker: Alistair
+"Perhaps then we can find a way into the vault."
+
+#speaker: D4RL1N6
+"Precisely."
+~time = 9
 -> library
     
     
@@ -80,15 +137,14 @@ What should I do?
         { time:
         - 1:    Employees sit in tight circles around the library. There's no reading to be done, instead, there's an electricity in the air in the form of hush whispers.
         - 2:    Scaffolding grazes the arched cielings of the library and the smell of paint, hard wood, and oil linger in the air as carpenters navigate the space. Lab security keeps a close eye on the newcomers. 
-        - 3:    Carpenters dip their brushes into fine oils and touch up the shelving and masons repair chips in the floor. The room is sectioned off and lab security stands at attention. //something messed up here
-                * [Investigate the vault] -> InvestigateVault
-                * [Keep looking around] -> library
+        - 3:    Carpenters dip their brushes into fine oils and touch up the shelving and masons repair chips in the floor. The room is sectioned off and lab security stands at attention. 
         - 4:    A foreman walks around the newly rennovated library with a clip board and lab security following her everystep. Looks like rennovations are almost done. 
         - 5:    The library shines with newfound gusto and even the books seem a little newer. Lab employees gather around to marvel at it. 
         - 6:    People stand shoulder to shoulder, all looking at a group of lab board members sitting in a circle toward the front of the room. Everyone is eager to listen and some even stand on ladders to get the best vantage point. 
         - 7:    The library sits silently and shines coldly. Lab employees huddle like silent vultures over their books.
         - 8:    The library is gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
-        - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly then hold still once more.
+        - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly then hold still once more. 
+                * [Investigate the vault] -> InvestigateVault
         - 10:   Flames have claimed the library. Any metal is now liquid and only aids the fire in its quest for destruction.
         }
         -> library
@@ -171,7 +227,9 @@ Who should I talk to?
 //Quest Specific Knots
 ===InvestigateVault===
 //Get shooed out of the vault area (only current employees can get into vault or with permission of the director)
+//CHANGE
 ->DarlingPepTalk
 ===DarlingPepTalk===
 //Pep talk with Darling and plant leads
 //Talk to current lab head (in a different location)
+- END
