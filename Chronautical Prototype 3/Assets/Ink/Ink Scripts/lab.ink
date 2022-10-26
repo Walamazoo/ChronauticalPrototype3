@@ -27,24 +27,6 @@ VAR childPresent = false
 VAR oldladyPresent = false
 
 //Knots Start
-
-{seenBeginning:
-
-    -> lab
-    - else:
-    -> beginning
-}
-
-===beginning===
-~ time = 10
-~ seenBeginning = true
-//Similar to Yarn opening
-//Alistair is trying to prevent planet from exploding, cannot do it (imply that he's done this many times before and failed)
-//Darling tells Alistair that he has to save what's important "treasure" from vault and bring up finding the "treasure" for "him"
-//Give player some branching dialogue though it doesn't have much of an impact, just changes Darling's responses
-//Darling explains that Alistair has to go back in time to find a way to get into the vault, he can start by going back and examining it before time 10 when it is pretty much already destroyed
--> lab
-    
     
 ===lab===
 //Room Description for Journal
@@ -106,18 +88,46 @@ Who should I talk to?
     * [Don't talk to anyone] I don't need to talk to anyone right now. -> lab
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
-HERE
+{time == 1:
+    This is written if yourVariable is true.
+    //Each NPC should have some base questions that they can be asked (~2) Questions to elaborate or get info (think Skyrim NPCs) These questions are used for the player to get information about the world or to get information to further quests
+    //In addition, some dialogue options will only be visible if the player has met previous requirements, these options will always further the plot/puzzle and should appear as the first thing in the list of dialogue options
+  - else:
+    prints nothing if player is not in time 1
+}
+//repeat for times 2-10
+
 
 ===DIRECTOR===
-HERE
+{time == 1:
+    This is written if yourVariable is true.
+  - else:
+    prints nothing
+}
+//repeat for times 2-10
 
 ===SHOPOWNER===
-HERE
+{time == 1:
+    This is written if yourVariable is true.
+  - else:
+    prints nothing
+}
+//repeat for times 2-10
 
 ===CHILD===
-HERE
+{time == 1:
+    This is written if yourVariable is true.
+  - else:
+    prints nothing
+}
+//repeat for times 2-10
 
 ===OLDLADY===
-HERE
+{time == 1:
+    This is written if yourVariable is true.
+  - else:
+    prints nothing
+}
+//repeat for times 2-10
 
 //Knots will be added for specific quest events/actions
