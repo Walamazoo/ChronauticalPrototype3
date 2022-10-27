@@ -218,7 +218,7 @@ Who should I talk to?
 {time == 1:
     This is written if yourVariable is true.
   - else:
-    prints nothing
+    something here if false
 }
 //repeat for times 2-10
 
@@ -226,10 +226,46 @@ Who should I talk to?
 
 //Quest Specific Knots
 ===InvestigateVault===
-//Get shooed out of the vault area (only current employees can get into vault or with permission of the director)
-//CHANGE
+#background: vault
+The vault is a marvel in of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
+In the center, I see a series of numbers: 0-9. 
+    * [Guess the code] ->DarlingPepTalk
+    + [Pry open door] 
+        I squeeze my fingers into the door frame and put my foot on the door.
+        I lean back and use all my strength to try to pry open the door, but the thing doesn't budge at all.
+        Worth a shot.
+        -> InvestigateVault
+    + [Kick door] 
+        I take a few steps back then give the vault door a good kick square in the center. 
+        The vault doesn't shift.
+        The only indication that I had kicked the thing at all was the slight pain that was growing in my foot.
+        Ouch.
+        -> InvestigateVault
+    //OPTION FOR IF YOU DO HAVE THE CODE
+
 ->DarlingPepTalk
 ===DarlingPepTalk===
-//Pep talk with Darling and plant leads
-//Talk to current lab head (in a different location)
-- END
+#speaker: Alistair
+"I've seen the vault opened before. It needs a code to be opened."
+
+#speaker: D4RL1N6
+"Did you see what the code was?"
+
+#speaker: Alistair
+"Well, yes, but the code is changed everytime by the Lab Director."
+"They take security very serious here."
+"Unfortunately."
+
+#speaker: D4RL1N6
+"Then we have to find this Director."
+
+#speaker: Alistair
+"And somehow convince him to let us into the vault."
+
+#speaker: D4RL1N6
+"Don't be so melodramatic. We'll find a way. We've got to get your treasure."
+
+#speaker: Alistair
+"You're right as usual."
+"We'll find a way to get my 'treasure'."
+-> DONE
