@@ -250,7 +250,17 @@ Who should I talk to?
 }
 #speaker: Jules
 "What can I help you with?"
-    + [Why are you here?]
+    + [Why are you here?] "Why are you here, Jules?" #speaker: Alistair
+        #speaker: Jules
+        "Ah."
+        "Well."
+        "I wanted to see the library again."
+        "The planet will fold in on itself within a few years."
+        "And evacuation plans are underway."
+        "Everyone will be off the planet soon..."
+        "The library reminds me of our time as interns here at the lab."
+        "Remember that time?"
+        "It's truely nostolgic..."
         ->JULES
     + [What have you been up to?]
         ->JULES
@@ -261,7 +271,9 @@ Who should I talk to?
 
 
 ===CHILD===
-
+//First meeting and after have met before
+//Questions
+//End convo
 
 
 
