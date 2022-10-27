@@ -15,9 +15,13 @@ VAR postDisaster = false
 VAR seenElection = false
 VAR seenResults = false
 VAR helpComplete = 0
-//VARIABLES FOR THE SIDE QUEST STUFF
 VAR julesDirector = false
 VAR hasCode = false
+//More variables needed here for quest specific
+
+//Variables for if player has met NPC
+VAR metJules = false
+VAR metChild = false
 
 //NPC Variables
 VAR julesPresent = false
@@ -136,36 +140,45 @@ What should I do?
         //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
         { time:
         - 1:    Employees sit in tight circles around the library. There's no reading to be done, instead, there's an electricity in the air in the form of hush whispers.
+                +Investigate the vault -> Security
         - 2:    Scaffolding grazes the arched cielings of the library and the smell of paint, hard wood, and oil linger in the air as carpenters navigate the space. Lab security keeps a close eye on the newcomers. 
+                +Investigate the vault -> Security
         - 3:    Carpenters dip their brushes into fine oils and touch up the shelving and masons repair chips in the floor. The room is sectioned off and lab security stands at attention. 
+                +Investigate the vault -> Security
         - 4:    A foreman walks around the newly rennovated library with a clip board and lab security following her everystep. Looks like rennovations are almost done. 
+                +Investigate the vault -> Security
         - 5:    The library shines with newfound gusto and even the books seem a little newer. Lab employees gather around to marvel at it. 
+                +Investigate the vault -> InvestigateVault
         - 6:    People stand shoulder to shoulder, all looking at a group of lab board members sitting in a circle toward the front of the room. Everyone is eager to listen and some even stand on ladders to get the best vantage point. 
+                +Listen in -> Election
         - 7:    The library sits silently and shines coldly. Lab employees huddle like silent vultures over their books.
+                +Investigate the vault -> InvestigateVault
         - 8:    The library is gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
+                +Investigate the vault -> InvestigateVault
         - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly then hold still once more. 
-                * [Investigate the vault] -> InvestigateVault
+                +Investigate the vault -> InvestigateVault
         - 10:   Flames have claimed the library. Any metal is now liquid and only aids the fire in its quest for destruction.
+                +Investigate the vault -> HotVault
         }
         -> library
+    
+
+    //NPC Description for Player and variable changes
     + [Look for someone to talk to]
-        //NPC Description for Player and variable changes
         { time:
-        - 1:    Who is there? (Add variable changes for NPCs present)
-        - 2:    Who is there?
-        - 3:    Who is there?
-        - 4:    Who is there?
-        - 5:    Who is there?
-        - 6:    Who is there?
-                ~shopownerPresent = true
-                ~childPresent = true
-                ~oldladyPresent = true
-        - 7:    Who is there?
+        - 1:    Plenty of lab employees mill about, but all of them look too busy to talk to me.
+        - 2:    All I see are carpenters and the lab's security.
+        - 3:    All I see are carpenters and the lab's security.
+        - 4:    All I see are carpenters and the lab's security.
+        - 5:    Plenty of lab employees mill about, but all of them look too busy to talk to me.
+        - 6:    There are hundreds of people stuffed into the library. They're all listening to dozen board members speaking at the front of the room. It would be impossible for me to get a word in. 
+                +Listen in->Election
+        - 7:    Jules stands alone in the center of the room with his hands behind his back as he looks at the spines of books on the shelves.
                 ~julesPresent = true
-        - 8:    Who is there?
+        - 8:    I see a child sitting at one of the reading desks with their head in their hands. They don't notice me.
                 ~childPresent = true
-        - 9:    Who is there?
-        - 10:   Who is there?
+        - 9:    There's not a soul in sight.
+        - 10:   There's not a soul in sight.
         }
         -> NPCS
 
@@ -173,56 +186,84 @@ What should I do?
 //Allows the player to talk to NPCs based on who is there at the time
 Who should I talk to? 
     *{julesPresent} [Jules] -> JULES
-    *{directorPresent} [The Director] -> DIRECTOR
-    *{shopownerPresent} [The Shopowner] -> SHOPOWNER
     *{childPresent} [The Child] -> CHILD
-    *{oldladyPresent} [The Old Lady] -> OLDLADY
     * [Don't talk to anyone] I don't need to talk to anyone right now. -> library
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
-{time == 1:
-    This is written if yourVariable is true.
-    //Each NPC should have some base questions that they can be asked (~2) Questions to elaborate or get info (think Skyrim NPCs) These questions are used for the player to get information about the world or to get information to further quests
-    //In addition, some dialogue options will only be visible if the player has met previous requirements, these options will always further the plot/puzzle and should appear as the first thing in the list of dialogue options
+{metJules:
+    "Hello friend."
   - else:
-    prints nothing if player is not in time 1
+    #speaker: Alistair
+    "Jules? Is that you?"
+    
+    #speaker: Jules
+    "Alistair!"
+    "Alistair, you-"
+    "You've been gone for so long."
+    "Of all times, why are you back now?"
+    
+    #speaker: Alistair
+    "Well, it's quite a long story..."
+    "But it's good to see you again!"
+    
+    #speaker: Jules
+    "I'm sorry, it is good to see you too..."
+    "Where have you been? You were gone for so long, we were all worried something had happened."
+    
+    #speaker: Alistair
+    +[Been out and about] "Oh I've been out and about."
+        #speaker: Jules
+        "Out and about? Why so coy Alistair?"
+        
+        #speaker: Alistair
+        "It's... complicated."
+        
+        #speaker: Jules
+        "I see." 
+        "What's his name then?"
+        
+        #speaker: Alistair
+        "Wha-"
+        (How'd he guess that?!)
+        "I don't know what you could be talking about..."
+        
+        #speaker: Jules
+        "You are too easy to read my friend."
+    +[Adventuring] "Oh I've been... adventuring."
+         #speaker: Jules
+        "Out and about? Why so coy Alistair?"
+        
+        #speaker: Alistair
+        "It's... complicated."
+        
+        #speaker: Jules
+        "I see." 
+        "What's his name then?"
+        
+        #speaker: Alistair
+        "Wha-"
+        (How'd he guess that?!)
+        "I don't know what you could be talking about..."
+        
+        #speaker: Jules
+        "You are too easy to read my friend."
 }
-//repeat for times 2-10
+#speaker: Jules
+"What can I help you with?"
+    + [Why are you here?]
+        ->JULES
+    + [What have you been up to?]
+        ->JULES
+    + [Nothing for now]
+    #speaker: Jules
+    "Let's speak again soon, Alistair."
+        ->library
 
-
-===DIRECTOR===
-{time == 1:
-    This is written if yourVariable is true.
-  - else:
-    prints nothing
-}
-//repeat for times 2-10
-
-===SHOPOWNER===
-{time == 1:
-    This is written if yourVariable is true.
-  - else:
-    prints nothing
-}
-//repeat for times 2-10
 
 ===CHILD===
-{time == 1:
-    This is written if yourVariable is true.
-  - else:
-    prints nothing
-}
-//repeat for times 2-10
 
-===OLDLADY===
-{time == 1:
-    This is written if yourVariable is true.
-  - else:
-    something here if false
-}
-//repeat for times 2-10
 
-//Knots will be added for specific quest events/actions
+
 
 //Quest Specific Knots
 ===InvestigateVault===
@@ -241,7 +282,9 @@ In the center, I see a series of numbers: 0-9.
         The only indication that I had kicked the thing at all was the slight pain that was growing in my foot.
         Ouch.
         -> InvestigateVault
-    //OPTION FOR IF YOU DO HAVE THE CODE
+    * {hasCode} [Input code]
+        ->Ending
+
 
 ->DarlingPepTalk
 ===DarlingPepTalk===
@@ -268,4 +311,40 @@ In the center, I see a series of numbers: 0-9.
 #speaker: Alistair
 "You're right as usual."
 "We'll find a way to get my 'treasure'."
+-> DONE
+
+===Security===
+As I approach the vault, I see one of the vault's security promptly slide over and put himself directly into my path.
+He crosses his arms and just stands there.
+    + [Say hello] "Hello there!" #speaker: Alistair
+                    The vault security guard just looks down at me.
+                    He doesn't respond.
+                    "Uh. I said hello there!" #speaker: Alistair
+                    The guard still does not respond, but I see his eyebrow twitch.
+                    Maybe it's best not to press him.
+                    ++[Say hello again] "I said, hello-" #speaker: Alistair
+                        "I heard you..." #speaker: Guard
+                        "Oh! Apologies..." #speaker: Alistair
+                        (He's not very talkative is he...)->library
+                    ++[Nevermind] I just smile and turn on my heel.
+                                    (Maybe I'll look elsewhere.) ->library
+    + [Nevermind] I just smile and turn on my heel. 
+                (Maybe I'll look elsewhere.) -> library
+//More interactions can be added here if/when we add options to try to break into the vault
+-> DONE
+
+
+===HotVault===
+The vault shimmers under the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
+The treasure might even have melted inside the vault anyway.
+-> library
+
+
+===Election===
+//content
+-> DONE
+
+
+===Ending===
+//placeholder for ending
 -> DONE
