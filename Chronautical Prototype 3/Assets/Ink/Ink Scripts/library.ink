@@ -278,6 +278,7 @@ Who should I talk to?
             ++ [Promise] "I don't think I ever will, you can count on that." #speaker: Alistair
                 #speaker: Jules
                 "Good."
+                -> JULES
             ++ [We'll see] "I'm not sure Jules, there's..." #speaker: Alistair
                 #speaker: Jules
                 "What is it Alistair?"
@@ -287,7 +288,7 @@ Who should I talk to?
                 "I'll tell you some other time, alright?"
                 #speaker: Jules
                 "Of course."
-        ->JULES
+                -> JULES
     + [Nothing for now]
     #speaker: Jules
     "Let's speak again soon, Alistair."
@@ -433,8 +434,8 @@ As crowds of people close in on the board, I push and wriggle my way closer to t
 Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker: Board member
 "Come forth, any of you who wish to speak."
-"The floor is open for community comments on the appointment of DIRECTOR'S NAME as Lab Director or otherwise miscellaneous topics kindred to the community's concerns."
-    =Shopowner
+"The floor is open for community comments on the appointment of DIRECTOR'S NAME as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
+    =ShopownerMono
         #speaker: Shopowner
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work LAB DIRECTOR'S NAME has devoted to the lab and to Elore-Nabyke."
@@ -445,8 +446,8 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Why is the lab still functioning as if the planet is not going to explode in a few years?"
         "I pose these questions not as a way to tear down all the work you all have done, but this is our planet too that you are asking us to leave!"
         "I won't take much more of your time. But I don't believe that LAB DIRECTOR'S NAME is suited to deal with this catastrophe. Perhaps it is time for someone younger with more gumption to lead us."
-        The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern.
-    =Child
+        The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
+    =ChildMono
         #speaker: Child
         "Okay..."
         "Well."
@@ -459,8 +460,8 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "But you're not."
         "You just want to keep things as they are, the old way, and stay right here..."
         "That's all I wanted to say."
-        "Yeah..."
-    =OldLady
+        "Yeah..." ->OldLadyMono
+    =OldLadyMono
         #speaker: OldLady
         As the Old Lady steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
