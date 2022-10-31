@@ -9,6 +9,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     int storedNumber;
     [SerializeField] GameObject button;
     [SerializeField] JournalManager JournalManager;
+    [SerializeField] GameObject customInkFunctions;
 
     protected override void BindExternalFunctions(Story story)
     {
@@ -19,6 +20,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("MAKE_LOG", () => {button.GetComponent<testbuttonscript>().makeLog();});
         story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
                                                             {JournalManager.createJournalObject(name, type, hoverDescription, fullDescription);});
+        story.BindExternalFunction("TOGGLE_SLIDER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(state);});
+        story.BindExternalFunction("TOGGLE_SLIDER_INTERACTABLE", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(state);});
     }
 
     protected override void UnbindExternalFunctions(Story story)
@@ -28,5 +31,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             story.UnbindExternalFunction("GET_NUMBER");
             story.UnbindExternalFunction("SHOW_BUTTON");
             story.UnbindExternalFunction("MAKE_LOG");
+            story.UnbindExternalFunction("TOGGLE_SLIDER");
+            story.UnbindExternalFunction("TOGGLE_SLIDER_INTERACTABLE");
         }
 }
