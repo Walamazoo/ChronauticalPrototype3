@@ -195,6 +195,7 @@ Who should I talk to?
   - else:
     #speaker: Alistair
     "Jules? Is that you?"
+    ~metJules = true
     
     #speaker: Jules
     "Alistair!"
@@ -228,7 +229,7 @@ Who should I talk to?
         "I don't know what you could be talking about..."
         
         #speaker: Jules
-        "You are too easy to read my friend."
+        "You are too easy to read my friend." -> JULES
     +[Adventuring] "Oh I've been... adventuring."
          #speaker: Jules
         "Out and about? Why so coy Alistair?"
@@ -246,7 +247,7 @@ Who should I talk to?
         "I don't know what you could be talking about..."
         
         #speaker: Jules
-        "You are too easy to read my friend."
+        "You are too easy to read my friend." -> JULES
 }
 #speaker: Jules
 "What can I help you with?"
@@ -297,8 +298,60 @@ Who should I talk to?
 //First meeting and after have met before
 //Questions
 //End convo
-
-
+{metChild:
+    "Hello..."
+  - else:
+    #speaker Alistair
+    "Hello there! What's your name?"
+    
+    #speaker Child
+    "..."
+    
+    #speaker Alistair
+    "Oh, well..."
+    "My name is Alistair!"
+    
+    #speaker Child
+    "..."
+    
+    #speaker Alistair
+    "You... doing alright?"
+    
+    #speaker Child
+    "I'm fine."
+    ~metChild = true
+    -> CHILD
+}
+#speaker: Child
+"... What do you want?"
+    + [Lost?] "Are you... lost? I don't think children are supposed to be in the lab." #speaker: Alistair
+    #speaker: Child
+    "I'm not lost."
+    "I'm exploring."
+    "Nobody is in the lab anyway. Everyone is getting ready to evacuate."
+        ++ [You evacuate too?] "Shouldn't you be getting ready too?" #speaker: Alistair
+        #speaker: Child
+        "I am ready. I have everything I need."
+        ++ [Exploring the lab?] "You like exploring the lab then?" #speaker: Alistair
+        #speaker: Child
+        "I've always wanted to see it."
+        "This is the only way I'm able to. When everyone is gone..."
+        - "Oh." 
+            "Okay." #speaker: Alistair
+            -> CHILD
+    + [Parents?] "Do your parents know you're here?" #speaker: Alistair
+    #speaker: Child
+    "No."
+    "They're packing up everything."
+    "We're leaving the planet on BIG SPACE CRUISE SHIP."
+    "It'll be cool to be on one, but..."
+    "I just wanna stay here..."
+    -> CHILD
+    + [Nothing for now]
+    #speaker: Child
+    "Okay."
+    "Fine."
+        ->library
 
 //Quest Specific Knots
 ===InvestigateVault===
