@@ -376,8 +376,57 @@ The treasure might even have melted inside the vault anyway.
 
 
 ===Election===
-//content
--> DONE
+As crowds of people close in on the board, I push and wriggle my way closer to the front.
+Now that I'm closer, I can hear a bit more of the board members' speech.
+#speaker: Board member
+"Come forth, any of you who wish to speak."
+"The floor is open for community comments on the appointment of DIRECTOR'S NAME as Lab Director or otherwise miscellaneous topics kindred to the community's concerns."
+    =Shopowner
+        #speaker: Shopowner
+        "I can speak first."
+        "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work LAB DIRECTOR'S NAME has devoted to the lab and to Elore-Nabyke."
+        "But."
+        "I think I also speak for the community when I say that the lab and the director's handling of the evacuation of the planet to be entirely abhorent."
+        "Is it not the lab itself that discovered the core's damaged state? 
+        "Why have you not put more work into fixing it?"
+        "Why is the lab still functioning as if the planet is not going to explode in a few years?"
+        "I pose these questions not as a way to tear down all the work you all have done, but this is our planet too that you are asking us to leave!"
+        "I won't take much more of your time. But I don't believe that LAB DIRECTOR'S NAME is suited to deal with this catastrophe. Perhaps it is time for someone younger with more gumption to lead us."
+        The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern.
+    =Child
+        #speaker: Child
+        "Okay..."
+        "Well."
+        "Um, so."
+        "I know I'm not very old."
+        "But when I was little, I wanted to work on the core."
+        "I wanted to see all the artifacts the lab gets from all over the universes."
+        "I..."
+        "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
+        "But you're not."
+        "You just want to keep things as they are, the old way, and stay right here..."
+        "That's all I wanted to say."
+        "Yeah..."
+    =OldLady
+        #speaker: OldLady
+        As the Old Lady steps up to speak, I hear the crowd sigh and groan.
+        A few board members shake their heads and cast their eyes downward.
+        "Yes!"
+        "Yes, you all complain and sqwauk because you know you are about to hear everything you wish not to accept as truth!"
+        "I will open your eyes- Listen now!"
+        "The planet will not be destroyed- Elor-Nabyke will not fall!"
+        "They are distracting us- lying to us!"
+        "Our planet does not matter."
+        "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
+        "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
+        The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crashendo.
+        I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
+#speaker: Lab Director
+"Silence!"
+"I will have order!"
+#speaker: Alistair
+It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
+-> library
 
 
 ===Ending===
