@@ -17,7 +17,7 @@ VAR seenResults = false
 VAR helpComplete = 0
 VAR julesDirector = false
 VAR hasCode = false
-//More variables needed here for quest specific
+//More variables needed here for quest specifics
 
 //Variables for if player has met NPC
 VAR metJules = false
@@ -258,11 +258,34 @@ Who should I talk to?
         "The planet will fold in on itself within a few years."
         "And evacuation plans are underway."
         "Everyone will be off the planet soon..."
-        "The library reminds me of our time as interns here at the lab."
+        "But the library reminds me of our time as interns here at the lab."
         "Remember that time?"
         "It's truely nostolgic..."
         ->JULES
-    + [What have you been up to?]
+    + [What have you been up to?] "What have you been up to while I've been away?" #speaker: Alistair
+        #speaker: Jules
+        "So much has changed since we were interns here at the lab."
+        "Many of the people we used to know have moved off planet."
+        "And well, I have a family now. It's funny how having children can change your perspective."
+        "... But you haven't changed much Alistair." //amusement
+            ++ [Have changed] "I think I've changed, I've been all over the place." #speaker: Alistair
+                #speaker: Jules
+            ++ [Have not changed] "I suppose I haven't changed that much after all..." #speaker: Alistair
+                #speaker: Jules
+            - "Perhaps you have. But you're still the same at your core."
+                "... That's a good thing, Alistair. Don't lose your sense of wonder, your adventurous spirit."
+            ++ [Promise] "I don't think I ever will, you can count on that." #speaker: Alistair
+                #speaker: Jules
+                "Good."
+            ++ [We'll see] "I'm not sure Jules, there's..." #speaker: Alistair
+                #speaker: Jules
+                "What is it Alistair?"
+                #speaker: Alistair
+                "There's just, there's a lot going on..."
+                "It's complicated..."
+                "I'll tell you some other time, alright?"
+                #speaker: Jules
+                "Of course."
         ->JULES
     + [Nothing for now]
     #speaker: Jules
