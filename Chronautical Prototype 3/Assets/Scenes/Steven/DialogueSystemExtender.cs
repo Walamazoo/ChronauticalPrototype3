@@ -8,6 +8,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
     int storedNumber;
     [SerializeField] GameObject button;
+    [SerializeField] JournalManager JournalManager;
 
     protected override void BindExternalFunctions(Story story)
     {
@@ -16,6 +17,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("GET_NUMBER", () => {story.variablesState["number"] = storedNumber;});
         story.BindExternalFunction("SHOW_BUTTON", () => {button.SetActive(true);});
         story.BindExternalFunction("MAKE_LOG", () => {button.GetComponent<testbuttonscript>().makeLog();});
+        story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
+                                                            {JournalManager.createJournalObject(name, type, hoverDescription, fullDescription);});
     }
 
     protected override void UnbindExternalFunctions(Story story)

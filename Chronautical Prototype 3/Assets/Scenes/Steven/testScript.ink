@@ -3,6 +3,7 @@ EXTERNAL GetIntVariable(variableName)
 EXTERNAL GET_NUMBER()
 EXTERNAL SHOW_BUTTON()
 EXTERNAL MAKE_LOG()
+EXTERNAL CREATE_JOURNAL_OBJECT(name, type, hover, full)
 EXTERNAL STORE_NUMBER(stored_number)
 VAR number = 0
 
@@ -28,7 +29,8 @@ Now.
 The number is {number}.
 ~STORE_NUMBER(number)
 ~SHOW_BUTTON()
-~MAKE_LOG()
+~CREATE_JOURNAL_OBJECT("Duh", "itemclue", "owealsinvw", "aolvigbwesngwelgnw")
+~CREATE_JOURNAL_OBJECT("Duh", "item", "owsjbenonw evna", "piaenf")
 
     ->END
 
@@ -40,3 +42,5 @@ The number is {number}.
 	~ return "(Button shown)"
 === function MAKE_LOG() ===
 	~ return "(Debug done)"
+=== function CREATE_JOURNAL_OBJECT(name1, type1, hover1, full1) ===
+	~ return "(didn't work)"
