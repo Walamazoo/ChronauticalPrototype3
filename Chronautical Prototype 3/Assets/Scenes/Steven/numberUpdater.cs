@@ -11,13 +11,16 @@ public class numberUpdater : MonoBehaviour
     // Set this file to your compiled json asset
 	public TextAsset inkAsset;
 	Story story;
+    int storedNumber = 0;
     
     [SerializeField] TextMeshProUGUI text;
 
     void Awake()
     {
         story = new Story(inkAsset.text);
-        story.BindExternalFunction("SetVariables", () => { this.SetVariables(); });
+        //story.BindExternalFunction("SetVariables", () => {this.SetVariables(); });
+        story.BindExternalFunction("STORE_NUMBER", (int stored_number) => {this.storedNumber = stored_number;});
+        story.BindExternalFunction("GET_NUMBER", () => {story.variablesState["number"] = storedNumber;});
     }
 
     public void NumUpdate(){
@@ -30,8 +33,8 @@ public class numberUpdater : MonoBehaviour
         text.text = "Number: " + (int)DialogueSystemInkIntegration.GetInkNumber("number");
     }
 
-    public void SetVariables(){
-        story.variablesState["number"] = DialogueSystemInkIntegration.GetInkNumber("number");
-    }
+    //public void SetVariables(){
+        //story.variablesState["number"] = storedNumber; 
+    //}
 
 }
