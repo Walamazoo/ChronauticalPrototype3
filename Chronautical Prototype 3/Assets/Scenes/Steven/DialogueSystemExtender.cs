@@ -17,6 +17,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("STORE_NUMBER", (int stored_number) => {this.storedNumber = stored_number;});
         story.BindExternalFunction("GET_NUMBER", () => {story.variablesState["number"] = storedNumber;});
         story.BindExternalFunction("SHOW_BUTTON", () => {button.SetActive(true);});
+        story.BindExternalFunction("BUTTON_GONE", () => {button.SetActive(false);});
         story.BindExternalFunction("MAKE_LOG", () => {button.GetComponent<testbuttonscript>().makeLog();});
         story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
                                                             {JournalManager.createJournalObject(name, type, hoverDescription, fullDescription);});
@@ -30,6 +31,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             story.UnbindExternalFunction("STORE_NUMBER");
             story.UnbindExternalFunction("GET_NUMBER");
             story.UnbindExternalFunction("SHOW_BUTTON");
+            story.UnbindExternalFunction("BUTTON_GONE");
             story.UnbindExternalFunction("MAKE_LOG");
             story.UnbindExternalFunction("TOGGLE_SLIDER");
             story.UnbindExternalFunction("TOGGLE_SLIDER_INTERACTABLE");
