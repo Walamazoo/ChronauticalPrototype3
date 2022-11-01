@@ -22,6 +22,7 @@ VAR hasCode = false
 //Variables for if player has met NPC
 VAR metJules = false
 VAR metChild = false
+VAR metDirector = false
 
 //NPC Variables
 VAR julesPresent = false
@@ -39,6 +40,9 @@ VAR oldladyPresent = false
 
 
 //Knots Start
+//Time Set for Testing
+~time=3
+-> lab
 ===lab===
 //Room Description for Journal
 { time:
@@ -90,40 +94,119 @@ What should I do?
     //NPC Description for Player and variable changes
     + [Look for someone to talk to]
         { time:
-        - 1:    here
+        - 1:    Many scientists are present, but they look too busy to talk to me.
+                I see the Director in his office.
                 ~directorPresent=true
-        - 2:    Who is there?
+        - 2:    Many scientists are present, but they look too busy to talk to me.
+                I see the Director in his office.
                 ~directorPresent=true
-        - 3:    Who is there? 
+        - 3:    There are dozens of scientists and judges, but they're too busy proving their worth to speak to me.
+                I see the Director in his office.
+                Jules stands in front of a booth of his own.
                 ~julesPresent=true
                 ~directorPresent=true
-        - 4:    Who is there?
+        - 4:    There aren't too many people in the lab today, but Jules sits at his work station eating lunch it seems.
+                I see the Director in his office.
                 ~directorPresent=true
                 ~julesPresent=true
-        - 5:    Who is there?
-                ~directorPresent=true
+        - 5:    Everyone is fixated on the projection of the Director, but I see Jules sitting by himself nearby.
                 ~julesPresent=true
-        - 6:    Who is there?
-        - 7:    Who is there?
-        - 8:    Who is there?
-        - 9:    Who is there?
-        - 10:   Who is there?
+        - 6:    There is no one in the lab, they seem to be elsewhere.
+        - 7:    No one here seems willing to talk to me.
+        - 8:    I don't see anyone to talk to.
+        - 9:    I don't see anyone to talk to and there hasn't been anyone here for awhile.
+        - 10:   Everyone who once worked in the lab is long gone.
         }
         -> NPCS
 
 ===NPCS===
 //Allows the player to talk to NPCs based on who is there at the time
 Who should I talk to? 
-    *{julesPresent} [Jules] -> JULES
-    *{directorPresent} [The Director] -> DIRECTOR
-    * [Don't talk to anyone] I don't need to talk to anyone right now. -> lab
+    +{julesPresent} [Jules] -> JULES
+    +{directorPresent} [The Director] -> DIRECTOR
+    + [Don't talk to anyone] I don't need to talk to anyone right now. -> lab
+
+
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
-{time == 1:
-    This is written if yourVariable is true.
+//BUG HERE
+{metJules:
+    "Hello friend."
   - else:
-    prints nothing if player is not in time 1
+    #speaker:Alistair
+    "Jules? Is that you?"
+    ~metJules = true
+    
+    #speaker:Jules
+    "Alistair!"
+    "Alistair, you-"
+    "You've been gone for so long."
+    "Of all times, why are you back now?"
+    
+    #speaker:Alistair
+    "Well, it's quite a long story..."
+    "But it's good to see you again!"
+    
+    #speaker:Jules
+    "I'm sorry, it is good to see you too..."
+    "Where have you been? You were gone for so long, we were all worried something had happened."
+    
+    #speaker:Alistair
+    +[Been out and about] "Oh I've been out and about."
+        #speaker:Jules
+        "Out and about? Why so coy Alistair?"
+        
+        #speaker:Alistair
+        "It's... complicated."
+        
+        #speaker:Jules
+        "I see." 
+        "What's his name then?"
+        
+        #speaker:Alistair
+        "Wha-"
+        (How'd he guess that?!)
+        "I don't know what you could be talking about..."
+        
+        #speaker:Jules
+        "You are too easy to read my friend." -> JULES
+    +[Adventuring] "Oh I've been... adventuring."
+         #speaker:Jules
+        "Out and about? Why so coy Alistair?"
+        
+        #speaker:Alistair
+        "It's... complicated."
+        
+        #speaker:Jules
+        "I see." 
+        "What's his name then?"
+        
+        #speaker:Alistair
+        "Wha-"
+        (How'd he guess that?!)
+        "I don't know what you could be talking about..."
+        
+        #speaker:Jules
+        "You are too easy to read my friend."
+        -> JULES
 }
+
+ { time:
+        - 3:    ->julesT3
+        - 4:    ->julesT4
+        - 5:    ->julesT5
+        }
+=julesT3
+//convo content
+-> NPCS
+
+=julesT4
+//convo content
+-> NPCS
+
+=julesT5
+//convo content
+-> NPCS
 //HelpOpenVaultConvo
 //Ask for help to get into vault, says no, not going to help break into it
 //We have bigger issues at hand, planet exploding
@@ -133,25 +216,64 @@ Who should I talk to?
 //Return to Jules and suggest him that he run for director, respected and such (only works in certain times)
 //Sees election did not help, have some minor election knot changes
 //Darling plants idea to help Jules to get elected
-//End of Demo
 
 ===DIRECTOR===
-{time == 1:
-    This is written if yourVariable is true.
+{metDirector:
+    "And what could you want of me?"
   - else:
-    prints nothing
+    ->InitialMeeting
 }
+
+{ time:
+        - 1:    ->directT1
+        - 2:    ->directT2
+        - 3:    ->directT3
+        - 4:    ->directT4
+        - 5:    ->directT5
+        }
+        
+=directT1
+PLACEHOLDER
+-> NPCS
+
+=directT2
+PLACEHOLDER
+-> NPCS
+
+=directT3
+PLACEHOLDER
+-> NPCS
+
+=directT4
+PLACEHOLDER
+-> NPCS
+
+=directT5
+PLACEHOLDER
+-> NPCS
+
 =InitialMeeting
 //Knots will be added for specific quest events/actions
 //Speak to lab head, shut down idea, say that alistair can not get into the vault, no longer employeed, can not get into vault, classifed (haven't you given us enough trouble?)
 //Darling directs player to find Jules
 //Create variable for uniquie convo with Jules following this
--> DONE
+-> lab
 
+
+//Quest and Misc Knots
 ===OtherPlanetAnnounce===
-
+something here
+-> lab
 
 ===ScienceFair===
-
+something here
+-> lab
 
 ===AnnounceDestruction===
+something here
+-> lab
+
+===TempEnd===
+This is the end of our demo, thank you so much for playing!
+Be sure to follow our 'Chronautical' socials and let us know what you think.
+-> END

@@ -123,7 +123,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 - 2:    
         ~ roomDescription = "Under rennovations and filled with security."
 - 3:    
-        ~ roomDescription = "Under rennovations and filled with security,"
+        ~ roomDescription = "Under rennovations and filled with security."
 - 4:    
         ~ roomDescription = "Nealy done with rennovations but filled with security."
 - 5:    
@@ -192,9 +192,9 @@ What should I do?
 ===NPCS===
 //Allows the player to talk to NPCs based on who is there at the time
 Who should I talk to? 
-    *{julesPresent} [Jules] -> JULES
-    *{childPresent} [The Child] -> CHILD
-    * [Don't talk to anyone] I don't need to talk to anyone right now. -> library
+    +{julesPresent} [Jules] -> JULES
+    +{childPresent} [The Child] -> CHILD
+    + [Don't talk to anyone] I don't need to talk to anyone right now. -> library
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
 {metJules:
