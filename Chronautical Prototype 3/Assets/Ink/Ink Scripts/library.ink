@@ -30,6 +30,13 @@ VAR shopownerPresent = false
 VAR childPresent = false
 VAR oldladyPresent = false
 
+//Sprite/Background/Speaker
+//#speaker:Alistair
+//#sprite:Alistair Sad
+//#background:labInterior
+//#npc:Child
+//No space between colon and character/sprite/background
+
 //Sets up if player has seen opening, if has seen it, skips the beginning knot
 {seenBeginning: -> library|-> beginning}
 
@@ -37,7 +44,7 @@ VAR oldladyPresent = false
 ===beginning===
 ~ time = 10
 ~ seenBeginning = true
-#background: outsideCity
+#background:outsideCity
 //placeholder for music and GMOD stuff
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
@@ -46,11 +53,11 @@ I was gripped with a frenzy to explore beyond my bubble of libraries and teahous
 But, most of all, I dreamed of the universe lost.
 Atlantis.
 
-#background: library
+#background:library
 //placeholder for flame effects, or general destruction stuff
 //placeholder for sound/music
-#sprite: Alistair Sad
-#speaker: Alistair
+#sprite:Alistair Sad
+#speaker:Alistair
 My colleagues are all gone. 
 (The library will be lost.)
 (The planet will be lost.)
@@ -60,49 +67,49 @@ My colleagues are all gone.
 I throw myself to a bookshelf nearby and yank out tomes. There are so few left. Most have been consumed by fire.
 (Perhaps I haven't tried this yet.)
 
-#sprite: Darling Neutral
-#speaker: D4RL1N6
+#sprite:Darling Neutral
+#speaker:D4RL1N6
 "Alistair."
 
-#speaker: Alistair
+#speaker:Alistair
 'There's still time. I can still fix this, I just need to-'
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "Alistair, it's unwise to ignore me."
 
-#speaker: Alistair
+#speaker:Alistair
 "I'm sorry, I'm not- I just need to find this book, I think I remember it saying something about the core."
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "The core is gone."
 
-#speaker: Alistair
+#speaker:Alistair
 "It's not, I know better now, I can find a way to-"
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "This is attempt 37 Alistair. The core is gone. Isn't it clear we can't do anything about the planet's destruction?"
 "The last attempt was too much of a close call."
 
-#speaker: Alistair
+#speaker:Alistair
 * [I'm a failure] "If I can't even save this planet, what's the point?"
 * [There must be a way] "There must be something I'm just not thinking of."
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 - "You've done everything you can."
 "I'm sorry, Alistair. You just need to save what's important."
 
-#speaker: Alistair
+#speaker:Alistair
 "..."
 "The vault. I need to get something out of there for him. He'll need it."
 The vault shimmers under the immense heat in the library. It's tucked into the back of the room. It's clear even from this distance that touching the handle would burn my skin.
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "We'll have to return to a time before all this destruction. One year in the past should be sufficient."
 
-#speaker: Alistair
+#speaker:Alistair
 "Perhaps then we can find a way into the vault."
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "Precisely."
 ~time = 9
 -> library
@@ -193,66 +200,66 @@ Who should I talk to?
 {metJules:
     "Hello friend."
   - else:
-    #speaker: Alistair
+    #speaker:Alistair
     "Jules? Is that you?"
     ~metJules = true
     
-    #speaker: Jules
+    #speaker:Jules
     "Alistair!"
     "Alistair, you-"
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
-    #speaker: Alistair
+    #speaker:Alistair
     "Well, it's quite a long story..."
     "But it's good to see you again!"
     
-    #speaker: Jules
+    #speaker:Jules
     "I'm sorry, it is good to see you too..."
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
-    #speaker: Alistair
+    #speaker:Alistair
     +[Been out and about] "Oh I've been out and about."
-        #speaker: Jules
+        #speaker:Jules
         "Out and about? Why so coy Alistair?"
         
-        #speaker: Alistair
+        #speaker:Alistair
         "It's... complicated."
         
-        #speaker: Jules
+        #speaker:Jules
         "I see." 
         "What's his name then?"
         
-        #speaker: Alistair
+        #speaker:Alistair
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
-        #speaker: Jules
+        #speaker:Jules
         "You are too easy to read my friend." -> JULES
     +[Adventuring] "Oh I've been... adventuring."
-         #speaker: Jules
+         #speaker:Jules
         "Out and about? Why so coy Alistair?"
         
-        #speaker: Alistair
+        #speaker:Alistair
         "It's... complicated."
         
-        #speaker: Jules
+        #speaker:Jules
         "I see." 
         "What's his name then?"
         
-        #speaker: Alistair
+        #speaker:Alistair
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
-        #speaker: Jules
+        #speaker:Jules
         "You are too easy to read my friend." -> JULES
 }
-#speaker: Jules
+#speaker:Jules
 "What can I help you with?"
-    + [Why are you here?] "Why are you here, Jules?" #speaker: Alistair
-        #speaker: Jules
+    + [Why are you here?] "Why are you here, Jules?" #speaker:Alistair
+        #speaker:Jules
         "Ah."
         "Well."
         "I wanted to see the library again."
@@ -263,34 +270,34 @@ Who should I talk to?
         "Remember that time?"
         "It's truely nostolgic..."
         ->JULES
-    + [What have you been up to?] "What have you been up to while I've been away?" #speaker: Alistair
-        #speaker: Jules
+    + [What have you been up to?] "What have you been up to while I've been away?" #speaker:Alistair
+        #speaker:Jules
         "So much has changed since we were interns here at the lab."
         "Many of the people we used to know have moved off planet."
         "And well, I have a family now. It's funny how having children can change your perspective."
         "... But you haven't changed much Alistair." //amusement
-            ++ [Have changed] "I think I've changed, I've been all over the place." #speaker: Alistair
-                #speaker: Jules
-            ++ [Have not changed] "I suppose I haven't changed that much after all..." #speaker: Alistair
-                #speaker: Jules
+            ++ [Have changed] "I think I've changed, I've been all over the place." #speaker:Alistair
+                #speaker:Jules
+            ++ [Have not changed] "I suppose I haven't changed that much after all..." #speaker:Alistair
+                #speaker:Jules
             - "Perhaps you have. But you're still the same at your core."
                 "... That's a good thing, Alistair. Don't lose your sense of wonder, your adventurous spirit."
-            ++ [Promise] "I don't think I ever will, you can count on that." #speaker: Alistair
-                #speaker: Jules
+            ++ [Promise] "I don't think I ever will, you can count on that." #speaker:Alistair
+                #speaker:Jules
                 "Good."
                 -> JULES
-            ++ [We'll see] "I'm not sure Jules, there's..." #speaker: Alistair
-                #speaker: Jules
+            ++ [We'll see] "I'm not sure Jules, there's..." #speaker:Alistair
+                #speaker:Jules
                 "What is it Alistair?"
-                #speaker: Alistair
+                #speaker:Alistair
                 "There's just, there's a lot going on..."
                 "It's complicated..."
                 "I'll tell you some other time, alright?"
-                #speaker: Jules
+                #speaker:Jules
                 "Of course."
                 -> JULES
     + [Nothing for now]
-    #speaker: Jules
+    #speaker:Jules
     "Let's speak again soon, Alistair."
         ->library
 
@@ -302,46 +309,46 @@ Who should I talk to?
 {metChild:
     "Hello..."
   - else:
-    #speaker Alistair
+    #speaker:Alistair
     "Hello there! What's your name?"
     
-    #speaker Child
+    #speaker:Child
     "..."
     
-    #speaker Alistair
+    #speaker:Alistair
     "Oh, well..."
     "My name is Alistair!"
     
-    #speaker Child
+    #speaker:Child
     "..."
     
-    #speaker Alistair
+    #speaker:Alistair
     "You... doing alright?"
     
-    #speaker Child
+    #speaker:Child
     "I'm fine."
     ~metChild = true
     -> CHILD
 }
-#speaker: Child
+#speaker:Child
 "... What do you want?"
-    + [Lost?] "Are you... lost? I don't think children are supposed to be in the lab." #speaker: Alistair
-    #speaker: Child
+    + [Lost?] "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
+    #speaker:Child
     "I'm not lost."
     "I'm exploring."
     "Nobody is in the lab anyway. Everyone is getting ready to evacuate."
-        ++ [You evacuate too?] "Shouldn't you be getting ready too?" #speaker: Alistair
-        #speaker: Child
+        ++ [You evacuate too?] "Shouldn't you be getting ready too?" #speaker:Alistair
+        #speaker:Child
         "I am ready. I have everything I need."
-        ++ [Exploring the lab?] "You like exploring the lab then?" #speaker: Alistair
-        #speaker: Child
+        ++ [Exploring the lab?] "You like exploring the lab then?" #speaker:Alistair
+        #speaker:Child
         "I've always wanted to see it."
         "This is the only way I'm able to. When everyone is gone..."
         - "Oh." 
-            "Okay." #speaker: Alistair
+            "Okay." #speaker:Alistair
             -> CHILD
-    + [Parents?] "Do your parents know you're here?" #speaker: Alistair
-    #speaker: Child
+    + [Parents?] "Do your parents know you're here?" #speaker:Alistair
+    #speaker:Child
     "No."
     "They're packing up everything."
     "We're leaving the planet on BIG SPACE CRUISE SHIP."
@@ -349,14 +356,14 @@ Who should I talk to?
     "I just wanna stay here..."
     -> CHILD
     + [Nothing for now]
-    #speaker: Child
+    #speaker:Child
     "Okay."
     "Fine."
         ->library
 
 //Quest Specific Knots
 ===InvestigateVault===
-#background: vault
+#background:vault
 The vault is a marvel in of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
     * [Guess the code] ->DarlingPepTalk
@@ -377,27 +384,27 @@ In the center, I see a series of numbers: 0-9.
 
 ->DarlingPepTalk
 ===DarlingPepTalk===
-#speaker: Alistair
+#speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "Did you see what the code was?"
 
-#speaker: Alistair
+#speaker:Alistair
 "Well, yes, but the code is changed everytime by the Lab Director."
 "They take security very serious here."
 "Unfortunately."
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "Then we have to find this Director."
 
-#speaker: Alistair
+#speaker:Alistair
 "And somehow convince him to let us into the vault."
 
-#speaker: D4RL1N6
+#speaker:D4RL1N6
 "Don't be so melodramatic. We'll find a way. We've got to get your treasure."
 
-#speaker: Alistair
+#speaker:Alistair
 "You're right as usual."
 "We'll find a way to get my 'treasure'."
 -> DONE
@@ -405,15 +412,15 @@ In the center, I see a series of numbers: 0-9.
 ===Security===
 As I approach the vault, I see one of the vault's security promptly slide over and put himself directly into my path.
 He crosses his arms and just stands there.
-    + [Say hello] "Hello there!" #speaker: Alistair
+    + [Say hello] "Hello there!" #speaker:Alistair
                     The vault security guard just looks down at me.
                     He doesn't respond.
-                    "Uh. I said hello there!" #speaker: Alistair
+                    "Uh. I said hello there!" #speaker:Alistair
                     The guard still does not respond, but I see his eyebrow twitch.
                     Maybe it's best not to press him.
-                    ++[Say hello again] "I said, hello-" #speaker: Alistair
-                        "I heard you..." #speaker: Guard
-                        "Oh! Apologies..." #speaker: Alistair
+                    ++[Say hello again] "I said, hello-" #speaker:Alistair
+                        "I heard you..." #speaker:Guard
+                        "Oh! Apologies..." #speaker:Alistair
                         (He's not very talkative is he...)->library
                     ++[Nevermind] I just smile and turn on my heel.
                                     (Maybe I'll look elsewhere.) ->library
@@ -432,11 +439,11 @@ The treasure might even have melted inside the vault anyway.
 ===Election===
 As crowds of people close in on the board, I push and wriggle my way closer to the front.
 Now that I'm closer, I can hear a bit more of the board members' speech.
-#speaker: Board member
+#speaker:Board member
 "Come forth, any of you who wish to speak."
 "The floor is open for community comments on the appointment of DIRECTOR'S NAME as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
     =ShopownerMono
-        #speaker: Shopowner
+        #speaker:Shopowner
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work LAB DIRECTOR'S NAME has devoted to the lab and to Elore-Nabyke."
         "But."
@@ -448,7 +455,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I won't take much more of your time. But I don't believe that LAB DIRECTOR'S NAME is suited to deal with this catastrophe. Perhaps it is time for someone younger with more gumption to lead us."
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
-        #speaker: Child
+        #speaker:Child
         "Okay..."
         "Well."
         "Um, so."
@@ -462,7 +469,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "That's all I wanted to say."
         "Yeah..." ->OldLadyMono
     =OldLadyMono
-        #speaker: OldLady
+        #speaker:OldLady
         As the Old Lady steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
         "Yes!"
@@ -475,10 +482,10 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crashendo.
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
-#speaker: Lab Director
+#speaker:Lab Director
 "Silence!"
 "I will have order!"
-#speaker: Alistair
+#speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 -> library
 
