@@ -380,6 +380,7 @@ In the center, I see a series of numbers: 0-9.
         -> InvestigateVault
     * {hasCode} [Input code]
         ->Ending
+    + [Do nothing] -> library
 
 
 ->DarlingPepTalk
@@ -407,7 +408,7 @@ In the center, I see a series of numbers: 0-9.
 #speaker:Alistair
 "You're right as usual."
 "We'll find a way to get my 'treasure'."
--> DONE
+-> library
 
 ===Security===
 As I approach the vault, I see one of the vault's security promptly slide over and put himself directly into my path.

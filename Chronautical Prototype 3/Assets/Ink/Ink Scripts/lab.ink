@@ -15,32 +15,53 @@ VAR postDisaster = false
 VAR seenElection = false
 VAR seenResults = false
 VAR helpComplete = 0
-//VARIABLES FOR THE SIDE QUEST STUFF
 VAR julesDirector = false
 VAR hasCode = false
+//More variables needed here for quest specifics
+
+//Variables for if player has met NPC
+VAR metJules = false
+VAR metChild = false
 
 //NPC Variables
 VAR julesPresent = false
-VAR directorPresent = false //formally Lab Head
+VAR directorPresent = false
 VAR shopownerPresent = false
 VAR childPresent = false
 VAR oldladyPresent = false
 
+//Sprite/Background/Speaker
+//#speaker:Alistair
+//#sprite:Alistair Sad
+//#background:labInterior
+//#npc:Child
+//No space between colon and character/sprite/background
+
+
 //Knots Start
-    
 ===lab===
 //Room Description for Journal
 { time:
-- 1:    ~ roomDescription = "something"
-- 2:    ~ roomDescription = "something"
-- 3:    ~ roomDescription = "something"
-- 4:    ~ roomDescription = "something"
-- 5:    ~ roomDescription = "something"
-- 6:    ~ roomDescription = "something"
-- 7:    ~ roomDescription = "something"
-- 8:    ~ roomDescription = "something"
-- 9:    ~ roomDescription = "something"
-- 10:   ~ roomDescription = "something"
+- 1:    
+    ~ roomDescription = "here and then"
+- 2:    
+    ~ roomDescription = "something"
+- 3:    
+    ~ roomDescription = "something"
+- 4:    
+    ~ roomDescription = "something"
+- 5:    
+    ~ roomDescription = "something"
+- 6:    
+    ~ roomDescription = "something"
+- 7:    
+    ~ roomDescription = "something"
+- 8:    
+    ~ roomDescription = "something"
+- 9:    
+    ~ roomDescription = "something"
+- 10:   
+    ~ roomDescription = "something"
 }
 
 //Content Start
@@ -61,14 +82,22 @@ What should I do?
         - 10:   What does the room look like?
         }
         -> lab
+    //NPC Description for Player and variable changes
     + [Look for someone to talk to]
-        //NPC Description for Player
         { time:
         - 1:    Who is there? (Add variable changes for NPCs present)
+                ~directorPresent=true
         - 2:    Who is there?
-        - 3:    Who is there?
+                ~directorPresent=true
+        - 3:    Who is there? 
+                ~julesPresent=true
+                ~directorPresent=true
         - 4:    Who is there?
+                ~directorPresent=true
+                ~julesPresent=true
         - 5:    Who is there?
+                ~directorPresent=true
+                ~julesPresent=true
         - 6:    Who is there?
         - 7:    Who is there?
         - 8:    Who is there?
@@ -82,21 +111,24 @@ What should I do?
 Who should I talk to? 
     *{julesPresent} [Jules] -> JULES
     *{directorPresent} [The Director] -> DIRECTOR
-    *{shopownerPresent} [The Shopowner] -> SHOPOWNER
-    *{childPresent} [The Child] -> CHILD
-    *{oldladyPresent} [The Old Lady] -> OLDLADY
     * [Don't talk to anyone] I don't need to talk to anyone right now. -> lab
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
 {time == 1:
     This is written if yourVariable is true.
-    //Each NPC should have some base questions that they can be asked (~2) Questions to elaborate or get info (think Skyrim NPCs) These questions are used for the player to get information about the world or to get information to further quests
-    //In addition, some dialogue options will only be visible if the player has met previous requirements, these options will always further the plot/puzzle and should appear as the first thing in the list of dialogue options
   - else:
     prints nothing if player is not in time 1
 }
-//repeat for times 2-10
+//HelpOpenVaultConvo
+//Ask for help to get into vault, says no, not going to help break into it
+//We have bigger issues at hand, planet exploding
+//Darling pops in, says there must be a way, keep searching
 
+//Has seen election
+//Return to Jules and suggest him that he run for director, respected and such (only works in certain times)
+//Sees election did not help, have some minor election knot changes
+//Darling plants idea to help Jules to get elected
+//End of Demo
 
 ===DIRECTOR===
 {time == 1:
@@ -104,30 +136,9 @@ Who should I talk to?
   - else:
     prints nothing
 }
-//repeat for times 2-10
-
-===SHOPOWNER===
-{time == 1:
-    This is written if yourVariable is true.
-  - else:
-    prints nothing
-}
-//repeat for times 2-10
-
-===CHILD===
-{time == 1:
-    This is written if yourVariable is true.
-  - else:
-    prints nothing
-}
-//repeat for times 2-10
-
-===OLDLADY===
-{time == 1:
-    This is written if yourVariable is true.
-  - else:
-    prints nothing
-}
-//repeat for times 2-10
-
+=InitialMeeting
 //Knots will be added for specific quest events/actions
+//Speak to lab head, shut down idea, say that alistair can not get into the vault, no longer employeed, can not get into vault, classifed (haven't you given us enough trouble?)
+//Darling directs player to find Jules
+//Create variable for uniquie convo with Jules following this
+-> DONE
