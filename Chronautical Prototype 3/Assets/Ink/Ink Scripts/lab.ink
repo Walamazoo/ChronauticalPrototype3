@@ -43,25 +43,25 @@ VAR oldladyPresent = false
 //Room Description for Journal
 { time:
 - 1:    
-    ~ roomDescription = "here and then"
+    ~ roomDescription = "A group is listening to a news projection."
 - 2:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "The lab is busy, seems like there's plenty of work coming in."
 - 3:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "The room is filled with booths of scientists showing off their work, must be a fair."
 - 4:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "Not much seems to be happening in the lab."
 - 5:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "The Director is giving an announcement."
 - 6:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "Room is empty but lots of noise coming from the library. "
 - 7:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "The Lab Director election has concluded."
 - 8:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "Much of the equipment and furniture is gone."
 - 9:    
-    ~ roomDescription = "something"
+    ~ roomDescription = "Rumbling from below."
 - 10:   
-    ~ roomDescription = "something"
+    ~ roomDescription = "Lab is gone, the planet will be destroyed soon."
 }
 
 //Content Start
@@ -70,22 +70,27 @@ What should I do?
         //Room Description for Player
         //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
         { time:
-        - 1:    What does the room look like?
-        - 2:    What does the room look like? 
-        - 3:    What does the room look like? 
-        - 4:    What does the room look like? 
-        - 5:    What does the room look like? 
-        - 6:    What does the room look like? 
-        - 7:    What does the room look like? 
-        - 8:    What does the room look like?
-        - 9:    What does the room look like?
-        - 10:   What does the room look like?
+        - 1:    A handful of scientists huddle around a projected figure I don't recognize, but they seem to be listening somberly.
+                +Listen in -> OtherPlanetAnnounce
+        - 2:    The lab is filled with a buzzling excitement and energy as scientists, assistants, and cityfolk move about from task to task. 
+        - 3:    The room is lined with booths, boards, and flashy experiments. Judges walk around with their hands behind their backs as eager young scientists stand at attention.
+                +Investigate -> ScienceFair
+        - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
+        - 5:    A large crowd of various employees of the lab crowd around a projection of the Director, even the wasteman strains to listen.
+                Everyone is silent.
+                +Investigate -> AnnounceDestruction
+        - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
+        - 7:    The lab is litered with balloon arches and confetti liters the ground. 'DIRECTOR'S NAME continues reign' is sprawled everywhere on posers and decorations.
+                Lab employees simply step over the confetti and continue their work.
+        - 8:    The lab is incredibly bare. I see very few lab stations remaining and everything that wasn't attached to the floor or the wall is gone, replaced only by a clean spot in the layer of dust.
+        - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
+        - 10:   What was once a lab has now been completely swallowed up by a monsterous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
         }
         -> lab
     //NPC Description for Player and variable changes
     + [Look for someone to talk to]
         { time:
-        - 1:    Who is there? (Add variable changes for NPCs present)
+        - 1:    here
                 ~directorPresent=true
         - 2:    Who is there?
                 ~directorPresent=true
@@ -142,3 +147,11 @@ Who should I talk to?
 //Darling directs player to find Jules
 //Create variable for uniquie convo with Jules following this
 -> DONE
+
+===OtherPlanetAnnounce===
+
+
+===ScienceFair===
+
+
+===AnnounceDestruction===
