@@ -306,11 +306,11 @@ Who should I talk to?
 "Many of the people we used to know have moved off planet."
 "And well, I have a family now. It's funny how having children can change your perspective."
 "... But you haven't changed much Alistair."
-    ++ [Have changed] 
+    + [Have changed] 
         #speaker:Alistair
         "I think I've changed, I've been all over the place."
         
-    ++ [Have not changed] 
+    + [Have not changed] 
         #speaker:Alistair
         "I suppose I haven't changed that much after all..."
     - 
