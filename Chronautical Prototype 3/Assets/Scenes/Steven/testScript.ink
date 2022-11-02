@@ -9,6 +9,7 @@ VAR number = 0
 
 -> beginning
 == beginning ==
+#Background:Background1
 ~BUTTON_GONE()
 ~GET_NUMBER()
 The number is {number}.
@@ -31,7 +32,8 @@ The number is {number}.
 ~STORE_NUMBER(number)
 ~SHOW_BUTTON()
 ~CREATE_JOURNAL_OBJECT("Duh", "itemclue", "owealsinvw", "aolvigbwesngwelgnw")
-~CREATE_JOURNAL_OBJECT("Duh", "item", "owsjbenonw evna", "piaenf")
+~CREATE_JOURNAL_OBJECT("Duh", "item", "owsjbenonw evna", "piaenf") 
+#Background:Background2
 
     ->END
 
