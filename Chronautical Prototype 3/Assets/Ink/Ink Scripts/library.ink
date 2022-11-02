@@ -117,7 +117,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 #speaker:D4RL1N6
 "Precisely."
 //This time variable change below is used for testing in Inky and should be commented out when making a build or testing time slider
-~time = 8
+~time = 7
 -> library
     
     
@@ -201,14 +201,17 @@ Who should I talk to?
     +{julesPresent} [Jules] -> JULES
     +{childPresent} [The Child] -> CHILD
     + [Don't talk to anyone] I don't need to talk to anyone right now. -> library
+    
+
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
-{metJules:
-    "Hello friend."
-  - else:
+{metJules: -> Questions|-> meetJules}
+
+=meetJules
+~metJules=true
+
     #speaker:Alistair
     "Jules? Is that you?"
-    ~metJules = true
     
     #speaker:Jules
     "Alistair!"
@@ -224,8 +227,10 @@ Who should I talk to?
     "I'm sorry, it is good to see you too..."
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
-    #speaker:Alistair
-    +[Been out and about] "Oh I've been out and about."
+    +[Been out and about] 
+        #speaker:Alistair
+        "Oh I've been out and about."
+        
         #speaker:Jules
         "Out and about? Why so coy Alistair?"
         
@@ -243,7 +248,11 @@ Who should I talk to?
         
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
-    +[Adventuring] "Oh I've been... adventuring."
+    +[Adventuring] 
+        
+        #speaker:Alistair
+        "Oh I've been... adventuring."
+        
          #speaker:Jules
         "Out and about? Why so coy Alistair?"
         
@@ -261,51 +270,75 @@ Who should I talk to?
         
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
-}
+
+=Questions
 #speaker:Jules
 "What can I help you with?"
-    + [Why are you here?] "Why are you here, Jules?" #speaker:Alistair
-        #speaker:Jules
-        "Ah."
-        "Well."
-        "I wanted to see the library again."
-        "The planet will fold in on itself within a few years."
-        "And evacuation plans are underway."
-        "Everyone will be off the planet soon..."
-        "But the library reminds me of our time as interns here at the lab."
-        "Remember that time?"
-        "It's truely nostolgic..."
-        ->JULES
-    + [What have you been up to?] "What have you been up to while I've been away?" #speaker:Alistair
-        #speaker:Jules
-        "So much has changed since we were interns here at the lab."
-        "Many of the people we used to know have moved off planet."
-        "And well, I have a family now. It's funny how having children can change your perspective."
-        "... But you haven't changed much Alistair." //amusement
-            ++ [Have changed] "I think I've changed, I've been all over the place." #speaker:Alistair
-                #speaker:Jules
-            ++ [Have not changed] "I suppose I haven't changed that much after all..." #speaker:Alistair
-                #speaker:Jules
-            - "Perhaps you have. But you're still the same at your core."
-                "... That's a good thing, Alistair. Don't lose your sense of wonder, your adventurous spirit."
-            ++ [Promise] "I don't think I ever will, you can count on that." #speaker:Alistair
-                #speaker:Jules
-                "Good."
-                -> JULES
-            ++ [We'll see] "I'm not sure Jules, there's..." #speaker:Alistair
-                #speaker:Jules
-                "What is it Alistair?"
-                #speaker:Alistair
-                "There's just, there's a lot going on..."
-                "It's complicated..."
-                "I'll tell you some other time, alright?"
-                #speaker:Jules
-                "Of course."
-                -> JULES
+    + [Why are you here?] ->WhyHere
+    + [What have you been up to?] ->WhatUp
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
         ->library
+
+=WhyHere
+#speaker:Alistair
+"Why are you here, Jules?"
+
+#speaker:Jules
+"Ah."
+"Well."
+"I wanted to see the library again."
+"The planet will fold in on itself within a few years."
+"And evacuation plans are underway."
+"Everyone will be off the planet soon..."
+"But the library reminds me of our time as interns here at the lab."
+"Remember that time?"
+"It's truely nostolgic..."
+        ->JULES
+
+=WhatUp
+#speaker:Alistair
+"What have you been up to while I've been away?"
+        
+#speaker:Jules
+"So much has changed since we were interns here at the lab."
+"Many of the people we used to know have moved off planet."
+"And well, I have a family now. It's funny how having children can change your perspective."
+"... But you haven't changed much Alistair."
+    ++ [Have changed] 
+        #speaker:Alistair
+        "I think I've changed, I've been all over the place."
+        
+    ++ [Have not changed] 
+        #speaker:Alistair
+        "I suppose I haven't changed that much after all..."
+    - 
+        #speaker:Jules
+        "Perhaps you have. But you're still the same at your core."
+        "... That's a good thing, Alistair. Don't lose your sense of wonder, your adventurous spirit."
+        ++ [Promise] 
+            #speaker:Alistair
+            "I don't think I ever will, you can count on that."
+            
+            #speaker:Jules
+            "Good."
+                -> JULES
+        ++ [We'll see] 
+            #speaker:Alistair
+            "I'm not sure Jules, there's..."
+            
+            #speaker:Jules
+            "What is it Alistair?"
+            
+            #speaker:Alistair
+            "There's just, there's a lot going on..."
+            "It's complicated..."
+            "I'll tell you some other time, alright?"
+            
+            #speaker:Jules
+            "Of course."
+                -> JULES
 
 ===CHILD===
 {metChild: -> Questions|-> meetChild}
