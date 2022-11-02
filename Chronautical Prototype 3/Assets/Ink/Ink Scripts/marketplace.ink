@@ -15,6 +15,8 @@ VAR postDisaster = false
 VAR seenElection = false
 VAR seenResults = false
 VAR helpComplete = 0
+VAR directorName = "Bennet Crabb"
+
 //VARIABLES FOR THE SIDE QUEST STUFF
 VAR julesDirector = false
 VAR hasCode = false
@@ -27,7 +29,7 @@ VAR childPresent = false
 VAR oldladyPresent = false
 
 //Knots Start
-    
+->marketplace
 ===marketplace===
 //Room Description for Journal
 { time:
@@ -49,16 +51,19 @@ What should I do?
         //Room Description for Player
         //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
         { time:
-        - 1:    What does the room look like?
-        - 2:    What does the room look like? 
-        - 3:    What does the room look like? 
-        - 4:    What does the room look like? 
-        - 5:    What does the room look like? 
-        - 6:    What does the room look like? 
-        - 7:    What does the room look like? 
-        - 8:    What does the room look like?
-        - 9:    What does the room look like?
-        - 10:   What does the room look like?
+        - 1:    The marketplace is full of small shops, booths, and stands.
+                The people in the market are bubbling with hushed chatter and gossip.
+        - 2:    The marketplace is stuffed with new and exotic goods.
+                An unusual amount of people crowd around each booth.
+        - 3:    I see many travelers from off planet milling about the marketplace. They all seem the intellectual sort.
+        - 4:    A few lone shoppers move from stand to stand.
+                One shop owner leans heavily against his display and begins to nod off.
+        - 5:    Everyone in the marketplace is gathered around a large projection of the Director, {directorName}. 
+        - 6:    The marketplace is completely empty. Booths and stalls still line the square, but no trinkets or produce are displayed and not a soul in sight. 
+        - 7:    The people in the market are bubbling with hushed chatter and gossip. 
+        - 8:    The marketplace is full of random and seemingly useless items. Clothes, trinkets, junk, books, pens, and all sorts of furniture.
+        - 9:    Atmos vessals rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase as they wait to board.
+        - 10:   The marketplace is completely devoid of life.
         }
         -> marketplace
     + [Look for someone to talk to]

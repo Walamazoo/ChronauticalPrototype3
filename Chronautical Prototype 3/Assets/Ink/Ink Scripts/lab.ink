@@ -17,6 +17,7 @@ VAR seenResults = false
 VAR helpComplete = 0
 VAR julesDirector = false
 VAR hasCode = false
+VAR seenPepTalk = false
 //More variables needed here for quest specifics
 
 //Variables for if player has met NPC
@@ -122,20 +123,20 @@ What should I do?
 ===NPCS===
 //Allows the player to talk to NPCs based on who is there at the time
 Who should I talk to? 
-    +{julesPresent} [Jules] -> JULES
+    //+{julesPresent} [Jules] -> JULES
     +{directorPresent} [The Director] -> DIRECTOR
     + [Don't talk to anyone] I don't need to talk to anyone right now. -> lab
 
 
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
-//BUG HERE
-{metJules:
-    "Hello friend."
-  - else:
+{metJules: -> Questions|-> meetJules}
+
+=meetJules
+~metJules=true
+
     #speaker:Alistair
     "Jules? Is that you?"
-    ~metJules = true
     
     #speaker:Jules
     "Alistair!"
@@ -151,8 +152,10 @@ Who should I talk to?
     "I'm sorry, it is good to see you too..."
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
-    #speaker:Alistair
-    +[Been out and about] "Oh I've been out and about."
+    +[Been out and about] 
+        #speaker:Alistair
+        "Oh I've been out and about."
+        
         #speaker:Jules
         "Out and about? Why so coy Alistair?"
         
@@ -170,7 +173,11 @@ Who should I talk to?
         
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
-    +[Adventuring] "Oh I've been... adventuring."
+    +[Adventuring] 
+        
+        #speaker:Alistair
+        "Oh I've been... adventuring."
+        
          #speaker:Jules
         "Out and about? Why so coy Alistair?"
         
@@ -187,26 +194,26 @@ Who should I talk to?
         "I don't know what you could be talking about..."
         
         #speaker:Jules
-        "You are too easy to read my friend."
-        -> JULES
-}
+        "You are too easy to read my friend." -> JULES
 
- { time:
-        - 3:    ->julesT3
-        - 4:    ->julesT4
-        - 5:    ->julesT5
-        }
-=julesT3
-//convo content
--> NPCS
+=Questions
+#speaker:Jules
+"What can I help you with?"
+    + [QUESTION] ->QuestionKNOT1
+    + [QUESTION] ->QUESTIONKNOT2
+    + [QUESTION] ->DEPENDENTONTIME
+    + [Nothing for now]
+    #speaker:Jules
+    "Let's speak again soon, Alistair."
+        ->lab
 
-=julesT4
-//convo content
--> NPCS
+=QUESTIONKNOT
+CONTENT
+-> JULES
 
-=julesT5
-//convo content
--> NPCS
+=QUESTIONKNOT
+CONTENT
+-> JULES
 //HelpOpenVaultConvo
 //Ask for help to get into vault, says no, not going to help break into it
 //We have bigger issues at hand, planet exploding
@@ -218,45 +225,40 @@ Who should I talk to?
 //Darling plants idea to help Jules to get elected
 
 ===DIRECTOR===
-{metDirector:
-    "And what could you want of me?"
-  - else:
-    ->InitialMeeting
-}
+{metDirector: -> Questions|-> meetDirector}
 
-{ time:
-        - 1:    ->directT1
-        - 2:    ->directT2
-        - 3:    ->directT3
-        - 4:    ->directT4
-        - 5:    ->directT5
-        }
-        
-=directT1
-PLACEHOLDER
--> NPCS
+=meetDirector
+~metDirector=true
 
-=directT2
-PLACEHOLDER
--> NPCS
+    introduction
 
-=directT3
-PLACEHOLDER
--> NPCS
+=Questions
+#speaker:Director
+"What do you want?"
+    //+ {time== 1} [Projected figure?] -> Figure
+    //+ {time== 2} [Lab is busy?] -> BusyLab
+    //+ {time== 3} [Booths?] -> Booths
+    //+ {time== 4} [QUESTION] -> KNOT
+    + {seenPepTalk==true} [Enter vault?] -> VaultTalk
+    + [Nothing for now]
+        #speaker:Director
+        "Yes, yes, be gone. I am quite busy."
+            ->lab
 
-=directT4
-PLACEHOLDER
--> NPCS
+=Figure
+CONTENT
+-> DIRECTOR
 
-=directT5
-PLACEHOLDER
--> NPCS
+=BusyLab
+CONTENT
+-> DIRECTOR
 
-=InitialMeeting
-//Knots will be added for specific quest events/actions
-//Speak to lab head, shut down idea, say that alistair can not get into the vault, no longer employeed, can not get into vault, classifed (haven't you given us enough trouble?)
-//Darling directs player to find Jules
-//Create variable for uniquie convo with Jules following this
+=Booths
+CONTENT
+-> DIRECTOR
+
+=VaultTalk
+CONTENT
 -> lab
 
 

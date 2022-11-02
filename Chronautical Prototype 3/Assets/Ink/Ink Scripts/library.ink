@@ -17,6 +17,7 @@ VAR seenResults = false
 VAR helpComplete = 0
 VAR julesDirector = false
 VAR hasCode = false
+VAR seenPepTalk = false
 //More variables needed here for quest specifics
 
 //Variables for if player has met NPC
@@ -55,7 +56,7 @@ VAR oldladyPresent = false
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
 It was full of what I would become. Dreams of adventure in the stars piercing through the dark.
 I was gripped with a frenzy to explore beyond my bubble of libraries and teahouses.
-But, most of all, I dreamed of the universe lost.
+But, most of all, I dreamed of the star system lost.
 Atlantis.
 
 #background:library
@@ -440,6 +441,7 @@ In the center, I see a series of numbers: 0-9.
 
 ->DarlingPepTalk
 ===DarlingPepTalk===
+~seenPepTalk=true
 #speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
 
