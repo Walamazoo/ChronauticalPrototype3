@@ -29,6 +29,11 @@ VAR directorPresent = false
 VAR shopownerPresent = false
 VAR childPresent = false
 VAR oldladyPresent = false
+//Jules = Jules Ambrose
+//Child = Temperance Ward
+//Old Lady/Storyteller = Miriam Harcourt
+//Shopkeep = Uriah Bramble
+//Director = Bennet Crabb
 
 //Sprite/Background/Speaker
 //#speaker:Alistair
@@ -111,7 +116,8 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "Precisely."
-~time = 9
+//This time variable change below is used for testing in Inky and should be commented out when making a build or testing time slider
+~time = 8
 -> library
     
     
@@ -333,31 +339,30 @@ Who should I talk to?
 #speaker:Child
 "... What do you want?"
     + [Lost?] "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
-    #speaker:Child
-    "I'm not lost."
-    "I'm exploring."
-    "Nobody is in the lab anyway. Everyone is getting ready to evacuate."
-        ++ [You evacuate too?] "Shouldn't you be getting ready too?" #speaker:Alistair
         #speaker:Child
-        "I am ready. I have everything I need."
-        ++ [Exploring the lab?] "You like exploring the lab then?" #speaker:Alistair
-        #speaker:Child
-        "I've always wanted to see it."
-        "This is the only way I'm able to. When everyone is gone..."
-        - "Oh." 
-            "Okay." #speaker:Alistair
-            -> CHILD
+        "I'm not lost."
+        "I'm exploring."
+        "Nobody is in the lab anyway. Everyone is getting ready to evacuate."
+            ++ [You evacuate too?] "Shouldn't you be getting ready too?" #speaker:Alistair
+            #speaker:Child
+            "I am ready. I have everything I need."
+            ++ [Exploring the lab?] "You like exploring the lab then?" #speaker:Alistair
+            #speaker:Child
+            "I've always wanted to see it."
+            "This is the only way I'm able to. When everyone is gone..."
+            - "Oh." 
+                "Okay." #speaker:Alistair
+                -> CHILD
     + [Parents?] "Do your parents know you're here?" #speaker:Alistair
-    #speaker:Child
-    "No."
-    "They're packing up everything."
-    "We're leaving the planet on BIG SPACE CRUISE SHIP."
-    "It'll be cool to be on one, but..."
-    "I just wanna stay here..."
-    -> CHILD
+        #speaker:Child
+        "No."
+        "They're packing up everything."
+        "We're leaving the planet on a big Spacer."
+        "It'll be cool to be on one, but..."
+        "I just wanna stay here..."
+        -> CHILD
     + [Nothing for now]
     #speaker:Child
-    "Okay."
     "Fine."
         ->library
 
@@ -438,22 +443,23 @@ The treasure might even have melted inside the vault anyway.
 
 
 ===Election===
+//variables will need to be added to change the election outcome and stance of the NPCs
 As crowds of people close in on the board, I push and wriggle my way closer to the front.
 Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker:Board member
 "Come forth, any of you who wish to speak."
-"The floor is open for community comments on the appointment of DIRECTOR'S NAME as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
+"The floor is open for community comments on the appointment of Bennet Crabb as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
     =ShopownerMono
         #speaker:Shopowner
         "I can speak first."
-        "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work LAB DIRECTOR'S NAME has devoted to the lab and to Elore-Nabyke."
+        "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
         "But."
         "I think I also speak for the community when I say that the lab and the director's handling of the evacuation of the planet to be entirely abhorent."
         "Is it not the lab itself that discovered the core's damaged state? 
         "Why have you not put more work into fixing it?"
         "Why is the lab still functioning as if the planet is not going to explode in a few years?"
         "I pose these questions not as a way to tear down all the work you all have done, but this is our planet too that you are asking us to leave!"
-        "I won't take much more of your time. But I don't believe that LAB DIRECTOR'S NAME is suited to deal with this catastrophe. Perhaps it is time for someone younger with more gumption to lead us."
+        "I won't take much more of your time. But I don't believe that Bennet Crabb is suited to deal with this catastrophe. Perhaps it is time for someone younger with more gumption to lead us."
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
         #speaker:Child
