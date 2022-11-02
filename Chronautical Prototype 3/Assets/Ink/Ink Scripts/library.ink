@@ -307,15 +307,11 @@ Who should I talk to?
     "Let's speak again soon, Alistair."
         ->library
 
-
 ===CHILD===
-//First meeting and after have met before
-//Questions
-//End convo
-{metChild:
-    "Hello..."
-  - else:
-    #speaker:Alistair
+{metChild: -> Questions|-> meetChild}
+
+=meetChild
+#speaker:Alistair
     "Hello there! What's your name?"
     
     #speaker:Child
@@ -334,26 +330,49 @@ Who should I talk to?
     #speaker:Child
     "I'm fine."
     ~metChild = true
-    -> CHILD
-}
+-> CHILD
+
+=Questions
 #speaker:Child
 "... What do you want?"
-    + [Lost?] "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
+    + [Lost?] -> Lost
+    + [Parents?] -> Parents
+    + [Nothing for now]
+    #speaker:Child
+    "Fine."
+        ->library
+=Lost
+"Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
         #speaker:Child
         "I'm not lost."
         "I'm exploring."
         "Nobody is in the lab anyway. Everyone is getting ready to evacuate."
-            ++ [You evacuate too?] "Shouldn't you be getting ready too?" #speaker:Alistair
-            #speaker:Child
-            "I am ready. I have everything I need."
-            ++ [Exploring the lab?] "You like exploring the lab then?" #speaker:Alistair
-            #speaker:Child
-            "I've always wanted to see it."
-            "This is the only way I'm able to. When everyone is gone..."
-            - "Oh." 
-                "Okay." #speaker:Alistair
+            ++ [You evacuate too?] 
+                #speaker:Alistair
+                "Shouldn't you be getting ready too?"
+                
+                #speaker:Child
+                "I am ready. I have everything I need."
+                #speaker: Alistair
+            "Oh." 
+            "Okay."
                 -> CHILD
-    + [Parents?] "Do your parents know you're here?" #speaker:Alistair
+            
+            ++ [Exploring the lab?] 
+                #speaker:Alistair
+                "You like exploring the lab then?"
+                
+                #speaker:Child
+                "I've always wanted to see it."
+                "This is the only way I'm able to. When everyone is gone..."
+                #speaker: Alistair
+            "Oh." 
+            "Okay."
+                -> CHILD
+-> Questions
+
+=Parents
+"Do your parents know you're here?" #speaker:Alistair
         #speaker:Child
         "No."
         "They're packing up everything."
@@ -361,10 +380,8 @@ Who should I talk to?
         "It'll be cool to be on one, but..."
         "I just wanna stay here..."
         -> CHILD
-    + [Nothing for now]
-    #speaker:Child
-    "Fine."
-        ->library
+-> Questions
+
 
 //Quest Specific Knots
 ===InvestigateVault===
@@ -500,3 +517,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 ===Ending===
 //placeholder for ending
 -> DONE
+
+
+
+
