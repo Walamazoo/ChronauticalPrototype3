@@ -14,6 +14,9 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     [SerializeField] GameObject customInkFunctions;
     [SerializeField] GameObject[] backgrounds;
     [SerializeField] GameObject currentBackground;
+    [SerializeField] SpriteList spriteList;
+    [SerializeField] GameObject playerSprite;
+    [SerializeField] GameObject NPCSprite;
 
     Tween fadeInTween;
     Tween fadeOutTween;
@@ -62,8 +65,16 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                     case SPEAKER_TAG:
                         break;
                     case SPRITE_TAG:
+                        string[] spriteStrings = tagValue.Split(' ');
+                        string spriteName = spriteStrings[0].Trim();
+                        string spriteExpression = spriteStrings[1].Trim();
+                        SetSprite(spriteName, spriteExpression, playerSprite);
                         break;
                     case NPC_TAG:
+                        string[] NPCspriteStrings = tagValue.Split(' ');
+                        string NPCspriteName = NPCspriteStrings[0].Trim();
+                        string NPCspriteExpression = NPCspriteStrings[1].Trim();
+                        SetSprite(NPCspriteName, NPCspriteExpression, playerSprite);
                         break;
                     default:
                         Debug.Log("Tag came in but is not currently being handeled: " + tag);
@@ -91,6 +102,36 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         }
         currentBackground = background;
         fadeInTween = currentBackground.GetComponent<SpriteRenderer>().DOFade(1, 0.75f);
+        yield return fadeInTween.WaitForCompletion();
+    }
+
+    private void SetSprite(string spriteName, string expressionName, GameObject currentSprite)
+    {
+        if(spriteName == "None" || expressionName == "None"){
+            currentSprite.GetComponent<SpriteRenderer>().sprite = null;
+            return;
+        }
+        foreach (CharacterSprite character in spriteList.characterSprites)
+        {
+            if (character.name == spriteName)
+            {
+                foreach (Sprite expression in character.Expressions)
+                {
+                    if (expression.name == expressionName)
+                    {
+                        StartCoroutine(ChangeSprite(expression, currentSprite));
+                    }
+                }
+            }
+        }      
+    }
+
+    private IEnumerator ChangeSprite(Sprite expression, GameObject currentSprite)
+    {
+        fadeOutTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(0, 0.25f);
+        yield return fadeOutTween.WaitForCompletion();
+        currentSprite.GetComponent<SpriteRenderer>().sprite = expression;
+        fadeInTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(1, 0.25f);
         yield return fadeInTween.WaitForCompletion();
     }
 }
