@@ -32,19 +32,12 @@ VAR shopownerPresent = false
 VAR childPresent = false
 VAR oldladyPresent = false
 
-//Sprite/Background/Speaker
-//#speaker:Alistair
-//#sprite:Alistair Sad
-//#background:labInterior
-//#npc:Child
-//No space between colon and character/sprite/background
-
-
 //Knots Start
 //Time Set for Testing
-~time=3
--> DIRECTOR
+//~time=3
+-> lab
 ===lab===
+#background:Lab interior
 //Room Description for Journal
 { time:
 - 1:    
