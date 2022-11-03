@@ -14,6 +14,8 @@ public class SliderController : MonoBehaviour
 	List<Story> stories;
     public string currentLocation;
 
+    [SerializeField] DialogueSystemExtender extender;
+
     [SerializeField] DialogueSystemInkIntegration dialogueManager;
     [SerializeField] GameObject playerActor;
     [SerializeField] GameObject conversantActor;
@@ -116,11 +118,15 @@ public class SliderController : MonoBehaviour
         DialogueSystemInkIntegration.SetInkNumber("CurrentSliderValue", currentSliderValue);
         DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
+        /*
         foreach(Story script in stories){
             if(script.currentFlowName.Equals(currentLocation)){
-                script.variablesState["CurrentYear"] = (double)currentYear;
+                script.variablesState["time"] = (double)currentYear;
             }
         }
+        */
+
+        extender.inkInkStorage["Time"] = currentYear; 
 
         DialogueSystemInkIntegration.SetConversationStartingPoint(currentLocation);
         DialogueManager.StartConversation(currentLocation);
