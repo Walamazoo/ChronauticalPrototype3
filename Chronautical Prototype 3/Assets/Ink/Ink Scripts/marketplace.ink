@@ -32,6 +32,7 @@ VAR oldladyPresent = false
 ->marketplace
 ===marketplace===
 #background:Marketplace
+#sprite:Alistair_Neutral
 //Room Description for Journal
 { time:
 - 1:    ~ roomDescription = "Market goers busy with gossip."

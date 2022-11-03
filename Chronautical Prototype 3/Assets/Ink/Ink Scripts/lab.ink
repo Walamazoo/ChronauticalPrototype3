@@ -38,6 +38,7 @@ VAR oldladyPresent = false
 -> lab
 ===lab===
 #background:Lab interior
+#sprite:Alistair_Neutral
 //Room Description for Journal
 { time:
 - 1:    
@@ -124,7 +125,7 @@ Who should I talk to?
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
 {metJules: -> Questions|-> meetJules}
-
+#NPC:Jules_neutral
 =meetJules
 ~metJules=true
 
@@ -219,7 +220,7 @@ CONTENT
 
 ===DIRECTOR===
 {metDirector: -> Questions|-> meetDirector}
-
+#NPC:Labhead_neutral
 =meetDirector
 ~metDirector=true
 #speaker:Director
