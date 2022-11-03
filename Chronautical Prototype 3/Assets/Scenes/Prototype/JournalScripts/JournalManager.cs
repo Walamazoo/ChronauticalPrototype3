@@ -21,7 +21,7 @@ public class JournalManager : MonoBehaviour
     //listName is the name of the list the player is currently accessing for the journal.
     [SerializeField] GameObject photo;
     [SerializeField] GameObject clickphoto;
-    [SerializeField] GameObject name;
+    [SerializeField] GameObject itemName;
     [SerializeField] GameObject fulldescription;
     [SerializeField] GameObject hoverdescription;
     [SerializeField] GameObject listName;
@@ -182,14 +182,14 @@ public class JournalManager : MonoBehaviour
             if(listOrItem){
                 JournalItemPointer = 0;
             }
-            name.GetComponent<Text>().text = currentList[JournalItemPointer].name;
-            name.SetActive(true);
+            itemName.GetComponent<Text>().text = currentList[JournalItemPointer].name;
+            itemName.SetActive(true);
             hoverdescription.GetComponent<Text>().text = currentList[JournalItemPointer].hoverDescription;
             photo.GetComponent<Image>().sprite = currentList[JournalItemPointer].image;
             photo.SetActive(true);
         }
         else{
-            name.SetActive(false);
+            itemName.SetActive(false);
             photo.SetActive(false);
             hoverdescription.GetComponent<Text>().text = "";
         }
