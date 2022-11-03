@@ -443,6 +443,7 @@ In the center, I see a series of numbers: 0-9.
 "I've seen the vault opened before. It needs a code to be opened."
 
 #speaker:D4RL1N6
+#NPC:Darling_Neutral
 "Did you see what the code was?"
 
 #speaker:Alistair

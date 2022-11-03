@@ -357,6 +357,7 @@ CONTENT
 (Speaking to Bennet is like talking to a wall...)
 
 #speaker:D4RL1N6
+#NPC:Darling_Neutral
 "That was fruitless."
 
 #speaker:Alistair
