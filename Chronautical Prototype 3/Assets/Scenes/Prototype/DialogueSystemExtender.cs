@@ -26,7 +26,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     private const string NPC_TAG = "NPC";
 
     private Dictionary<string, bool> inkBoolStorage = new Dictionary<string, bool>();
-    private Dictionary<string, int> inkIntStorage = new Dictionary<string, int>();
+    public Dictionary<string, int> inkIntStorage = new Dictionary<string, int>();
     protected override void BindExternalFunctions(Story story)
     {
         base.BindExternalFunctions(story);
