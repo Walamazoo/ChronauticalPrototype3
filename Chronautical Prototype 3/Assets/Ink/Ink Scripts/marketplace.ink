@@ -33,16 +33,16 @@ VAR oldladyPresent = false
 ===marketplace===
 //Room Description for Journal
 { time:
-- 1:    ~ roomDescription = "something"
-- 2:    ~ roomDescription = "something"
-- 3:    ~ roomDescription = "something"
-- 4:    ~ roomDescription = "something"
-- 5:    ~ roomDescription = "something"
-- 6:    ~ roomDescription = "something"
-- 7:    ~ roomDescription = "something"
-- 8:    ~ roomDescription = "something"
-- 9:    ~ roomDescription = "something"
-- 10:   ~ roomDescription = "something"
+- 1:    ~ roomDescription = "Market goers busy with gossip."
+- 2:    ~ roomDescription = "Lots of new things and people in the market."
+- 3:    ~ roomDescription = "Tourists and visitors from off planet stuff the marketplace."
+- 4:    ~ roomDescription = "Place is slow today, not many shoppers."
+- 5:    ~ roomDescription = "Projection of the Director is making an announcement."
+- 6:    ~ roomDescription = "Marketplace is a ghost town."
+- 7:    ~ roomDescription = "Seems like something happened, everyone is talking about it."
+- 8:    ~ roomDescription = "Everyone is selling mundane things."
+- 9:    ~ roomDescription = "Lots of people are packing up and getting onto Atmos vessals."
+- 10:   ~ roomDescription = "The marketplace is completely devoid of life."
 }
 
 //Content Start
@@ -59,11 +59,11 @@ What should I do?
         - 4:    A few lone shoppers move from stand to stand.
                 One shop owner leans heavily against his display and begins to nod off.
         - 5:    Everyone in the marketplace is gathered around a large projection of the Director, {directorName}. 
-        - 6:    The marketplace is completely empty. Booths and stalls still line the square, but no trinkets or produce are displayed and not a soul in sight. 
+        - 6:    The marketplace is completely empty. Booths and stalls still line the square, but no trinkets or produce are displayed and there's not a soul in sight. 
         - 7:    The people in the market are bubbling with hushed chatter and gossip. 
         - 8:    The marketplace is full of random and seemingly useless items. Clothes, trinkets, junk, books, pens, and all sorts of furniture.
-        - 9:    Atmos vessals rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase as they wait to board.
-        - 10:   The marketplace is completely devoid of life.
+        - 9:    Atmos vessals rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
+        - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walk ways. The stench of smoke fills the market and some stalls even collapse as the planet shutters violently.
         }
         -> marketplace
     + [Look for someone to talk to]
