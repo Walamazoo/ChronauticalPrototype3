@@ -67,7 +67,7 @@ What should I do?
         - 9:    Atmos vessals rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
         - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walk ways. The stench of smoke fills the market and some stalls even collapse as the planet shutters violently.
         }
-        -> marketplace
+        -> END //marketplace
     //+ [Look for someone to talk to]
         //NPC Description for Player
         { time:
@@ -92,7 +92,7 @@ Who should I talk to?
     *{shopownerPresent} [The Shopowner] -> SHOPOWNER
     *{childPresent} [The Child] -> CHILD
     *{oldladyPresent} [The Old Lady] -> OLDLADY
-    * [Don't talk to anyone] I don't need to talk to anyone right now. -> marketplace
+    * [Don't talk to anyone] I don't need to talk to anyone right now. -> END //marketplace
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
 {time == 1:
