@@ -115,7 +115,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 #speaker:D4RL1N6
 "Precisely."
 //This time variable change below is used for testing in Inky and should be commented out when making a build or testing time slider
-~time = 7
+//~time = 7
 -> library
     
     
@@ -198,7 +198,7 @@ What should I do?
 Who should I talk to? 
     +{julesPresent} [Jules] -> JULES
     +{childPresent} [The Child] -> CHILD
-    + [Don't talk to anyone] I don't need to talk to anyone right now. -> library
+    + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //library
     
 
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
@@ -277,7 +277,7 @@ Who should I talk to?
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
-        ->library
+        -> END //library
 
 =WhyHere
 #speaker:Alistair
@@ -371,7 +371,7 @@ Who should I talk to?
     + [Nothing for now]
     #speaker:Child
     "Fine."
-        ->library
+        -> END //library
 =Lost
 "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
         #speaker:Child
@@ -433,7 +433,7 @@ In the center, I see a series of numbers: 0-9.
         -> InvestigateVault
     * {hasCode} [Input code]
         ->Ending
-    + [Do nothing] -> library
+    + [Do nothing] -> END //library
 
 
 ->DarlingPepTalk
@@ -477,11 +477,11 @@ He crosses his arms and just stands there.
                     ++[Say hello again] "I said, hello-" #speaker:Alistair
                         "I heard you..." #speaker:Guard
                         "Oh! Apologies..." #speaker:Alistair
-                        (He's not very talkative is he...)->library
+                        (He's not very talkative is he...)-> END //library
                     ++[Nevermind] I just smile and turn on my heel.
-                                    (Maybe I'll look elsewhere.) ->library
+                                    (Maybe I'll look elsewhere.) -> END //library
     + [Nevermind] I just smile and turn on my heel. 
-                (Maybe I'll look elsewhere.) -> library
+                (Maybe I'll look elsewhere.) -> END //library
 //More interactions can be added here if/when we add options to try to break into the vault
 -> DONE
 
@@ -489,7 +489,7 @@ He crosses his arms and just stands there.
 ===HotVault===
 The vault shimmers under the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
 The treasure might even have melted inside the vault anyway.
--> library
+-> END //library
 
 
 ===Election===
@@ -548,7 +548,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 "I will have order!"
 #speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
--> library
+-> END //library
 
 
 ===Ending===
