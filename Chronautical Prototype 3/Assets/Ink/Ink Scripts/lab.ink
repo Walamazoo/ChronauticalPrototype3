@@ -43,7 +43,7 @@ VAR oldladyPresent = false
 //Knots Start
 //Time Set for Testing
 ~time=3
--> lab
+-> DIRECTOR
 ===lab===
 //Room Description for Journal
 { time:
@@ -199,19 +199,19 @@ Who should I talk to?
 =Questions
 #speaker:Jules
 "What can I help you with?"
-    + [QUESTION] ->QuestionKNOT1
-    + [QUESTION] ->QUESTIONKNOT2
-    + [QUESTION] ->DEPENDENTONTIME
+    //+ [QUESTION] ->QuestionKNOT1
+    //+ [QUESTION] ->QUESTIONKNOT2
+    //+ [QUESTION] ->DEPENDENTONTIME
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
         ->lab
 
-=QUESTIONKNOT
+=QUESTIONKNOT1
 CONTENT
 -> JULES
 
-=QUESTIONKNOT
+=QUESTIONKNOT2
 CONTENT
 -> JULES
 //HelpOpenVaultConvo
@@ -229,17 +229,59 @@ CONTENT
 
 =meetDirector
 ~metDirector=true
+#speaker:Director
+"Hm?"
+"Greetings, I am Bennet Crabb, the Director of the labratory."
+"How can I help you?"
 
-    introduction
+#speaker:Alistair
+"Ah-"
+"Sir, do you not remember me?"
+"I'm Alistair! I interned here with Jules Ambrose?"
+
+#speaker:Director
+"Alistair?"
+"Hm..."
+"Of course. Alistair."
+"I would have prefered to have forgotten that name, but it seems you have returned."
+"But your poor disipinary marks have certainly not been forgotten."
+    + [What marks?]
+    #speaker:Alistair
+    "I'm-"
+    "I'm not sure what you could be referencing, sir!"
+    
+    #speaker:Director
+    "Do not play coy with me, boy."
+    
+    + [Sorry]
+    #speaker:Alistair
+    "Sir, I am quite sorry, please accept my apology."
+    
+    - 
+    #speaker:Director
+    "You abandoned your duties, your job, here at the lab with nary a hint of warning."
+    "That sort of behavior is most unprofessional."
+    "Do not think that your return to the planet will secure you a position once again."
+    
+    #speaker:Alistair
+    "Of course not sir."
+    "I am... just visiting."
+    
+    #speaker:Director
+    "And visit you may."
+    "Now, be gone."
+    "I have much work to attend to."
+
+-> lab
 
 =Questions
-#speaker:Director
+#speaker:Director 
 "What do you want?"
     //+ {time== 1} [Projected figure?] -> Figure
     //+ {time== 2} [Lab is busy?] -> BusyLab
     //+ {time== 3} [Booths?] -> Booths
     //+ {time== 4} [QUESTION] -> KNOT
-    + {seenPepTalk==true} [Enter vault?] -> VaultTalk
+    * {seenPepTalk==true} [Enter vault?] -> VaultTalk
     + [Nothing for now]
         #speaker:Director
         "Yes, yes, be gone. I am quite busy."
@@ -258,8 +300,85 @@ CONTENT
 -> DIRECTOR
 
 =VaultTalk
-CONTENT
--> lab
+#speaker:Alistair
+"Hello doctor!"
+"I wanted to inquire about, well..."
+"I believe I misplaced some of my belongings before I left."
+
+#speaker:Director
+"Out with it, what do you want?"
+
+#speaker:Alistair
+"You see..."
+"I left behind some of my belongings in the vault, but-"
+"I really need them! You wouldn't mind just letting me into the vault for a moment would you?"
+
+#speaker:Director
+"That's proposterous."
+"You are no longer employed here and you should know that civilians are strictly prohibited access to any classified materials in the vault."
+    + [I need it]
+        #speaker:Alistair
+        "Sir, I really need my belongings that I left in the vault."
+        "It's imparitive that I get them."
+    + [Please]
+        #speaker:Alistair
+        "Sir, please."
+        "I know that this is a breach of protocol, but perhaps you could make an exception for an ex-intern?"
+    - 
+        #speaker:Director
+        "Hmph."
+        "What even is it that you want from the vault?"
+    + [Notes]
+        #speaker:Alistair
+        "My research notes. They're still inside the vault."
+        
+        #speaker:Director
+        "Those notes belong to the lab now."
+        "When you left your position, those materials became part of the collective research of the lab."
+        
+    + [Something?]
+        #speaker:Alistair
+        "Uh well..."
+        (Think! What should I say?)
+        "It's... something?"
+        "I just, I really need it."
+    - 
+        #speaker:Director
+        "Absolutely not."
+        "No, access to the vault is prohibited."
+        "It matters not what it is you want from it."
+    + [I must]
+        #speaker:Alistair
+            "I must get into the vault, sir!"
+    + [Please!]
+        #speaker:Alistair
+            "Please, sir, I need to get into the vault..."
+    - 
+        #speaker:Director
+        "Silence, I have already made my decision."
+        "Be gone now, I am incredibly occupied at the moment."
+        
+#speaker:Alistair
+(How infuriating!)
+(Speaking to Bennet is like talking to a wall...)
+
+#speaker:D4RL1N6
+"That was fruitless."
+
+#speaker:Alistair
+"Indeed."
+"What do we do now?"
+
+#speaker:D4RL1N6
+"It is improbable that Mr. Bennet Crabb is the only one who can get into the vault."
+"Perhaps we can seek out another employee."
+"They might be able to help us or to give us some new information."
+
+#speaker:Alistair
+"Jules still works for the lab. We interned together."
+"I left, but he stayed."
+"Perhaps he can help since we can't get through to Bennet."
+-> TempEnd
 
 
 //Quest and Misc Knots
@@ -277,5 +396,5 @@ something here
 
 ===TempEnd===
 This is the end of our demo, thank you so much for playing!
-Be sure to follow our 'Chronautical' socials and let us know what you think.
+Be sure to follow our 'Chronautical' socials and let us know what you think!
 -> END
