@@ -4,6 +4,7 @@ using Ink.Runtime;
 using PixelCrushers.DialogueSystem.InkSupport;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class DialogueSystemExtender : DialogueSystemInkIntegration
@@ -14,6 +15,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     [SerializeField] GameObject customInkFunctions;
     [SerializeField] GameObject[] backgrounds;
     [SerializeField] GameObject currentBackground;
+    [SerializeField] GameObject speakerText;
     [SerializeField] SpriteList spriteList;
     [SerializeField] GameObject playerSprite;
     [SerializeField] GameObject NPCSprite;
@@ -81,18 +83,19 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                         SetBackground(tagValue);
                         break;
                     case SPEAKER_TAG:
+                        speakerText.GetComponent<Text>().text = tagValue;
                         break;
                     case SPRITE_TAG:
-                        string[] spriteStrings = tagValue.Split(' ');
+                        string[] spriteStrings = tagValue.Split('_');
                         string spriteName = spriteStrings[0].Trim();
                         string spriteExpression = spriteStrings[0].Trim() + "_" + spriteStrings[1].Trim();
                         SetSprite(spriteName, spriteExpression, playerSprite);
                         break;
                     case NPC_TAG:
-                        string[] NPCspriteStrings = tagValue.Split(' ');
+                        string[] NPCspriteStrings = tagValue.Split('_');
                         string NPCspriteName = NPCspriteStrings[0].Trim();
                         string NPCspriteExpression = NPCspriteStrings[0].Trim() + "_" + NPCspriteStrings[1].Trim();
-                        SetSprite(NPCspriteName, NPCspriteExpression, playerSprite);
+                        SetSprite(NPCspriteName, NPCspriteExpression, NPCSprite);
                         break;
                     default:
                         Debug.Log("Tag came in but is not currently being handeled: " + tag);
@@ -149,6 +152,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         fadeOutTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(0, 0.25f);
         yield return fadeOutTween.WaitForCompletion();
         currentSprite.GetComponent<SpriteRenderer>().sprite = expression;
+        //currentSprite.GetComponent<SpriteRenderer>().SetActive(true);
         fadeInTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(1, 0.25f);
         yield return fadeInTween.WaitForCompletion();
     }
