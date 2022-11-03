@@ -31,6 +31,7 @@ VAR oldladyPresent = false
 //Knots Start
 ->marketplace
 ===marketplace===
+#background:Marketplace
 //Room Description for Journal
 { time:
 - 1:    ~ roomDescription = "Market goers busy with gossip."

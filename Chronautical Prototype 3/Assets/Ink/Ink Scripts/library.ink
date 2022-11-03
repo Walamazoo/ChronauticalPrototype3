@@ -50,8 +50,7 @@ VAR oldladyPresent = false
 ===beginning===
 ~ time = 10
 ~ seenBeginning = true
-#background:outsideCity
-//placeholder for music and GMOD stuff
+#background:Library interior
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
 It was full of what I would become. Dreams of adventure in the stars piercing through the dark.
