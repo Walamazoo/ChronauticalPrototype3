@@ -1,0 +1,73 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
+public class CustomInkFunctions : MonoBehaviour
+{
+    [SerializeField] GameObject timeSliderUI;
+    [SerializeField] Button travelButton;
+    [SerializeField] Slider slider;
+
+    //FMOD.Studio.EventInstance gameMusic;
+
+    public void ToggleSlider(bool state){
+        if(state == true){
+            timeSliderUI.SetActive(true);
+        }
+        else{
+            timeSliderUI.SetActive(false);
+        }
+    }
+
+    public void ToggleSliderInteractable(bool state){
+        if(state == false){
+            slider.interactable = false;
+            travelButton.interactable = false;
+            //foreach(Button room in miniMap){
+                //room.interactable = false;
+            //}
+        }
+        else{
+            slider.interactable = true;
+            travelButton.interactable = true;
+            //foreach(Button room in miniMap){
+                //room.interactable = true;
+            //}
+        }
+    }
+
+    /*
+    public void PlayMusic (string music)
+    {
+        gameMusic = FMODUnity.RuntimeManager.CreateInstance(music);
+        gameMusic.start();
+    }
+
+    public void Stop ()
+    {
+        gameMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void PlaySound (string sound)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(sound);
+    }
+
+    public void StartEmitter ()
+    {
+        GameObject.Find("Variable Storage").GetComponent<FMODUnity.StudioEventEmitter>().Play();
+    }
+    
+    public void StopEmitter ()
+    {
+        GameObject.Find("Variable Storage").GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+    }
+
+    public void SetParameter (string name, float par)
+    {
+        gameMusic.setParameterByName(name, par);
+    }
+    */
+}
