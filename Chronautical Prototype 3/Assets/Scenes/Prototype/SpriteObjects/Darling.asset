@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e46e2773315f3ad478d7500b25e1c413, type: 3}
   m_Name: Darling
   m_EditorClassIdentifier: 
-  Expressions: []
+  Expressions:
+  - {fileID: 21300000, guid: ad0f63e56cfc37048ad03a15f14d2058, type: 3}
+  - {fileID: 21300000, guid: 0044608b6eecfbe4da5f3dd3a40022de, type: 3}
+  - {fileID: 21300000, guid: 8320398f3d46cd94d98e26bf38e1d8e6, type: 3}
+  - {fileID: 21300000, guid: 93f91f079338a2d40b07ca5c83352cbe, type: 3}

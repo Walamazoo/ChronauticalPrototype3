@@ -33,9 +33,9 @@ public class SliderController : MonoBehaviour
 
     void Awake()
     {
-        foreach(TextAsset txt in inkAssets){
-            stories.Add(new Story(txt.text));
-        }
+        //foreach(TextAsset txt in inkAssets){
+            //stories.Add(new Story(txt.text));
+        //}
 
         //Integrate with save system
 
