@@ -3093,9 +3093,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 715661800}
     - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: currentLocation
+      value: library
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 396939293}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: inkAssets.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: inkAssets.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 8699e7849eec2a246978a027fbf8fa84, type: 3}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: inkAssets.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: d5d90ad2119b34f469239b232256cc17, type: 3}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: inkAssets.Array.data[2]
+      value: 
+      objectReference: {fileID: 4900000, guid: 64ede49b01d1c5a4a809a28a747d13fb, type: 3}
     - target: {fileID: 2269792506106285153, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3214,6 +3234,17 @@ PrefabInstance:
       objectReference: {fileID: 715661801}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+--- !u!114 &854182565 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+  m_PrefabInstance: {fileID: 854182564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515968d253cb2b14c94e10c9ee038ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875970387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,6 +4892,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
+  roomName: 
+  controller: {fileID: 0}
 --- !u!1 &1395759017
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,6 +6435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
+  roomName: library
+  controller: {fileID: 854182565}
 --- !u!1 &1675782872
 GameObject:
   m_ObjectHideFlags: 0
@@ -7544,6 +7579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
+  roomName: 
+  controller: {fileID: 0}
 --- !u!1 &2069053325
 GameObject:
   m_ObjectHideFlags: 0

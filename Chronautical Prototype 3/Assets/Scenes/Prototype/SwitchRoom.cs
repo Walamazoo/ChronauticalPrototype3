@@ -6,8 +6,11 @@ using DG.Tweening;
 public class SwitchRoom : MonoBehaviour
 {
     [SerializeField] GameObject MiniCharacter;
+    [SerializeField] string roomName;
+    [SerializeField] SliderController controller;
     
     public void OnClick(){
+        controller.currentLocation = roomName;
         StartCoroutine(MoveMiniCharacter());
     }
 
