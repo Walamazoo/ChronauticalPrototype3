@@ -20,9 +20,9 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
     Tween fadeInTween;
     Tween fadeOutTween;
-    private const string BACKGROUND_TAG = "Background";
-    private const string SPEAKER_TAG = "Speaker";
-    private const string SPRITE_TAG = "Sprite";
+    private const string BACKGROUND_TAG = "background";
+    private const string SPEAKER_TAG = "speaker";
+    private const string SPRITE_TAG = "sprite";
     private const string NPC_TAG = "NPC";
 
     private Dictionary<string, bool> inkBoolStorage = new Dictionary<string, bool>();
@@ -85,13 +85,13 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                     case SPRITE_TAG:
                         string[] spriteStrings = tagValue.Split(' ');
                         string spriteName = spriteStrings[0].Trim();
-                        string spriteExpression = spriteStrings[1].Trim();
+                        string spriteExpression = spriteStrings[0].Trim() + "_" + spriteStrings[1].Trim();
                         SetSprite(spriteName, spriteExpression, playerSprite);
                         break;
                     case NPC_TAG:
                         string[] NPCspriteStrings = tagValue.Split(' ');
                         string NPCspriteName = NPCspriteStrings[0].Trim();
-                        string NPCspriteExpression = NPCspriteStrings[1].Trim();
+                        string NPCspriteExpression = NPCspriteStrings[0].Trim() + "_" + NPCspriteStrings[1].Trim();
                         SetSprite(NPCspriteName, NPCspriteExpression, playerSprite);
                         break;
                     default:
