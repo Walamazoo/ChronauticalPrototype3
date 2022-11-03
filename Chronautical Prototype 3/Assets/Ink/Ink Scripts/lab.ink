@@ -119,7 +119,7 @@ What should I do?
 Who should I talk to? 
     //+{julesPresent} [Jules] -> JULES
     +{directorPresent} [The Director] -> DIRECTOR
-    + [Don't talk to anyone] I don't need to talk to anyone right now. -> lab
+    + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //lab
 
 
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
@@ -199,7 +199,7 @@ Who should I talk to?
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
-        ->lab
+        -> END //lab
 
 =QUESTIONKNOT1
 CONTENT
@@ -266,7 +266,7 @@ CONTENT
     "Now, be gone."
     "I have much work to attend to."
 
--> lab
+-> END //lab
 
 =Questions
 #speaker:Director 
@@ -279,7 +279,7 @@ CONTENT
     + [Nothing for now]
         #speaker:Director
         "Yes, yes, be gone. I am quite busy."
-            ->lab
+            -> END //lab
 
 =Figure
 CONTENT
