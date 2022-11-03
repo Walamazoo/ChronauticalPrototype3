@@ -66,7 +66,7 @@ What should I do?
         - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walk ways. The stench of smoke fills the market and some stalls even collapse as the planet shutters violently.
         }
         -> marketplace
-    + [Look for someone to talk to]
+    //+ [Look for someone to talk to]
         //NPC Description for Player
         { time:
         - 1:    Who is there? (Add variable changes for NPCs present)
@@ -101,7 +101,7 @@ Who should I talk to?
     prints nothing if player is not in time 1
 }
 //repeat for times 2-10
-
+-> DONE
 
 ===DIRECTOR===
 {time == 1:
@@ -110,6 +110,7 @@ Who should I talk to?
     prints nothing
 }
 //repeat for times 2-10
+-> DONE
 
 ===SHOPOWNER===
 {time == 1:
@@ -118,6 +119,7 @@ Who should I talk to?
     prints nothing
 }
 //repeat for times 2-10
+-> DONE
 
 ===CHILD===
 {time == 1:
@@ -126,6 +128,7 @@ Who should I talk to?
     prints nothing
 }
 //repeat for times 2-10
+-> DONE
 
 ===OLDLADY===
 {time == 1:
@@ -134,5 +137,5 @@ Who should I talk to?
     prints nothing
 }
 //repeat for times 2-10
-
+-> DONE
 //Knots will be added for specific quest events/actions

@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.InkSupport;
 using Ink.Runtime;
 
 public class SliderController : MonoBehaviour
 {
     // Set this file to your compiled json asset
-	public TextAsset inkAsset;
-	Story story;
+	public TextAsset[] inkAssets;
+	List<Story> stories;
+    public string currentLocation;
 
     [SerializeField] DialogueSystemInkIntegration dialogueManager;
     [SerializeField] GameObject playerActor;
@@ -29,7 +31,9 @@ public class SliderController : MonoBehaviour
 
     void Awake()
     {
-        story = new Story(inkAsset.text);
+        foreach(TextAsset txt in inkAssets){
+            stories.Add(new Story(txt.text));
+        }
 
         //Integrate with save system
 
@@ -112,10 +116,13 @@ public class SliderController : MonoBehaviour
         DialogueSystemInkIntegration.SetInkNumber("CurrentSliderValue", currentSliderValue);
         DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
-        story.variablesState["CurrentYear"] = (double)currentYear;
+        foreach(Story script in stories){
+            if(script.currentFlowName.Equals(currentLocation)){
+                script.variablesState["CurrentYear"] = (double)currentYear;
+            }
+        }
 
-        //dialogueManager.StartConversation("Some Conversation", playerActor.transform, conversantActor.transform);
-        //DialogueSystemInkIntegration.SetConversationStartingPoint("admitted_to_something");
-        //DialogueManager.StartConversation("TheIntercept");
+        DialogueSystemInkIntegration.SetConversationStartingPoint(currentLocation);
+        DialogueManager.StartConversation(currentLocation);
     }
 }
