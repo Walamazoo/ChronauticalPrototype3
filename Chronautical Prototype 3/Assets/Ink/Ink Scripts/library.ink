@@ -73,7 +73,7 @@ My colleagues are all gone.
 I throw myself to a bookshelf nearby and yank out tomes. There are so few left. Most have been consumed by fire.
 (Perhaps I haven't tried this yet.)
 
-#sprite:Darling Neutral
+#NPC:Darling Neutral
 #speaker:D4RL1N6
 "Alistair."
 

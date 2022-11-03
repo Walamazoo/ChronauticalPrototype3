@@ -8,7 +8,7 @@ using DG.Tweening;
 
 public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
-    int storedNumber;
+    private int storedNumber;
     [SerializeField] GameObject button;
     [SerializeField] JournalManager JournalManager;
     [SerializeField] GameObject customInkFunctions;
@@ -24,17 +24,24 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     private const string SPEAKER_TAG = "Speaker";
     private const string SPRITE_TAG = "Sprite";
     private const string NPC_TAG = "NPC";
+
+    private Dictionary<string, bool> inkBoolStorage = new Dictionary<string, bool>();
+    private Dictionary<string, int> inkIntStorage = new Dictionary<string, int>();
     protected override void BindExternalFunctions(Story story)
     {
         base.BindExternalFunctions(story);
-        story.BindExternalFunction("STORE_NUMBER", (int stored_number) => {this.storedNumber = stored_number;});
-        story.BindExternalFunction("GET_NUMBER", () => {story.variablesState["number"] = storedNumber;});
+        story.BindExternalFunction("STORE_NUMBER", (string number_key, int stored_number) => {inkIntStorage[number_key] = stored_number;});
+        story.BindExternalFunction("GET_NUMBER", (string number_key) => {return inkIntStorage[number_key];});
+        story.BindExternalFunction("STORE_BOOL", (string bool_key, bool stored_bool) => {inkBoolStorage[bool_key] = stored_bool;});
+        story.BindExternalFunction("GET_BOOL", (string bool_key) => {return inkBoolStorage[bool_key];});
         story.BindExternalFunction("SHOW_BUTTON", () => {button.SetActive(true);});
         story.BindExternalFunction("BUTTON_GONE", () => {button.SetActive(false);});
         story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
                                                             {JournalManager.createJournalObject(name, type, hoverDescription, fullDescription);});
         story.BindExternalFunction("TOGGLE_SLIDER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(state);});
         story.BindExternalFunction("TOGGLE_SLIDER_INTERACTABLE", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(state);});
+
+
 
         /*
         story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
@@ -51,6 +58,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             base.UnbindExternalFunctions(story);
             story.UnbindExternalFunction("STORE_NUMBER");
             story.UnbindExternalFunction("GET_NUMBER");
+            story.UnbindExternalFunction("STORE_BOOL");
+            story.UnbindExternalFunction("GET_BOOL");
             story.UnbindExternalFunction("SHOW_BUTTON");
             story.UnbindExternalFunction("BUTTON_GONE");
             story.UnbindExternalFunction("TOGGLE_SLIDER");
