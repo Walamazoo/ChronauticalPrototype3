@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b16b2139-cb1d-4acb-9035-9c44511b903d}">
+		<property name="assetPath">
+			<value>rock-smash.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.9112291666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b10ecf2-27d4-441c-a448-3cf8b02d7d16}</destination>
+		</relationship>
+	</object>
+</objects>

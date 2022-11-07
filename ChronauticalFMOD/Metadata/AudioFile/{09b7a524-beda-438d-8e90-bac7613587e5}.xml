@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{09b7a524-beda-438d-8e90-bac7613587e5}">
+		<property name="assetPath">
+			<value>darling beep 2.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.94040816326530607</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b10ecf2-27d4-441c-a448-3cf8b02d7d16}</destination>
+		</relationship>
+	</object>
+</objects>

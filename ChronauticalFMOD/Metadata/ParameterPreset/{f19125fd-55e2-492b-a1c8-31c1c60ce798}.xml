@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f19125fd-55e2-492b-a1c8-31c1c60ce798}">
+		<property name="name">
+			<value>Scene1</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c028776a-6130-471a-b402-962acefbe0d9}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1f92f057-1ca3-4613-96ac-08e21f57816f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1f92f057-1ca3-4613-96ac-08e21f57816f}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Start</value>
+			<value>Bar with crowd</value>
+			<value>Piano stop</value>
+			<value>Bar Empty</value>
+			<value>IchormorneSurface</value>
+			<value>Baba Yaga no music</value>
+			<value>Baba Yaga with music</value>
+			<value>Surface with fire</value>
+			<value>Talking with fire</value>
+			<value>Fade BG</value>
+			<value>End</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

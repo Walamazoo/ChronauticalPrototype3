@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b2014ef5-d6d0-4a4d-8949-5cfcf42763d5}">
+		<property name="name">
+			<value>Prologue Ambience</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c028776a-6130-471a-b402-962acefbe0d9}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{95c925f3-af56-43a9-a9ef-5a7de91a0c78}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{95c925f3-af56-43a9-a9ef-5a7de91a0c78}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>6</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Calm</value>
+			<value>Scary but calm</value>
+			<value>Fire</value>
+			<value>Rumbling</value>
+			<value>People</value>
+			<value>End</value>
+		</property>
+		<property name="initialValue">
+			<value>2</value>
+		</property>
+	</object>
+</objects>

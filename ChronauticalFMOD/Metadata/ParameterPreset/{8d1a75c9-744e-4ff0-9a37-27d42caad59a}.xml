@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8d1a75c9-744e-4ff0-9a37-27d42caad59a}">
+		<property name="name">
+			<value>Time Slider Values</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c028776a-6130-471a-b402-962acefbe0d9}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2285e020-2ba5-4ff1-a4f5-85ff53f71a7f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2285e020-2ba5-4ff1-a4f5-85ff53f71a7f}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>No year</value>
+			<value>1</value>
+			<value>2</value>
+			<value>3</value>
+			<value>4</value>
+			<value>5</value>
+			<value>6</value>
+			<value>7</value>
+			<value>8</value>
+			<value>9</value>
+			<value>10</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
