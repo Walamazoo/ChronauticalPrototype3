@@ -224,13 +224,7 @@ Who should I talk to?
 "Oh-"
 "Actually, there is! Something quite new."
 "Well..."
-"WIFEY and I got engaged a few months ago."
-  
-#speaker:Alistair
-"Who is WIFEY...?"
-    
-#speaker:Jules
-"Oh she is //SOMETHING."
+"Christa and I got engaged a few months ago."
 "We're not quite sure on a date yet, but do you think you'll be on planet in few months?"
     
 #speaker:Alistair
@@ -361,7 +355,7 @@ Who should I talk to?
 
 #speaker:Director
 "..."
-"One of the gates opened up to ASTRODE THING."
+"A Trade Seam to the Gold Belt opened up."
 "Trade and artifacts are moving through the lab like water."
 "Each artifact must be dated, catagorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
