@@ -28,9 +28,6 @@ VAR metDirector = false
 //NPC Variables
 VAR julesPresent = false
 VAR directorPresent = false
-VAR shopownerPresent = false
-VAR childPresent = false
-VAR oldladyPresent = false
 
 //Knots Start
 //Time Set for Testing
@@ -67,7 +64,6 @@ VAR oldladyPresent = false
 What should I do?
     + [Look around]
         //Room Description for Player
-        //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
         { time:
         - 1:    A handful of scientists huddle around a projected figure I don't recognize, but they seem to be listening somberly.
                 +Listen in -> OtherPlanetAnnounce
@@ -79,7 +75,7 @@ What should I do?
                 Everyone is silent.
                 +Investigate -> AnnounceDestruction
         - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
-        - 7:    The lab is litered with balloon arches and confetti liters the ground. 'DIRECTOR'S NAME continues reign' is sprawled everywhere on posers and decorations.
+        - 7:    The lab is litered with balloon arches and confetti liters the ground. 'Crabb continues reign' is sprawled everywhere on posers and decorations.
                 Lab employees simply step over the confetti and continue their work.
         - 8:    The lab is incredibly bare. I see very few lab stations remaining and everything that wasn't attached to the floor or the wall is gone, replaced only by a clean spot in the layer of dust.
         - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
@@ -90,8 +86,6 @@ What should I do?
     + [Look for someone to talk to]
         { time:
         - 1:    Many scientists are present, but they look too busy to talk to me.
-                I see the Director in his office.
-                ~directorPresent=true
         - 2:    Many scientists are present, but they look too busy to talk to me.
                 I see the Director in his office.
                 ~directorPresent=true
@@ -117,7 +111,7 @@ What should I do?
 ===NPCS===
 //Allows the player to talk to NPCs based on who is there at the time
 Who should I talk to? 
-    //+{julesPresent} [Jules] -> JULES
+    +{julesPresent} [Jules] -> JULES
     +{directorPresent} [The Director] -> DIRECTOR
     + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //lab
 
@@ -193,21 +187,95 @@ Who should I talk to?
 =Questions
 #speaker:Jules
 "What can I help you with?"
-    //+ [QUESTION] ->QuestionKNOT1
-    //+ [QUESTION] ->QUESTIONKNOT2
-    //+ [QUESTION] ->DEPENDENTONTIME
+    + {time == 3} [Booths?] ->fair
+    + {time == 4} [What's new?] ->wedding
+    + {time == 5} [Announcement?] ->disaster
+    //+ {Has seen open vault convo}
+    //+ {Has seen election knot}
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
-        -> END //lab
+        -> DONE //lab
 
-=QUESTIONKNOT1
-CONTENT
--> JULES
+=fair
+#speaker:Alistair
+"Jules, do you know anything about why all these people and booths are here...?"
 
-=QUESTIONKNOT2
-CONTENT
--> JULES
+#speaker:Jules
+"Ah!"
+"Yes, the lab is hosting the planet's annual HESF!"
+"That is- the Higher Education Sceience Fair."
+"It's exciting, isn't it? There's so many fresh faces and new experiments all in one place."
+
+#speaker:Alistair
+"Do you have an experiment set up here?"
+
+#speaker:Jules
+"Of course!"
+//SOMETHING REALLY SMART
+//CONCLUDE
+-> DONE
+
+=wedding
+#speaker:Alistair
+"I just wanted to see if there was anything new."
+
+#speaker:Jules
+"Oh-"
+"Actually, there is! Something quite new."
+"Well..."
+"WIFEY and I got engaged a few months ago."
+  
+#speaker:Alistair
+"Who is WIFEY...?"
+    
+#speaker:Jules
+"Oh she is //SOMETHING."
+"We're not quite sure on a date yet, but do you think you'll be on planet in few months?"
+    
+#speaker:Alistair
+(Oh no.)
+(Curse these anchor points!)
+    + [Maybe?]
+    #speaker:Alistair
+    "Uh- maybe- I'm really not sure, Jules, I'm all over the place, maybe?"
+    "I'm really sorry-"
+    + [No]
+    #speaker:Alistair
+    "Ah Jules..."
+    "No, I don't think so, I'm all over the place."
+    "I'm sorry."
+    - 
+    #speaker:Jules
+    "It's alright, Alistair."
+    "I know you're busy doing..."
+    "Whatever it is you do our in the universe."
+    "Just come back and visit us more often, alright?"
+    
+    #speaker:Alistair
+    "I-I will."
+    "Thank you Jules..."
+-> DONE
+
+=disaster
+#speaker:Alistair
+"Did you hear the announcement that the Director is giving?"
+
+#speaker:Jules
+"Yes..."
+"It's very disturbing news."
+"The core can no longer sustain itself, it's only a matter of time till it is destroyed and the planet with it."
+
+#speaker:Alistair
+"How much time does the planet have?"
+
+#speaker:Jules
+"Five years, give or take."
+"It should be enough time to evacuate, but..."
+"All of this will be gone."
+"I just hope Crabb knows what he's doing."
+-> DONE
+
 //HelpOpenVaultConvo
 //Ask for help to get into vault, says no, not going to help break into it
 //We have bigger issues at hand, planet exploding
@@ -271,27 +339,26 @@ CONTENT
 =Questions
 #speaker:Director 
 "What do you want?"
-    //+ {time== 1} [Projected figure?] -> Figure
-    //+ {time== 2} [Lab is busy?] -> BusyLab
-    //+ {time== 3} [Booths?] -> Booths
-    //+ {time== 4} [QUESTION] -> KNOT
+    + {time== 2} [Lab is busy?] -> Busylab
+    + {time== 3} [Booths?] -> Booths
+    + {time== 4} [Lots of work?] -> Notbusy
     * {seenPepTalk==true} [Enter vault?] -> VaultTalk
     + [Nothing for now]
         #speaker:Director
         "Yes, yes, be gone. I am quite busy."
             -> END //lab
 
-=Figure
+=Busylab
 CONTENT
--> DIRECTOR
-
-=BusyLab
-CONTENT
--> DIRECTOR
+-> DONE
 
 =Booths
 CONTENT
--> DIRECTOR
+-> DONE
+
+=Notbusy
+CONTENT
+-> DONE
 
 =VaultTalk
 #speaker:Alistair
