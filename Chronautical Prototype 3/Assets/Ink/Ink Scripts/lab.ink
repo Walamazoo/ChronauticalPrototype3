@@ -349,15 +349,60 @@ Who should I talk to?
             -> END //lab
 
 =Busylab
-CONTENT
+#speaker:Alistair
+"The lab seems busy today!"
+
+#speaker:Director
+"Yes, it's been quite busy for a few weeks now."
+"Which is why I have very little time for idle chatter..."
+
+#speaker:Alistair
+"Did something happen? Why is the lab so busy?"
+
+#speaker:Director
+"..."
+"One of the gates opened up to ASTRODE THING."
+"Trade and artifacts are moving through the lab like water."
+"Each artifact must be dated, catagorized, analyzed."
+"And there are hundreds of cases on my desk now, so-"
+"Begone."
 -> DONE
 
 =Booths
-CONTENT
+#speaker:Alistair
+"Any thoughts on the booths in the lab?"
+
+#speaker:Director
+"It is a nesseccary distraction for now."
+"It is a way for those interested in working for the lab in the future to show off their knowledge and ability."
+"I have seen some promising experiments on display."
+"But few will be able to reach the level of excellence we demand."
+
+#speaker:Alistair
+"I see."
 -> DONE
 
 =Notbusy
-CONTENT
+#speaker:Alistair
+"Work in the lab seems pretty slow today."
+
+#speaker:Director
+"Indeed..."
+
+#speaker:Alistair
+"... What are you working on?"
+
+#speaker:Director
+"Nothing that concerns you."
+"Details on the artifacts we work with are not discussed with civilans."
+
+#speaker:Alistair
+"But I'm not quite just a civilan, aren't I?"
+"I worked here!"
+
+#speaker:Director
+"Not that it would matter, but you were a mere intern."
+"Regardless, I refuse to break protocol for your curiosity..."
 -> DONE
 
 =VaultTalk
