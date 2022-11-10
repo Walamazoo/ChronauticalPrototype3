@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e4dc701a-30ea-4bec-ae36-378e87f1fbc0}">
+		<property name="assetPath">
+			<value>wind harsh loop.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>22.035208333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b10ecf2-27d4-441c-a448-3cf8b02d7d16}</destination>
+		</relationship>
+	</object>
+</objects>
