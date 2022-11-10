@@ -69,7 +69,7 @@ What should I do?
                 +Listen in -> OtherPlanetAnnounce
         - 2:    The lab is filled with a buzzling excitement and energy as scientists, assistants, and cityfolk move about from task to task. 
         - 3:    The room is lined with booths, boards, and flashy experiments. Judges walk around with their hands behind their backs as eager young scientists stand at attention.
-                //+Investigate -> ScienceFair
+                +Investigate -> ScienceFair
         - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
         - 5:    A large crowd of various employees of the lab crowd around a projection of the Director, even the wasteman strains to listen.
                 Everyone is silent.
@@ -116,14 +116,15 @@ Who should I talk to?
     + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //lab
 
 
-//Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
+//NPCs and their convos
 ===JULES===
 {metJules: -> Questions|-> meetJules}
-#NPC:Jules_neutral
+#NPC:Jules_Neutral
 =meetJules
 ~metJules=true
 
     #speaker:Alistair
+    #sprite:Alistair_Nervous
     "Jules? Is that you?"
     
     #speaker:Jules
@@ -132,7 +133,7 @@ Who should I talk to?
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
-    #speaker:Alistair
+    #speaker:Alistair_Confident
     "Well, it's quite a long story..."
     "But it's good to see you again!"
     
@@ -142,12 +143,14 @@ Who should I talk to?
     
     +[Been out and about] 
         #speaker:Alistair
+        #sprite:Alistair_Embarassed
         "Oh I've been out and about."
         
         #speaker:Jules
         "Out and about? Why so coy Alistair?"
         
         #speaker:Alistair
+        #sprite:Alistair_Nervous
         "It's... complicated."
         
         #speaker:Jules
@@ -156,20 +159,21 @@ Who should I talk to?
         
         #speaker:Alistair
         "Wha-"
-        (How'd he guess that?!)
+        (How'd he guess that?)
         "I don't know what you could be talking about..."
         
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
     +[Adventuring] 
-        
         #speaker:Alistair
+        #sprite:Alistair_Embarassed
         "Oh I've been... adventuring."
         
          #speaker:Jules
-        "Out and about? Why so coy Alistair?"
+        "Adventuring? Where? Why so coy Alistair?"
         
         #speaker:Alistair
+        #sprite:Alistair_Nervous
         "It's... complicated."
         
         #speaker:Jules
@@ -195,10 +199,12 @@ Who should I talk to?
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
+    #NPC: 
         -> DONE //lab
 
 =fair
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Jules, do you know anything about why all these people and booths are here...?"
 
 #speaker:Jules
@@ -212,8 +218,10 @@ Who should I talk to?
 
 #speaker:Jules
 "Of course!"
-//SOMETHING REALLY SMART
-//CONCLUDE
+"Though I'm afriad it's a bit of a secret!"
+"Perhaps I'll tell you about it another time."
+//WACKY ASS PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
+  #NPC: 
 -> DONE
 
 =wedding
@@ -228,14 +236,17 @@ Who should I talk to?
 "We're not quite sure on a date yet, but do you think you'll be on planet in few months?"
     
 #speaker:Alistair
+#sprite:Alistair_Nervous
 (Oh no.)
 (Curse these anchor points!)
     + [Maybe?]
     #speaker:Alistair
+    #sprite:Alistair_Sad
     "Uh- maybe- I'm really not sure, Jules, I'm all over the place, maybe?"
     "I'm really sorry-"
     + [No]
     #speaker:Alistair
+    #sprite:Alistair_Sad
     "Ah Jules..."
     "No, I don't think so, I'm all over the place."
     "I'm sorry."
@@ -247,8 +258,10 @@ Who should I talk to?
     "Just come back and visit us more often, alright?"
     
     #speaker:Alistair
+    #sprite:Alistair_Nervous
     "I-I will."
     "Thank you Jules..."
+  #NPC: 
 -> DONE
 
 =disaster
@@ -261,6 +274,7 @@ Who should I talk to?
 "The core can no longer sustain itself, it's only a matter of time till it is destroyed and the planet with it."
 
 #speaker:Alistair
+#sprite:Alistair_Sad
 "How much time does the planet have?"
 
 #speaker:Jules
@@ -268,6 +282,7 @@ Who should I talk to?
 "It should be enough time to evacuate, but..."
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
+  #NPC: 
 -> DONE
 
 //HelpOpenVaultConvo
@@ -282,7 +297,7 @@ Who should I talk to?
 
 ===DIRECTOR===
 {metDirector: -> Questions|-> meetDirector}
-#NPC:Labhead_neutral
+#NPC:Labhead_Neutral
 =meetDirector
 ~metDirector=true
 #speaker:Director
@@ -291,6 +306,7 @@ Who should I talk to?
 "How can I help you?"
 
 #speaker:Alistair
+#sprite:Alistair_Embarassed
 "Ah-"
 "Sir, do you not remember me?"
 "I'm Alistair! I interned here with Jules Ambrose?"
@@ -303,6 +319,7 @@ Who should I talk to?
 "But your poor disipinary marks have certainly not been forgotten."
     + [What marks?]
     #speaker:Alistair
+    #sprite:Alistair_Nervous
     "I'm-"
     "I'm not sure what you could be referencing, sir!"
     
@@ -311,6 +328,7 @@ Who should I talk to?
     
     + [Sorry]
     #speaker:Alistair
+    #sprite:Alistair_Nervous
     "Sir, I am quite sorry, please accept my apology."
     
     - 
@@ -327,7 +345,7 @@ Who should I talk to?
     "And visit you may."
     "Now, be gone."
     "I have much work to attend to."
-
+#NPC: 
 -> END //lab
 
 =Questions
@@ -340,10 +358,12 @@ Who should I talk to?
     + [Nothing for now]
         #speaker:Director
         "Yes, yes, be gone. I am quite busy."
+        #NPC: 
             -> END //lab
 
 =Busylab
 #speaker:Alistair
+#sprite:Alistair_Assured
 "The lab seems busy today!"
 
 #speaker:Director
@@ -351,6 +371,7 @@ Who should I talk to?
 "Which is why I have very little time for idle chatter..."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Did something happen? Why is the lab so busy?"
 
 #speaker:Director
@@ -360,6 +381,7 @@ Who should I talk to?
 "Each artifact must be dated, catagorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
 "Begone."
+#NPC: 
 -> DONE
 
 =Booths
@@ -373,7 +395,9 @@ Who should I talk to?
 "But few will be able to reach the level of excellence we demand."
 
 #speaker:Alistair
+#sprite:Alistair_Sad
 "I see."
+#NPC: 
 -> DONE
 
 =Notbusy
@@ -391,18 +415,21 @@ Who should I talk to?
 "Details on the artifacts we work with are not discussed with civilans."
 
 #speaker:Alistair
+#sprite:Alistair_Embarassed
 "But I'm not quite just a civilan, aren't I?"
 "I worked here!"
 
 #speaker:Director
 "Not that it would matter, but you were a mere intern."
 "Regardless, I refuse to break protocol for your curiosity..."
+#NPC: 
 -> DONE
 
 =VaultTalk
 #speaker:Alistair
 "Hello doctor!"
 "I wanted to inquire about, well..."
+#sprite:Alistair_Embarassed
 "I believe I misplaced some of my belongings before I left."
 
 #speaker:Director
@@ -411,6 +438,7 @@ Who should I talk to?
 #speaker:Alistair
 "You see..."
 "I left behind some of my belongings in the vault, but-"
+#sprite:Alistair_Assured
 "I really need them! You wouldn't mind just letting me into the vault for a moment would you?"
 
 #speaker:Director
@@ -418,10 +446,12 @@ Who should I talk to?
 "You are no longer employed here and you should know that civilians are strictly prohibited access to any classified materials in the vault."
     + [I need it]
         #speaker:Alistair
+        #sprite:Alistair_Confident
         "Sir, I really need my belongings that I left in the vault."
         "It's imparitive that I get them."
     + [Please]
         #speaker:Alistair
+        #sprite:Alistair_Sad
         "Sir, please."
         "I know that this is a breach of protocol, but perhaps you could make an exception for an ex-intern?"
     - 
@@ -430,6 +460,7 @@ Who should I talk to?
         "What even is it that you want from the vault?"
     + [Notes]
         #speaker:Alistair
+        #sprite:Alistair_Neutral
         "My research notes. They're still inside the vault."
         
         #speaker:Director
@@ -438,6 +469,7 @@ Who should I talk to?
         
     + [Something?]
         #speaker:Alistair
+        #sprite:Alistair_Nervous
         "Uh well..."
         (Think! What should I say?)
         "It's... something?"
@@ -449,9 +481,11 @@ Who should I talk to?
         "It matters not what it is you want from it."
     + [I must]
         #speaker:Alistair
+        #sprite:Alistair_Confident
             "I must get into the vault, sir!"
     + [Please!]
         #speaker:Alistair
+        #sprite:Alistair_Nervous
             "Please, sir, I need to get into the vault..."
     - 
         #speaker:Director
@@ -459,20 +493,25 @@ Who should I talk to?
         "Be gone now, I am incredibly occupied at the moment."
         
 #speaker:Alistair
+#sprite:Alistair_Sad
+#NPC: 
 (How infuriating!)
 (Speaking to Bennet is like talking to a wall...)
 
 #speaker:D4RL1N6
-#NPC:Darling_Neutral
+#NPC:Darling_Annoyed
 "That was fruitless."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Indeed."
 "What do we do now?"
 
 #speaker:D4RL1N6
+#NPC:Darling_Neutral
 "It is improbable that Mr. Bennet Crabb is the only one who can get into the vault."
 "Perhaps we can seek out another employee."
+#NPC:Darling_Happy
 "They might be able to help us or to give us some new information."
 
 #speaker:Alistair
@@ -488,7 +527,7 @@ I move closer to the crowd to listen in.
 A small projected version of the lab's Director, Bennet Crabb, stands on a pedastal in the center of the crowd.
 
 #speaker:Director
-#sprite:Director_neutral
+#sprite:Director_Neutral
 "In further announcements..."
 "As some of you may have already heard..."
 "Rumors have been circulating that the planet NAME has been destroyed under mysterious circumstances."
@@ -510,7 +549,7 @@ The Director's projected form stands tall over the group of people around him.
 Everyone is silent, just looking up.
 
 #speaker:Director
-#NPC:Director_neutral
+#NPC:Director_Neutral
 "Ahem..."
 "..."
 "I am speaking to you all, the entire planet of Elore-Nabyke, to make an announcement."
@@ -528,11 +567,14 @@ Everyone is silent, just looking up.
 The lab employees are silent but a few dip their heads.
 
 #speaker:Alistair
-#sprite:Alistair_%
+#sprite:Alistair_Suspicious
 (I wonder how many already knew of this?)
 -> lab
 
 ===TempEnd===
+#speaker: 
+#sprite: 
+#NPC: 
 This is the end of our demo, thank you so much for playing!
 Be sure to follow our 'Chronautical' socials and let us know what you think!
 -> END
