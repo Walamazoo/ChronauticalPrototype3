@@ -69,7 +69,7 @@ What should I do?
                 +Listen in -> OtherPlanetAnnounce
         - 2:    The lab is filled with a buzzling excitement and energy as scientists, assistants, and cityfolk move about from task to task. 
         - 3:    The room is lined with booths, boards, and flashy experiments. Judges walk around with their hands behind their backs as eager young scientists stand at attention.
-                +Investigate -> ScienceFair
+                //+Investigate -> ScienceFair
         - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
         - 5:    A large crowd of various employees of the lab crowd around a projection of the Director, even the wasteman strains to listen.
                 Everyone is silent.
@@ -477,22 +477,56 @@ Who should I talk to?
 
 #speaker:Alistair
 "Jules still works for the lab. We interned together."
-"I left, but he stayed."
+"I left, but he stayed and got a full time job."
 "Perhaps he can help since we can't get through to Bennet."
 -> TempEnd
 
 
 //Quest and Misc Knots
 ===OtherPlanetAnnounce===
-something here
+I move closer to the crowd to listen in.
+A small projected version of the lab's Director, Bennet Crabb, stands on a pedastal in the center of the crowd.
+
+#speaker:Director
+#sprite:Director_neutral
+"In further announcements..."
+"As some of you may have already heard..."
+"Rumors have been circulating that the planet NAME has been destroyed under mysterious circumstances."
+"However, it is best not to feed into gossip till we can determine what it was that caused this disaster."
+"It is more than likely that the planet's core malfunctioned which is a very rare occurance."
+"There is no need to worry."
+"Indeed. Next month, the lab will host a festival..."
 -> lab
 
 ===ScienceFair===
-something here
+Booth upon booth line the lab's walls. 
 -> lab
 
 ===AnnounceDestruction===
-something here
+The Director's projected form stands tall over the group of people around him.
+Everyone is silent, just looking up.
+
+#speaker:Director
+#NPC:Director_neutral
+"Ahem..."
+"..."
+"I am speaking to you all, the entire planet of Elore-Nabyke, to make an announcement."
+"An announcement of a recent discovery."
+"..."
+"It is no secret that our planet's core is a mechanical thing prone to wear and tear. 
+"We at the lab take great care in maintaining the core to extend the life of our planet by some 50 to 100 years."
+"But."
+"It was discovered this morning that the core has taken on more damages than we had anticipated."
+"The damage to the core is... mysterious in nature."
+"We do not know where it originated though we are investigating."
+"It is with my..."
+"Deepest regret that I must announce that the planet will be inhabitable in 5 years time and subsequently destroyed."
+
+The lab employees are silent but a few dip their heads.
+
+#speaker:Alistair
+#sprite:Alistair_%
+(I wonder how many already knew of this?)
 -> lab
 
 ===TempEnd===
