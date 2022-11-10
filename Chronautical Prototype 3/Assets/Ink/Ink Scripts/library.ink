@@ -38,9 +38,10 @@ VAR oldladyPresent = false
 
 //Sprite/Background/Speaker
 //#speaker:Alistair
-//#sprite:Alistair Sad
+//#sprite:Alistair_Sad
 //#background:labInterior
-//#npc:Child
+//#NPC:Child_Neutral
+//Maybe change asset name
 //No space between colon and character/sprite/background
 
 //Sets up if player has seen opening, if has seen it, skips the beginning knot

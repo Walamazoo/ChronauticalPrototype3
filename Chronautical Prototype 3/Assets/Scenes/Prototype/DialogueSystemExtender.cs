@@ -118,9 +118,11 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     private IEnumerator ChangeBackground(GameObject background)
     {
         if(currentBackground != null){
+            Debug.Log("Current Background was not null");
             fadeOutTween = currentBackground.GetComponent<SpriteRenderer>().DOFade(0, 0.75f);
             yield return fadeOutTween.WaitForCompletion();
         }
+        Debug.Log("Current Background was null");
         currentBackground = background;
         fadeInTween = currentBackground.GetComponent<SpriteRenderer>().DOFade(1, 0.75f);
         yield return fadeInTween.WaitForCompletion();
