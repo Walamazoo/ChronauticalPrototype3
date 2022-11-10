@@ -205,7 +205,7 @@ Who should I talk to?
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
 {metJules: -> Questions|-> meetJules}
-#NPC:Jules_neutral
+#NPC:Jules_Neutral
 =meetJules
 ~metJules=true
 
@@ -341,7 +341,7 @@ Who should I talk to?
 
 ===CHILD===
 {metChild: -> Questions|-> meetChild}
-#NPC:Child_neutral
+#NPC:Child_Neutral
 =meetChild
 #speaker:Alistair
     "Hello there! What's your name?"
@@ -502,7 +502,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 "The floor is open for community comments on the appointment of Bennet Crabb as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
     =ShopownerMono
         #speaker:Shopowner
-        #NPC:Shopkeep_neutral
+        #NPC:Shopkeep_Neutral
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
         "But."
@@ -515,7 +515,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
         #speaker:Child
-        #NPC:Child_neutral
+        #NPC:Child_Neutral
         "Okay..."
         "Well."
         "Um, so."
@@ -530,7 +530,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Yeah..." ->OldLadyMono
     =OldLadyMono
         #speaker:Storyteller
-        #NPC:Storyteller_neutral
+        #NPC:Storyteller_Neutral
         As the Old Lady steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
         "Yes!"
@@ -544,7 +544,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crashendo.
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 #speaker:Lab Director
-#NPC:Labhead_neutral
+#NPC:Labhead_Neutral
 "Silence!"
 "I will have order!"
 #speaker:Alistair
