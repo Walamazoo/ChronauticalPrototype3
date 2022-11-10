@@ -500,6 +500,9 @@ A small projected version of the lab's Director, Bennet Crabb, stands on a pedas
 
 ===ScienceFair===
 Booth upon booth line the lab's walls. 
+Young and old scientists stand in front of their experiments to demonstrate their discoveries and to discuss with judges their findings.
+I remember doing the same when I was a fresh intern.
+//placeholder for future interaction with fair
 -> lab
 
 ===AnnounceDestruction===
