@@ -41,24 +41,44 @@ VAR metOldlady = false
 { time:
 - 1:    
     ~ roomDescription = "Market goers busy with gossip."
+    //{SetParameter("PrologueAmbience", 10)}
+    //{SetParameter("PrologueCharacters", 4)}
 - 2:    
     ~ roomDescription = "Lots of new things and people in the market."
+    //{SetParameter("PrologueAmbience", 10)}
+    //{SetParameter("PrologueCharacters", 4)}
 - 3:    
     ~ roomDescription = "Tourists and visitors from off planet stuff the marketplace."
+    //{SetParameter("PrologueAmbience", 10)}
+    //{SetParameter("PrologueCharacters", 5)}
 - 4:    
     ~ roomDescription = "Place is slow today, not many shoppers."
+    //{SetParameter("PrologueAmbience", 11)}
+    //{SetParameter("PrologueCharacters", 5)}
 - 5:    
     ~ roomDescription = "Projection of the Director is making an announcement."
+    //{SetParameter("PrologueAmbience", 11)}
+    //{SetParameter("PrologueCharacters", 3)}
 - 6:    
     ~ roomDescription = "Marketplace is a ghost town."
+    //{SetParameter("PrologueAmbience", 13)}
+    //{SetParameter("PrologueCharacters", 0)}
 - 7:    
     ~ roomDescription = "Seems like something happened, everyone is talking about it."
+    //{SetParameter("PrologueAmbience", 10)}
+    //{SetParameter("PrologueCharacters", 3)}
 - 8:    
     ~ roomDescription = "Everyone is selling mundane things."
+    //{SetParameter("PrologueAmbience", 10)}
+    //{SetParameter("PrologueCharacters", 1)}
 - 9:    
     ~ roomDescription = "Lots of people are packing up and getting onto Atmos vessals."
+    //{SetParameter("PrologueAmbience", 12)}
+    //{SetParameter("PrologueCharacters", 1)}
 - 10:   
     ~ roomDescription = "The marketplace is completely devoid of life."
+    //{SetParameter("PrologueAmbience", 13)}
+    //{SetParameter("PrologueCharacters", 0)}
 }
 
 //Content Start
@@ -127,6 +147,7 @@ Who should I talk to?
     
 //Jules Ambrose NPC Convo
 ===JULES===
+//{SetParameter("PrologueCharacters", 1)}
 {metJules: -> Questions| -> meetJules}
 
 =meetJules
@@ -149,6 +170,7 @@ Who should I talk to?
 
 //Uriah Bramble (shopowner/shopkeep) NPC Convo
 ===SHOPOWNER===
+//{SetParameter("PrologueCharacters", 3)}
 {metShopowner: -> Questions| -> meetShopowner}
 
 =meetShopowner
@@ -171,6 +193,7 @@ Who should I talk to?
 
 //Temperance Ward (Child) NPC Convo
 ===CHILD===
+//{SetParameter("PrologueCharacters", 4)}
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
@@ -191,6 +214,7 @@ Who should I talk to?
 
 //Miriam Harcourt (Old Lady/Storyteller) NPC Convo
 ===OLDLADY===
+//{SetParameter("PrologueCharacters", 5)}
 {metOldlady: -> Questions| -> meetOldlady}
 
 =meetOldlady

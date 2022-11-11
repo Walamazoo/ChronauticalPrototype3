@@ -130,24 +130,45 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 { time:
 - 1:    
         ~ roomDescription = "Bustling with rumors and security won't let me close to the vault."
+        //{SetParameter("PrologueAmbience", 0)}
+        //{SetParameter("PrologueCharacters", 0)}
 - 2:    
         ~ roomDescription = "Under rennovations and filled with security."
+        //{SetParameter("PrologueAmbience", 1)}
+        //{SetParameter("PrologueCharacters", 0)}
 - 3:    
         ~ roomDescription = "Under rennovations and filled with security."
+        //{SetParameter("PrologueAmbience", 1)}
+        //{SetParameter("PrologueCharacters", 0)}
+        
 - 4:    
-        ~ roomDescription = "Nealy done with rennovations but filled with security."
+        ~ roomDescription = "Nearly done with rennovations but filled with security."
+        //{SetParameter("PrologueAmbience", 1)}
+        //{SetParameter("PrologueCharacters", 0)}
 - 5:    
         ~ roomDescription = "Library is quiet and the vault is undisturbed."
+        //{SetParameter("PrologueAmbience", 0)}
+        //{SetParameter("PrologueCharacters", 0)}
 - 6:    
         ~ roomDescription = "There's a huge crowd in the room because of the election."
+        //{SetParameter("PrologueAmbience", 2)}
+        //{SetParameter("PrologueCharacters", 0)}
 - 7:    
         ~ roomDescription = "Library is quiet and the vault is undisturbed."
+        //{SetParameter("PrologueAmbience", 0)}
+        //{SetParameter("PrologueCharacters", 1)}
 - 8:    
         ~ roomDescription = "Library is empty and the vault is abandoned."
+        //{SetParameter("PrologueAmbience", 3)}
+        //{SetParameter("PrologueCharacters", 4)}
 - 9:    
         ~ roomDescription = "Library is empty and the vault is abandoned. I feel rumbling below me."
+        //{SetParameter("PrologueAmbience", 4)}
+        //{SetParameter("PrologueCharacters", 0)}
 - 10:   
         ~ roomDescription = "Library is lost. Fire everywhere, metal melting, vault too hot to touch."
+        //{SetParameter("PrologueAmbience", 5)}
+        //{SetParameter("PrologueCharacters", 0)}
 }
 
 //Content Start
@@ -508,6 +529,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =ShopownerMono
         #speaker:Shopowner
         #NPC:Shopkeep_Neutral
+        //{SetParameter("PrologueCharacters", 3)}
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
         "But."
@@ -521,6 +543,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =ChildMono
         #speaker:Child
         #NPC:Child_Neutral
+        //{SetParameter("PrologueCharacters", 4)}
         "Okay..."
         "Well."
         "Um, so."
@@ -536,6 +559,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =OldLadyMono
         #speaker:Storyteller
         #NPC:Storyteller_Neutral
+        //{SetParameter("PrologueCharacters", 5)}
         As the Old Lady steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
         "Yes!"

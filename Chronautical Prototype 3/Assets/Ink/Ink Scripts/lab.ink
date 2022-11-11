@@ -40,24 +40,44 @@ VAR directorPresent = false
 { time:
 - 1:    
     ~ roomDescription = "A group is listening to a news projection."
+    //{SetParameter("PrologueAmbience", 6)}
+    //{SetParameter("PrologueCharacters", 0)}
 - 2:    
     ~ roomDescription = "The lab is busy, seems like there's plenty of work coming in."
+    //{SetParameter("PrologueAmbience", 6)}
+    //{SetParameter("PrologueCharacters", 2)}
 - 3:    
     ~ roomDescription = "The room is filled with booths of scientists showing off their work, must be a fair."
+    //{SetParameter("PrologueAmbience", 6)}
+    //{SetParameter("PrologueCharacters", 2)}
 - 4:    
     ~ roomDescription = "Not much seems to be happening in the lab."
+    //{SetParameter("PrologueAmbience", 7)}
+    //{SetParameter("PrologueCharacters", 1)}
 - 5:    
     ~ roomDescription = "The Director is giving an announcement."
+    //{SetParameter("PrologueAmbience", 6)}
+    //{SetParameter("PrologueCharacters", 1)}
 - 6:    
     ~ roomDescription = "Room is empty but lots of noise coming from the library. "
+    //{SetParameter("PrologueAmbience", 7)}
+    //{SetParameter("PrologueCharacters", 0)}
 - 7:    
     ~ roomDescription = "The Lab Director election has concluded."
+    //{SetParameter("PrologueAmbience", 6)}
+    //{SetParameter("PrologueCharacters", 0)}
 - 8:    
     ~ roomDescription = "Much of the equipment and furniture is gone."
+    //{SetParameter("PrologueAmbience", 8)}
+    //{SetParameter("PrologueCharacters", 0)}
 - 9:    
     ~ roomDescription = "Rumbling from below."
+    //{SetParameter("PrologueAmbience", 8)}
+    //{SetParameter("PrologueCharacters", 0)}
 - 10:   
     ~ roomDescription = "Lab is gone, the planet will be destroyed soon."
+    //{SetParameter("PrologueAmbience", 9)}
+    //{SetParameter("PrologueCharacters", 0)}
 }
 
 //Content Start
@@ -120,6 +140,7 @@ Who should I talk to?
 ===JULES===
 {metJules: -> Questions|-> meetJules}
 #NPC:Jules_Neutral
+//{SetParameter("PrologueCharacters", 1)}
 =meetJules
 ~metJules=true
 
@@ -298,6 +319,7 @@ Who should I talk to?
 ===DIRECTOR===
 {metDirector: -> Questions|-> meetDirector}
 #NPC:Labhead_Neutral
+//{SetParameter("PrologueCharacters", 2)}
 =meetDirector
 ~metDirector=true
 #speaker:Director
