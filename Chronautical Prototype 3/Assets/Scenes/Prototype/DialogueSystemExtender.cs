@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
+using Ink.UnityIntegration;
 using PixelCrushers.DialogueSystem.InkSupport;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.IO;
 
 public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
     private int storedNumber;
+    //[SerializeField] private InkFile globalsInkFile;
     [SerializeField] GameObject button;
     [SerializeField] JournalManager JournalManager;
     [SerializeField] GameObject customInkFunctions;
@@ -29,11 +32,37 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
     private Dictionary<string, bool> inkBoolStorage = new Dictionary<string, bool>();
     public Dictionary<string, int> inkIntStorage = new Dictionary<string, int>();
+
+    //public Dictionary<string, Ink.Runtime.Object> inkVariableStorage = new Dictionary<string, Ink.Runtime.Object>();
+
+    protected override void Awake()
+    {
+        base.Awake();
+        //initializeVariables();
+    }
     protected override void BindExternalFunctions(Story story)
     {
         base.BindExternalFunctions(story);
+
+        /* story.BindExternalFunction("STORE_VALUE", (string key) => {inkVariableStorage[key] = story.variablesState.GetVariableWithName(key);});
+        story.BindExternalFunction("SET_VALUES", () => {foreach (string name in story.variablesState)
+        {
+            if(inkVariableStorage.ContainsKey(name)){
+                story.variablesState[name] = inkVariableStorage[name];
+            }
+            else{
+                inkVariableStorage.Add(name, story.variablesState.GetVariableWithName(name));
+            }
+        }
+        }); */
+
         story.BindExternalFunction("STORE_NUMBER", (string number_key, int stored_number) => {inkIntStorage[number_key] = stored_number;});
-        story.BindExternalFunction("GET_NUMBER", (string number_key) => {return inkIntStorage[number_key];});
+        story.BindExternalFunction("GET_NUMBER", (string number_key) => {
+            if(inkIntStorage.ContainsKey(number_key)){
+                return inkIntStorage[number_key];
+            }
+            return 0;
+            });
         story.BindExternalFunction("STORE_BOOL", (string bool_key, bool stored_bool) => {inkBoolStorage[bool_key] = stored_bool;});
         story.BindExternalFunction("GET_BOOL", (string bool_key) => {return inkBoolStorage[bool_key];});
         story.BindExternalFunction("SHOW_BUTTON", () => {button.SetActive(true);});
@@ -113,6 +142,74 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             }
     }
 
+    //private void initializeVariables(){
+        //string filePath = globalsInkFile.filePath;
+        //string inkFileContents = File.ReadAllText(filePath);
+        //Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
+        //Story globalVariablesStory = compiler.Compile();
+
+        //foreach(string name in globalVariablesStory.variablesState){
+            //Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
+            //inkVariableStorage.Add(name, value);
+            //Debug.Log(name + " was added to the dictionary with value = " + value);
+        //}
+    //}
+
+    //private void startListening(Story story){
+        //variablesToStory(story);
+        //Debug.Log("Started listening for variables");
+        //story.variablesState.variableChangedEvent += VariableChanged;
+    //}
+
+    //private void stopListening(Story story){
+        //Debug.Log("Stopped listening for variables");
+        //story.variablesState.variableChangedEvent -= VariableChanged;
+    //}
+
+    /* private void VariableChanged(string name, Ink.Runtime.Object value){
+        Debug.Log("VariableChanged ran");
+        if(inkVariableStorage.ContainsKey(name)){
+            Debug.Log("Before removal " + name + " was = " + inkVariableStorage[name]);
+            inkVariableStorage.Remove(name);
+            inkVariableStorage.Add(name, value);
+            Debug.Log("Before addition " + name + " is = " + inkVariableStorage[name]);
+        }
+    } */
+
+    /* protected override void OnConversationStart(Transform actorTransform)
+    {
+        for (int i = 0; i < inkJSONAssets.Count; i++)
+            {
+                if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted))
+                {
+                    var activeStory = stories[i];
+                    startListening(activeStory);
+                }
+            }
+        base.OnConversationStart(actorTransform);
+    }
+
+    protected override void OnConversationEnd(Transform actor)
+    {
+        base.OnConversationEnd(actor);
+        for (int i = 0; i < inkJSONAssets.Count; i++)
+            {
+                if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted))
+                {
+                    var activeStory = stories[i];
+                    stopListening(activeStory);
+                }
+            }
+    }
+
+    private void variablesToStory(Story story){
+        //Debug.Log("New story was run");
+        foreach(KeyValuePair<string, Ink.Runtime.Object> variable in inkVariableStorage){
+            story.variablesState.SetGlobal(variable.Key, variable.Value);
+        }
+        //Debug.Log(inkVariableStorage.Count);
+    } */
+
     public void SetBackground(string backgroundName)
     {
         foreach (GameObject background in backgrounds)
@@ -127,11 +224,9 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     private IEnumerator ChangeBackground(GameObject background)
     {
         if(currentBackground != null){
-            Debug.Log("Current Background was not null");
             fadeOutTween = currentBackground.GetComponent<SpriteRenderer>().DOFade(0, 0.75f);
             yield return fadeOutTween.WaitForCompletion();
         }
-        Debug.Log("Current Background was null");
         currentBackground = background;
         fadeInTween = currentBackground.GetComponent<SpriteRenderer>().DOFade(1, 0.75f);
         yield return fadeInTween.WaitForCompletion();
@@ -163,7 +258,6 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         fadeOutTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(0, 0.25f);
         yield return fadeOutTween.WaitForCompletion();
         currentSprite.GetComponent<SpriteRenderer>().sprite = expression;
-        //currentSprite.GetComponent<SpriteRenderer>().SetActive(true);
         fadeInTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(1, 0.25f);
         yield return fadeInTween.WaitForCompletion();
     }
