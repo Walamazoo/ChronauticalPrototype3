@@ -45,14 +45,15 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
 
 
-        /*
+        
         story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
+        story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
         story.BindExternalFunction("STOP_MUSIC", () => {customInkFunctions.GetComponent<CustomInkFunctions>().Stop();});
         story.BindExternalFunction("PLAY_SOUND", (string sound) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlaySound(sound);});
         story.BindExternalFunction("START_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StartEmitter();});
         story.BindExternalFunction("STOP_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopEmitter();});
-        story.BindExternalFunction("SET_PARAMETER", (string name, float par) => {customInkFunctions.GetComponent<CustomInkFunctions>().SetParameter(name, par);});
-        */
+        story.BindExternalFunction("SET_PARAMETER", (string parName, float value) => {customInkFunctions.GetComponent<CustomInkFunctions>().SetParameter(parName, value);});
+        
     }
 
     protected override void UnbindExternalFunctions(Story story)

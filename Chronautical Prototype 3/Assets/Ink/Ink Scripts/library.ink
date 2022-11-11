@@ -36,6 +36,10 @@ VAR oldladyPresent = false
 //Shopkeep = Uriah Bramble
 //Director = Bennet Crabb
 
+//Sound:
+//{PlayMusic("event:/Music/Prologue Music")}
+//{PlayAmbience("event:/Sound/Ambience/Prologue Ambience")}
+
 //Sprite/Background/Speaker
 //#speaker:Alistair
 //#sprite:Alistair_Sad
@@ -52,6 +56,7 @@ VAR oldladyPresent = false
 ~ time = 10
 ~ seenBeginning = true
 #background:Library interior
+//{SetParameter("PrologueAmbience", 5)}
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
 It was full of what I would become. Dreams of adventure in the stars piercing through the dark.
