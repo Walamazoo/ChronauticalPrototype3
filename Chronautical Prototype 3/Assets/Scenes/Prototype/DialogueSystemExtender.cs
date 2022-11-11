@@ -12,7 +12,7 @@ using System.IO;
 public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
     private int storedNumber;
-    //[SerializeField] private InkFile globalsInkFile;
+    [SerializeField] private InkFile globalsInkFile;
     [SerializeField] GameObject button;
     [SerializeField] JournalManager JournalManager;
     [SerializeField] GameObject customInkFunctions;
@@ -33,13 +33,14 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     private Dictionary<string, bool> inkBoolStorage = new Dictionary<string, bool>();
     public Dictionary<string, int> inkIntStorage = new Dictionary<string, int>();
 
-    //public Dictionary<string, Ink.Runtime.Object> inkVariableStorage = new Dictionary<string, Ink.Runtime.Object>();
+    public Dictionary<string, Ink.Runtime.Object> inkVariableStorage = new Dictionary<string, Ink.Runtime.Object>();
 
     protected override void Awake()
     {
         base.Awake();
-        //initializeVariables();
+        initializeVariables();
     }
+
     protected override void BindExternalFunctions(Story story)
     {
         base.BindExternalFunctions(story);
@@ -142,73 +143,58 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             }
     }
 
-    //private void initializeVariables(){
-        //string filePath = globalsInkFile.filePath;
-        //string inkFileContents = File.ReadAllText(filePath);
-        //Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
-        //Story globalVariablesStory = compiler.Compile();
+    private void initializeVariables(){
+        string filePath = globalsInkFile.filePath;
+        string inkFileContents = File.ReadAllText(filePath);
+        Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
+        Story globalVariablesStory = compiler.Compile();
 
-        //foreach(string name in globalVariablesStory.variablesState){
-            //Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
-            //inkVariableStorage.Add(name, value);
-            //Debug.Log(name + " was added to the dictionary with value = " + value);
-        //}
-    //}
-
-    //private void startListening(Story story){
-        //variablesToStory(story);
-        //Debug.Log("Started listening for variables");
-        //story.variablesState.variableChangedEvent += VariableChanged;
-    //}
-
-    //private void stopListening(Story story){
-        //Debug.Log("Stopped listening for variables");
-        //story.variablesState.variableChangedEvent -= VariableChanged;
-    //}
-
-    /* private void VariableChanged(string name, Ink.Runtime.Object value){
-        Debug.Log("VariableChanged ran");
-        if(inkVariableStorage.ContainsKey(name)){
-            Debug.Log("Before removal " + name + " was = " + inkVariableStorage[name]);
-            inkVariableStorage.Remove(name);
+        foreach(string name in globalVariablesStory.variablesState){
+            Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
             inkVariableStorage.Add(name, value);
-            Debug.Log("Before addition " + name + " is = " + inkVariableStorage[name]);
+            Debug.Log(name + " was added to the dictionary with value = " + value);
         }
-    } */
+    }
 
-    /* protected override void OnConversationStart(Transform actorTransform)
+    protected override void ObserveStoryVariables(Story story)
+    {
+        variablesToStory(story);
+        base.ObserveStoryVariables(story);
+    }
+
+    protected override void OnVariableChange(string variableName, object newValue)
+    {
+        if(inkVariableStorage.ContainsKey(variableName)){
+            Debug.Log("Before removal " + variableName + " was = " + inkVariableStorage[variableName]);
+            inkVariableStorage.Remove(variableName);
+            var activeStory = GetCurrentStory(DialogueManager.lastConversationID);
+            Ink.Runtime.Object temp = activeStory.variablesState.GetVariableWithName(variableName);
+            inkVariableStorage.Add(variableName, temp);
+            Debug.Log("After addition " + variableName + " is = " + inkVariableStorage[variableName]);
+        }
+        base.OnVariableChange(variableName, newValue);
+    }
+
+    protected override void OnConversationStart(Transform actorTransform)
     {
         for (int i = 0; i < inkJSONAssets.Count; i++)
             {
                 if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted))
                 {
                     var activeStory = stories[i];
-                    startListening(activeStory);
+                    variablesToStory(activeStory);
                 }
             }
         base.OnConversationStart(actorTransform);
     }
 
-    protected override void OnConversationEnd(Transform actor)
-    {
-        base.OnConversationEnd(actor);
-        for (int i = 0; i < inkJSONAssets.Count; i++)
-            {
-                if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted))
-                {
-                    var activeStory = stories[i];
-                    stopListening(activeStory);
-                }
-            }
-    }
 
     private void variablesToStory(Story story){
-        //Debug.Log("New story was run");
+        Debug.Log("New story was run");
         foreach(KeyValuePair<string, Ink.Runtime.Object> variable in inkVariableStorage){
             story.variablesState.SetGlobal(variable.Key, variable.Value);
         }
-        //Debug.Log(inkVariableStorage.Count);
-    } */
+    }
 
     public void SetBackground(string backgroundName)
     {

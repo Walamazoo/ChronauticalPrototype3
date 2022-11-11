@@ -1,12 +1,21 @@
-﻿VAR testInt = 0
-EXTERNAL STORE_NUMBER(name, value)
-EXTERNAL GET_NUMBER(name)
+﻿INCLUDE Globals.ink
+//EXTERNAL SET_VALUES()
 
-~ testInt = GET_NUMBER("testInt")
-Test int is {testInt}
+-> main
 
-~ testInt = 1
-~ STORE_NUMBER("testInt", 1)
+=== main ===
+//~ SET_VALUES()
+Which number do you choose?
+    + [1]
+        -> setTestInt(1)
+    + [2]
+        -> setTestInt(2)
+    + [3]
+        -> setTestInt(3)
 
 
-Test int is now {testInt}
+=== setTestInt(number) ===
+Test Int was {testInt}
+~ testInt = number
+Now Test Int is {testInt}
+-> END

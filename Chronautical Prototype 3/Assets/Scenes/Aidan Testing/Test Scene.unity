@@ -227,7 +227,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: 
+  startConversationAtKnot: main
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -368,7 +368,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: 
+  startConversationAtKnot: main
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -425,7 +425,7 @@ MonoBehaviour:
   inkJSONAssets:
   - {fileID: 4900000, guid: 30c028420aadc5740bc6168b14330c66, type: 3}
   - {fileID: 4900000, guid: b5da4f1cb1d9d744fbc792ef8e80cf8c, type: 3}
-  resetStateOnConversationStart: 1
+  resetStateOnConversationStart: 0
   actorNamesPrecedeLines: 0
   caseSensitiveActorNames: 0
   trimText: 1
@@ -439,7 +439,7 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   globalsInkFile:
     compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: fc2bdea66dddc114880ce9a126276752, type: 3}
+    inkAsset: {fileID: 102900000, guid: 5344adf221eddde408200ca0060b0be7, type: 3}
     jsonAssetDirectory: {fileID: 0}
     jsonAsset: {fileID: 0}
     unhandledCompileErrors: []
