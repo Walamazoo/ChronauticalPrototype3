@@ -10,7 +10,8 @@ public class CustomInkFunctions : MonoBehaviour
     [SerializeField] Button travelButton;
     [SerializeField] Slider slider;
 
-    //FMOD.Studio.EventInstance gameMusic;
+    FMOD.Studio.EventInstance gameMusic;
+    FMOD.Studio.EventInstance gameAmbience;
 
     public void ToggleSlider(bool state){
         if(state == true){
@@ -38,11 +39,17 @@ public class CustomInkFunctions : MonoBehaviour
         }
     }
 
-    /*
+    
     public void PlayMusic (string music)
     {
         gameMusic = FMODUnity.RuntimeManager.CreateInstance(music);
         gameMusic.start();
+    }
+
+    public void PlayAmbience (string ambience)
+    {
+        gameAmbience = FMODUnity.RuntimeManager.CreateInstance(ambience);
+        gameAmbience.start();
     }
 
     public void Stop ()
@@ -65,9 +72,9 @@ public class CustomInkFunctions : MonoBehaviour
         GameObject.Find("Variable Storage").GetComponent<FMODUnity.StudioEventEmitter>().Stop();
     }
 
-    public void SetParameter (string name, float par)
+    public void SetParameter (string parName, float value)
     {
-        gameMusic.setParameterByName(name, par);
+        gameMusic.setParameterByName(parName, value);
     }
-    */
+    
 }
