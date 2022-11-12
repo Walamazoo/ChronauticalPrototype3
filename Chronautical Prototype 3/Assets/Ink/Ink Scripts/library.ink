@@ -134,7 +134,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
     
     
 ===library===
-~TOGGLE_SLIDER(true)
+//~TOGGLE_SLIDER_INTERACTABLE(true)
 //Room Description for Journal
 { time:
 - 1:    

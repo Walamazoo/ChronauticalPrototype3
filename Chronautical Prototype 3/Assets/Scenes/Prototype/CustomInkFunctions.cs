@@ -8,6 +8,7 @@ public class CustomInkFunctions : MonoBehaviour
 {
     [SerializeField] GameObject timeSliderUI;
     [SerializeField] Button[] travelButtons;
+    [SerializeField] Button[] miniMap;
     [SerializeField] Slider slider;
 
     FMOD.Studio.EventInstance gameMusic;
@@ -28,18 +29,18 @@ public class CustomInkFunctions : MonoBehaviour
             foreach(Button bt in travelButtons){
                 bt.interactable = false;
             }
-            //foreach(Button room in miniMap){
-                //room.interactable = false;
-            //}
+            foreach(Button room in miniMap){
+                room.interactable = false;
+            }
         }
         else{
             slider.interactable = true;
             foreach(Button bt in travelButtons){
                 bt.interactable = true;
             }
-            //foreach(Button room in miniMap){
-                //room.interactable = true;
-            //}
+            foreach(Button room in miniMap){
+                room.interactable = true;
+            }
         }
     }
 

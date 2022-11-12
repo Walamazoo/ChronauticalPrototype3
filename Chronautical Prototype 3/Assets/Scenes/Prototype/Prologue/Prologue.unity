@@ -279,7 +279,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 52310929}
   m_OnClick:
     m_PersistentCalls:
@@ -3150,7 +3150,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 715462669}
   m_OnClick:
     m_PersistentCalls:
@@ -3720,6 +3720,10 @@ MonoBehaviour:
   - {fileID: 854182569}
   - {fileID: 52310928}
   - {fileID: 715462668}
+  miniMap:
+  - {fileID: 1631936592}
+  - {fileID: 1387660886}
+  - {fileID: 2017085751}
   slider: {fileID: 854182567}
 --- !u!4 &852796087
 Transform:
@@ -3744,10 +3748,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269792505502188337, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: m_CullTransparentMesh
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505502188340, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
@@ -3769,6 +3777,10 @@ PrefabInstance:
     - target: {fileID: 2269792505502188342, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269792505502188343, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505502188343, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -3793,6 +3805,10 @@ PrefabInstance:
     - target: {fileID: 2269792506013442822, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_Value
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269792506013442822, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: extender
@@ -3924,19 +3940,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506106285157, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506571567059, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_text
@@ -5734,7 +5750,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1387660887}
   m_OnClick:
     m_PersistentCalls:
@@ -7326,7 +7342,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1631936593}
   m_OnClick:
     m_PersistentCalls:
@@ -8755,7 +8771,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2017085752}
   m_OnClick:
     m_PersistentCalls:
