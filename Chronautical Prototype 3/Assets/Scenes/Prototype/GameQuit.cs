@@ -12,5 +12,9 @@ public class GameQuit : MonoBehaviour
         {
             Application.Quit();
         }
+        if (Input.GetKey("r"))
+        {
+            SceneManager.LoadSceneAsync("Title Screen");
+        }
     }
 }
