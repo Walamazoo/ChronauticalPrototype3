@@ -40,44 +40,44 @@ VAR directorPresent = false */
 { time:
 - 1:    
     ~ roomDescription = "A group is listening to a news projection."
-    //{SET_PARAMETER("PrologueAmbience", 6)}
-    //{SET_PARAMETER("PrologueCharacters", 0)}
+    {SET_PARAMETER("PrologueAmbience", 6)}
+    {SET_PARAMETER("PrologueCharacters", 0)}
 - 2:    
     ~ roomDescription = "The lab is busy, seems like there's plenty of work coming in."
-    //{SET_PARAMETER("PrologueAmbience", 6)}
-    //{SET_PARAMETER("PrologueCharacters", 2)}
+    {SET_PARAMETER("PrologueAmbience", 6)}
+    {SET_PARAMETER("PrologueCharacters", 2)}
 - 3:    
     ~ roomDescription = "The room is filled with booths of scientists showing off their work, must be a fair."
-    //{SET_PARAMETER("PrologueAmbience", 6)}
-    //{SET_PARAMETER("PrologueCharacters", 2)}
+    {SET_PARAMETER("PrologueAmbience", 6)}
+    {SET_PARAMETER("PrologueCharacters", 2)}
 - 4:    
     ~ roomDescription = "Not much seems to be happening in the lab."
-    //{SET_PARAMETER("PrologueAmbience", 7)}
-    //{SET_PARAMETER("PrologueCharacters", 1)}
+    {SET_PARAMETER("PrologueAmbience", 7)}
+    {SET_PARAMETER("PrologueCharacters", 1)}
 - 5:    
     ~ roomDescription = "The Director is giving an announcement."
-    //{SET_PARAMETER("PrologueAmbience", 6)}
-    //{SET_PARAMETER("PrologueCharacters", 1)}
+    {SET_PARAMETER("PrologueAmbience", 6)}
+    {SET_PARAMETER("PrologueCharacters", 1)}
 - 6:    
     ~ roomDescription = "Room is empty but lots of noise coming from the library. "
-    //{SET_PARAMETER("PrologueAmbience", 7)}
-    //{SET_PARAMETER("PrologueCharacters", 0)}
+    {SET_PARAMETER("PrologueAmbience", 7)}
+    {SET_PARAMETER("PrologueCharacters", 0)}
 - 7:    
     ~ roomDescription = "The Lab Director election has concluded."
-    //{SET_PARAMETER("PrologueAmbience", 6)}
-    //{SET_PARAMETER("PrologueCharacters", 0)}
+    {SET_PARAMETER("PrologueAmbience", 6)}
+    {SET_PARAMETER("PrologueCharacters", 0)}
 - 8:    
     ~ roomDescription = "Much of the equipment and furniture is gone."
-    //{SET_PARAMETER("PrologueAmbience", 8)}
-    //{SET_PARAMETER("PrologueCharacters", 0)}
+    {SET_PARAMETER("PrologueAmbience", 8)}
+    {SET_PARAMETER("PrologueCharacters", 0)}
 - 9:    
     ~ roomDescription = "Rumbling from below."
-    //{SET_PARAMETER("PrologueAmbience", 8)}
-    //{SET_PARAMETER("PrologueCharacters", 0)}
+    {SET_PARAMETER("PrologueAmbience", 8)}
+    {SET_PARAMETER("PrologueCharacters", 0)}
 - 10:   
     ~ roomDescription = "Lab is gone, the planet will be destroyed soon."
-    //{SET_PARAMETER("PrologueAmbience", 9)}
-    //{SET_PARAMETER("PrologueCharacters", 0)}
+    {SET_PARAMETER("PrologueAmbience", 9)}
+    {SET_PARAMETER("PrologueCharacters", 0)}
 }
 
 //Content Start
@@ -140,7 +140,7 @@ Who should I talk to?
 ===JULES===
 {metJules: -> Questions|-> meetJules}
 #NPC:Jules_Neutral
-//{SET_PARAMETER("PrologueCharacters", 1)}
+{SET_PARAMETER("PrologueCharacters", 1)}
 =meetJules
 ~metJules=true
 
@@ -319,7 +319,7 @@ Who should I talk to?
 ===DIRECTOR===
 {metDirector: -> Questions|-> meetDirector}
 #NPC:Labhead_Neutral
-//{SET_PARAMETER("PrologueCharacters", 2)}
+{SET_PARAMETER("PrologueCharacters", 2)}
 =meetDirector
 ~metDirector=true
 #speaker:Director
