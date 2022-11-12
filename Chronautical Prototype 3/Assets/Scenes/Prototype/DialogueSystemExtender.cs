@@ -131,10 +131,16 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                         SetSprite(spriteName, spriteExpression, playerSprite);
                         break;
                     case NPC_TAG:
-                        string[] NPCspriteStrings = tagValue.Split('_');
-                        string NPCspriteName = NPCspriteStrings[0].Trim();
-                        string NPCspriteExpression = NPCspriteStrings[0].Trim() + "_" + NPCspriteStrings[1].Trim();
-                        SetSprite(NPCspriteName, NPCspriteExpression, NPCSprite);
+                        if(tagValue == "None"){
+                            SetSprite("None", "None", NPCSprite);
+                        }
+                        else{
+                            string[] NPCspriteStrings = tagValue.Split('_');
+                            string NPCspriteName = NPCspriteStrings[0].Trim();
+                            string NPCspriteExpression = NPCspriteStrings[0].Trim() + "_" + NPCspriteStrings[1].Trim();
+                            SetSprite(NPCspriteName, NPCspriteExpression, NPCSprite);
+                        }
+                        
                         break;
                     default:
                         Debug.Log("Tag came in but is not currently being handeled: " + tag);
