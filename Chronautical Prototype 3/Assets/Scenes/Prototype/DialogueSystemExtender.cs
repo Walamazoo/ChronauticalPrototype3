@@ -189,6 +189,17 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     }
 
 
+    public void setTime(int value){
+        for (int i = 0; i < inkJSONAssets.Count; i++)
+            {
+                if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted))
+                {
+                    var activeStory = stories[i];
+                    activeStory.variablesState["time"] = value;
+                }
+            }
+    }
+
     private void variablesToStory(Story story){
         Debug.Log("New story was run");
         foreach(KeyValuePair<string, Ink.Runtime.Object> variable in inkVariableStorage){
