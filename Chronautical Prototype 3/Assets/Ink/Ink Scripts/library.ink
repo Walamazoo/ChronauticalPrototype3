@@ -123,6 +123,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "Precisely."
+#NPC:None
 //This time variable change below is used for testing in Inky and should be commented out when making a build or testing time slider
 //~time = 7
 -> library
@@ -311,6 +312,7 @@ Who should I talk to?
     #speaker:Jules
     "Let's speak again soon, Alistair."
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        #NPC:None
         -> END //library
 
 =WhyHere
@@ -407,6 +409,7 @@ Who should I talk to?
     #speaker:Child
     "Fine."
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        #NPC:None
         -> END //library
 =Lost
 "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
@@ -502,6 +505,7 @@ In the center, I see a series of numbers: 0-9.
 #speaker:Alistair
 "You're right as usual."
 "We'll find a way to get my 'treasure'."
+#NPC:None
 -> library
 
 ===Security===
@@ -603,6 +607,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> END //library
 
 

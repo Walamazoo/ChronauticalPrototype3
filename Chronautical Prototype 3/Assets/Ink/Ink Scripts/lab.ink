@@ -31,7 +31,7 @@ VAR directorPresent = false */
 
 //Knots Start
 //Time Set for Testing
-//~time=3
+//~time=2
 -> lab
 ===lab===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
@@ -225,7 +225,7 @@ Who should I talk to?
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
-    #NPC: 
+    #NPC:None 
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         -> DONE //lab
 
@@ -248,7 +248,7 @@ Who should I talk to?
 "Though I'm afriad it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
 //WACKY ASS PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
-  #NPC: 
+  #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
@@ -289,7 +289,7 @@ Who should I talk to?
     #sprite:Alistair_Nervous
     "I-I will."
     "Thank you Jules..."
-  #NPC: 
+  #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
@@ -311,7 +311,7 @@ Who should I talk to?
 "It should be enough time to evacuate, but..."
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
-  #NPC: 
+  #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
@@ -378,7 +378,7 @@ Who should I talk to?
     "And visit you may."
     "Now, be gone."
     "I have much work to attend to."
-#NPC: 
+#NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> END //lab
 
@@ -393,7 +393,7 @@ Who should I talk to?
     + [Nothing for now]
         #speaker:Director
         "Yes, yes, be gone. I am quite busy."
-        #NPC: 
+        #NPC:None
             ~ TOGGLE_SLIDER_INTERACTABLE(true)
             -> END //lab
 
@@ -417,7 +417,7 @@ Who should I talk to?
 "Each artifact must be dated, catagorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
 "Begone."
-#NPC: 
+#NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
@@ -435,7 +435,7 @@ Who should I talk to?
 #speaker:Alistair
 #sprite:Alistair_Sad
 "I see."
-#NPC: 
+#NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
@@ -462,7 +462,7 @@ Who should I talk to?
 #speaker:Director
 "Not that it would matter, but you were a mere intern."
 "Regardless, I refuse to break protocol for your curiosity..."
-#NPC: 
+#NPC:None
 -> DONE
 
 =VaultTalk
@@ -534,7 +534,7 @@ Who should I talk to?
         
 #speaker:Alistair
 #sprite:Alistair_Sad
-#NPC: 
+#NPC:None
 (How infuriating!)
 (Speaking to Bennet is like talking to a wall...)
 
@@ -616,7 +616,7 @@ The lab employees are silent but a few dip their heads.
 ===TempEnd===
 #speaker: 
 #sprite: 
-#NPC: 
+#NPC:None
 This is the end of our demo, thank you so much for playing!
 Be sure to follow our 'Chronautical' socials and let us know what you think!
 -> END
