@@ -5798,8 +5798,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: lab
-  myButton: {fileID: 0}
-  buttons: []
+  myButton: {fileID: 715462666}
+  buttons:
+  - {fileID: 1537373912}
+  - {fileID: 52310926}
+  - {fileID: 715462666}
   controller: {fileID: 854182565}
 --- !u!1 &1395759017
 GameObject:
@@ -6600,6 +6603,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491331036}
   m_CullTransparentMesh: 0
+--- !u!1 &1537373912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2269792505502188341, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+  m_PrefabInstance: {fileID: 854182564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1542052099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1401804727793010163, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
@@ -7382,8 +7390,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: library
-  myButton: {fileID: 0}
-  buttons: []
+  myButton: {fileID: 52310926}
+  buttons:
+  - {fileID: 1537373912}
+  - {fileID: 52310926}
+  - {fileID: 715462666}
   controller: {fileID: 854182565}
 --- !u!1 &1675782872
 GameObject:
@@ -8806,8 +8817,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: marketplace
-  myButton: {fileID: 0}
-  buttons: []
+  myButton: {fileID: 1537373912}
+  buttons:
+  - {fileID: 1537373912}
+  - {fileID: 52310926}
+  - {fileID: 715462666}
   controller: {fileID: 854182565}
 --- !u!1 &2069053325
 GameObject:
