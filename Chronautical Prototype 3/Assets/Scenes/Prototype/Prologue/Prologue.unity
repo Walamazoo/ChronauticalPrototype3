@@ -2065,6 +2065,20 @@ MonoBehaviour:
   debug: 0
   isResuming: 0
   isPlayerSpeaking: 0
+  globalsInkFile:
+    compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 73c2cae3b6420924aa639b33bb34ca99, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
   button: {fileID: 310562199}
   JournalManager: {fileID: 310562198}
   customInkFunctions: {fileID: 852796085}
@@ -3341,7 +3355,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: 
+  startConversationAtKnot: lab
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -4275,7 +4289,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: 
+  startConversationAtKnot: SeeBeginning
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -4384,7 +4398,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: 
+  startConversationAtKnot: SeeBeginning
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -4737,7 +4751,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: 
+  startConversationAtKnot: marketplace
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 

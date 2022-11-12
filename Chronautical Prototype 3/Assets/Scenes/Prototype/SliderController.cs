@@ -125,8 +125,8 @@ public class SliderController : MonoBehaviour
             }
         }
         */
-
-        extender.inkIntStorage["Time"] = (int)currentSliderValue; 
+        //DialogueSystemInkIntegration.SetInkNumber("time", currentSliderValue);
+        DialogueSystemExtender.SetInkNumber("time", currentSliderValue);
 
         DialogueSystemInkIntegration.SetConversationStartingPoint(currentLocation);
         DialogueManager.StartConversation(currentLocation);

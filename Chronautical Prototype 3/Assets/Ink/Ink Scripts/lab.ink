@@ -1,7 +1,7 @@
 //Script for location LAB
-
+INCLUDE Globals.ink
 //Time Variable
-VAR time = 0
+/* VAR time = 0
 
 //More Variables
 VAR roomDescription = ""
@@ -27,7 +27,7 @@ VAR metDirector = false
 
 //NPC Variables
 VAR julesPresent = false
-VAR directorPresent = false
+VAR directorPresent = false */
 
 //Knots Start
 //Time Set for Testing

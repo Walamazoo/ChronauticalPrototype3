@@ -1,7 +1,7 @@
 //Script for location LIBRARY
-
+INCLUDE Globals.ink
 //Time Variable
-VAR time = 0
+/* VAR time = 0
 
 //More Variables
 VAR roomDescription = ""
@@ -29,7 +29,7 @@ VAR julesPresent = false
 VAR directorPresent = false
 VAR shopownerPresent = false
 VAR childPresent = false
-VAR oldladyPresent = false
+VAR oldladyPresent = false */
 //Jules = Jules Ambrose
 //Child = Temperance Ward
 //Old Lady/Storyteller = Miriam Harcourt
@@ -49,6 +49,7 @@ VAR oldladyPresent = false
 //No space between colon and character/sprite/background
 
 //Sets up if player has seen opening, if has seen it, skips the beginning knot
+=== SeeBeginning ===
 {seenBeginning: -> library|-> beginning}
 
 //Knots start

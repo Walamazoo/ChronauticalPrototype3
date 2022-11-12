@@ -227,7 +227,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: main
+  startConversationAtKnot: TrueOrFalse
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -809,7 +809,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 'Test1
+
+'
 --- !u!222 &1737024101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -888,7 +890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Test2
 --- !u!222 &1753844566
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -929,7 +931,7 @@ RectTransform:
   m_Children:
   - {fileID: 1753844564}
   m_Father: {fileID: 2112577814}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1063,11 +1065,11 @@ RectTransform:
   m_Children:
   - {fileID: 1737024099}
   m_Father: {fileID: 2112577814}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -46}
+  m_AnchoredPosition: {x: 0, y: 47}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021341834
@@ -1195,8 +1197,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1893081580}
   - {fileID: 2021341833}
+  - {fileID: 1893081580}
   m_Father: {fileID: 1511697415}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

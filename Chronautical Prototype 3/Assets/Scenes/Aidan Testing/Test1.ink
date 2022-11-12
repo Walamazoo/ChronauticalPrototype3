@@ -3,6 +3,9 @@
 
 -> main
 
+=== TrueOrFalse ===
+{testInt == 0: -> main|-> setTestInt(testInt)}
+
 === main ===
 //~ SET_VALUES()
 Which number do you choose?

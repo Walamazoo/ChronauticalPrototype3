@@ -1,7 +1,7 @@
 //Script for location MARKETPLACE
-
+INCLUDE Globals.ink
 //Time Variable
-VAR time = 0
+/* VAR time = 0
 
 //More Variables
 VAR roomDescription = ""
@@ -30,7 +30,7 @@ VAR oldladyPresent = false
 VAR metJules = false
 VAR metChild = false
 VAR metShopowner = false
-VAR metOldlady = false
+VAR metOldlady = false */
 
 //Knots Start
 ->marketplace
