@@ -33,5 +33,23 @@ VAR metJules = false
 VAR metChild = false
 VAR metDirector = false
 
-EXTERNAL SHOW_BUTTON()
-EXTERNAL BUTTON_GONE()
+//Functions
+EXTERNAL TOGGLE_SLIDER(state)
+EXTERNAL TOGGLE_SLIDER_INTERACTABLE(state)
+
+EXTERNAL PLAY_MUSIC(music)
+EXTERNAL PLAY_AMBIENCE(ambience)
+EXTERNAL SET_PARAMETER(parName, value)
+
+
+=== function TOGGLE_SLIDER(state) ===
+    ~return state
+=== function TOGGLE_SLIDER_INTERACTABLE(state) ===
+    ~return state
+=== function PLAY_MUSIC(music) ===
+    ~return music
+=== function PLAY_AMBIENCE(ambience) ===
+    ~return ambience
+=== function SET_PARAMETER(parName, value) ===
+    ~return parName
+    ~return value

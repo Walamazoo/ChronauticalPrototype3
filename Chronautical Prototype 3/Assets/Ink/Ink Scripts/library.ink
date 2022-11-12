@@ -36,11 +36,6 @@ VAR oldladyPresent = false */
 //Shopkeep = Uriah Bramble
 //Director = Bennet Crabb
 
-//Sound:
-EXTERNAL PLAY_MUSIC(music)
-EXTERNAL PLAY_AMBIENCE(ambience)
-EXTERNAL SET_PARAMETER(parName, value)
-
 //Sprite/Background/Speaker
 //#speaker:Alistair
 //#sprite:Alistair_Sad
@@ -49,9 +44,6 @@ EXTERNAL SET_PARAMETER(parName, value)
 //Maybe change asset name
 //No space between colon and character/sprite/background
 
-//Functions
-EXTERNAL TOGGLE_SLIDER(state)
-EXTERNAL TOGGLE_SLIDER_INTERACTABLE(state)
 
 //Sets up if player has seen opening, if has seen it, skips the beginning knot
 === SeeBeginning ===
@@ -593,19 +585,3 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 ===Ending===
 //placeholder for ending
 -> DONE
-
-=== function TOGGLE_SLIDER(state) ===
-    ~return state
-=== function TOGGLE_SLIDER_INTERACTABLE(state) ===
-    ~return state
-=== function PLAY_MUSIC(music) ===
-    ~return music
-=== function PLAY_AMBIENCE(ambience) ===
-    ~return ambience
-=== function SET_PARAMETER(parName, value) ===
-    ~return parName
-    ~return value
-
-
-
-
