@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class SwitchRoom : MonoBehaviour
@@ -10,6 +11,7 @@ public class SwitchRoom : MonoBehaviour
     [SerializeField] GameObject myButton;
     [SerializeField] GameObject[] buttons;
     [SerializeField] SliderController controller;
+    [SerializeField] GameObject text;
     
     public void OnClick(){
         controller.currentLocation = roomName;
@@ -25,6 +27,17 @@ public class SwitchRoom : MonoBehaviour
             }
         }
         StartCoroutine(MoveMiniCharacter());
+        switch(roomName){
+            case "library":
+                text.GetComponent<Text>().text = "Library";
+                break;
+            case "marketplace":
+                text.GetComponent<Text>().text = "Market Place";
+                break;
+            case "lab":
+                text.GetComponent<Text>().text = "Lab";
+                break;
+        }
     }
 
     private IEnumerator MoveMiniCharacter(){

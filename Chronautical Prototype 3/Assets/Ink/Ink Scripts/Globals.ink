@@ -32,3 +32,6 @@ VAR metOldlady = false
 VAR metJules = false
 VAR metChild = false
 VAR metDirector = false
+
+EXTERNAL SHOW_BUTTON()
+EXTERNAL BUTTON_GONE()
