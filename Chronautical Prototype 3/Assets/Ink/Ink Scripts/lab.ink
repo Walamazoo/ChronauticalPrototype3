@@ -35,7 +35,7 @@ VAR directorPresent = false */
 -> lab
 ===lab===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-#background:Lab interior
+#background:Lab_Interior
 #sprite:Alistair_Neutral
 //Room Description for Journal
 { time:
