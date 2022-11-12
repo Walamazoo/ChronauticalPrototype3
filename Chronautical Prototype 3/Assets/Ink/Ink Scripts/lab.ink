@@ -135,8 +135,9 @@ What should I do?
 Who should I talk to? 
     +{julesPresent} [Jules] -> JULES
     +{directorPresent} [The Director] -> DIRECTOR
-    + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //lab
+    + [Don't talk to anyone] I don't need to talk to anyone right now. 
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
+    -> END //lab
 
 
 //NPCs and their convos
@@ -225,8 +226,8 @@ Who should I talk to?
     #speaker:Jules
     "Let's speak again soon, Alistair."
     #NPC: 
-        -> DONE //lab
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        -> DONE //lab
 
 =fair
 #speaker:Alistair
@@ -248,8 +249,8 @@ Who should I talk to?
 "Perhaps I'll tell you about it another time."
 //WACKY ASS PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
   #NPC: 
--> DONE
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
 
 =wedding
 #speaker:Alistair
@@ -289,8 +290,8 @@ Who should I talk to?
     "I-I will."
     "Thank you Jules..."
   #NPC: 
--> DONE
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
 
 =disaster
 #speaker:Alistair
@@ -311,8 +312,9 @@ Who should I talk to?
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
   #NPC: 
--> DONE
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
+
 
 //HelpOpenVaultConvo
 //Ask for help to get into vault, says no, not going to help break into it
@@ -377,8 +379,9 @@ Who should I talk to?
     "Now, be gone."
     "I have much work to attend to."
 #NPC: 
--> END //lab
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> END //lab
+
 
 =Questions
 #speaker:Director 
@@ -391,8 +394,8 @@ Who should I talk to?
         #speaker:Director
         "Yes, yes, be gone. I am quite busy."
         #NPC: 
-            -> END //lab
             ~ TOGGLE_SLIDER_INTERACTABLE(true)
+            -> END //lab
 
 =Busylab
 #speaker:Alistair
@@ -415,8 +418,9 @@ Who should I talk to?
 "And there are hundreds of cases on my desk now, so-"
 "Begone."
 #NPC: 
--> DONE
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
+
 
 =Booths
 #speaker:Alistair
@@ -432,8 +436,9 @@ Who should I talk to?
 #sprite:Alistair_Sad
 "I see."
 #NPC: 
--> DONE
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
+
 
 =Notbusy
 #speaker:Alistair

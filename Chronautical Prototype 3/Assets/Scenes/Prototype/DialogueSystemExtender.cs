@@ -182,12 +182,24 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                 if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted))
                 {
                     var activeStory = stories[i];
-                    variablesToStory(activeStory);
+                    //variablesToStory(activeStory);
                 }
             }
         base.OnConversationStart(actorTransform);
     }
 
+    protected override void OnConversationEnd(Transform actor)
+    {
+        base.OnConversationEnd(actor);
+        for (int i = 0; i < inkJSONAssets.Count; i++)
+            {
+                var activeStory = stories[i];
+                //variablesToStory(activeStory);
+                customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
+            }
+        
+        
+    }
 
     public void setTime(int value){
         for (int i = 0; i < inkJSONAssets.Count; i++)
