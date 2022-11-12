@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CustomInkFunctions : MonoBehaviour
 {
     [SerializeField] GameObject timeSliderUI;
-    [SerializeField] Button travelButton;
+    [SerializeField] Button[] travelButtons;
     [SerializeField] Slider slider;
 
     FMOD.Studio.EventInstance gameMusic;
@@ -25,14 +25,18 @@ public class CustomInkFunctions : MonoBehaviour
     public void ToggleSliderInteractable(bool state){
         if(state == false){
             slider.interactable = false;
-            travelButton.interactable = false;
+            foreach(Button bt in travelButtons){
+                bt.interactable = false;
+            }
             //foreach(Button room in miniMap){
                 //room.interactable = false;
             //}
         }
         else{
             slider.interactable = true;
-            travelButton.interactable = true;
+            foreach(Button bt in travelButtons){
+                bt.interactable = true;
+            }
             //foreach(Button room in miniMap){
                 //room.interactable = true;
             //}

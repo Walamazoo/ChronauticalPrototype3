@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 763636739}
   m_HandleRect: {fileID: 763636738}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3716,7 +3716,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeSliderUI: {fileID: 854182568}
-  travelButton: {fileID: 0}
+  travelButtons:
+  - {fileID: 854182569}
+  - {fileID: 52310928}
+  - {fileID: 715462668}
   slider: {fileID: 854182567}
 --- !u!4 &852796087
 Transform:
@@ -3741,11 +3744,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505502188340, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3919,17 +3922,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Time Slider UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2269792506106285157, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506571567059, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_text
@@ -3993,6 +4000,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2269792506106285157, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
   m_PrefabInstance: {fileID: 854182564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &854182569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2269792505502188343, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+  m_PrefabInstance: {fileID: 854182564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537373912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875970387
 GameObject:
   m_ObjectHideFlags: 0
