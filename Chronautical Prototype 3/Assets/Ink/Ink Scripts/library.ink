@@ -58,7 +58,7 @@ VAR oldladyPresent = false */
 ~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
 ~ time = 10
 ~ seenBeginning = true
-#background:Library interior
+#background:Library_Interior
 ~SET_PARAMETER("PrologueAmbience", 5)
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
@@ -456,7 +456,7 @@ Who should I talk to?
 //Quest Specific Knots
 ===InvestigateVault===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-#background:vault
+#background:Vault
 The vault is a marvel in of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
     * [Guess the code] ->DarlingPepTalk
