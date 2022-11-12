@@ -53,6 +53,7 @@ VAR oldladyPresent = false */
 ===beginning===
 //~PLAY_MUSIC("event:/Music/Prologue Music")
 //~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~ time = 10
 ~ seenBeginning = true
 #background:Library interior
@@ -126,6 +127,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
     
     
 ===library===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //~TOGGLE_SLIDER_INTERACTABLE(true)
 //Room Description for Journal
 { time:
@@ -227,10 +229,12 @@ Who should I talk to?
     +{julesPresent} [Jules] -> JULES
     +{childPresent} [The Child] -> CHILD
     + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //library
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
     
 
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 {metJules: -> Questions|-> meetJules}
 #NPC:Jules_Neutral
 =meetJules
@@ -306,6 +310,7 @@ Who should I talk to?
     #speaker:Jules
     "Let's speak again soon, Alistair."
         -> END //library
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =WhyHere
 #speaker:Alistair
@@ -368,6 +373,7 @@ Who should I talk to?
 
 ===CHILD===
 {metChild: -> Questions|-> meetChild}
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 #NPC:Child_Neutral
 =meetChild
 #speaker:Alistair
@@ -400,6 +406,7 @@ Who should I talk to?
     #speaker:Child
     "Fine."
         -> END //library
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
 =Lost
 "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
         #speaker:Child
@@ -444,6 +451,7 @@ Who should I talk to?
 
 //Quest Specific Knots
 ===InvestigateVault===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:vault
 The vault is a marvel in of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
@@ -462,10 +470,12 @@ In the center, I see a series of numbers: 0-9.
     * {hasCode} [Input code]
         ->Ending
     + [Do nothing] -> END //library
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 
 ->DarlingPepTalk
 ===DarlingPepTalk===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~seenPepTalk=true
 #speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
@@ -494,6 +504,7 @@ In the center, I see a series of numbers: 0-9.
 -> library
 
 ===Security===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 As I approach the vault, I see one of the vault's security promptly slide over and put himself directly into my path.
 He crosses his arms and just stands there.
     + [Say hello] "Hello there!" #speaker:Alistair
@@ -506,21 +517,28 @@ He crosses his arms and just stands there.
                         "I heard you..." #speaker:Guard
                         "Oh! Apologies..." #speaker:Alistair
                         (He's not very talkative is he...)-> END //library
+                        ~ TOGGLE_SLIDER_INTERACTABLE(true)
                     ++[Nevermind] I just smile and turn on my heel.
                                     (Maybe I'll look elsewhere.) -> END //library
+                                    ~ TOGGLE_SLIDER_INTERACTABLE(true)
     + [Nevermind] I just smile and turn on my heel. 
                 (Maybe I'll look elsewhere.) -> END //library
+                ~ TOGGLE_SLIDER_INTERACTABLE(true)
 //More interactions can be added here if/when we add options to try to break into the vault
 -> DONE
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 
 ===HotVault===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 The vault shimmers under the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
 The treasure might even have melted inside the vault anyway.
 -> END //library
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 
 ===Election===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //variables will need to be added to change the election outcome and stance of the NPCs
 As crowds of people close in on the board, I push and wriggle my way closer to the front.
 Now that I'm closer, I can hear a bit more of the board members' speech.
@@ -580,6 +598,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 -> END //library
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 
 ===Ending===

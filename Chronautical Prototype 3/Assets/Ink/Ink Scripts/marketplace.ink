@@ -35,6 +35,7 @@ VAR metOldlady = false */
 //Knots Start
 ->marketplace
 ===marketplace===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Marketplace
 #sprite:Alistair_Neutral
 //Room Description for Journal
@@ -101,6 +102,7 @@ What should I do?
         - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walk ways. The stench of smoke fills the market and some stalls even collapse as the planet shutters violently.
         }
         -> END //marketplace
+        ~ TOGGLE_SLIDER_INTERACTABLE(true)
     + [Look for someone to talk to]
         //NPC Description for Player
         { time:
@@ -136,6 +138,7 @@ What should I do?
         -> NPCS
 
 ===NPCS===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //Tracks what NPCs are present
 Who should I talk to? 
     *{julesPresent} [Jules] -> JULES
@@ -143,10 +146,12 @@ Who should I talk to?
     *{childPresent} [The Child] -> CHILD
     *{oldladyPresent} [The Old Lady] -> OLDLADY
     *[Don't talk to anyone] I don't need to talk to anyone right now. -> END //marketplace
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
     
     
 //Jules Ambrose NPC Convo
 ===JULES===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 1)}
 {metJules: -> Questions| -> meetJules}
 
@@ -159,6 +164,7 @@ Who should I talk to?
 //Intro convo
 //+ [Convo 1] -> Convo1
 + [Nothing for now] -> END
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 //1 option for a miscellaneous convo (something to do with this specific time and what's happening in the world or to the character)
 
 =Convo1
@@ -170,6 +176,7 @@ Who should I talk to?
 
 //Uriah Bramble (shopowner/shopkeep) NPC Convo
 ===SHOPOWNER===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 3)}
 {metShopowner: -> Questions| -> meetShopowner}
 
@@ -182,6 +189,7 @@ Who should I talk to?
 //Intro convo
 //+ [Convo 1] -> Convo1
 + [Nothing for now] -> END
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 //1 option for a miscellaneous convo (something to do with this specific time and what's happening in the world or to the character)
 
 =Convo1
@@ -193,6 +201,7 @@ Who should I talk to?
 
 //Temperance Ward (Child) NPC Convo
 ===CHILD===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 4)}
 {metChild: -> Questions| -> meetChild}
 
@@ -205,6 +214,7 @@ Who should I talk to?
 //Intro convo
 //+ {time = X} [Convo 1] -> Convo1
 + [Nothing for now] -> END
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 //1 option for a miscellaneous convo (something to do with this specific time and what's happening in the world or to the character)
 
 =Convo1
@@ -214,6 +224,7 @@ Who should I talk to?
 
 //Miriam Harcourt (Old Lady/Storyteller) NPC Convo
 ===OLDLADY===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 5)}
 {metOldlady: -> Questions| -> meetOldlady}
 
@@ -226,6 +237,7 @@ Who should I talk to?
 //Intro convo
 //+ [Convo 1] -> Convo1
 + [Nothing for now] -> END
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 //1 option for a miscellaneous convo (something to do with this specific time and what's happening in the world or to the character)
 
 =Convo1

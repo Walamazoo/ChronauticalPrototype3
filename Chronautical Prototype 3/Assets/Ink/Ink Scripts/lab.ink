@@ -34,6 +34,7 @@ VAR directorPresent = false */
 //~time=3
 -> lab
 ===lab===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Lab interior
 #sprite:Alistair_Neutral
 //Room Description for Journal
@@ -129,15 +130,18 @@ What should I do?
         -> NPCS
 
 ===NPCS===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 //Allows the player to talk to NPCs based on who is there at the time
 Who should I talk to? 
     +{julesPresent} [Jules] -> JULES
     +{directorPresent} [The Director] -> DIRECTOR
     + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //lab
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 
 //NPCs and their convos
 ===JULES===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 {metJules: -> Questions|-> meetJules}
 #NPC:Jules_Neutral
 //{SET_PARAMETER("PrologueCharacters", 1)}
@@ -222,6 +226,7 @@ Who should I talk to?
     "Let's speak again soon, Alistair."
     #NPC: 
         -> DONE //lab
+        ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =fair
 #speaker:Alistair
@@ -244,6 +249,7 @@ Who should I talk to?
 //WACKY ASS PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
   #NPC: 
 -> DONE
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =wedding
 #speaker:Alistair
@@ -284,6 +290,7 @@ Who should I talk to?
     "Thank you Jules..."
   #NPC: 
 -> DONE
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =disaster
 #speaker:Alistair
@@ -305,6 +312,7 @@ Who should I talk to?
 "I just hope Crabb knows what he's doing."
   #NPC: 
 -> DONE
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 //HelpOpenVaultConvo
 //Ask for help to get into vault, says no, not going to help break into it
@@ -317,6 +325,7 @@ Who should I talk to?
 //Darling plants idea to help Jules to get elected
 
 ===DIRECTOR===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 {metDirector: -> Questions|-> meetDirector}
 #NPC:Labhead_Neutral
 //{SET_PARAMETER("PrologueCharacters", 2)}
@@ -369,6 +378,7 @@ Who should I talk to?
     "I have much work to attend to."
 #NPC: 
 -> END //lab
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =Questions
 #speaker:Director 
@@ -382,6 +392,7 @@ Who should I talk to?
         "Yes, yes, be gone. I am quite busy."
         #NPC: 
             -> END //lab
+            ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =Busylab
 #speaker:Alistair
@@ -405,6 +416,7 @@ Who should I talk to?
 "Begone."
 #NPC: 
 -> DONE
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =Booths
 #speaker:Alistair
@@ -421,6 +433,7 @@ Who should I talk to?
 "I see."
 #NPC: 
 -> DONE
+~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =Notbusy
 #speaker:Alistair
@@ -545,6 +558,7 @@ Who should I talk to?
 
 //Quest and Misc Knots
 ===OtherPlanetAnnounce===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 I move closer to the crowd to listen in.
 A small projected version of the lab's Director, Bennet Crabb, stands on a pedastal in the center of the crowd.
 
@@ -567,6 +581,7 @@ I remember doing the same when I was a fresh intern.
 -> lab
 
 ===AnnounceDestruction===
+~ TOGGLE_SLIDER_INTERACTABLE(false)
 The Director's projected form stands tall over the group of people around him.
 Everyone is silent, just looking up.
 
