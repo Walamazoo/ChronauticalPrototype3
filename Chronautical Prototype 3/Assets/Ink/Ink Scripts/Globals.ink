@@ -1,4 +1,4 @@
-﻿VAR time = 0
+VAR time = 0
 
 //More Variables
 VAR roomDescription = ""
