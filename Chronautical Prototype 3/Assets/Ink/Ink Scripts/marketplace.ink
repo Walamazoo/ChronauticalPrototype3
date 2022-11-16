@@ -162,7 +162,7 @@ Who should I talk to?
 {metJules: -> Questions| -> meetJules}
 
 =meetJules
-//INTRODUCTION PLACEHOLDER
+//INTRODUCTION PLACEHOLDER(pull over from different location)
 ~metJules = true
 -> JULES
 
@@ -213,7 +213,7 @@ Who should I talk to?
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
-//INTRODUCTION PLACEHOLDER
+//INTRODUCTION PLACEHOLDER (pull over from library)
 ~metChild = true
 -> CHILD
 
