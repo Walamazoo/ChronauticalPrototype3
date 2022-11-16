@@ -124,6 +124,7 @@ What should I do?
                 ~ shopownerPresent = true
                 ~ oldladyPresent = true
         - 6:    //PLACEHOLDERWho is there?
+                ~noNPCS=true
         - 7:    //PLACEHOLDERWho is there?
                 ~ shopownerPresent = true
                 ~ childPresent = true
@@ -134,21 +135,25 @@ What should I do?
         - 9:    //PLACEHOLDERWho is there?
                 ~ julesPresent = true
         - 10:   //PLACEHOLDERWho is there?
+                ~noNPCS=true
         }
         -> NPCS
 
 ===NPCS===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
-//Tracks what NPCs are present
+{noNPCS:
+    There is no one to talk to at this time. ->END
+  - else:
+    ~ TOGGLE_SLIDER_INTERACTABLE(false)
 Who should I talk to? 
     *{julesPresent} [Jules] -> JULES
     *{shopownerPresent} [The Shopowner] -> SHOPOWNER
     *{childPresent} [The Child] -> CHILD
     *{oldladyPresent} [The Old Lady] -> OLDLADY
-    *[Don't talk to anyone] I don't need to talk to anyone right now. -> END //marketplace
+    *[Don't talk to anyone] I don't need to talk to anyone right now. 
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
-    
-    
+    -> END
+}
+
 //Jules Ambrose NPC Convo
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)

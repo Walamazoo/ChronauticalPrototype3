@@ -27,6 +27,7 @@ VAR childPresent = false
 VAR oldladyPresent = false
 VAR metShopowner = false
 VAR metOldlady = false
+VAR noNPCS = false
 
 //Variables for if player has met NPC
 VAR metJules = false

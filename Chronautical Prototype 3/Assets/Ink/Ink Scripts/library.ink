@@ -211,10 +211,15 @@ What should I do?
     + [Look for someone to talk to]
         { time:
         - 1:    Plenty of lab employees mill about, but all of them look too busy to talk to me.
+                ~noNPCS=true
         - 2:    All I see are carpenters and the lab's security.
+                ~noNPCS=true
         - 3:    All I see are carpenters and the lab's security.
+                ~noNPCS=true
         - 4:    All I see are carpenters and the lab's security.
+                ~noNPCS=true
         - 5:    Plenty of lab employees mill about, but all of them look too busy to talk to me.
+                ~noNPCS=true
         - 6:    There are hundreds of people stuffed into the library. They're all listening to dozen board members speaking at the front of the room. It would be impossible for me to get a word in. 
                 +Listen in->Election
         - 7:    Jules stands alone in the center of the room with his hands behind his back as he looks at the spines of books on the shelves.
@@ -222,17 +227,24 @@ What should I do?
         - 8:    I see a child sitting at one of the reading desks with their head in their hands. They don't notice me.
                 ~childPresent = true
         - 9:    There's not a soul in sight.
+                ~noNPCS=true
         - 10:   There's not a soul in sight.
+                ~noNPCS=true
         }
         -> NPCS
 
 ===NPCS===
-//Allows the player to talk to NPCs based on who is there at the time
-Who should I talk to? 
+{noNPCS:
+    There is no one to talk to at this time. -> END
+  - else:
+  ~ TOGGLE_SLIDER_INTERACTABLE(false)
+    Who should I talk to? 
     +{julesPresent} [Jules] -> JULES
     +{childPresent} [The Child] -> CHILD
-    + [Don't talk to anyone] I don't need to talk to anyone right now. -> END //library
-    
+    + [Don't talk to anyone]
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
+    -> END
+}
 
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===

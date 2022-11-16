@@ -31,7 +31,7 @@ VAR directorPresent = false */
 
 //Knots Start
 //Time Set for Testing
-//~time=2
+//~time=3
 -> lab
 ===lab===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
@@ -107,6 +107,7 @@ What should I do?
     + [Look for someone to talk to]
         { time:
         - 1:    Many scientists are present, but they look too busy to talk to me.
+                ~noNPCS=true
         - 2:    Many scientists are present, but they look too busy to talk to me.
                 I see the Director in his office.
                 ~directorPresent=true
@@ -122,23 +123,30 @@ What should I do?
         - 5:    Everyone is fixated on the projection of the Director, but I see Jules sitting by himself nearby.
                 ~julesPresent=true
         - 6:    There is no one in the lab, they seem to be elsewhere.
+                ~noNPCS=true
         - 7:    No one here seems willing to talk to me.
+                ~noNPCS=true
         - 8:    I don't see anyone to talk to.
+                ~noNPCS=true
         - 9:    I don't see anyone to talk to and there hasn't been anyone here for awhile.
+                ~noNPCS=true
         - 10:   Everyone who once worked in the lab is long gone.
+                ~noNPCS=true
         }
         -> NPCS
 
 ===NPCS===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
-//Allows the player to talk to NPCs based on who is there at the time
+{noNPCS:
+    There is no one to talk to at this time. -> END
+  - else:
+    ~ TOGGLE_SLIDER_INTERACTABLE(false)
 Who should I talk to? 
     +{julesPresent} [Jules] -> JULES
     +{directorPresent} [The Director] -> DIRECTOR
-    + [Don't talk to anyone] I don't need to talk to anyone right now. 
+    +[Don't talk to anyone]
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
-    -> END //lab
-
+    -> END 
+}
 
 //NPCs and their convos
 ===JULES===
