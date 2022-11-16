@@ -127,17 +127,21 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                     case SPRITE_TAG:
                         string[] spriteStrings = tagValue.Split('_');
                         string spriteName = spriteStrings[0].Trim();
-                        string spriteExpression = spriteStrings[0].Trim() + "_" + spriteStrings[1].Trim();
+                        string spriteExpression = tagValue;
                         SetSprite(spriteName, spriteExpression, playerSprite);
                         break;
                     case NPC_TAG:
+                        Debug.Log("NPC Tag was processed");
                         if(tagValue == "None"){
                             SetSprite("None", "None", NPCSprite);
+                            Debug.Log("None was passed in");
                         }
                         else{
                             string[] NPCspriteStrings = tagValue.Split('_');
                             string NPCspriteName = NPCspriteStrings[0].Trim();
-                            string NPCspriteExpression = NPCspriteStrings[0].Trim() + "_" + NPCspriteStrings[1].Trim();
+                            string NPCspriteExpression = tagValue;
+                            Debug.Log("The sprite chosen was: " + NPCSprite);
+                            Debug.Log("The expression chosen was: " + NPCspriteExpression);
                             SetSprite(NPCspriteName, NPCspriteExpression, NPCSprite);
                         }
                         

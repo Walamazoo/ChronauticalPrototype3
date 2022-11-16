@@ -224,6 +224,7 @@ What should I do?
                 +Listen in->Election
         - 7:    Jules stands alone in the center of the room with his hands behind his back as he looks at the spines of books on the shelves.
                 ~julesPresent = true
+                ~noNPCS = false
         - 8:    I see a child sitting at one of the reading desks with their head in their hands. They don't notice me.
                 ~childPresent = true
         - 9:    There's not a soul in sight.
@@ -250,8 +251,8 @@ What should I do?
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {metJules: -> Questions|-> meetJules}
-#NPC:Jules_Neutral
 =meetJules
+#NPC:Jules_Neutral
 ~metJules=true
 
     #speaker:Alistair
@@ -316,6 +317,7 @@ What should I do?
         "You are too easy to read my friend." -> JULES
 
 =Questions
+#NPC:Jules_Neutral
 #speaker:Jules
 "What can I help you with?"
     + [Why are you here?] ->WhyHere
