@@ -227,6 +227,7 @@ What should I do?
                 ~noNPCS = false
         - 8:    I see a child sitting at one of the reading desks with their head in their hands. They don't notice me.
                 ~childPresent = true
+                ~noNPCS=false
         - 9:    There's not a soul in sight.
                 ~noNPCS=true
         - 10:   There's not a soul in sight.

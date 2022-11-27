@@ -1,6 +1,6 @@
 //Script for location MARKETPLACE
 INCLUDE Globals.ink
-//Time Variable
+//Time Variable for testing
 /* VAR time = 0
 
 //More Variables
@@ -109,31 +109,39 @@ What should I do?
         - 1:    //PLACEHOLDER
                 ~ childPresent = true
                 ~ oldladyPresent = true
+                ~noNPCS=false
         - 2:    //PLACEHOLDERWho is there?
                 ~ julesPresent = true
                 ~ childPresent = true
                 ~ oldladyPresent = true
+                ~noNPCS=false
         - 3:    //PLACEHOLDERWho is there?
                 ~ shopownerPresent = true
                 ~ childPresent = true
                 ~ oldladyPresent = true
+                ~noNPCS=false
         - 4:    //PLACEHOLDERWho is there?
                 ~ shopownerPresent = true
                 ~ oldladyPresent = true
+                ~noNPCS=false
         - 5:    //PLACEHOLDERWho is there?
                 ~ shopownerPresent = true
                 ~ oldladyPresent = true
+                ~noNPCS=false
         - 6:    //PLACEHOLDERWho is there?
                 ~noNPCS=true
         - 7:    //PLACEHOLDERWho is there?
                 ~ shopownerPresent = true
                 ~ childPresent = true
+                ~noNPCS=false
         - 8:    //PLACEHOLDERWho is there?
                 ~ julesPresent = true
                 ~ shopownerPresent = true
                 ~ childPresent = true
+                ~noNPCS=false
         - 9:    //PLACEHOLDERWho is there?
                 ~ julesPresent = true
+                ~noNPCS=false
         - 10:   //PLACEHOLDERWho is there?
                 ~noNPCS=true
         }

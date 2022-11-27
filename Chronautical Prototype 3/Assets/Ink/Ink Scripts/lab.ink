@@ -111,17 +111,21 @@ What should I do?
         - 2:    Many scientists are present, but they look too busy to talk to me.
                 I see the Director in his office.
                 ~directorPresent=true
+                ~noNPCS=false
         - 3:    There are dozens of scientists and judges, but they're too busy proving their worth to speak to me.
                 I see the Director in his office.
                 Jules stands in front of a booth of his own.
                 ~julesPresent=true
                 ~directorPresent=true
+                ~noNPCS=false
         - 4:    There aren't too many people in the lab today, but Jules sits at his work station eating lunch it seems.
                 I see the Director in his office.
                 ~directorPresent=true
                 ~julesPresent=true
+                ~noNPCS=false
         - 5:    Everyone is fixated on the projection of the Director, but I see Jules sitting by himself nearby.
                 ~julesPresent=true
+                ~noNPCS=false
         - 6:    There is no one in the lab, they seem to be elsewhere.
                 ~noNPCS=true
         - 7:    No one here seems willing to talk to me.
