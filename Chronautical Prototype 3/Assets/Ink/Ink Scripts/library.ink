@@ -66,16 +66,19 @@ It was full of what I would become. Dreams of adventure in the stars piercing th
 I was gripped with a frenzy to explore beyond my bubble of libraries and teahouses.
 But, most of all, I dreamed of the star system lost.
 Atlantis.
+//Some sort of change in background here
 
 #sprite:Alistair_Sad
 #speaker:Alistair
 My colleagues are all gone. 
-(The library will be lost.)
-(The planet will be lost.)
-(But perhaps there's still a book I haven't seen.)
+The lab will be lost.
+The planet will be lost.
+(But perhaps there's still a book, a piece of information, I haven't found yet.)
 #sprite:Alistair_Neutral
-(There must be something I'm missing.)
 (All this mustn't end in failure.)
+There are so few tomes left, most have been consumed by fire or thrown to the ground by earthquakes.
+The planet, Elore-Nabyke, will be lost. 
+(But perhaps I can still save it.)
 I throw myself to a bookshelf nearby and yank out tomes. There are so few left. Most have been consumed by fire.
 (Perhaps I haven't tried this yet.)
 
@@ -87,7 +90,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 'There's still time. I can still fix this, I just need to-'
 
 #speaker:D4RL1N6
-"Alistair, it's unwise to ignore me."
+"Alistair, it is unwise to ignore me."
 
 #speaker:Alistair
 "I'm sorry, I'm not- I just need to find this book, I think I remember it saying something about the core."
@@ -96,36 +99,47 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 "The core is gone."
 
 #speaker:Alistair
-"It's not, I know better now, I can find a way to-"
+"It's not, I know better now, I can find a way to revive it-"
 
 #speaker:D4RL1N6
-"This is attempt 37 Alistair. The core is gone. Isn't it clear we can't do anything about the planet's destruction?"
-"The last attempt was too much of a close call."
+"This is attempt number 37 Alistair. The core is gone. Is it not clear we can do nothing regarding the destruction of the planet?"
+"During the last attempt, you right up to the planet's destruction."
+"You barely gave yourself enough time to go back in time again."
 
 #speaker:Alistair
 * [I'm a failure] "If I can't even save this planet, what's the point?"
 * [There must be a way] "There must be something I'm just not thinking of."
 
 #speaker:D4RL1N6
-- "You've done everything you can."
-"I'm sorry, Alistair. You just need to save what's important."
+- "You have done everything you can."
+"I am sorry, Alistair, this quest of yours is futile. You need to save what is important."
 
 #speaker:Alistair
 "..."
 "The vault. I need to get something out of there for him. He'll need it."
+"I can at least save that..."
 The vault shimmers under the immense heat in the library. It's tucked into the back of the room. It's clear even from this distance that touching the handle would burn my skin.
 
 #speaker:D4RL1N6
-"We'll have to return to a time before all this destruction. One year in the past should be sufficient."
+"You will have to use your Astrolade to return to a time before all this destruction." 
+"One year in the past should be sufficient for now."
+"Pull the slider to the year you would like to travel to, then activiate."
+
+#speaker:Alistair
+"Wha-"
+"I know all this, I've done this many times."
+
+#speaker:D4RL1N6
+"My apologies, Alistair, it is part of my programming."
+"Shall we go back in time?"
 
 #speaker:Alistair
 "Perhaps then we can find a way into the vault."
+(Though I doubt it will be as simple as just opening it...)
 
 #speaker:D4RL1N6
 "Precisely."
 #NPC:None
-//This time variable change below is used for testing in Inky and should be commented out when making a build or testing time slider
-//~time = 7
 -> library
     
     
@@ -623,7 +637,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
--> END //library
+-> END
 
 
 
