@@ -488,7 +488,8 @@ What should I do?
 #background:Vault
 The vault is a marvel in of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
-    * [Guess the code] ->DarlingPepTalk
+{seenPepTalk: | ->DarlingPepTalk}
+    //* [Guess the code]
     + [Pry open door] 
         I squeeze my fingers into the door frame and put my foot on the door.
         I lean back and use all my strength to try to pry open the door, but the thing doesn't budge at all.
@@ -519,7 +520,7 @@ In the center, I see a series of numbers: 0-9.
 
 #speaker:Alistair
 "Well, yes, but the code is changed everytime by the Lab Director."
-"They take security very serious here."
+"They take security very seriously here."
 "Unfortunately."
 
 #speaker:D4RL1N6
@@ -530,10 +531,13 @@ In the center, I see a series of numbers: 0-9.
 
 #speaker:D4RL1N6
 "Don't be so melodramatic. We'll find a way. We've got to get your treasure."
+"We may also be able to gather information from exploring this place."
 
 #speaker:Alistair
 "You're right as usual."
 "We'll find a way to get my 'treasure'."
+"If I remember corrently, the Director is usually somewhere in the lab."
+"Jules used to say that he slept in his office, it seemed like the Director never left!"
 #NPC:None
 -> library
 

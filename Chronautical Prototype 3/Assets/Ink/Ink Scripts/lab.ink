@@ -569,6 +569,7 @@ Who should I talk to?
 #speaker:Alistair
 "Jules still works for the lab. We interned together."
 "I left, but he stayed and got a full time job."
+"He did always like the library in this place..."
 "Perhaps he can help since we can't get through to Bennet."
 -> TempEnd
 
