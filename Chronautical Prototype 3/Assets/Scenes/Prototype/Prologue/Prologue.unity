@@ -315,7 +315,7 @@ RectTransform:
   m_Children:
   - {fileID: 253788970}
   m_Father: {fileID: 854182566}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1304,7 +1304,7 @@ RectTransform:
   - {fileID: 1975129699}
   - {fileID: 637257627}
   m_Father: {fileID: 854182566}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3393,7 +3393,7 @@ RectTransform:
   m_Children:
   - {fileID: 1855236049}
   m_Father: {fileID: 854182566}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3797,7 +3797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &731233011
 Transform:
   m_ObjectHideFlags: 0
@@ -3853,7 +3853,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 425a49419ef60b94ab303eae3118824e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4229,6 +4229,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 427082665}
     - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: currentFilter
+      value: 
+      objectReference: {fileID: 731233010}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: conversantActor
       value: 
       objectReference: {fileID: 715661800}
@@ -4241,9 +4245,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 396939293}
     - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: filters.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: inkAssets.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: filters.Array.data[9]
+      value: 
+      objectReference: {fileID: 731233010}
     - target: {fileID: 2269792506013442823, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: inkAssets.Array.data[0]
       value: 
@@ -4388,6 +4400,14 @@ PrefabInstance:
       propertyPath: conversationConversant
       value: 
       objectReference: {fileID: 715661801}
+    - target: {fileID: 3090959788560297440, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -314.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090959788560297440, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 199
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
 --- !u!114 &854182565 stripped

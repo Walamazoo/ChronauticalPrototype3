@@ -31,6 +31,8 @@ public class SliderController : MonoBehaviour
     [SerializeField] Slider slider;
     //FMOD.Studio.EventInstance sliderSFX;
 
+    [SerializeField] GameObject[] filters;
+    public GameObject currentFilter;
     void Awake()
     {
         //foreach(TextAsset txt in inkAssets){
@@ -93,25 +95,24 @@ public class SliderController : MonoBehaviour
                 break;
         }
         sliderTimeDisplay.text = currentYear.ToString();
-        /*
+        
         if(currentFilter != null){
             currentFilter.SetActive(false);
             currentFilter.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
         }
         currentFilter = filters[((int)currentSliderValue)-1];
         currentFilter.SetActive(true);
-        */
+        
     }
 
     public void LaunchNewTime()
     {
         //sliderSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         //FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Time Travel");
-        /*
+        
         if(currentFilter != null){
             currentFilter.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
         }
-        */
         
         currentYearText.text = currentYear.ToString();
 
