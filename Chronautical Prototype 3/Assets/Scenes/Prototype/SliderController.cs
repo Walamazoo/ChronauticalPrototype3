@@ -33,6 +33,8 @@ public class SliderController : MonoBehaviour
 
     [SerializeField] GameObject[] filters;
     public GameObject currentFilter;
+    private bool startingFilter = true;
+
     void Awake()
     {
         //foreach(TextAsset txt in inkAssets){
@@ -96,13 +98,14 @@ public class SliderController : MonoBehaviour
         }
         sliderTimeDisplay.text = currentYear.ToString();
         
-        if(currentFilter != null){
+        if(currentFilter != null && startingFilter == false){
             currentFilter.SetActive(false);
             currentFilter.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
+            Debug.Log("Setting filter to 0.5 opacity");
         }
         currentFilter = filters[((int)currentSliderValue)-1];
         currentFilter.SetActive(true);
-        
+        startingFilter = false;
     }
 
     public void LaunchNewTime()
