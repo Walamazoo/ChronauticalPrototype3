@@ -77,7 +77,7 @@ public class CustomInkFunctions : MonoBehaviour
         GameObject.Find("Variable Storage").GetComponent<FMODUnity.StudioEventEmitter>().Stop();
     }
 
-    public void SetParameter (string parName, float value)
+    public void SetParameter (string parName, int value)
     {
         gameMusic.setParameterByName(parName, value);
     }

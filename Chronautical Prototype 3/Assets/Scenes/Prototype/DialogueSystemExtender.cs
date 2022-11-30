@@ -57,7 +57,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("PLAY_SOUND", (string sound) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlaySound(sound);});
         story.BindExternalFunction("START_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StartEmitter();});
         story.BindExternalFunction("STOP_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopEmitter();});
-        story.BindExternalFunction("SET_PARAMETER", (string parName, float value) => {customInkFunctions.GetComponent<CustomInkFunctions>().SetParameter(parName, value);});
+        story.BindExternalFunction("SET_PARAMETER", (string parName, int value) => {customInkFunctions.GetComponent<CustomInkFunctions>().SetParameter(parName, value);});
         
     }
 
