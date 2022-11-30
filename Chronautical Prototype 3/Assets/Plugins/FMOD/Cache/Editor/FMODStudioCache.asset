@@ -69,10 +69,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638042161875118022
+  lastModified: 638054139948639349
   FileSizes:
   - Name: Desktop
-    Value: 15924992
+    Value: 15925152
   Exists: 1
 --- !u!114 &-1467308558841033203
 MonoBehaviour:
@@ -128,7 +128,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638042161875118022
+  cacheTime: 638054139948639349
   cacheVersion: 131593
 --- !u!114 &966207167690018674
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   Name: PrologueCharacters
   StudioPath: 
   Min: 0
-  Max: 4
+  Max: 5
   Default: 0
   ID:
     data1: 845413677
@@ -158,6 +158,7 @@ MonoBehaviour:
   - Director
   - Shopkeep
   - Temperance
+  - Lady
   Exists: 1
 --- !u!114 &3026598552315329117
 MonoBehaviour:
@@ -223,7 +224,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 13
-  Default: 2
+  Default: 5
   ID:
     data1: 1375732493
     data2: 2781776819
