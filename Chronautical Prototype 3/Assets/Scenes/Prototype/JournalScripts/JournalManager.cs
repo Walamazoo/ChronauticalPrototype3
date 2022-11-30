@@ -49,6 +49,8 @@ public class JournalManager : MonoBehaviour
     private List<JournalObject> currentList;
 
     //[SerializeField] Camera MainCamera;
+    [SerializeField] TimeChanged hand;
+    [SerializeField] GameObject PlanetName;
 
     void Start(){
         //CurrentPage should always start as JournalMain as it's the first page
@@ -88,6 +90,7 @@ public class JournalManager : MonoBehaviour
         //Assigning the currentList that will be shown.
         currentList = JournalList[JournalListPointer];
         //updateTimeline();
+        PlanetName.GetComponent<Text>().text = "PlanetName";
     }
 
     //Method called in other classes in order to traverse the journal pages
@@ -119,6 +122,7 @@ public class JournalManager : MonoBehaviour
     public void OpenAndClose(){
         if(OpenOrClose == 1){
             currentPage.SetActive(true);
+            hand.rotateHand(sliderController.currentYear);
             OpenOrClose += 1;
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(false);
         }
