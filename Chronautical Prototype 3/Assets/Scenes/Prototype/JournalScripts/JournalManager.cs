@@ -32,6 +32,8 @@ public class JournalManager : MonoBehaviour
 
     //Initialization of the List objects that will contain our Timeline Clues, our Items, known People, and known Locations.
     private Dictionary<int, List<TimelineClue>> personClues;
+    private Dictionary<int, List<TimelineClue>> placeClues;
+    private Dictionary<int, List<TimelineClue>> itemClues;
 
     private Dictionary<int, Dictionary<string, List<TimelineClue>>> timelineClues;
     [SerializeField] SliderController sliderController;
@@ -60,20 +62,10 @@ public class JournalManager : MonoBehaviour
 
         //Assigning the lists their values, this will change later when the contents are saved.
         personClues = new Dictionary<int, List<TimelineClue>>();
-        timelineClues = new Dictionary<int, Dictionary<string, List<TimelineClue>>>();
-        //3921 - 3930
-        //Create years with empty dictionaries
-        for(int i = 3921; i <= 3930; i++){
-            Dictionary<string, List<TimelineClue>> tempDict = new Dictionary<string, List<TimelineClue>>();
-            List<TimelineClue> tempList1 = new List<TimelineClue>();
-            List<TimelineClue> tempList2 = new List<TimelineClue>();
-            List<TimelineClue> tempList3 = new List<TimelineClue>();
-
-            tempDict.Add("PersonClues", tempList1);
-            tempDict.Add("PlaceClues", tempList2);
-            tempDict.Add("ItemClues", tempList3);
-            timelineClues.Add(i, tempDict);
-        }
+        placeClues = new Dictionary<int, List<TimelineClue>>();
+        itemClues = new Dictionary<int, List<TimelineClue>>();
+        //timelineClues = new Dictionary<int, Dictionary<string, List<TimelineClue>>>();
+        
         items = new List<JournalObject>();
         people = new List<JournalObject>();
         places = new List<JournalObject>();
@@ -259,13 +251,40 @@ public class JournalManager : MonoBehaviour
 
         switch(type.ToLower()){
             case "personclue":
-                timelineClues[currentYear]["PersonClue"].Add(timelineClue);
+                if(personClues.ContainsKey(currentYear)){
+                    List<TimelineClue> temp = personClues[currentYear];
+                    temp.Add(timelineClue);
+                    personClues[currentYear] = temp;
+                }
+                else{
+                    List<TimelineClue> temp = new List<TimelineClue>();
+                    temp.Add(timelineClue);
+                    personClues.Add(currentYear, temp);
+                }
                 break;
             case "itemclue":
-                timelineClues[currentYear]["ItemClue"].Add(timelineClue);
+                if(itemClues.ContainsKey(currentYear)){
+                    List<TimelineClue> temp = itemClues[currentYear];
+                    temp.Add(timelineClue);
+                    itemClues[currentYear] = temp;
+                }
+                else{
+                    List<TimelineClue> temp = new List<TimelineClue>();
+                    temp.Add(timelineClue);
+                    itemClues.Add(currentYear, temp);
+                }
                 break;
             case "placeclue":
-                timelineClues[currentYear]["PlaceClue"].Add(timelineClue);
+                if(placeClues.ContainsKey(currentYear)){
+                    List<TimelineClue> temp = placeClues[currentYear];
+                    temp.Add(timelineClue);
+                    placeClues[currentYear] = temp;
+                }
+                else{
+                    List<TimelineClue> temp = new List<TimelineClue>();
+                    temp.Add(timelineClue);
+                    placeClues.Add(currentYear, temp);
+                }
                 break;
         }
     }
@@ -280,7 +299,9 @@ public class JournalManager : MonoBehaviour
     //NOT YET FULLY IMPLEMENTED
     //Will be used to format and properly assign the Timeline Page.
     void updateTimeline(string clueType){
-        int count = JournalTimeline.transform.childCount - 1;
+        
+
+        /* int count = JournalTimeline.transform.childCount - 1;
         for(int i = 0; i < timelineClues.Count; i++){
             if(count == i){
                 break;
@@ -290,6 +311,6 @@ public class JournalManager : MonoBehaviour
             //timelineButton.transform.GetChild(2).GetComponent<Text>().text = timelineClues[i].fullDescription;
             //timelineButton.GetComponent<ClueButton>().type = timelineClues[i].type;
             timelineButton.SetActive(true);
-        }
+        } */
     }
 }
