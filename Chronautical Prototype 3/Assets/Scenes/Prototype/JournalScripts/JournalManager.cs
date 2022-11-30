@@ -13,6 +13,7 @@ public class JournalManager : MonoBehaviour
     
     //Current page that the player can see
     public GameObject currentPage;
+    public string currentClues = "PersonClues";
 
     //The object that contains the sprites the Journal uses for Items, places, and people.
     [SerializeField] GameObject JournalSpriteContainer;
@@ -30,7 +31,10 @@ public class JournalManager : MonoBehaviour
     private int OpenOrClose;
 
     //Initialization of the List objects that will contain our Timeline Clues, our Items, known People, and known Locations.
-    private List<JournalObject> timelineClues;
+    private Dictionary<int, List<TimelineClue>> personClues;
+
+    private Dictionary<int, Dictionary<string, List<TimelineClue>>> timelineClues;
+    [SerializeField] SliderController sliderController;
     private List<JournalObject> items;
     private List<JournalObject> people;
     private List<JournalObject> places;
@@ -44,7 +48,7 @@ public class JournalManager : MonoBehaviour
     //The current list the player is looking at.
     private List<JournalObject> currentList;
 
-    [SerializeField] Camera MainCamera;
+    //[SerializeField] Camera MainCamera;
 
     void Start(){
         //CurrentPage should always start as JournalMain as it's the first page
@@ -53,7 +57,21 @@ public class JournalManager : MonoBehaviour
         OpenOrClose = 1;
 
         //Assigning the lists their values, this will change later when the contents are saved.
-        timelineClues = new List<JournalObject>();
+        personClues = new Dictionary<int, List<TimelineClue>>();
+        timelineClues = new Dictionary<int, Dictionary<string, List<TimelineClue>>>();
+        //3921 - 3930
+        //Create years with empty dictionaries
+        for(int i = 3921; i <= 3930; i++){
+            Dictionary<string, List<TimelineClue>> tempDict = new Dictionary<string, List<TimelineClue>>();
+            List<TimelineClue> tempList1 = new List<TimelineClue>();
+            List<TimelineClue> tempList2 = new List<TimelineClue>();
+            List<TimelineClue> tempList3 = new List<TimelineClue>();
+
+            tempDict.Add("PersonClues", tempList1);
+            tempDict.Add("PlaceClues", tempList2);
+            tempDict.Add("ItemClues", tempList3);
+            timelineClues.Add(i, tempDict);
+        }
         items = new List<JournalObject>();
         people = new List<JournalObject>();
         places = new List<JournalObject>();
@@ -88,12 +106,12 @@ public class JournalManager : MonoBehaviour
                 break;
             case 3:
                 currentPage = JournalTimeline;
+                updateTimeline(currentClues);
                 break;
             case 4:
                 currentPage = JournalDialogue;
                 break;
         }
-
         currentPage.SetActive(true);
     }
 
@@ -110,7 +128,6 @@ public class JournalManager : MonoBehaviour
             OpenOrClose += 1;
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(true);
         }
-
         if(OpenOrClose > 2){
             OpenOrClose = 1;
         }
@@ -203,34 +220,13 @@ public class JournalManager : MonoBehaviour
     //fullDescription is a longer description given when the item is selected and being looked at by the player in the journal.
     //image is the associated image of the object, and is not needed for TimelineClues yet.
 
-    //When calling this method in a YarnSpinner: <<createJournalObject JournalManager "name" "type" "hoverDescription" "fullDescription">>
     public void createJournalObject(string name, string type, string hoverDescription, string fullDescription){
         //The method starts by assigning the passed string values to the object's string values.
-        JournalObject journalObject = new JournalObject();
-        journalObject.name = name;
-        journalObject.type = type;
-        journalObject.hoverDescription = hoverDescription;
-        journalObject.fullDescription = fullDescription;
+        JournalObject journalObject = new JournalObject(name, type, hoverDescription, fullDescription);
 
         //Then it goes into different cases based on the object's type.
         //And we set the currentList to be the list added to.
         switch(type.ToLower()){
-            //updateTimeline() is called to update the timeline page based on all the current TimelineClues (NOT YET FULLY IMPLEMENTED)
-            case "personclue":
-                timelineClues.Add(journalObject);
-                currentList = timelineClues;
-                updateTimeline();
-                break;
-            case "itemclue":
-                timelineClues.Add(journalObject);
-                currentList = timelineClues;
-                updateTimeline();
-                break;
-            case "leadclue":
-                timelineClues.Add(journalObject);
-                currentList = timelineClues;
-                updateTimeline();
-                break;
             //giveObjectImage() is called to find the object's related image based on its name. All images are contained in the
             //Journal Sprite Container object, and have to exactly match the passed in JournalObject's name.
             //Then the object is added into the appropriate list.
@@ -253,6 +249,23 @@ public class JournalManager : MonoBehaviour
         UpdateSelected(true);
     }
 
+    public void createTimelineClue(string name, string type, string hoverDescription, string fullDescription){
+        TimelineClue timelineClue = new TimelineClue(name, type, hoverDescription, fullDescription);
+        int currentYear = sliderController.currentYear;
+
+        switch(type.ToLower()){
+            case "personclue":
+                timelineClues[currentYear]["PersonClue"].Add(timelineClue);
+                break;
+            case "itemclue":
+                timelineClues[currentYear]["ItemClue"].Add(timelineClue);
+                break;
+            case "placeclue":
+                timelineClues[currentYear]["PlaceClue"].Add(timelineClue);
+                break;
+        }
+    }
+
     //Grabs and stores the GameObject that matches the passed in JournalObject's name.
     //Assign the journalObject's image to the GameObject's sprite.
     void giveObjectImage(JournalObject journalObject){
@@ -262,16 +275,16 @@ public class JournalManager : MonoBehaviour
 
     //NOT YET FULLY IMPLEMENTED
     //Will be used to format and properly assign the Timeline Page.
-    void updateTimeline(){
+    void updateTimeline(string clueType){
         int count = JournalTimeline.transform.childCount - 1;
         for(int i = 0; i < timelineClues.Count; i++){
             if(count == i){
                 break;
             }
             GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
-            timelineButton.transform.GetChild(0).GetComponent<Text>().text = timelineClues[i].hoverDescription;
-            timelineButton.transform.GetChild(2).GetComponent<Text>().text = timelineClues[i].fullDescription;
-            timelineButton.GetComponent<ClueButton>().type = timelineClues[i].type;
+            //timelineButton.transform.GetChild(0).GetComponent<Text>().text = timelineClues[currentYear][clueType].hoverDescription;
+            //timelineButton.transform.GetChild(2).GetComponent<Text>().text = timelineClues[i].fullDescription;
+            //timelineButton.GetComponent<ClueButton>().type = timelineClues[i].type;
             timelineButton.SetActive(true);
         }
     }

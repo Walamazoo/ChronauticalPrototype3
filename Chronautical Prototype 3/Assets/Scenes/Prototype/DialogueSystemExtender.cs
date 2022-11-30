@@ -11,7 +11,6 @@ using System.IO;
 
 public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
-    private int storedNumber;
     [SerializeField] private InkFile globalsInkFile;
     [SerializeField] GameObject button;
     [SerializeField] JournalManager JournalManager;
@@ -30,9 +29,6 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     private const string SPRITE_TAG = "sprite";
     private const string NPC_TAG = "NPC";
 
-    private Dictionary<string, bool> inkBoolStorage = new Dictionary<string, bool>();
-    public Dictionary<string, int> inkIntStorage = new Dictionary<string, int>();
-
     public Dictionary<string, Ink.Runtime.Object> inkVariableStorage = new Dictionary<string, Ink.Runtime.Object>();
 
     protected override void Awake()
@@ -45,27 +41,6 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     {
         base.BindExternalFunctions(story);
 
-        /* story.BindExternalFunction("STORE_VALUE", (string key) => {inkVariableStorage[key] = story.variablesState.GetVariableWithName(key);});
-        story.BindExternalFunction("SET_VALUES", () => {foreach (string name in story.variablesState)
-        {
-            if(inkVariableStorage.ContainsKey(name)){
-                story.variablesState[name] = inkVariableStorage[name];
-            }
-            else{
-                inkVariableStorage.Add(name, story.variablesState.GetVariableWithName(name));
-            }
-        }
-        }); */
-
-        story.BindExternalFunction("STORE_NUMBER", (string number_key, int stored_number) => {inkIntStorage[number_key] = stored_number;});
-        story.BindExternalFunction("GET_NUMBER", (string number_key) => {
-            if(inkIntStorage.ContainsKey(number_key)){
-                return inkIntStorage[number_key];
-            }
-            return 0;
-            });
-        story.BindExternalFunction("STORE_BOOL", (string bool_key, bool stored_bool) => {inkBoolStorage[bool_key] = stored_bool;});
-        story.BindExternalFunction("GET_BOOL", (string bool_key) => {return inkBoolStorage[bool_key];});
         story.BindExternalFunction("SHOW_BUTTON", () => {button.SetActive(true);});
         story.BindExternalFunction("BUTTON_GONE", () => {button.SetActive(false);});
         story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
@@ -131,20 +106,15 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                         SetSprite(spriteName, spriteExpression, playerSprite);
                         break;
                     case NPC_TAG:
-                        Debug.Log("NPC Tag was processed");
                         if(tagValue == "None"){
                             SetSprite("None", "None", NPCSprite);
-                            Debug.Log("None was passed in");
                         }
                         else{
                             string[] NPCspriteStrings = tagValue.Split('_');
                             string NPCspriteName = NPCspriteStrings[0].Trim();
                             string NPCspriteExpression = tagValue;
-                            Debug.Log("The sprite chosen was: " + NPCSprite);
-                            Debug.Log("The expression chosen was: " + NPCspriteExpression);
                             SetSprite(NPCspriteName, NPCspriteExpression, NPCSprite);
                         }
-                        
                         break;
                     default:
                         Debug.Log("Tag came in but is not currently being handeled: " + tag);
@@ -185,26 +155,12 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         base.OnVariableChange(variableName, newValue);
     }
 
-    protected override void OnConversationStart(Transform actorTransform)
-    {
-        for (int i = 0; i < inkJSONAssets.Count; i++)
-            {
-                if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted))
-                {
-                    var activeStory = stories[i];
-                    //variablesToStory(activeStory);
-                }
-            }
-        base.OnConversationStart(actorTransform);
-    }
-
     protected override void OnConversationEnd(Transform actor)
     {
         base.OnConversationEnd(actor);
         for (int i = 0; i < inkJSONAssets.Count; i++)
             {
                 var activeStory = stories[i];
-                //variablesToStory(activeStory);
                 customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
             }
         
