@@ -122,17 +122,6 @@ public class SliderController : MonoBehaviour
         DialogueSystemInkIntegration.SetInkNumber("CurrentSliderValue", currentSliderValue);
         DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
-        /*
-        foreach(Story script in stories){
-            if(script.currentFlowName.Equals(currentLocation)){
-                script.variablesState["time"] = (double)currentYear;
-            }
-        }
-        */
-        //DialogueSystemInkIntegration.SetInkNumber("time", currentSliderValue);
         extender.setTime((int)currentSliderValue);
-
-        //DialogueSystemInkIntegration.SetConversationStartingPoint(currentLocation);
-        //DialogueManager.StartConversation(currentLocation);
     }
 }

@@ -59,7 +59,7 @@ VAR oldladyPresent = false */
 ~ time = 10
 ~ seenBeginning = true
 #background:Library_Interior
-~SET_PARAMETER("PrologueAmbience", 5)
+//~SET_PARAMETER("PrologueAmbience", 5)
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
 It was full of what I would become. Dreams of adventure in the stars piercing through the dark.
