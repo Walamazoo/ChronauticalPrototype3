@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8556865452360232224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Outdated/SFX/Prologue/Darling beep
-  m_EditorClassIdentifier: 
-  Path: event:/Outdated/SFX/Prologue/Darling beep
-  Guid:
-    Data1: -1901386215
-    Data2: 1263231704
-    Data3: -60204133
-    Data4: 164232114
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &-5935247931202218225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +42,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638052632732847788
+  lastModified: 638056080556147440
   FileSizes:
   - Name: Desktop
-    Value: 15925152
+    Value: 15998464
   Exists: 1
 --- !u!114 &-1467308558841033203
 MonoBehaviour:
@@ -102,6 +75,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 104777
+--- !u!114 &-583094999767283726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Time Travel
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/UI/Time Travel
+  Guid:
+    Data1: 2130411753
+    Data2: 1113764614
+    Data3: 457073548
+    Data4: 1211333345
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2667
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,18 +118,47 @@ MonoBehaviour:
   - {fileID: 7704761900061420789}
   - {fileID: -3183584489734680474}
   EditorEvents:
-  - {fileID: -8556865452360232224}
   - {fileID: 8195735315995706889}
   - {fileID: -5935247931202218225}
   - {fileID: 3026598552315329117}
   - {fileID: -1467308558841033203}
+  - {fileID: 367484350054005465}
+  - {fileID: 4493133430364958290}
+  - {fileID: -583094999767283726}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638052632732847788
+  cacheTime: 638056080556251914
   cacheVersion: 131593
+--- !u!114 &367484350054005465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/Prologue/Darling beep
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/Prologue/Darling beep
+  Guid:
+    Data1: -1901386215
+    Data2: 1263231704
+    Data3: -60204133
+    Data4: 164232114
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &966207167690018674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +217,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 920000
+--- !u!114 &4493133430364958290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/Prologue/code input
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/Prologue/code input
+  Guid:
+    Data1: -195933128
+    Data2: 1322835422
+    Data3: -1237777499
+    Data4: 1250831785
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3389
 --- !u!114 &7704761900061420789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,10 +259,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638037234593922704
+  lastModified: 638056080556251914
   FileSizes:
   - Name: Desktop
-    Value: 1210
+    Value: 1322
   Exists: 1
 --- !u!114 &7821536103994051125
 MonoBehaviour:
