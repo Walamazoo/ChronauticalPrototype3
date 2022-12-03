@@ -51,8 +51,6 @@ VAR oldladyPresent = false */
 
 //Knots start
 ===beginning===
-//~PLAY_MUSIC("event:/Music/Prologue Music")
-//~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~PLAY_MUSIC("event:/Music/Prologue Music")
 ~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
@@ -70,6 +68,7 @@ Atlantis.
 
 #sprite:Alistair_Sad
 #speaker:Alistair
+//Shannon 
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
@@ -85,6 +84,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
 "Alistair."
+//Shannon
 
 #speaker:Alistair
 'There's still time. I can still fix this, I just need to-'
@@ -97,6 +97,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 #speaker:D4RL1N6
 "The core is gone."
+//Shannon
 
 #speaker:Alistair
 "It's not, I know better now, I can find a way to revive it-"
@@ -121,9 +122,10 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 The vault shimmers under the immense heat in the library. It's tucked into the back of the room. It's clear even from this distance that touching the handle would burn my skin.
 
 #speaker:D4RL1N6
-"You will have to use your Astrolade to return to a time before all this destruction." 
+"You will have to use your Astrolabe to return to a time before all this destruction." 
 "One year in the past should be sufficient for now."
 "Pull the slider to the year you would like to travel to, then activiate."
+//Shannon
 
 #speaker:Alistair
 "Wha-"
@@ -131,6 +133,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "My apologies, Alistair, it is part of my programming."
+//Shannon
 "Shall we go back in time?"
 
 #speaker:Alistair
@@ -517,6 +520,7 @@ In the center, I see a series of numbers: 0-9.
 #speaker:D4RL1N6
 #NPC:Darling_Neutral
 "Did you see what the code was?"
+//Shannon
 
 #speaker:Alistair
 "Well, yes, but the code is changed everytime by the Lab Director."
@@ -531,6 +535,7 @@ In the center, I see a series of numbers: 0-9.
 
 #speaker:D4RL1N6
 "Don't be so melodramatic. We'll find a way. We've got to get your treasure."
+//Shannon
 "We may also be able to gather information from exploring this place."
 
 #speaker:Alistair
@@ -620,8 +625,9 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =OldLadyMono
         #speaker:Storyteller
         #NPC:Storyteller_Neutral
-        ~SET_PARAMETER("PrologueCharacters", 5)
+        ~SET_PARAMETER("PrologueCharacters", 5) //Shannon wrong parameter, change to hushed
         As the Old Lady steps up to speak, I hear the crowd sigh and groan.
+        //Shannon
         A few board members shake their heads and cast their eyes downward.
         "Yes!"
         "Yes, you all complain and sqwauk because you know you are about to hear everything you wish not to accept as truth!"
@@ -632,6 +638,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
         "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crashendo.
+        //Shannon change parameter back to loud
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 #speaker:Lab Director
 #NPC:Labhead_Neutral
@@ -639,6 +646,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 "I will have order!"
 #speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
+//Shannon change parameter back to hushed
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> END
@@ -647,4 +655,5 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 
 ===Ending===
 //placeholder for ending
+//Shannon input code sound
 -> DONE
