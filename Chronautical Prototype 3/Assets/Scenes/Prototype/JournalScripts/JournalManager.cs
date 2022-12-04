@@ -171,6 +171,7 @@ public class JournalManager : MonoBehaviour
             clickphoto.SetActive(true);
             fulldescription.GetComponent<Text>().text = currentList[JournalItemPointer].fullDescription;
             fulldescription.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Page turn"); //might remove later
         }
     }
 
