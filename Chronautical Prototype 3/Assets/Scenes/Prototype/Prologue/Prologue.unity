@@ -1783,6 +1783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JournalManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1401804728882083467, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1401804729103699689, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_SizeDelta.x
       value: 40.104

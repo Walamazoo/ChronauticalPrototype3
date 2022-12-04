@@ -123,5 +123,6 @@ public class SliderController : MonoBehaviour
         DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
         extender.setTime((int)currentSliderValue);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Time Travel");
     }
 }
