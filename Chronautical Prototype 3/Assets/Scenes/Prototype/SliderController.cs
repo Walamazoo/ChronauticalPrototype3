@@ -111,7 +111,7 @@ public class SliderController : MonoBehaviour
     public void LaunchNewTime()
     {
         //sliderSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Time Travel");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Time Travel");
         
         if(currentFilter != null){
             currentFilter.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);

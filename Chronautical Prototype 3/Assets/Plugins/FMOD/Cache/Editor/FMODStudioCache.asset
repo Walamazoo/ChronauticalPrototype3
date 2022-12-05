@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7603327635597123483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/Prologue/reflective shift
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/Prologue/reflective shift
+  Guid:
+    Data1: -1630360255
+    Data2: 1136985162
+    Data3: -1824825958
+    Data4: -1493386206
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 937
+--- !u!114 &-7225403086643334048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Journal open
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/UI/Journal open
+  Guid:
+    Data1: -1383792300
+    Data2: 1095533105
+    Data3: -1048589433
+    Data4: 550350651
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1436
 --- !u!114 &-5935247931202218225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 236382
+--- !u!114 &-4060859045522867955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Journal close
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/UI/Journal close
+  Guid:
+    Data1: -1645328797
+    Data2: 1253406422
+    Data3: -164555361
+    Data4: 2121742849
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1018
 --- !u!114 &-3183584489734680474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +123,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638056080556147440
+  lastModified: 638057817336494589
   FileSizes:
   - Name: Desktop
-    Value: 15998464
+    Value: 16166272
   Exists: 1
 --- !u!114 &-1467308558841033203
 MonoBehaviour:
@@ -102,6 +183,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2667
+--- !u!114 &-111928886858579606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/Prologue/Door open
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/Prologue/Door open
+  Guid:
+    Data1: -532202463
+    Data2: 1110486949
+    Data3: 740028584
+    Data4: -1138579331
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5525
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,14 +231,19 @@ MonoBehaviour:
   - {fileID: 3026598552315329117}
   - {fileID: -1467308558841033203}
   - {fileID: 367484350054005465}
-  - {fileID: 4493133430364958290}
   - {fileID: -583094999767283726}
+  - {fileID: -7225403086643334048}
+  - {fileID: 7944462920051755570}
+  - {fileID: -4060859045522867955}
+  - {fileID: 4896296810924624196}
+  - {fileID: -111928886858579606}
+  - {fileID: -7603327635597123483}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638056080556251914
+  cacheTime: 638057817336541176
   cacheVersion: 131593
 --- !u!114 &367484350054005465
 MonoBehaviour:
@@ -217,7 +330,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 920000
---- !u!114 &4493133430364958290
+--- !u!114 &4896296810924624196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,14 +340,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/Prologue/code input
+  m_Name: event:/Sound/SFX/UI/Page turn
   m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/Prologue/code input
+  Path: event:/Sound/SFX/UI/Page turn
   Guid:
-    Data1: -195933128
-    Data2: 1322835422
-    Data3: -1237777499
-    Data4: 1250831785
+    Data1: -1392620845
+    Data2: 1241347868
+    Data3: -1089270085
+    Data4: 313556425
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 0
@@ -243,7 +356,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3389
+  Length: 100
 --- !u!114 &7704761900061420789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,10 +372,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638056080556251914
+  lastModified: 638057817336541176
   FileSizes:
   - Name: Desktop
-    Value: 1322
+    Value: 1566
   Exists: 1
 --- !u!114 &7821536103994051125
 MonoBehaviour:
@@ -302,6 +415,33 @@ MonoBehaviour:
   - MarketPanic
   - MarketEmpty
   Exists: 1
+--- !u!114 &7944462920051755570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Button Click
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/UI/Button Click
+  Guid:
+    Data1: -168136577
+    Data2: 1226581657
+    Data3: -93213823
+    Data4: -1474727112
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 434
 --- !u!114 &8195735315995706889
 MonoBehaviour:
   m_ObjectHideFlags: 0

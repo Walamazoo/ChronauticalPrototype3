@@ -117,15 +117,18 @@ public class JournalManager : MonoBehaviour
             hand.rotateHand(sliderController.currentYear);
             OpenOrClose += 1;
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(false);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
         else{
             GoToPage(1);
             currentPage.SetActive(false);
             OpenOrClose += 1;
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
         if(OpenOrClose > 2){
             OpenOrClose = 1;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal close");
         }
     }
 
@@ -168,6 +171,7 @@ public class JournalManager : MonoBehaviour
             clickphoto.SetActive(true);
             fulldescription.GetComponent<Text>().text = currentList[JournalItemPointer].fullDescription;
             fulldescription.SetActive(true);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Page turn"); //might remove later
         }
     }
 
