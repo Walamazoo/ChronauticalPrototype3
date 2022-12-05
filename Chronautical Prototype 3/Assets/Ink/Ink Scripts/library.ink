@@ -561,14 +561,14 @@ He crosses his arms and just stands there.
                         "I heard you..." #speaker:Guard
                         "Oh! Apologies..." #speaker:Alistair
                         ~ TOGGLE_SLIDER_INTERACTABLE(true)
-                        (He's not very talkative is he...)-> END //library
+                        (He's not very talkative is he...)-> END
                     ++[Nevermind] I just smile and turn on my heel.
                                     ~ TOGGLE_SLIDER_INTERACTABLE(true)
-                                    (Maybe I'll look elsewhere.) -> END //library
+                                    (Maybe I'll look elsewhere.) -> END 
 
     + [Nevermind] I just smile and turn on my heel. 
                 ~ TOGGLE_SLIDER_INTERACTABLE(true)
-                (Maybe I'll look elsewhere.) -> END //library
+                (Maybe I'll look elsewhere.) -> END 
 
 //More interactions can be added here if/when we add options to try to break into the vault
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -646,6 +646,17 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 "I will have order!"
 #speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
+{julesRun:
+    #speaker:D4RL1N6
+    "There seems to be much unrest here."
+    "Perhaps if there were a new director, these people would find peace..."
+    
+    #speaker:Alistair
+    "And perhaps we could have a friend in a high place, to access the vault."
+  - else:
+    
+}
+
 //Shannon change parameter back to hushed
 //PLACEHOLDER, if statement for if the player has asked Jules for help, Darling appears and suggests that perhaps Jules could run, a better fit and could help us when he has more power
 //PLACEHOLDER, Jules speech knot v1 (with one word change)

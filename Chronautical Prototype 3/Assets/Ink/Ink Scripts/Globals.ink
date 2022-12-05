@@ -18,6 +18,7 @@ VAR seenPepTalk = false
 //Placeholder: VARIABLES FOR THE SIDE QUEST STUFF
 VAR julesDirector = false
 VAR hasCode = false
+VAR julesRun = false
 
 //NPC Variables
 VAR julesPresent = false
