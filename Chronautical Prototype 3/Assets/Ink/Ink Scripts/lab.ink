@@ -400,11 +400,48 @@ Who should I talk to?
 -> DONE
 
 =runfordirector
-//Suggest to Jules that he should run for director roll, he'd be a good fit, Bennet is stuffy, old timey
-//Jules questions Alistair, just trust me 
-//He'll think about it (he does)
-//Darling prompts player to go forward in time and see the result of their actions
-//Has more content related to the election (speech changes etc) (more dialogue)
+#speaker:Alistair
+"Jules, how often does the Director election process take place?"
+
+#speaker:Jules
+"That's a strange question coming from you, Alistair!"
+"Why, every five years the Director's role is discussed and put up for debate. Sometimes a new one is appointed."
+"But..."
+"Bennet has been Director for quite awhile."
+"No one has tried to oppose him."
+
+#speaker:Alistair
+"Don't you think someone should?"
+
+#speaker:Jules
+"Well..."
+"Yes, it would be healthy for the lab to have some change in leadership."
+"Bennet is quite stuck in his ways. Just focused on keeping things as they are, a steady course neither up nor down."
+
+#speaker:Alistair
+"I think you should run against Bennet."
+
+#speaker:Jules
+"What-"
+"Alistair!"
+"I cannot run up against Bennet, I am much, much younger- I lack experience..."
+
+#speaker:Alistair
+"But you said so yourself that the lab needs some change in leadership."
+"I'm sure you're not the only one with that sentiment."
+
+#speaker:Jules
+"Perhaps so- but..."
+"Ahh... it is unlikely I would win. Even if the council does want Bennet gone."
+
+#speaker:Alistair
+"But what's the harm in trying? The election is still quite far away."
+
+#speaker:Jules
+"... Perhaps, I will think about it."
+"But I do doubt I would have much success."
+"That is quite far away, I'll think about it again once the time is nearer."
+//Maybe have Darling prompt player to go see the results?
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
@@ -417,10 +454,13 @@ Who should I talk to?
 =fumbleword
 //PLACEHOLDER Jules fumbles on a hard one in his speech and if player as seen it, help Jules practice that word A LOT (ONLY TIME 5)
 //Create variable for fumble word
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
 
 =speechpeptalk
 //PLACEHOLDER Alistair gives Jules a pep talk to help him get prepared for the election, boost his confidence
-
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
 
 ===DIRECTOR===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
@@ -476,8 +516,7 @@ Who should I talk to?
     "I have much work to attend to."
 #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
--> END //lab
-
+-> END
 
 =Questions
 #speaker:Director 
