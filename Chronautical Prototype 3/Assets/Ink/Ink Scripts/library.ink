@@ -68,7 +68,7 @@ Atlantis.
 
 #sprite:Alistair_Sad
 #speaker:Alistair
-//Shannon 
+//Shannon ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
@@ -84,7 +84,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
 "Alistair."
-//Shannon
+//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 
 #speaker:Alistair
 'There's still time. I can still fix this, I just need to-'
@@ -97,7 +97,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 #speaker:D4RL1N6
 "The core is gone."
-//Shannon
+//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 
 #speaker:Alistair
 "It's not, I know better now, I can find a way to revive it-"
@@ -133,7 +133,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "My apologies, Alistair, it is part of my programming."
-//Shannon
+//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "Shall we go back in time?"
 
 #speaker:Alistair
@@ -520,7 +520,7 @@ In the center, I see a series of numbers: 0-9.
 #speaker:D4RL1N6
 #NPC:Darling_Neutral
 "Did you see what the code was?"
-//Shannon
+//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 
 #speaker:Alistair
 "Well, yes, but the code is changed everytime by the Lab Director."
@@ -535,7 +535,7 @@ In the center, I see a series of numbers: 0-9.
 
 #speaker:D4RL1N6
 "Don't be so melodramatic. We'll find a way. We've got to get your treasure."
-//Shannon
+//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "We may also be able to gather information from exploring this place."
 
 #speaker:Alistair
@@ -627,7 +627,6 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         #NPC:Storyteller_Neutral
         ~SET_PARAMETER("PrologueCharacters", 5) //Shannon wrong parameter, change to hushed
         As the Old Lady steps up to speak, I hear the crowd sigh and groan.
-        //Shannon
         A few board members shake their heads and cast their eyes downward.
         "Yes!"
         "Yes, you all complain and sqwauk because you know you are about to hear everything you wish not to accept as truth!"
@@ -655,5 +654,5 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 
 ===Ending===
 //placeholder for ending
-//Shannon input code sound
+//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Door open")
 -> DONE
