@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TimeChanged : MonoBehaviour
 {
-    RectTransform rectTransform;
+    [SerializeField] RectTransform rectTransform;
     
     // Start is called before the first frame update
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
+
     }
 
     // Update is called once per frame

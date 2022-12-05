@@ -42,6 +42,8 @@ EXTERNAL PLAY_MUSIC(music)
 EXTERNAL PLAY_AMBIENCE(ambience)
 EXTERNAL SET_PARAMETER(parName, value)
 
+EXTERNAL CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription)
+
 
 === function TOGGLE_SLIDER(state) ===
     ~return state
@@ -54,3 +56,5 @@ EXTERNAL SET_PARAMETER(parName, value)
 === function SET_PARAMETER(parName, value) ===
     ~return parName
     ~return value
+=== function CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription) ===
+    ~return name

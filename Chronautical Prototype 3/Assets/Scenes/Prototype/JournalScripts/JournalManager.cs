@@ -83,6 +83,8 @@ public class JournalManager : MonoBehaviour
         currentList = JournalList[JournalListPointer];
         //updateTimeline();
         PlanetName.GetComponent<Text>().text = "PlanetName";
+
+        updateTimeline("Person");
     }
 
     //Method called in other classes in order to traverse the journal pages
@@ -116,6 +118,7 @@ public class JournalManager : MonoBehaviour
             currentPage.SetActive(true);
             hand.rotateHand(sliderController.currentYear);
             OpenOrClose += 1;
+            updateTimeline("Person");
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(false);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
@@ -250,6 +253,7 @@ public class JournalManager : MonoBehaviour
     }
 
     public void createTimelineClue(string name, string type, string hoverDescription, string fullDescription){
+        Debug.Log("I have been called");
         TimelineClue timelineClue = new TimelineClue(name, type, hoverDescription, fullDescription);
         int currentYear = sliderController.currentYear;
 
@@ -264,6 +268,7 @@ public class JournalManager : MonoBehaviour
                     List<TimelineClue> temp = new List<TimelineClue>();
                     temp.Add(timelineClue);
                     personClues.Add(currentYear, temp);
+                    Debug.Log(personClues[currentYear]);
                 }
                 break;
             case "itemclue":
@@ -303,18 +308,60 @@ public class JournalManager : MonoBehaviour
     //NOT YET FULLY IMPLEMENTED
     //Will be used to format and properly assign the Timeline Page.
     void updateTimeline(string clueType){
-        
+        int count = JournalTimeline.transform.childCount - 1;
 
-        /* int count = JournalTimeline.transform.childCount - 1;
-        for(int i = 0; i < timelineClues.Count; i++){
-            if(count == i){
+        switch(clueType){
+            case "Person":
+                foreach(int variable in personClues.Keys){
+                    List<TimelineClue> tempList = personClues[variable];
+
+                    for(int i = 0; i < tempList.Count; i++){
+                        if(count == i){
+                            break;
+                        }
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
+                        timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
+                        timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
+                        timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
+                        timelineButton.GetComponent<ClueButton>().type = "PersonClue";
+                        timelineButton.SetActive(true);
+                    }  
+                }
                 break;
-            }
-            GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
-            //timelineButton.transform.GetChild(0).GetComponent<Text>().text = timelineClues[currentYear][clueType].hoverDescription;
-            //timelineButton.transform.GetChild(2).GetComponent<Text>().text = timelineClues[i].fullDescription;
-            //timelineButton.GetComponent<ClueButton>().type = timelineClues[i].type;
-            timelineButton.SetActive(true);
-        } */
+            case "Place":
+                foreach(int variable in placeClues.Keys){
+                    List<TimelineClue> tempList = placeClues[variable];
+
+                    for(int i = 0; i < tempList.Count; i++){
+                        if(count == i){
+                            break;
+                        }
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
+                        timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
+                        timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
+                        timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
+                        timelineButton.GetComponent<ClueButton>().type = "PlaceClue";
+                        timelineButton.SetActive(true);
+                    }  
+                }
+                break;
+            case "Item":
+                foreach(int variable in itemClues.Keys){
+                    List<TimelineClue> tempList = itemClues[variable];
+
+                    for(int i = 0; i < tempList.Count; i++){
+                        if(count == i){
+                            break;
+                        }
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
+                        timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
+                        timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
+                        timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
+                        timelineButton.GetComponent<ClueButton>().type = "ItemClue";
+                        timelineButton.SetActive(true);
+                    }  
+                }
+                break;
+        }
     }
 }

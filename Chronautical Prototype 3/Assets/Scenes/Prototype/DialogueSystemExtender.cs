@@ -45,6 +45,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("BUTTON_GONE", () => {button.SetActive(false);});
         story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
                                                             {JournalManager.createJournalObject(name, type, hoverDescription, fullDescription);});
+        story.BindExternalFunction("CREATE_TIMELINE_CLUE", (string name, string type, string hoverDescription, string fullDescription) =>
+                                                            {JournalManager.createTimelineClue(name, type, hoverDescription, fullDescription);});
         story.BindExternalFunction("TOGGLE_SLIDER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(state);});
         story.BindExternalFunction("TOGGLE_SLIDER_INTERACTABLE", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(state);});
 
@@ -72,6 +74,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             story.UnbindExternalFunction("BUTTON_GONE");
             story.UnbindExternalFunction("TOGGLE_SLIDER");
             story.UnbindExternalFunction("TOGGLE_SLIDER_INTERACTABLE");
+            story.UnbindExternalFunction("CREATE_JOURNAL_OBJECT");
+            story.UnbindExternalFunction("CREATE_TIMELINE_CLUE");
 
             story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
             story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
