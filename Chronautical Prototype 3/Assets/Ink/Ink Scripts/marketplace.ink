@@ -99,7 +99,7 @@ What should I do?
         - 7:    The people in the market are bubbling with hushed chatter and gossip. 
         - 8:    The marketplace is full of random and seemingly useless items. Clothes, trinkets, junk, books, pens, and all sorts of furniture.
         - 9:    Atmos vessals rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
-        - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walk ways. The stench of smoke fills the market and some stalls even collapse as the planet shutters violently.
+        - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market and some stalls. Some shops crumble as the planet shutters violently.
         }
         -> END //marketplace
         ~ TOGGLE_SLIDER_INTERACTABLE(true)

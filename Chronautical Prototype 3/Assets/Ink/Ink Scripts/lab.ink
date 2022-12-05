@@ -312,7 +312,7 @@ Who should I talk to?
 #speaker:Jules
 "Yes..."
 "It's very disturbing news."
-"The core can no longer sustain itself, it's only a matter of time till it is destroyed and the planet with it."
+"The core can no longer sustain itself, it's only a matter of time 'till it is destroyed and the planet with it."
 
 #speaker:Alistair
 #sprite:Alistair_Sad
