@@ -49,9 +49,6 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                                                             {JournalManager.createTimelineClue(name, type, hoverDescription, fullDescription);});
         story.BindExternalFunction("TOGGLE_SLIDER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(state);});
         story.BindExternalFunction("TOGGLE_SLIDER_INTERACTABLE", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(state);});
-
-
-
         
         story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
         story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
@@ -128,9 +125,9 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     }
 
     private void initializeVariables(){
-        string filePath = globalsInkFile.filePath;
-        string inkFileContents = File.ReadAllText(filePath);
-        Ink.Compiler compiler = new Ink.Compiler(inkFileContents);
+        //string filePath = globalsInkFile.filePath;
+        //string inkFileContents = File.ReadAllText(filePath);
+        Ink.Compiler compiler = new Ink.Compiler(globalsInkFile.GetFileContents());
         Story globalVariablesStory = compiler.Compile();
 
         foreach(string name in globalVariablesStory.variablesState){
