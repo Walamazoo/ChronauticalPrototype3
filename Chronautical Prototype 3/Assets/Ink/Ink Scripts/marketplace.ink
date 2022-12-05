@@ -325,8 +325,8 @@ Who should I talk to?
     (Ah... That's right, it does seem strange. Hm.)
     + [Private ship]
         #speaker:Alistair
-        "I actualy have my own vessel. It's parked not too far from here."
-        "The... Solar Wind. A fine ship."
+        "I actually... acquired my own vessel. It's parked not too far from here."
+        "The Solar Winds. A fine ship."
     + [Still have unfinished buisiness]
         #speaker:Alistair
         "I... Stil have a bit of business here. I can't leave quite yet."
@@ -519,7 +519,6 @@ Who should I talk to?
 #speaker:Miriam
 "Hah! As if they could handle it."
 "Mark my words, grand things are coming. Grand things..."
-
 -> Questions
 
 =Crowd
