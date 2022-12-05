@@ -232,14 +232,14 @@ Who should I talk to?
     + {time == 3} [Booths?] ->fair
     + {time == 4} [What's new?] ->wedding
     + {time == 5} [Announcement?] ->disaster
-    //+ {Has seen open vault convo}
-    //+ {Has seen election knot}
+    //+ {Hasdonevaulttalk} [Help with vault?] ->vault
+    //+ {hasseenelection} [Election] ->runfordirector
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
     #NPC:None 
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        -> DONE //lab
+        -> DONE
 
 =fair
 #speaker:Alistair
@@ -259,7 +259,7 @@ Who should I talk to?
 "Of course!"
 "Though I'm afriad it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
-//WACKY ASS PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
+//WACKY PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
   #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
@@ -327,16 +327,87 @@ Who should I talk to?
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
+=vault
+#speaker:Alistair
+"Jules, I was hoping to ask you something about the labratory's vault..."
 
-//HelpOpenVaultConvo
-//Ask for help to get into vault, says no, not going to help break into it
-//We have bigger issues at hand, planet exploding
-//Darling pops in, says there must be a way, keep searching
+#speaker:Jules
+"The vault?"
 
-//Has seen election
-//Return to Jules and suggest him that he run for director, respected and such (only works in certain times)
-//Sees election did not help, have some minor election knot changes
-//Darling plants idea to help Jules to get elected
+#speaker:Alistair
+"Yes, you see..."
+"I need something from the vault. I forgot something inside."
+
+#speaker:Jules
+"You forgot something?"
+"Well, you'll have to talk to Bennet about that."
+"I can't open the vault!"
+
+#speaker:Alistair
+"The thing is, I did talk to him."
+"He's completely uninterested in helping me."
+"I only need what I left behind, he spoke as if I were planning a heist!"
+
+#speaker:Jules
+"Bennet is a stickler for rules."
+
+#speaker:Alistair
+"So, I wanted to ask if you wanted to help me get into the vault."
+
+#speaker:Jules
+"Help you...?"
+"Alistair, now you sound like you really are planning a heist."
+
+#speaker:Alistair
+"All I need is what's mine."
+
+#speaker:Jules
+"Alistair, only the Director can open the vault."
+"Bennet has a device in his office to open the vault, a key."
+"But, please, do not consider stealing it."
+
+#speaker:Alistair
+"I... wasn't thinking that."
+
+#speaker:Jules
+"Good."
+"Only the Director can open the vault, Alistair."
+"But perhaps there is some paperwork you can fill out to get your belongings back."
+
+#speaker:Alistair
+"And get stuck in bureaucratic hell..."
+
+#speaker:Jules
+"Oh Alistair."
+"I am sorry, I wish I could help you."
+//MAKE JULES GO AWAY, REPLACE WITH DARLING
+
+#speaker:D4RL1N6
+"Don't give up yet Alistair."
+
+#speaker:Alistair
+"Of course."
+
+#speaker:D4RL1N6
+"I am sure that there are more options we haven't explored. Keep searching."
+
+{seenElection:
+#speaker:Alistair
+"I recall an election, perhaps we can find some leads there."
+}
+
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
+
+=runfordirector
+//Suggest to Jules that he should run for director roll, he'd be a good fit, Bennet is stuffy, old timey
+//Jules questions Alistair, just trust me 
+//He'll think about it (he does)
+//Darling prompts player to go forward in time and see the result of their actions
+//Has more content related to the election (speech changes etc) (more dialogue)
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
+
 
 ===DIRECTOR===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
@@ -571,7 +642,7 @@ Who should I talk to?
 "I left, but he stayed and got a full time job."
 "He did always like the library in this place..."
 "Perhaps he can help since we can't get through to Bennet."
--> TempEnd
+-> DONE
 
 
 //Quest and Misc Knots
