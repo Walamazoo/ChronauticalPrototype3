@@ -408,6 +408,19 @@ Who should I talk to?
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
+=topicschange
+//PLACEHOLDER Alistair tells Jules after going to the future to see the election what topics the people are more interested or concerned with, tells him what to focus on in his speech
+//Create variable for storing what player has completed
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
+
+=fumbleword
+//PLACEHOLDER Jules fumbles on a hard one in his speech and if player as seen it, help Jules practice that word A LOT (ONLY TIME 5)
+//Create variable for fumble word
+
+=speechpeptalk
+//PLACEHOLDER Alistair gives Jules a pep talk to help him get prepared for the election, boost his confidence
+
 
 ===DIRECTOR===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)

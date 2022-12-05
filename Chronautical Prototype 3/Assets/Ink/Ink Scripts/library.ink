@@ -646,6 +646,9 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 //Shannon change parameter back to hushed
+//PLACEHOLDER, if statement for if the player has asked Jules for help, Darling appears and suggests that perhaps Jules could run, a better fit and could help us when he has more power
+//PLACEHOLDER, Jules speech knot v1 (with one word change)
+//PLACEHOLDER, Jules speech knot v2 (with one word change)
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> END
