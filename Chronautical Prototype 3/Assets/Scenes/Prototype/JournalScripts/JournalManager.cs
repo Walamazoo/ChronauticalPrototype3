@@ -307,7 +307,7 @@ public class JournalManager : MonoBehaviour
 
     //NOT YET FULLY IMPLEMENTED
     //Will be used to format and properly assign the Timeline Page.
-    void updateTimeline(string clueType){
+    public void updateTimeline(string clueType){
         int count = JournalTimeline.transform.childCount - 1;
 
         switch(clueType){
@@ -319,7 +319,7 @@ public class JournalManager : MonoBehaviour
                         if(count == i){
                             break;
                         }
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - (i + 3)).gameObject;
                         timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
                         timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
                         timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
