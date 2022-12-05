@@ -110,7 +110,7 @@ What should I do?
                 ~ childPresent = true
                 ~ oldladyPresent = true
                 ~noNPCS=false
-        - 2:    The old storyteller strains to be heard among the bustling crowd, the shoppers cambering over the new goods. An energetic child runs past. Following their movement I happen to spot Jules, both helping direct shipments and taking glances at the wares.
+        - 2:    The old storyteller strains to be heard among the bustling crowd, the shoppers clambering over the new goods. An energetic child runs past. Following their movement I happen to spot Jules, both helping direct shipments and taking glances at the wares.
                 ~ julesPresent = true
                 ~ childPresent = true
                 ~ oldladyPresent = true
@@ -124,7 +124,7 @@ What should I do?
                 ~ shopownerPresent = true
                 ~ oldladyPresent = true
                 ~noNPCS=false
-        - 5:    Everyone seems focused on a large projection of the lab director. A shopkeep I recognize has left their store to watch, and even the old storyteller stays quiet and watches in tently.
+        - 5:    Everyone seems focused on a large projection of the lab director. A shopkeep I recognize has left their store to watch, and even the old storyteller stays quiet and watches intently.
                 ~ shopownerPresent = true
                 ~ oldladyPresent = true
                 ~noNPCS=false
@@ -267,7 +267,7 @@ Who should I talk to?
     "I've got other things to focus on."
     
     #speaker:Alistair
-    "Ha ha... Yeah, I suppose being frugal is a vrtue."
+    "Ha ha... Yeah, I suppose being frugal is a virtue."
     (Never see the light of day, huh?)
     (... So much will be lost...)
         -> Questions
@@ -288,7 +288,7 @@ Who should I talk to?
     #speaker:Jules
     "Well then, thank you, Alistair. I wish you luck."
     "Now if you'll excuse me, I really must be going."
-    "these boxes won't label themselves."
+    "These boxes won't label themselves!"
         -> Questions
 
 =Okay
@@ -300,7 +300,7 @@ Who should I talk to?
     "Alistair..."
     "It's just... The lives of all these people, laid out to be pawned off."
     "I came to see what I could possibly get for Christa and myself, but..."
-    "Seeing it all just... It's all sudeenly hit me."
+    "Seeing it all just... It's all suddenly hit me."
     
 #speaker:Alistair
     "I'm... Sorry."
@@ -319,18 +319,18 @@ Who should I talk to?
     
 #speaker:Jules
     "Thank you. You as well."
-    "Wait... You are going to get leave as well, correct? Why aren't you in line?"
+    "Wait... You are going to leave as well, correct? Why aren't you in line?"
     
 #speaker:Alistair
-    (Ah... That's right, it is strange. Hm.)
+    (Ah... That's right, it does seem strange. Hm.)
     + [Private ship]
-    #speaker:Alistair
-    "I actualy have my own vessel. It's parked not too far from here."
-    "The... Solar Wind. A fine ship."
+        #speaker:Alistair
+        "I actualy have my own vessel. It's parked not too far from here."
+        "The... Solar Wind. A fine ship."
     + [Still have unfinished buisiness]
-    #speaker:Alistair
-    "I... Stil have a bit of business here. I can't leave quite yet."
-    "It's important that I stay."
+        #speaker:Alistair
+        "I... Stil have a bit of business here. I can't leave quite yet."
+        "It's important that I stay."
     -
     #speaker:Jules
     "Alistair, you-"
@@ -343,7 +343,7 @@ Who should I talk to?
     
     #speaker:Alistair
     "I promise, Jules. I promise."
-    (And this is a promise I intend not to break...)
+    (And I hope this is a promise I won't break...)
     
 -> Questions
 
@@ -355,13 +355,13 @@ Who should I talk to?
 {metShopowner: -> Questions| -> meetShopowner}
 
 =meetShopowner
-//INTRODUCTION PLACEHOLDER
 ~metShopowner = true
+
 -> SHOPOWNER
 
 =Questions
-//Intro convo
-#speaker:Shopowner
+#speaker:Uriah
+"What can I do for you today?"
 //34578
 + [Nothing for now] -> END
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -406,20 +406,134 @@ Who should I talk to?
 {metOldlady: -> Questions| -> meetOldlady}
 
 =meetOldlady
-//INTRODUCTION PLACEHOLDER
 ~metOldlady = true
+#speaker:Alistair
+"Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts. Could you-"
+
+#speaker:Miriam
+"Storyteller? My dear boy, I am no mere storyteller, I am a purveyor of truth!"
+"They all doubt old Miriam, but they'll soon see!"
+"The dissapearance of PLANETNAME is a sign of things to come!"
+
+#speaker:Alistair
+(Ah yes... Miriam.)
+(A bit of a crackpot, but she's still knowledgeable.)
+"Ah, I see.. Well, I'm sorry if I seemed doubtful of you."
++ [I'm interested in stories]
+        #speaker:Alistair
+        "I merely thought you may have tales worth hearing."
+        "Even stories can hold some truth."
++ [I'm looking for truth]
+        #speaker:Alistair
+        "Truth can sometimes be stranger than fiction."
+        "I thought you may be able to tell me something I wouldn't be able to find elsewhere"
+    -
+#speaker:Miriam
+"Then you've come to the right place!"
+"I assure you, I know what they wish I did not!"
 -> OLDLADY
 
 =Questions
-//Intro convo
-//+ [Convo 1] -> Convo1
+#speaker:Miriam
+"What curiosity do you hold, young man? I have all the answers!"
+//12345
++ {time == 1} [Dissapearance of PLANETNAME?] ->Dissapearance
++ {time == 2} [Busy day?] ->Busy
++ {time == 3} [Can't get a crowd?] ->Crowd
++ {time == 4} [Still trying?] ->Trying
++ {time == 5} [About the announcement...] ->Announcement
 + [Nothing for now] -> END
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
-//1 option for a miscellaneous convo (something to do with this specific time and what's happening in the world or to the character)
 
-=Convo1
+=Dissapearance
+#speaker:Alistair
+"I think I overheard you say somethig about PLANETNAME... Dissapearing?" 
+"The Director said it was destroyed."
+
+#speaker:Miriam
+"Aha! That's what they want you to think!"
+"You see, PLANETNAME was not destroyed, but lost! Lost in the cosmic web!"
+"The Strings that connect our vast universe are deeper than you could ever emagine..."
+"So deep, even a planet could be shallowed up, lost in the space between spaces!"
+"Not even the most traveled trade seams are truly safe..."
+
+#speaker:Alistair
+(She's not... Entirely incorrect.)
+(Maybe PLANETNAME's been thrown off by what's happening here?)
+(Focus, Alistair. You can't chase every loose end, not now at least.)
+
+#speaker Miriam
+"Oh? Has the truth rendered you speechless?"
+
+#speaker:Alistair
+"Ah, I'm sorry..."
++ [Just lost in thought]
+        #speaker:Alistair
+        "I'm just lost in my own thoughts, I'm sorry."
+        "I find myself questioning the decisions I've made..."
++ [I'm awed by your words]
+        #speaker:Alistair
+        "I'm simply rattled by such a possibility...:
+        "Truly, you have opened my eyes."
+    -
+
+#speaker:Miriam
+"I'm glad someone here has the sense to listen!"
+-> Questions
+
+=Busy
+#speaker:Alistair
+"Hello there! A busy day, isn't it?"
+
+#speaker:Miriam
+"Busy! Well! Try frustrating! I can hardly think with all this racket."
+"How am I supposed to spread truth like this? A sudden boom of products and everyone seems content to ignore the big picture..."
+
+#speaker:Alistair
+"Well..."
++ [It's understandable]
+        #speaker:Alistair
+        "Surely you understand the people's excitement?"
+        "There are many unique artefacts being imported."
+        "Who wouldn't be giddy to see it all?"
++ [I'm here, I could listen]
+        #speaker:Alistair
+        "You're not entirely ingnored."
+        "Why, here I am. Why don't you tell me a tale?"
+-
+
+#speaker Miriam
+"Oh? Then let me tell you, these boubles are just a taste of the true wonders those lab people wish to obtain."
+"Have you every heard of the Inventor? A true miracle worker!"
+"Wars have been fought over their inventions..."
+"A disc that makes machines work as if they were new!"
+"A ring entirely impervious to harm!"
+"But the Inventor never seems to stay in one place..."
+"It's almost as if they are a ghost from the far future!"
+
+#speaker:Alistair
+"Ah... Well, er, that's very interesting."
+(The future? More like a ghost from a very dark past...)
+"I'm sure the Director would have a field day with those sorts of devices."
+
+#speaker:Miriam
+"Hah! As if they could handle it."
+"Mark my words, grand things are coming. Grand things..."
+
+-> Questions
+
+=Crowd
 //placeholder CONTENT
 -> Questions
+
+=Trying
+//placeholder CONTENT
+-> Questions
+
+=Announcement
+//placeholder CONTENT
+-> Questions
+
 
 
 
