@@ -104,7 +104,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 #speaker:D4RL1N6
 "This is attempt number 37 Alistair. The core is gone. Is it not clear we can do nothing regarding the destruction of the planet?"
-"During the last attempt, you right up to the planet's destruction."
+"During the last attempt, you went right up to the planet's destruction."
 "You barely gave yourself enough time to go back in time again."
 
 #speaker:Alistair
