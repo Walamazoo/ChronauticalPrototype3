@@ -218,7 +218,7 @@ Who should I talk to?
         "Oh I've been... adventuring."
         
          #speaker:Jules
-        "Out and about? Why so coy Alistair?"
+        "Adventuring? Why so coy Alistair?"
         
         #speaker:Alistair
         "It's... complicated."
@@ -358,16 +358,36 @@ Who should I talk to?
 
 =meetShopowner
 ~metShopowner = true
+#speaker:Alistair
+"Hello there, shopkeep."
+"I was wondering if I could perchance peruse your wares, and perhaps be made aware of any local news, as well."
+I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
+
+#speaker:Uriah
+"Why of course, sir! I carry a wide variety of wares, feel free to take a look."
+"Are you from around here?"
+
+#speaker:Alistair
+"I used to be. Hoping to catch up on what I've missed."
+
+#speaker: Uriah
+"I'll do my best to fill you in, then."
+"While you shop, of course."
 
 -> SHOPOWNER
 
 =Questions
 #speaker:Uriah
 "What can I do for you today?"
-//34578
+//+ {time == 3} [Busy?] ->Busy
+//+ {time == 4} [You okay?] ->Okay
+//+ {time == 5} [Heading out?] ->Heading
+//+ {time == 7} [Busy?] ->Busy
+//+ {time == 8} [Busy?] ->Busy
 + [Nothing for now] -> END
+#speaker: Uriah
+"Come back anytime!"
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
-//1 option for a miscellaneous convo (something to do with this specific time and what's happening in the world or to the character)
 
 =Convo1
 //placeholder CONTENT
@@ -375,6 +395,7 @@ Who should I talk to?
 
 
 //Temperance Ward (Child) NPC Convo
+
 ===CHILD===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 4)}
@@ -399,6 +420,7 @@ Who should I talk to?
 
 
 //Miriam Harcourt (Old Lady/Storyteller) NPC Convo
+
 ===OLDLADY===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 5)}
@@ -443,6 +465,8 @@ Who should I talk to?
 + {time == 4} [Who are you talking to?] ->Who
 + {time == 5} [About the announcement...] ->Announcement
 + [Nothing for now] -> END
+#speaker:Miriam
+"Whenever you seek truth, just find me again."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =Dissapearance
@@ -611,7 +635,6 @@ Who should I talk to?
 (But if I can't...)
 (I must get my treasure to him.)
 "Thank you. Miriam."
-#speaker:
 She doesn't respond, just nods and turns away.
 -> Questions
 
@@ -648,8 +671,6 @@ She doesn't respond, just nods and turns away.
 #speaker:Alistair
 (Curses! I can't contradict her without revealing too much!)
 "Please, don't do anything crazy."
-
-#speaker:
 She begins muttering to herself incoherently, no longer acknowledging my presence.
 
 #speaker:Alistair
