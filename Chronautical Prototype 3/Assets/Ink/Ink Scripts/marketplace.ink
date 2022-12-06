@@ -163,6 +163,7 @@ Who should I talk to?
 }
 
 //Jules Ambrose NPC Convo
+
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 1)}
@@ -349,6 +350,7 @@ Who should I talk to?
 
 
 //Uriah Bramble (shopowner/shopkeep) NPC Convo
+
 ===SHOPOWNER===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 3)}
@@ -370,8 +372,6 @@ Who should I talk to?
 =Convo1
 //placeholder CONTENT
 -> Questions
-
-
 
 
 //Temperance Ward (Child) NPC Convo
@@ -440,7 +440,7 @@ Who should I talk to?
 + {time == 1} [Dissapearance of PLANETNAME?] ->Dissapearance
 + {time == 2} [Busy day?] ->Busy
 + {time == 3} [Can't get a crowd?] ->Crowd
-+ {time == 4} [Still trying?] ->Trying
++ {time == 4} [Who are you talking to?] ->Who
 + {time == 5} [About the announcement...] ->Announcement
 + [Nothing for now] -> END
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -522,17 +522,141 @@ Who should I talk to?
 -> Questions
 
 =Crowd
-//placeholder CONTENT
+#speaker:Alistair
+"What a crowd! And so many from off planet, seeing the sights."
+"I think you'll have trouble getting an audience today."
+
+#speaker:Miriam
+"That's just it! I must warn them of the danger!"
+"Out there, travelling from planet to planet..."
+"The Sirens coud lead them Adrift!"
+
+#speaker:Alistair
+(She gets crazier and crazier by the day...)
+(But I should humor her, in the off chance something could be useful for me... Or for... Him.)
++ [Sirens?]
+        #speaker:Alistair
+        "Sirens? You mean like alarms?"
+        "How would that lead anyone Adrift?"
+        
++ [Adrift?]
+        #speaker:Alistair
+        "Adrift, as in lost?"
+        "These people take secure seams, they would have no chance of ending up other than their destination."
+-
+
+#speaker:Miriam
+"The Sirens mimic the sounds of ships in distress!"
+"They lure others away from safety, into the horrors of a raw string!"
+"The crew hears their dying words on repeat.."
+"Before the vessel gets pushed to the edge of the universe, devoid of life."
+"Or worse, become a ghost ship!"
+"These dire warnings must be heeded!"
+
+#speaker:Alistair
+(What a wild rumor. Although...)
+"I see. Well, I'll be extra careful when I travel from now on, and I'll be sure to pass your advice on."
+
+#speaker:Miriam
+"That would do my heart good, my boy, knowing you are safe."
+"And that you keep your eyes open to the truth beneath the lies fed to us by those on high!"
+
+#speaker:Alistair
+"..."
+"I'm glad you have my best interests in mind."
 -> Questions
 
-=Trying
-//placeholder CONTENT
+=Who
+#speaker:Alistair
+"Er... Pardon the interruption, but who are you speaking to?"
+"You appear to not have an audience today."
+"And there isn't really anyone else."
+
+#speaker:Miriam
+"Ah, but my boy, you're here, yes? Here, at this intersection of fate."
+"There are grand things about, grand things, oh so grand."
+"Have you heard it?"
+
+#speaker:Alistair
+(Uh oh.)
++ [I haven't...?]
+        #speaker:Alistair
+        "I can't say that I have."
+        "Well, I've heard a great many things, but somehow I doubt I've heard what it is you're referring to."
+        
++ [I have...?]
+        #speaker:Alistair
+        "I certainly get around to many places, and hear many things."
+        "I think I may know what you mean."
+        (Hopefully she bought that.)
+-
+
+#speaker:Miriam
+"The cries of the void."
+
+#speaker:Alistair
+"Ah. Yes. The cries."
+
+#speaker:Miriam
+"We are on the cusp of a great transition."
+"The cold maw of space yawns wide for us"
+"And I can hear it. I hear it because I listen."
+"So I'm here, telling to anyone who is not so fortunate as I."
+
+#speaker:Alistair
+"I..."
+(She's not far off. Is it just intuition? Or something more?)
+(Perhaps it is fate.)
+(Fate? No. I... I can change this. I can fix it.)
+(But if I can't...)
+(I must get my treasure to him.)
+"Thank you. Miriam."
+#speaker:
+She doesn't respond, just nods and turns away.
 -> Questions
 
 =Announcement
-//placeholder CONTENT
--> Questions
+#speaker:Alistair
+"Miriam. I assume you've heard the announcement."
 
+#speaker:Miriam
+"Yes. The time has come."
+
+#speaker:Alistair
+"What are you going to do?"
+"I mean, besides evacuate."
+
+#speaker:Miriam
+"I knew it. I knew it all along. That those lab folk were hiding something."
+
+#speaker:Alistair
+"I... Don't think it's their fault."
+
+#speaker:Miriam
+"Elor-Nabyke will become lost in the folds of reality."
+"All so those fools can claim their ill-gotten gains."
+"I must prepare to spread the truth."
+
+#speaker:Alistair
+"What do you mean?"
+"The Director said the planet would be destroyed."
+
+#speaker:Miriam
+"It's just like PLANETNAME all over again." 
+"Doesn't anyone see? It's a pattern! A plot!"
+
+#speaker:Alistair
+(Curses! I can't contradict her without revealing too much!)
+"Please, don't do anything crazy."
+
+#speaker:
+She begins muttering to herself incoherently, no longer acknowledging my presence.
+
+#speaker:Alistair
+(Curses.)
+"I'll... See you around."
+
+-> Questions
 
 
 
