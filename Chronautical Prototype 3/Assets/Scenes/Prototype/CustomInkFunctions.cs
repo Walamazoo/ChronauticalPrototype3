@@ -79,7 +79,10 @@ public class CustomInkFunctions : MonoBehaviour
 
     public void SetParameter (string parName, int value)
     {
-        gameMusic.setParameterByName(parName, value);
+        Debug.Log("Parameter name is: " + parName);
+        Debug.Log("Value is: " + value);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName(parName, value);
+        //gameMusic.setParameterByName(parName, value);
     }
     
 }
