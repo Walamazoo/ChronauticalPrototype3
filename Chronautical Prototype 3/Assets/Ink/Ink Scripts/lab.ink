@@ -181,7 +181,8 @@ Who should I talk to?
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
-    #speaker:Alistair_Confident
+    #speaker:Alistair
+    #sprite:Alistair_Confident
     "Well, it's quite a long story..."
     "But it's good to see you again!"
     
@@ -242,8 +243,8 @@ Who should I talk to?
     + {time == 3} [Booths?] ->fair
     + {time == 4} [What's new?] ->wedding
     + {time == 5} [Announcement?] ->disaster
-    * {seenSpeech == true} & {time == 5} [Practice address] ->fumbleword
-    //* {Hasdonevaulttalk} [Help with vault?] ->vault
+    * {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
+    * {vaultDirector == true} [Help with vault?] ->vault
     * {seenElection == true} [Speech topics] ->topicschange
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
@@ -792,6 +793,7 @@ Who should I talk to?
 "I left, but he stayed and got a full time job."
 "He did always like the library in this place..."
 "Perhaps he can help since we can't get through to Bennet."
+~ vaultDirector = true
 -> DONE
 
 
