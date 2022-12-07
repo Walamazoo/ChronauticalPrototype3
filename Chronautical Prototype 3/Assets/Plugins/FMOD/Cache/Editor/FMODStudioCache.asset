@@ -123,10 +123,72 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638058428520728593
+  lastModified: 638060262685272565
   FileSizes:
   - Name: Desktop
-    Value: 16166272
+    Value: 17308992
+  Exists: 1
+--- !u!114 &-2029836999187732831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Prologue Music/PrologueTime
+  m_EditorClassIdentifier: 
+  Name: PrologueTime
+  StudioPath: 
+  Min: 1
+  Max: 10
+  Default: 5
+  ID:
+    data1: 3668109488
+    data2: 1880677348
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2020203617924925672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PrologueAmbience
+  m_EditorClassIdentifier: 
+  Name: PrologueAmbience
+  StudioPath: parameter:/PrologueAmbience
+  Min: 0
+  Max: 13
+  Default: 5
+  ID:
+    data1: 1375732493
+    data2: 2781776819
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - LibHushed
+  - LibConstruction
+  - LibBusy
+  - LibEmpty
+  - LibEarthquake
+  - LibFire
+  - LabWorking
+  - LabFair
+  - LabEarthquake
+  - LabFire
+  - MarketBusy
+  - MarketHushed
+  - MarketPanic
+  - MarketEmpty
   Exists: 1
 --- !u!114 &-1467308558841033203
 MonoBehaviour:
@@ -142,10 +204,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/Prologue Music
   Guid:
-    Data1: 1917784272
-    Data2: 1317963808
-    Data3: 1432781708
-    Data4: 2126841411
+    Data1: 741668272
+    Data2: 1151044406
+    Data3: 841038235
+    Data4: -1740942269
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 1
@@ -153,9 +215,10 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 966207167690018674}
+  - {fileID: -2029836999187732831}
   MinDistance: 1
   MaxDistance: 20
-  Length: 104777
+  Length: 96000
 --- !u!114 &-583094999767283726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,12 +301,13 @@ MonoBehaviour:
   - {fileID: 4896296810924624196}
   - {fileID: -111928886858579606}
   - {fileID: -7603327635597123483}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: -2020203617924925672}
   MasterBanks:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638058428520748448
+  cacheTime: 638060262685332360
   cacheVersion: 131593
 --- !u!114 &367484350054005465
 MonoBehaviour:
@@ -372,10 +436,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638058428520748448
+  lastModified: 638060262685332360
   FileSizes:
   - Name: Desktop
-    Value: 1566
+    Value: 1600
   Exists: 1
 --- !u!114 &7821536103994051125
 MonoBehaviour:
@@ -398,7 +462,7 @@ MonoBehaviour:
     data1: 1375732493
     data2: 2781776819
   Type: 2
-  IsGlobal: 0
+  IsGlobal: 1
   Labels:
   - LibHushed
   - LibConstruction

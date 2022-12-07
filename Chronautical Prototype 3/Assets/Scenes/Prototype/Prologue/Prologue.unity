@@ -1809,31 +1809,35 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f444e9d975962cd45aa57da6b8bf2f83, type: 3}
     - target: {fileID: 1401804728007886772, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.61698115
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886772, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_Color.g
-      value: 0.28772235
+      value: 0.78747123
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886772, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_Color.r
-      value: 0.6415094
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886776, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886779, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 103.4894
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401804728007886779, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 112.0023
+      value: 156.7032
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886779, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -491.5
+      value: -481.35
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886779, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 244
+      value: 221.65
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728054032357, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_IsActive
@@ -2385,7 +2389,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 763636739}
   m_HandleRect: {fileID: 763636738}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4563,7 +4567,7 @@ MonoBehaviour:
   conversation: lab
   conversationConversant: {fileID: 715661801}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -5736,10 +5740,10 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 0
-  skipIfNoValidEntries: 0
+  skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
   stopConversationIfTooFar: 0
@@ -6715,7 +6719,7 @@ MonoBehaviour:
   conversation: marketplace
   conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -11892,7 +11896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2017085750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11952,7 +11956,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2017085752}
   m_OnClick:
     m_PersistentCalls:
