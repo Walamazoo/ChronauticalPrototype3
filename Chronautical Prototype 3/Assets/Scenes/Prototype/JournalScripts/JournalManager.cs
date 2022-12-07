@@ -364,4 +364,8 @@ public class JournalManager : MonoBehaviour
                 break;
         }
     }
+
+    private void journalUpdated(){
+        
+    }
 }
