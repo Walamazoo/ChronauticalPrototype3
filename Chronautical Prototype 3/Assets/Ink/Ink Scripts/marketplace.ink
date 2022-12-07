@@ -44,42 +44,52 @@ VAR metOldlady = false */
     ~ roomDescription = "Market goers busy with gossip."
     ~SET_PARAMETER("PrologueAmbience", 10)
     {SET_PARAMETER("PrologueCharacters", 4)}
+    ~SET_PARAMETER("PrologueTime", 1)
 - 2:    
     ~ roomDescription = "Lots of new things and people in the market."
     {SET_PARAMETER("PrologueAmbience", 10)}
     {SET_PARAMETER("PrologueCharacters", 4)}
+    ~SET_PARAMETER("PrologueTime", 1)
 - 3:
     ~ roomDescription = "Tourists and visitors from off planet stuff the marketplace."
     {SET_PARAMETER("PrologueAmbience", 10)}
     {SET_PARAMETER("PrologueCharacters", 5)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 4:    
     ~ roomDescription = "Place is slow today, not many shoppers."
     {SET_PARAMETER("PrologueAmbience", 11)}
     {SET_PARAMETER("PrologueCharacters", 5)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 5:    
     ~ roomDescription = "Projection of the Director is making an announcement."
     {SET_PARAMETER("PrologueAmbience", 11)}
     {SET_PARAMETER("PrologueCharacters", 3)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 6:    
     ~ roomDescription = "Marketplace is a ghost town."
     {SET_PARAMETER("PrologueAmbience", 13)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 7:    
     ~ roomDescription = "Seems like something happened, everyone is talking about it."
     {SET_PARAMETER("PrologueAmbience", 10)}
     {SET_PARAMETER("PrologueCharacters", 3)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 8:    
     ~ roomDescription = "Everyone is selling mundane things."
     {SET_PARAMETER("PrologueAmbience", 10)}
     {SET_PARAMETER("PrologueCharacters", 1)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 9:    
     ~ roomDescription = "Lots of people are packing up and getting onto Atmos vessals."
     {SET_PARAMETER("PrologueAmbience", 12)}
     {SET_PARAMETER("PrologueCharacters", 1)}
+    ~SET_PARAMETER("PrologueTime", 10)
 - 10:   
     ~ roomDescription = "The marketplace is completely devoid of life."
     {SET_PARAMETER("PrologueAmbience", 13)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 10)
 }
 
 //Content Start
