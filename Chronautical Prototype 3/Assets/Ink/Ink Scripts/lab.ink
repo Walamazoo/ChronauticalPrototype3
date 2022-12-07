@@ -441,7 +441,6 @@ Who should I talk to?
 "... Perhaps, I will think about it."
 "But I do doubt I would have much success."
 "That is quite far away, I'll think about it again once the time is nearer."
-//Maybe have Darling prompt player to go see the results?
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 

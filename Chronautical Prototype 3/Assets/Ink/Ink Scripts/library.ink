@@ -602,10 +602,11 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "But."
         "I think I also speak for the community when I say that the lab and the director's handling of the evacuation of the planet to be entirely abhorent."
         "Is it not the lab itself that discovered the core's damaged state? 
-        "Why have you not put more work into fixing it?"
+        "Why have you not put more time into fixing it? Why must we abandon our home?"
         "Why is the lab still functioning as if the planet is not going to explode in a few years?"
+        "I feel that the lab is entirely too closed off from the rest of the planet."
         "I pose these questions not as a way to tear down all the work you all have done, but this is our planet too that you are asking us to leave!"
-        "I won't take much more of your time. But I don't believe that Bennet Crabb is suited to deal with this catastrophe. Perhaps it is time for someone younger with more gumption to lead us."
+        "I won't take much more of your time. But I don't believe that Bennet Crabb is suited to deal with this catastrophe. Perhaps it is time for someone younger, with more gumption, to lead us."
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
         #speaker:Child
@@ -621,6 +622,8 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
         "But you're not."
         "You just want to keep things as they are, the old way, and stay right here..."
+        "The lab can move to a different planet and continue as things were..."
+        "But our home is right here."
         "That's all I wanted to say."
         "Yeah..." ->OldLadyMono
     =OldLadyMono
@@ -652,18 +655,48 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
     "Perhaps if there were a new director, these people would find peace..."
     
     #speaker:Alistair
-    "And perhaps we could have a friend in a high place, to access the vault."
+    "And perhaps if we could have a friend in a high place we can access the vault."
+    ~julesRun = false
   - else:
-    
+    -> JulesSpeechCheck
 }
-
 //Shannon change parameter back to hushed
-//PLACEHOLDER, if statement for if the player has asked Jules for help, Darling appears and suggests that perhaps Jules could run, a better fit and could help us when he has more power
-//PLACEHOLDER, Jules speech knot v1 (with one word change)
-//PLACEHOLDER, Jules speech knot v2 (with one word change)
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
--> END
+-> DONE
+
+=JulesSpeechCheck
+{speechImproved: ->JulesSpeechGood|->JulesSpeechBad}
+
+=JulesSpeechBad
+#speaker:Jules
+//SPRITE
+"Ahem-"
+"Hello everyone."
+"I wanted to just announce that I am going to be running against Doctor Bennet Crabb."
+"If you'll allow me, I wanted to speak a bit on what I would want to address if I were to become Director."
+"I know I'm not very experienced, but as Director, I would want to focus on the evacuation of the planet in the coming years and to help establish the lab on a new planet."
+"I'm sure you all have many questions and concerns."
+"And I am more than happy to {addressFix: address|a dress- ah- excuse me, address} them with you."
+Jules' speech was littered with uncertainities and filler words, but his heart was in the right place.
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+-> DONE
+
+=JulesSpeechGood
+#speaker:Jules
+//SPRITE
+"Hello everyone."
+"I'm speaking to you today to announce that I am putting forth my opposition to Bennet Crabb's relection." 
+"If you'll give me your time, I want to speak on what I would address as Director."
+"These are extremely troubling times and I would call upon the lab to formally apologize to the people of Elore-Nabyke for the mistreatment of the core and the lax reaction to such a catastrophic mistake."
+"In addition, as Director, I would work with the community to establish an evacuation of the planet as quickly and as comfortably as possible. I would also establish weekly reports to the community that the lab serves to promote full transparency in the years to come."
+"I am sure you all have many questions and concerns for me to {addressFix: address."|a dress-a-excuse me-"}
+"Please, come to me at any time with them and we can discuss."
+"Thank you."
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+-> DONE
 
 
 

@@ -19,6 +19,8 @@ VAR seenPepTalk = false
 VAR julesDirector = false
 VAR hasCode = false
 VAR julesRun = false
+VAR speechImproved = false
+VAR addressFix = false
 
 //NPC Variables
 VAR julesPresent = false
