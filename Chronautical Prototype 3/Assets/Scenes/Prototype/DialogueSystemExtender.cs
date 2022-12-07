@@ -145,6 +145,13 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             inkVariableStorage.Add(name, value);
             Debug.Log(name + " was added to the dictionary with value = " + value);
         }
+        
+        /*var compiler2 = new Ink.Compiler(globalsInkFile.ToString(), new Compiler.Options
+        {
+	        countAllVisits = true,
+	        fileHandler = new UnityInkFileHandler(System.IO.Path.GetDirectoryName("Assets/StreamingAssets/Globals.ink"))
+        });
+        Ink.Runtime.Story story2 = compiler.Compile();*/
     }
 
     protected override void ObserveStoryVariables(Story story)
@@ -176,6 +183,17 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             }
         
         
+    }
+
+    protected override void OnConversationStart(Transform actorTransform)
+    {
+        for(int i = 0; i < inkJSONAssets.Count; i++){
+            if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted)){
+                var story = stories[i];
+                variablesToStory(story);
+            }
+        }
+        base.OnConversationStart(actorTransform);
     }
 
     public void setTime(int value){

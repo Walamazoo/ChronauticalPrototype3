@@ -119,8 +119,8 @@ public class SliderController : MonoBehaviour
         
         currentYearText.text = currentYear.ToString();
 
-        DialogueSystemInkIntegration.SetInkNumber("CurrentSliderValue", currentSliderValue);
-        DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
+        //DialogueSystemInkIntegration.SetInkNumber("CurrentSliderValue", currentSliderValue);
+        //DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
         extender.setTime((int)currentSliderValue);
     }
