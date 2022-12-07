@@ -698,9 +698,12 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 ~ seenSpeech = true
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
+{helpComplete == 3: ->TempEnd|->DONE}
+
+===TempEnd===
+You have successfully helped Jules enough to get him elected!
+This is the end of Chronautical's Demo, thank you so much for playing!
 -> DONE
-
-
 
 ===Ending===
 //placeholder for ending

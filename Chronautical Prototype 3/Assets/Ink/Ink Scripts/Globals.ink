@@ -15,12 +15,20 @@ VAR helpComplete = 0
 VAR directorName = "Bennet Crabb"
 VAR seenPepTalk = false
 
-//Placeholder: VARIABLES FOR THE SIDE QUEST STUFF
+//Variables for Side Quests
+//Variable for if the player has spoke to Bennet about getting into the vault
+VAR vaultDirector = false
+//Variable for if Jules is the director or not
 VAR julesDirector = false
+//Variable for if the player has the code for the vault
 VAR hasCode = false
+//Variable for if the player has told Jules he should run for Director
 VAR julesRun = false
+//Variable for if the player has told Jules what topics he should address in his speech or not
 VAR speechImproved = false
+//Variable for if the player has spoken to Jules about how to pronounce theword "address"
 VAR addressFix = false
+//Variable for if the player has seen Jules' speech
 VAR seenSpeech = false
 
 //NPC Variables

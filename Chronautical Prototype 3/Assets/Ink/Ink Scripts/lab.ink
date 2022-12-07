@@ -232,9 +232,11 @@ Who should I talk to?
     + {time == 3} [Booths?] ->fair
     + {time == 4} [What's new?] ->wedding
     + {time == 5} [Announcement?] ->disaster
-    * {seenSpeech == true} [Practice address] ->fumbleword
-    //+ {Hasdonevaulttalk} [Help with vault?] ->vault
-    //+ {hasseenelection} [Election] ->runfordirector
+    * {seenSpeech == true} & {time == 5} [Practice address] ->fumbleword
+    //* {Hasdonevaulttalk} [Help with vault?] ->vault
+    * {seenElection == true} [Speech topics] ->topicschange
+    * {seenElection == true} [Election] ->runfordirector
+    * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
@@ -260,7 +262,7 @@ Who should I talk to?
 "Of course!"
 "Though I'm afriad it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
-//WACKY PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
+//PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
   #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
@@ -443,12 +445,37 @@ Who should I talk to?
 "But I do doubt I would have much success."
 "That is quite far away, I'll think about it again once the time is nearer."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 =topicschange
-//PLACEHOLDER Alistair tells Jules after going to the future to see the election what topics the people are more interested or concerned with, tells him what to focus on in his speech
-//Create variable for storing what player has completed
+#speaker:Alistair
+"Jules, I was thinking, what sort of things do you think the people of Elore-Nabyke would like the Director to talk about?"
+
+#speaker:Jules
+"That's... a strange question."
+"You usually don't care much for lab politics..."
+
+#speaker:Alistair
+"Oh, but I'm just curious. I think that perhaps the people would like to hear an apology, you know?"
+
+#speaker:Jules
+"An apology about what...?"
+
+#speaker:Alistair
+"Oh- I mean, just for the lab to be more transparent with the people of the planet."
+"Right now, the lab and the people feel very seperate, don't you think?"
+
+#speaker:Jules
+"Hm."
+"I suppose so. I haven't thought of that."
+
+#speaker:Alistair
+"Just some food for thought."
+~ speechImproved = true
+~ helpComplete = helpComplete +1
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 =fumbleword
@@ -491,13 +518,36 @@ Who should I talk to?
 "Perfect."
 ~ helpComplete = helpComplete +1
 ~ addressFix = true
-//PLACEHOLDER Jules fumbles on a hard one in his speech and if player as seen it, help Jules practice that word A LOT (ONLY TIME 5)
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 =speechpeptalk
-//PLACEHOLDER Alistair gives Jules a pep talk to help him get prepared for the election, boost his confidence
+#speaker:Alistair
+"You know, I think you would be a good Director."
+
+#speaker:Jules
+"Oh?"
+"Really? Well, I'll run and try my best."
+"But Crabb has been in the business so long, it's hard to imagine anyone but him being Director."
+
+#speaker:Alistair
+"Maybe."
+"But you're smart, and you worry about things other than the lab's profit margins."
+"You know, I don't think I've ever even seen Bennet in the market."
+
+#speaker:Jules
+"I've heard he hasn't left the lab grounds in years."
+
+#speaker:Alistair
+"See, this is why you'd be great as a Director."
+
+#speaker:Jules
+"Thanks Alistair."
+"I'll try my best."
+~ helpComplete = helpComplete +1
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 ===DIRECTOR===
