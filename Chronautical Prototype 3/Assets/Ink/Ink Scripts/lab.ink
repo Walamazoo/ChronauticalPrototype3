@@ -43,42 +43,52 @@ VAR directorPresent = false */
     ~ roomDescription = "A group is listening to a news projection."
     {SET_PARAMETER("PrologueAmbience", 6)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 1)
 - 2:    
     ~ roomDescription = "The lab is busy, seems like there's plenty of work coming in."
     {SET_PARAMETER("PrologueAmbience", 6)}
     {SET_PARAMETER("PrologueCharacters", 2)}
+    ~SET_PARAMETER("PrologueTime", 1)
 - 3:    
     ~ roomDescription = "The room is filled with booths of scientists showing off their work, must be a fair."
     {SET_PARAMETER("PrologueAmbience", 6)}
     {SET_PARAMETER("PrologueCharacters", 2)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 4:    
     ~ roomDescription = "Not much seems to be happening in the lab."
     {SET_PARAMETER("PrologueAmbience", 7)}
     {SET_PARAMETER("PrologueCharacters", 1)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 5:    
     ~ roomDescription = "The Director is giving an announcement."
     {SET_PARAMETER("PrologueAmbience", 6)}
     {SET_PARAMETER("PrologueCharacters", 1)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 6:    
     ~ roomDescription = "Room is empty but lots of noise coming from the library. "
     {SET_PARAMETER("PrologueAmbience", 7)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 7:    
     ~ roomDescription = "The Lab Director election has concluded."
     {SET_PARAMETER("PrologueAmbience", 6)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 8:    
     ~ roomDescription = "Much of the equipment and furniture is gone."
     {SET_PARAMETER("PrologueAmbience", 8)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 5)
 - 9:    
     ~ roomDescription = "Rumbling from below."
     {SET_PARAMETER("PrologueAmbience", 8)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 10)
 - 10:   
     ~ roomDescription = "Lab is gone, the planet will be destroyed soon."
     {SET_PARAMETER("PrologueAmbience", 9)}
     {SET_PARAMETER("PrologueCharacters", 0)}
+    ~SET_PARAMETER("PrologueTime", 10)
 }
 
 //Content Start

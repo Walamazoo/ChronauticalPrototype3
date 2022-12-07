@@ -57,7 +57,6 @@ VAR oldladyPresent = false */
 ~ time = 10
 ~ seenBeginning = true
 #background:Library_Interior
-//~SET_PARAMETER("PrologueAmbience", 5)
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
 It was full of what I would become. Dreams of adventure in the stars piercing through the dark.
@@ -68,7 +67,7 @@ Atlantis.
 
 #sprite:Alistair_Sad
 #speaker:Alistair
-//Shannon ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
+~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
@@ -84,7 +83,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
 "Alistair."
-//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 
 #speaker:Alistair
 'There's still time. I can still fix this, I just need to-'
@@ -97,7 +96,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 #speaker:D4RL1N6
 "The core is gone."
-//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 
 #speaker:Alistair
 "It's not, I know better now, I can find a way to revive it-"
@@ -125,7 +124,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 "You will have to use your Astrolabe to return to a time before all this destruction." 
 "One year in the past should be sufficient for now."
 "Pull the slider to the year you would like to travel to, then activiate."
-//Shannon
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 
 #speaker:Alistair
 "Wha-"
@@ -133,7 +132,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "My apologies, Alistair, it is part of my programming."
-//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "Shall we go back in time?"
 
 #speaker:Alistair
@@ -156,43 +155,53 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
         ~ roomDescription = "Bustling with rumors and security won't let me close to the vault."
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 1)
 - 2:    
         ~ roomDescription = "Under rennovations and filled with security."
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 1)
 - 3:    
         ~ roomDescription = "Under rennovations and filled with security."
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 5)
         
 - 4:    
         ~ roomDescription = "Nearly done with rennovations but filled with security."
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 5)
 - 5:    
         ~ roomDescription = "Library is quiet and the vault is undisturbed."
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 5)
 - 6:    
         ~ roomDescription = "There's a huge crowd in the room because of the election."
         ~SET_PARAMETER("PrologueAmbience", 2)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 5)
 - 7:    
         ~ roomDescription = "Library is quiet and the vault is undisturbed."
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 1)
+        ~SET_PARAMETER("PrologueTime", 5)
 - 8:    
         ~ roomDescription = "Library is empty and the vault is abandoned."
         ~SET_PARAMETER("PrologueAmbience", 3)
         ~SET_PARAMETER("PrologueCharacters", 4)
+        ~SET_PARAMETER("PrologueTime", 5)
 - 9:    
         ~ roomDescription = "Library is empty and the vault is abandoned. I feel rumbling below me."
         ~SET_PARAMETER("PrologueAmbience", 4)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 10)
 - 10:   
         ~ roomDescription = "Library is lost. Fire everywhere, metal melting, vault too hot to touch."
         ~SET_PARAMETER("PrologueAmbience", 5)
         ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueTime", 10)
 }
 
 //Content Start
@@ -521,7 +530,7 @@ In the center, I see a series of numbers: 0-9.
 #speaker:D4RL1N6
 #NPC:Darling_Neutral
 "Did you see what the code was?"
-//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 
 #speaker:Alistair
 "Well, yes, but the code is changed everytime by the Lab Director."
@@ -536,7 +545,7 @@ In the center, I see a series of numbers: 0-9.
 
 #speaker:D4RL1N6
 "Don't be so melodramatic. We'll find a way. We've got to get your treasure."
-//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "We may also be able to gather information from exploring this place."
 
 #speaker:Alistair
@@ -629,7 +638,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =OldLadyMono
         #speaker:Storyteller
         #NPC:Storyteller_Neutral
-        ~SET_PARAMETER("PrologueCharacters", 5) //Shannon wrong parameter, change to hushed
+        ~SET_PARAMETER("PrologueCharacters", 0)
         As the Old Lady steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
         "Yes!"
@@ -641,7 +650,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
         "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crashendo.
-        //Shannon change parameter back to loud
+        ~SET_PARAMETER("PrologueCharacters", 2)
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 #speaker:Lab Director
 #NPC:Labhead_Neutral
@@ -659,7 +668,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
     #speaker:Alistair
     "And perhaps if we could have a friend in a high place we can access the vault."
 }
-//Shannon change parameter back to hushed
+~SET_PARAMETER("PrologueCharacters", 0) //Shannon
 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
@@ -707,5 +716,5 @@ This is the end of Chronautical's Demo, thank you so much for playing!
 
 ===Ending===
 //placeholder for ending
-//Shannon~PLAY_SOUND("event:/Sound/SFX/Prologue/Door open")
+//~PLAY_SOUND("event:/Sound/SFX/Prologue/Door open")
 -> DONE
