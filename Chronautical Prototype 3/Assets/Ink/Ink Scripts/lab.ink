@@ -232,6 +232,7 @@ Who should I talk to?
     + {time == 3} [Booths?] ->fair
     + {time == 4} [What's new?] ->wedding
     + {time == 5} [Announcement?] ->disaster
+    * {seenSpeech == true} [Practice address] ->fumbleword
     //+ {Hasdonevaulttalk} [Help with vault?] ->vault
     //+ {hasseenelection} [Election] ->runfordirector
     + [Nothing for now]
@@ -451,8 +452,46 @@ Who should I talk to?
 -> DONE
 
 =fumbleword
+#speaker:Alistair
+"Jules..."
+"This is sort of a strange question, but, what do you call the numbers and words that represent your home's location?"
+
+#speaker:Jules
+"... What-"
+"Alistair, what are you talking about?"
+
+#speaker:Alistair
+"Just trust me Jules."
+
+#speaker:Jules
+"Okay. An... address?" 
+
+#speaker:Alistair
+"Okay, good. Address. Let's practice saying it."
+
+#speaker:Jules
+"Alistair, are you okay? Did something happen...?"
+
+#speaker:Alistair
+"No, I just want to make sure you can say that word really well."
+"I know that sounds strange, but just trust me. It'll make sense later."
+
+#speaker:Jules
+"Okay..."
+"Address."
+
+#speaker:Alistair
+"And there's also 'address' as in, let's address this."
+
+#speaker:Jules
+"Address."
+"Address?"
+
+#speaker:Alistair
+"Perfect."
+~ helpComplete = helpComplete +1
+~ addressFix = true
 //PLACEHOLDER Jules fumbles on a hard one in his speech and if player as seen it, help Jules practice that word A LOT (ONLY TIME 5)
-//Create variable for fumble word
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 

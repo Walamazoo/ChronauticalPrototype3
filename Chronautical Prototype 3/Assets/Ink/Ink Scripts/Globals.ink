@@ -21,6 +21,7 @@ VAR hasCode = false
 VAR julesRun = false
 VAR speechImproved = false
 VAR addressFix = false
+VAR seenSpeech = false
 
 //NPC Variables
 VAR julesPresent = false

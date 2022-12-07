@@ -650,17 +650,17 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker:Alistair
 It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 {julesRun:
+    -> JulesSpeechCheck
+  - else:
     #speaker:D4RL1N6
     "There seems to be much unrest here."
     "Perhaps if there were a new director, these people would find peace..."
     
     #speaker:Alistair
     "And perhaps if we could have a friend in a high place we can access the vault."
-    ~julesRun = false
-  - else:
-    -> JulesSpeechCheck
 }
 //Shannon change parameter back to hushed
+
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
@@ -679,6 +679,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 "I'm sure you all have many questions and concerns."
 "And I am more than happy to {addressFix: address|a dress- ah- excuse me, address} them with you."
 Jules' speech was littered with uncertainities and filler words, but his heart was in the right place.
+~ seenSpeech = true
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
@@ -694,6 +695,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 "I am sure you all have many questions and concerns for me to {addressFix: address."|a dress-a-excuse me-"}
 "Please, come to me at any time with them and we can discuss."
 "Thank you."
+~ seenSpeech = true
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
