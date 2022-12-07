@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
-using Ink.UnityIntegration;
+//using Ink.UnityIntegration;
 using PixelCrushers.DialogueSystem.InkSupport;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.IO;
+using Ink;
 
 public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
-    [SerializeField] private InkFile globalsInkFile;
+    [SerializeField] private TextAsset globalsInkFile;
     [SerializeField] GameObject button;
     [SerializeField] JournalManager JournalManager;
     [SerializeField] GameObject customInkFunctions;
@@ -125,13 +126,22 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     }
 
     private void initializeVariables(){
-        //string filePath = globalsInkFile.filePath;
-        //string inkFileContents = File.ReadAllText(filePath);
-        Ink.Compiler compiler = new Ink.Compiler(globalsInkFile.GetFileContents());
+        /*string filePath = globalsInkFile.filePath;
+        string inkFileContents = File.ReadAllText(filePath);
+        Ink.Compiler compiler = new Ink.Compiler(globalsInkFile.LoadInkFileContents());
         Story globalVariablesStory = compiler.Compile();
 
         foreach(string name in globalVariablesStory.variablesState){
             Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
+            inkVariableStorage.Add(name, value);
+            Debug.Log(name + " was added to the dictionary with value = " + value);
+        }*/
+
+        var compiler = new Ink.Compiler(globalsInkFile.ToString());
+        Ink.Runtime.Story story = compiler.Compile();
+
+        foreach(string name in story.variablesState){
+            Ink.Runtime.Object value = story.variablesState.GetVariableWithName(name);
             inkVariableStorage.Add(name, value);
             Debug.Log(name + " was added to the dictionary with value = " + value);
         }

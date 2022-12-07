@@ -141,9 +141,9 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 (Though I doubt it will be as simple as just opening it...)
 
 #speaker:D4RL1N6
-"Precisely."
-#NPC:None
-~ CREATE_TIMELINE_CLUE("End of beginning", "personclue", "This is a test", "A real testy test")
+"Precisely." 
+~CREATE_TIMELINE_CLUE("End of beginning", "personclue", "This is a test", "A real testy test")
+//#NPC:None
 -> library
     
     

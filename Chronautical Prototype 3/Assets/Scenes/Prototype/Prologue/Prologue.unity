@@ -2923,18 +2923,7 @@ MonoBehaviour:
   debug: 0
   isResuming: 0
   isPlayerSpeaking: 0
-  globalsInkFile:
-    inkAsset: {fileID: 102900000, guid: 73c2cae3b6420924aa639b33bb34ca99, type: 3}
-    jsonAssetDirectory: {fileID: 0}
-    jsonAsset: {fileID: 0}
-    unhandledCompileErrors: []
-    errors: []
-    warnings: []
-    todos: []
-    parents: []
-    masterInkAssets: []
-    includePaths: []
-    includes: []
+  globalsInkFile: {fileID: 4900000, guid: da73bbf0e32783244b9a81f40e2ec768, type: 3}
   button: {fileID: 310562199}
   JournalManager: {fileID: 310562198}
   customInkFunctions: {fileID: 852796085}
