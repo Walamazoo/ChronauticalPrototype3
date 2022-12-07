@@ -577,24 +577,90 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
-//INTRODUCTION PLACEHOLDER (pull over from library)
-~metChild = true
+#speaker:Alistair
+    "Hello there! What's your name?"
+    
+    #speaker:Child
+    "..."
+    
+    #speaker:Alistair
+    "Oh, well..."
+    "My name is Alistair!"
+    
+    #speaker:Child
+    "..."
+    
+    #speaker:Alistair
+    "You... doing alright?"
+    
+    #speaker:Child
+    "I'm fine."
+    ~metChild = true
 -> CHILD
 
 =Questions
-//Intro convo
-//+ {time = X} [Convo 1] -> Convo1
-+ [Nothing for now] -> END
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-//1 option for a miscellaneous convo (something to do with this specific time and what's happening in the world or to the character)
+#speaker:Child
+"... What do you want?"
+    + {time == 1} [Like the story?] ->Story
+    //+ {time == 2} [Exciting stuff, huh?] ->Exciting
+    //+ {time == 3} [Listening in?] ->Listening
+    //+ {time == 7} [What's wrong?] ->Wrong
+    //+ {time == 8} [Hey, be careful!] ->Careful
+    + [Nothing for now]
+    #speaker:Child
+    "Fine."
+        ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        #NPC:None
+        -> DONE
 
-=Convo1
-//placeholder CONTENT
+=Story
+#speaker:Alistair
+"Do you like the story? She's such a good speaker, isn't she?"
+"You shouldn't take her too seriously, though."
+
+#speaker:Child
+"..."
+
+#speaker:Alistair
+"I'm a fan of the story."
+"Though it does go against the lab's observations, it-"
+
+#speaker:Child
+"You work in the lab, mister? Really? What's it like?"
+
+#speaker:Alistair
+"Ah, er..."
+(She suddenly opened up! What now...)
++ [Yes. I work at the lab. Definitely.]
+        #speaker:Alistair
+        "Yes! I mean, yes. I do. Been there awhile."
+        "I get to see all the cool things they have."
+        "Access to the vault and everything."
+        (I wish.)
++ [Not anymore, but I used to.]
+        #speaker:Alistair
+        "Oh, well, not anymore. I had to leave and head elsewhere for a while."
+        "But I worked under Director Crabb, and alongside a good friend of mine."
+        "So I'm still in the lab's good graces."
+        (Or at least Jules'. I doubt crabb wants to see my face.)
+    -
+    
+#speaker:Child
+"Wow... I wish I could work in the lab, too!"
+"They know so many cool things!"
+"It's my dream."
+
+#speaker:Alistair
+(Urgh. Curses. Good going Alistair, you've runied a child's dream.)
+"Well... work hard and I'm sure you'll make it."
+
+#speaker:Child
+"Thanks, mister! I will!
+
 -> Questions
 
 
 //Miriam Harcourt (Old Lady/Storyteller) NPC Convo
-
 ===OLDLADY===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 5)}
