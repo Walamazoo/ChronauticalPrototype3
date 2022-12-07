@@ -130,7 +130,7 @@ What should I do?
                 ~noNPCS=false
         - 6:    The market is barren, everyone seems to be elsewhere at the moment.
                 ~noNPCS=true
-        - 7:    The people milling about seem more interesting in gossip than shopping. A shopkeep shoos away a teen loitering in front of their store, and they sulk as they leave.
+        - 7:    The people milling about seem more interesting in gossip than shopping. A shopkeep shoos away a teen loitering in front of their store, and she sulks as she leaves.
                 ~ shopownerPresent = true
                 ~ childPresent = true
                 ~noNPCS=false
@@ -379,22 +379,196 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 =Questions
 #speaker:Uriah
 "What can I do for you today?"
-//+ {time == 3} [Busy?] ->Busy
-//+ {time == 4} [You okay?] ->Okay
-//+ {time == 5} [Heading out?] ->Heading
-//+ {time == 7} [Busy?] ->Busy
-//+ {time == 8} [Busy?] ->Busy
++ {time == 3} [Souvenirs?] ->Souvenirs
++ {time == 4} [What's new?] ->New
++ {time == 5} [The announcement...] ->Announcement
++ {time == 7} [Any good gossip?] ->Gossip
++ {time == 8} [Preparing to leave?] ->Preparing
 + [Nothing for now] -> END
 #speaker: Uriah
 "Come back anytime!"
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
-=Convo1
-//placeholder CONTENT
+=Souvenirs
+#speaker: Alistair
+"I've noticed you're selling some souvenirs."
+"Understandable, considering the crowd."
+
+#speaker:Uriah
+"Indeed. All these foreign scholars are here to see the experiments being shown off at the lab."
+"It's the perfect oppotunity for them to scout some talent."
+"Also a good opportunity for the scientists to get noticed."
+
+#speaker:Alistair
+"Selling special drinks?"
++ [Those must sell well]
+        #speaker:Alistair
+        "Elore-Nabyke is known for its drinks, right?"
+        "I'm sure people from off-planet find them delightful."
++ [Are they interested in soemthing like that?]
+        #speaker:Alistair
+        "I feel like the scholarly sort wouldn't be interested."
+        "Are you making any sales?"
+    -
+    
+#speaker:Uriah
+"Of course! The drinks of Elore-Nabyke are universe-renowned."
+"Our method of bubbling, our colors..."
+"Perhaps you'd care for one?"
+
+#speaker:Alistair
+"I'm unfortunately low on funds. Sorry."
+
+#speaker:Uriah
+"No worries, have a nice day!"
+
 -> Questions
 
 
 //Temperance Ward (Child) NPC Convo
+
+=New
+#speaker: Alistair
+"Anything new going on?"
+"It seems quite calm."
+
+#speaker:Uriah
+"Indeed. Last year was busier, but this is normal."
+"A good amount of business."
+"Oh! That's right!"
+"I believe I heared the library's rennovations are nearly complete, or at least they should be by next year."
+
+#speaker:Alistair
+"Perhaps I'll take a look, then."
+"Thank you for your time."
+
+#speaker:Uriah
+"Of course. Have a nice day!"
+
+-> Questions
+
+=Announcement
+#speaker: Alistair
+"I assume you've heard the announcement."
+"What are you going to do?"
+"It's a pretty grim verdict."
+
+#speaker:Uriah
+"Well, we've always handled whatever has come our way."
+"It's... Heartbreaking, but we'll find a way past it."
+
+#speaker:Alistair
++ ["We?"]
+        #speaker:Alistair
+        "You said 'we,' did you mean the people of Elore-Nabyke?"
++ [Even through the planet dying?]
+        #speaker:Alistair
+        "The planet will be destroyed."
+        "How can that be overcome?"
+        (Perhaps they can give me some advice...)
+    -
+
+#speaker:Uriah
+"My family lives on-planet."
+"Though I'm often out and about travelling the trade seams or here at the market, it's all to provide for them."
+"That's my priority, my loved ones."
+
+#speaker:Alistair
+"I see. That's very noble of you."
+"And... Encouraging. Thank you, I think I feel a bit better now."
+(That's right. He needs my treasure. That' why I'm doing this.)
+
+#speaker:Uriah
+"You're quite welcome. I hope you have a good rest of your day."
+
+-> Questions
+
+=Gossip
+#speaker: Alistair
+"Heard anything interesting lately?"
+"It seems everyone here today is rather talkative."
+
+#speaker:Uriah
+"Indeed. Though I wish they'd do a bit more shopping."
+"You would think planning for the future would entail getting supplies."
+
+#speaker: Alistair
+"What would people need suplies for?"
+
+#speaker:Uriah
+"I heard that the evacuation is going to happen in just a couple years."
+"Atmos vessels are nce and all, but I know I for one would like to have a travel bag."
+
+#speaker:Alistair
++ [What else about the evacuation?]
+        #speaker:Alistair
+        "Is there anything else you know about the evacuation?
++ [Any other news?]
+        #speaker:Alistair
+        "Have tou heard any other news?
+    -
+
+#speaker:Uriah
+"There's been talk about the lab director election."
+"People have been saying how the lab organizing the evacuation should have taken precedence."
+"Though the evacutaion was probably how the director managed to get elected. Makes a strong campaign platform."
+
+#speaker:Alistair
+"I suppose those two events are linked."
+"Well, I'll leave you to it."
+
+#speaker:Uriah
+"Thank you, have a nice day!"
+
+-> Questions
+
+=Preparing
+#speaker: Alistair
+"You're still running the store?"
+"Shouldn't you be preparing to leave?"
+
+#speaker:Uriah
+"I am. A number of the items on sale are my family's old possesions."
+"It's a shame to see them go, but we can't take things like furniture with us."
+"I also get to keep an eye for any good things being put on sale."
+
+#speaker:Alistair
++ [Gotten anything good?]
+        #speaker:Alistair
+        "I see, that's a smart way of looking at it."
+        "Have you managed to find anything of value?"
++ [Isn't it just all junk though?]
+        #speaker:Alistair
+        "Isn't everything being put up for sale for the same reason?"
+        "If they're not willing or able to bring it with, how does that change if you have it?"
+    -
+
+#speaker:Uriah
+"One person's trash is another one's treasure."
+"I managed to get something special. A large blanket."
+"People travelling by themselves have no need for soemthing so bulky."
+"But I'll be with my family."
+"I'm planning on using it for us to sit on, or to huddle together."
+"It's good quality fabric, too. It was quite a bargain!"
+
+#speaker:Alistair
+"That's... Lovely."
+(I could use some of that optimism.)
+"I wish you nothing but the best."
+
+#speaker:Uriah
+"Thank you, sir. I just realized, I never caught your name?"
+
+#speaker:Alistair
+"It's Alistair."
+
+#speaker:Uriah
+"Well then, have a nice day, Alistair!"
+
+#speaker:Alistair
+"You too."
+
+-> Questions
 
 ===CHILD===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
