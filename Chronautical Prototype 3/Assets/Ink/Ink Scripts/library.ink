@@ -341,6 +341,11 @@ What should I do?
 "What can I help you with?"
     + [Why are you here?] ->WhyHere
     + [What have you been up to?] ->WhatUp
+    * {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
+    * {vaultDirector == true} [Help with vault?] ->vault
+    * {seenElection == true} [Speech topics] ->topicschange
+    * {seenElection == true} [Election] ->runfordirector
+    * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
@@ -406,6 +411,226 @@ What should I do?
             #speaker:Jules
             "Of course."
                 -> JULES
+=vault
+#speaker:Alistair
+"Jules, I was hoping to ask you something about the labratory's vault..."
+
+#speaker:Jules
+"The vault?"
+
+#speaker:Alistair
+"Yes, you see..."
+"I need something from the vault. I forgot something inside."
+
+#speaker:Jules
+"You forgot something?"
+"Well, you'll have to talk to Bennet about that."
+"I can't open the vault!"
+
+#speaker:Alistair
+"The thing is, I did talk to him."
+"He's completely uninterested in helping me."
+"I only need what I left behind, he spoke as if I were planning a heist!"
+
+#speaker:Jules
+"Bennet is a stickler for rules."
+
+#speaker:Alistair
+"So, I wanted to ask if you wanted to help me get into the vault."
+
+#speaker:Jules
+"Help you...?"
+"Alistair, now you sound like you really are planning a heist."
+
+#speaker:Alistair
+"All I need is what's mine."
+
+#speaker:Jules
+"Alistair, only the Director can open the vault."
+"Bennet has a device in his office to open the vault, a key."
+"But, please, do not consider stealing it."
+
+#speaker:Alistair
+"I... wasn't thinking that."
+
+#speaker:Jules
+"Good."
+"Only the Director can open the vault, Alistair."
+"But perhaps there is some paperwork you can fill out to get your belongings back."
+
+#speaker:Alistair
+"And get stuck in bureaucratic hell..."
+
+#speaker:Jules
+"Oh Alistair."
+"I am sorry, I wish I could help you."
+//MAKE JULES GO AWAY, REPLACE WITH DARLING
+
+#speaker:D4RL1N6
+"Don't give up yet Alistair."
+
+#speaker:Alistair
+"Of course."
+
+#speaker:D4RL1N6
+"I am sure that there are more options we haven't explored. Keep searching."
+
+{seenElection:
+#speaker:Alistair
+"I recall an election, perhaps we can find some leads there."
+}
+
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+-> DONE
+
+=runfordirector
+#speaker:Alistair
+"Jules, how often does the Director election process take place?"
+
+#speaker:Jules
+"That's a strange question coming from you, Alistair!"
+"Why, every five years the Director's role is discussed and put up for debate. Sometimes a new one is appointed."
+"But..."
+"Bennet has been Director for quite awhile."
+"No one has tried to oppose him."
+
+#speaker:Alistair
+"Don't you think someone should?"
+
+#speaker:Jules
+"Well..."
+"Yes, it would be healthy for the lab to have some change in leadership."
+"Bennet is quite stuck in his ways. Just focused on keeping things as they are, a steady course neither up nor down."
+
+#speaker:Alistair
+"I think you should run against Bennet."
+
+#speaker:Jules
+"What-"
+"Alistair!"
+"I cannot run up against Bennet, I am much, much younger- I lack experience..."
+
+#speaker:Alistair
+"But you said so yourself that the lab needs some change in leadership."
+"I'm sure you're not the only one with that sentiment."
+
+#speaker:Jules
+"Perhaps so- but..."
+"Ahh... it is unlikely I would win. Even if the council does want Bennet gone."
+
+#speaker:Alistair
+"But what's the harm in trying? The election is still quite far away."
+
+#speaker:Jules
+"... Perhaps, I will think about it."
+"But I do doubt I would have much success."
+"That is quite far away, I'll think about it again once the time is nearer."
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+-> DONE
+
+=topicschange
+#speaker:Alistair
+"Jules, I was thinking, what sort of things do you think the people of Elore-Nabyke would like the Director to talk about?"
+
+#speaker:Jules
+"That's... a strange question."
+"You usually don't care much for lab politics..."
+
+#speaker:Alistair
+"Oh, but I'm just curious. I think that perhaps the people would like to hear an apology, you know?"
+
+#speaker:Jules
+"An apology about what...?"
+
+#speaker:Alistair
+"Oh- I mean, just for the lab to be more transparent with the people of the planet."
+"Right now, the lab and the people feel very seperate, don't you think?"
+
+#speaker:Jules
+"Hm."
+"I suppose so. I haven't thought of that."
+
+#speaker:Alistair
+"Just some food for thought."
+~ speechImproved = true
+~ helpComplete = helpComplete +1
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+-> DONE
+
+=fumbleword
+#speaker:Alistair
+"Jules..."
+"This is sort of a strange question, but, what do you call the numbers and words that represent your home's location?"
+
+#speaker:Jules
+"... What-"
+"Alistair, what are you talking about?"
+
+#speaker:Alistair
+"Just trust me Jules."
+
+#speaker:Jules
+"Okay. An... address?" 
+
+#speaker:Alistair
+"Okay, good. Address. Let's practice saying it."
+
+#speaker:Jules
+"Alistair, are you okay? Did something happen...?"
+
+#speaker:Alistair
+"No, I just want to make sure you can say that word really well."
+"I know that sounds strange, but just trust me. It'll make sense later."
+
+#speaker:Jules
+"Okay..."
+"Address."
+
+#speaker:Alistair
+"And there's also 'address' as in, let's address this."
+
+#speaker:Jules
+"Address."
+"Address?"
+
+#speaker:Alistair
+"Perfect."
+~ helpComplete = helpComplete +1
+~ addressFix = true
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+-> DONE
+
+=speechpeptalk
+#speaker:Alistair
+"You know, I think you would be a good Director."
+
+#speaker:Jules
+"Oh?"
+"Really? Well, I'll run and try my best."
+"But Crabb has been in the business so long, it's hard to imagine anyone but him being Director."
+
+#speaker:Alistair
+"Maybe."
+"But you're smart, and you worry about things other than the lab's profit margins."
+"You know, I don't think I've ever even seen Bennet in the market."
+
+#speaker:Jules
+"I've heard he hasn't left the lab grounds in years."
+
+#speaker:Alistair
+"See, this is why you'd be great as a Director."
+
+#speaker:Jules
+"Thanks Alistair."
+"I'll try my best."
+~ helpComplete = helpComplete +1
+~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+-> DONE
+
 
 ===CHILD===
 {metChild: -> Questions|-> meetChild}
