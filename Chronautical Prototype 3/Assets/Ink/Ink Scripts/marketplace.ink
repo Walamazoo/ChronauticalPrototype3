@@ -283,7 +283,7 @@ Who should I talk to?
     (... So much will be lost...)
         -> Questions
     
-+ [You sure are dilligent.] 
++ [You sure are dilligent] 
     #speaker:Alistair
     "You're quite the hard worker, to do all this. It's always been impressive."
     
@@ -590,8 +590,8 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
     "Hello there! What's your name?"
     
-    #speaker:Child
-    "..."
+    #speaker:Temperance
+    "...Temperance."
     
     #speaker:Alistair
     "Oh, well..."
@@ -603,21 +603,21 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     #speaker:Alistair
     "You... doing alright?"
     
-    #speaker:Child
+    #speaker:Temperance
     "I'm fine."
     ~metChild = true
 -> CHILD
 
 =Questions
-#speaker:Child
+#speaker:Temperance
 "... What do you want?"
     + {time == 1} [Like the story?] ->Story
-    //+ {time == 2} [Exciting stuff, huh?] ->Exciting
-    //+ {time == 3} [Listening in?] ->Listening
+    + {time == 2} [Exciting stuff, huh?] ->Exciting
+    + {time == 3} [Listening in?] ->Listening
     //+ {time == 7} [What's wrong?] ->Wrong
     //+ {time == 8} [Hey, be careful!] ->Careful
     + [Nothing for now]
-    #speaker:Child
+    #speaker:Temperance
     "Fine."
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         #NPC:None
@@ -628,26 +628,26 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Do you like the story? She's such a good speaker, isn't she?"
 "You shouldn't take her too seriously, though."
 
-#speaker:Child
+#speaker:Temperance
 "..."
 
 #speaker:Alistair
 "I'm a fan of the story."
 "Though it does go against the lab's observations, it-"
 
-#speaker:Child
+#speaker:Temperance
 "You work in the lab, mister? Really? What's it like?"
 
 #speaker:Alistair
 "Ah, er..."
 (She suddenly opened up! What now...)
-+ [Yes. I work at the lab. Definitely.]
++ [Yes. I work at the lab. Definitely]
         #speaker:Alistair
         "Yes! I mean, yes. I do. Been there awhile."
         "I get to see all the cool things they have."
         "Access to the vault and everything."
         (I wish.)
-+ [Not anymore, but I used to.]
++ [Not anymore, but I used to]
         #speaker:Alistair
         "Oh, well, not anymore. I had to leave and head elsewhere for a while."
         "But I worked under Director Crabb, and alongside a good friend of mine."
@@ -655,7 +655,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         (Or at least Jules'. I doubt crabb wants to see my face.)
     -
     
-#speaker:Child
+#speaker:Temperance
 "Wow... I wish I could work in the lab, too!"
 "They know so many cool things!"
 "It's my dream."
@@ -664,11 +664,94 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 (Urgh. Curses. Good going Alistair, you've runied a child's dream.)
 "Well... work hard and I'm sure you'll make it."
 
-#speaker:Child
+#speaker:Temperance
 "Thanks, mister! I will!
 
 -> Questions
 
+=Exciting
+#speaker:Alistair
+"Woah there! You seem excited."
+"There are some delicate goods being handled, don't bump into anyone."
+
+#speaker:Temperance
+"Oh! Um, sorry mister."
+
+#speaker:Alistair
+"And steer especially clear of the lab workers."
+"Some of those artefacts cannot be replaced."
+
+#speaker:Temperance
+"Ah! But... That stuff's so cool! I wanna see it!"
+"All that lab stuff is so cool."
+
+#speaker:Alistair
++ [They do a bunch of boring stuff too, though]
+        #speaker:Alistair
+        "Well, I'm glad you're excited."
+        "However, it's not just holding cool devices."
+        "They do a lot of boring research and tests, too."
+        "And they have lots of regulations."
++ [It really is the coolest]
+        #speaker:Alistair
+        "Yeah. Those folks at the lab work really hard."
+        "They really are cool. They do groundbreaking research every day. They change the world."
+        (...Not always for the better, in my case.)
+    -
+    
+#speaker:Temperance
+"Some other kids think it's boring, but I think that reserch stuff is the best part."
+"It's fun to know things."
+
+#speaker:Alistair
+"That's a wonderful mindset you have there."
+"You should check out the showcae they're having next year."
+"Lots of interesting topics there."
+
+#speaker:Temperance
+"Really? I will!"
+
+-> Questions
+
+
+//Miriam Harcourt (Old Lady/Storyteller) NPC Convo
+
+=Listening
+#speaker:Alistair
+"Listening to the storyteller?"
+"I would have expected you to be more interested in the lab showcase."
+
+#speaker:Temperance
+"I already looked at all that stuff."
+"All the lab people are busy talking to a bunch of snooty people."
+"Some man in a top hat shooed me away."
+
+#speaker:Alistair
+"So you're here listening to her?"
++ [She doesn't trust the lab at all]
+        #speaker:Alistair
+        "She doesn't believe in the lab or any of the workers."
+        "Most of her 'stories' are wild rumors."
++ [She does perform for anyone]
+        #speaker:Alistair
+        "I suppose she does have certain charm in that she doesn't discriminate."
+    -
+    
+#speaker:Temperance
+"I know she says different things than teh lab people..."
+"But it's interesting. It's new."
+"I like fantasy stuff too, y'know."
+
+#speaker:Alistair
+"Fair enough. Well, enjoy."
+
+#speaker:Temperance
+"Mhm."
+
+-> Questions
+
+
+//Miriam Harcourt (Old Lady/Storyteller) NPC Convo
 
 //Miriam Harcourt (Old Lady/Storyteller) NPC Convo
 ===OLDLADY===
