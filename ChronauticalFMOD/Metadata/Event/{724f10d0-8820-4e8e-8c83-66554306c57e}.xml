@@ -5,13 +5,13 @@
 			<value>Cyan</value>
 		</property>
 		<property name="name">
-			<value>Prologue Music</value>
+			<value>Prologue Music OLD</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{a5b08dc5-65e8-432e-85ae-e3c716e9d8f7}</destination>
+			<destination>{184970c1-11d6-4630-9627-96bcef72010a}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{b94bfc97-e819-4603-a091-96ee5671d997}</destination>
@@ -42,9 +42,6 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{807076dd-ad4c-4c10-a5d9-a92e92df6695}</destination>
-		</relationship>
-		<relationship name="banks">
-			<destination>{4ae182c3-7808-4e01-b5b9-834570cbc284}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{b94bfc97-e819-4603-a091-96ee5671d997}">

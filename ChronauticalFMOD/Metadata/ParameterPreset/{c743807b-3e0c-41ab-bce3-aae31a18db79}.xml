@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{c743807b-3e0c-41ab-bce3-aae31a18db79}">
+		<property name="name">
+			<value>PrologueTime</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c028776a-6130-471a-b402-962acefbe0d9}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{515147b3-9e4f-4802-90ae-c1bee7504500}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{515147b3-9e4f-4802-90ae-c1bee7504500}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>5</value>
+		</property>
+	</object>
+</objects>
