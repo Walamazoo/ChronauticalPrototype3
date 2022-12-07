@@ -650,7 +650,7 @@ What should I do?
     "Hello there! What's your name?"
     
     #speaker:Child
-    "..."
+    "...Temperance."
     
     #speaker:Alistair
     "Oh, well..."
@@ -709,7 +709,8 @@ What should I do?
 -> Questions
 
 =Parents
-"Do your parents know you're here?" #speaker:Alistair
+#speaker:Alistair
+"Do your parents know you're here?"
         #speaker:Child
         "No."
         "They're packing up everything."
