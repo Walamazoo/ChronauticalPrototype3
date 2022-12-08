@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class JournalManager : MonoBehaviour
 {
@@ -52,6 +53,9 @@ public class JournalManager : MonoBehaviour
 
     //[SerializeField] Camera MainCamera;
     [SerializeField] TimeChanged hand;
+    [SerializeField] GameObject highlight;
+    Tween fadeInTween;
+    Tween fadeOutTween;
 
     void Start(){
         //CurrentPage should always start as JournalMain as it's the first page
@@ -247,6 +251,7 @@ public class JournalManager : MonoBehaviour
                 break;
         }
         UpdateSelected(true);
+        StartCoroutine(journalUpdated());
     }
 
     public void createTimelineClue(string name, string type, string hoverDescription, string fullDescription){
@@ -293,6 +298,7 @@ public class JournalManager : MonoBehaviour
                 }
                 break;
         }
+        StartCoroutine(journalUpdated());
     }
 
     //Grabs and stores the GameObject that matches the passed in JournalObject's name.
@@ -362,7 +368,15 @@ public class JournalManager : MonoBehaviour
         }
     }
 
-    private void journalUpdated(){
-        
+    private IEnumerator journalUpdated(){
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Page turn");
+        for(int i = 0; i <= 4; i++){
+        fadeOutTween = highlight.GetComponent<Image>().DOFade(0, 0.25f);
+        yield return fadeOutTween.WaitForCompletion();
+        fadeInTween = highlight.GetComponent<Image>().DOFade(1, 0.25f);
+        yield return fadeInTween.WaitForCompletion();
+        }
+        fadeOutTween = highlight.GetComponent<Image>().DOFade(0, 0.25f);
+        yield return fadeOutTween.WaitForCompletion();
     }
 }
