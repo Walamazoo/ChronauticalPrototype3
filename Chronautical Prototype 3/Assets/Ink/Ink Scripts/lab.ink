@@ -98,17 +98,17 @@ What should I do?
         { time:
         - 1:    A handful of scientists huddle around a projected figure I don't recognize, but they seem to be listening somberly.
                 +Listen in -> OtherPlanetAnnounce
-        - 2:    The lab is filled with a buzzling excitement and energy as scientists, assistants, and cityfolk move about from task to task. 
+        - 2:    The lab is filled with a buzzing excitement and energy as scientists, assistants, and cityfolk move about from task to task. 
         - 3:    The room is lined with booths, boards, and flashy experiments. Judges walk around with their hands behind their backs as eager young scientists stand at attention.
                 +Investigate -> ScienceFair
         - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
-        - 5:    A large crowd of various employees of the lab crowd around a projection of the Director, even the wasteman strains to listen.
+        - 5:    A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
                 Everyone is silent.
                 +Investigate -> AnnounceDestruction
         - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
         - 7:    The lab is litered with balloon arches and confetti liters the ground. 'Crabb continues reign' is sprawled everywhere on posers and decorations.
                 Lab employees simply step over the confetti and continue their work.
-        - 8:    The lab is incredibly bare. I see very few lab stations remaining and everything that wasn't attached to the floor or the wall is gone, replaced only by a clean spot in the layer of dust.
+        - 8:    The lab is incredibly bare. Very few lab stations remain and anything that wasn’t bolted to the floor or walls is gone, leaving behind only clean spots in the dust where equipment once was. 
         - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
         - 10:   What was once a lab has now been completely swallowed up by a monsterous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
         }
@@ -343,7 +343,7 @@ Who should I talk to?
 
 =vault
 #speaker:Alistair
-"Jules, I was hoping to ask you something about the labratory's vault..."
+"Jules, I was hoping to ask you something about the laboratory's vault..."
 
 #speaker:Jules
 "The vault?"
@@ -583,8 +583,8 @@ Who should I talk to?
 "Alistair?"
 "Hm..."
 "Of course. Alistair."
-"I would have prefered to have forgotten that name, but it seems you have returned."
-"But your poor disipinary marks have certainly not been forgotten."
+"I would have preferred to have forgotten that name, but it seems you have returned."
+"Your poor disciplinary marks have most certainly not been forgotten."
     + [What marks?]
     #speaker:Alistair
     #sprite:Alistair_Nervous
@@ -597,7 +597,7 @@ Who should I talk to?
     + [Sorry]
     #speaker:Alistair
     #sprite:Alistair_Nervous
-    "Sir, I am quite sorry, please accept my apology."
+    "I am quite sorry, sir. My sincerest apologies."
     
     - 
     #speaker:Director
@@ -716,13 +716,13 @@ Who should I talk to?
 "I really need them! You wouldn't mind just letting me into the vault for a moment would you?"
 
 #speaker:Director
-"That's proposterous."
-"You are no longer employed here and you should know that civilians are strictly prohibited access to any classified materials in the vault."
+"That's preposterous."
+"You are no longer employed here and you should know that civilians are strictly prohibited access to any of the vault’s highly classified materials."
     + [I need it]
         #speaker:Alistair
         #sprite:Alistair_Confident
         "Sir, I really need my belongings that I left in the vault."
-        "It's imparitive that I get them."
+        "It's imperative that I get them."
     + [Please]
         #speaker:Alistair
         #sprite:Alistair_Sad
@@ -764,7 +764,7 @@ Who should I talk to?
     - 
         #speaker:Director
         "Silence, I have already made my decision."
-        "Be gone now, I am incredibly occupied at the moment."
+        "Begone now, I am incredibly occupied at the moment."
         
 #speaker:Alistair
 #sprite:Alistair_Sad
@@ -786,7 +786,7 @@ Who should I talk to?
 "It is improbable that Mr. Bennet Crabb is the only one who can get into the vault."
 "Perhaps we can seek out another employee."
 #NPC:Darling_Happy
-"They might be able to help us or to give us some new information."
+"They may be able to help us or shed light on new information. "
 
 #speaker:Alistair
 "Jules still works for the lab. We interned together."

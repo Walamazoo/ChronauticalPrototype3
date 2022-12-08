@@ -59,7 +59,7 @@ VAR oldladyPresent = false */
 #background:Library_Interior
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
-It was full of what I would become. Dreams of adventure in the stars piercing through the dark.
+It was full of what I would become; dreams of adventure in the stars piercing through the dark emptiness.
 I was gripped with a frenzy to explore beyond my bubble of libraries and teahouses.
 But, most of all, I dreamed of the star system lost.
 Atlantis.
@@ -71,7 +71,7 @@ Atlantis.
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
-(But perhaps there's still a book, a piece of information, I haven't found yet.)
+(But perhaps  there’s... Something, anything I’m missing. There has to be. A book, a piece of information, I haven't found yet.)
 #sprite:Alistair_Neutral
 (All this mustn't end in failure.)
 There are so few tomes left, most have been consumed by fire or thrown to the ground by earthquakes.
@@ -89,7 +89,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 'There's still time. I can still fix this, I just need to-'
 
 #speaker:D4RL1N6
-"Alistair, it is unwise to ignore me."
+"Alistair, it is inadvisable to ignore me."
 
 #speaker:Alistair
 "I'm sorry, I'm not- I just need to find this book, I think I remember it saying something about the core."
@@ -152,7 +152,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 //Room Description for Journal
 { time:
 - 1:    
-        ~ roomDescription = "Bustling with rumors and security won't let me close to the vault."
+        ~ roomDescription = "Gossip about teh announcement and security won't let me close to the vault."
         ~SET_PARAMETER("PrologueTime", 1)
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
@@ -210,15 +210,15 @@ What should I do?
         //Room Description for Player
         //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
         { time:
-        - 1:    Employees sit in tight circles around the library. There's no reading to be done, instead, there's an electricity in the air in the form of hush whispers.
+        - 1:    Employees sit in tight circles around the library. There's no reading to be done, instead, there's an electricity in the air in the form of hushed whispers.
                 +Investigate the vault -> Security
-        - 2:    Scaffolding grazes the arched cielings of the library and the smell of paint, hard wood, and oil linger in the air as carpenters navigate the space. Lab security keeps a close eye on the newcomers. 
+        - 2:    Scaffolding grazes the arched ceilings of the library. The smells of paint, hardwood, and oil linger in the air as carpenters navigate the space. Lab security keeps a close eye on the newcomers. 
                 +Investigate the vault -> Security
-        - 3:    Carpenters dip their brushes into fine oils and touch up the shelving and masons repair chips in the floor. The room is sectioned off and lab security stands at attention. 
+        - 3:    Carpenters dip their brushes into fine lacquers to coat the rows of shelves as masons repair chipped floors. The room is sectioned off and lab security stands at attention. 
                 +Investigate the vault -> Security
-        - 4:    A foreman walks around the newly rennovated library with a clip board and lab security following her everystep. Looks like rennovations are almost done. 
+        - 4:    A foreman paces around the renovated library carrying a clipboard, lab security following her every step. Looks like rennovations are almost done. 
                 +Investigate the vault -> Security
-        - 5:    The library shines with newfound gusto and even the books seem a little newer. Lab employees gather around to marvel at it. 
+        - 5:     Lab employees gather around to marvel at the library that shines with newfound gusto. Even the books seem a little newer.
                 +Investigate the vault -> InvestigateVault
         - 6:    People stand shoulder to shoulder, all looking at a group of lab board members sitting in a circle toward the front of the room. Everyone is eager to listen and some even stand on ladders to get the best vantage point. 
                 +Listen in -> Election
@@ -226,7 +226,7 @@ What should I do?
                 +Investigate the vault -> InvestigateVault
         - 8:    The library is gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
                 +Investigate the vault -> InvestigateVault
-        - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly then hold still once more. 
+        - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly, then hold still once more. 
                 +Investigate the vault -> InvestigateVault
         - 10:   Flames have claimed the library. Any metal is now liquid and only aids the fire in its quest for destruction.
                 +Investigate the vault -> HotVault
@@ -247,12 +247,12 @@ What should I do?
                 ~noNPCS=true
         - 5:    Plenty of lab employees mill about, but all of them look too busy to talk to me.
                 ~noNPCS=true
-        - 6:    There are hundreds of people stuffed into the library. They're all listening to dozen board members speaking at the front of the room. It would be impossible for me to get a word in. 
+        - 6:    There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room. It would be impossible for me to get a word in. 
                 +Listen in->Election
         - 7:    Jules stands alone in the center of the room with his hands behind his back as he looks at the spines of books on the shelves.
                 ~julesPresent = true
                 ~noNPCS = false
-        - 8:    I see a child sitting at one of the reading desks with their head in their hands. They don't notice me.
+        - 8:    I see a teen sitting at one of the reading desks with their head in their hands. They don't notice me.
                 ~childPresent = true
                 ~noNPCS=false
         - 9:    There's not a soul in sight.
@@ -285,6 +285,9 @@ What should I do?
 
     #speaker:Alistair
     "Jules? Is that you?"
+    
+    #speaker: 
+    Jules’s face breaks into a shocked smile, caught off guard by the familiar voice.”
     
     #speaker:Jules
     "Alistair!"
@@ -320,7 +323,7 @@ What should I do?
         "I don't know what you could be talking about..."
         
         #speaker:Jules
-        "You are too easy to read my friend." -> JULES
+        "Ha! You are too easy to read my friend." -> JULES
     +[Adventuring] 
         
         #speaker:Alistair
@@ -342,7 +345,7 @@ What should I do?
         "I don't know what you could be talking about..."
         
         #speaker:Jules
-        "You are too easy to read my friend." -> JULES
+        "Ha! You are too easy to read my friend." -> JULES
 
 =Questions
 #NPC:Jules_Neutral
@@ -375,7 +378,7 @@ What should I do?
 "Everyone will be off the planet soon..."
 "But the library reminds me of our time as interns here at the lab."
 "Remember that time?"
-"It's truely nostolgic..."
+"It's truely nostalgic..."
         ->JULES
 
 =WhatUp
@@ -397,7 +400,7 @@ What should I do?
     - 
         #speaker:Jules
         "Perhaps you have. But you're still the same at your core."
-        "... That's a good thing, Alistair. Don't lose your sense of wonder, your adventurous spirit."
+        "... That's a good thing, Alistair. Don’t ever lose your sense of wonder, that adventurous spirit of yours."
         ++ [Promise] 
             #speaker:Alistair
             "I don't think I ever will, you can count on that."
@@ -816,8 +819,8 @@ He crosses his arms and just stands there.
 
 ===HotVault===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-The vault shimmers under the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
-The treasure might even have melted inside the vault anyway.
+The vault shimmers from the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
+The treasure’s most likely melted by now anyways.
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> END //library
 
@@ -826,7 +829,7 @@ The treasure might even have melted inside the vault anyway.
 ===Election===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //variables will need to be added to change the election outcome and stance of the NPCs
-As crowds of people close in on the board, I push and wriggle my way closer to the front.
+As crowds of people close in on the board members, I push and wriggle my way closer to the front.
 Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker:Board member
 "Come forth, any of you who wish to speak."
@@ -838,7 +841,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
         "But."
-        "I think I also speak for the community when I say that the lab and the director's handling of the evacuation of the planet to be entirely abhorent."
+        "I think I also speak for the community when I say that we find the lab and the director's handling of the evacuation of the planet to be entirely abhorrent."
         "Is it not the lab itself that discovered the core's damaged state? 
         "Why have you not put more time into fixing it? Why must we abandon our home?"
         "Why is the lab still functioning as if the planet is not going to explode in a few years?"
