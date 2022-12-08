@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e46e2773315f3ad478d7500b25e1c413, type: 3}
-  m_Name: Storyteller
+  m_Name: Uriah
   m_EditorClassIdentifier: 
   Expressions:
-  - {fileID: 21300000, guid: 04f567b970ed6bb49a38e3aa98e7152a, type: 3}
+  - {fileID: 21300000, guid: 18d7427a9583fd644be3ef71281c90ef, type: 3}
