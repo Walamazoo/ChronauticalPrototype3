@@ -55,7 +55,7 @@ VAR metOldlady = false */
     ~SET_PARAMETER("PrologueTime", 5)
     {SET_PARAMETER("PrologueAmbience", 10)}
     {SET_PARAMETER("PrologueCharacters", 5)}
-- 4:    
+- 4:   
     ~ roomDescription = "Place is slow today, not many shoppers."
     ~SET_PARAMETER("PrologueTime", 5)
     {SET_PARAMETER("PrologueAmbience", 11)}
@@ -81,7 +81,7 @@ VAR metOldlady = false */
     {SET_PARAMETER("PrologueAmbience", 10)}
     {SET_PARAMETER("PrologueCharacters", 1)}
 - 9:    
-    ~ roomDescription = "Lots of people are packing up and getting onto Atmos vessals."
+    ~ roomDescription = "Lots of people are packing up and getting onto Atmos vessels."
     ~SET_PARAMETER("PrologueTime", 10)
     {SET_PARAMETER("PrologueAmbience", 12)}
     {SET_PARAMETER("PrologueCharacters", 1)}
@@ -140,7 +140,7 @@ What should I do?
                 ~noNPCS=false
         - 6:    The market is barren, everyone seems to be elsewhere at the moment.
                 ~noNPCS=true
-        - 7:    The people milling about seem more interesting in gossip than shopping. A shopkeep shoos away a teen loitering in front of their store, and she sulks as she leaves.
+        - 7:    The people milling about seem more interested in gossip than shopping. A shopkeep shoos away a teen loitering in front of their store, and she sulks as she leaves.
                 ~ shopownerPresent = true
                 ~ childPresent = true
                 ~noNPCS=false
@@ -254,6 +254,7 @@ Who should I talk to?
 + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
+    #speaker: 
     #NPC:None 
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         -> DONE
@@ -395,8 +396,9 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + {time == 7} [Any good gossip?] ->Gossip
 + {time == 8} [Preparing to leave?] ->Preparing
 + [Nothing for now] -> END
-#speaker: Uriah
+ #speaker: Uriah
 "Come back anytime!"
+ #speaker: 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =Souvenirs
@@ -515,7 +517,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "Is there anything else you know about the evacuation?
 + [Any other news?]
         #speaker:Alistair
-        "Have tou heard any other news?
+        "Have you heard any other news?
     -
 
 #speaker:Uriah
@@ -614,11 +616,12 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     + {time == 1} [Like the story?] ->Story
     + {time == 2} [Exciting stuff, huh?] ->Exciting
     + {time == 3} [Listening in?] ->Listening
-    //+ {time == 7} [What's wrong?] ->Wrong
-    //+ {time == 8} [Hey, be careful!] ->Careful
+    + {time == 7} [What's wrong?] ->Wrong
+    + {time == 8} [Hey, be careful!] ->Careful
     + [Nothing for now]
     #speaker:Temperance
     "Fine."
+     #speaker: 
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         #NPC:None
         -> DONE
@@ -750,8 +753,132 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 -> Questions
 
+=Wrong
+#speaker:Alistair
+"Hey, what's wrong?"
 
-//Miriam Harcourt (Old Lady/Storyteller) NPC Convo
+#speaker:Temperance
+"Hmph. What makes you think something's wrong?"
+
+#speaker:Alistair
+(Hm. Seems she's in her rebellious phase. Nothing I can't handle.)
+"Well, you just seem a bit unenergetic."
+"The results of the election for lab director's still hot news."
+"I figured it'd be something to be excited about."
+
+#speaker:Temperance
+"The lab director?"
+"What does it matter anyway."
+
+#speaker:Alistair
+(Uh oh.)
++ [Did you want someone else to win?]
+        #speaker:Alistair
+        "Are you unsatisfied with the election results?"
+        "Even if you are theres always..."
+        "..."
+        "There will be a next time."
++ [Is it about the planet?]
+        #speaker:Alistair
+        "Do you say that because the planet is dying?"
+        "Even if we loose the physical lab, the people will live."
+        "The research they've done will persist."
+        "Knowledge doesn't die."
+    -
+    
+#speaker:Temperance
+"Yeah right."
+"Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
+"And now we just have to run away?"
+"That'll always be the the same, I've realized."
+"They're not willing to fight for it. Not willing to change."
+
+#speaker:Alistair
+"You should know that their instruments are finely tuned."
+"The planet will barely last three years."
+"That's not enough time. People's lives are more important!"
+
+#speaker:Temperance
+"They could at least try."
+
+#speaker:Alistair
+"They are."
+
+#speaker:Temperance
+"Whatever."
+
+-> Questions
+
+=Careful
+#speaker:Alistair
+"Be careful there!"
+"You could've knocked him over."
+
+#speaker:Temperance
+"-erves it..."
+
+#speaker:Alistair
+"What was that?"
+
+#speaker:Temperance
+"I said he probably deserves it!"
+"He works at the lab, but he's here just wasting time?"
+"He should be there! Fixing things!"
+
+#speaker:Alistair
+"You-! Mmph..."
+(Breathe, Alistair. Breathe.)
+(I'm letting my friendship with Jules make this personal.)
+"I uderstand that you're upset."
++ [But there's nothing he can do]
+        #speaker:Alistair
+        "He's just a man."
+        "Struggling for years on end against a monumental problem."
+        "One laboratory against the weight of a world."
+        "It hasn't been enough."
+        "Sometimes... Things are just out of someone's hands."
+        "When that time comes we should be there to support them."
+        "They can't handle another enemy."
++ [But lashing out won't fix things]
+        #speaker:Alistair
+        "You can't take out your feelings on him."
+        "He's probably been working harder than anyone."
+        "He has a life, a family. He wants the best for the planet."
+        "The people in the lab are the ones closest to this issue."
+        "It's... Infuriating."
+        "To be so close to fixing something and to... To..."
+        "Not be able to fix it."
+        "..."
+        "We should be supporting each other in times like this."
+    -
+    
+#speaker:Temperance
+"...But..."
+"...Then who'll support me?"
+"I don't want the planet to die."
+"What about my feelings?"
+
+#speaker:Alistair
+"We support each other. If you reach out a hand, you'll be offered a hand back."
+"There are always people who will care about you."
+
+#speaker:Temperance
+"..."
+"Do you... Care?"
+
+#speaker:Alistair
+"Yes."
+
+#speaker:Temperance
+"..."
+"Thanks, mister. Alistair."
+
+#speaker:Alistair
+"Take care."
+(I'm... So sorry.)
+
+-> Questions
+
 
 //Miriam Harcourt (Old Lady/Storyteller) NPC Convo
 
@@ -801,6 +928,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Nothing for now] -> END
 #speaker:Miriam
 "Whenever you seek truth, just find me again."
+ #speaker: 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 
 =Dissapearance
