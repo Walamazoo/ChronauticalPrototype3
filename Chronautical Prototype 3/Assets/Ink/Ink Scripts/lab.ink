@@ -343,12 +343,14 @@ Who should I talk to?
 
 =vault
 #speaker:Alistair
-"Jules, I was hoping to ask you something about the laboratory's vault..."
+#sprite:Alistair_Nervous
+"Jules, I was hoping to ask you something about the labratory's vault..."
 
 #speaker:Jules
 "The vault?"
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Yes, you see..."
 "I need something from the vault. I forgot something inside."
 
@@ -360,12 +362,14 @@ Who should I talk to?
 #speaker:Alistair
 "The thing is, I did talk to him."
 "He's completely uninterested in helping me."
+#sprite:Alistair_Embarrassed
 "I only need what I left behind, he spoke as if I were planning a heist!"
 
 #speaker:Jules
 "Bennet is a stickler for rules."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "So, I wanted to ask if you wanted to help me get into the vault."
 
 #speaker:Jules
@@ -389,34 +393,40 @@ Who should I talk to?
 "But perhaps there is some paperwork you can fill out to get your belongings back."
 
 #speaker:Alistair
+#sprite:Alistair_Sad
 "And get stuck in bureaucratic hell..."
 
 #speaker:Jules
 "Oh Alistair."
 "I am sorry, I wish I could help you."
-//MAKE JULES GO AWAY, REPLACE WITH DARLING
 
+#NPC:Darling_Upset
 #speaker:D4RL1N6
 "Don't give up yet Alistair."
 
 #speaker:Alistair
 "Of course."
 
+#NPC:Darling_Neutral
 #speaker:D4RL1N6
 "I am sure that there are more options we haven't explored. Keep searching."
 
 {seenElection:
 #speaker:Alistair
+#sprite:Alistair_Confident
 "I recall an election, perhaps we can find some leads there."
 }
 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+#sprite:Alistair_Neutral
 -> DONE
 
 =runfordirector
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
+#NPC:Jules_Neutral
 #speaker:Jules
 "That's a strange question coming from you, Alistair!"
 "Why, every five years the Director's role is discussed and put up for debate. Sometimes a new one is appointed."
@@ -425,6 +435,7 @@ Who should I talk to?
 "No one has tried to oppose him."
 
 #speaker:Alistair
+#sprite:Alistair_Confident
 "Don't you think someone should?"
 
 #speaker:Jules
@@ -433,9 +444,11 @@ Who should I talk to?
 "Bennet is quite stuck in his ways. Just focused on keeping things as they are, a steady course neither up nor down."
 
 #speaker:Alistair
+#sprite:Alistair_Embarassed
 "I think you should run against Bennet."
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "What-"
 "Alistair!"
 "I cannot run up against Bennet, I am much, much younger- I lack experience..."
@@ -449,11 +462,13 @@ Who should I talk to?
 "Ahh... it is unlikely I would win. Even if the council does want Bennet gone."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "But what's the harm in trying? The election is still quite far away."
 
 #speaker:Jules
 "... Perhaps, I will think about it."
 "But I do doubt I would have much success."
+#NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
@@ -461,13 +476,16 @@ Who should I talk to?
 
 =topicschange
 #speaker:Alistair
+#sprite:Alistair_Suspicious
 "Jules, I was thinking, what sort of things do you think the people of Elore-Nabyke would like the Director to talk about?"
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "That's... a strange question."
 "You usually don't care much for lab politics..."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Oh, but I'm just curious. I think that perhaps the people would like to hear an apology, you know?"
 
 #speaker:Jules
@@ -478,6 +496,7 @@ Who should I talk to?
 "Right now, the lab and the people feel very seperate, don't you think?"
 
 #speaker:Jules
+#NPC:Jules_Neutral
 "Hm."
 "I suppose so. I haven't thought of that."
 
@@ -491,10 +510,12 @@ Who should I talk to?
 
 =fumbleword
 #speaker:Alistair
+#sprite:Alistair_Assured
 "Jules..."
 "This is sort of a strange question, but, what do you call the numbers and words that represent your home's location?"
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "... What-"
 "Alistair, what are you talking about?"
 
@@ -505,6 +526,7 @@ Who should I talk to?
 "Okay. An... address?" 
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Okay, good. Address. Let's practice saying it."
 
 #speaker:Jules
@@ -516,6 +538,7 @@ Who should I talk to?
 
 #speaker:Jules
 "Okay..."
+#NPC:Jules_Neutral
 "Address."
 
 #speaker:Alistair
@@ -523,6 +546,7 @@ Who should I talk to?
 
 #speaker:Jules
 "Address."
+#NPC:Jules_Nervous
 "Address?"
 
 #speaker:Alistair
@@ -538,8 +562,10 @@ Who should I talk to?
 "You know, I think you would be a good Director."
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "Oh?"
 "Really? Well, I'll run and try my best."
+#NPC:Jules_Neutral
 "But Crabb has been in the business so long, it's hard to imagine anyone but him being Director."
 
 #speaker:Alistair
@@ -554,6 +580,7 @@ Who should I talk to?
 "See, this is why you'd be great as a Director."
 
 #speaker:Jules
+#NPC:Jules_Confident
 "Thanks Alistair."
 "I'll try my best."
 ~ helpComplete = helpComplete +1

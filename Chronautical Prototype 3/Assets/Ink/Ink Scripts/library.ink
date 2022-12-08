@@ -56,14 +56,14 @@ VAR oldladyPresent = false */
 ~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
 ~ time = 10
 ~ seenBeginning = true
-#background:Library_Interior
+#background:Silhouetteintro
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
 It was full of what I would become; dreams of adventure in the stars piercing through the dark emptiness.
 I was gripped with a frenzy to explore beyond my bubble of libraries and teahouses.
 But, most of all, I dreamed of the star system lost.
 Atlantis.
-//Some sort of change in background here
+#background:Library_Interior
 
 #sprite:Alistair_Sad
 #speaker:Alistair
@@ -253,8 +253,8 @@ What should I do?
                 ~julesPresent = true
                 ~noNPCS = false
         - 8:    I see a teen sitting at one of the reading desks with their head in their hands. They don't notice me.
-                ~childPresent = true
-                ~noNPCS=false
+                //~childPresent = true
+                ~noNPCS=true
         - 9:    There's not a soul in sight.
                 ~noNPCS=true
         - 10:   There's not a soul in sight.
@@ -425,12 +425,14 @@ What should I do?
                 -> JULES
 =vault
 #speaker:Alistair
+#sprite:Alistair_Nervous
 "Jules, I was hoping to ask you something about the labratory's vault..."
 
 #speaker:Jules
 "The vault?"
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Yes, you see..."
 "I need something from the vault. I forgot something inside."
 
@@ -442,12 +444,14 @@ What should I do?
 #speaker:Alistair
 "The thing is, I did talk to him."
 "He's completely uninterested in helping me."
+#sprite:Alistair_Embarrassed
 "I only need what I left behind, he spoke as if I were planning a heist!"
 
 #speaker:Jules
 "Bennet is a stickler for rules."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "So, I wanted to ask if you wanted to help me get into the vault."
 
 #speaker:Jules
@@ -471,12 +475,12 @@ What should I do?
 "But perhaps there is some paperwork you can fill out to get your belongings back."
 
 #speaker:Alistair
+#sprite:Alistair_Sad
 "And get stuck in bureaucratic hell..."
 
 #speaker:Jules
 "Oh Alistair."
 "I am sorry, I wish I could help you."
-//MAKE JULES GO AWAY, REPLACE WITH DARLING
 
 #NPC:Darling_Upset
 #speaker:D4RL1N6
@@ -491,10 +495,13 @@ What should I do?
 
 {seenElection:
 #speaker:Alistair
+#sprite:Alistair_Confident
 "I recall an election, perhaps we can find some leads there."
 }
 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
+#sprite:Alistair_Neutral
 -> DONE
 
 =runfordirector
@@ -510,6 +517,7 @@ What should I do?
 "No one has tried to oppose him."
 
 #speaker:Alistair
+#sprite:Alistair_Confident
 "Don't you think someone should?"
 
 #speaker:Jules
@@ -518,9 +526,11 @@ What should I do?
 "Bennet is quite stuck in his ways. Just focused on keeping things as they are, a steady course neither up nor down."
 
 #speaker:Alistair
+#sprite:Alistair_Embarassed
 "I think you should run against Bennet."
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "What-"
 "Alistair!"
 "I cannot run up against Bennet, I am much, much younger- I lack experience..."
@@ -534,11 +544,13 @@ What should I do?
 "Ahh... it is unlikely I would win. Even if the council does want Bennet gone."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "But what's the harm in trying? The election is still quite far away."
 
 #speaker:Jules
 "... Perhaps, I will think about it."
 "But I do doubt I would have much success."
+#NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
@@ -546,13 +558,16 @@ What should I do?
 
 =topicschange
 #speaker:Alistair
+#sprite:Alistair_Suspicious
 "Jules, I was thinking, what sort of things do you think the people of Elore-Nabyke would like the Director to talk about?"
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "That's... a strange question."
 "You usually don't care much for lab politics..."
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Oh, but I'm just curious. I think that perhaps the people would like to hear an apology, you know?"
 
 #speaker:Jules
@@ -563,6 +578,7 @@ What should I do?
 "Right now, the lab and the people feel very seperate, don't you think?"
 
 #speaker:Jules
+#NPC:Jules_Neutral
 "Hm."
 "I suppose so. I haven't thought of that."
 
@@ -576,10 +592,12 @@ What should I do?
 
 =fumbleword
 #speaker:Alistair
+#sprite:Alistair_Assured
 "Jules..."
 "This is sort of a strange question, but, what do you call the numbers and words that represent your home's location?"
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "... What-"
 "Alistair, what are you talking about?"
 
@@ -590,6 +608,7 @@ What should I do?
 "Okay. An... address?" 
 
 #speaker:Alistair
+#sprite:Alistair_Neutral
 "Okay, good. Address. Let's practice saying it."
 
 #speaker:Jules
@@ -601,6 +620,7 @@ What should I do?
 
 #speaker:Jules
 "Okay..."
+#NPC:Jules_Neutral
 "Address."
 
 #speaker:Alistair
@@ -608,6 +628,7 @@ What should I do?
 
 #speaker:Jules
 "Address."
+#NPC:Jules_Nervous
 "Address?"
 
 #speaker:Alistair
@@ -623,8 +644,10 @@ What should I do?
 "You know, I think you would be a good Director."
 
 #speaker:Jules
+#NPC:Jules_Nervous
 "Oh?"
 "Really? Well, I'll run and try my best."
+#NPC:Jules_Neutral
 "But Crabb has been in the business so long, it's hard to imagine anyone but him being Director."
 
 #speaker:Alistair
@@ -639,6 +662,7 @@ What should I do?
 "See, this is why you'd be great as a Director."
 
 #speaker:Jules
+#NPC:Jules_Confident
 "Thanks Alistair."
 "I'll try my best."
 ~ helpComplete = helpComplete +1
@@ -828,10 +852,9 @@ The treasure’s most likely melted by now anyways.
 
 ===Election===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-//variables will need to be added to change the election outcome and stance of the NPCs
 As crowds of people close in on the board members, I push and wriggle my way closer to the front.
 Now that I'm closer, I can hear a bit more of the board members' speech.
-#speaker:Board member
+#speaker:Board Member
 "Come forth, any of you who wish to speak."
 "The floor is open for community comments on the appointment of Bennet Crabb as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
     =ShopownerMono
@@ -857,9 +880,11 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Well."
         "Um, so."
         "I know I'm not very old."
+        #NPC:Child_Confident
         "But when I was little, I wanted to work on the core."
         "I wanted to see all the artifacts the lab gets from all over the universes."
         "I..."
+        #NPC:Child_Neutral
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
         "But you're not."
         "You just want to keep things as they are, the old way, and stay right here..."
@@ -871,21 +896,24 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         #speaker:Storyteller
         #NPC:Storyteller_Neutral
         ~SET_PARAMETER("PrologueCharacters", 0)
-        As the Old Lady steps up to speak, I hear the crowd sigh and groan.
+        As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
+        #NPC:Storyteller_Confident
         "Yes!"
         "Yes, you all complain and sqwauk because you know you are about to hear everything you wish not to accept as truth!"
         "I will open your eyes- Listen now!"
         "The planet will not be destroyed- Elor-Nabyke will not fall!"
+        #NPC:Storyteller_Neutral
         "They are distracting us- lying to us!"
         "Our planet does not matter."
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
         "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
+        #NPC:Storyteller_Confident
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crashendo.
         ~SET_PARAMETER("PrologueCharacters", 2)
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 #speaker:Lab Director
-#NPC:Labhead_Neutral
+#NPC:Labhead_Confident
 "Silence!"
 "I will have order!"
 #speaker:Alistair
@@ -894,6 +922,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
     -> JulesSpeechCheck
   - else:
     #speaker:D4RL1N6
+    #NPC:Darling_Neutral
     "There seems to be much unrest here."
     "Perhaps if there were a new director, these people would find peace..."
     
@@ -911,14 +940,17 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 
 =JulesSpeechBad
 #speaker:Jules
-//SPRITE
+#NPC:Jules_Neutral
 "Ahem-"
 "Hello everyone."
 "I wanted to just announce that I am going to be running against Doctor Bennet Crabb."
+#NPC:Jules_Nervous
 "If you'll allow me, I wanted to speak a bit on what I would want to address if I were to become Director."
 "I know I'm not very experienced, but as Director, I would want to focus on the evacuation of the planet in the coming years and to help establish the lab on a new planet."
+#NPC:Jules_Neutral
 "I'm sure you all have many questions and concerns."
 "And I am more than happy to {addressFix: address|a dress- ah- excuse me, address} them with you."
+#NPC:Jules_Nervous
 Jules' speech was littered with uncertainities and filler words, but his heart was in the right place.
 ~ seenSpeech = true
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -927,13 +959,16 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 
 =JulesSpeechGood
 #speaker:Jules
-//SPRITE
+#NPC:Jules_Neutral
 "Hello everyone."
 "I'm speaking to you today to announce that I am putting forth my opposition to Bennet Crabb's relection." 
 "If you'll give me your time, I want to speak on what I would address as Director."
+#NPC:Jules_Confident
 "These are extremely troubling times and I would call upon the lab to formally apologize to the people of Elore-Nabyke for the mistreatment of the core and the lax reaction to such a catastrophic mistake."
+#NPC:Jules_Neutral
 "In addition, as Director, I would work with the community to establish an evacuation of the planet as quickly and as comfortably as possible. I would also establish weekly reports to the community that the lab serves to promote full transparency in the years to come."
 "I am sure you all have many questions and concerns for me to {addressFix: address."|a dress-a-excuse me-"}
+#NPC:Jules_Confident
 "Please, come to me at any time with them and we can discuss."
 "Thank you."
 ~ seenSpeech = true
