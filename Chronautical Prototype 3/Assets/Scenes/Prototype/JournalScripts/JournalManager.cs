@@ -14,7 +14,6 @@ public class JournalManager : MonoBehaviour
     
     //Current page that the player can see
     public GameObject currentPage;
-    public string currentClues = "PersonClues";
 
     //The object that contains the sprites the Journal uses for Items, places, and people.
     [SerializeField] GameObject JournalSpriteContainer;
@@ -105,7 +104,7 @@ public class JournalManager : MonoBehaviour
                 break;
             case 3:
                 currentPage = JournalTimeline;
-                updateTimeline(currentClues);
+                updateTimeline("Person");
                 break;
             case 4:
                 currentPage = JournalDialogue;
@@ -319,15 +318,16 @@ public class JournalManager : MonoBehaviour
                     List<TimelineClue> tempList = personClues[variable];
 
                     for(int i = 0; i < tempList.Count; i++){
-                        if(count == i){
+                        if(count <= i + 3){
                             break;
                         }
                         GameObject timelineButton = JournalTimeline.transform.GetChild(count - (i + 3)).gameObject;
                         timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
                         timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
                         timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
-                        timelineButton.GetComponent<ClueButton>().type = "PersonClue";
+                        timelineButton.GetComponent<ClueButton>().updateType("PersonClue");
                         timelineButton.SetActive(true);
+                        Debug.Log("Person is being called in update journal");
                     }  
                 }
                 break;
@@ -336,15 +336,16 @@ public class JournalManager : MonoBehaviour
                     List<TimelineClue> tempList = placeClues[variable];
 
                     for(int i = 0; i < tempList.Count; i++){
-                        if(count == i){
+                        if(count <= i + 3){
                             break;
                         }
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - (i + 3)).gameObject;
                         timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
                         timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
                         timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
-                        timelineButton.GetComponent<ClueButton>().type = "PlaceClue";
+                        timelineButton.GetComponent<ClueButton>().updateType("PlaceClue");
                         timelineButton.SetActive(true);
+                        Debug.Log("Place is being called in update Journal");
                     }  
                 }
                 break;
@@ -353,14 +354,14 @@ public class JournalManager : MonoBehaviour
                     List<TimelineClue> tempList = itemClues[variable];
 
                     for(int i = 0; i < tempList.Count; i++){
-                        if(count == i){
+                        if(count <= i + 3){
                             break;
                         }
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - i).gameObject;
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - (i + 3)).gameObject;
                         timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
                         timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
                         timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
-                        timelineButton.GetComponent<ClueButton>().type = "ItemClue";
+                        timelineButton.GetComponent<ClueButton>().updateType("ItemClue");
                         timelineButton.SetActive(true);
                     }  
                 }

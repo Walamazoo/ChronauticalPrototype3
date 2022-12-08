@@ -11,18 +11,7 @@ public class ClueButton : MonoBehaviour
     public string type;
 
     void Start(){
-        if(type.ToLower() == "personclue"){
-            clueText.GetComponent<Text>().color = Color.blue;
-            clueHoverText.GetComponent<Text>().color = Color.blue;
-        }
-        else if(type.ToLower() == "itemclue"){
-            clueText.GetComponent<Text>().color = Color.green;
-            clueHoverText.GetComponent<Text>().color = Color.green;
-        }
-        else{
-            clueText.GetComponent<Text>().color = Color.red;
-            clueHoverText.GetComponent<Text>().color = Color.red;
-        }
+        updateType(type);
     }
 
     public void OnPointerEnter(){
@@ -33,5 +22,23 @@ public class ClueButton : MonoBehaviour
     public void OnPointerExit(){
         clueHoverText.SetActive(false);
         clueHoverBackground.SetActive(false);
+    }
+
+    public void updateType(string typeIn){
+        if(typeIn.ToLower() == "personclue"){
+            type = "PersonClue";
+            clueText.GetComponent<Text>().color = Color.blue;
+            clueHoverText.GetComponent<Text>().color = Color.blue;
+        }
+        else if(typeIn.ToLower() == "itemclue"){
+            type = "ItemClue";
+            clueText.GetComponent<Text>().color = Color.green;
+            clueHoverText.GetComponent<Text>().color = Color.green;
+        }
+        else{
+            type = "PlaceClue";
+            clueText.GetComponent<Text>().color = Color.red;
+            clueHoverText.GetComponent<Text>().color = Color.red;
+        }
     }
 }
