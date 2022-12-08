@@ -269,7 +269,7 @@ What should I do?
   ~ TOGGLE_SLIDER_INTERACTABLE(false)
     Who should I talk to? 
     +{julesPresent} [Jules] -> JULES
-    +{childPresent} [The Child] -> CHILD
+    +{childPresent} [Temperance] -> CHILD
     + [Don't talk to anyone]
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
     -> END
@@ -679,35 +679,35 @@ What should I do?
 #speaker:Alistair
     "Hello there! What's your name?"
     
-    #speaker:Child
+    #speaker:Temperance
     "...Temperance."
     
     #speaker:Alistair
     "Oh, well..."
     "My name is Alistair!"
     
-    #speaker:Child
+    #speaker:Temperance
     "..."
     
     #speaker:Alistair
     "You... doing alright?"
     
-    #speaker:Child
+    #speaker:Temperance
     "I'm fine."
     ~metChild = true
 -> CHILD
 
 =Questions
-#speaker:Child
+#speaker:Temperance
 "... What do you want?"
     + [Lost?] -> Lost
     + [Parents?] -> Parents
     + [Nothing for now]
-    #speaker:Child
+    #speaker:Temperance
     "Fine."
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         #NPC:None
-        -> END //library
+        -> END
 =Lost
 "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
         #speaker:Child
@@ -846,7 +846,7 @@ He crosses his arms and just stands there.
 The vault shimmers from the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
 The treasure’s most likely melted by now anyways.
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
--> END //library
+-> DONE
 
 
 
@@ -873,18 +873,18 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I won't take much more of your time. But I don't believe that Bennet Crabb is suited to deal with this catastrophe. Perhaps it is time for someone younger, with more gumption, to lead us."
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
-        #speaker:Child
-        #NPC:Child_Neutral
+        #speaker:Temperance
+        #NPC:Child-teen_Neutral
         ~SET_PARAMETER("PrologueCharacters", 4)
         "Okay..."
         "Well."
         "Um, so."
         "I know I'm not very old."
-        #NPC:Child_Confident
+        #NPC:Child-teen_Confident
         "But when I was little, I wanted to work on the core."
         "I wanted to see all the artifacts the lab gets from all over the universes."
         "I..."
-        #NPC:Child_Neutral
+        #NPC:Child-teen_Neutral
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
         "But you're not."
         "You just want to keep things as they are, the old way, and stay right here..."
