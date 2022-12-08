@@ -247,6 +247,7 @@ Who should I talk to?
 
 =Questions
 #speaker:Jules
+#NPC:Jules_Neutral
 "What can I help you with?"
 + {time == 2} [Busy?] ->Busy
 + {time == 8} [You okay?] ->Okay
@@ -369,6 +370,7 @@ Who should I talk to?
 
 =meetShopowner
 ~metShopowner = true
+#NPC:Shopkeeper_Neutral
 #speaker:Alistair
 "Hello there, shopkeep."
 "I was wondering if I could perchance peruse your wares, and perhaps be made aware of any local news, as well."
@@ -389,6 +391,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Uriah
+#NPC:Shopkeeper_Neutral
 "What can I do for you today?"
 + {time == 3} [Souvenirs?] ->Souvenirs
 + {time == 4} [What's new?] ->New
@@ -903,6 +906,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 =meetOldlady
 ~metOldlady = true
 #speaker:Alistair
+#NPC:Storyteller_Neutral
 "Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts. Could you-"
 
 #speaker:Miriam
@@ -930,6 +934,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Miriam
+#NPC:Storyteller_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
 //12345
 + {time == 1} [Dissapearance of PLANETNAME?] ->Dissapearance
