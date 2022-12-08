@@ -82,8 +82,8 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
-"Alistair."
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+"Alistair."
 
 #speaker:Alistair
 'There's still time. I can still fix this, I just need to-'
@@ -95,8 +95,8 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 "I'm sorry, I'm not- I just need to find this book, I think I remember it saying something about the core."
 
 #speaker:D4RL1N6
-"The core is gone."
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+"The core is gone."
 
 #speaker:Alistair
 "It's not, I know better now, I can find a way to revive it-"
@@ -123,8 +123,8 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 #speaker:D4RL1N6
 "You will have to use your Astrolabe to return to a time before all this destruction." 
 "One year in the past should be sufficient for now."
-"Pull the slider to the year you would like to travel to, then activiate."
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+"Pull the slider to the year you would like to travel to, then activiate."
 
 #speaker:Alistair
 "Wha-"
@@ -152,7 +152,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 //Room Description for Journal
 { time:
 - 1:    
-        ~ roomDescription = "Gossip about teh announcement and security won't let me close to the vault."
+        ~ roomDescription = "Gossip about the announcement and security won't let me close to the vault."
         ~SET_PARAMETER("PrologueTime", 1)
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
@@ -191,7 +191,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
         ~ roomDescription = "Library is empty and the vault is abandoned."
         ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 3)
-        ~SET_PARAMETER("PrologueCharacters", 4)
+        ~SET_PARAMETER("PrologueCharacters", 0)
 - 9:    
         ~ roomDescription = "Library is empty and the vault is abandoned. I feel rumbling below me."
         ~SET_PARAMETER("PrologueTime", 10)
@@ -278,6 +278,7 @@ What should I do?
 //Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
+~SET_PARAMETER("PrologueCharacters", 1)
 {metJules: -> Questions|-> meetJules}
 =meetJules
 #NPC:Jules_Neutral
@@ -672,8 +673,9 @@ What should I do?
 
 
 ===CHILD===
-{metChild: -> Questions|-> meetChild}
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
+~SET_PARAMETER("PrologueCharacters", 4)
+{metChild: -> Questions|-> meetChild}
 #NPC:Child_Neutral
 =meetChild
 #speaker:Alistair
@@ -785,8 +787,8 @@ In the center, I see a series of numbers: 0-9.
 
 #speaker:D4RL1N6
 #NPC:Darling_Neutral
-"Did you see what the code was?"
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+"Did you see what the code was?"
 
 #speaker:Alistair
 "Well, yes, but the code is changed everytime by the Lab Director."
@@ -800,8 +802,8 @@ In the center, I see a series of numbers: 0-9.
 "And somehow convince him to let us into the vault."
 
 #speaker:D4RL1N6
-"Don't be so melodramatic. We'll find a way. We've got to get your treasure."
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+"Don't be so melodramatic. We'll find a way. We've got to get your treasure."
 "We may also be able to gather information from exploring this place."
 
 #speaker:Alistair
@@ -895,7 +897,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =OldLadyMono
         #speaker:Storyteller
         #NPC:Storyteller_Neutral
-        ~SET_PARAMETER("PrologueCharacters", 0)
+        ~SET_PARAMETER("PrologueCharacters", 5)
         As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
         #NPC:Storyteller_Confident

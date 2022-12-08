@@ -53,12 +53,12 @@ VAR directorPresent = false */
     ~ roomDescription = "The room is filled with booths of scientists showing off their work, must be a fair."
     ~SET_PARAMETER("PrologueTime", 1)
     {SET_PARAMETER("PrologueAmbience", 6)}
-    {SET_PARAMETER("PrologueCharacters", 2)}
+    {SET_PARAMETER("PrologueCharacters", 1)}
 - 4:    
     ~ roomDescription = "Not much seems to be happening in the lab."
     ~SET_PARAMETER("PrologueTime", 5)
-    {SET_PARAMETER("PrologueAmbience", 7)}
-    {SET_PARAMETER("PrologueCharacters", 1)}
+    {SET_PARAMETER("PrologueAmbience", 0)}
+    {SET_PARAMETER("PrologueCharacters", 2)}
 - 5:    
     ~ roomDescription = "The Director is giving an announcement."
     ~SET_PARAMETER("PrologueTime", 5)
@@ -165,9 +165,9 @@ Who should I talk to?
 //NPCs and their convos
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
+{SET_PARAMETER("PrologueCharacters", 1)}
 {metJules: -> Questions|-> meetJules}
 #NPC:Jules_Neutral
-{SET_PARAMETER("PrologueCharacters", 1)}
 =meetJules
 ~metJules=true
 
@@ -590,9 +590,9 @@ Who should I talk to?
 
 ===DIRECTOR===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
+{SET_PARAMETER("PrologueCharacters", 2)}
 {metDirector: -> Questions|-> meetDirector}
 #NPC:Labhead_Neutral
-{SET_PARAMETER("PrologueCharacters", 2)}
 =meetDirector
 ~metDirector=true
 #speaker:Director
