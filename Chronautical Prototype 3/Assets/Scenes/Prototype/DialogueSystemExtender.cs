@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.IO;
 using Ink;
+using System;
 
 public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
@@ -22,6 +23,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     [SerializeField] SpriteList spriteList;
     [SerializeField] GameObject playerSprite;
     [SerializeField] GameObject NPCSprite;
+    [SerializeField] GameObject[] fadeouts;
 
     Tween fadeInTween;
     Tween fadeOutTween;
@@ -181,12 +183,20 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                 var activeStory = stories[i];
                 customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
             }
+        fadeOut();
         
-        
+    }
+
+    private void fadeOut()
+    {
+        foreach(GameObject objects in fadeouts){
+            objects.SetActive(false);
+        }
     }
 
     protected override void OnConversationStart(Transform actorTransform)
     {
+        fadeIn();
         for(int i = 0; i < inkJSONAssets.Count; i++){
             if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted)){
                 var story = stories[i];
@@ -194,6 +204,12 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             }
         }
         base.OnConversationStart(actorTransform);
+    }
+
+        private void fadeIn(){
+        foreach(GameObject objects in fadeouts){
+            objects.SetActive(true);
+        }
     }
 
     public void setTime(int value){

@@ -3188,6 +3188,9 @@ MonoBehaviour:
   spriteList: {fileID: 1563140997}
   playerSprite: {fileID: 1567570233}
   NPCSprite: {fileID: 86300542}
+  fadeouts:
+  - {fileID: 1283337089}
+  - {fileID: 215018497}
 --- !u!1 &408225077
 GameObject:
   m_ObjectHideFlags: 0
