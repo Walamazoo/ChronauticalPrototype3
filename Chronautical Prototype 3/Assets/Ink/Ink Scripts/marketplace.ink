@@ -247,6 +247,7 @@ Who should I talk to?
 
 =Questions
 #speaker:Jules
+#NPC:Jules_Neutral
 "What can I help you with?"
 + {time == 2} [Busy?] ->Busy
 + {time == 8} [You okay?] ->Okay
@@ -369,6 +370,7 @@ Who should I talk to?
 
 =meetShopowner
 ~metShopowner = true
+#NPC:Shopkeeper_Neutral
 #speaker:Alistair
 "Hello there, shopkeep."
 "I was wondering if I could perchance peruse your wares, and perhaps be made aware of any local news, as well."
@@ -389,6 +391,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Uriah
+#NPC:Shopkeeper_Neutral
 "What can I do for you today?"
 + {time == 3} [Souvenirs?] ->Souvenirs
 + {time == 4} [What's new?] ->New
@@ -593,6 +596,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "Hello there! What's your name?"
     
     #speaker:Temperance
+    #NPC:Child_Neutral
     "...Temperance."
     
     #speaker:Alistair
@@ -612,6 +616,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Temperance
+#NPC:Temperance_Neutral
 "... What do you want?"
     + {time == 1} [Like the story?] ->Story
     + {time == 2} [Exciting stuff, huh?] ->Exciting
@@ -639,6 +644,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Though it does go against the lab's observations, it-"
 
 #speaker:Temperance
+#NPC:Child_Confident
 "You work in the lab, mister? Really? What's it like?"
 
 #speaker:Alistair
@@ -668,7 +674,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Well... work hard and I'm sure you'll make it."
 
 #speaker:Temperance
-"Thanks, mister! I will!
+"Thanks, mister! I will!"
 
 -> Questions
 
@@ -678,14 +684,16 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "There are some delicate goods being handled, don't bump into anyone."
 
 #speaker:Temperance
+#NPC:Child_Neutral
 "Oh! Um, sorry mister."
 
 #speaker:Alistair
 "And steer especially clear of the lab workers."
-"Some of those artefacts cannot be replaced."
+"Some of those artifacts cannot be replaced."
 
 #speaker:Temperance
 "Ah! But... That stuff's so cool! I wanna see it!"
+#NPC:Child_Confident
 "All that lab stuff is so cool."
 
 #speaker:Alistair
@@ -703,6 +711,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     -
     
 #speaker:Temperance
+#NPC:Child_Neutral
 "Some other kids think it's boring, but I think that reserch stuff is the best part."
 "It's fun to know things."
 
@@ -725,8 +734,10 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I would have expected you to be more interested in the lab showcase."
 
 #speaker:Temperance
+#NPC:Child_Confident
 "I already looked at all that stuff."
 "All the lab people are busy talking to a bunch of snooty people."
+#NPC:Child_Neutral
 "Some man in a top hat shooed me away."
 
 #speaker:Alistair
@@ -741,7 +752,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     -
     
 #speaker:Temperance
-"I know she says different things than teh lab people..."
+"I know she says different things than the lab people..."
 "But it's interesting. It's new."
 "I like fantasy stuff too, y'know."
 
@@ -789,6 +800,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Temperance
 "Yeah right."
 "Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
+#NPC:Child-teen_Distant
 "And now we just have to run away?"
 "That'll always be the the same, I've realized."
 "They're not willing to fight for it. Not willing to change."
@@ -799,6 +811,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "That's not enough time. People's lives are more important!"
 
 #speaker:Temperance
+#NPC:Child-teen_Neutral
 "They could at least try."
 
 #speaker:Alistair
@@ -853,6 +866,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     -
     
 #speaker:Temperance
+#Child-teen_Distant
 "...But..."
 "...Then who'll support me?"
 "I don't want the planet to die."
@@ -871,6 +885,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Temperance
 "..."
+#NPC:Child-teen_Neutral
 "Thanks, mister. Alistair."
 
 #speaker:Alistair
@@ -891,6 +906,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 =meetOldlady
 ~metOldlady = true
 #speaker:Alistair
+#NPC:Storyteller_Neutral
 "Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts. Could you-"
 
 #speaker:Miriam
@@ -918,6 +934,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Miriam
+#NPC:Storyteller_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
 //12345
 + {time == 1} [Dissapearance of PLANETNAME?] ->Dissapearance
