@@ -56,6 +56,7 @@ EXTERNAL SET_PARAMETER(parName, value)
 EXTERNAL PLAY_SOUND(sound)
 
 EXTERNAL CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription)
+EXTERNAL CREATE_JOURNAL_OBJECT(name, type, hoverDescription, fullDescription)
 
 
 === function TOGGLE_SLIDER(state) ===
@@ -70,4 +71,6 @@ EXTERNAL CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription)
     ~return parName
     ~return value
 === function CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription) ===
+    ~return name
+=== function CREATE_JOURNAL_OBJECT(name, type, hoverDescription, fullDescription) ===
     ~return name

@@ -79,7 +79,7 @@ VAR metOldlady = false */
     ~ roomDescription = "Everyone is selling mundane things."
     ~SET_PARAMETER("PrologueTime", 5)
     {SET_PARAMETER("PrologueAmbience", 10)}
-    {SET_PARAMETER("PrologueCharacters", 1)}
+    {SET_PARAMETER("PrologueCharacters", 3)}
 - 9:    
     ~ roomDescription = "Lots of people are packing up and getting onto Atmos vessels."
     ~SET_PARAMETER("PrologueTime", 10)
@@ -365,7 +365,7 @@ Who should I talk to?
 
 ===SHOPOWNER===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-//{SET_PARAMETER("PrologueCharacters", 3)}
+{SET_PARAMETER("PrologueCharacters", 3)}
 {metShopowner: -> Questions| -> meetShopowner}
 
 =meetShopowner
@@ -899,7 +899,6 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 ===OLDLADY===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-//{SET_PARAMETER("PrologueCharacters", 5)}
 {SET_PARAMETER("PrologueCharacters", 5)}
 {metOldlady: -> Questions| -> meetOldlady}
 
