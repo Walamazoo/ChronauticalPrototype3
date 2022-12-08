@@ -75,10 +75,10 @@ public class JournalManager : MonoBehaviour
         //Assigning the tracking of the lists
         JournalList = new List<List<JournalObject>>();
         JournalList.Add(items);
-        listName.GetComponent<Text>().text = "Items";
         JournalList.Add(people);
+        listName.GetComponent<Text>().text = "People";
         JournalList.Add(places);
-        JournalListPointer = 0;
+        JournalListPointer = 1;
         JournalItemPointer = 0;
 
         //Assigning the currentList that will be shown.

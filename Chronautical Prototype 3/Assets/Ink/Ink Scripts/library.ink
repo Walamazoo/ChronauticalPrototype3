@@ -142,6 +142,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 #speaker:D4RL1N6
 "Precisely." 
 ~CREATE_TIMELINE_CLUE("End of beginning", "personclue", "This is a test", "A real testy test")
+~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 out of scrap, but he's quickly become one of my best friends as he keeps me company when no one else will.")
 //#NPC:None
 -> library
     
