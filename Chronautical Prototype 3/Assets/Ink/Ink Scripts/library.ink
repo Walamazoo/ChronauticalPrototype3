@@ -153,55 +153,55 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 { time:
 - 1:    
         ~ roomDescription = "Bustling with rumors and security won't let me close to the vault."
+        ~SET_PARAMETER("PrologueTime", 1)
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 1)
 - 2:    
         ~ roomDescription = "Under rennovations and filled with security."
+        ~SET_PARAMETER("PrologueTime", 1)
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 1)
 - 3:    
         ~ roomDescription = "Under rennovations and filled with security."
+        ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 5)
-        
+
 - 4:    
         ~ roomDescription = "Nearly done with rennovations but filled with security."
+        ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 5)
 - 5:    
         ~ roomDescription = "Library is quiet and the vault is undisturbed."
+        ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 5)
 - 6:    
         ~ roomDescription = "There's a huge crowd in the room because of the election."
+        ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 2)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 5)
 - 7:    
         ~ roomDescription = "Library is quiet and the vault is undisturbed."
+        ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 1)
-        ~SET_PARAMETER("PrologueTime", 5)
 - 8:    
         ~ roomDescription = "Library is empty and the vault is abandoned."
+        ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 3)
         ~SET_PARAMETER("PrologueCharacters", 4)
-        ~SET_PARAMETER("PrologueTime", 5)
 - 9:    
         ~ roomDescription = "Library is empty and the vault is abandoned. I feel rumbling below me."
+        ~SET_PARAMETER("PrologueTime", 10)
         ~SET_PARAMETER("PrologueAmbience", 4)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 10)
 - 10:   
         ~ roomDescription = "Library is lost. Fire everywhere, metal melting, vault too hot to touch."
+        ~SET_PARAMETER("PrologueTime", 10)
         ~SET_PARAMETER("PrologueAmbience", 5)
         ~SET_PARAMETER("PrologueCharacters", 0)
-        ~SET_PARAMETER("PrologueTime", 10)
 }
 
 //Content Start
@@ -475,12 +475,14 @@ What should I do?
 "I am sorry, I wish I could help you."
 //MAKE JULES GO AWAY, REPLACE WITH DARLING
 
+#NPC:Darling_Upset
 #speaker:D4RL1N6
 "Don't give up yet Alistair."
 
 #speaker:Alistair
 "Of course."
 
+#NPC:Darling_Neutral
 #speaker:D4RL1N6
 "I am sure that there are more options we haven't explored. Keep searching."
 
@@ -496,6 +498,7 @@ What should I do?
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
+#NPC:Jules_Neutral
 #speaker:Jules
 "That's a strange question coming from you, Alistair!"
 "Why, every five years the Director's role is discussed and put up for debate. Sometimes a new one is appointed."
