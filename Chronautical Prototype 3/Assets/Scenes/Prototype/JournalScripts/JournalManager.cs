@@ -52,7 +52,6 @@ public class JournalManager : MonoBehaviour
 
     //[SerializeField] Camera MainCamera;
     [SerializeField] TimeChanged hand;
-    [SerializeField] GameObject PlanetName;
 
     void Start(){
         //CurrentPage should always start as JournalMain as it's the first page
@@ -82,7 +81,6 @@ public class JournalManager : MonoBehaviour
         //Assigning the currentList that will be shown.
         currentList = JournalList[JournalListPointer];
         //updateTimeline();
-        PlanetName.GetComponent<Text>().text = "PlanetName";
 
         updateTimeline("Person");
     }
@@ -109,6 +107,7 @@ public class JournalManager : MonoBehaviour
                 currentPage = JournalDialogue;
                 break;
         }
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Page turn"); //might remove later
         currentPage.SetActive(true);
     }
 
@@ -127,11 +126,10 @@ public class JournalManager : MonoBehaviour
             currentPage.SetActive(false);
             OpenOrClose += 1;
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(true);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal close");
         }
         if(OpenOrClose > 2){
             OpenOrClose = 1;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal close");
         }
     }
 
@@ -174,7 +172,6 @@ public class JournalManager : MonoBehaviour
             clickphoto.SetActive(true);
             fulldescription.GetComponent<Text>().text = currentList[JournalItemPointer].fullDescription;
             fulldescription.SetActive(true);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Page turn"); //might remove later
         }
     }
 
