@@ -2640,7 +2640,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 763636739}
   m_HandleRect: {fileID: 763636738}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5359,6 +5359,7 @@ MonoBehaviour:
   - {fileID: 1631936592}
   - {fileID: 1387660886}
   slider: {fileID: 854182567}
+  sc: {fileID: 854182565}
 --- !u!4 &852796087
 Transform:
   m_ObjectHideFlags: 0

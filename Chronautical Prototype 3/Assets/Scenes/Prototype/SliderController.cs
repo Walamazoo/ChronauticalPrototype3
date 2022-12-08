@@ -26,8 +26,6 @@ public class SliderController : MonoBehaviour
     [SerializeField] TextMeshProUGUI currentYearText;
     [SerializeField] int startYear;
     [SerializeField] int yearGap;
-    //[SerializeField] GameObject[] filters;
-    //public GameObject currentFilter;
     [SerializeField] Slider slider;
     //FMOD.Studio.EventInstance sliderSFX;
 

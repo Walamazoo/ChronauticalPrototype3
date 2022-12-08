@@ -52,6 +52,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                                                             {JournalManager.createTimelineClue(name, type, hoverDescription, fullDescription);});
         story.BindExternalFunction("TOGGLE_SLIDER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(state);});
         story.BindExternalFunction("TOGGLE_SLIDER_INTERACTABLE", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(state);});
+        story.BindExternalFunction("TOGGLE_FILTER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleFilter(state);});
         
         story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
         story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
@@ -74,6 +75,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             story.UnbindExternalFunction("BUTTON_GONE");
             story.UnbindExternalFunction("TOGGLE_SLIDER");
             story.UnbindExternalFunction("TOGGLE_SLIDER_INTERACTABLE");
+            story.UnbindExternalFunction("TOGGLE_FILTER");
             story.UnbindExternalFunction("CREATE_JOURNAL_OBJECT");
             story.UnbindExternalFunction("CREATE_TIMELINE_CLUE");
 
