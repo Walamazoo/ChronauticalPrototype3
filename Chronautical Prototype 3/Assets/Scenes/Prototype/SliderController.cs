@@ -31,7 +31,7 @@ public class SliderController : MonoBehaviour
 
     [SerializeField] GameObject[] filters;
     public GameObject currentFilter;
-    private bool startingFilter = true;
+    [SerializeField]bool startingFilter;
 
     void Awake()
     {
