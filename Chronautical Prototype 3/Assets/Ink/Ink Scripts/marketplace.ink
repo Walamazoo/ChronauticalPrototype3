@@ -376,7 +376,7 @@ Who should I talk to?
 #speaker:Alistair
 "Hello there, shopkeep."
 "I was wondering if I could perchance peruse your wares, and perhaps be made aware of any local news, as well."
-I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
+I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "Why of course, sir! I carry a wide variety of wares, feel free to take a look."
