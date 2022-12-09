@@ -253,7 +253,7 @@ Who should I talk to?
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
-    #NPC:None 
+    #NPC:None
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         -> DONE
 
