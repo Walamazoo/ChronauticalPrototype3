@@ -2745,7 +2745,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 763636739}
   m_HandleRect: {fileID: 763636738}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5230,7 +5230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &731233011
 Transform:
   m_ObjectHideFlags: 0
@@ -5670,11 +5670,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505502188337, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_CullTransparentMesh
@@ -5898,19 +5898,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506106285157, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506571567059, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_text

@@ -56,7 +56,7 @@ VAR oldladyPresent = false */
 ~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
 ~ time = 10
 ~ seenBeginning = true
-#background:Silhouetteintro
+#background:Silhouette_Intro
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
 It was full of what I would become; dreams of adventure in the stars piercing through the dark emptiness.
@@ -64,6 +64,7 @@ I was gripped with a frenzy to explore beyond my bubble of libraries and teahous
 But, most of all, I dreamed of the star system lost.
 Atlantis.
 #background:Library_Interior
+~TOGGLE_FILTER(true)
 
 #sprite:Alistair_Sad
 #speaker:Alistair
@@ -123,6 +124,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 #speaker:D4RL1N6
 "You will have to use your Astrolabe to return to a time before all this destruction." 
 "One year in the past should be sufficient for now."
+~TOGGLE_SLIDER(true)
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "Pull the slider to the year you would like to travel to, then activiate."
 
