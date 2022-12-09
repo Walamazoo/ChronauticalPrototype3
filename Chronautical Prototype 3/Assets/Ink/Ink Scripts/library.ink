@@ -283,6 +283,7 @@ What should I do?
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
 {metJules: -> Questions|-> meetJules}
+
 =meetJules
 #NPC:Jules_Neutral
 ~metJules=true
