@@ -64,6 +64,8 @@ EXTERNAL CREATE_JOURNAL_OBJECT(name, type, hoverDescription, fullDescription)
     ~return state
 === function TOGGLE_SLIDER_INTERACTABLE(state) ===
     ~return state
+=== function TOGGLE_FILTER(state) ===
+    ~return state
 === function PLAY_MUSIC(music) ===
     ~return music
 === function PLAY_AMBIENCE(ambience) ===
