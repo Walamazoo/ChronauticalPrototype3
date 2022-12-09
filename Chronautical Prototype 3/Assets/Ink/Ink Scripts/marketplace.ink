@@ -370,7 +370,7 @@ Who should I talk to?
 
 =meetShopowner
 ~metShopowner = true
-#NPC:Shopkeeper_Neutral
+#NPC:Shopkeep_Neutral
 #speaker:Alistair
 "Hello there, shopkeep."
 "I was wondering if I could perchance peruse your wares, and perhaps be made aware of any local news, as well."
@@ -391,7 +391,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Uriah
-#NPC:Shopkeeper_Neutral
+#NPC:Shopkeep_Neutral
 "What can I do for you today?"
 + {time == 3} [Souvenirs?] ->Souvenirs
 + {time == 4} [What's new?] ->New
