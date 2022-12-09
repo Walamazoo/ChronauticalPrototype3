@@ -143,9 +143,9 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "Precisely." 
-~CREATE_TIMELINE_CLUE("End of beginning", "personclue", "This is a test", "A real testy test")
-~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 out of scrap, but he's quickly become one of my best friends as he keeps me company when no one else will.")
-//#NPC:None
+#NPC:None
+~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
+~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
 -> library
     
     
@@ -326,6 +326,8 @@ What should I do?
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> JULES
     +[Adventuring] 
@@ -347,7 +349,7 @@ What should I do?
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
-        
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> JULES
 
@@ -700,6 +702,7 @@ What should I do?
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
+    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
 -> CHILD
 
 =Questions

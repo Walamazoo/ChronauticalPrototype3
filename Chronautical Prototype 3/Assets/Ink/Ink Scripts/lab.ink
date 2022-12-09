@@ -211,6 +211,7 @@ Who should I talk to?
         (How'd he guess that?)
         "I don't know what you could be talking about..."
         
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
     +[Adventuring] 
@@ -234,6 +235,7 @@ Who should I talk to?
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
 
@@ -641,6 +643,7 @@ Who should I talk to?
     "Now, be gone."
     "I have much work to attend to."
 #NPC:None
+~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> END
 

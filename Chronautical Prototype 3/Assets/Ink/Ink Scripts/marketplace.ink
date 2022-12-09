@@ -220,6 +220,7 @@ Who should I talk to?
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
     +[Adventuring] 
@@ -242,6 +243,7 @@ Who should I talk to?
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
 
@@ -386,7 +388,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker: Uriah
 "I'll do my best to fill you in, then."
 "While you shop, of course."
-
+~CREATE_JOURNAL_OBJECT("Shopkeep", "Person", "A shopkeep that offers a variety of different items for purchase. Always has an upbeat attitude", "Full name: Uriah Bramble, they're always happy to help and spread around information. They run the shop to provide for their family, and is certain they'll be able to handle everything that comes their way.")
 -> SHOPOWNER
 
 =Questions
@@ -612,6 +614,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
+    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
 -> CHILD
 
 =Questions
@@ -929,6 +932,7 @@ I glance an their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 "Then you've come to the right place!"
 "I assure you, I know what they wish I did not!"
+~CREATE_JOURNAL_OBJECT("Storyteller", "Person", "An old woman who always has an interesting story to tell.", "Full name Miriam Harcourt, she's a local who often tells stories to anyone willing to approach her. However they seem to be nothing more than fantasy, even if she claims they're truthful.")
 -> OLDLADY
 
 =Questions
