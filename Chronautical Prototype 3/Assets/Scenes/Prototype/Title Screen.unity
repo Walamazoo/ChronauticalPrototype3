@@ -520,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 191, y: 14}
+  m_AnchoredPosition: {x: 219, y: -76}
   m_SizeDelta: {x: 105.3094, y: 20.6148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &756354299
@@ -1015,7 +1015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 191, y: -72.399994}
+  m_AnchoredPosition: {x: 219.00003, y: -162.4}
   m_SizeDelta: {x: 105.3094, y: 20.6148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1372583123
@@ -1714,7 +1714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 191, y: -28.000011}
+  m_AnchoredPosition: {x: 219, y: -118.000015}
   m_SizeDelta: {x: 105.3094, y: 20.6148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1905904329
@@ -1828,7 +1828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444, y: -12.093}
+  m_AnchoredPosition: {x: -0.97241, y: -7.9074}
   m_SizeDelta: {x: 108.3641, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1967723673
@@ -2065,8 +2065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: -61}
-  m_SizeDelta: {x: 849.9702, y: 695.5813}
+  m_AnchoredPosition: {x: -0.9724, y: -89.60003}
+  m_SizeDelta: {x: 801.9448, y: 656.2792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051875494
 MonoBehaviour:
@@ -2088,7 +2088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47e0882562b048a43bc2dfe3aee90205, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eaad726fe86b76d4dad6c11e68981128, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
