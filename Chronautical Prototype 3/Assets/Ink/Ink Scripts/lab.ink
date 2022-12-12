@@ -96,7 +96,7 @@ What should I do?
     + [Look around]
         //Room Description for Player
         { time:
-        - 1:    A handful of scientists huddle around a projected figure I don't recognize, but they seem to be listening somberly.
+        - 1:    A handful of scientists huddle around a projected figure I don't recognize at a distance, but they seem to be listening somberly.
                 +Listen in -> OtherPlanetAnnounce
         - 2:    The lab is filled with a buzzing excitement and energy as scientists, assistants, and cityfolk move about from task to task. 
         - 3:    The room is lined with booths, boards, and flashy experiments. Judges walk around with their hands behind their backs as eager young scientists stand at attention.
@@ -106,7 +106,7 @@ What should I do?
                 Everyone is silent.
                 +Investigate -> AnnounceDestruction
         - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
-        - 7:    The lab is litered with balloon arches and confetti liters the ground. 'Crabb continues reign' is sprawled everywhere on posers and decorations.
+        - 7:    The lab is filled with balloon arches and confetti litters the ground. "Crabb continues reign" is sprawled everywhere on posers and decorations.
                 Lab employees simply step over the confetti and continue their work.
         - 8:    The lab is incredibly bare. Very few lab stations remain and anything that wasn’t bolted to the floor or walls is gone, leaving behind only clean spots in the dust where equipment once was. 
         - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
@@ -128,7 +128,7 @@ What should I do?
                 ~julesPresent=true
                 ~directorPresent=true
                 ~noNPCS=false
-        - 4:    There aren't too many people in the lab today, but Jules sits at his work station eating lunch it seems.
+        - 4:    There aren't too many people in the lab today, but Jules sits at his work station eating lunch, it seems.
                 I see the Director in his office.
                 ~directorPresent=true
                 ~julesPresent=true
@@ -298,7 +298,7 @@ Who should I talk to?
     + [Maybe?]
     #speaker:Alistair
     #sprite:Alistair_Sad
-    "Uh- maybe- I'm really not sure, Jules, I'm all over the place, maybe?"
+    "Uh- Maybe. I'm really not sure, Jules, I'm all over the place, but maybe?"
     "I'm really sorry-"
     + [No]
     #speaker:Alistair
@@ -310,7 +310,7 @@ Who should I talk to?
     #speaker:Jules
     "It's alright, Alistair."
     "I know you're busy doing..."
-    "Whatever it is you do our in the universe."
+    "Whatever it is you do out in the universe."
     "Just come back and visit us more often, alright?"
     
     #speaker:Alistair
@@ -387,7 +387,7 @@ Who should I talk to?
 "But, please, do not consider stealing it."
 
 #speaker:Alistair
-"I... wasn't thinking that."
+"I... Wasn't thinking that."
 
 #speaker:Jules
 "Good."
@@ -404,14 +404,14 @@ Who should I talk to?
 
 #NPC:Darling_Upset
 #speaker:D4RL1N6
-"Don't give up yet Alistair."
+"Do not give up yet Alistair."
 
 #speaker:Alistair
 "Of course."
 
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
-"I am sure that there are more options we haven't explored. Keep searching."
+"I am sure that there are more options we have not explored. Keep searching."
 
 {seenElection:
 #speaker:Alistair
@@ -525,7 +525,7 @@ Who should I talk to?
 "Just trust me Jules."
 
 #speaker:Jules
-"Okay. An... address?" 
+"Okay. An... Address?" 
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
@@ -599,7 +599,7 @@ Who should I talk to?
 ~metDirector=true
 #speaker:Director
 "Hm?"
-"Greetings, I am Bennet Crabb, the Director of the labratory."
+"Greetings, I am Bennet Crabb, the Director of the laboratory."
 "How can I help you?"
 
 #speaker:Alistair
@@ -636,7 +636,7 @@ Who should I talk to?
     
     #speaker:Alistair
     "Of course not sir."
-    "I am... just visiting."
+    "I am... Just visiting."
     
     #speaker:Director
     "And visit you may."
@@ -656,7 +656,7 @@ Who should I talk to?
     * {seenPepTalk==true} [Enter vault?] -> VaultTalk
     + [Nothing for now]
         #speaker:Director
-        "Yes, yes, be gone. I am quite busy."
+        "Yes, yes, begone. I am quite busy."
         #NPC:None
             ~ TOGGLE_SLIDER_INTERACTABLE(true)
             -> END //lab
@@ -691,7 +691,7 @@ Who should I talk to?
 "Any thoughts on the booths in the lab?"
 
 #speaker:Director
-"It is a nesseccary distraction for now."
+"It is a neccesary distraction for now."
 "It is a way for those interested in working for the lab in the future to show off their knowledge and ability."
 "I have seen some promising experiments on display."
 "But few will be able to reach the level of excellence we demand."
@@ -776,7 +776,7 @@ Who should I talk to?
         #sprite:Alistair_Nervous
         "Uh well..."
         (Think! What should I say?)
-        "It's... something?"
+        "It's... Something?"
         "I just, I really need it."
     - 
         #speaker:Director
@@ -816,7 +816,7 @@ Who should I talk to?
 "It is improbable that Mr. Bennet Crabb is the only one who can get into the vault."
 "Perhaps we can seek out another employee."
 #NPC:Darling_Happy
-"They may be able to help us or shed light on new information. "
+"They may be able to help us or shed light on new information."
 
 #speaker:Alistair
 "Jules still works for the lab. We interned together."
@@ -837,9 +837,9 @@ A small projected version of the lab's Director, Bennet Crabb, stands on a pedas
 #sprite:Director_Neutral
 "In further announcements..."
 "As some of you may have already heard..."
-"Rumors have been circulating that the planet NAME has been destroyed under mysterious circumstances."
-"However, it is best not to feed into gossip till we can determine what it was that caused this disaster."
-"It is more than likely that the planet's core malfunctioned which is a very rare occurance."
+"Rumors have been circulating that the planet PLANETNAME has been destroyed under mysterious circumstances."
+"However, it is best not to feed into gossip until we can determine what it was that caused this disaster."
+"It is more than likely that the planet's core malfunctioned, which is a very rare occurance."
 "There is no need to worry."
 "Indeed. Next month, the lab will host a festival..."
 -> lab
@@ -864,11 +864,11 @@ Everyone is silent, just looking up.
 "An announcement of a recent discovery."
 "..."
 "It is no secret that our planet's core is a mechanical thing prone to wear and tear. 
-"We at the lab take great care in maintaining the core to extend the life of our planet by some 50 to 100 years."
+"We at the lab take great care in maintaining the core with the goal of extending the life of our planet by some 50 to 100 years."
 "But."
 "It was discovered this morning that the core has taken on more damages than we had anticipated."
-"The damage to the core is... mysterious in nature."
-"We do not know where it originated though we are investigating."
+"The damage to the core is... Mysterious in nature."
+"We do not know where it originated, though we are investigating."
 "It is with my..."
 "Deepest regret that I must announce that the planet will be inhabitable in 5 years time and subsequently destroyed."
 

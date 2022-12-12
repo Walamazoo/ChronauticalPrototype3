@@ -72,7 +72,7 @@ Atlantis.
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
-(But perhaps  there’s... Something, anything I’m missing. There has to be. A book, a piece of information, I haven't found yet.)
+(But perhaps there’s... Something, anything I’m missing. There has to be. A book, a piece of information, I haven't found yet.)
 #sprite:Alistair_Neutral
 (All this mustn't end in failure.)
 There are so few tomes left, most have been consumed by fire or thrown to the ground by earthquakes.
@@ -87,7 +87,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 "Alistair."
 
 #speaker:Alistair
-'There's still time. I can still fix this, I just need to-'
+"There's still time. I can still fix this, I just need to-"
 
 #speaker:D4RL1N6
 "Alistair, it is inadvisable to ignore me."
@@ -124,7 +124,6 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 #speaker:D4RL1N6
 "You will have to use your Astrolabe to return to a time before all this destruction." 
 "One year in the past should be sufficient for now."
-~TOGGLE_SLIDER(true)
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "Pull the slider to the year you would like to travel to, then activiate."
 
@@ -146,6 +145,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 #NPC:None
 ~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
+~TOGGLE_SLIDER(true)
 -> library
     
     
@@ -155,7 +155,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 //Room Description for Journal
 { time:
 - 1:    
-        ~ roomDescription = "Gossip about the announcement and security won't let me close to the vault."
+        ~ roomDescription = "Gossip about the announcement, and security won't let me close to the vault."
         ~SET_PARAMETER("PrologueTime", 1)
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
@@ -213,7 +213,7 @@ What should I do?
         //Room Description for Player
         //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
         { time:
-        - 1:    Employees sit in tight circles around the library. There's no reading to be done, instead, there's an electricity in the air in the form of hushed whispers.
+        - 1:    Employees sit in tight circles around the library. There's no reading being done, instead, there's an electricity in the air in the form of hushed whispers.
                 +Investigate the vault -> Security
         - 2:    Scaffolding grazes the arched ceilings of the library. The smells of paint, hardwood, and oil linger in the air as carpenters navigate the space. Lab security keeps a close eye on the newcomers. 
                 +Investigate the vault -> Security
@@ -227,7 +227,7 @@ What should I do?
                 +Listen in -> Election
         - 7:    The library sits silently and shines coldly. Lab employees huddle like silent vultures over their books.
                 +Investigate the vault -> InvestigateVault
-        - 8:    The library is gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
+        - 8:    The library is steeped in gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
                 +Investigate the vault -> InvestigateVault
         - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly, then hold still once more. 
                 +Investigate the vault -> InvestigateVault
@@ -292,7 +292,7 @@ What should I do?
     "Jules? Is that you?"
     
     #speaker: 
-    Jules’s face breaks into a shocked smile, caught off guard by the familiar voice.”
+    Jules’s face breaks into a shocked smile, caught off guard by the familiar voice.
     
     #speaker:Jules
     "Alistair!"
@@ -337,7 +337,7 @@ What should I do?
         "Oh I've been... adventuring."
         
          #speaker:Jules
-        "Out and about? Why so coy Alistair?"
+        "Adventuring? Where? Why so coy Alistair?"
         
         #speaker:Alistair
         "It's... complicated."
@@ -491,14 +491,14 @@ What should I do?
 
 #NPC:Darling_Upset
 #speaker:D4RL1N6
-"Don't give up yet Alistair."
+"Do not give up yet Alistair."
 
 #speaker:Alistair
 "Of course."
 
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
-"I am sure that there are more options we haven't explored. Keep searching."
+"I am sure that there are more options we have not explored. Keep searching."
 
 {seenElection:
 #speaker:Alistair
@@ -548,7 +548,7 @@ What should I do?
 
 #speaker:Jules
 "Perhaps so- but..."
-"Ahh... it is unlikely I would win. Even if the council does want Bennet gone."
+"Ahh... It is unlikely I would win. Even if the council does want Bennet gone."
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
@@ -612,7 +612,7 @@ What should I do?
 "Just trust me Jules."
 
 #speaker:Jules
-"Okay. An... address?" 
+"Okay. An... Address?" 
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
@@ -764,7 +764,7 @@ What should I do?
 ===InvestigateVault===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Vault
-The vault is a marvel in of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
+The vault is a marvel in and of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
 {seenPepTalk: | ->DarlingPepTalk}
     //* [Guess the code]
@@ -776,7 +776,7 @@ In the center, I see a series of numbers: 0-9.
     + [Kick door] 
         I take a few steps back then give the vault door a good kick square in the center. 
         The vault doesn't shift.
-        The only indication that I had kicked the thing at all was the slight pain that was growing in my foot.
+        The only indication that I had kicked the thing at all was the slight pain that's growing in my foot.
         Ouch.
         -> InvestigateVault
     * {hasCode} [Input code]
@@ -810,12 +810,12 @@ In the center, I see a series of numbers: 0-9.
 
 #speaker:D4RL1N6
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
-"Don't be so melodramatic. We'll find a way. We've got to get your treasure."
+"Do not be so melodramatic. We will find a way. We must aquire your treasure."
 "We may also be able to gather information from exploring this place."
 
 #speaker:Alistair
-"You're right as usual."
-"We'll find a way to get my 'treasure'."
+"You're right, as usual."
+"We'll find a way to get my 'treasure.'"
 "If I remember corrently, the Director is usually somewhere in the lab."
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
 #NPC:None
@@ -823,7 +823,7 @@ In the center, I see a series of numbers: 0-9.
 
 ===Security===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-As I approach the vault, I see one of the vault's security promptly slide over and put himself directly into my path.
+As I approach the vault, I see one of the vault's security personnel promptly slide over and put himself directly into my path.
 He crosses his arms and just stands there.
     + [Say hello] "Hello there!" #speaker:Alistair
                     The vault security guard just looks down at me.
@@ -891,7 +891,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I know I'm not very old."
         #NPC:Child-teen_Confident
         "But when I was little, I wanted to work on the core."
-        "I wanted to see all the artifacts the lab gets from all over the universes."
+        "I wanted to see all the artifacts the lab gets from all over the universe."
         "I..."
         #NPC:Child-teen_Neutral
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
@@ -918,7 +918,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
         "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
         #NPC:Storyteller_Confident
-        The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crashendo.
+        The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a creshendo.
         ~SET_PARAMETER("PrologueCharacters", 2)
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 #speaker:Lab Director
@@ -976,7 +976,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 "These are extremely troubling times and I would call upon the lab to formally apologize to the people of Elore-Nabyke for the mistreatment of the core and the lax reaction to such a catastrophic mistake."
 #NPC:Jules_Neutral
 "In addition, as Director, I would work with the community to establish an evacuation of the planet as quickly and as comfortably as possible. I would also establish weekly reports to the community that the lab serves to promote full transparency in the years to come."
-"I am sure you all have many questions and concerns for me to {addressFix: address."|a dress-a-excuse me-"}
+"I am sure you all have many questions and concerns for me to {addressFix: address."|a dress-a-excuse me, address."}
 #NPC:Jules_Confident
 "Please, come to me at any time with them and we can discuss."
 "Thank you."

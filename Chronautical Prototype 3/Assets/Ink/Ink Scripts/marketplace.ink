@@ -108,19 +108,19 @@ What should I do?
         - 6:    The marketplace is completely empty. Booths and stalls still line the square, but no trinkets or produce are displayed and there's not a soul in sight. 
         - 7:    The people in the market are bubbling with hushed chatter and gossip. 
         - 8:    The marketplace is full of random and seemingly useless items. Clothes, trinkets, junk, books, pens, and all sorts of furniture.
-        - 9:    Atmos vessals rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
-        - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market and some stalls. Some shops crumble as the planet shutters violently.
+        - 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
+        - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shutters violently.
         }
         -> END //marketplace
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
     + [Look for someone to talk to]
         //NPC Description for Player
         { time:
-        - 1:    An old storyteller waves her hands excitedly. Most of the adults who stop to listen soon scoff and move on, but the younger folk seem enthralled. One child in paritcular listens ecitedly, all starry-eyed.
+        - 1:    An old storyteller waves her hands excitedly. Most of the adults who stop to listen soon scoff and move on, but the younger folk seem enthralled. One child in particular listens ecitedly, all starry-eyed.
                 ~ childPresent = true
                 ~ oldladyPresent = true
                 ~noNPCS=false
-        - 2:    The old storyteller strains to be heard among the bustling crowd, the shoppers clambering over the new goods. An energetic child runs past. Following their movement I happen to spot Jules, both helping direct shipments and taking glances at the wares.
+        - 2:    The old storyteller strains to be heard among the bustling crowd, the shoppers clambering over the new goods. An energetic child runs past. Following her movement I happen to spot Jules, both helping direct shipments and taking glances at the wares.
                 ~ julesPresent = true
                 ~ childPresent = true
                 ~ oldladyPresent = true
@@ -149,7 +149,7 @@ What should I do?
                 ~ shopownerPresent = true
                 ~ childPresent = true
                 ~noNPCS=false
-        - 9:    I scan the lines of people waiting to board, and spot Jules near the front of one. His wife is with him, though she steps forward to be cleared to board.
+        - 9:    I scan the lines of people waiting to board, and spot Jules near the front of one. His wife is with him, and she steps forward to be cleared to board.
                 ~ julesPresent = true
                 ~noNPCS=false
         - 10:   The marketplace is devoid of life.
@@ -267,7 +267,7 @@ Who should I talk to?
 "Sure is busy, huh? I would have expected you to be in the lab with all this going on."
 
 #speaker:Jules
-"Ah, well, I'm still doing lab work. I've been tasked with making sure artefacts that need to be examined, well, end up getting examined."
+"Ah, well, I'm still doing lab work. I've been tasked with making sure artifacts that need to be examined, well, end up getting examined."
 "A lot of what's here is very intruiging."
 
 #speaker:Alistair
@@ -293,7 +293,7 @@ Who should I talk to?
     
     #speaker:Jules
     "Flattery won't get you anywhere, old friend."
-    "Especially not to where you can get your hands on these very interesting and breakable artefacts."
+    "Especially not to where you can get your hands on these very interesting and breakable artifacts."
     
     #speaker:Alistair
     I scoff in an exaggerated manner.
@@ -422,7 +422,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #speaker:Alistair
         "Elore-Nabyke is known for its drinks, right?"
         "I'm sure people from off-planet find them delightful."
-+ [Are they interested in soemthing like that?]
++ [Are they interested in something like that?]
         #speaker:Alistair
         "I feel like the scholarly sort wouldn't be interested."
         "Are you making any sales?"
@@ -434,15 +434,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Perhaps you'd care for one?"
 
 #speaker:Alistair
-"I'm unfortunately low on funds. Sorry."
+"I'm unfortunately low on funds at the moment. Sorry."
 
 #speaker:Uriah
 "No worries, have a nice day!"
 
 -> Questions
-
-
-//Temperance Ward (Child) NPC Convo
 
 =New
 #speaker: Alistair
@@ -453,7 +450,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Indeed. Last year was busier, but this is normal."
 "A good amount of business."
 "Oh! That's right!"
-"I believe I heared the library's rennovations are nearly complete, or at least they should be by next year."
+"I believe I heard the library's rennovations are nearly complete, or at least they should be by next year."
 
 #speaker:Alistair
 "Perhaps I'll take a look, then."
@@ -487,13 +484,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "My family lives on-planet."
-"Though I'm often out and about travelling the trade seams or here at the market, it's all to provide for them."
+"Though I'm often out and about travelling the trade seams or here at the market, I'd do anythign it takes to provide for them."
 "That's my priority, my loved ones."
 
 #speaker:Alistair
 "I see. That's very noble of you."
 "And... Encouraging. Thank you, I think I feel a bit better now."
-(That's right. He needs my treasure. That' why I'm doing this.)
+(That's right. He needs my treasure. That's why I'm doing this.)
 
 #speaker:Uriah
 "You're quite welcome. I hope you have a good rest of your day."
@@ -514,7 +511,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "I heard that the evacuation is going to happen in just a couple years."
-"Atmos vessels are nce and all, but I know I for one would like to have a travel bag."
+"Atmos vessels are nice and all, but I know I for one would like to have a travel bag."
 
 #speaker:Alistair
 + [What else about the evacuation?]
@@ -554,7 +551,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #speaker:Alistair
         "I see, that's a smart way of looking at it."
         "Have you managed to find anything of value?"
-+ [Isn't it just all junk though?]
++ [Isn't it all just junk though?]
         #speaker:Alistair
         "Isn't everything being put up for sale for the same reason?"
         "If they're not willing or able to bring it with, how does that change if you have it?"
@@ -563,7 +560,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Uriah
 "One person's trash is another one's treasure."
 "I managed to get something special. A large blanket."
-"People travelling by themselves have no need for soemthing so bulky."
+"People travelling by themselves have no need for something so bulky."
 "But I'll be with my family."
 "I'm planning on using it for us to sit on, or to huddle together."
 "It's good quality fabric, too. It was quite a bargain!"
@@ -664,7 +661,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "Oh, well, not anymore. I had to leave and head elsewhere for a while."
         "But I worked under Director Crabb, and alongside a good friend of mine."
         "So I'm still in the lab's good graces."
-        (Or at least Jules'. I doubt crabb wants to see my face.)
+        (Or at least Jules'. I doubt Crabb wants to see my face.)
     -
     
 #speaker:Temperance
@@ -728,9 +725,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 -> Questions
 
-
-//Miriam Harcourt (Old Lady/Storyteller) NPC Convo
-
 =Listening
 #speaker:Alistair
 "Listening to the storyteller?"
@@ -789,7 +783,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Did you want someone else to win?]
         #speaker:Alistair
         "Are you unsatisfied with the election results?"
-        "Even if you are theres always..."
+        "Even if you are there's always..."
         "..."
         "There will be a next time."
 + [Is it about the planet?]
@@ -953,15 +947,15 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Dissapearance
 #speaker:Alistair
-"I think I overheard you say somethig about PLANETNAME... Dissapearing?" 
+"I think I overheard you say somethig about PLANETNAME... Dissapearing?"
 "The Director said it was destroyed."
 
 #speaker:Miriam
 "Aha! That's what they want you to think!"
 "You see, PLANETNAME was not destroyed, but lost! Lost in the cosmic web!"
-"The Strings that connect our vast universe are deeper than you could ever emagine..."
-"So deep, even a planet could be shallowed up, lost in the space between spaces!"
-"Not even the most traveled trade seams are truly safe..."
+"The Strings that connect our vast universe are deeper than you could ever imagine..."
+"So deep, even a planet could be swallowed up, lost in the space between spaces!"
+"Not even the most travelled trade seams are truly safe..."
 
 #speaker:Alistair
 (She's not... Entirely incorrect.)
@@ -992,7 +986,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Hello there! A busy day, isn't it?"
 
 #speaker:Miriam
-"Busy! Well! Try frustrating! I can hardly think with all this racket."
+"Busy! Well! Try frusterating! I can hardly think with all this racket."
 "How am I supposed to spread truth like this? A sudden boom of products and everyone seems content to ignore the big picture..."
 
 #speaker:Alistair
@@ -1000,7 +994,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [It's understandable]
         #speaker:Alistair
         "Surely you understand the people's excitement?"
-        "There are many unique artefacts being imported."
+        "There are many unique artifacts being imported."
         "Who wouldn't be giddy to see it all?"
 + [I'm here, I could listen]
         #speaker:Alistair
@@ -1012,7 +1006,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Oh? Then let me tell you, these boubles are just a taste of the true wonders those lab people wish to obtain."
 "Have you every heard of the Inventor? A true miracle worker!"
 "Wars have been fought over their inventions..."
-"A disc that makes machines work as if they were new!"
+"A disk that makes machines work as if they were new!"
 "A ring entirely impervious to harm!"
 "But the Inventor never seems to stay in one place..."
 "It's almost as if they are a ghost from the far future!"
@@ -1048,7 +1042,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Adrift?]
         #speaker:Alistair
         "Adrift, as in lost?"
-        "These people take secure seams, they would have no chance of ending up other than their destination."
+        "These people take secure seams, they would have no chance of ending up somewhere other than their destination."
 -
 
 #speaker:Miriam
@@ -1056,7 +1050,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "They lure others away from safety, into the horrors of a raw string!"
 "The crew hears their dying words on repeat.."
 "Before the vessel gets pushed to the edge of the universe, devoid of life."
-"Or worse, become a ghost ship!"
+"Or worse, becomes a ghost ship!"
 "These dire warnings must be heeded!"
 
 #speaker:Alistair
