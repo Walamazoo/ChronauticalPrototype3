@@ -14,6 +14,7 @@ public class JournalManager : MonoBehaviour
     
     //Current page that the player can see
     public GameObject currentPage;
+    [SerializeField] GameObject exitButton;
 
     //The object that contains the sprites the Journal uses for Items, places, and people.
     [SerializeField] GameObject JournalSpriteContainer;
@@ -121,6 +122,7 @@ public class JournalManager : MonoBehaviour
             hand.rotateHand(sliderController.currentYear);
             OpenOrClose += 1;
             updateTimeline("Person");
+            exitButton.SetActive(true);
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(false);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
@@ -128,6 +130,7 @@ public class JournalManager : MonoBehaviour
             GoToPage(1);
             currentPage.SetActive(false);
             OpenOrClose += 1;
+            exitButton.SetActive(false);
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(true);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal close");
         }

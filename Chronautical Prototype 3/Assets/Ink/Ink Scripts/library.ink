@@ -63,12 +63,13 @@ It was full of what I would become; dreams of adventure in the stars piercing th
 I was gripped with a frenzy to explore beyond my bubble of libraries and teahouses.
 But, most of all, I dreamed of the star system lost.
 Atlantis.
-#background:Library_Interior
-~TOGGLE_FILTER(true)
 
-#sprite:Alistair_Sad
+~TOGGLE_FILTER(true)
+#background:Library_Interior
+#sprite:Alistair_Sad 
 #speaker:Alistair
-~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
+//~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
+
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
@@ -83,7 +84,7 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+//~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "Alistair."
 
 #speaker:Alistair
