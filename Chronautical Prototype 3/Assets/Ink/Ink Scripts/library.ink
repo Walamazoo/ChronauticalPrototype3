@@ -65,10 +65,10 @@ But, most of all, I dreamed of the star system lost.
 Atlantis.
 
 ~TOGGLE_FILTER(true)
+~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 #background:Library_Interior
 #sprite:Alistair_Sad 
 #speaker:Alistair
-//~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 
 My colleagues are all gone. 
 The lab will be lost.
@@ -82,9 +82,9 @@ The planet, Elore-Nabyke, will be lost.
 I throw myself to a bookshelf nearby and yank out tomes. There are so few left. Most have been consumed by fire.
 (Perhaps I haven't tried this yet.)
 
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
-//~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "Alistair."
 
 #speaker:Alistair
@@ -96,8 +96,8 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 #speaker:Alistair
 "I'm sorry, I'm not- I just need to find this book, I think I remember it saying something about the core."
 
-#speaker:D4RL1N6
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+#speaker:D4RL1N6
 "The core is gone."
 
 #speaker:Alistair
