@@ -169,6 +169,8 @@ Who should I talk to?
 
 
 //NPC Convos
+
+//Jules Ambrose
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
@@ -357,8 +359,7 @@ Who should I talk to?
 -> Questions
 
 
-//Uriah Bramble (shopowner/shopkeep) NPC Convo
-
+//Uriah Bramble
 ===SHOPOWNER===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 3)}
@@ -578,6 +579,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 -> Questions
 
+
+//Temperance Ward
 ===CHILD===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //{SET_PARAMETER("PrologueCharacters", 4)}
@@ -886,8 +889,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 -> Questions
 
 
-//Miriam Harcourt (Old Lady/Storyteller) NPC Convo
-
+//Miriam Harcourt
 ===OLDLADY===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 5)}
@@ -1148,8 +1150,3 @@ She begins muttering to herself incoherently, no longer acknowledging my presenc
 "I'll... See you around."
 
 -> Questions
-
-
-
-//Quest Specific Knots
-//Placeholder

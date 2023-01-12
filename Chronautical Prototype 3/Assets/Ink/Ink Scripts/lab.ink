@@ -159,6 +159,8 @@ Who should I talk to?
 
 
 //NPCs Convos
+
+//Jules Ambrose
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
@@ -587,6 +589,8 @@ Who should I talk to?
 #NPC:None
 -> DONE
 
+
+//Bennet Crabb
 ===DIRECTOR===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 2)}
@@ -824,7 +828,7 @@ Who should I talk to?
 -> DONE
 
 
-//Quest and Misc Knots
+//Quest/Plot Knots
 ===OtherPlanetAnnounce===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 I move closer to the crowd to listen in.
@@ -845,7 +849,6 @@ A small projected version of the lab's Director, Bennet Crabb, stands on a pedas
 Booth upon booth line the lab's walls. 
 Young and old scientists stand in front of their experiments to demonstrate their discoveries and to discuss with judges their findings.
 I remember doing the same when I was a fresh intern.
-//placeholder for future interaction with fair
 -> lab
 
 ===AnnounceDestruction===

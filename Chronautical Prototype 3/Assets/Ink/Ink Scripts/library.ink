@@ -260,6 +260,8 @@ What should I do?
 
 
 //NPC Convos
+
+//Jules Ambrose
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
@@ -334,7 +336,7 @@ What should I do?
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> JULES
-
+//Choices for what player can ask
 =Questions
 #NPC:Jules_Neutral
 #speaker:Jules
@@ -351,8 +353,9 @@ What should I do?
     "Let's speak again soon, Alistair."
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         #NPC:None
-        -> END //library
+        -> END
 
+//Question topics
 =WhyHere
 #speaker:Alistair
 "Why are you here, Jules?"
@@ -659,6 +662,7 @@ What should I do?
 -> DONE
 
 
+//Temperance Ward
 ===CHILD===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
@@ -668,7 +672,7 @@ What should I do?
 #speaker:Alistair
     "Hello there! What's your name?"
     
-    #speaker:Temperance
+    #speaker:Child
     "...Temperance."
     
     #speaker:Alistair
@@ -741,14 +745,13 @@ What should I do?
 -> Questions
 
 
-//Quest Specific Knots
+//Quest/Plot Specific Knots
 ===InvestigateVault===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Vault
 The vault is a marvel in and of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
 {seenPepTalk: | ->DarlingPepTalk}
-    //* [Guess the code]
     + [Pry open door] 
         I squeeze my fingers into the door frame and put my foot on the door.
         I lean back and use all my strength to try to pry open the door, but the thing doesn't budge at all.
@@ -763,7 +766,7 @@ In the center, I see a series of numbers: 0-9.
     * {hasCode} [Input code]
         ->Ending
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
-    + [Do nothing] -> END //library
+    + [Do nothing] -> END 
 
 
 ->DarlingPepTalk
@@ -802,30 +805,43 @@ In the center, I see a series of numbers: 0-9.
 #NPC:None
 -> library
 
+
 ===Security===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
+#speaker:Alistair
 As I approach the vault, I see one of the vault's security personnel promptly slide over and put himself directly into my path.
 He crosses his arms and just stands there.
-    + [Say hello] "Hello there!" #speaker:Alistair
-                    The vault security guard just looks down at me.
-                    He doesn't respond.
-                    "Uh. I said hello there!" #speaker:Alistair
-                    The guard still does not respond, but I see his eyebrow twitch.
-                    Maybe it's best not to press him.
-                    ++[Say hello again] "I said, hello-" #speaker:Alistair
-                        "I heard you..." #speaker:Guard
-                        "Oh! Apologies..." #speaker:Alistair
-                        ~ TOGGLE_SLIDER_INTERACTABLE(true)
-                        (He's not very talkative is he...)-> END
-                    ++[Nevermind] I just smile and turn on my heel.
-                                    ~ TOGGLE_SLIDER_INTERACTABLE(true)
-                                    (Maybe I'll look elsewhere.) -> END 
-
-    + [Nevermind] I just smile and turn on my heel. 
-                ~ TOGGLE_SLIDER_INTERACTABLE(true)
-                (Maybe I'll look elsewhere.) -> END 
-
-//More interactions can be added here if/when we add options to try to break into the vault
+    + [Say hello]
+        #speaker:Alistair
+        //sprite, happy/energetic
+        "Hello there!"
+        The vault security guard just looks down at me.
+        He doesn't respond.
+        //sprite, unsure/nervous
+        "Uh. I said hello there!"
+        The guard still does not respond, but I see his eyebrow twitch.
+        ++[Say hello again] 
+            #speaker:Alistair
+            "I said, hello-"
+        
+            #speaker:Guard
+            "I heard you..."
+        
+            #speaker:Alistair
+            "Oh! Apologies..."
+            ~ TOGGLE_SLIDER_INTERACTABLE(true)
+            (He's not very talkative is he...)
+            -> END
+        ++[Nevermind] 
+            #speaker:Alistair
+            I just smile and turn on my heel.
+            ~ TOGGLE_SLIDER_INTERACTABLE(true)
+            (Maybe I'll look elsewhere.)
+            -> END 
+    + [Nevermind] 
+        I just smile and turn on my heel. 
+        ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        (Maybe I'll look elsewhere.) -> END 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
@@ -919,7 +935,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
     #speaker:Alistair
     "And perhaps if we could have a friend in a high place we can access the vault."
 }
-~SET_PARAMETER("PrologueCharacters", 0) //Shannon
+~SET_PARAMETER("PrologueCharacters", 0)
 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
