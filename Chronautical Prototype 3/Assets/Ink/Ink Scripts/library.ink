@@ -213,7 +213,8 @@ What should I do?
                 +Investigate the vault -> HotVault
         }
         -> library
-    
+        //check
+
     //NPC Description for player and variable changes
     + [Look for someone to talk to]
         { time:

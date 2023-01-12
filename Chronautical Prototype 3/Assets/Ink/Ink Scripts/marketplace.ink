@@ -1,38 +1,29 @@
 //Script for location MARKETPLACE
 INCLUDE Globals.ink
-//Time Variable for testing
-/* VAR time = 0
 
-//More Variables
-VAR roomDescription = ""
 
-//Quest Variables
-VAR seenBeginning = false
-VAR introDirector = false
-VAR investigateVault = false
-VAR preDisaster = false
-VAR postDisaster = false
-VAR seenElection = false
-VAR seenResults = false
-VAR helpComplete = 0
-VAR directorName = "Bennet Crabb"
+//Testing
+//-> beginning
+//~ time = 4
 
-//Placeholder: VARIABLES FOR THE SIDE QUEST STUFF
-VAR julesDirector = false
-VAR hasCode = false
+//NPC Names Reference
+//Jules = Jules Ambrose
+//Child = Temperance Ward
+//Old Lady/Storyteller = Miriam Harcourt
+//Shopkeep = Uriah Bramble
+//Director = Bennet Crabb
 
-//NPC Variables
-VAR julesPresent = false
-VAR directorPresent = false 
-VAR shopownerPresent = false
-VAR childPresent = false
-VAR oldladyPresent = false
-VAR metJules = false
-VAR metChild = false
-VAR metShopowner = false
-VAR metOldlady = false */
+//Sprite/Background/Speaker Tags Format
+//#speaker:Alistair
+//#sprite:Alistair_Sad
+//#background:labInterior
+//#NPC:Child_Neutral
+//No space between colon and character/sprite/background
 
-//Knots Start
+
+
+
+//Content knots start
 ->marketplace
 ===marketplace===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
@@ -92,10 +83,9 @@ VAR metOldlady = false */
     {SET_PARAMETER("PrologueCharacters", 0)}
 }
 
-//Content Start
 What should I do?
     + [Look around]
-        //Room Description for Player
+        //Room Description for player and choices
         { time:
         - 1:    The marketplace is full of small shops, booths, and stands.
                 The people in the market are bubbling with hushed chatter and gossip.
@@ -111,10 +101,12 @@ What should I do?
         - 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
         - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shutters violently.
         }
-        -> END //marketplace
+        -> marketplace
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        //check
+        
+        //NPC Description for player and variable changes
     + [Look for someone to talk to]
-        //NPC Description for Player
         { time:
         - 1:    An old storyteller waves her hands excitedly. Most of the adults who stop to listen soon scoff and move on, but the younger folk seem enthralled. One child in particular listens ecitedly, all starry-eyed.
                 ~ childPresent = true
@@ -157,6 +149,7 @@ What should I do?
         }
         -> NPCS
 
+//Sets what NPCs are choices
 ===NPCS===
 {noNPCS:
     There is no one to talk to at this time. ->END
@@ -172,11 +165,12 @@ Who should I talk to?
     -> END
 }
 
-//Jules Ambrose NPC Convo
 
+
+
+//NPC Convos
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-//{SET_PARAMETER("PrologueCharacters", 1)}
 {SET_PARAMETER("PrologueCharacters", 1)}
 {metJules: -> Questions| -> meetJules}
 
