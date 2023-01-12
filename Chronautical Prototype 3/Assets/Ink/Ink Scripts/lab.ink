@@ -1,37 +1,29 @@
 //Script for location LAB
 INCLUDE Globals.ink
-//Time Variable
-/* VAR time = 0
 
-//More Variables
-VAR roomDescription = ""
 
-//Quest Variables
-VAR seenBeginning = false
-VAR introDirector = false
-VAR investigateVault = false
-VAR preDisaster = false
-VAR postDisaster = false
-VAR seenElection = false
-VAR seenResults = false
-VAR helpComplete = 0
-VAR julesDirector = false
-VAR hasCode = false
-VAR seenPepTalk = false
-//More variables needed here for quest specifics
+//Testing
+//-> beginning
+//~ time = 4
 
-//Variables for if player has met NPC
-VAR metJules = false
-VAR metChild = false
-VAR metDirector = false
+//NPC Names Reference
+//Jules = Jules Ambrose
+//Child = Temperance Ward
+//Old Lady/Storyteller = Miriam Harcourt
+//Shopkeep = Uriah Bramble
+//Director = Bennet Crabb
 
-//NPC Variables
-VAR julesPresent = false
-VAR directorPresent = false */
+//Sprite/Background/Speaker Tags Format
+//#speaker:Alistair
+//#sprite:Alistair_Sad
+//#background:labInterior
+//#NPC:Child_Neutral
+//No space between colon and character/sprite/background
 
-//Knots Start
-//Time Set for Testing
-//~time=3
+
+
+
+//Content knots start
 -> lab
 ===lab===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
@@ -91,10 +83,9 @@ VAR directorPresent = false */
     {SET_PARAMETER("PrologueCharacters", 0)}
 }
 
-//Content Start
 What should I do?
     + [Look around]
-        //Room Description for Player
+        //Room Description for player and choices
         { time:
         - 1:    A handful of scientists huddle around a projected figure I don't recognize at a distance, but they seem to be listening somberly.
                 +Listen in -> OtherPlanetAnnounce
@@ -113,7 +104,8 @@ What should I do?
         - 10:   What was once a lab has now been completely swallowed up by a monsterous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
         }
         -> lab
-    //NPC Description for Player and variable changes
+        
+    //NPC Description for player and variable changes
     + [Look for someone to talk to]
         { time:
         - 1:    Many scientists are present, but they look too busy to talk to me.
@@ -149,6 +141,7 @@ What should I do?
         }
         -> NPCS
 
+//Sets what NPCs are choices
 ===NPCS===
 {noNPCS:
     There is no one to talk to at this time. -> END
@@ -162,11 +155,15 @@ Who should I talk to?
     -> END 
 }
 
-//NPCs and their convos
+
+
+
+//NPCs Convos
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
 {metJules: -> Questions|-> meetJules}
+
 =meetJules
 #NPC:Jules_Neutral
 ~metJules=true

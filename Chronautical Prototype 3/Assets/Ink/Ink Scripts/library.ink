@@ -1,10 +1,10 @@
 //Script for location LIBRARY
 INCLUDE Globals.ink
 
+
 //Testing
 //-> beginning
 //~ time = 4
-
 
 //NPC Names Reference
 //Jules = Jules Ambrose
@@ -130,7 +130,8 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 ===library===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-//~TOGGLE_SLIDER_INTERACTABLE(true)
+#background:Library_Interior
+#sprite:Alistair_Neutral
 //Room Description for Journal
 { time:
 - 1:    
@@ -188,7 +189,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 What should I do?
     + [Look around]
-        //Room Description for player and gives player choices
+        //Room Description for player and choices
         { time:
         - 1:    Employees sit in tight circles around the library. There's no reading being done, instead, there's an electricity in the air in the form of hushed whispers.
                 +Investigate the vault -> Security
@@ -240,6 +241,7 @@ What should I do?
         }
         -> NPCS
 
+//Sets what NPCs are choices
 ===NPCS===
 {noNPCS:
     There is no one to talk to at this time. -> END
