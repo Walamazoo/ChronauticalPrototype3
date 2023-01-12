@@ -1,55 +1,33 @@
 //Script for location LIBRARY
 INCLUDE Globals.ink
-//Time Variable
-/* VAR time = 0
 
-//More Variables
-VAR roomDescription = ""
+//Testing
+//-> beginning
+//~ time = 4
 
-//Quest Variables
-VAR seenBeginning = false
-VAR introDirector = false
-VAR investigateVault = false
-VAR preDisaster = false
-VAR postDisaster = false
-VAR seenElection = false
-VAR seenResults = false
-VAR helpComplete = 0
-VAR julesDirector = false
-VAR hasCode = false
-VAR seenPepTalk = false
-//More variables needed here for quest specifics
 
-//Variables for if player has met NPC
-VAR metJules = false
-VAR metChild = false
-
-//NPC Variables
-VAR julesPresent = false
-VAR directorPresent = false
-VAR shopownerPresent = false
-VAR childPresent = false
-VAR oldladyPresent = false */
+//NPC Names Reference
 //Jules = Jules Ambrose
 //Child = Temperance Ward
 //Old Lady/Storyteller = Miriam Harcourt
 //Shopkeep = Uriah Bramble
 //Director = Bennet Crabb
 
-//Sprite/Background/Speaker
+//Sprite/Background/Speaker Tags Format
 //#speaker:Alistair
 //#sprite:Alistair_Sad
 //#background:labInterior
 //#NPC:Child_Neutral
-//Maybe change asset name
 //No space between colon and character/sprite/background
 
 
-//Sets up if player has seen opening, if has seen it, skips the beginning knot
+
+
+//If the player has seen the beginning, skip beginning knot
 === SeeBeginning ===
 {seenBeginning: -> library|-> beginning}
 
-//Knots start
+//Content knots start
 ===beginning===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~PLAY_MUSIC("event:/Music/Prologue Music")
@@ -69,11 +47,11 @@ Atlantis.
 #background:Library_Interior
 #sprite:Alistair_Sad 
 #speaker:Alistair
-
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
 (But perhaps there’s... Something, anything I’m missing. There has to be. A book, a piece of information, I haven't found yet.)
+
 #sprite:Alistair_Neutral
 (All this mustn't end in failure.)
 There are so few tomes left, most have been consumed by fire or thrown to the ground by earthquakes.
@@ -143,13 +121,13 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "Precisely." 
-#NPC:None
 ~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
 ~TOGGLE_SLIDER(true)
+#NPC:None
 -> library
-    
-    
+
+
 ===library===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 //~TOGGLE_SLIDER_INTERACTABLE(true)
@@ -208,11 +186,9 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
         ~SET_PARAMETER("PrologueCharacters", 0)
 }
 
-//Content Start
 What should I do?
     + [Look around]
-        //Room Description for Player
-        //Gives the players options to do actions if the variable requirements are met (will divert to different knot) (ex. investigate vault)
+        //Room Description for player and gives player choices
         { time:
         - 1:    Employees sit in tight circles around the library. There's no reading being done, instead, there's an electricity in the air in the form of hushed whispers.
                 +Investigate the vault -> Security
@@ -237,8 +213,7 @@ What should I do?
         }
         -> library
     
-
-    //NPC Description for Player and variable changes
+    //NPC Description for player and variable changes
     + [Look for someone to talk to]
         { time:
         - 1:    Plenty of lab employees mill about, but all of them look too busy to talk to me.
@@ -257,7 +232,6 @@ What should I do?
                 ~julesPresent = true
                 ~noNPCS = false
         - 8:    I see a teen sitting at one of the reading desks with their head in their hands. They don't notice me.
-                //~childPresent = true
                 ~noNPCS=true
         - 9:    There's not a soul in sight.
                 ~noNPCS=true
@@ -279,7 +253,10 @@ What should I do?
     -> END
 }
 
-//Knots below have conversations for NPCs that change depending on the time and if certain quest markers have been met
+
+
+
+//NPC Convos
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
