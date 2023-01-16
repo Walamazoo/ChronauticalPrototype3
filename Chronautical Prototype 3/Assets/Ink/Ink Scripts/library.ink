@@ -265,10 +265,10 @@ What should I do?
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
+#NPC:Jules_Neutral
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
-#NPC:Jules_Neutral
 ~metJules=true
 
     #speaker:Alistair
@@ -666,8 +666,9 @@ What should I do?
 ===CHILD===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
-{metChild: -> Questions|-> meetChild}
 #NPC:Child_Neutral
+{metChild: -> Questions|-> meetChild}
+
 =meetChild
 #speaker:Alistair
     "Hello there! What's your name?"
@@ -776,9 +777,9 @@ In the center, I see a series of numbers: 0-9.
 #speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
 
+~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 #speaker:D4RL1N6
 #NPC:Darling_Neutral
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
 "Did you see what the code was?"
 
 #speaker:Alistair
@@ -792,8 +793,8 @@ In the center, I see a series of numbers: 0-9.
 #speaker:Alistair
 "And somehow convince him to let us into the vault."
 
-#speaker:D4RL1N6
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+#speaker:D4RL1N6
 "Do not be so melodramatic. We will find a way. We must aquire your treasure."
 "We may also be able to gather information from exploring this place."
 
@@ -864,9 +865,9 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 "Come forth, any of you who wish to speak."
 "The floor is open for community comments on the appointment of Bennet Crabb as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
     =ShopownerMono
+        ~SET_PARAMETER("PrologueCharacters", 3)
         #speaker:Shopowner
         #NPC:Shopkeep_Neutral
-        ~SET_PARAMETER("PrologueCharacters", 3)
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
         "But."
@@ -879,9 +880,9 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I won't take much more of your time. But I don't believe that Bennet Crabb is suited to deal with this catastrophe. Perhaps it is time for someone younger, with more gumption, to lead us."
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
+        ~SET_PARAMETER("PrologueCharacters", 4)
         #speaker:Temperance
         #NPC:Child-teen_Neutral
-        ~SET_PARAMETER("PrologueCharacters", 4)
         "Okay..."
         "Well."
         "Um, so."
@@ -899,9 +900,9 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "That's all I wanted to say."
         "Yeah..." ->OldLadyMono
     =OldLadyMono
+        ~SET_PARAMETER("PrologueCharacters", 5)
         #speaker:Storyteller
         #NPC:Storyteller_Neutral
-        ~SET_PARAMETER("PrologueCharacters", 5)
         As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
         #NPC:Storyteller_Confident
