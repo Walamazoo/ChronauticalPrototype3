@@ -164,10 +164,10 @@ Who should I talk to?
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
+#NPC:Jules_Neutral
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
-#NPC:Jules_Neutral
 ~metJules=true
 
     #speaker:Alistair
@@ -252,9 +252,9 @@ Who should I talk to?
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
     #NPC:None
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        -> DONE
+    -> DONE
 
 =fair
 #speaker:Alistair
@@ -275,8 +275,8 @@ Who should I talk to?
 "Though I'm afriad it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
 //PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
-  #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 =wedding
@@ -316,8 +316,8 @@ Who should I talk to?
     #sprite:Alistair_Nervous
     "I-I will."
     "Thank you Jules..."
-  #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 =disaster
@@ -338,8 +338,8 @@ Who should I talk to?
 "It should be enough time to evacuate, but..."
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
-  #NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 =vault
@@ -594,8 +594,9 @@ Who should I talk to?
 ===DIRECTOR===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 2)}
-{metDirector: -> Questions|-> meetDirector}
 #NPC:Labhead_Neutral
+{metDirector: -> Questions|-> meetDirector}
+
 =meetDirector
 ~metDirector=true
 #speaker:Director
@@ -643,9 +644,9 @@ Who should I talk to?
     "And visit you may."
     "Now, be gone."
     "I have much work to attend to."
-#NPC:None
 ~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> END
 
 =Questions
@@ -658,9 +659,9 @@ Who should I talk to?
     + [Nothing for now]
         #speaker:Director
         "Yes, yes, begone. I am quite busy."
+        ~ TOGGLE_SLIDER_INTERACTABLE(true)
         #NPC:None
-            ~ TOGGLE_SLIDER_INTERACTABLE(true)
-            -> END //lab
+        -> END //lab
 
 =Busylab
 #speaker:Alistair
@@ -682,8 +683,8 @@ Who should I talk to?
 "Each artifact must be dated, catagorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
 "Begone."
-#NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 
@@ -700,8 +701,8 @@ Who should I talk to?
 #speaker:Alistair
 #sprite:Alistair_Sad
 "I see."
-#NPC:None
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#NPC:None
 -> DONE
 
 
