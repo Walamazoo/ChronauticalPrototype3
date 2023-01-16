@@ -97,8 +97,8 @@ What should I do?
                 Everyone is silent.
                 +Investigate -> AnnounceDestruction
         - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
-        - 7:    The lab is filled with balloon arches and confetti litters the ground. "Crabb continues reign" is sprawled everywhere on posers and decorations.
-                Lab employees simply step over the confetti and continue their work.
+        - 7:    {julesDirector: The lab is filled with balloon arches and confetti litters the ground. "Jules as new Lab Director!" is sprawled everywhere on posters and decorations. |The lab is filled with balloon arches and confetti litters the ground. "Crabb continues reign" is sprawled everywhere on posters and decorations.}
+                +{julesDirector} [Investigate party] -> Congratsparty
         - 8:    The lab is incredibly bare. Very few lab stations remain and anything that wasn’t bolted to the floor or walls is gone, leaving behind only clean spots in the dust where equipment once was. 
         - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
         - 10:   What was once a lab has now been completely swallowed up by a monsterous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
@@ -879,6 +879,68 @@ The lab employees are silent but a few dip their heads.
 #sprite:Alistair_Suspicious
 (I wonder how many already knew of this?)
 -> lab
+
+===Congratsparty===
+#speaker:
+Beyond the lab's foyer, groups of people crowd into the Director's office.
+Jules' office.
+The room is packed with people from the city and lab employees, but within the center of the crowd, I find Jules.
+    + [Speak to Jules] -> Julestalk
+    + [Leave for now] -> lab
+
+=Julestalk
+#speaker:Jules
+//NPC happy Jules
+"Alistair! You're here!"
+
+#speaker:Alistair
+//sprite embarrassed/happy
+"Of course, I wouldn't miss your congrats party."
+
+#speaker:Jules
+//NPC Jules happy said
+"Thank you, Alistair."
+"I couldn't have done it without you."
+"..."
+//NPC Jules somber
+"... Regardless, enjoy yourself. There's a snack tray somewhere around here and something to drink."
+
+#speaker:Alistair
+//SPRITE embarrassed
+"Well..."
+    + [Time to talk?]
+    #speaker:Alistair
+    "I was actually wondering if you had some time to talk."
+    
+    #speaker:Jules
+    //NPC sus
+    "Oh? What about?"
+    
+    #speaker:Alistair
+    //SPRITE sadd
+    "Uh."
+    "It might be best if we speak in private..."
+    
+    #speaker:Jules
+    "I see."
+    + [Have to talk privately]
+    #speaker:Alistair
+    "I have to talk to you, Jules, in private."
+    
+    #speaker: Jules
+    "Oh? Why so mysterious?"
+    
+    #speaker:Alistair
+    "I'll explain, but not where there are prying eyes."
+    
+    #speaker:Jules
+    "I see."
+    -
+    -> Ending
+
+===Ending===
+//PLACEHOLDER
+//GET RID OF TEMPEND AFTER THIS IS FINISHED
 
 ===TempEnd===
 #speaker: 
