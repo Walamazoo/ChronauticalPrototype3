@@ -174,10 +174,10 @@ Who should I talk to?
 ===JULES===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
+#NPC:Jules_Neutral
 {metJules: -> Questions| -> meetJules}
 
 =meetJules
-#NPC:Jules_Neutral
 ~metJules=true
 
     #speaker:Alistair
@@ -253,10 +253,10 @@ Who should I talk to?
 + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
     #speaker: 
     #NPC:None
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        -> DONE
+    -> DONE
 
 =Busy
 #speaker:Alistair
@@ -363,11 +363,11 @@ Who should I talk to?
 ===SHOPOWNER===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 3)}
+#NPC:Shopkeep_Neutral
 {metShopowner: -> Questions| -> meetShopowner}
 
 =meetShopowner
 ~metShopowner = true
-#NPC:Shopkeep_Neutral
 #speaker:Alistair
 "Hello there, shopkeep."
 "I was wondering if I could perchance peruse your wares, and perhaps be made aware of any local news, as well."
@@ -398,8 +398,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Nothing for now] -> END
  #speaker: Uriah
 "Come back anytime!"
- #speaker: 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#speaker: 
 
 =Souvenirs
 #speaker: Alistair
@@ -623,10 +623,10 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     + [Nothing for now]
     #speaker:Temperance
     "Fine."
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
      #speaker: 
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        #NPC:None
-        -> DONE
+    #NPC:None
+    -> DONE
 
 =Story
 #speaker:Alistair
@@ -938,8 +938,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Nothing for now] -> END
 #speaker:Miriam
 "Whenever you seek truth, just find me again."
- #speaker: 
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
+#speaker: 
 
 =Dissapearance
 #speaker:Alistair
