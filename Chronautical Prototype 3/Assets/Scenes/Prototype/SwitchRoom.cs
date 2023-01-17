@@ -6,14 +6,18 @@ using DG.Tweening;
 
 public class SwitchRoom : MonoBehaviour
 {
-    [SerializeField] GameObject MiniCharacter;
-    [SerializeField] string roomName;
-    [SerializeField] GameObject myButton;
-    [SerializeField] GameObject[] buttons;
-    [SerializeField] SliderController controller;
-    [SerializeField] GameObject text;
+    //Get all of the object references that are needed to make each button move and change things properly
+    [SerializeField] GameObject MiniCharacter; //The mini character on the minimap to show where the player is
+    [SerializeField] string roomName; //Name of where the player currently is
+    [SerializeField] GameObject myButton; //The button on the Time Slider that is used to start an Ink script. So Library Button gets LibraryTimeButton.
+    [SerializeField] GameObject[] buttons; //All of the buttons on the Time Slider LibraryTimeButton, LabTimeButton, MarketplaceTimeButton
+    [SerializeField] SliderController controller; //The SliderController script from the Time Slider object
+    [SerializeField] GameObject text; //The textbox that roomName is put into.
     
     public void OnClick(){
+        //When clicked we set the controller's currentLocation to our roomName, then deactivate all the buttons that are not the one that needs to be pressed.
+        //This way when we time travel, the script will always be on the ink script we want.
+        //Also when we travel by the minimap, we run the TimeButton's ink script automatically. This is handled in the Unity Inspector's On Click.
         controller.currentLocation = roomName;
         foreach(GameObject button in buttons)
         {
@@ -26,8 +30,8 @@ public class SwitchRoom : MonoBehaviour
                 button.SetActive(false);
             }
         }
-        StartCoroutine(MoveMiniCharacter());
-        switch(roomName){
+        StartCoroutine(MoveMiniCharacter()); //Moves the mini character to this button's position
+        switch(roomName){ //Sets the text box's text to our roomName
             case "library":
                 text.GetComponent<Text>().text = "Library";
                 break;
