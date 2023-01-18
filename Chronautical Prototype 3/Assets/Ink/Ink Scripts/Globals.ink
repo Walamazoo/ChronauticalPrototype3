@@ -59,6 +59,8 @@ EXTERNAL PLAY_SOUND(sound)
 EXTERNAL CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription)
 EXTERNAL CREATE_JOURNAL_OBJECT(name, type, hoverDescription, fullDescription)
 
+EXTERNAL TOGGLE_CAMERA(state)
+
 
 === function TOGGLE_SLIDER(state) ===
     ~return state
@@ -77,3 +79,5 @@ EXTERNAL CREATE_JOURNAL_OBJECT(name, type, hoverDescription, fullDescription)
     ~return name
 === function CREATE_JOURNAL_OBJECT(name, type, hoverDescription, fullDescription) ===
     ~return name
+=== function TOGGLE_CAMERA(state) ===
+    ~return state

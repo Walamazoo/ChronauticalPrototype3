@@ -16,6 +16,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     [SerializeField] private TextAsset globalsInkFile;
     [SerializeField] GameObject button;
     [SerializeField] JournalManager JournalManager;
+    [SerializeField] CameraParallax CameraParallax;
     [SerializeField] GameObject customInkFunctions;
     [SerializeField] GameObject[] backgrounds;
     [SerializeField] GameObject currentBackground;
@@ -62,6 +63,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("STOP_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopEmitter();});
         story.BindExternalFunction("SET_PARAMETER", (string parName, int value) => {customInkFunctions.GetComponent<CustomInkFunctions>().SetParameter(parName, value);});
         
+        story.BindExternalFunction("TOGGLE_CAMERA", (bool state) => {CameraParallax.CameraCanMove(state);});
     }
 
     protected override void UnbindExternalFunctions(Story story)
@@ -78,6 +80,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             story.UnbindExternalFunction("TOGGLE_FILTER");
             story.UnbindExternalFunction("CREATE_JOURNAL_OBJECT");
             story.UnbindExternalFunction("CREATE_TIMELINE_CLUE");
+
+            story.UnbindExternalFunction("TOGGLE_CAMERA");
 
             story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
             story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
@@ -185,6 +189,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                 var activeStory = stories[i];
                 customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
             }
+        CameraParallax.CameraCanMove(true);
         fadeOut();
         
     }
@@ -205,6 +210,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                 variablesToStory(story);
             }
         }
+        CameraParallax.CameraCanMove(false);
         base.OnConversationStart(actorTransform);
     }
 

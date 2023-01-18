@@ -47,6 +47,8 @@ EXTERNAL SET_PARAMETER(parName, value)
 
 EXTERNAL CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription)
 
+EXTERNAL TOGGLE_CAMERA(state)
+
 
 === function TOGGLE_SLIDER(state) ===
     ~return state
@@ -61,3 +63,5 @@ EXTERNAL CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription)
     ~return value
 === function CREATE_TIMELINE_CLUE(name, type, hoverDescription, fullDescription) ===
     ~return name
+=== function TOGGLE_CAMERA(state) ===
+    ~return state
