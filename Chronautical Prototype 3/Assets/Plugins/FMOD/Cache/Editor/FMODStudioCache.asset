@@ -105,6 +105,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-4146592499468517767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Darling/DarlingHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Darling/DarlingHappy
+  Guid:
+    Data1: 123489533
+    Data2: 1132883461
+    Data3: 1864972733
+    Data4: -1210261864
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-4060859045522867955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,10 +174,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638061126534618291
+  lastModified: 638095909834198125
   FileSizes:
   - Name: Desktop
-    Value: 19090304
+    Value: 19431040
   Exists: 1
 --- !u!114 &-1467308558841033203
 MonoBehaviour:
@@ -263,6 +290,10 @@ MonoBehaviour:
   - {fileID: 4896296810924624196}
   - {fileID: -111928886858579606}
   - {fileID: -7603327635597123483}
+  - {fileID: 4984218286944734269}
+  - {fileID: 3292186107521434828}
+  - {fileID: 6315782032746582938}
+  - {fileID: -4146592499468517767}
   EditorParameters:
   - {fileID: 6965014497468042177}
   - {fileID: 4907868185218273205}
@@ -271,7 +302,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638061126534618291
+  cacheTime: 638095909834237714
   cacheVersion: 131593
 --- !u!114 &157819835543909333
 MonoBehaviour:
@@ -382,6 +413,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 920000
+--- !u!114 &3292186107521434828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Darling/DarlingThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Darling/DarlingThinking
+  Guid:
+    Data1: -1425252986
+    Data2: 1099879163
+    Data3: 2024753820
+    Data4: 1366382250
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3200
 --- !u!114 &4896296810924624196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +497,60 @@ MonoBehaviour:
   - Temperance
   - Lady
   Exists: 1
+--- !u!114 &4984218286944734269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Darling/DarlingFrustrated
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Darling/DarlingFrustrated
+  Guid:
+    Data1: -565368734
+    Data2: 1093211455
+    Data3: -1671740266
+    Data4: -551658866
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2050
+--- !u!114 &6315782032746582938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Darling/DarlingDisappointed
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Darling/DarlingDisappointed
+  Guid:
+    Data1: -1323515231
+    Data2: 1113462342
+    Data3: 1349702309
+    Data4: -155760043
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2280
 --- !u!114 &6965014497468042177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,10 +604,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638060262685332360
+  lastModified: 638095909834237714
   FileSizes:
   - Name: Desktop
-    Value: 1600
+    Value: 1802
   Exists: 1
 --- !u!114 &7821536103994051125
 MonoBehaviour:

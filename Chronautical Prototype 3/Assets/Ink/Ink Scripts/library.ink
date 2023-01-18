@@ -60,7 +60,7 @@ The planet, Elore-Nabyke, will be lost.
 I throw myself to a bookshelf nearby and yank out tomes. There are so few left. Most have been consumed by fire.
 (Perhaps I haven't tried this yet.)
 
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingDisappointed")
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
 "Alistair."
@@ -74,13 +74,14 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 #speaker:Alistair
 "I'm sorry, I'm not- I just need to find this book, I think I remember it saying something about the core."
 
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
 "The core is gone."
 
 #speaker:Alistair
 "It's not, I know better now, I can find a way to revive it-"
 
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
 "This is attempt number 37 Alistair. The core is gone. Is it not clear we can do nothing regarding the destruction of the planet?"
 "During the last attempt, you went right up to the planet's destruction."
@@ -100,10 +101,11 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 "I can at least save that..."
 The vault shimmers under the immense heat in the library. It's tucked into the back of the room. It's clear even from this distance that touching the handle would burn my skin.
 
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingThinking")
 #speaker:D4RL1N6
 "You will have to use your Astrolabe to return to a time before all this destruction." 
 "One year in the past should be sufficient for now."
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
 "Pull the slider to the year you would like to travel to, then activiate."
 
 #speaker:Alistair
@@ -112,7 +114,7 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "My apologies, Alistair, it is part of my programming."
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
 "Shall we go back in time?"
 
 #speaker:Alistair
@@ -777,7 +779,7 @@ In the center, I see a series of numbers: 0-9.
 #speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
 
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingThinking")
 #speaker:D4RL1N6
 #NPC:Darling_Neutral
 "Did you see what the code was?"
@@ -793,7 +795,7 @@ In the center, I see a series of numbers: 0-9.
 #speaker:Alistair
 "And somehow convince him to let us into the vault."
 
-~PLAY_SOUND("event:/Sound/SFX/Prologue/Darling beep")
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
 "Do not be so melodramatic. We will find a way. We must aquire your treasure."
 "We may also be able to gather information from exploring this place."

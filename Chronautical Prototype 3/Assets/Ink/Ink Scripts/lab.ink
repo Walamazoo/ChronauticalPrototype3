@@ -401,6 +401,7 @@ Who should I talk to?
 "Oh Alistair."
 "I am sorry, I wish I could help you."
 
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #NPC:Darling_Upset
 #speaker:D4RL1N6
 "Do not give up yet Alistair."
@@ -804,6 +805,7 @@ Who should I talk to?
 (How infuriating!)
 (Speaking to Bennet is like talking to a wall...)
 
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
 #NPC:Darling_Annoyed
 "That was fruitless."
@@ -817,6 +819,8 @@ Who should I talk to?
 #NPC:Darling_Neutral
 "It is improbable that Mr. Bennet Crabb is the only one who can get into the vault."
 "Perhaps we can seek out another employee."
+
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
 #NPC:Darling_Happy
 "They may be able to help us or shed light on new information."
 
@@ -939,6 +943,7 @@ The room is packed with people from the city and lab employees, but within the c
     -> Ending
 
 ===Ending===
+->TempEnd
 //PLACEHOLDER
 //GET RID OF TEMPEND AFTER THIS IS FINISHED
 
