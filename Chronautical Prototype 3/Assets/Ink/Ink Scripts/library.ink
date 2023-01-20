@@ -85,9 +85,9 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 #speaker:D4RL1N6
 "This is attempt number 37 Alistair. The core is gone. Is it not clear we can do nothing regarding the destruction of the planet?"
 "During the last attempt, you went right up to the planet's destruction."
-"You barely gave yourself enough time to go back in time again."
+"You barely gave yourself enough time to go back in time again." 
 
-#speaker:Alistair
+//#speaker:Alistair
 * [I'm a failure] "If I can't even save this planet, what's the point?"
 * [There must be a way] "There must be something I'm just not thinking of."
 
@@ -123,18 +123,19 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 
 #speaker:D4RL1N6
 "Precisely." 
-~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
+~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~TOGGLE_SLIDER(true)
+#speaker:None
+#NPC:None
+#background:Library_Interior
+#sprite:Alistair_Neutral
 -> library
 
 
 ===library===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
-#NPC:None
-#background:Library_Interior
-#sprite:Alistair_Neutral
 //Room Description for Journal
+print("gobbledigook") //Need Dialogue here to avoid double click bug
 { time:
 - 1:    
         ~ roomDescription = "Gossip about the announcement, and security won't let me close to the vault."
