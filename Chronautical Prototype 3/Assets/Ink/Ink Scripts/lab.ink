@@ -943,14 +943,21 @@ The room is packed with people from the city and lab employees, but within the c
     -> Ending
 
 ===Ending===
-->TempEnd
-//PLACEHOLDER
-//GET RID OF TEMPEND AFTER THIS IS FINISHED
+//SETTING BACKGROUND TO VAULT
+//Alistair asks Jules to let him into the vault, Jules questions Alistair on why, how he was able to help so much, but ultimately trusts Alistair
+//Alistair gets into the vault, takes treasure
+//Leave on ship, give some vague thing about Jack stuff
+-> Teaser
 
-===TempEnd===
+===Teaser===
+//Something with Jack
+//Dramatic, set up games themes, time marches on, do what you can while you can and enjoy it
+-> Thankyou
+
+===Thankyou===
 #speaker: 
 #sprite: 
 #NPC:None
-This is the end of our demo, thank you so much for playing!
-Be sure to follow our 'Chronautical' socials and let us know what you think!
+//something heart felt
+//go back to main menu scene?
 -> END
