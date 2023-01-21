@@ -9,8 +9,8 @@ public class CameraParallax : MonoBehaviour
     bool couldMoveBefore;
 
     //bool establishingShot;
-    float shotSpeed = 0.3f;
-    float startingShot = 0.3f;
+    //float shotSpeed = 0.3f;
+    //float startingShot = 0.3f;
 
     [SerializeField] int moveSpeed;
     // Start is called before the first frame update
@@ -25,9 +25,8 @@ public class CameraParallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canMove){
+        if(canMove && (Input.mousePosition.x >= Screen.width * 0.9f || Input.mousePosition.x <= Screen.width * 0.1f)){
             Vector2 mousePosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Debug.Log(mousePosition);
 
             float xPos = Mathf.Lerp(transform.position.x, startPosition.x + (mousePosition.x * moveSpeed), 2f * Time.deltaTime);
             /*float yPos = Mathf.Lerp(transform.position.y, startPosition.y + (mousePosition.y * moveSpeed), 2f * Time.deltaTime);
@@ -45,9 +44,6 @@ public class CameraParallax : MonoBehaviour
                 xPos = -1.0f;
             }
             transform.position = new Vector3(xPos, 0.0f, -10.0f);
-        }
-        else{
-            transform.position = new Vector3(0.0f, 0.0f, -10.0f);
         }
 
         /*if(establishingShot){
