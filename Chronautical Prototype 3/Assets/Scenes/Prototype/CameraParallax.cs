@@ -13,6 +13,7 @@ public class CameraParallax : MonoBehaviour
     //float startingShot = 0.3f;
 
     [SerializeField] int moveSpeed;
+    [SerializeField] GameObject background;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +38,10 @@ public class CameraParallax : MonoBehaviour
             if(yPos < -0.55f){
                 yPos = -0.55f;
             }*/
-            if(xPos > 1.0f){
+            if(xPos > background.gameObject.transform.right.x){
                 xPos = 1.0f;
             }
-            if(xPos < -1.0f){
+            if(xPos < -background.gameObject.transform.right.x){
                 xPos = -1.0f;
             }
             transform.position = new Vector3(xPos, 0.0f, -10.0f);
