@@ -944,20 +944,196 @@ The room is packed with people from the city and lab employees, but within the c
 
 ===Ending===
 //SETTING BACKGROUND TO VAULT
-//Alistair asks Jules to let him into the vault, Jules questions Alistair on why, how he was able to help so much, but ultimately trusts Alistair
-//Alistair gets into the vault, takes treasure
-//Leave on ship, give some vague thing about Jack stuff
+#NPC:Jules
+#speaker:Jules
+"The vault?"
+"I suppose this place is private enough."
+"What did you want to talk about Alistair?"
+
+#sprite:ALISTAIRSPRITE
+#speaker:Alistair
+"Actually, it has to do with the vault..."
+
+#NPC:Jules
+#speaker:Jules
+"Oh?"
+
+#sprite:ALISTAIRSPRITE
+#speaker:Alistair
+"I'm..."
+"Well, I forgot something in the vault."
+"I left it on accident and I just really need it back."
+"So..."
+
+#NPC:Jules
+#speaker:Jules
+"You want me to open the vault?"
+
+#sprite:ALISTAIRSPRITE
+#speaker:Alistair
+"Yes."
+"And I know it's against protocol-"
+"But I really need what I left in there."
+
+#NPC:Jules
+#speaker:Jules
+"What did you leave behind?"
+
+#sprite:ALISTAIRSPRITE
+#speaker:Alistair
+"I..."
+    + [Something?]
+    #speaker:Alistair
+    "Uh."
+    "Something?"
+    + [Research notes]
+    #speaker:Alistair
+    "Some of my old research notes."
+    
+    #speaker:Jules
+    "Notes on what?"
+    - 
+    #sprite:ALISTAIRSPRITE
+    #speaker:Alistair
+    "..."
+    "I'm sorry, Jules, I can't tell you."
+    "But you just have to trust me."
+
+#speaker:Jules
+#NPC:Jules
+"..."
+"I must admit."
+"You've been acting very suspicious lately, Alistair."
+"Beyond this..."
+"Breach of protocol,"
+"You've helped me in such specific ways."
+
+#speaker:Alistair
+#sprite:ALISTAIRSPRITE
+(Does he suspect me?)
+    + [Don't know what you mean]
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "I don't know what you could be talking about..."
+    + [Just trust me]
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "Please Jules."
+    "Just trust me."
+    -
+    #speaker:Jules
+    #NPC:Jules
+    "Alistair."
+    "Did you help me get elected just to open the vault for you?"
+    
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "Wha-"
+    "No, Jules, that's not it at all!"
+    "I just wanted to help out my friend."
+    
+    #speaker:Jules
+    #NPC:Jules
+    "That is a relief to hear..."
+    "I am sorry for even suggesting such a thing."
+    "You've just acted..."
+    "A bit off since you've returned."
+    "It's very troubling."
+    
+    + [Nothing to worry about]
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "I am sorry Jules."
+    "But I assure you, you don't have to worry about little old me."
+    + [Can explain in time]
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "I am sorry Jules."
+    "Perhaps in time I can explain but..."
+    "Not yet."
+    -
+    #speaker:Jules
+    #NPC:Jules
+    "I understand..."
+    "But, you know you can tell me anything Alistair?"
+    "You've done me a great service, I want to be able to help you."
+    "Now and in the future."
+    
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "Thank you Jules..."
+    
+    #speaker:Jules
+    #NPC:Jules
+    "Now, let me get that vault open for you."
+    "Don't act so surprised!"
+    "You know I've never been a stickler for rules!"
+    
+    #speaker:
+    Jules opens the vault with a simple turning of dials and circles.
+    As the vault door opens, I rush inside.
+    My cubby is just as I left it.
+    Inside, I find the plaque and my notebook.
+    Jules waits at the door, but there is hardly time for goodbyes.
+    
+    #speaker:D4RL1N6
+    #NPC:Darling
+    "We should return to the ship, Alistair."
+    "You can return for goodbyes in another time."
+    
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "I know..."
+    "Let's return then."
+    
+    #speaker:D4RL1N6
+    #NPC:Darling
+    "Ready?"
+    
+    #speaker:Alistair
+    #sprite:ALISTAIRSPRITE
+    "Let's go."
+
+//visual effect?
+//background change
+#speaker:
+A flash falls over my eyes and I see the familiar hull of my ship all around me.
+It feels like it's been years.
+As I slump back in my ship, I hold the plaque in my lap.
+The words engraved into the metal are bareily legible.
+(Could he even read this now?)
+(Perhaps it was never meant to be...)
+(...)
+(Maybe it doesn't matter.)
+(Perhaps remembering him will be enough.)
+//FADE TO BLACK
 -> Teaser
 
 ===Teaser===
-//Something with Jack
-//Dramatic, set up games themes, time marches on, do what you can while you can and enjoy it
--> Thankyou
+//black background
+#speaker:???
+"Ugh..."
+"My head flipping hurts..."
+//cuss word that's specific to Chronautical
+//background change
 
-===Thankyou===
-#speaker: 
-#sprite: 
-#NPC:None
-//something heart felt
-//go back to main menu scene?
+#speaker:Jack
+#sprite:JACKSPRITE
+"Where am I...?"
+
+(I'm in the Doc's clinic!)
+(I guess I must have really gotten smacked hard.)
+
+Beside my cot, I see some unusal items.
+The ship mini.
+The funking looking gadget.
+The plaque.
+And the notebook.
+
+(But those are his things?)
+(If those are here,)
+(Then where the hell is Alistair!)
+//is hell gucci?
+//FADE TO BLACK
 -> END
+//Send back to main menu scene?
