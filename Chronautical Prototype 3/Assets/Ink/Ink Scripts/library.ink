@@ -121,21 +121,21 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 "Perhaps then we can find a way into the vault."
 (Though I doubt it will be as simple as just opening it...)
 
-#speaker:D4RL1N6
-"Precisely." 
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
 ~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~TOGGLE_SLIDER(true)
-#speaker:None
+#speaker:D4RL1N6
+"Precisely."
 #NPC:None
+#speaker:
 #background:Library_Interior
 #sprite:Alistair_Neutral
+Let's get to it then.
 -> library
 
 
 ===library===
 //Room Description for Journal
-print("gobbledigook") //Need Dialogue here to avoid double click bug
 { time:
 - 1:    
         ~ roomDescription = "Gossip about the announcement, and security won't let me close to the vault."
@@ -353,10 +353,9 @@ What should I do?
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     #speaker:Jules
+    ~ TOGGLE_SLIDER_INTERACTABLE(true)
     "Let's speak again soon, Alistair."
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        #NPC:None
-        -> END
+    -> END
 
 //Question topics
 =WhyHere

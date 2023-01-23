@@ -68,6 +68,10 @@ public class CameraParallax : MonoBehaviour
         couldMoveBefore = move;
     }
 
+    public void ResetCamera(){
+        transform.position = new Vector3(0.0f, 0.0f, -10.0f);
+    }
+
     /*public void EstablishShot(){
         canMove = false;
         transform.position = new Vector3(0.0f, 0.0f, -10.0f);

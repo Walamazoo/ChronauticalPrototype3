@@ -190,6 +190,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                 customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
             }
         CameraParallax.CameraCanMove(true);
+        SetSprite("None", "None", NPCSprite);
+        speakerText.GetComponent<Text>().text = "";
         fadeOut();
         
     }
@@ -207,10 +209,11 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         for(int i = 0; i < inkJSONAssets.Count; i++){
             if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted)){
                 var story = stories[i];
-                variablesToStory(story);
+                //variablesToStory(story);
             }
         }
         CameraParallax.CameraCanMove(false);
+        CameraParallax.ResetCamera();
         base.OnConversationStart(actorTransform);
     }
 
