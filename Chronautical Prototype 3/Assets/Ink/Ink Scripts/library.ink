@@ -128,7 +128,6 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 "Precisely."
 #NPC:None
 #speaker:
-#background:Library_Interior
 #sprite:Alistair_Neutral
 Let's get to it then.
 -> library
@@ -189,7 +188,7 @@ Let's get to it then.
         ~SET_PARAMETER("PrologueAmbience", 5)
         ~SET_PARAMETER("PrologueCharacters", 0)
 }
-
+#background:Library_Interior
 What should I do?
     + [Look around]
         //Room Description for player and choices
