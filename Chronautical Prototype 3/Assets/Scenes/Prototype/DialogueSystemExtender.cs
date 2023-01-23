@@ -133,6 +133,46 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             }
     }
 
+    protected override void OnConversationStart(Transform actorTransform)
+    {
+        fadeIn();
+        for(int i = 0; i < inkJSONAssets.Count; i++){
+            if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted)){
+                var story = stories[i];
+                //variablesToStory(story);
+            }
+        }
+        CameraParallax.CameraCanMove(false);
+        CameraParallax.ResetCamera();
+        base.OnConversationStart(actorTransform);
+    }
+    protected override void OnConversationEnd(Transform actor)
+    {
+        base.OnConversationEnd(actor);
+        for (int i = 0; i < inkJSONAssets.Count; i++)
+            {
+                var activeStory = stories[i];
+                customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
+            }
+        CameraParallax.CameraCanMove(true);
+        SetSprite("None", "None", NPCSprite);
+        speakerText.GetComponent<Text>().text = "";
+        fadeOut();
+        
+    }
+
+    private void fadeOut()
+    {
+        foreach(GameObject objects in fadeouts){
+            objects.SetActive(false);
+        }
+    }
+
+    private void fadeIn(){
+        foreach(GameObject objects in fadeouts){
+            objects.SetActive(true);
+        }
+    }
     private void initializeVariables(){
         /*string filePath = globalsInkFile.filePath;
         string inkFileContents = File.ReadAllText(filePath);
@@ -181,47 +221,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         base.OnVariableChange(variableName, newValue);
     }
 
-    protected override void OnConversationEnd(Transform actor)
-    {
-        base.OnConversationEnd(actor);
-        for (int i = 0; i < inkJSONAssets.Count; i++)
-            {
-                var activeStory = stories[i];
-                customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
-            }
-        CameraParallax.CameraCanMove(true);
-        SetSprite("None", "None", NPCSprite);
-        speakerText.GetComponent<Text>().text = "";
-        fadeOut();
-        
-    }
 
-    private void fadeOut()
-    {
-        foreach(GameObject objects in fadeouts){
-            objects.SetActive(false);
-        }
-    }
-
-    protected override void OnConversationStart(Transform actorTransform)
-    {
-        fadeIn();
-        for(int i = 0; i < inkJSONAssets.Count; i++){
-            if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted)){
-                var story = stories[i];
-                //variablesToStory(story);
-            }
-        }
-        CameraParallax.CameraCanMove(false);
-        CameraParallax.ResetCamera();
-        base.OnConversationStart(actorTransform);
-    }
-
-        private void fadeIn(){
-        foreach(GameObject objects in fadeouts){
-            objects.SetActive(true);
-        }
-    }
 
     public void setTime(int value){
         for (int i = 0; i < inkJSONAssets.Count; i++)
