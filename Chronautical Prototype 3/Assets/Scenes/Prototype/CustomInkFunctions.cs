@@ -10,7 +10,7 @@ public class CustomInkFunctions : MonoBehaviour
     [SerializeField] Button[] travelButtons;
     [SerializeField] Button[] miniMap;
     [SerializeField] Slider slider;
-    [SerializeField] SliderController sc;
+    [SerializeField] EnvironmentFilter ef;
 
     FMOD.Studio.EventInstance gameMusic;
     FMOD.Studio.EventInstance gameAmbience;
@@ -47,10 +47,10 @@ public class CustomInkFunctions : MonoBehaviour
 
     public void ToggleFilter(bool state){
         if(state == true){
-            sc.currentFilter.SetActive(true);
+            ef.currentFilter.SetActive(true);
         }
         else{
-            sc.currentFilter.SetActive(false);
+            ef.currentFilter.SetActive(false);
         }
     }
     

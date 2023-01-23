@@ -13,6 +13,7 @@ public class SwitchRoom : MonoBehaviour
     [SerializeField] GameObject[] buttons; //All of the buttons on the Time Slider LibraryTimeButton, LabTimeButton, MarketplaceTimeButton
     [SerializeField] SliderController controller; //The SliderController script from the Time Slider object
     [SerializeField] GameObject text; //The textbox that roomName is put into.
+    [SerializeField] EnvironmentFilter ef;
     
     public void OnClick(){
         //When clicked we set the controller's currentLocation to our roomName, then deactivate all the buttons that are not the one that needs to be pressed.
@@ -34,12 +35,15 @@ public class SwitchRoom : MonoBehaviour
         switch(roomName){ //Sets the text box's text to our roomName
             case "library":
                 text.GetComponent<Text>().text = "Library";
+                ef.setLocation(1);
                 break;
             case "marketplace":
                 text.GetComponent<Text>().text = "Market Place";
+                ef.setLocation(2);
                 break;
             case "lab":
                 text.GetComponent<Text>().text = "Lab";
+                ef.setLocation(3);
                 break;
         }
     }

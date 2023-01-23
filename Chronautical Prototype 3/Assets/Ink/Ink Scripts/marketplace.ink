@@ -108,7 +108,7 @@ What should I do?
         //NPC Description for player and variable changes
     + [Look for someone to talk to]
         { time:
-        - 1:    An old storyteller waves her hands excitedly. Most of the adults who stop to listen soon scoff and move on, but the younger folk seem enthralled. One child in particular listens ecitedly, all starry-eyed.
+        - 1:    An old storyteller waves her hands excitedly. Most of the adults who stop to listen soon scoff and move on, but the younger folk seem enthralled. One child in particular listens excitedly, all starry-eyed.
                 ~ childPresent = true
                 ~ oldladyPresent = true
                 ~noNPCS=false

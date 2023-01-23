@@ -20,6 +20,8 @@ public class SliderController : MonoBehaviour
     [SerializeField] GameObject playerActor;
     [SerializeField] GameObject conversantActor;
 
+    [SerializeField] EnvironmentFilter ef;
+
     public int currentYear;
     public static float currentSliderValue = 1;
     [SerializeField] TextMeshProUGUI sliderTimeDisplay;
@@ -28,10 +30,6 @@ public class SliderController : MonoBehaviour
     [SerializeField] int yearGap;
     [SerializeField] Slider slider;
     //FMOD.Studio.EventInstance sliderSFX;
-
-    [SerializeField] GameObject[] filters;
-    public GameObject currentFilter;
-    [SerializeField]bool startingFilter;
 
     void Awake()
     {
@@ -95,15 +93,8 @@ public class SliderController : MonoBehaviour
                 break;
         }
         sliderTimeDisplay.text = currentYear.ToString();
-        
-        if(currentFilter != null && startingFilter == false){
-            currentFilter.SetActive(false);
-            currentFilter.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
-            Debug.Log("Setting filter to 0.5 opacity");
-        }
-        currentFilter = filters[((int)currentSliderValue)-1];
-        currentFilter.SetActive(true);
-        startingFilter = false;
+        ef.setTime((int)currentSliderValue-1);
+        ef.setFilter(false);
     }
 
     public void LaunchNewTime()
@@ -111,15 +102,12 @@ public class SliderController : MonoBehaviour
         //sliderSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Time Travel");
         
-        if(currentFilter != null){
-            currentFilter.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
-        }
-        
         currentYearText.text = currentYear.ToString();
 
         //DialogueSystemInkIntegration.SetInkNumber("CurrentSliderValue", currentSliderValue);
         //DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
         extender.setTime((int)currentSliderValue);
+        ef.setFilter(true);
     }
 }
