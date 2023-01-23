@@ -144,6 +144,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         }
         CameraParallax.CameraCanMove(false);
         CameraParallax.ResetCamera();
+       customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(false);
+        customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(false);
         base.OnConversationStart(actorTransform);
     }
     protected override void OnConversationEnd(Transform actor)
@@ -157,6 +159,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         CameraParallax.CameraCanMove(true);
         SetSprite("None", "None", NPCSprite);
         speakerText.GetComponent<Text>().text = "";
+        customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(true);
+        customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
         fadeOut();
         
     }

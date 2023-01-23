@@ -29,7 +29,7 @@ INCLUDE Globals.ink
 
 //Content knots start
 ===beginning===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~PLAY_MUSIC("event:/Music/Prologue Music")
 ~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
 ~ time = 10
@@ -249,12 +249,12 @@ What should I do?
 {noNPCS:
     There is no one to talk to at this time. -> END
   - else:
-  ~ TOGGLE_SLIDER_INTERACTABLE(false)
+  //~ TOGGLE_SLIDER_INTERACTABLE(false)
     Who should I talk to? 
     +{julesPresent} [Jules] -> JULES
     +{childPresent} [Temperance] -> CHILD
     + [Don't talk to anyone]
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
+    //~ TOGGLE_SLIDER_INTERACTABLE(true)
     -> END
 }
 
@@ -265,7 +265,7 @@ What should I do?
 
 //Jules Ambrose
 ===JULES===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
 #NPC:Jules_Neutral
 {metJules: -> Questions|-> meetJules}
@@ -352,7 +352,7 @@ What should I do?
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     #speaker:Jules
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
+    //~ TOGGLE_SLIDER_INTERACTABLE(true)
     "Let's speak again soon, Alistair."
     -> END
 
@@ -491,7 +491,7 @@ What should I do?
 "I recall an election, perhaps we can find some leads there."
 }
 
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 #sprite:Alistair_Neutral
 -> DONE
@@ -544,7 +544,7 @@ What should I do?
 "But I do doubt I would have much success."
 #NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
 
@@ -578,7 +578,7 @@ What should I do?
 "Just some food for thought."
 ~ speechImproved = true
 ~ helpComplete = helpComplete +1
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
 
@@ -627,7 +627,7 @@ What should I do?
 "Perfect."
 ~ helpComplete = helpComplete +1
 ~ addressFix = true
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
 
@@ -658,14 +658,14 @@ What should I do?
 "Thanks Alistair."
 "I'll try my best."
 ~ helpComplete = helpComplete +1
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
 
 
 //Temperance Ward
 ===CHILD===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
 #NPC:Child_Neutral
 {metChild: -> Questions|-> meetChild}
@@ -701,7 +701,7 @@ What should I do?
     + [Nothing for now]
     #speaker:Temperance
     "Fine."
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        //~ TOGGLE_SLIDER_INTERACTABLE(true)
         #NPC:None
         -> END
 =Lost
@@ -749,7 +749,7 @@ What should I do?
 
 //Quest/Plot Specific Knots
 ===InvestigateVault===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Vault
 The vault is a marvel in and of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
@@ -767,13 +767,13 @@ In the center, I see a series of numbers: 0-9.
         -> InvestigateVault
     * {hasCode} [Input code]
         ->Ending
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
+    //~ TOGGLE_SLIDER_INTERACTABLE(true)
     + [Do nothing] -> END 
 
 
 ->DarlingPepTalk
 ===DarlingPepTalk===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~seenPepTalk=true
 #speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
@@ -809,7 +809,7 @@ In the center, I see a series of numbers: 0-9.
 
 
 ===Security===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 #speaker:Alistair
 As I approach the vault, I see one of the vault's security personnel promptly slide over and put himself directly into my path.
 He crosses his arms and just stands there.
@@ -831,35 +831,35 @@ He crosses his arms and just stands there.
         
             #speaker:Alistair
             "Oh! Apologies..."
-            ~ TOGGLE_SLIDER_INTERACTABLE(true)
+            //~ TOGGLE_SLIDER_INTERACTABLE(true)
             (He's not very talkative is he...)
             -> END
         ++[Nevermind] 
             #speaker:Alistair
             I just smile and turn on my heel.
-            ~ TOGGLE_SLIDER_INTERACTABLE(true)
+            //~ TOGGLE_SLIDER_INTERACTABLE(true)
             (Maybe I'll look elsewhere.)
             -> END 
     + [Nevermind] 
         I just smile and turn on my heel. 
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
+        //~ TOGGLE_SLIDER_INTERACTABLE(true)
         (Maybe I'll look elsewhere.) -> END 
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
 
 
 ===HotVault===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 The vault shimmers from the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
 The treasure’s most likely melted by now anyways.
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
 
 
 ===Election===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
+//~ TOGGLE_SLIDER_INTERACTABLE(false)
 As crowds of people close in on the board members, I push and wriggle my way closer to the front.
 Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker:Board Member
@@ -939,7 +939,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 }
 ~SET_PARAMETER("PrologueCharacters", 0)
 
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
 
@@ -961,7 +961,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 #NPC:Jules_Nervous
 Jules' speech was littered with uncertainities and filler words, but his heart was in the right place.
 ~ seenSpeech = true
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
 
@@ -980,7 +980,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 "Please, come to me at any time with them and we can discuss."
 "Thank you."
 ~ seenSpeech = true
-~ TOGGLE_SLIDER_INTERACTABLE(true)
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 {helpComplete == 3: ->TempEnd|->DONE}
 
