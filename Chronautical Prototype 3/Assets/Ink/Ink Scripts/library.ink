@@ -99,8 +99,11 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 "..."
 "The vault. I need to get something out of there for him. He'll need it."
 "I can at least save that..."
-The vault shimmers under the immense heat in the library. It's tucked into the back of the room. It's clear even from this distance that touching the handle would burn my skin.
-
+"I have to, then he'll know when to find me."
+//^Does this clearly make the treasure in the vault important for the player? Is it clear it's important for Alistair to find?
+The vault shimmers under the immense heat in the library. It's tucked into the back of the room.
+It's clear even from this distance that touching the handle would burn my skin.
+//Tutorial Start
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingThinking")
 #speaker:D4RL1N6
 "You will have to use your Astrolabe to return to a time before all this destruction." 
@@ -109,27 +112,50 @@ The vault shimmers under the immense heat in the library. It's tucked into the b
 "Pull the slider to the year you would like to travel to, then activiate."
 
 #speaker:Alistair
-"Wha-"
-"I know all this, I've done this many times."
+"Ah yes."
+"The safety protocol."
+"We'll have to make sure everything is in working order."
 
 #speaker:D4RL1N6
-"My apologies, Alistair, it is part of my programming."
+"Of course, Alistair."
+"Time travel can be dangerous after all."
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
 "Shall we go back in time?"
-
+//Cue Timeline will appear, handle will flash
+//The player can only select time 9
+//Minimap and journal not currently enabled
+//->END
+//Somehow transition so that new knot runs when time is set to 9
+//elp, way to pause and resume script under certain variables?
+//=tutorial
 #speaker:Alistair
-"Perhaps then we can find a way into the vault."
-(Though I doubt it will be as simple as just opening it...)
+"Perhaps now we can find a way into the vault."
 
+#speaker:D4RL1N6
+"It seems that even without the fire the vault can not be opened." 
+"We need a code."
+"But, we now have valuable information we can put in the journal."
+//Cue journal flashing
+//Will later need to make addition that mentions player writing their own notes in the journal
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
 ~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~TOGGLE_SLIDER(true)
+//Once inside Journal
+
 #speaker:D4RL1N6
-"Precisely."
+"There are also more places to explore in the lab to gather more information."
+//Cue minimap flash
+//Pause
+#speaker:D4RL1N6
+"This is the end of the safety protocol."
+
+#speaker:Alistair
+"Thank you."
+"Now, I'd better find somewhat into this vault..."
 #NPC:None
 #speaker:
 #sprite:Alistair_Neutral
-Let's get to it then.
+//Tutorial end
 -> library
 
 
