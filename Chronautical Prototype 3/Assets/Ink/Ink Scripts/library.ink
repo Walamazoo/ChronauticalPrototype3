@@ -693,6 +693,7 @@ What should I do?
 ===CHILD===
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
+~PLAY_SOUND("event:/Character Barks/Temperance/child-greeting")
 #NPC:Child_Neutral
 {metChild: -> Questions|-> meetChild}
 
@@ -713,6 +714,7 @@ What should I do?
     #speaker:Alistair
     "You... doing alright?"
     
+    ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
@@ -725,6 +727,7 @@ What should I do?
     + [Lost?] -> Lost
     + [Parents?] -> Parents
     + [Nothing for now]
+    ~PLAY_SOUND("event:/Character Barks/Temperance/child-farewell")
     #speaker:Temperance
     "Fine."
         //~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -735,11 +738,13 @@ What should I do?
         #speaker:Child
         "I'm not lost."
         "I'm exploring."
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
         "Nobody is in the lab anyway. Everyone is getting ready to evacuate."
             ++ [You evacuate too?] 
                 #speaker:Alistair
                 "Shouldn't you be getting ready too?"
                 
+                ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
                 #speaker:Child
                 "I am ready. I have everything I need."
                 #speaker: Alistair
@@ -753,6 +758,7 @@ What should I do?
                 
                 #speaker:Child
                 "I've always wanted to see it."
+                ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
                 "This is the only way I'm able to. When everyone is gone..."
                 #speaker: Alistair
             "Oh." 
@@ -763,11 +769,13 @@ What should I do?
 =Parents
 #speaker:Alistair
 "Do your parents know you're here?"
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-thinking")
         #speaker:Child
         "No."
         "They're packing up everything."
         "We're leaving the planet on a big Spacer."
         "It'll be cool to be on one, but..."
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
         "I just wanna stay here..."
         -> CHILD
 -> Questions
@@ -908,6 +916,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
         ~SET_PARAMETER("PrologueCharacters", 4)
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
         #speaker:Temperance
         #NPC:Child-teen_Neutral
         "Okay..."
@@ -916,15 +925,20 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I know I'm not very old."
         #NPC:Child-teen_Confident
         "But when I was little, I wanted to work on the core."
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
         "I wanted to see all the artifacts the lab gets from all over the universe."
         "I..."
         #NPC:Child-teen_Neutral
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
         "But you're not."
         "You just want to keep things as they are, the old way, and stay right here..."
         "The lab can move to a different planet and continue as things were..."
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
         "But our home is right here."
         "That's all I wanted to say."
+        ~PLAY_SOUND("event:/Character Barks/Temperance/child-farewell")
         "Yeah..." ->OldLadyMono
     =OldLadyMono
         ~SET_PARAMETER("PrologueCharacters", 5)

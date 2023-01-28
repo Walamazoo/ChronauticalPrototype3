@@ -583,8 +583,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 //Temperance Ward
 ===CHILD===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
-//{SET_PARAMETER("PrologueCharacters", 4)}
 {SET_PARAMETER("PrologueCharacters", 4)}
+~PLAY_SOUND("event:/Character Barks/Temperance/child-greeting")
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
@@ -605,6 +605,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     #speaker:Alistair
     "You... doing alright?"
     
+    ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
@@ -633,6 +634,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Do you like the story? She's such a good speaker, isn't she?"
 "You shouldn't take her too seriously, though."
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
 #speaker:Temperance
 "..."
 
@@ -640,6 +642,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I'm a fan of the story."
 "Though it does go against the lab's observations, it-"
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-surprised")
 #speaker:Temperance
 #NPC:Child_Confident
 "You work in the lab, mister? Really? What's it like?"
@@ -661,6 +664,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         (Or at least Jules'. I doubt Crabb wants to see my face.)
     -
     
+~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
 #speaker:Temperance
 "Wow... I wish I could work in the lab, too!"
 "They know so many cool things!"
@@ -670,6 +674,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 (Urgh. Curses. Good going Alistair, you've runied a child's dream.)
 "Well... work hard and I'm sure you'll make it."
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
 #speaker:Temperance
 "Thanks, mister! I will!"
 
@@ -680,6 +685,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Woah there! You seem excited."
 "There are some delicate goods being handled, don't bump into anyone."
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
 #speaker:Temperance
 #NPC:Child_Neutral
 "Oh! Um, sorry mister."
@@ -688,6 +694,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "And steer especially clear of the lab workers."
 "Some of those artifacts cannot be replaced."
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
 #speaker:Temperance
 "Ah! But... That stuff's so cool! I wanna see it!"
 #NPC:Child_Confident
@@ -717,6 +724,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "You should check out the showcae they're having next year."
 "Lots of interesting topics there."
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-surprised")
 #speaker:Temperance
 "Really? I will!"
 
@@ -730,6 +738,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Temperance
 #NPC:Child_Confident
 "I already looked at all that stuff."
+~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 "All the lab people are busy talking to a bunch of snooty people."
 #NPC:Child_Neutral
 "Some man in a top hat shooed me away."
@@ -762,6 +771,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 "Hey, what's wrong?"
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 #speaker:Temperance
 "Hmph. What makes you think something's wrong?"
 
@@ -773,6 +783,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Temperance
 "The lab director?"
+~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 "What does it matter anyway."
 
 #speaker:Alistair
@@ -793,10 +804,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     
 #speaker:Temperance
 "Yeah right."
+~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 "Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
 #NPC:Child-teen_Distant
 "And now we just have to run away?"
 "That'll always be the the same, I've realized."
+~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
 "They're not willing to fight for it. Not willing to change."
 
 #speaker:Alistair
@@ -804,6 +817,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The planet will barely last three years."
 "That's not enough time. People's lives are more important!"
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 #speaker:Temperance
 #NPC:Child-teen_Neutral
 "They could at least try."
@@ -827,6 +841,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 "What was that?"
 
+~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 #speaker:Temperance
 "I said he probably deserves it!"
 "He works at the lab, but he's here just wasting time?"
@@ -859,6 +874,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "We should be supporting each other in times like this."
     -
     
+~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
 #speaker:Temperance
 #Child-teen_Distant
 "...But..."
@@ -880,6 +896,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Temperance
 "..."
 #NPC:Child-teen_Neutral
+~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
 "Thanks, mister. Alistair."
 
 #speaker:Alistair
