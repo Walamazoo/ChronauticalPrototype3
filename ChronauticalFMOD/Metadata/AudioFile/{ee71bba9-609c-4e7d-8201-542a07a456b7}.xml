@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ee71bba9-609c-4e7d-8201-542a07a456b7}">
+		<property name="assetPath">
+			<value>Temp_greet1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.88693750000000005</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9b10ecf2-27d4-441c-a448-3cf8b02d7d16}</destination>
+		</relationship>
+	</object>
+</objects>
