@@ -4395,7 +4395,7 @@ GameObject:
   - component: {fileID: 393326182}
   - component: {fileID: 393326181}
   m_Layer: 0
-  m_Name: Container
+  m_Name: Player Sprite Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4585,8 +4585,11 @@ MonoBehaviour:
   playerSprite: {fileID: 120506772}
   NPCSprite: {fileID: 86300542}
   fadeouts:
-  - {fileID: 1283337089}
+  - {fileID: 393326179}
   - {fileID: 215018497}
+  fadeins:
+  - {fileID: 310562199}
+  - {fileID: 1056099186}
 --- !u!1 &397656941
 GameObject:
   m_ObjectHideFlags: 0

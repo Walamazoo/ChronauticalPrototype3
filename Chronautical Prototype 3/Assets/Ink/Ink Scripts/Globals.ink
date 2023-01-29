@@ -51,6 +51,9 @@ EXTERNAL TOGGLE_SLIDER(state)
 EXTERNAL TOGGLE_SLIDER_INTERACTABLE(state)
 EXTERNAL TOGGLE_FILTER(state)
 
+EXTERNAL TOGGLE_JOURNAL(state)
+EXTERNAL TOGGLE_MINIMAP(state)
+
 EXTERNAL PLAY_MUSIC(music)
 EXTERNAL PLAY_AMBIENCE(ambience)
 EXTERNAL SET_PARAMETER(parName, value)
@@ -67,6 +70,10 @@ EXTERNAL TOGGLE_CAMERA(state)
 === function TOGGLE_SLIDER_INTERACTABLE(state) ===
     ~return state
 === function TOGGLE_FILTER(state) ===
+    ~return state
+=== function TOGGLE_JOURNAL(state) ===
+    ~return state
+=== function TOGGLE_MINIMAP(state) ===
     ~return state
 === function PLAY_MUSIC(music) ===
     ~return music

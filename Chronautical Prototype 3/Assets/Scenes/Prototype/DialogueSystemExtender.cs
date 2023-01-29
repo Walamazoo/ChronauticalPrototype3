@@ -25,6 +25,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     [SerializeField] GameObject playerSprite;
     [SerializeField] GameObject NPCSprite;
     [SerializeField] GameObject[] fadeouts;
+    [SerializeField] GameObject[] fadeins;
 
     Tween fadeInTween;
     Tween fadeOutTween;
@@ -45,8 +46,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     {
         base.BindExternalFunctions(story);
 
-        story.BindExternalFunction("SHOW_BUTTON", () => {button.SetActive(true);});
-        story.BindExternalFunction("BUTTON_GONE", () => {button.SetActive(false);});
+        story.BindExternalFunction("TOGGLE_JOURNAL", (bool state) => {button.SetActive(state);});
+        story.BindExternalFunction("BUTTON_MINIMAP", (bool state) => {button.SetActive(state);});
         story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
                                                             {JournalManager.createJournalObject(name, type, hoverDescription, fullDescription);});
         story.BindExternalFunction("CREATE_TIMELINE_CLUE", (string name, string type, string hoverDescription, string fullDescription) =>
@@ -135,46 +136,47 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
     protected override void OnConversationStart(Transform actorTransform)
     {
-        fadeIn();
-        for(int i = 0; i < inkJSONAssets.Count; i++){
+        starting();
+        /*for(int i = 0; i < inkJSONAssets.Count; i++){
             if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted)){
                 var story = stories[i];
                 //variablesToStory(story);
             }
-        }
+        }*/
         CameraParallax.CameraCanMove(false);
         CameraParallax.ResetCamera();
-       customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(false);
+        customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(false);
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(false);
         base.OnConversationStart(actorTransform);
     }
     protected override void OnConversationEnd(Transform actor)
     {
         base.OnConversationEnd(actor);
-        for (int i = 0; i < inkJSONAssets.Count; i++)
-            {
-                var activeStory = stories[i];
-                customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
-            }
         CameraParallax.CameraCanMove(true);
         SetSprite("None", "None", NPCSprite);
         speakerText.GetComponent<Text>().text = "";
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(true);
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
-        fadeOut();
+        ending();
         
     }
 
-    private void fadeOut()
+    private void ending()
     {
         foreach(GameObject objects in fadeouts){
             objects.SetActive(false);
         }
+        foreach(GameObject objects in fadeins){
+            objects.SetActive(true);
+        }
     }
 
-    private void fadeIn(){
+    private void starting(){
         foreach(GameObject objects in fadeouts){
             objects.SetActive(true);
+        }
+        foreach(GameObject objects in fadeins){
+            objects.SetActive(false);
         }
     }
     private void initializeVariables(){
