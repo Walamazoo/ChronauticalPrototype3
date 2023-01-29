@@ -302,7 +302,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             fadeOutTween = currentSprite.GetComponent<Image>().DOFade(0,0.25f);
             yield return fadeOutTween.WaitForCompletion();
             currentSprite.GetComponent<Image>().sprite = expression;
-            fadeInTween = currentSprite.GetComponent<Image>().DOFade(0,0.25f);
+            fadeInTween = currentSprite.GetComponent<Image>().DOFade(1,0.25f);
             yield return fadeInTween.WaitForCompletion();
         }
     }
