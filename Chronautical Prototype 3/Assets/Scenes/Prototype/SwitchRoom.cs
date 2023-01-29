@@ -36,14 +36,20 @@ public class SwitchRoom : MonoBehaviour
             case "library":
                 text.GetComponent<Text>().text = "Library";
                 ef.setLocation(1);
+                ef.setFilter(true);
+                ef.setFilter(false);
                 break;
             case "marketplace":
                 text.GetComponent<Text>().text = "Market Place";
                 ef.setLocation(2);
+                ef.setFilter(true);
+                ef.setFilter(false);
                 break;
             case "lab":
                 text.GetComponent<Text>().text = "Lab";
                 ef.setLocation(3);
+                ef.setFilter(true);
+                ef.setFilter(false);
                 break;
         }
     }

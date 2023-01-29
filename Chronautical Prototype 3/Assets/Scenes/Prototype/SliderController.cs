@@ -93,7 +93,7 @@ public class SliderController : MonoBehaviour
                 break;
         }
         sliderTimeDisplay.text = currentYear.ToString();
-        ef.setTime((int)currentSliderValue-1);
+        ef.setPossibleTime((int)currentSliderValue-1);
         ef.setFilter(false);
     }
 
@@ -108,6 +108,7 @@ public class SliderController : MonoBehaviour
         //DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
         extender.setTime((int)currentSliderValue);
+        ef.setCurrentTime((int)currentSliderValue-1);
         ef.setFilter(true);
     }
 }

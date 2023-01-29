@@ -6,6 +6,7 @@ public class EnvironmentFilter : MonoBehaviour
 {
     [SerializeField] int currentLocationNumber;
     [SerializeField] int currentTimeNumber;
+    [SerializeField] int possibleTimeNumber;
 
     [SerializeField] GameObject[] locationOneFilters;
     [SerializeField] GameObject[] locationTwoFilters;
@@ -23,8 +24,12 @@ public class EnvironmentFilter : MonoBehaviour
         currentLocationNumber = location;
     }
 
-    public void setTime(int time){
+    public void setCurrentTime(int time){
         currentTimeNumber = time;
+    }
+
+    public void setPossibleTime(int time){
+        possibleTimeNumber = time;
     }
 
     public void setFilter(bool isNew){
@@ -34,13 +39,22 @@ public class EnvironmentFilter : MonoBehaviour
 
         switch(currentLocationNumber){
             case 1:
-                possibleFilter = locationOneFilters[currentTimeNumber];
+                if(locationOneFilters[possibleTimeNumber] != currentFilter){
+                    possibleFilter = locationOneFilters[possibleTimeNumber];
+                    possibleFilter.SetActive(true);
+                }
                 break;
             case 2:
-                possibleFilter = locationTwoFilters[currentTimeNumber];
+                if(locationTwoFilters[possibleTimeNumber] != currentFilter){
+                    possibleFilter = locationTwoFilters[possibleTimeNumber];
+                    possibleFilter.SetActive(true);
+                }
                 break;
             case 3:
-                possibleFilter = locationThreeFilters[currentTimeNumber];
+                if(locationThreeFilters[possibleTimeNumber] != currentFilter){
+                    possibleFilter = locationThreeFilters[possibleTimeNumber];
+                    possibleFilter.SetActive(true);
+                }
                 break;
             default:
                 Debug.Log("ERRROR: Invalid time and place");
@@ -51,16 +65,37 @@ public class EnvironmentFilter : MonoBehaviour
             foreach(Transform child in possibleFilter.transform){
                 child.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
             }
-            possibleFilter.SetActive(true);
             //Debug.Log("Setting filter to 0.5 opacity");
+            //Debug.Log("Current filter is" + currentFilter);
+            //Debug.Log("Possible filter is" + possibleFilter);
         }
         else{
             currentFilter.SetActive(false);
-            currentFilter = possibleFilter;
+            possibleFilter.SetActive(false);
+            
+            switch(currentLocationNumber){
+            case 1:
+                currentFilter = locationOneFilters[currentTimeNumber];
+                break;
+            case 2:
+                currentFilter = locationTwoFilters[currentTimeNumber];
+                break;
+            case 3:
+                currentFilter = locationThreeFilters[currentTimeNumber];
+                break;
+            default:
+                Debug.Log("ERRROR: Invalid time and place");
+                break;
+            }
+
             foreach(Transform child in currentFilter.transform){
                 child.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
             }
+
             currentFilter.SetActive(true);
+            possibleFilter = null;
+            //Debug.Log("Current filter is" + currentFilter);
+            //Debug.Log("Possible filter is" + possibleFilter);
         }
     }
 }
