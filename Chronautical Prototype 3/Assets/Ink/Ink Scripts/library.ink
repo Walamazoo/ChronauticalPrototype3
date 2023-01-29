@@ -50,15 +50,15 @@ Atlantis.
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
-(But perhaps there’s... Something, anything I’m missing. There has to be. A book, a piece of information, I haven't found yet.)
+(But perhaps there’s... Something, anything I’m missing. There has to be.
+(A book, a piece of information, I haven't found yet.)
 
 #sprite:Alistair_Neutral
 (All this mustn't end in failure.)
 There are so few tomes left, most have been consumed by fire or thrown to the ground by earthquakes.
+The vault shimmers in the heat.
 The planet, Elore-Nabyke, will be lost. 
 (But perhaps I can still save it.)
-I throw myself to a bookshelf nearby and yank out tomes. There are so few left. Most have been consumed by fire.
-(Perhaps I haven't tried this yet.)
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingDisappointed")
 #NPC:Darling_Neutral
@@ -83,7 +83,8 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
-"This is attempt number 37 Alistair. The core is gone. Is it not clear we can do nothing regarding the destruction of the planet?"
+"This is attempt number 37 Alistair. The core is gone."
+"Is it not clear we can do nothing regarding the destruction of the planet?"
 "During the last attempt, you went right up to the planet's destruction."
 "You barely gave yourself enough time to go back in time again." 
 
@@ -97,19 +98,18 @@ I throw myself to a bookshelf nearby and yank out tomes. There are so few left. 
 
 #speaker:Alistair
 "..."
-"The vault. I need to get something out of there for him. He'll need it."
+"I have to get something out of the vault for him."
 "I can at least save that..."
-"I have to, then he'll know when to find me."
-//^Does this clearly make the treasure in the vault important for the player? Is it clear it's important for Alistair to find?
-The vault shimmers under the immense heat in the library. It's tucked into the back of the room.
+"I have to, he'll need it to find me."
+
+The vault is tucked into the back of the library.
 It's clear even from this distance that touching the handle would burn my skin.
 //Tutorial Start
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingThinking")
 #speaker:D4RL1N6
-"You will have to use your Astrolabe to return to a time before all this destruction." 
-"One year in the past should be sufficient for now."
+"Then you will have to go back in time."
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
-"Pull the slider to the year you would like to travel to, then activiate."
+"This calls for the safety protocol."
 
 #speaker:Alistair
 "Ah yes."
@@ -120,7 +120,10 @@ It's clear even from this distance that touching the handle would burn my skin.
 "Of course, Alistair."
 "Time travel can be dangerous after all."
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
-"Shall we go back in time?"
+"You will have to use your Astrolabe to return to a time before all this destruction." 
+"One year in the past should be sufficient for now."
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
+"Pull the slider to the year you would like to travel to, then activiate."
 //Cue Timeline will appear, handle will flash
 //The player can only select time 9
 //Minimap and journal not currently enabled
@@ -144,7 +147,7 @@ It's clear even from this distance that touching the handle would burn my skin.
 //Once inside Journal
 
 #speaker:D4RL1N6
-"There are also more places to explore in the lab to gather more information."
+"Maybe there are other people in different places or times that could help us."
 //Cue minimap flash
 //Pause
 #speaker:D4RL1N6
@@ -152,7 +155,7 @@ It's clear even from this distance that touching the handle would burn my skin.
 
 #speaker:Alistair
 "Thank you."
-"Now, I'd better find somewhat into this vault..."
+"Now, I'd better find someway into this vault..."
 //Tutorial end
 -> library
 
