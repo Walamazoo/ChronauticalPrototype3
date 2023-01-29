@@ -290,10 +290,20 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
     private IEnumerator ChangeSprite(Sprite expression, GameObject currentSprite)
     {
-        fadeOutTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(0, 0.25f);
-        yield return fadeOutTween.WaitForCompletion();
-        currentSprite.GetComponent<SpriteRenderer>().sprite = expression;
-        fadeInTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(1, 0.25f);
-        yield return fadeInTween.WaitForCompletion();
+        if(currentSprite.Equals(NPCSprite)){
+            fadeOutTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(0, 0.25f);
+            yield return fadeOutTween.WaitForCompletion();
+            currentSprite.GetComponent<SpriteRenderer>().sprite = expression;
+            fadeInTween = currentSprite.GetComponent<SpriteRenderer>().DOFade(1, 0.25f);
+            yield return fadeInTween.WaitForCompletion();
+        }
+
+        else{
+            fadeOutTween = currentSprite.GetComponent<Image>().DOFade(0,0.25f);
+            yield return fadeOutTween.WaitForCompletion();
+            currentSprite.GetComponent<Image>().sprite = expression;
+            fadeInTween = currentSprite.GetComponent<Image>().DOFade(0,0.25f);
+            yield return fadeInTween.WaitForCompletion();
+        }
     }
 }
