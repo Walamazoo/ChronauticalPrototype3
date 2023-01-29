@@ -98,7 +98,7 @@ The planet, Elore-Nabyke, will be lost.
 
 #speaker:Alistair
 "..."
-"I have to get something out of the vault for him."
+"I have to get something out of the vault for Jack."
 "I can at least save that..."
 "I have to, he'll need it to find me."
 
