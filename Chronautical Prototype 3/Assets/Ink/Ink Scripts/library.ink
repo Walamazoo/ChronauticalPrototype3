@@ -152,9 +152,6 @@ It's clear even from this distance that touching the handle would burn my skin.
 #speaker:Alistair
 "Thank you."
 "Now, I'd better find somewhat into this vault..."
-#NPC:None
-#speaker:
-#sprite:Alistair_Neutral
 //Tutorial end
 -> library
 
@@ -215,6 +212,9 @@ It's clear even from this distance that touching the handle would burn my skin.
         ~SET_PARAMETER("PrologueCharacters", 0)
 }
 #background:Library_Interior
+#NPC:None
+#speaker:
+#sprite:Alistair_Neutral
 What should I do?
     + [Look around]
         //Room Description for player and choices
