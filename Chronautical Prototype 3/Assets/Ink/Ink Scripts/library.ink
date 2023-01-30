@@ -219,34 +219,44 @@ It's clear even from this distance that touching the handle would burn my skin.
 #NPC:None
 #speaker:
 #sprite:Alistair_Neutral
-What should I do?
-    + [Look around]
+//What should I do?
+   // + [Look around]
         //Room Description for player and choices
         { time:
         - 1:    Employees sit in tight circles around the library. There's no reading being done, instead, there's an electricity in the air in the form of hushed whispers.
                 +Investigate the vault -> Security
+                +Check elsewhere -> END
         - 2:    Scaffolding grazes the arched ceilings of the library. The smells of paint, hardwood, and oil linger in the air as carpenters navigate the space. Lab security keeps a close eye on the newcomers. 
                 +Investigate the vault -> Security
+                +Check elsewhere -> END
         - 3:    Carpenters dip their brushes into fine lacquers to coat the rows of shelves as masons repair chipped floors. The room is sectioned off and lab security stands at attention. 
                 +Investigate the vault -> Security
+                +Check elsewhere -> END
         - 4:    A foreman paces around the renovated library carrying a clipboard, lab security following her every step. Looks like rennovations are almost done. 
                 +Investigate the vault -> Security
+                +Check elsewhere -> END
         - 5:     Lab employees gather around to marvel at the library that shines with newfound gusto. Even the books seem a little newer.
-                +Investigate the vault -> InvestigateVault
+               +Investigate the vault -> InvestigateVault
+               +Check elsewhere -> END
         - 6:    People stand shoulder to shoulder, all looking at a group of lab board members sitting in a circle toward the front of the room. Everyone is eager to listen and some even stand on ladders to get the best vantage point. 
                 +Listen in -> Election
+                +Check elsewhere -> END
         - 7:    The library sits silently and shines coldly. Lab employees huddle like silent vultures over their books.
                 +Investigate the vault -> InvestigateVault
+                +Check elsewhere -> END
         - 8:    The library is steeped in gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
                 +Investigate the vault -> InvestigateVault
+                +Check elsewhere -> END
         - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly, then hold still once more. 
                 +Investigate the vault -> InvestigateVault
+                +Check elsewhere -> END
         - 10:   Flames have claimed the library. Any metal is now liquid and only aids the fire in its quest for destruction.
                 +Investigate the vault -> HotVault
+                +Check elsewhere -> END
         }
-        -> library
+        //-> library
         //check
-
+/*
     //NPC Description for player and variable changes
     + [Look for someone to talk to]
         { time:
@@ -287,6 +297,7 @@ What should I do?
     //~ TOGGLE_SLIDER_INTERACTABLE(true)
     -> END
 }
+*/
 
 
 
@@ -843,7 +854,8 @@ In the center, I see a series of numbers: 0-9.
 "If I remember corrently, the Director is usually somewhere in the lab."
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
 #NPC:None
--> library
+//-> library
+->DONE
 
 
 ===Security===

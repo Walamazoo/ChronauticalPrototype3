@@ -83,28 +83,39 @@ INCLUDE Globals.ink
     {SET_PARAMETER("PrologueCharacters", 0)}
 }
 
-What should I do?
-    + [Look around]
+//What should I do?
+    //+ [Look around]
         //Room Description for player and choices
         { time:
         - 1:    A handful of scientists huddle around a projected figure I don't recognize at a distance, but they seem to be listening somberly.
                 +Listen in -> OtherPlanetAnnounce
+                +Check elsewhere -> END
         - 2:    The lab is filled with a buzzing excitement and energy as scientists, assistants, and cityfolk move about from task to task. 
+             -> END
         - 3:    The room is lined with booths, boards, and flashy experiments. Judges walk around with their hands behind their backs as eager young scientists stand at attention.
                 +Investigate -> ScienceFair
+                +Check elsewhere -> END
         - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
+            -> END
         - 5:    A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
                 Everyone is silent.
                 +Investigate -> AnnounceDestruction
+                +Check elsewhere -> END
         - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
+            -> END
         - 7:    {julesDirector: The lab is filled with balloon arches and confetti litters the ground. "Jules as new Lab Director!" is sprawled everywhere on posters and decorations. |The lab is filled with balloon arches and confetti litters the ground. "Crabb continues reign" is sprawled everywhere on posters and decorations.}
                 +{julesDirector} [Investigate party] -> Congratsparty
+                +Check elsewhere -> END
         - 8:    The lab is incredibly bare. Very few lab stations remain and anything that wasn’t bolted to the floor or walls is gone, leaving behind only clean spots in the dust where equipment once was. 
+            -> END
         - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
+            -> END
         - 10:   What was once a lab has now been completely swallowed up by a monsterous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
+            -> END
         }
-        -> lab
-        
+        //-> lab
+   
+/*     
     //NPC Description for player and variable changes
     + [Look for someone to talk to]
         { time:
@@ -155,6 +166,7 @@ Who should I talk to?
     -> END 
 }
 
+*/
 
 
 
