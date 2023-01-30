@@ -50,6 +50,7 @@ VAR metDirector = false
 EXTERNAL TOGGLE_SLIDER(state)
 EXTERNAL TOGGLE_SLIDER_INTERACTABLE(state)
 EXTERNAL TOGGLE_FILTER(state)
+EXTERNAL TOGGLE_FILTER_INTERACTABLE(state)
 
 EXTERNAL TOGGLE_JOURNAL(state)
 EXTERNAL TOGGLE_MINIMAP(state)
@@ -70,6 +71,8 @@ EXTERNAL TOGGLE_CAMERA(state)
 === function TOGGLE_SLIDER_INTERACTABLE(state) ===
     ~return state
 === function TOGGLE_FILTER(state) ===
+    ~return state
+=== function TOGGLE_FILTER_INTERACTABLE(state) ===
     ~return state
 === function TOGGLE_JOURNAL(state) ===
     ~return state

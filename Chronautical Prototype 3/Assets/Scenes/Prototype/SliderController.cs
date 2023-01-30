@@ -20,7 +20,7 @@ public class SliderController : MonoBehaviour
     [SerializeField] GameObject playerActor;
     [SerializeField] GameObject conversantActor;
 
-    [SerializeField] EnvironmentFilter ef;
+    [SerializeField] EnvironmentFilter environmentFilter;
 
     public int currentYear;
     public static float currentSliderValue = 1;
@@ -93,8 +93,8 @@ public class SliderController : MonoBehaviour
                 break;
         }
         sliderTimeDisplay.text = currentYear.ToString();
-        ef.setPossibleTime((int)currentSliderValue-1);
-        ef.setFilter(false);
+        environmentFilter.setPossibleTime((int)currentSliderValue-1);
+        environmentFilter.setFilter(false);
     }
 
     public void LaunchNewTime()
@@ -108,7 +108,7 @@ public class SliderController : MonoBehaviour
         //DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
 
         extender.setTime((int)currentSliderValue);
-        ef.setCurrentTime((int)currentSliderValue-1);
-        ef.setFilter(true);
+        environmentFilter.setCurrentTime((int)currentSliderValue-1);
+        environmentFilter.setFilter(true);
     }
 }

@@ -55,6 +55,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("TOGGLE_SLIDER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(state);});
         story.BindExternalFunction("TOGGLE_SLIDER_INTERACTABLE", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(state);});
         story.BindExternalFunction("TOGGLE_FILTER", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleFilter(state);});
+        story.BindExternalFunction("TOGGLE_FILTER_INTERACTABLE", (bool state) => {customInkFunctions.GetComponent<CustomInkFunctions>().ToggleFilterInteractable(state);});
         
         story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
         story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
@@ -79,6 +80,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             story.UnbindExternalFunction("TOGGLE_SLIDER");
             story.UnbindExternalFunction("TOGGLE_SLIDER_INTERACTABLE");
             story.UnbindExternalFunction("TOGGLE_FILTER");
+            story.UnbindExternalFunction("TOGGLE_FILTER_INTERACTABLE");
             story.UnbindExternalFunction("CREATE_JOURNAL_OBJECT");
             story.UnbindExternalFunction("CREATE_TIMELINE_CLUE");
 
@@ -147,6 +149,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         CameraParallax.ResetCamera();
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(false);
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(false);
+        customInkFunctions.GetComponent<CustomInkFunctions>().ToggleFilterInteractable(false);
         base.OnConversationStart(actorTransform);
     }
     protected override void OnConversationEnd(Transform actor)
@@ -157,6 +160,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         speakerText.GetComponent<Text>().text = "";
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(true);
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
+        customInkFunctions.GetComponent<CustomInkFunctions>().ToggleFilterInteractable(true);
         ending();
         
     }

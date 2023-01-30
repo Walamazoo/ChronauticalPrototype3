@@ -14,10 +14,11 @@ public class EnvironmentFilter : MonoBehaviour
 
     void start(){
         setFilter(true);
+        setFilter(false);
     }
 
     public GameObject currentFilter;
-    private GameObject possibleFilter = null;
+    public GameObject possibleFilter;
     //[SerializeField]bool startingFilter;
 
     public void setLocation(int location){
@@ -64,6 +65,9 @@ public class EnvironmentFilter : MonoBehaviour
         if(!isNew){
             foreach(Transform child in possibleFilter.transform){
                 child.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
+                if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
+                    spriteInteraction.ToggleInteraction(false);
+                }
             }
             //Debug.Log("Setting filter to 0.5 opacity");
             //Debug.Log("Current filter is" + currentFilter);
@@ -90,6 +94,9 @@ public class EnvironmentFilter : MonoBehaviour
 
             foreach(Transform child in currentFilter.transform){
                 child.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
+                if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
+                    spriteInteraction.ToggleInteraction(true);
+                }
             }
 
             currentFilter.SetActive(true);

@@ -10,7 +10,7 @@ public class CustomInkFunctions : MonoBehaviour
     [SerializeField] Button[] travelButtons;
     [SerializeField] Button[] miniMap;
     [SerializeField] Slider slider;
-    [SerializeField] EnvironmentFilter ef;
+    [SerializeField] EnvironmentFilter environmentFilter;
 
     FMOD.Studio.EventInstance gameMusic;
     FMOD.Studio.EventInstance gameAmbience;
@@ -46,11 +46,17 @@ public class CustomInkFunctions : MonoBehaviour
     }
 
     public void ToggleFilter(bool state){
-        if(state == true){
-            ef.currentFilter.SetActive(true);
+        environmentFilter.currentFilter.SetActive(state);
+        if(environmentFilter.possibleFilter){
+            environmentFilter.possibleFilter.SetActive(state);
         }
-        else{
-            ef.currentFilter.SetActive(false);
+    }
+
+    public void ToggleFilterInteractable(bool state){
+        foreach(Transform child in environmentFilter.currentFilter.transform){
+            if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
+                spriteInteraction.ToggleInteraction(state);
+            }
         }
     }
     
