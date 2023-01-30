@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 9916619}
   - component: {fileID: 9916621}
   - component: {fileID: 9916620}
+  - component: {fileID: 9916622}
   m_Layer: 0
   m_Name: Storyteller_Confident
   m_TagString: Untagged
@@ -219,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 9916622}
 --- !u!60 &9916621
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -747,6 +749,82 @@ PolygonCollider2D:
       - {x: 2.1827343, y: 5.9835157}
       - {x: 2.1827343, y: 6.0160937}
       - {x: 2.1392968, y: 6.059531}
+--- !u!114 &9916622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9916617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: OLDLADY
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &10421629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1825,7 @@ GameObject:
   - component: {fileID: 125524616}
   - component: {fileID: 125524618}
   - component: {fileID: 125524617}
+  - component: {fileID: 125524619}
   m_Layer: 0
   m_Name: Storyteller_Neutral
   m_TagString: Untagged
@@ -1831,6 +1910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 125524619}
 --- !u!60 &125524618
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2471,6 +2551,82 @@ PolygonCollider2D:
       - {x: 2.1501563, y: 6.200703}
       - {x: 2.171875, y: 6.2224216}
       - {x: 2.171875, y: 6.341875}
+--- !u!114 &125524619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125524614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: OLDLADY
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &128544032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,6 +3008,7 @@ GameObject:
   - component: {fileID: 147119202}
   - component: {fileID: 147119204}
   - component: {fileID: 147119203}
+  - component: {fileID: 147119205}
   m_Layer: 0
   m_Name: Labhead_Confident
   m_TagString: Untagged
@@ -2936,6 +3093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 147119205}
 --- !u!60 &147119204
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3263,6 +3421,82 @@ PolygonCollider2D:
       - {x: 0.24976562, y: -9.523672}
       - {x: 0.41265625, y: -9.339063}
       - {x: 0.434375, y: -9.349922}
+--- !u!114 &147119205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147119200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: lab
+  conversationConversant: {fileID: 715661801}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: DIRECTOR
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &153985838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3749,6 +3983,7 @@ GameObject:
   - component: {fileID: 235969181}
   - component: {fileID: 235969183}
   - component: {fileID: 235969182}
+  - component: {fileID: 235969184}
   m_Layer: 0
   m_Name: Jules_Neutral
   m_TagString: Untagged
@@ -3833,6 +4068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 235969184}
 --- !u!60 &235969183
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4188,6 +4424,82 @@ PolygonCollider2D:
       - {x: -0.434375, y: -8.948125}
       - {x: -0.32578126, y: -8.817812}
       - {x: -0.28234375, y: -8.763515}
+--- !u!114 &235969184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235969179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: library
+  conversationConversant: {fileID: 915719199}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: JULES
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &246700476
 GameObject:
   m_ObjectHideFlags: 0
@@ -4360,6 +4672,7 @@ GameObject:
   - component: {fileID: 264184076}
   - component: {fileID: 264184078}
   - component: {fileID: 264184077}
+  - component: {fileID: 264184079}
   m_Layer: 0
   m_Name: Shopkeep_Neutral
   m_TagString: Untagged
@@ -4444,6 +4757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 264184079}
 --- !u!60 &264184078
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4805,6 +5119,82 @@ PolygonCollider2D:
       - {x: 1.8026562, y: 1.5311719}
       - {x: 1.7049218, y: 1.476875}
       - {x: 1.7157812, y: 1.476875}
+--- !u!114 &264184079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264184074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: SHOPOWNER
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &286437730
 GameObject:
   m_ObjectHideFlags: 0
@@ -7112,6 +7502,7 @@ GameObject:
   - component: {fileID: 460285932}
   - component: {fileID: 460285934}
   - component: {fileID: 460285933}
+  - component: {fileID: 460285935}
   m_Layer: 0
   m_Name: Jules_Neutral
   m_TagString: Untagged
@@ -7196,6 +7587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 460285935}
 --- !u!60 &460285934
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7551,6 +7943,82 @@ PolygonCollider2D:
       - {x: -0.434375, y: -8.948125}
       - {x: -0.32578126, y: -8.817812}
       - {x: -0.28234375, y: -8.763515}
+--- !u!114 &460285935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460285930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: JULES
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &464375330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8199,6 +8667,7 @@ GameObject:
   - component: {fileID: 568306058}
   - component: {fileID: 568306060}
   - component: {fileID: 568306059}
+  - component: {fileID: 568306061}
   m_Layer: 0
   m_Name: Jules_Neutral
   m_TagString: Untagged
@@ -8283,6 +8752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 568306061}
 --- !u!60 &568306060
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8638,6 +9108,82 @@ PolygonCollider2D:
       - {x: -0.434375, y: -8.948125}
       - {x: -0.32578126, y: -8.817812}
       - {x: -0.28234375, y: -8.763515}
+--- !u!114 &568306061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568306056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: lab
+  conversationConversant: {fileID: 715661801}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: JULES
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &598811463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1401804728224621662, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
@@ -9833,6 +10379,7 @@ GameObject:
   - component: {fileID: 761932473}
   - component: {fileID: 761932475}
   - component: {fileID: 761932474}
+  - component: {fileID: 761932476}
   m_Layer: 0
   m_Name: Storyteller_Confident
   m_TagString: Untagged
@@ -9917,6 +10464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 761932476}
 --- !u!60 &761932475
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10445,6 +10993,82 @@ PolygonCollider2D:
       - {x: 2.1827343, y: 5.9835157}
       - {x: 2.1827343, y: 6.0160937}
       - {x: 2.1392968, y: 6.059531}
+--- !u!114 &761932476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761932471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: SHOPOWNER
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &763636737
 GameObject:
   m_ObjectHideFlags: 0
@@ -10532,6 +11156,7 @@ GameObject:
   - component: {fileID: 782534766}
   - component: {fileID: 782534768}
   - component: {fileID: 782534767}
+  - component: {fileID: 782534769}
   m_Layer: 0
   m_Name: Shopkeep_Neutral
   m_TagString: Untagged
@@ -10616,6 +11241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 782534769}
 --- !u!60 &782534768
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10977,6 +11603,82 @@ PolygonCollider2D:
       - {x: 1.8026562, y: 1.5311719}
       - {x: 1.7049218, y: 1.476875}
       - {x: 1.7157812, y: 1.476875}
+--- !u!114 &782534769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782534764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: SHOPOWNER
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &815769237
 GameObject:
   m_ObjectHideFlags: 0
@@ -12506,6 +13208,7 @@ GameObject:
   - component: {fileID: 984735632}
   - component: {fileID: 984735634}
   - component: {fileID: 984735633}
+  - component: {fileID: 984735635}
   m_Layer: 0
   m_Name: Jules_Neutral
   m_TagString: Untagged
@@ -12590,6 +13293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 984735635}
 --- !u!60 &984735634
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12945,6 +13649,82 @@ PolygonCollider2D:
       - {x: -0.434375, y: -8.948125}
       - {x: -0.32578126, y: -8.817812}
       - {x: -0.28234375, y: -8.763515}
+--- !u!114 &984735635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984735630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: lab
+  conversationConversant: {fileID: 715661801}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: JULES
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &994913593
 GameObject:
   m_ObjectHideFlags: 0
@@ -13137,6 +13917,7 @@ GameObject:
   - component: {fileID: 1040638042}
   - component: {fileID: 1040638044}
   - component: {fileID: 1040638043}
+  - component: {fileID: 1040638045}
   m_Layer: 0
   m_Name: Child-teen_Neutral
   m_TagString: Untagged
@@ -13221,6 +14002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1040638045}
 --- !u!60 &1040638044
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13533,6 +14315,82 @@ PolygonCollider2D:
       - {x: -0.5972656, y: -9.02414}
       - {x: -0.4778125, y: -9.02414}
       - {x: -0.17375, y: -8.991563}
+--- !u!114 &1040638045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040638040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: CHILD
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1056099186
 GameObject:
   m_ObjectHideFlags: 0
@@ -13576,6 +14434,7 @@ GameObject:
   - component: {fileID: 1072143329}
   - component: {fileID: 1072143331}
   - component: {fileID: 1072143330}
+  - component: {fileID: 1072143332}
   m_Layer: 0
   m_Name: Storyteller_Neutral
   m_TagString: Untagged
@@ -13660,6 +14519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1072143332}
 --- !u!60 &1072143331
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14300,6 +15160,82 @@ PolygonCollider2D:
       - {x: 2.1501563, y: 6.200703}
       - {x: 2.171875, y: 6.2224216}
       - {x: 2.171875, y: 6.341875}
+--- !u!114 &1072143332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072143327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: OLDLADY
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1079335649
 GameObject:
   m_ObjectHideFlags: 0
@@ -14312,6 +15248,7 @@ GameObject:
   - component: {fileID: 1079335651}
   - component: {fileID: 1079335653}
   - component: {fileID: 1079335652}
+  - component: {fileID: 1079335654}
   m_Layer: 0
   m_Name: Labhead_Neutral
   m_TagString: Untagged
@@ -14396,6 +15333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1079335654}
 --- !u!60 &1079335653
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14748,6 +15686,82 @@ PolygonCollider2D:
       - {x: 4.1917186, y: 2.9863281}
       - {x: 4.202578, y: 2.9646094}
       - {x: 4.1917186, y: 2.9754686}
+--- !u!114 &1079335654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079335649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: lab
+  conversationConversant: {fileID: 715661801}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: DIRECTOR
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1093627419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1401804729103699694, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
@@ -15161,6 +16175,7 @@ GameObject:
   - component: {fileID: 1125388755}
   - component: {fileID: 1125388757}
   - component: {fileID: 1125388756}
+  - component: {fileID: 1125388758}
   m_Layer: 0
   m_Name: Jules_Nervous
   m_TagString: Untagged
@@ -15245,6 +16260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1125388758}
 --- !u!60 &1125388757
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15517,6 +16533,82 @@ PolygonCollider2D:
       - {x: 0.06515625, y: -8.665781}
       - {x: 0.119453125, y: -8.644062}
       - {x: 0.17375, y: -8.578906}
+--- !u!114 &1125388758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125388753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: lab
+  conversationConversant: {fileID: 715661801}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: JULES
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1131980317
 GameObject:
   m_ObjectHideFlags: 0
@@ -16033,6 +17125,7 @@ GameObject:
   - component: {fileID: 1207657053}
   - component: {fileID: 1207657055}
   - component: {fileID: 1207657054}
+  - component: {fileID: 1207657056}
   m_Layer: 0
   m_Name: Child_Neutral
   m_TagString: Untagged
@@ -16117,6 +17210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1207657056}
 --- !u!60 &1207657055
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16351,6 +17445,82 @@ PolygonCollider2D:
       - {x: -1.0099219, y: -2.0958593}
       - {x: -0.97734374, y: -2.1284375}
       - {x: -0.9990625, y: -2.1067188}
+--- !u!114 &1207657056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207657051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: CHILD
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1209874614
 GameObject:
   m_ObjectHideFlags: 0
@@ -17682,6 +18852,7 @@ GameObject:
   - component: {fileID: 1422417404}
   - component: {fileID: 1422417406}
   - component: {fileID: 1422417405}
+  - component: {fileID: 1422417407}
   m_Layer: 0
   m_Name: Jules_Nervous
   m_TagString: Untagged
@@ -17766,6 +18937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1422417407}
 --- !u!60 &1422417406
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -18038,6 +19210,82 @@ PolygonCollider2D:
       - {x: 0.06515625, y: -8.665781}
       - {x: 0.119453125, y: -8.644062}
       - {x: 0.17375, y: -8.578906}
+--- !u!114 &1422417407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422417402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: JULES
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1439803659
 GameObject:
   m_ObjectHideFlags: 0
@@ -18080,6 +19328,7 @@ GameObject:
   - component: {fileID: 1445041166}
   - component: {fileID: 1445041168}
   - component: {fileID: 1445041167}
+  - component: {fileID: 1445041169}
   m_Layer: 0
   m_Name: Labhead_Neutral
   m_TagString: Untagged
@@ -18164,6 +19413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1445041169}
 --- !u!60 &1445041168
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -18516,6 +19766,82 @@ PolygonCollider2D:
       - {x: 4.1917186, y: 2.9863281}
       - {x: 4.202578, y: 2.9646094}
       - {x: 4.1917186, y: 2.9754686}
+--- !u!114 &1445041169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445041164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: lab
+  conversationConversant: {fileID: 715661801}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: DIRECTOR
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1448860001
 GameObject:
   m_ObjectHideFlags: 0
@@ -19970,6 +21296,7 @@ GameObject:
   - component: {fileID: 1616557641}
   - component: {fileID: 1616557643}
   - component: {fileID: 1616557642}
+  - component: {fileID: 1616557644}
   m_Layer: 0
   m_Name: Shopkeep_Neutral
   m_TagString: Untagged
@@ -20054,6 +21381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1616557644}
 --- !u!60 &1616557643
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -20415,6 +21743,82 @@ PolygonCollider2D:
       - {x: 1.8026562, y: 1.5311719}
       - {x: 1.7049218, y: 1.476875}
       - {x: 1.7157812, y: 1.476875}
+--- !u!114 &1616557644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616557639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: SHOPOWNER
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1619512780
 GameObject:
   m_ObjectHideFlags: 0
@@ -21151,6 +22555,7 @@ GameObject:
   - component: {fileID: 1671750565}
   - component: {fileID: 1671750567}
   - component: {fileID: 1671750566}
+  - component: {fileID: 1671750568}
   m_Layer: 0
   m_Name: Shopkeep_Neutral
   m_TagString: Untagged
@@ -21235,6 +22640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1671750568}
 --- !u!60 &1671750567
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -21596,6 +23002,82 @@ PolygonCollider2D:
       - {x: 1.8026562, y: 1.5311719}
       - {x: 1.7049218, y: 1.476875}
       - {x: 1.7157812, y: 1.476875}
+--- !u!114 &1671750568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671750563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: SHOPOWNER
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1675782872
 GameObject:
   m_ObjectHideFlags: 0
@@ -22007,6 +23489,7 @@ GameObject:
   - component: {fileID: 1716121459}
   - component: {fileID: 1716121461}
   - component: {fileID: 1716121460}
+  - component: {fileID: 1716121462}
   m_Layer: 0
   m_Name: Child_Confident
   m_TagString: Untagged
@@ -22091,6 +23574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1716121462}
 --- !u!60 &1716121461
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -22314,6 +23798,82 @@ PolygonCollider2D:
       - {x: -0.9447656, y: -2.1610155}
       - {x: -0.955625, y: -2.1501563}
       - {x: -0.96648437, y: -2.1610155}
+--- !u!114 &1716121462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716121457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: CHILD
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1719834878
 GameObject:
   m_ObjectHideFlags: 0
@@ -22766,6 +24326,7 @@ GameObject:
   - component: {fileID: 1792603702}
   - component: {fileID: 1792603704}
   - component: {fileID: 1792603703}
+  - component: {fileID: 1792603705}
   m_Layer: 0
   m_Name: Shopkeep_Neutral
   m_TagString: Untagged
@@ -22850,6 +24411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1792603705}
 --- !u!60 &1792603704
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -23211,6 +24773,82 @@ PolygonCollider2D:
       - {x: 1.8026562, y: 1.5311719}
       - {x: 1.7049218, y: 1.476875}
       - {x: 1.7157812, y: 1.476875}
+--- !u!114 &1792603705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792603700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: SHOPOWNER
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1836029540
 GameObject:
   m_ObjectHideFlags: 0
@@ -23255,6 +24893,7 @@ GameObject:
   - component: {fileID: 1841244599}
   - component: {fileID: 1841244601}
   - component: {fileID: 1841244600}
+  - component: {fileID: 1841244602}
   m_Layer: 0
   m_Name: Storyteller_Neutral
   m_TagString: Untagged
@@ -23339,6 +24978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1841244602}
 --- !u!60 &1841244601
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -23979,6 +25619,82 @@ PolygonCollider2D:
       - {x: 2.1501563, y: 6.200703}
       - {x: 2.171875, y: 6.2224216}
       - {x: 2.171875, y: 6.341875}
+--- !u!114 &1841244602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841244597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: OLDLADY
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1855236048
 GameObject:
   m_ObjectHideFlags: 0
@@ -24100,6 +25816,7 @@ GameObject:
   - component: {fileID: 1862972233}
   - component: {fileID: 1862972235}
   - component: {fileID: 1862972234}
+  - component: {fileID: 1862972236}
   m_Layer: 0
   m_Name: Jules_Nervous
   m_TagString: Untagged
@@ -24184,6 +25901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1862972236}
 --- !u!60 &1862972235
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -24456,6 +26174,82 @@ PolygonCollider2D:
       - {x: 0.06515625, y: -8.665781}
       - {x: 0.119453125, y: -8.644062}
       - {x: 0.17375, y: -8.578906}
+--- !u!114 &1862972236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862972231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: JULES
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &1903834078
 GameObject:
   m_ObjectHideFlags: 0
@@ -25529,6 +27323,7 @@ GameObject:
   - component: {fileID: 2017449810}
   - component: {fileID: 2017449812}
   - component: {fileID: 2017449811}
+  - component: {fileID: 2017449813}
   m_Layer: 0
   m_Name: Child-teen_Distant
   m_TagString: Untagged
@@ -25613,6 +27408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 2017449813}
 --- !u!60 &2017449812
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25895,6 +27691,82 @@ PolygonCollider2D:
       - {x: -0.87960935, y: -9.045859}
       - {x: -0.7601562, y: -8.958984}
       - {x: -0.6298438, y: -8.839531}
+--- !u!114 &2017449813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017449808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: CHILD
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &2042150949
 GameObject:
   m_ObjectHideFlags: 0
@@ -26091,6 +27963,7 @@ GameObject:
   - component: {fileID: 2093785820}
   - component: {fileID: 2093785822}
   - component: {fileID: 2093785821}
+  - component: {fileID: 2093785823}
   m_Layer: 0
   m_Name: Child_Confident
   m_TagString: Untagged
@@ -26175,6 +28048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f7293a1a936f0469ea46a23809b123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 2093785823}
 --- !u!60 &2093785822
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -26398,6 +28272,82 @@ PolygonCollider2D:
       - {x: -0.9447656, y: -2.1610155}
       - {x: -0.955625, y: -2.1501563}
       - {x: -0.96648437, y: -2.1610155}
+--- !u!114 &2093785823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093785818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7609dc33386d147bf502d134632bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  setAnotherQuestEntryState: 0
+  anotherQuestEntryNumber: 1
+  anotherQuestEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: marketplace
+  conversationConversant: {fileID: 1132767747}
+  conversationActor: {fileID: 427082666}
+  startConversationEntryID: 1
+  exclusive: 0
+  replace: 0
+  skipIfNoValidEntries: 1
+  preventRestartOnSameFrameEnded: 0
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
+  startConversationAtKnot: CHILD
+  startConversationFullPath: 
+  barkKnot: 
+  barkFilePath: 
 --- !u!1 &2100669059
 GameObject:
   m_ObjectHideFlags: 0
