@@ -933,7 +933,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 "Storyteller? My dear boy, I am no mere storyteller, I am a purveyor of truth!"
 "They all doubt old Miriam, but they'll soon see!"
-"The dissapearance of PLANETNAME is a sign of things to come!"
+"The dissapearance of Xitis is a sign of things to come!"
 
 #speaker:Alistair
 (Ah yes... Miriam.)
@@ -959,7 +959,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #NPC:Storyteller_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
 //12345
-+ {time == 1} [Dissapearance of PLANETNAME?] ->Dissapearance
++ {time == 1} [Dissapearance of Xitis?] ->Dissapearance
 + {time == 2} [Busy day?] ->Busy
 + {time == 3} [Can't get a crowd?] ->Crowd
 + {time == 4} [Who are you talking to?] ->Who
@@ -972,19 +972,19 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Dissapearance
 #speaker:Alistair
-"I think I overheard you say somethig about PLANETNAME... Dissapearing?"
+"I think I overheard you say somethig about Xitis... Dissapearing?"
 "The Director said it was destroyed."
 
 #speaker:Miriam
 "Aha! That's what they want you to think!"
-"You see, PLANETNAME was not destroyed, but lost! Lost in the cosmic web!"
+"You see, Xitis was not destroyed, but lost! Lost in the cosmic web!"
 "The Strings that connect our vast universe are deeper than you could ever imagine..."
 "So deep, even a planet could be swallowed up, lost in the space between spaces!"
 "Not even the most travelled trade seams are truly safe..."
 
 #speaker:Alistair
 (She's not... Entirely incorrect.)
-(Maybe PLANETNAME's been thrown off by what's happening here?)
+(Maybe Xitis's been thrown off by what's happening here?)
 (Focus, Alistair. You can't chase every loose end, not now at least.)
 
 #speaker Miriam
@@ -1166,7 +1166,7 @@ She doesn't respond, just nods and turns away.
 "The Director said the planet would be destroyed."
 
 #speaker:Miriam
-"It's just like PLANETNAME all over again." 
+"It's just like Xitis all over again." 
 "Doesn't anyone see? It's a pattern! A plot!"
 
 #speaker:Alistair
