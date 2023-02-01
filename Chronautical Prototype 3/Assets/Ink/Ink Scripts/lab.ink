@@ -114,6 +114,7 @@ INCLUDE Globals.ink
             -> END
         }
         //-> lab
+        -> END
    
 /*     
     //NPC Description for player and variable changes

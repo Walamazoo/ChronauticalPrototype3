@@ -219,7 +219,7 @@ It's clear even from this distance that touching the handle would burn my skin.
 #NPC:None
 #speaker:
 #sprite:Alistair_Neutral
-//What should I do?
+Let's see...
    // + [Look around]
         //Room Description for player and choices
         { time:

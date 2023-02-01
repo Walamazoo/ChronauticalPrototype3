@@ -113,7 +113,7 @@ INCLUDE Globals.ink
         }
         //-> marketplace
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        //check
+        -> END
         
 /*
         //NPC Description for player and variable changes
