@@ -265,7 +265,7 @@ public class JournalManager : MonoBehaviour
             case "personclue":
                 if(personClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = personClues[currentYear];
-                    if(temp.contains(timelineClue)){
+                    if(temp.Contains(timelineClue)){
                         return;
                     }
                     temp.Add(timelineClue);
@@ -281,7 +281,7 @@ public class JournalManager : MonoBehaviour
             case "itemclue":
                 if(itemClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = itemClues[currentYear];
-                    if(temp.contains(timelineClue)){
+                    if(temp.Contains(timelineClue)){
                         return;
                     }
                     temp.Add(timelineClue);
@@ -296,7 +296,7 @@ public class JournalManager : MonoBehaviour
             case "placeclue":
                 if(placeClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = placeClues[currentYear];
-                    if(temp.contains(timelineClue)){
+                    if(temp.Contains(timelineClue)){
                         return;
                     }
                     temp.Add(timelineClue);

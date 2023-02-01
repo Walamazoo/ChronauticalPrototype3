@@ -7,11 +7,11 @@ public class EnvironmentFilter : MonoBehaviour
     [SerializeField] int currentLocationNumber;
     [SerializeField] int currentTimeNumber;
     [SerializeField] int possibleTimeNumber;
+    [SerializeField] GameObject blankFilter;
 
     [SerializeField] GameObject[] locationOneFilters;
     [SerializeField] GameObject[] locationTwoFilters;
     [SerializeField] GameObject[] locationThreeFilters;
-
     void start(){
         setFilter(true);
         setFilter(false);
@@ -100,7 +100,7 @@ public class EnvironmentFilter : MonoBehaviour
             }
 
             currentFilter.SetActive(true);
-            possibleFilter = null;
+            possibleFilter = blankFilter;
             //Debug.Log("Current filter is" + currentFilter);
             //Debug.Log("Possible filter is" + possibleFilter);
         }
