@@ -142,7 +142,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         /*for(int i = 0; i < inkJSONAssets.Count; i++){
             if (string.Equals(inkJSONAssets[i].name, DialogueManager.lastConversationStarted)){
                 var story = stories[i];
-                //variablesToStory(story);
+                variablesToStory(story);
             }
         }*/
         CameraParallax.CameraCanMove(false);

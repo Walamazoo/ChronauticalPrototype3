@@ -83,7 +83,7 @@ INCLUDE Globals.ink
     {SET_PARAMETER("PrologueCharacters", 0)}
 }
 
-//What should I do?
+Let's see...
     //+ [Look around]
         //Room Description for player and choices
         { time:
