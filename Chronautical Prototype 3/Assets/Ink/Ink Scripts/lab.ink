@@ -99,8 +99,8 @@ Let's see...
             -> END
         - 5:    A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
                 Everyone is silent.
-                +Investigate -> AnnounceDestruction
-                +Check elsewhere -> END
+                * [Investigate] -> AnnounceDestruction
+                * [Check Elsewhere] -> END
         - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
             -> END
         - 7:    {julesDirector: The lab is filled with balloon arches and confetti litters the ground. "Jules as new Lab Director!" is sprawled everywhere on posters and decorations. |The lab is filled with balloon arches and confetti litters the ground. "Crabb continues reign" is sprawled everywhere on posters and decorations.}
@@ -114,7 +114,15 @@ Let's see...
             -> END
         }
         //-> lab
-        -> END
+-> END
+
+=== evaluate ===
+{time: 
+-5: A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
+    Everyone is silent.
+    * [Investigate] -> AnnounceDestruction
+        * [Check Elsewhere] -> END
+}
    
 /*     
     //NPC Description for player and variable changes
