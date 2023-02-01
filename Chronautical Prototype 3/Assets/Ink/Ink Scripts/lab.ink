@@ -97,7 +97,8 @@ Let's see...
                 +Check elsewhere -> END
         - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
             -> END
-        - 5:    A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
+        - 5:    -> evaluate
+                A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
                 Everyone is silent.
                 * [Investigate] -> AnnounceDestruction
                 * [Check Elsewhere] -> END
@@ -121,7 +122,7 @@ Let's see...
 -5: A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
     Everyone is silent.
     * [Investigate] -> AnnounceDestruction
-        * [Check Elsewhere] -> END
+    * [Check Elsewhere] -> END
 }
    
 /*     

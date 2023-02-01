@@ -10009,7 +10009,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: 
+  startConversationAtKnot: lab
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
