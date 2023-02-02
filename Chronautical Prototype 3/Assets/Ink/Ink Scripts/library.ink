@@ -22,13 +22,15 @@ INCLUDE Globals.ink
 
 
 
-
 //If the player has seen the beginning, skip beginning knot
 === SeeBeginning ===
+
 {seenBeginning: -> library|-> beginning}
 
 //Content knots start
 ===beginning===
+//Dev Skip >:D (it don't work)
+//-> library
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~PLAY_MUSIC("event:/Music/Prologue Music")
 ~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
