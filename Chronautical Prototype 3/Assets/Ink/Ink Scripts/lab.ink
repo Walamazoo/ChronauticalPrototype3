@@ -100,12 +100,12 @@ Let's see...
         - 5:    -> evaluate
                 A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
                 Everyone is silent.
-                + [Investigate] -> AnnounceDestruction
-                + [Check Elsewhere] -> END
+                + Investigate -> AnnounceDestruction
+                + Check Elsewhere -> END
         - 6:    The lab is empty, but I hear the roar of a crowd coming from the library. 
             -> END
         - 7:    {julesDirector: The lab is filled with balloon arches and confetti litters the ground. "Jules as new Lab Director!" is sprawled everywhere on posters and decorations. |The lab is filled with balloon arches and confetti litters the ground. "Crabb continues reign" is sprawled everywhere on posters and decorations.}
-                +{julesDirector} [Investigate party] -> Congratsparty
+                +{julesDirector} Investigate party -> Congratsparty
                 +Check elsewhere -> END
         - 8:    The lab is incredibly bare. Very few lab stations remain and anything that wasn’t bolted to the floor or walls is gone, leaving behind only clean spots in the dust where equipment once was. 
             -> END
