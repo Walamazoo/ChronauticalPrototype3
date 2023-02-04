@@ -84,6 +84,7 @@ INCLUDE Globals.ink
 }
 
 Let's see...
+-> evaluatemarketplace
     //+ [Look around]
         //Room Description for player and choices
         { time:
@@ -178,12 +179,34 @@ Who should I talk to?
 
 */
 
-===evaluation===
+===evaluatemarketplace===
 { time:
-
+- 1:    The marketplace is full of small shops, booths, and stands.
+                The people in the market are bubbling with hushed chatter and gossip.
+                -> END
+- 2:    The marketplace is stuffed with new and exotic goods.
+                An unusual amount of people crowd around each booth.
+                -> END
+- 3:    I see many travelers from off planet milling about the marketplace. They all seem the intellectual sort.
+            -> END
+- 4:    A few lone shoppers move from stand to stand.
+                One shop owner leans heavily against his display and begins to nod off.
+                -> END
+- 5:    Everyone in the marketplace is gathered around a large projection of the Director, {directorName}. 
+            -> END
+- 6:    The marketplace is completely empty. Booths and stalls still line the square, but no trinkets or produce are displayed and there's not a soul in sight. 
+            -> END
+- 7:    The people in the market are bubbling with hushed chatter and gossip. 
+            -> END
+- 8:    The marketplace is full of random and seemingly useless items. Clothes, trinkets, junk, books, pens, and all sorts of furniture.
+            -> END
+- 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
+            -> END
+- 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shutters violently.
+            -> END
 
 }
-
+-> END
 //NPC Convos
 
 //Jules Ambrose

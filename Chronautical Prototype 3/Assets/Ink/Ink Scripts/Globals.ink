@@ -1,5 +1,10 @@
 VAR time = 0
 
+//Location Variables
+VAR inLab = false
+VAR inLibrary = false
+VAR inMarketplace = false
+
 //More Variables
 VAR roomDescription = ""
 

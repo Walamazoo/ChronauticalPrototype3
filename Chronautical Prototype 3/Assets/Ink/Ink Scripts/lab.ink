@@ -22,7 +22,6 @@ INCLUDE Globals.ink
 
 
 
-
 //Content knots start
 -> lab
 ===lab===
