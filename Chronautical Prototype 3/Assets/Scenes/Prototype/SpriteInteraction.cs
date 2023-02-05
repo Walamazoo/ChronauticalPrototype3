@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
-using Ink.UnityIntegration;
+//using Ink.UnityIntegration;
 using PixelCrushers.DialogueSystem.InkSupport;
 using PixelCrushers.DialogueSystem;
 
