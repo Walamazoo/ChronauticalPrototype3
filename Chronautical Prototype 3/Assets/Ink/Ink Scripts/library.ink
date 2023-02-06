@@ -20,10 +20,6 @@ INCLUDE Globals.ink
 //#NPC:Child_Neutral
 //No space between colon and character/sprite/background
 
-//Location Checker
-{inLab: -> LAB|}
-{inLibrary: -> SeeBeginning|}
-{inMarketplace: -> MARKETPLACE|}
 //Will need something to set these variables to true or false with minimap stuffs
 
 //If the player has seen the beginning, skip beginning knot

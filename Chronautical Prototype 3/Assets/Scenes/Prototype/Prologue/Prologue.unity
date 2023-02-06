@@ -10160,7 +10160,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: lab
+  conversation: library
   conversationConversant: {fileID: 715661801}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: 1
@@ -10184,7 +10184,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: lab
+  startConversationAtKnot: LAB
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -17148,7 +17148,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: marketplace
+  conversation: library
   conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: 1
@@ -17172,7 +17172,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: bdb360364fe7e0544ac175f69e10bca7, type: 2}
-  startConversationAtKnot: marketplace
+  startConversationAtKnot: MARKETPLACE
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
@@ -18810,11 +18810,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: lab
-  myButton: {fileID: 715462666}
-  buttons:
-  - {fileID: 1537373912}
-  - {fileID: 52310926}
-  - {fileID: 715462666}
   controller: {fileID: 854182565}
   text: {fileID: 349276819}
   environmentFilter: {fileID: 718417592}
@@ -21189,17 +21184,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1537373912 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2269792505502188341, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
-  m_PrefabInstance: {fileID: 854182564}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1537373915 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2269792505502188343, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
   m_PrefabInstance: {fileID: 854182564}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537373912}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -22348,11 +22338,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: library
-  myButton: {fileID: 52310926}
-  buttons:
-  - {fileID: 1537373912}
-  - {fileID: 52310926}
-  - {fileID: 715462666}
   controller: {fileID: 854182565}
   text: {fileID: 349276819}
   environmentFilter: {fileID: 718417592}
@@ -27302,11 +27287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: marketplace
-  myButton: {fileID: 1537373912}
-  buttons:
-  - {fileID: 1537373912}
-  - {fileID: 52310926}
-  - {fileID: 715462666}
   controller: {fileID: 854182565}
   text: {fileID: 349276819}
   environmentFilter: {fileID: 718417592}
