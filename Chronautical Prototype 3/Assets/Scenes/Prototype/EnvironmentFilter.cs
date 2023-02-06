@@ -64,7 +64,8 @@ public class EnvironmentFilter : MonoBehaviour
 
         if(!isNew){
             foreach(Transform child in possibleFilter.transform){
-                child.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0.5f);
+                Color childColor = child.GetComponent<SpriteRenderer>().color;
+                child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,0.5f);
                 if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
                     spriteInteraction.ToggleInteraction(false);
                 }
@@ -93,7 +94,8 @@ public class EnvironmentFilter : MonoBehaviour
             }
 
             foreach(Transform child in currentFilter.transform){
-                child.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
+                Color childColor = child.GetComponent<SpriteRenderer>().color;
+                child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,1);
                 if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
                     spriteInteraction.ToggleInteraction(true);
                 }
