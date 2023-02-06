@@ -1046,7 +1046,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
     {SET_PARAMETER("PrologueAmbience", 7)}
     {SET_PARAMETER("PrologueCharacters", 0)}
 - 7:    
-    ~ roomDescription = "The Lab Director election has concluded."
+    ~ roomDescription = "The Director election has concluded."
     ~SET_PARAMETER("PrologueTime", 5)
     {SET_PARAMETER("PrologueAmbience", 6)}
     {SET_PARAMETER("PrologueCharacters", 0)}
@@ -1163,9 +1163,10 @@ Let's see...
     
     #speaker:Jules
     "I'm sorry, it is good to see you too..."
-    "Where have you been? You were gone for so long, we were all worried something had happened."
+    "Where have you been?"
+    "You were gone for so long, we were all worried something had happened."
     
-    +[Been out and about] 
+    +[Avoid the question] 
         #speaker:Alistair
         #sprite:Alistair_Embarassed
         "Oh I've been out and about."
@@ -1241,7 +1242,8 @@ Let's see...
 "Ah!"
 "Yes, the lab is hosting the planet's annual HESF!"
 "That is- the Higher Education Sceience Fair."
-"It's exciting, isn't it? There's so many fresh faces and new experiments all in one place."
+"It's exciting, isn't it?"
+"There's so many fresh faces and new experiments all in one place."
 
 #speaker:Alistair
 "Do you have an experiment set up here?"
@@ -1250,7 +1252,6 @@ Let's see...
 "Of course!"
 "Though I'm afriad it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
-//PLACEHOLDER FOR WHAT HIS ACTUAL EXPERIMENT IS^
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
 -> DONE
@@ -1419,7 +1420,8 @@ Let's see...
 #speaker:Jules
 "Well..."
 "Yes, it would be healthy for the lab to have some change in leadership."
-"Bennet is quite stuck in his ways. Just focused on keeping things as they are, a steady course neither up nor down."
+"Bennet is quite stuck in his ways."
+"He's just focused on keeping things as they are, a steady course neither up nor down."
 
 #speaker:Alistair
 #sprite:Alistair_Embarassed
@@ -1441,7 +1443,7 @@ Let's see...
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
-"But what's the harm in trying? The election is still quite far away."
+"What's the harm in trying? The election is still quite far away."
 
 #speaker:Jules
 "... Perhaps, I will think about it."
@@ -1464,7 +1466,8 @@ Let's see...
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
-"Oh, but I'm just curious. I think that perhaps the people would like to hear an apology, you know?"
+"Oh, but I'm just curious."
+"I think that perhaps the people would like to hear an apology, you know?"
 
 #speaker:Jules
 "An apology about what...?"
@@ -1490,7 +1493,8 @@ Let's see...
 #speaker:Alistair
 #sprite:Alistair_Assured
 "Jules..."
-"This is sort of a strange question, but, what do you call the numbers and words that represent your home's location?"
+"This is sort of a strange question, but.
+"What do you call the numbers and words that represent your home's location?"
 
 #speaker:Jules
 #NPC:Jules_Nervous
@@ -1501,7 +1505,8 @@ Let's see...
 "Just trust me Jules."
 
 #speaker:Jules
-"Okay. An... Address?" 
+"Okay..."
+"An... Address?" 
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
