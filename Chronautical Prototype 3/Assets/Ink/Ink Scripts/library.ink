@@ -149,7 +149,8 @@ It's clear even from this distance that touching the handle would burn my skin.
 
 #speaker:D4RL1N6
 "Maybe there are other people in different places or times that could help us."
-//Cue minimap flash
+"The labratory is quite large, but there are a few areas where humans congregate."
+//Cue minimap flash, make sure buttons where you can click the actual different locations flash specifically
 //Pause
 #speaker:D4RL1N6
 "This is the end of the safety protocol."
