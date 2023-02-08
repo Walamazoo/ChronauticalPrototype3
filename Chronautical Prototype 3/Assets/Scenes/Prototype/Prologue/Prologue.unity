@@ -7269,10 +7269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSONAssets:
-  - {fileID: 4900000, guid: fbf66865665238f488f96b49c2b7fc51, type: 3}
-  - {fileID: 4900000, guid: 8699e7849eec2a246978a027fbf8fa84, type: 3}
   - {fileID: 4900000, guid: d5d90ad2119b34f469239b232256cc17, type: 3}
-  - {fileID: 4900000, guid: 64ede49b01d1c5a4a809a28a747d13fb, type: 3}
   resetStateOnConversationStart: 0
   actorNamesPrecedeLines: 0
   caseSensitiveActorNames: 0
@@ -12189,11 +12186,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505457217499, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792505502188337, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_CullTransparentMesh
@@ -12433,19 +12430,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506106285157, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506495781579, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2269792506571567059, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
       propertyPath: m_text
@@ -12507,7 +12504,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 215.28
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2665682947331975138, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
 --- !u!114 &854182565 stripped
 MonoBehaviour:
@@ -18810,6 +18808,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: lab
+  myButton: {fileID: 715462666}
+  buttons:
+  - {fileID: 2020582044}
+  - {fileID: 52310926}
+  - {fileID: 715462666}
   controller: {fileID: 854182565}
   text: {fileID: 349276819}
   environmentFilter: {fileID: 718417592}
@@ -21189,7 +21192,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2269792505502188343, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
   m_PrefabInstance: {fileID: 854182564}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2020582044}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -22338,6 +22341,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: library
+  myButton: {fileID: 52310926}
+  buttons:
+  - {fileID: 2020582044}
+  - {fileID: 52310926}
+  - {fileID: 715462666}
   controller: {fileID: 854182565}
   text: {fileID: 349276819}
   environmentFilter: {fileID: 718417592}
@@ -27287,6 +27295,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MiniCharacter: {fileID: 1939533884}
   roomName: marketplace
+  myButton: {fileID: 2020582044}
+  buttons:
+  - {fileID: 2020582044}
+  - {fileID: 52310926}
+  - {fileID: 715462666}
   controller: {fileID: 854182565}
   text: {fileID: 349276819}
   environmentFilter: {fileID: 718417592}
@@ -27746,6 +27759,11 @@ MonoBehaviour:
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
+--- !u!1 &2020582044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2269792505502188341, guid: 5b5bf8a55cc12f04fbb3a19317956912, type: 3}
+  m_PrefabInstance: {fileID: 854182564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2042150949
 GameObject:
   m_ObjectHideFlags: 0
