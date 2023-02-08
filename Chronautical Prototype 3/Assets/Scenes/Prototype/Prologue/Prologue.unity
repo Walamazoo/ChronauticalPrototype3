@@ -800,7 +800,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -2667,7 +2667,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -3619,7 +3619,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 715661801}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -4604,7 +4604,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -5217,7 +5217,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -8101,7 +8101,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -9248,7 +9248,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -11216,7 +11216,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -11744,7 +11744,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -13992,7 +13992,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -14630,7 +14630,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -15386,7 +15386,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -16045,7 +16045,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -16893,7 +16893,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -17775,7 +17775,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -19540,7 +19540,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -20229,7 +20229,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -22119,7 +22119,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -23296,7 +23296,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -24092,7 +24092,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -24985,7 +24985,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -25660,7 +25660,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -26215,7 +26215,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -27734,7 +27734,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
@@ -28320,7 +28320,7 @@ MonoBehaviour:
   conversation: library
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: 1
+  startConversationEntryID: -1
   exclusive: 0
   replace: 0
   skipIfNoValidEntries: 1
