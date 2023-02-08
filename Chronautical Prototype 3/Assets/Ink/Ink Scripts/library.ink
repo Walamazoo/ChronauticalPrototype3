@@ -499,8 +499,6 @@ Let's see...
 "I recall an election, perhaps we can find some leads there."
 }
 
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 #sprite:Alistair_Neutral
 -> DONE
 
@@ -552,8 +550,6 @@ Let's see...
 "But I do doubt I would have much success."
 #NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =topicschange
@@ -586,8 +582,6 @@ Let's see...
 "Just some food for thought."
 ~ speechImproved = true
 ~ helpComplete = helpComplete +1
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =fumbleword
@@ -635,8 +629,6 @@ Let's see...
 "Perfect."
 ~ helpComplete = helpComplete +1
 ~ addressFix = true
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =speechpeptalk
@@ -666,14 +658,11 @@ Let's see...
 "Thanks Alistair."
 "I'll try my best."
 ~ helpComplete = helpComplete +1
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 
 //Temperance Ward
 ===childlibrary===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-greeting")
 #NPC:Child_Neutral
@@ -712,9 +701,7 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Temperance/child-farewell")
     #speaker:Temperance
     "Fine."
-        //~ TOGGLE_SLIDER_INTERACTABLE(true)
-        #NPC:None
-        -> END
+    -> END
 =Lost
 "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
         #speaker:Child
@@ -765,7 +752,6 @@ Let's see...
 
 //Quest/Plot Specific Knots
 ===InvestigateVault===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Vault
 The vault is a marvel in and of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 In the center, I see a series of numbers: 0-9. 
@@ -783,13 +769,11 @@ In the center, I see a series of numbers: 0-9.
         -> InvestigateVault
     * {hasCode} [Input code]
         ->Ending
-    //~ TOGGLE_SLIDER_INTERACTABLE(true)
     + [Do nothing] -> END 
 
 
 ->DarlingPepTalk
 ===DarlingPepTalk===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~seenPepTalk=true
 #speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
@@ -820,13 +804,11 @@ In the center, I see a series of numbers: 0-9.
 "We'll find a way to get my 'treasure.'"
 "If I remember corrently, the Director is usually somewhere in the lab."
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
-#NPC:None
 //-> library
 ->DONE
 
 
 ===Security===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 #speaker:Alistair
 As I approach the vault, I see one of the vault's security personnel promptly slide over and put himself directly into my path.
 He crosses his arms and just stands there.
@@ -848,34 +830,27 @@ He crosses his arms and just stands there.
         
             #speaker:Alistair
             "Oh! Apologies..."
-            //~ TOGGLE_SLIDER_INTERACTABLE(true)
             (He's not very talkative is he...)
             -> END
         ++[Nevermind] 
             #speaker:Alistair
             I just smile and turn on my heel.
-            //~ TOGGLE_SLIDER_INTERACTABLE(true)
             (Maybe I'll look elsewhere.)
             -> END 
     + [Nevermind] 
         I just smile and turn on my heel. 
-        //~ TOGGLE_SLIDER_INTERACTABLE(true)
         (Maybe I'll look elsewhere.) -> END 
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
 
 
 ===HotVault===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 The vault shimmers from the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
 The treasure’s most likely melted by now anyways.
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
 
 ===Election===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
 It would be impossible for me to get a word in. 
 As crowds of people close in on the board members, I push and wriggle my way closer to the front.
@@ -962,9 +937,6 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
     "And perhaps if we could have a friend in a high place we can access the vault."
 }
 ~SET_PARAMETER("PrologueCharacters", 0)
-
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =JulesSpeechCheck
@@ -985,8 +957,6 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 #NPC:Jules_Nervous
 Jules' speech was littered with uncertainities and filler words, but his heart was in the right place.
 ~ seenSpeech = true
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =JulesSpeechGood
@@ -1008,14 +978,11 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 
 = DirectorCheck
 ~ julesDirector = true
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> END
 
 
 //Lab Section Starts
 ===LAB===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Lab_Interior
 #sprite:Alistair_Neutral
 //Room Description for Journal
@@ -1143,7 +1110,6 @@ Let's see...
 
 //Jules Ambrose
 ===juleslab===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
 {metJules: -> Questions|-> meetJules}
@@ -1234,8 +1200,6 @@ Let's see...
     + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
-    #NPC:None
     -> DONE
 
 =fair
@@ -1257,8 +1221,6 @@ Let's see...
 "Of course!"
 "Though I'm afriad it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =wedding
@@ -1298,8 +1260,6 @@ Let's see...
     #sprite:Alistair_Nervous
     "I-I will."
     "Thank you Jules..."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =disaster
@@ -1320,8 +1280,6 @@ Let's see...
 "It should be enough time to evacuate, but..."
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =vault
@@ -1401,8 +1359,6 @@ Let's see...
 "I recall an election, perhaps we can find some leads there."
 }
 
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 #sprite:Alistair_Neutral
 -> DONE
 
@@ -1455,8 +1411,6 @@ Let's see...
 "But I do doubt I would have much success."
 #NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =topicschange
@@ -1490,8 +1444,6 @@ Let's see...
 "Just some food for thought."
 ~ speechImproved = true
 ~ helpComplete = helpComplete +1
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =fumbleword
@@ -1541,8 +1493,6 @@ Let's see...
 "Perfect."
 ~ helpComplete = helpComplete +1
 ~ addressFix = true
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =speechpeptalk
@@ -1572,14 +1522,11 @@ Let's see...
 "Thanks Alistair."
 "I'll try my best."
 ~ helpComplete = helpComplete +1
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 
 //Bennet Crabb
 ===directorlab===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 2)}
 #NPC:Labhead_Neutral
 {metDirector: -> Questions|-> meetDirector}
@@ -1632,8 +1579,6 @@ Let's see...
     "Now, be gone."
     "I have much work to attend to."
 ~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> END
 
 =Questions
@@ -1646,8 +1591,6 @@ Let's see...
     + [Nothing for now]
         #speaker:Director
         "Yes, yes, begone. I am quite busy."
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        #NPC:None
         -> END //lab
 
 =Busylab
@@ -1670,8 +1613,6 @@ Let's see...
 "Each artifact must be dated, catagorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
 "Begone."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 
@@ -1688,8 +1629,6 @@ Let's see...
 #speaker:Alistair
 #sprite:Alistair_Sad
 "I see."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 
@@ -1715,7 +1654,6 @@ Let's see...
 #speaker:Director
 "Not that it would matter, but you were a mere intern."
 "Regardless, I refuse to break protocol for your curiosity..."
-#NPC:None
 -> DONE
 
 =VaultTalk
@@ -1871,7 +1809,6 @@ The lab employees are silent but a few dip their heads.
 -> LAB
 
 ===Congratsparty===
-#speaker:
 Beyond the lab's foyer, groups of people crowd into the Director's office.
 Jules' office.
 The room is packed with people from the city and lab employees, but within the center of the crowd, I find Jules.
@@ -2125,7 +2062,6 @@ And the notebook.
 //Send back to main menu scene?
 
 ===MARKETPLACE===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Marketplace
 #sprite:Alistair_Neutral
 //Room Description for Journal
@@ -2212,7 +2148,6 @@ Let's see...
             -> END
         }
         //-> marketplace
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
         -> END
         
 
@@ -2248,7 +2183,6 @@ Let's see...
 
 //Jules Ambrose
 ===julesmarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
 {metJules: -> Questions| -> meetJules}
@@ -2329,9 +2263,6 @@ Let's see...
 + [Nothing for now]
     #speaker:Jules
     "Let's speak again soon, Alistair."
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
-    #speaker: 
-    #NPC:None
     -> DONE
 
 =Busy
@@ -2437,7 +2368,6 @@ Let's see...
 
 //Uriah Bramble
 ===shopownermarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 3)}
 #NPC:Shopkeep_Neutral
 {metShopowner: -> Questions| -> meetShopowner}
@@ -2474,8 +2404,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Nothing for now] -> END
  #speaker: Uriah
 "Come back anytime!"
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#speaker: 
+-> END
 
 =Souvenirs
 #speaker: Alistair
@@ -2658,7 +2587,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Temperance Ward
 ===childmarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 4)}
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-greeting")
 {metChild: -> Questions| -> meetChild}
@@ -2700,9 +2628,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     + [Nothing for now]
     #speaker:Temperance
     "Fine."
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
-     #speaker: 
-    #NPC:None
     -> DONE
 
 =Story
@@ -2984,7 +2909,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Miriam Harcourt
 ===oldladymarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 5)}
 {metOldlady: -> Questions| -> meetOldlady}
 
@@ -3031,8 +2955,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Nothing for now] -> END
 #speaker:Miriam
 "Whenever you seek truth, just find me again."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#speaker: 
+-> END
 
 =Dissapearance
 #speaker:Alistair
