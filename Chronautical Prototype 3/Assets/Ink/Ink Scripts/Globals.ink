@@ -20,6 +20,9 @@ VAR helpComplete = 0
 VAR directorName = "Bennet Crabb"
 VAR seenPepTalk = false
 
+//Tutorial Variables
+VAR inTutorial = false
+
 //Variables for Side Quests
 //Variable for if the player has spoke to Bennet about getting into the vault
 VAR vaultDirector = false
