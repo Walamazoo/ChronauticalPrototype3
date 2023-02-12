@@ -5912,7 +5912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886779, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -481.35
+      value: -481.75
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728007886779, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6248,7 +6248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401804728882083467, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1401804729078888766, guid: 8e649dc829303224ea2375b31bceb8b7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -12053,7 +12053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &771314287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12082,7 +12082,7 @@ MonoBehaviour:
   listName: {fileID: 0}
   sliderController: {fileID: 854182565}
   hand: {fileID: 0}
-  highlight: {fileID: 0}
+  highlight: {fileID: 208645330}
 --- !u!4 &771314288
 Transform:
   m_ObjectHideFlags: 0
