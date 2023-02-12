@@ -8,7 +8,7 @@ public class HoverButton : MonoBehaviour
     [SerializeField] GameObject JournalManager;
 
     public void OnClick(){
-        JournalManager.GetComponent<JournalManager>().FullDescAndClickPhoto();
+        //JournalManager.GetComponent<JournalManager>().FullDescAndClickPhoto();
     }
 
     public void OnPointerEnter(){

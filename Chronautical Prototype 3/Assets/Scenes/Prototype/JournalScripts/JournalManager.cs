@@ -22,12 +22,12 @@ public class JournalManager : MonoBehaviour
 
     //The photo, name, and description objects when the player is looking at their known locations, known people, and held items.
     //listName is the name of the list the player is currently accessing for the journal.
-    [SerializeField] GameObject photo;
+    /*[SerializeField] GameObject photo;
     [SerializeField] GameObject clickphoto;
     [SerializeField] GameObject itemName;
     [SerializeField] GameObject fulldescription;
-    [SerializeField] GameObject hoverdescription;
-    [SerializeField] GameObject listName;
+    [SerializeField] GameObject hoverdescription;*/
+    [SerializeField] GameObject[] ItemAndPeopleList;
 
     //Int that determines whether the journal will be opened or be closed on the next button press.
     private int OpenOrClose;
@@ -39,9 +39,8 @@ public class JournalManager : MonoBehaviour
 
     private Dictionary<int, Dictionary<string, List<TimelineClue>>> timelineClues;
     [SerializeField] SliderController sliderController;
-    private List<JournalObject> items;
-    private List<JournalObject> people;
-    private List<JournalObject> places;
+    public List<JournalObject> items = new List<JournalObject>();
+    public List<JournalObject> people = new List<JournalObject>();
 
     //Initialization of the List that contains our previous lists for the purpose of properly showing the player what they're
     //looking at inside the journal. Then the pointers to determine which list and which item they're being given.
@@ -52,7 +51,6 @@ public class JournalManager : MonoBehaviour
     //The current list the player is looking at.
     private List<JournalObject> currentList;
 
-    //[SerializeField] Camera MainCamera;
     [SerializeField] TimeChanged hand;
     [SerializeField] GameObject highlight;
     Tween fadeInTween;
@@ -69,22 +67,16 @@ public class JournalManager : MonoBehaviour
         placeClues = new Dictionary<int, List<TimelineClue>>();
         itemClues = new Dictionary<int, List<TimelineClue>>();
         //timelineClues = new Dictionary<int, Dictionary<string, List<TimelineClue>>>();
-        
-        items = new List<JournalObject>();
-        people = new List<JournalObject>();
-        places = new List<JournalObject>();
 
         //Assigning the tracking of the lists
         JournalList = new List<List<JournalObject>>();
         JournalList.Add(items);
         JournalList.Add(people);
-        listName.GetComponent<Text>().text = "People";
-        JournalList.Add(places);
         JournalListPointer = 1;
         JournalItemPointer = 0;
 
         //Assigning the currentList that will be shown.
-        currentList = JournalList[JournalListPointer];
+        //currentList = JournalList[JournalListPointer];
         //updateTimeline();
 
         updateTimeline("Person");
@@ -150,12 +142,14 @@ public class JournalManager : MonoBehaviour
     //This is used by the arrow buttons to change where the pointer is for the JournalList.
     //Ex: Items to People
     //Then it calls UpdateSelected and passes in true, as we're changing the List we're looking at.
-    public void ChangeJournalListPointer(){
-        JournalListPointer += 1;
-        if(JournalListPointer > JournalList.Count - 1){
-            JournalListPointer = 0;
+    public void ChangeJournalListPointer(int pointer){
+        JournalListPointer = pointer;
+        if(pointer < 2){
+            currentList = items;
         }
-        UpdateSelected(true);
+        else{
+            currentList = people;
+        }
     }
 
     //this is used by the arrow buttons to change where the pointer is for the item in our JournalList.
@@ -171,53 +165,39 @@ public class JournalManager : MonoBehaviour
             else if(JournalItemPointer > currentList.Count - 1){
                 JournalItemPointer = 0;
             }
-            UpdateSelected(false);
+            UpdateSelected();
         }
     }
 
-    public void FullDescAndClickPhoto(){
+    /*public void FullDescAndClickPhoto(){
         if(currentList.Count != 0){
             clickphoto.GetComponent<Image>().sprite = photo.GetComponent<Image>().sprite;
             clickphoto.SetActive(true);
             fulldescription.GetComponent<Text>().text = currentList[JournalItemPointer].fullDescription;
             fulldescription.SetActive(true);
         }
-    }
+    }*/
 
-    private void UpdateSelected(bool listOrItem){
+    private void UpdateSelected(){
         //False means we change the item selected from one of our lists
-        //True means we change the list itself and reset the individual pointer
-
-        //Change the currentList to whatever the pointer is at, and set the text for the list we're in.
-        currentList = JournalList[JournalListPointer];
-        if(JournalList[JournalListPointer] == items){
-            listName.GetComponent<Text>().text = "Items";
-        }
-        else if(JournalList[JournalListPointer] == people){
-            listName.GetComponent<Text>().text = "People";
-        }
-        else{
-            listName.GetComponent<Text>().text = "Places";
-        }    
-
+        //True means we change the list itself and reset the individual pointer 
+        JournalItemButton tempButton = ItemAndPeopleList[JournalListPointer].GetComponent<JournalItemButton>();
         //Make sure we have something in our list before continuing.
         //If listOrItem is true, reset the JournalItemPointer to 0
         //then set the name, description, and photo to the appropriate version.
         //Then set the name, description, and photo to active to make sure they're properly shown to the player.
         if(currentList.Count != 0){
-            if(listOrItem){
-                JournalItemPointer = 0;
-            }
-            itemName.GetComponent<Text>().text = currentList[JournalItemPointer].name;
-            itemName.SetActive(true);
-            hoverdescription.GetComponent<Text>().text = currentList[JournalItemPointer].hoverDescription;
-            photo.GetComponent<Image>().sprite = currentList[JournalItemPointer].image;
-            photo.SetActive(true);
+            tempButton.itemName.GetComponent<Text>().text = currentList[JournalItemPointer].name;
+            tempButton.itemName.SetActive(true);
+            tempButton.fulldescription.GetComponent<Text>().text = currentList[JournalItemPointer].hoverDescription;
+            tempButton.photo.GetComponent<Image>().sprite = currentList[JournalItemPointer].image;
+            tempButton.photo.SetActive(true);
         }
         else{
-            itemName.SetActive(false);
-            photo.SetActive(false);
-            hoverdescription.GetComponent<Text>().text = "";
+            Debug.Log(currentList.Count);
+            tempButton.itemName.SetActive(false);
+            tempButton.photo.SetActive(false);
+            tempButton.fulldescription.GetComponent<Text>().text = "";
         }
     }
 
@@ -242,20 +222,21 @@ public class JournalManager : MonoBehaviour
             case "item":
                 giveObjectImage(journalObject);
                 items.Add(journalObject);
-                currentList = items;
+                //currentList = items;
                 break;
             case "person":
                 giveObjectImage(journalObject);
                 people.Add(journalObject);
-                currentList = people;
+                Debug.Log(people.Count);
+                //currentList = people;
                 break;
             case "place":
                 giveObjectImage(journalObject);
-                places.Add(journalObject);
-                currentList = places;
+                //places.Add(journalObject);
+                //currentList = places;
                 break;
         }
-        UpdateSelected(true);
+        //UpdateSelected(true);
         StartCoroutine(journalUpdated());
     }
 

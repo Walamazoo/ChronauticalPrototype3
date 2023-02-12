@@ -7,6 +7,6 @@ public class JournalListButton : MonoBehaviour
     [SerializeField] JournalManager journalManager;
 
     public void OnButtonPressed(){
-        journalManager.ChangeJournalListPointer();
+        //journalManager.ChangeJournalListPointer();
     }
 }
