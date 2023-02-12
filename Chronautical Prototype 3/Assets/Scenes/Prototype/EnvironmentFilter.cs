@@ -63,11 +63,23 @@ public class EnvironmentFilter : MonoBehaviour
         }
 
         if(!isNew){
+            Debug.Log("not new");
             foreach(Transform child in possibleFilter.transform){
-                Color childColor = child.GetComponent<SpriteRenderer>().color;
-                child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,0.5f);
-                if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
-                    spriteInteraction.ToggleInteraction(false);
+                Debug.Log("checking children");
+                if(child.GetType() == typeof(Sprite)){
+                    Debug.Log("that's a sprite");
+                    Color childColor = child.GetComponent<SpriteRenderer>().color;
+                    child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,0.5f);
+                    Debug.Log("setting to half alpha");
+                    if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
+                        spriteInteraction.ToggleInteraction(false);
+                        Debug.Log("setting to uninteractable");
+                    }
+                }
+                else if(child.GetType() == typeof(Animator)){
+                    Debug.Log("that's an animation");
+                    child.GetComponent<Animator>().SetBool("AshPlaying", false);
+                    Debug.Log("setting to not playing");
                 }
             }
             //Debug.Log("Setting filter to 0.5 opacity");
@@ -75,6 +87,7 @@ public class EnvironmentFilter : MonoBehaviour
             //Debug.Log("Possible filter is" + possibleFilter);
         }
         else{
+             Debug.Log("is new");
             currentFilter.SetActive(false);
             possibleFilter.SetActive(false);
             
@@ -94,10 +107,18 @@ public class EnvironmentFilter : MonoBehaviour
             }
 
             foreach(Transform child in currentFilter.transform){
-                Color childColor = child.GetComponent<SpriteRenderer>().color;
-                child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,1);
-                if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
-                    spriteInteraction.ToggleInteraction(true);
+                if(child.GetType() == typeof(Sprite)){
+                    Color childColor = child.GetComponent<SpriteRenderer>().color;
+                    child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,1f);
+                    Debug.Log("setting to full alpha");
+                    if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
+                        spriteInteraction.ToggleInteraction(false);
+                        Debug.Log("setting to interactable");
+                    }
+                }
+                else if(child.GetType() == typeof(Animator)){
+                    child.GetComponent<Animator>().SetBool("AshPlaying", true);
+                    Debug.Log("setting to playing");
                 }
             }
 
