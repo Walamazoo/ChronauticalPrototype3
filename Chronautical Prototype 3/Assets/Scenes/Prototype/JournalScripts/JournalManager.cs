@@ -6,11 +6,12 @@ using DG.Tweening;
 
 public class JournalManager : MonoBehaviour
 {
+    [SerializeField] GameObject JournalMain;
     //Journal Pages that the player will go through and their associated number for the navigation buttons.
-    [SerializeField] GameObject JournalMain; //1
-    [SerializeField] GameObject JournalOptions; //2
-    [SerializeField] GameObject JournalTimeline; //3
-    [SerializeField] GameObject JournalDialogue; //4
+    [SerializeField] GameObject JournalTimeline; //1
+    [SerializeField] GameObject JournalPeopleAndItems; //2
+    [SerializeField] GameObject JournalInfo; //3
+    [SerializeField] GameObject JournalOptions; //4
     
     //Current page that the player can see
     public GameObject currentPage;
@@ -59,7 +60,7 @@ public class JournalManager : MonoBehaviour
 
     void Start(){
         //CurrentPage should always start as JournalMain as it's the first page
-        currentPage = JournalMain;
+        currentPage = JournalInfo;
         //OpenOrClose should always start as 1 as the journal starts as closed.
         OpenOrClose = 1;
 
@@ -96,19 +97,19 @@ public class JournalManager : MonoBehaviour
 
         switch(pageNumber){
             case 1:
-                clickphoto.SetActive(false);
-                fulldescription.SetActive(false);    
-                currentPage = JournalMain;
+                //clickphoto.SetActive(false);
+                //fulldescription.SetActive(false);    
+                currentPage = JournalTimeline;
                 break;
             case 2:
-                currentPage = JournalOptions;
+                currentPage = JournalPeopleAndItems;
                 break;
             case 3:
-                currentPage = JournalTimeline;
-                updateTimeline("Person");
+                currentPage = JournalInfo;
+                //updateTimeline("Person");
                 break;
             case 4:
-                currentPage = JournalDialogue;
+                currentPage = JournalOptions;
                 break;
         }
         FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Page turn"); //might remove later
@@ -118,8 +119,9 @@ public class JournalManager : MonoBehaviour
     //Method to open or close the journal, AKA: hide it from the player.
     public void OpenAndClose(){
         if(OpenOrClose == 1){
+            JournalMain.SetActive(true);
             currentPage.SetActive(true);
-            hand.rotateHand(sliderController.currentYear);
+            //hand.rotateHand(sliderController.currentYear);
             OpenOrClose += 1;
             updateTimeline("Person");
             exitButton.SetActive(true);
@@ -127,7 +129,8 @@ public class JournalManager : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
         else{
-            GoToPage(1);
+            JournalMain.SetActive(false);
+            GoToPage(3);
             currentPage.SetActive(false);
             OpenOrClose += 1;
             exitButton.SetActive(false);
