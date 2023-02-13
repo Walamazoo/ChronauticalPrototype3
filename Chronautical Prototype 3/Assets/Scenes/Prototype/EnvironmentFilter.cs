@@ -63,26 +63,28 @@ public class EnvironmentFilter : MonoBehaviour
         }
 
         if(!isNew){
-            Debug.Log("not new");
+            //Debug.Log("not new");
             foreach(Transform child in possibleFilter.transform){
-                Debug.Log("checking children");
-                if(child.GetType() == typeof(Sprite)){
-                    Debug.Log("that's a sprite");
-                    Color childColor = child.GetComponent<SpriteRenderer>().color;
-                    child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,0.5f);
-                    Debug.Log("setting to half alpha");
+                //Debug.Log("checking children");
+                if(child.TryGetComponent<SpriteRenderer>(out var renderer)){
+                    //Debug.Log("that's a sprite");
+                    Color childColor = renderer.color;
+                    renderer.color = new Color(childColor.r,childColor.g,childColor.b,0.5f);
+                    //Debug.Log("setting to half alpha");
                     if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
                         spriteInteraction.ToggleInteraction(false);
-                        Debug.Log("setting to uninteractable");
+                        //Debug.Log("setting to uninteractable");
                     }
                 }
-                else if(child.GetType() == typeof(Animator)){
-                    Debug.Log("that's an animation");
-                    child.GetComponent<Animator>().SetBool("AshPlaying", false);
-                    Debug.Log("setting to not playing");
+                else{
+                    foreach(Transform childChild in child.transform){
+                        if(childChild.TryGetComponent<Animator>(out var animator)){
+                            animator.speed=0;
+                            //Debug.Log("setting to not playing");
+                        }
+                    }
                 }
             }
-            //Debug.Log("Setting filter to 0.5 opacity");
             //Debug.Log("Current filter is" + currentFilter);
             //Debug.Log("Possible filter is" + possibleFilter);
         }
@@ -107,18 +109,22 @@ public class EnvironmentFilter : MonoBehaviour
             }
 
             foreach(Transform child in currentFilter.transform){
-                if(child.GetType() == typeof(Sprite)){
-                    Color childColor = child.GetComponent<SpriteRenderer>().color;
-                    child.GetComponent<SpriteRenderer>().color = new Color(childColor.r,childColor.g,childColor.b,1f);
-                    Debug.Log("setting to full alpha");
+                if(child.TryGetComponent<SpriteRenderer>(out var renderer)){
+                    Color childColor = renderer.color;
+                    renderer.color = new Color(childColor.r,childColor.g,childColor.b,1f);
+                    //Debug.Log("setting to full alpha");
                     if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
                         spriteInteraction.ToggleInteraction(false);
-                        Debug.Log("setting to interactable");
+                        //Debug.Log("setting to interactable");
                     }
                 }
-                else if(child.GetType() == typeof(Animator)){
-                    child.GetComponent<Animator>().SetBool("AshPlaying", true);
-                    Debug.Log("setting to playing");
+                else{
+                    foreach(Transform childChild in child.transform){
+                        if(childChild.TryGetComponent<Animator>(out var animator)){
+                            animator.speed=1;
+                            //Debug.Log("setting to playing");
+                        }
+                    }
                 }
             }
 
