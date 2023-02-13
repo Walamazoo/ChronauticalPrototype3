@@ -2512,11 +2512,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + {time == 5} [The announcement...] ->Announcement
 + {time == 7} [Any good gossip?] ->Gossip
 + {time == 8} [Preparing to leave?] ->Preparing
-+ [Nothing for now] -> END
- #speaker: Uriah
++ [Nothing for now]
 "Come back anytime!"
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#speaker: 
+-> END
 
 =Souvenirs
 #speaker: Alistair
@@ -3066,11 +3064,10 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + {time == 3} [Can't get a crowd?] ->Crowd
 + {time == 4} [Who are you talking to?] ->Who
 + {time == 5} [About the announcement...] ->Announcement
-+ [Nothing for now] -> END
++ [Nothing for now]
 #speaker:Miriam
-"Whenever you seek truth, just find me again."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#speaker: 
+"Whenever you seek truth, just find me again." 
+-> END
 
 =Dissapearance
 #speaker:Alistair
