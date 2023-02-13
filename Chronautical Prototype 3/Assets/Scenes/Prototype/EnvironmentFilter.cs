@@ -89,7 +89,7 @@ public class EnvironmentFilter : MonoBehaviour
             //Debug.Log("Possible filter is" + possibleFilter);
         }
         else{
-             Debug.Log("is new");
+            //Debug.Log("is new");
             currentFilter.SetActive(false);
             possibleFilter.SetActive(false);
             
