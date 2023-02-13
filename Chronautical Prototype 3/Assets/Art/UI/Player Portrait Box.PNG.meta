@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: db83a6fbb545d9a4a8d6640bc83eb3b3
+guid: 3d937a7dcdd13fc4f82e5cc97000b4b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6263734481201193594
-    second: Name Box_0
+      213: 713712369002136094
+    second: Player Portrait Box_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,10 +47,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.42110398, y: 0.34354138}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 782, y: 484, z: 1206, w: 995}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -94,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Name Box_0
+      name: Player Portrait Box_0
       rect:
         serializedVersion: 2
-        x: 784
-        y: 485
-        width: 690
-        height: 185
+        x: 322
+        y: 0
+        width: 436
+        height: 838
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a72ec5fe2514de650800000000000000
-      internalID: 6263734481201193594
+      spriteID: e12cc224e9d97e900800000000000000
+      internalID: 713712369002136094
       vertices: []
       indices: 
       edges: []
