@@ -716,7 +716,7 @@ Let's see...
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-greeting")
-#NPC:Child_Neutral
+#NPC:Temperance_Neutral
 {metChild: -> Questions|-> meetChild}
 
 =meetChild
@@ -927,7 +927,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =ShopownerMono
         ~SET_PARAMETER("PrologueCharacters", 3)
         #speaker:Shopowner
-        #NPC:Shopkeep_Neutral
+        #NPC:Uriah_Neutral
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
         "But."
@@ -943,17 +943,17 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~SET_PARAMETER("PrologueCharacters", 4)
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
         #speaker:Temperance
-        #NPC:Child-teen_Neutral
+        #NPC:Temperance-teen_Neutral
         "Okay..."
         "Well."
         "Um, so."
         "I know I'm not very old."
-        #NPC:Child-teen_Confident
+        #NPC:Temperance-teen_Confident
         "But when I was little, I wanted to work on the core."
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
         "I wanted to see all the artifacts the lab gets from all over the universe."
         "I..."
-        #NPC:Child-teen_Neutral
+        #NPC:Temperance-teen_Neutral
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
@@ -968,25 +968,25 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
     =OldLadyMono
         ~SET_PARAMETER("PrologueCharacters", 5)
         #speaker:Storyteller
-        #NPC:Storyteller_Neutral
+        #NPC:Miriam_Neutral
         As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
-        #NPC:Storyteller_Confident
+        #NPC:Miriam_Confident
         "Yes!"
         "Yes, you all complain and sqwauk because you know you are about to hear everything you wish not to accept as truth!"
         "I will open your eyes- Listen now!"
         "The planet will not be destroyed- Elor-Nabyke will not fall!"
-        #NPC:Storyteller_Neutral
+        #NPC:Miriam_Neutral
         "They are distracting us- lying to us!"
         "Our planet does not matter."
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
         "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
-        #NPC:Storyteller_Confident
+        #NPC:Miriam_Confident
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a creshendo.
         ~SET_PARAMETER("PrologueCharacters", 2)
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 #speaker:Lab Director
-#NPC:Labhead_Confident
+#NPC:Bennet_Confident
 "Silence!"
 "I will have order!"
 #speaker:Alistair
@@ -1622,7 +1622,7 @@ Let's see...
 ===directorlab===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 2)}
-#NPC:Labhead_Neutral
+#NPC:Bennet_Neutral
 {metDirector: -> Questions|-> meetDirector}
 
 =meetDirector
@@ -1889,7 +1889,7 @@ The Director's projected form stands tall over the group of people around him.
 Everyone is silent, just looking up.
 
 #speaker:Director
-#NPC:Director_Neutral
+#NPC:Bennet_Neutral
 "Ahem..."
 "..."
 "I am speaking to you all, the entire planet of Elore-Nabyke, to make an announcement."
@@ -2480,7 +2480,7 @@ Let's see...
 ===shopownermarketplace===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 3)}
-#NPC:Shopkeep_Neutral
+#NPC:Uriah_Neutral
 {metShopowner: -> Questions| -> meetShopowner}
 
 =meetShopowner
@@ -2505,7 +2505,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Uriah
-#NPC:Shopkeep_Neutral
+#NPC:Uriah_Neutral
 "What can I do for you today?"
 + {time == 3} [Souvenirs?] ->Souvenirs
 + {time == 4} [What's new?] ->New
@@ -2709,7 +2709,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "Hello there! What's your name?"
     
     #speaker:Temperance
-    #NPC:Child_Neutral
+    #NPC:Temperance_Neutral
     "...Temperance."
     
     #speaker:Alistair
@@ -2741,9 +2741,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     + [Nothing for now]
     #speaker:Temperance
     "Fine."
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
-     #speaker: 
-    #NPC:None
     -> DONE
 
 =Story
@@ -2761,7 +2758,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-surprised")
 #speaker:Temperance
-#NPC:Child_Confident
+#NPC:Temperance_Confident
 "You work in the lab, mister? Really? What's it like?"
 
 #speaker:Alistair
@@ -2804,7 +2801,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
 #speaker:Temperance
-#NPC:Child_Neutral
+#NPC:Temperance_Neutral
 "Oh! Um, sorry mister."
 
 #speaker:Alistair
@@ -2814,7 +2811,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
 #speaker:Temperance
 "Ah! But... That stuff's so cool! I wanna see it!"
-#NPC:Child_Confident
+#NPC:Temperance_Confident
 "All that lab stuff is so cool."
 
 #speaker:Alistair
@@ -2832,7 +2829,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     -
     
 #speaker:Temperance
-#NPC:Child_Neutral
+#NPC:Temperance_Neutral
 "Some other kids think it's boring, but I think that reserch stuff is the best part."
 "It's fun to know things."
 
@@ -2853,11 +2850,11 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I would have expected you to be more interested in the lab showcase."
 
 #speaker:Temperance
-#NPC:Child_Confident
+#NPC:Temperance_Confident
 "I already looked at all that stuff."
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 "All the lab people are busy talking to a bunch of snooty people."
-#NPC:Child_Neutral
+#NPC:Temperance_Neutral
 "Some man in a top hat shooed me away."
 
 #speaker:Alistair
@@ -2923,7 +2920,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Yeah right."
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 "Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
-#NPC:Child-teen_Distant
+#NPC:Temperance-teen_Distant
 "And now we just have to run away?"
 "That'll always be the the same, I've realized."
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
@@ -2936,7 +2933,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
 #speaker:Temperance
-#NPC:Child-teen_Neutral
+#NPC:Temperance-teen_Neutral
 "They could at least try."
 
 #speaker:Alistair
@@ -3012,7 +3009,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Temperance
 "..."
-#NPC:Child-teen_Neutral
+#NPC:Temperance-teen_Neutral
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
 "Thanks, mister. Alistair."
 
@@ -3032,7 +3029,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 =meetOldlady
 ~metOldlady = true
 #speaker:Alistair
-#NPC:Storyteller_Neutral
+#NPC:Miriam_Neutral
 "Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts. Could you-"
 
 #speaker:Miriam
@@ -3061,7 +3058,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Questions
 #speaker:Miriam
-#NPC:Storyteller_Neutral
+#NPC:Miriam_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
 //12345
 + {time == 1} [Dissapearance of Xitis?] ->Dissapearance
