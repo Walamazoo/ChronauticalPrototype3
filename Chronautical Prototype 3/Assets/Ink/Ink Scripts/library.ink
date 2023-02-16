@@ -757,7 +757,7 @@ Let's see...
         -> END
 =Lost
 "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
-        #speaker:Child
+        #speaker:Temperance
         "I'm not lost."
         "I'm exploring."
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
@@ -767,7 +767,7 @@ Let's see...
                 "Shouldn't you be getting ready too?"
                 
                 ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
-                #speaker:Child
+                #speaker:Temperance
                 "I am ready. I have everything I need."
                 #speaker: Alistair
             "Oh." 
@@ -778,7 +778,7 @@ Let's see...
                 #speaker:Alistair
                 "You like exploring the lab then?"
                 
-                #speaker:Child
+                #speaker:Temperance
                 "I've always wanted to see it."
                 ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
                 "This is the only way I'm able to. When everyone is gone..."
@@ -792,7 +792,7 @@ Let's see...
 #speaker:Alistair
 "Do your parents know you're here?"
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-thinking")
-        #speaker:Child
+        #speaker:Temperance
         "No."
         "They're packing up everything."
         "We're leaving the planet on a big Spacer."
@@ -926,7 +926,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 "The floor is open for community comments on the appointment of Bennet Crabb as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
     =ShopownerMono
         ~SET_PARAMETER("PrologueCharacters", 3)
-        #speaker:Shopowner
+        #speaker:Uriah
         #NPC:Uriah_Neutral
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
@@ -967,7 +967,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Yeah..." ->OldLadyMono
     =OldLadyMono
         ~SET_PARAMETER("PrologueCharacters", 5)
-        #speaker:Storyteller
+        #speaker:Miriam
         #NPC:Miriam_Neutral
         As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
@@ -1630,6 +1630,7 @@ Let's see...
 #speaker:Director
 "Hm?"
 "Greetings, I am Bennet Crabb, the Director of the laboratory."
+#speaker:Bennet
 "How can I help you?"
 
 #speaker:Alistair
@@ -1638,7 +1639,7 @@ Let's see...
 "Sir, do you not remember me?"
 "I'm Alistair! I interned here with Jules Ambrose?"
 
-#speaker:Director
+#speaker:Bennet
 "Alistair?"
 "Hm..."
 "Of course. Alistair."
@@ -1650,7 +1651,7 @@ Let's see...
     "I'm-"
     "I'm not sure what you could be referencing, sir!"
     
-    #speaker:Director
+    #speaker:Bennet
     "Do not play coy with me, boy."
     
     + [Sorry]
@@ -1659,7 +1660,7 @@ Let's see...
     "I am quite sorry, sir. My sincerest apologies."
     
     - 
-    #speaker:Director
+    #speaker:Bennet
     "You abandoned your duties, your job, here at the lab with nary a hint of warning."
     "That sort of behavior is most unprofessional."
     "Do not think that your return to the planet will secure you a position once again."
@@ -1668,7 +1669,7 @@ Let's see...
     "Of course not sir."
     "I am... Just visiting."
     
-    #speaker:Director
+    #speaker:Bennet
     "And visit you may."
     "Now, begone."
     "I have much work to attend to."
@@ -1678,25 +1679,25 @@ Let's see...
 -> END
 
 =Questions
-#speaker:Director 
+#speaker:Bennet
 "What do you want?"
     + {time== 2} [Lab is busy?] -> Busylab
     + {time== 3} [Booths?] -> Booths
     + {time== 4} [Lots of work?] -> Notbusy
     * {seenPepTalk==true} [Enter vault?] -> VaultTalk
     + [Nothing for now]
-        #speaker:Director
+        #speaker:Bennet
         "Yes, yes, begone. I am quite busy."
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
         #NPC:None
-        -> END //lab
+        -> END
 
 =Busylab
 #speaker:Alistair
 #sprite:Alistair_Assured
 "The lab seems busy today!"
 
-#speaker:Director
+#speaker:Bennet
 "Yes, it's been quite busy for a few weeks now."
 "Which is why I have very little time for idle chatter..."
 
@@ -1704,7 +1705,7 @@ Let's see...
 #sprite:Alistair_Neutral
 "Did something happen? Why is the lab so busy?"
 
-#speaker:Director
+#speaker:Bennet
 "..."
 "A Trade Seam to the Gold Belt opened up."
 "Trade and artifacts are moving through the lab like water."
@@ -1720,7 +1721,7 @@ Let's see...
 #speaker:Alistair
 "Any thoughts on the booths in the lab?"
 
-#speaker:Director
+#speaker:Bennet
 "It is a neccesary distraction for now."
 "It is a way for those interested in working for the lab in the future to show off their knowledge and ability."
 "I have seen some promising experiments on display."
@@ -1738,13 +1739,13 @@ Let's see...
 #speaker:Alistair
 "Work in the lab seems pretty slow today."
 
-#speaker:Director
+#speaker:Bennet
 "Indeed..."
 
 #speaker:Alistair
 "... What are you working on?"
 
-#speaker:Director
+#speaker:Bennet
 "Nothing that concerns you."
 "Details on the artifacts we work with are not discussed with civilans."
 
@@ -1753,7 +1754,7 @@ Let's see...
 "But I'm not quite just a civilan, aren't I?"
 "I worked here!"
 
-#speaker:Director
+#speaker:Bennet
 "Not that it would matter, but you were a mere intern."
 "Regardless, I refuse to break protocol for your curiosity..."
 #NPC:None
@@ -1766,7 +1767,7 @@ Let's see...
 #sprite:Alistair_Embarassed
 "I believe I misplaced some of my belongings before I left."
 
-#speaker:Director
+#speaker:Bennet
 "Out with it, what do you want?"
 
 #speaker:Alistair
@@ -1775,7 +1776,7 @@ Let's see...
 #sprite:Alistair_Assured
 "I really need them! You wouldn't mind just letting me into the vault for a moment would you?"
 
-#speaker:Director
+#speaker:Bennet
 "That's preposterous."
 "You are no longer employed here and you should know that civilians are strictly prohibited access to any of the vault’s highly classified materials."
     + [I need it]
@@ -1789,7 +1790,7 @@ Let's see...
         "Sir, please."
         "I know that this is a breach of protocol, but perhaps you could make an exception for an ex-intern?"
     - 
-        #speaker:Director
+        #speaker:Bennet
         "Hmph."
         "What even is it that you want from the vault?"
     + [Notes]
@@ -1797,7 +1798,7 @@ Let's see...
         #sprite:Alistair_Neutral
         "My research notes. They're still inside the vault."
         
-        #speaker:Director
+        #speaker:Bennet
         "Those notes belong to the lab now."
         "When you left your position, those materials became part of the collective research of the lab."
         
@@ -1809,7 +1810,7 @@ Let's see...
         "It's... Something?"
         "I just, I really need it."
     - 
-        #speaker:Director
+        #speaker:Bennet
         "Absolutely not."
         "No, access to the vault is prohibited."
         "It matters not what it is you want from it."
@@ -1822,7 +1823,7 @@ Let's see...
         #sprite:Alistair_Nervous
             "Please, sir, I need to get into the vault..."
     - 
-        #speaker:Director
+        #speaker:Bennet
         "Silence, I have already made my decision."
         "Begone now, I am incredibly occupied at the moment."
         
@@ -1866,7 +1867,7 @@ Let's see...
 I move closer to the crowd to listen in.
 A small projected version of the lab's Director, Bennet Crabb, stands on a pedastal in the center of the crowd.
 
-#speaker:Director
+#speaker:Bennet
 #sprite:Director_Neutral
 "In further announcements..."
 "As some of you may have already heard..."
@@ -1888,7 +1889,7 @@ I remember doing the same when I was a fresh intern.
 The Director's projected form stands tall over the group of people around him.
 Everyone is silent, just looking up.
 
-#speaker:Director
+#speaker:Bennet
 #NPC:Bennet_Neutral
 "Ahem..."
 "..."
@@ -2714,7 +2715,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "Oh, well..."
     "My name is Alistair!"
     
-    #speaker:Child
+    #speaker:Temperance
     "..."
     
     #speaker:Alistair
@@ -3030,8 +3031,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #NPC:Miriam_Neutral
 "Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts. Could you-"
 
-#speaker:Miriam
+#speaker:Storyteller
 "Storyteller? My dear boy, I am no mere storyteller, I am a purveyor of truth!"
+#speaker:Miriam
 "They all doubt old Miriam, but they'll soon see!"
 "The dissapearance of Xitis is a sign of things to come!"
 
