@@ -36,6 +36,7 @@ INCLUDE Globals.ink
 ~ time = 10
 ~ seenBeginning = true
 ~ inTutorial = true
+~TOGGLE_MINIMAP(false)
 #background:Silhouette_Intro
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
@@ -192,11 +193,6 @@ Let's see....
 ~TOGGLE_SLIDER(true)
 //Could include something here to make the player open the journal before continuing
 
-#speaker:D4RL1N6
-"Maybe there are other people in different places or times that could help us."
-"The labratory is quite large, but there are a few areas where humans congregate."
-//Cue minimap flash, make sure buttons where you can click the actual different locations flash specifically
-//Pause
 #speaker:D4RL1N6
 "This is the end of the safety protocol."
 
@@ -829,7 +825,6 @@ In the center, I see a series of numbers: 0-9.
 
 ->DarlingPepTalk
 ===DarlingPepTalk===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~seenPepTalk=true
 #speaker:Alistair
 "I've seen the vault opened before. It needs a code to be opened."
@@ -854,6 +849,9 @@ In the center, I see a series of numbers: 0-9.
 #speaker:D4RL1N6
 "Do not be so melodramatic. We will find a way. We must aquire your treasure."
 "We may also be able to gather information from exploring this place."
+"There must be other people in different places or times that could help us."
+~TOGGLE_MINIMAP(true)
+
 
 #speaker:Alistair
 "You're right, as usual."
@@ -861,7 +859,6 @@ In the center, I see a series of numbers: 0-9.
 "If I remember corrently, the Director is usually somewhere in the lab."
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
 #NPC:None
-//-> library
 ->DONE
 
 
