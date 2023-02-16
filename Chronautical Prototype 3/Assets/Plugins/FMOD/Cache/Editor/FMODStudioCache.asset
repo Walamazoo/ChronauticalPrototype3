@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8893892473948960783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetSurprised
+  Guid:
+    Data1: -219337848
+    Data2: 1131762898
+    Data3: 2019115657
+    Data4: 668700923
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1251
 --- !u!114 &-8296640010847150106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +135,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1436
+--- !u!114 &-6919762049203459674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetHappy
+  Guid:
+    Data1: 2124112103
+    Data2: 1252097612
+    Data3: -2000175982
+    Data4: 2122516818
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1200
+--- !u!114 &-6912360264417110945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetAngry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetAngry
+  Guid:
+    Data1: 459856236
+    Data2: 1234909391
+    Data3: 210942621
+    Data4: -373788411
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
 --- !u!114 &-5935247931202218225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +321,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1018
+--- !u!114 &-3688024803064023896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetAnnouncement
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetAnnouncement
+  Guid:
+    Data1: 1428673646
+    Data2: 1160857909
+    Data3: 128259512
+    Data4: 410471254
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3183584489734680474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,11 +363,38 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638108623397461522
+  lastModified: 638121517225766401
   FileSizes:
   - Name: Desktop
-    Value: 19840352
+    Value: 20111616
   Exists: 1
+--- !u!114 &-2555376134443752059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetGreeting
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetGreeting
+  Guid:
+    Data1: 1621072019
+    Data2: 1212848603
+    Data3: -856384615
+    Data4: -1567208882
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1654815454666013860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +545,15 @@ MonoBehaviour:
   - {fileID: 4048360487329338046}
   - {fileID: -8098841085076843366}
   - {fileID: 5056795901427673164}
+  - {fileID: 1336236562607291343}
+  - {fileID: 3542215075103471336}
+  - {fileID: -6912360264417110945}
+  - {fileID: -3688024803064023896}
+  - {fileID: -8893892473948960783}
+  - {fileID: 4148152053141115685}
+  - {fileID: -2555376134443752059}
+  - {fileID: 8943678803710146826}
+  - {fileID: -6919762049203459674}
   EditorParameters:
   - {fileID: 6965014497468042177}
   - {fileID: 4907868185218273205}
@@ -418,7 +562,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638108623397461522
+  cacheTime: 638121517225896457
   cacheVersion: 131593
 --- !u!114 &157819835543909333
 MonoBehaviour:
@@ -501,6 +645,33 @@ MonoBehaviour:
   - Temperance
   - Lady
   Exists: 1
+--- !u!114 &1336236562607291343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetThinking
+  Guid:
+    Data1: 1021323021
+    Data2: 1320070092
+    Data3: 417751978
+    Data4: 2118828109
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1904026168687657331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,6 +754,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3200
+--- !u!114 &3542215075103471336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetFearful
+  Guid:
+    Data1: 387801692
+    Data2: 1086936714
+    Data3: -695232384
+    Data4: 87260300
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1782
 --- !u!114 &4045274818419075609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,6 +835,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &4148152053141115685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetFarewell
+  Guid:
+    Data1: -1388149880
+    Data2: 1128318401
+    Data3: -2057546340
+    Data4: -607610803
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4896296810924624196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,10 +1053,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638105801734292309
+  lastModified: 638121517225896457
   FileSizes:
   - Name: Desktop
-    Value: 2166
+    Value: 2574
   Exists: 1
 --- !u!114 &7821536103994051125
 MonoBehaviour:
@@ -925,3 +1150,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 418927
+--- !u!114 &8943678803710146826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetSad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetSad
+  Guid:
+    Data1: -1910339678
+    Data2: 1150078122
+    Data3: -681547857
+    Data4: -1976390766
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2444
