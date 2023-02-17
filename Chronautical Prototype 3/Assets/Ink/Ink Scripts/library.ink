@@ -1178,12 +1178,18 @@ Let's see...
 
 
 //NPCs Convos
+===TutorialScold===
+#speaker:Alistair
+"That's Jules, my friend from when I interned at the lab."
+"But I don't need to talk to him right now, I should focus on getting into the vault.
+->END
 
 //Jules Ambrose
 ===juleslab===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
+{inTutorial: -> TutorialScold| }
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
