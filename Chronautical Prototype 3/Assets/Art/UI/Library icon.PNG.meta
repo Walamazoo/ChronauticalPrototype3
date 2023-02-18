@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9e45580891c83d24c8d5a8ef24183470
+guid: 52ff44b8d11d8634390a8456bf06996c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5242572377865406904
-    second: Minimap tab down_0
+      213: -4584635272682504862
+    second: Library icon_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Minimap tab down_0
+      name: Library icon_0
       rect:
         serializedVersion: 2
-        x: 1890
-        y: 681
-        width: 642
-        height: 987
+        x: 817
+        y: 1068
+        width: 124
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 846be0cd234ae37b0800000000000000
-      internalID: -5242572377865406904
+      spriteID: 26d780b828a1060c0800000000000000
+      internalID: -4584635272682504862
       vertices: []
       indices: 
       edges: []

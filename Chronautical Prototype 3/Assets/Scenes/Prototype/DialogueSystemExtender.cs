@@ -14,7 +14,8 @@ using System;
 public class DialogueSystemExtender : DialogueSystemInkIntegration
 {
     [SerializeField] private TextAsset globalsInkFile;
-    [SerializeField] GameObject button;
+    [SerializeField] GameObject journalButton;
+    [SerializeField] MinimapOpenClose minimap;
     [SerializeField] JournalManager JournalManager;
     [SerializeField] CameraParallax CameraParallax;
     [SerializeField] GameObject customInkFunctions;
@@ -46,8 +47,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
     {
         base.BindExternalFunctions(story);
 
-        story.BindExternalFunction("TOGGLE_JOURNAL", (bool state) => {button.SetActive(state);});
-        story.BindExternalFunction("BUTTON_MINIMAP", (bool state) => {button.SetActive(state);});
+        story.BindExternalFunction("TOGGLE_JOURNAL", (bool state) => {journalButton.SetActive(state);});
+        story.BindExternalFunction("TOGGLE_MINIMAP", (bool state) => {minimap.OnButtonPressed(state);});
         story.BindExternalFunction("CREATE_JOURNAL_OBJECT", (string name, string type, string hoverDescription, string fullDescription) => 
                                                             {JournalManager.createJournalObject(name, type, hoverDescription, fullDescription);});
         story.BindExternalFunction("CREATE_TIMELINE_CLUE", (string name, string type, string hoverDescription, string fullDescription) =>

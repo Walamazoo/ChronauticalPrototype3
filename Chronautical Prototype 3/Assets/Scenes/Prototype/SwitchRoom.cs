@@ -41,7 +41,7 @@ public class SwitchRoom : MonoBehaviour
                 environmentFilter.setFilter(false);
                 break;
             case "marketplace":
-                text.GetComponent<Text>().text = "Market Place";
+                text.GetComponent<Text>().text = "Marketplace";
                 environmentFilter.setLocation(2);
                 environmentFilter.setFilter(true);
                 environmentFilter.setFilter(false);
