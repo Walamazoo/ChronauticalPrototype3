@@ -9655,7 +9655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &645875942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11568,9 +11568,9 @@ MonoBehaviour:
   - {fileID: 1200040966}
   - {fileID: 1808346715}
   - {fileID: 180706240}
-  exclamationClue: {fileID: 4176611699425728722, guid: 3a643b839452e72489719297b9cfb413, type: 3}
-  personClue: {fileID: 1917718174941279549, guid: d909127d962ce7240ae4cea69a3b929a, type: 3}
-  questionClue: {fileID: 7047628836274830896, guid: 5c423f86d3bf1704e85ff1fdf4451dac, type: 3}
+  exclamationClue: {fileID: 4028919631217764842, guid: f06c3de9ee294dc4eb3f61305c79aa9f, type: 3}
+  personClue: {fileID: 4858252843543501479, guid: fe8075ebd9465c349a01b5fd6fed419b, type: 3}
+  questionClue: {fileID: 8326147095896232327, guid: f956890386e462949b88d6221917733e, type: 3}
   sliderController: {fileID: 854182565}
   hand: {fileID: 524396829}
   highlight: {fileID: 208645330}

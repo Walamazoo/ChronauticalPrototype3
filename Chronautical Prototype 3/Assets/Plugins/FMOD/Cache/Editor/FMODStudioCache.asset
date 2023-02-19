@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-7641300588580622320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesHappy
+  Guid:
+    Data1: 1040168734
+    Data2: 1212479650
+    Data3: 1984193177
+    Data4: -1875641333
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 960
 --- !u!114 &-7603327635597123483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +216,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1800
+--- !u!114 &-6023387996625331761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesAngry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesAngry
+  Guid:
+    Data1: 1526030333
+    Data2: 1115127686
+    Data3: 2140601791
+    Data4: -291333482
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1380
 --- !u!114 &-5935247931202218225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +401,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 3200
 --- !u!114 &-3183584489734680474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,11 +417,65 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638121517225766401
+  lastModified: 638124237023840138
   FileSizes:
   - Name: Desktop
-    Value: 20111616
+    Value: 20760384
   Exists: 1
+--- !u!114 &-3063509660881048841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesGreeting
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesGreeting
+  Guid:
+    Data1: -21470391
+    Data2: 1258673414
+    Data3: 699730620
+    Data4: 286873633
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-2871679734070748850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesFearful
+  Guid:
+    Data1: 1113289393
+    Data2: 1221621913
+    Data3: 1064972693
+    Data4: 580492700
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1720
 --- !u!114 &-2555376134443752059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +502,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1100
 --- !u!114 &-1654815454666013860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +662,15 @@ MonoBehaviour:
   - {fileID: -2555376134443752059}
   - {fileID: 8943678803710146826}
   - {fileID: -6919762049203459674}
+  - {fileID: -7641300588580622320}
+  - {fileID: -3063509660881048841}
+  - {fileID: 6871299844175846334}
+  - {fileID: 2946821976392117847}
+  - {fileID: 3412432288121915070}
+  - {fileID: -2871679734070748850}
+  - {fileID: 3611944101786797942}
+  - {fileID: 6201717682296596180}
+  - {fileID: -6023387996625331761}
   EditorParameters:
   - {fileID: 6965014497468042177}
   - {fileID: 4907868185218273205}
@@ -562,7 +679,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638121517225896457
+  cacheTime: 638124237023850111
   cacheVersion: 131593
 --- !u!114 &157819835543909333
 MonoBehaviour:
@@ -671,7 +788,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 900
 --- !u!114 &1904026168687657331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +816,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &2946821976392117847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesFarewell
+  Guid:
+    Data1: -521744007
+    Data2: 1337554580
+    Data3: -1829855319
+    Data4: -1335001740
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1320
 --- !u!114 &3026598552315329117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,6 +898,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3200
+--- !u!114 &3412432288121915070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesThinking
+  Guid:
+    Data1: -1843410774
+    Data2: 1205625411
+    Data3: 2085887141
+    Data4: 1305890717
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 830
 --- !u!114 &3542215075103471336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,6 +952,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1782
+--- !u!114 &3611944101786797942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetElection
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetElection
+  Guid:
+    Data1: 1745704381
+    Data2: 1192319231
+    Data3: -337885035
+    Data4: 252172132
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &4045274818419075609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,7 +1059,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1300
 --- !u!114 &4896296810924624196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,6 +1171,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &6201717682296596180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesSurprised
+  Guid:
+    Data1: -987894553
+    Data2: 1232128573
+    Data3: -799837514
+    Data4: 1473939199
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 860
 --- !u!114 &6315782032746582938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,6 +1225,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2280
+--- !u!114 &6871299844175846334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesSad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesSad
+  Guid:
+    Data1: 642622287
+    Data2: 1118013146
+    Data3: -1321042284
+    Data4: 1468694057
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 900
 --- !u!114 &6965014497468042177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,10 +1305,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638121517225896457
+  lastModified: 638124237023850111
   FileSizes:
   - Name: Desktop
-    Value: 2574
+    Value: 2958
   Exists: 1
 --- !u!114 &7821536103994051125
 MonoBehaviour:
