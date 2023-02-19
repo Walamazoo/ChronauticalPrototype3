@@ -91,7 +91,7 @@ The planet, Elore-Nabyke, will be lost.
 "During the last attempt, you went right up to the planet's destruction."
 "You barely gave yourself enough time to go back in time again." 
 
-//#speaker:Alistair
+#speaker:Alistair
 * [I'm a failure] "If I can't even save this planet, what's the point?"
 * [There must be a way] "There must be something I'm just not thinking of."
 
