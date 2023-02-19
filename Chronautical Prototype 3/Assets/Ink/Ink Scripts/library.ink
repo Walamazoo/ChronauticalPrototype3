@@ -541,6 +541,7 @@ Let's see...
 -> DONE
 
 =runfordirector
+~julesRun = true
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
@@ -914,6 +915,7 @@ The treasure’s most likely melted by now anyways.
 
 ===Election===
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
+~ seenElection = true
 There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
 It would be impossible for me to get a word in. 
 As crowds of people close in on the board members, I push and wriggle my way closer to the front.
@@ -1157,8 +1159,7 @@ Let's see...
                 +Check elsewhere -> END
         - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
             -> END
-        - 5:    -> evaluatelab
-                A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
+        - 5:    A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
                 Everyone is silent.
                 + [Investigate] -> AnnounceDestruction
                 + [Check Elsewhere] -> END
@@ -1445,12 +1446,13 @@ Let's see...
 "I recall an election, perhaps we can find some leads there."
 }
 
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
-#sprite:Alistair_Neutral
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
+//#NPC:None
+//#sprite:Alistair_Neutral
 -> DONE
 
 =runfordirector
+~julesRun = true
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
