@@ -33,7 +33,11 @@ public class JournalManager : MonoBehaviour
     private int OpenOrClose;
 
     //Initialization of the List objects that will contain our Timeline Clues, our Items, known People, and known Locations.
+    public GameObject exclamationClue;
+    public GameObject personClue;
+    public GameObject questionClue;
     private Dictionary<int, List<TimelineClue>> personClues;
+    
     private Dictionary<int, List<TimelineClue>> placeClues;
     private Dictionary<int, List<TimelineClue>> itemClues;
 
@@ -79,7 +83,7 @@ public class JournalManager : MonoBehaviour
         //currentList = JournalList[JournalListPointer];
         //updateTimeline();
 
-        updateTimeline("Person");
+        updateTimeline();
     }
 
     //Method called in other classes in order to traverse the journal pages
@@ -88,9 +92,7 @@ public class JournalManager : MonoBehaviour
         currentPage.SetActive(false);
 
         switch(pageNumber){
-            case 1:
-                //clickphoto.SetActive(false);
-                //fulldescription.SetActive(false);    
+            case 1: 
                 currentPage = JournalTimeline;
                 break;
             case 2:
@@ -98,7 +100,6 @@ public class JournalManager : MonoBehaviour
                 break;
             case 3:
                 currentPage = JournalInfo;
-                //updateTimeline("Person");
                 break;
             case 4:
                 currentPage = JournalOptions;
@@ -115,7 +116,7 @@ public class JournalManager : MonoBehaviour
             currentPage.SetActive(true);
             //hand.rotateHand(sliderController.currentYear);
             OpenOrClose += 1;
-            updateTimeline("Person");
+            updateTimeline();
             exitButton.SetActive(true);
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(false);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
@@ -305,63 +306,60 @@ public class JournalManager : MonoBehaviour
 
     //NOT YET FULLY IMPLEMENTED
     //Will be used to format and properly assign the Timeline Page.
-    public void updateTimeline(string clueType){
-        int count = JournalTimeline.transform.childCount - 1;
+    public void updateTimeline(){
+        int count = 0;
+        float xCount = 0f;
+        for(int i = 0; i < 3; i++){
+            switch(i){
+                case 0:
+                count = 0;
+                    foreach(int variable in personClues.Keys){
+                        List<TimelineClue> tempList = personClues[variable];
 
-        switch(clueType){
-            case "Person":
-                foreach(int variable in personClues.Keys){
-                    List<TimelineClue> tempList = personClues[variable];
-
-                    for(int i = 0; i < tempList.Count; i++){
-                        if(count <= i + 3){
-                            break;
-                        }
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - (i + 3)).gameObject;
-                        timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
-                        timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
-                        timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
-                        timelineButton.GetComponent<ClueButton>().updateType("PersonClue");
-                        timelineButton.SetActive(true);
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(variable % 10).gameObject;
+                        GameObject tempClue = Instantiate<GameObject>(personClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f), 
+                            Quaternion.identity, timelineButton.transform) as GameObject;
+                        tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
+                        tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
+                        tempClue.GetComponent<ClueButton>().updateType("PersonClue");
                         Debug.Log("Person is being called in update journal");
-                    }  
-                }
-                break;
-            case "Place":
-                foreach(int variable in placeClues.Keys){
-                    List<TimelineClue> tempList = placeClues[variable];
+                        count++;
+                        xCount += 15f;
+                    }   
+                    break;
+                case 1:
+                count = 0;
+                    foreach(int variable in placeClues.Keys){
+                        List<TimelineClue> tempList = placeClues[variable];
 
-                    for(int i = 0; i < tempList.Count; i++){
-                        if(count <= i + 3){
-                            break;
-                        }
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - (i + 3)).gameObject;
-                        timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
-                        timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
-                        timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
-                        timelineButton.GetComponent<ClueButton>().updateType("PlaceClue");
-                        timelineButton.SetActive(true);
-                        Debug.Log("Place is being called in update Journal");
-                    }  
-                }
-                break;
-            case "Item":
-                foreach(int variable in itemClues.Keys){
-                    List<TimelineClue> tempList = itemClues[variable];
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(variable % 10).gameObject;
+                        GameObject tempClue = Instantiate<GameObject>(exclamationClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f), 
+                            Quaternion.identity, timelineButton.transform) as GameObject;
+                        tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
+                        tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
+                        tempClue.GetComponent<ClueButton>().updateType("PlaceClue");
+                        Debug.Log("Place is being called in update journal");
+                        count++;
+                        xCount += 15f;
+                    } 
+                    break;
+                case 2:
+                count = 0;
+                    foreach(int variable in itemClues.Keys){
+                        List<TimelineClue> tempList = itemClues[variable];
 
-                    for(int i = 0; i < tempList.Count; i++){
-                        if(count <= i + 3){
-                            break;
-                        }
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(count - (i + 3)).gameObject;
-                        timelineButton.transform.GetChild(0).GetComponent<Text>().text = tempList[i].hoverDescription;
-                        timelineButton.transform.GetChild(2).GetComponent<Text>().text = tempList[i].fullDescription;
-                        timelineButton.transform.GetChild(3).GetComponent<Text>().text = variable.ToString();
-                        timelineButton.GetComponent<ClueButton>().updateType("ItemClue");
-                        timelineButton.SetActive(true);
-                    }  
-                }
-                break;
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(variable % 10).gameObject;
+                        GameObject tempClue = Instantiate<GameObject>(questionClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f),
+                            Quaternion.identity, timelineButton.transform) as GameObject;
+                        tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
+                        tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
+                        tempClue.GetComponent<ClueButton>().updateType("ItemClue");
+                        Debug.Log("Item is being called in update journal");
+                        count++;
+                        xCount += 15f;
+                    } 
+                    break;
+            }
         }
     }
 
