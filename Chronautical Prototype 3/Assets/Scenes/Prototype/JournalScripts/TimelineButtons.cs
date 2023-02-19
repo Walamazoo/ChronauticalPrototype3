@@ -8,6 +8,6 @@ public class TimelineButtons : MonoBehaviour
     [SerializeField] string timelineType;
 
     public void onClick(){
-        journalManager.updateTimeline(timelineType);
+        journalManager.updateTimeline();
     }
 }

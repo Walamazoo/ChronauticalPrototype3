@@ -15,11 +15,14 @@ public class ClueButton : MonoBehaviour
     }
 
     public void OnPointerEnter(){
+        clueText.SetActive(true);
         clueHoverText.SetActive(true);
         clueHoverBackground.SetActive(true);
+        
     }
 
     public void OnPointerExit(){
+        clueText.SetActive(false);
         clueHoverText.SetActive(false);
         clueHoverBackground.SetActive(false);
     }

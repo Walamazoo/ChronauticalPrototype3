@@ -91,7 +91,7 @@ The planet, Elore-Nabyke, will be lost.
 "During the last attempt, you went right up to the planet's destruction."
 "You barely gave yourself enough time to go back in time again." 
 
-//#speaker:Alistair
+#speaker:Alistair
 * [I'm a failure] "If I can't even save this planet, what's the point?"
 * [There must be a way] "There must be something I'm just not thinking of."
 
@@ -142,6 +142,7 @@ It's clear even from this distance that touching the handle would burn my skin.
 ~TOGGLE_JOURNAL(true)
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
 ~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
+~CREATE_TIMELINE_CLUE("Testy", "personclue", "This is a test", "This is a test")
 ~TOGGLE_SLIDER(true)
 -> LIBRARY
 
@@ -312,6 +313,7 @@ Let's see...
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
 #NPC:Jules_Neutral
+{inTutorial: -> TutorialScold| }
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
@@ -541,6 +543,7 @@ Let's see...
 -> DONE
 
 =runfordirector
+~julesRun = true
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
@@ -914,6 +917,7 @@ The treasure’s most likely melted by now anyways.
 
 ===Election===
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
+~ seenElection = true
 There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
 It would be impossible for me to get a word in. 
 As crowds of people close in on the board members, I push and wriggle my way closer to the front.
@@ -1157,8 +1161,7 @@ Let's see...
                 +Check elsewhere -> END
         - 4:    The lab is quiet. A desk clerk taps their pen against a clipboard at random.
             -> END
-        - 5:    -> evaluatelab
-                A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
+        - 5:    A large crowd of various employees of the lab crowd around a projection of the Director. Even the wasteman strains himself to listen.
                 Everyone is silent.
                 + [Investigate] -> AnnounceDestruction
                 + [Check Elsewhere] -> END
@@ -1445,12 +1448,13 @@ Let's see...
 "I recall an election, perhaps we can find some leads there."
 }
 
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
-#sprite:Alistair_Neutral
+//~ TOGGLE_SLIDER_INTERACTABLE(true)
+//#NPC:None
+//#sprite:Alistair_Neutral
 -> DONE
 
 =runfordirector
+~julesRun = true
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
@@ -1679,7 +1683,7 @@ Let's see...
 ~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
--> END
+-> directorlab
 
 =Questions
 #speaker:Bennet
@@ -2477,7 +2481,7 @@ Let's see...
     "I promise, Jules. I promise."
     (And I hope this is a promise I won't break...)
     
--> Questions
+-> END
 
 
 //Uriah Bramble
@@ -3090,7 +3094,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 (She's not... Entirely incorrect.)
 (Maybe Xitis's been thrown off by what's happening here?)
 (Focus, Alistair. You can't chase every loose end, not now at least.)
-
+//throws error and ends script
 #speaker Miriam
 "Oh? Has the truth rendered you speechless?"
 
@@ -3129,7 +3133,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #speaker:Alistair
         "You're not entirely ingnored."
         "Why, here I am. Why don't you tell me a tale?"
--
+    //throws up error and ends script
+    -
 
 #speaker Miriam
 "Oh? Then let me tell you, these boubles are just a taste of the true wonders those lab people wish to obtain."
@@ -3172,7 +3177,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #speaker:Alistair
         "Adrift, as in lost?"
         "These people take secure seams, they would have no chance of ending up somewhere other than their destination."
--
+    -
 
 #speaker:Miriam
 "The Sirens mimic the sounds of ships in distress!"
@@ -3218,7 +3223,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "I certainly get around to many places, and hear many things."
         "I think I may know what you mean."
         (Hopefully she bought that.)
--
+    -
 
 #speaker:Miriam
 "The cries of the void."
