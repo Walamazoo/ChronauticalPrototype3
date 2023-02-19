@@ -312,6 +312,7 @@ Let's see...
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
 #NPC:Jules_Neutral
+{inTutorial: -> TutorialScold| }
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
@@ -2479,7 +2480,7 @@ Let's see...
     "I promise, Jules. I promise."
     (And I hope this is a promise I won't break...)
     
--> Questions
+-> END
 
 
 //Uriah Bramble
@@ -3092,7 +3093,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 (She's not... Entirely incorrect.)
 (Maybe Xitis's been thrown off by what's happening here?)
 (Focus, Alistair. You can't chase every loose end, not now at least.)
-
+//throws error and ends script
 #speaker Miriam
 "Oh? Has the truth rendered you speechless?"
 
@@ -3131,7 +3132,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #speaker:Alistair
         "You're not entirely ingnored."
         "Why, here I am. Why don't you tell me a tale?"
--
+    //throws up error and ends script
+    -
 
 #speaker Miriam
 "Oh? Then let me tell you, these boubles are just a taste of the true wonders those lab people wish to obtain."
@@ -3174,7 +3176,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #speaker:Alistair
         "Adrift, as in lost?"
         "These people take secure seams, they would have no chance of ending up somewhere other than their destination."
--
+    -
 
 #speaker:Miriam
 "The Sirens mimic the sounds of ships in distress!"
@@ -3220,7 +3222,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "I certainly get around to many places, and hear many things."
         "I think I may know what you mean."
         (Hopefully she bought that.)
--
+    -
 
 #speaker:Miriam
 "The cries of the void."
