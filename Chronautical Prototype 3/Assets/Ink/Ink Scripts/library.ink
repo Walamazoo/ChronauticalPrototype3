@@ -1681,7 +1681,7 @@ Let's see...
 ~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
--> END
+-> directorlab
 
 =Questions
 #speaker:Bennet
