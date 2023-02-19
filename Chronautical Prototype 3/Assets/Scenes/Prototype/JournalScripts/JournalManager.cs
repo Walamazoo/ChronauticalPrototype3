@@ -28,6 +28,7 @@ public class JournalManager : MonoBehaviour
     [SerializeField] GameObject fulldescription;
     [SerializeField] GameObject hoverdescription;*/
     [SerializeField] GameObject[] ItemAndPeopleList;
+    [SerializeField] InfoMinimap[] minimapPeople;
 
     //Int that determines whether the journal will be opened or be closed on the next button press.
     private int OpenOrClose;
@@ -118,6 +119,9 @@ public class JournalManager : MonoBehaviour
             OpenOrClose += 1;
             updateTimeline();
             exitButton.SetActive(true);
+            foreach(InfoMinimap person in minimapPeople){
+                person.OnorOff();
+            }
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(false);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
