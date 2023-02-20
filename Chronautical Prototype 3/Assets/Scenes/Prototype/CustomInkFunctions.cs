@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CustomInkFunctions : MonoBehaviour
 {
@@ -98,6 +99,11 @@ public class CustomInkFunctions : MonoBehaviour
         Debug.Log("Value is: " + value);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName(parName, value);
         //gameMusic.setParameterByName(parName, value);
+    }
+
+    public void ChangeScene (string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName);
     }
     
 }

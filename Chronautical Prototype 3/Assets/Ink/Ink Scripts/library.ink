@@ -1189,7 +1189,7 @@ Let's see...
 ===TutorialScold===
 #speaker:Alistair
 "That's Jules, my friend from when I interned at the lab."
-"But I don't need to talk to him right now, I should focus on getting into the vault.
+"But I don't need to talk to him right now, I should focus on getting into the vault."
 ->END
 
 //Jules Ambrose
@@ -2164,9 +2164,9 @@ The words engraved into the metal are bareily legible.
 (I'm in the Doc's clinic!)
 (I guess I must have really gotten smacked hard.)
 
-Beside my cot, I see some unusal items.
+Beside my cot, I see some unusual items.
 The ship mini.
-The funking looking gadget.
+The funky looking gadget.
 The plaque.
 And the notebook.
 
@@ -2175,6 +2175,7 @@ And the notebook.
 (Then where the hell is Alistair!)
 //is hell gucci?
 //FADE TO BLACK
+~CHANGE_SCENE("credits")
 -> END
 //Send back to main menu scene?
 

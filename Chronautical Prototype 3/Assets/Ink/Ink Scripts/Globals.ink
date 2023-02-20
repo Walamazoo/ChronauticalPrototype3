@@ -73,6 +73,8 @@ EXTERNAL CREATE_JOURNAL_OBJECT(name, type, hoverDescription, fullDescription)
 
 EXTERNAL TOGGLE_CAMERA(state)
 
+EXTERNAL CHANGE_SCENE(sceneName)
+
 
 === function TOGGLE_SLIDER(state) ===
     ~return state
@@ -99,3 +101,5 @@ EXTERNAL TOGGLE_CAMERA(state)
     ~return name
 === function TOGGLE_CAMERA(state) ===
     ~return state
+=== function CHANGE_SCENE(sceneName) ===
+    ~return sceneName

@@ -15,14 +15,6 @@ public class TitleMenu : MonoBehaviour
     [SerializeField] private Button settingsButton;
     [SerializeField] private GameObject conformationPopupMenu;
 
-    /*
-    private void start(){
-        if(!DataPersistenceManager.instance.HasGamedata()){
-            continueGameButton.interactable = false;
-        }
-    }
-    */
-
     public void OnNewGameClicked(){
         DisableMenuButtons();
         conformationPopupMenu.SetActive(true);
@@ -31,13 +23,7 @@ public class TitleMenu : MonoBehaviour
     public void OnConfirmClicked(){
         conformationPopupMenu.SetActive(false);
 
-        //Create a new game - which will initiate our game data
-        //DataPersistenceManager.instance.NewGame();
-        //Load the gameplay scene - which will in turn save the game because of
-        //OnSceneLoaded() in the DataPersistenceManager
-
-        //Clears player prefs
-        //PlayerPrefs.DeleteAll();
+        //Make new data
 
         SceneManager.LoadSceneAsync("Prologue");
     }
@@ -50,11 +36,7 @@ public class TitleMenu : MonoBehaviour
     public void OnContinueGameClicked(){
         DisableMenuButtons();
         //Save the game anytime before loading a new scene
-        //DataPersistenceManager.instance.SaveGame();
-        //Load the next scene - which will in turn Load the game because of
-        //OnSceneLoaded() in the DataPersistenceManager
         SceneManager.LoadSceneAsync("Prologue");
-        //TODO - Replace with current scene parameter
     }
 
     public void OnSettingsClicked(){

@@ -65,8 +65,10 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         story.BindExternalFunction("START_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StartEmitter();});
         story.BindExternalFunction("STOP_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopEmitter();});
         story.BindExternalFunction("SET_PARAMETER", (string parName, int value) => {customInkFunctions.GetComponent<CustomInkFunctions>().SetParameter(parName, value);});
-        
+
         story.BindExternalFunction("TOGGLE_CAMERA", (bool state) => {CameraParallax.CameraCanMove(state);});
+
+        story.BindExternalFunction("CHANGE_SCENE", (string sceneName) => {customInkFunctions.GetComponent<CustomInkFunctions>().ChangeScene(sceneName);});
     }
 
     protected override void UnbindExternalFunctions(Story story)
@@ -86,6 +88,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             story.UnbindExternalFunction("CREATE_TIMELINE_CLUE");
 
             story.UnbindExternalFunction("TOGGLE_CAMERA");
+
+            story.UnbindExternalFunction("CHANGE_SCENE");
 
             story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
             story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
