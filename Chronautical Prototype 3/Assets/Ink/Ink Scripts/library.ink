@@ -3073,7 +3073,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
-//12345
 + {time == 1} [Dissapearance of Xitis?] ->Dissapearance
 + {time == 2} [Busy day?] ->Busy
 + {time == 3} [Can't get a crowd?] ->Crowd
@@ -3100,8 +3099,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 (She's not... Entirely incorrect.)
 (Maybe Xitis's been thrown off by what's happening here?)
 (Focus, Alistair. You can't chase every loose end, not now at least.)
-//throws error and ends script
-#speaker Miriam
+
+#speaker:Miriam
 "Oh? Has the truth rendered you speechless?"
 
 #speaker:Alistair
@@ -3142,7 +3141,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     //throws up error and ends script
     -
 
-#speaker Miriam
+#speaker:Miriam
 "Oh? Then let me tell you, these boubles are just a taste of the true wonders those lab people wish to obtain."
 "Have you every heard of the Inventor? A true miracle worker!"
 "Wars have been fought over their inventions..."
