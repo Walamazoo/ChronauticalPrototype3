@@ -218,8 +218,10 @@ Who should I talk to?
     "Jules? Is that you?"
     
     #speaker:Jules
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesGreeting")
     "Alistair!"
     "Alistair, you-"
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
@@ -1139,6 +1141,7 @@ The room is packed with people from the city and lab employees, but within the c
 
 //visual effect?
 //background change
+~SET_PARAMETER("PrologueMusic", 1)
 #speaker:
 A flash falls over my eyes and I see the familiar hull of my ship all around me.
 It feels like it's been years.
@@ -1149,6 +1152,8 @@ The words engraved into the metal are bareily legible.
 (...)
 (Maybe it doesn't matter.)
 (Perhaps remembering him will be enough.)
+~SET_PARAMETER("PrologueMusic", 0)
+//change to different music
 //FADE TO BLACK
 -> Teaser
 

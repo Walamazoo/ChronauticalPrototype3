@@ -1,222 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8893892473948960783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetSurprised
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetSurprised
-  Guid:
-    Data1: -219337848
-    Data2: 1131762898
-    Data3: 2019115657
-    Data4: 668700923
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1251
---- !u!114 &-8296640010847150106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-happy
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-happy
-  Guid:
-    Data1: -2044658861
-    Data2: 1079710857
-    Data3: 2032743328
-    Data4: -1534810047
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-8098841085076843366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-sad
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-sad
-  Guid:
-    Data1: 206695839
-    Data2: 1206571088
-    Data3: 221429664
-    Data4: 109241623
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-7641300588580622320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Jules/JulesHappy
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Jules/JulesHappy
-  Guid:
-    Data1: 1040168734
-    Data2: 1212479650
-    Data3: 1984193177
-    Data4: -1875641333
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 960
---- !u!114 &-7603327635597123483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/Prologue/reflective shift
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/Prologue/reflective shift
-  Guid:
-    Data1: -1630360255
-    Data2: 1136985162
-    Data3: -1824825958
-    Data4: -1493386206
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 937
---- !u!114 &-7225403086643334048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/UI/Journal open
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/UI/Journal open
-  Guid:
-    Data1: -1383792300
-    Data2: 1095533105
-    Data3: -1048589433
-    Data4: 550350651
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1436
---- !u!114 &-6919762049203459674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetHappy
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetHappy
-  Guid:
-    Data1: 2124112103
-    Data2: 1252097612
-    Data3: -2000175982
-    Data4: 2122516818
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1200
---- !u!114 &-6912360264417110945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetAngry
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetAngry
-  Guid:
-    Data1: 459856236
-    Data2: 1234909391
-    Data3: 210942621
-    Data4: -373788411
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1800
---- !u!114 &-6023387996625331761
+--- !u!114 &-8321437274029424146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,908 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1380
---- !u!114 &-5935247931202218225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Menu 1
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Menu 1
-  Guid:
-    Data1: 632105853
-    Data2: 1311647097
-    Data3: -434599236
-    Data4: -1142792155
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 236382
---- !u!114 &-5708111213333151362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PrologueTime
-  m_EditorClassIdentifier: 
-  Name: PrologueTime
-  StudioPath: parameter:/PrologueTime
-  Min: 1
-  Max: 10
-  Default: 5
-  ID:
-    data1: 3668109488
-    data2: 1880677348
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &-4409887130360431968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-farewell
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-farewell
-  Guid:
-    Data1: 1578428200
-    Data2: 1300039962
-    Data3: -1775779699
-    Data4: 1352984934
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-4146592499468517767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Darling/DarlingHappy
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Darling/DarlingHappy
-  Guid:
-    Data1: 123489533
-    Data2: 1132883461
-    Data3: 1864972733
-    Data4: -1210261864
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3000
---- !u!114 &-4060859045522867955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/UI/Journal close
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/UI/Journal close
-  Guid:
-    Data1: -1645328797
-    Data2: 1253406422
-    Data3: -164555361
-    Data4: 2121742849
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1018
---- !u!114 &-3688024803064023896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetAnnouncement
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetAnnouncement
-  Guid:
-    Data1: 1428673646
-    Data2: 1160857909
-    Data3: 128259512
-    Data4: 410471254
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3200
---- !u!114 &-3183584489734680474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638124237023840138
-  FileSizes:
-  - Name: Desktop
-    Value: 20760384
-  Exists: 1
---- !u!114 &-3063509660881048841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Jules/JulesGreeting
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Jules/JulesGreeting
-  Guid:
-    Data1: -21470391
-    Data2: 1258673414
-    Data3: 699730620
-    Data4: 286873633
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1500
---- !u!114 &-2871679734070748850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Jules/JulesFearful
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Jules/JulesFearful
-  Guid:
-    Data1: 1113289393
-    Data2: 1221621913
-    Data3: 1064972693
-    Data4: 580492700
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1720
---- !u!114 &-2555376134443752059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetGreeting
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetGreeting
-  Guid:
-    Data1: 1621072019
-    Data2: 1212848603
-    Data3: -856384615
-    Data4: -1567208882
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1100
---- !u!114 &-1654815454666013860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-surprised
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-surprised
-  Guid:
-    Data1: -1767653848
-    Data2: 1107544188
-    Data3: 2008295345
-    Data4: 324689698
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-1467308558841033203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Prologue Music
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Prologue Music
-  Guid:
-    Data1: 741668272
-    Data2: 1151044406
-    Data3: 841038235
-    Data4: -1740942269
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 966207167690018674}
-  - {fileID: 157819835543909333}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 96000
---- !u!114 &-583094999767283726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/UI/Time Travel
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/UI/Time Travel
-  Guid:
-    Data1: 2130411753
-    Data2: 1113764614
-    Data3: 457073548
-    Data4: 1211333345
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2667
---- !u!114 &-111928886858579606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/Prologue/Door open
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/Prologue/Door open
-  Guid:
-    Data1: -532202463
-    Data2: 1110486949
-    Data3: 740028584
-    Data4: -1138579331
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5525
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 7704761900061420789}
-  - {fileID: -3183584489734680474}
-  EditorEvents:
-  - {fileID: 8195735315995706889}
-  - {fileID: -5935247931202218225}
-  - {fileID: 3026598552315329117}
-  - {fileID: -1467308558841033203}
-  - {fileID: 367484350054005465}
-  - {fileID: -583094999767283726}
-  - {fileID: -7225403086643334048}
-  - {fileID: 7944462920051755570}
-  - {fileID: -4060859045522867955}
-  - {fileID: 4896296810924624196}
-  - {fileID: -111928886858579606}
-  - {fileID: -7603327635597123483}
-  - {fileID: 4984218286944734269}
-  - {fileID: 3292186107521434828}
-  - {fileID: 6315782032746582938}
-  - {fileID: -4146592499468517767}
-  - {fileID: -1654815454666013860}
-  - {fileID: -4409887130360431968}
-  - {fileID: -8296640010847150106}
-  - {fileID: 4045274818419075609}
-  - {fileID: 1904026168687657331}
-  - {fileID: 4048360487329338046}
-  - {fileID: -8098841085076843366}
-  - {fileID: 5056795901427673164}
-  - {fileID: 1336236562607291343}
-  - {fileID: 3542215075103471336}
-  - {fileID: -6912360264417110945}
-  - {fileID: -3688024803064023896}
-  - {fileID: -8893892473948960783}
-  - {fileID: 4148152053141115685}
-  - {fileID: -2555376134443752059}
-  - {fileID: 8943678803710146826}
-  - {fileID: -6919762049203459674}
-  - {fileID: -7641300588580622320}
-  - {fileID: -3063509660881048841}
-  - {fileID: 6871299844175846334}
-  - {fileID: 2946821976392117847}
-  - {fileID: 3412432288121915070}
-  - {fileID: -2871679734070748850}
-  - {fileID: 3611944101786797942}
-  - {fileID: 6201717682296596180}
-  - {fileID: -6023387996625331761}
-  EditorParameters:
-  - {fileID: 6965014497468042177}
-  - {fileID: 4907868185218273205}
-  - {fileID: -5708111213333151362}
-  MasterBanks:
-  - {fileID: -3183584489734680474}
-  StringsBanks:
-  - {fileID: 7704761900061420789}
-  cacheTime: 638124237023850111
-  cacheVersion: 131593
---- !u!114 &157819835543909333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Prologue Music/PrologueTime
-  m_EditorClassIdentifier: 
-  Name: PrologueTime
-  StudioPath: 
-  Min: 1
-  Max: 10
-  Default: 5
-  ID:
-    data1: 3668109488
-    data2: 1880677348
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &367484350054005465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/Prologue/Darling beep
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/Prologue/Darling beep
-  Guid:
-    Data1: -1901386215
-    Data2: 1263231704
-    Data3: -60204133
-    Data4: 164232114
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &966207167690018674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Prologue Music/PrologueCharacters
-  m_EditorClassIdentifier: 
-  Name: PrologueCharacters
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 845413677
-    data2: 1341718073
-  Type: 2
-  IsGlobal: 1
-  Labels:
-  - None
-  - Jules
-  - Director
-  - Shopkeep
-  - Temperance
-  - Lady
-  Exists: 1
---- !u!114 &1336236562607291343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetThinking
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetThinking
-  Guid:
-    Data1: 1021323021
-    Data2: 1320070092
-    Data3: 417751978
-    Data4: 2118828109
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 900
---- !u!114 &1904026168687657331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-thinking
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-thinking
-  Guid:
-    Data1: 2143346305
-    Data2: 1254607726
-    Data3: -1441919058
-    Data4: -1360036173
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &2946821976392117847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Jules/JulesFarewell
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Jules/JulesFarewell
-  Guid:
-    Data1: -521744007
-    Data2: 1337554580
-    Data3: -1829855319
-    Data4: -1335001740
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1320
---- !u!114 &3026598552315329117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/Ambience/Prologue Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/Ambience/Prologue Ambience
-  Guid:
-    Data1: -313426553
-    Data2: 1201361279
-    Data3: 1517753005
-    Data4: -2019646816
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 7821536103994051125}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 920000
---- !u!114 &3292186107521434828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Darling/DarlingThinking
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Darling/DarlingThinking
-  Guid:
-    Data1: -1425252986
-    Data2: 1099879163
-    Data3: 2024753820
-    Data4: 1366382250
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3200
---- !u!114 &3412432288121915070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Jules/JulesThinking
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Jules/JulesThinking
-  Guid:
-    Data1: -1843410774
-    Data2: 1205625411
-    Data3: 2085887141
-    Data4: 1305890717
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 830
---- !u!114 &3542215075103471336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetFearful
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetFearful
-  Guid:
-    Data1: 387801692
-    Data2: 1086936714
-    Data3: -695232384
-    Data4: 87260300
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1782
---- !u!114 &3611944101786797942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetElection
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetElection
-  Guid:
-    Data1: 1745704381
-    Data2: 1192319231
-    Data3: -337885035
-    Data4: 252172132
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &4045274818419075609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-angry
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-angry
-  Guid:
-    Data1: 958628199
-    Data2: 1135935857
-    Data3: 1785347769
-    Data4: 1121639344
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &4048360487329338046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-greeting
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-greeting
-  Guid:
-    Data1: 1206909843
-    Data2: 1100563165
-    Data3: 785653686
-    Data4: -1939047931
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &4148152053141115685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Bennet Crabb/BennetFarewell
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Bennet Crabb/BennetFarewell
-  Guid:
-    Data1: -1388149880
-    Data2: 1128318401
-    Data3: -2057546340
-    Data4: -607610803
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1300
---- !u!114 &4896296810924624196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound/SFX/UI/Page turn
-  m_EditorClassIdentifier: 
-  Path: event:/Sound/SFX/UI/Page turn
-  Guid:
-    Data1: -1392620845
-    Data2: 1241347868
-    Data3: -1089270085
-    Data4: 313556425
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 100
---- !u!114 &4907868185218273205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PrologueCharacters
-  m_EditorClassIdentifier: 
-  Name: PrologueCharacters
-  StudioPath: parameter:/PrologueCharacters
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 845413677
-    data2: 1341718073
-  Type: 2
-  IsGlobal: 1
-  Labels:
-  - None
-  - Jules
-  - Director
-  - Shopkeep
-  - Temperance
-  - Lady
-  Exists: 1
---- !u!114 &4984218286944734269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Darling/DarlingFrustrated
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Darling/DarlingFrustrated
-  Guid:
-    Data1: -565368734
-    Data2: 1093211455
-    Data3: -1671740266
-    Data4: -551658866
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2050
---- !u!114 &5056795901427673164
+--- !u!114 &-8213966858911250916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1171,7 +54,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &6201717682296596180
+--- !u!114 &-7685664243588881451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,24 +64,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Jules/JulesSurprised
+  m_Name: event:/Music/Menu
   m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Jules/JulesSurprised
+  Path: event:/Music/Menu
   Guid:
-    Data1: -987894553
-    Data2: 1232128573
-    Data3: -799837514
-    Data4: 1473939199
+    Data1: 1671346805
+    Data2: 1259976472
+    Data3: -1409978234
+    Data4: 1814319559
   Banks:
   - {fileID: -3183584489734680474}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 860
---- !u!114 &6315782032746582938
+  Length: 418927
+--- !u!114 &-7541668111580751235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1208,14 +91,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Darling/DarlingDisappointed
+  m_Name: event:/Character Barks/Temperance/child-farewell
   m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Darling/DarlingDisappointed
+  Path: event:/Character Barks/Temperance/child-farewell
   Guid:
-    Data1: -1323515231
-    Data2: 1113462342
-    Data3: 1349702309
-    Data4: -155760043
+    Data1: 1578428200
+    Data2: 1300039962
+    Data3: -1775779699
+    Data4: 1352984934
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 0
@@ -1224,8 +107,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2280
---- !u!114 &6871299844175846334
+  Length: 2000
+--- !u!114 &-6848649016797136906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1235,14 +118,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Jules/JulesSad
+  m_Name: event:/Character Barks/Darling/DarlingHappy
   m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Jules/JulesSad
+  Path: event:/Character Barks/Darling/DarlingHappy
   Guid:
-    Data1: 642622287
-    Data2: 1118013146
-    Data3: -1321042284
-    Data4: 1468694057
+    Data1: 123489533
+    Data2: 1132883461
+    Data3: 1864972733
+    Data4: -1210261864
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 0
@@ -1251,8 +134,89 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 900
---- !u!114 &6965014497468042177
+  Length: 3000
+--- !u!114 &-6229483177310163345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesThinking
+  Guid:
+    Data1: -1843410774
+    Data2: 1205625411
+    Data3: 2085887141
+    Data4: 1305890717
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 830
+--- !u!114 &-5221956148653350518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesHappy
+  Guid:
+    Data1: 1040168734
+    Data2: 1212479650
+    Data3: 1984193177
+    Data4: -1875641333
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 960
+--- !u!114 &-5125644055680285194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetAngry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetAngry
+  Guid:
+    Data1: 459856236
+    Data2: 1234909391
+    Data3: 210942621
+    Data4: -373788411
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
+--- !u!114 &-5119996785337854615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1262,35 +226,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PrologueAmbience
+  m_Name: parameter:/Prologue Music/PrologueTime
   m_EditorClassIdentifier: 
-  Name: PrologueAmbience
-  StudioPath: parameter:/PrologueAmbience
-  Min: 0
-  Max: 13
+  Name: PrologueTime
+  StudioPath: 
+  Min: 1
+  Max: 10
   Default: 5
   ID:
-    data1: 1375732493
-    data2: 2781776819
-  Type: 2
+    data1: 3668109488
+    data2: 1880677348
+  Type: 1
   IsGlobal: 1
-  Labels:
-  - LibHushed
-  - LibConstruction
-  - LibBusy
-  - LibEmpty
-  - LibEarthquake
-  - LibFire
-  - LabWorking
-  - LabFair
-  - LabEarthquake
-  - LabFire
-  - MarketBusy
-  - MarketHushed
-  - MarketPanic
-  - MarketEmpty
+  Labels: []
   Exists: 1
---- !u!114 &7704761900061420789
+--- !u!114 &-4637173531119214379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1299,18 +249,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Journal close
   m_EditorClassIdentifier: 
-  Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638124237023850111
-  FileSizes:
-  - Name: Desktop
-    Value: 2958
-  Exists: 1
---- !u!114 &7821536103994051125
+  Path: event:/Sound/SFX/UI/Journal close
+  Guid:
+    Data1: -1645328797
+    Data2: 1253406422
+    Data3: -164555361
+    Data4: 2121742849
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1018
+--- !u!114 &-4200116718852736757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1348,7 +305,534 @@ MonoBehaviour:
   - MarketPanic
   - MarketEmpty
   Exists: 1
---- !u!114 &7944462920051755570
+--- !u!114 &-3696548196555861732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Page turn
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/UI/Page turn
+  Guid:
+    Data1: -1392620845
+    Data2: 1241347868
+    Data3: -1089270085
+    Data4: 313556425
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 100
+--- !u!114 &-3183584489734680474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638124505442794829
+  FileSizes:
+  - Name: Desktop
+    Value: 20761088
+  Exists: 1
+--- !u!114 &-3101581901042768319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/Prologue/Door open
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/Prologue/Door open
+  Guid:
+    Data1: -532202463
+    Data2: 1110486949
+    Data3: 740028584
+    Data4: -1138579331
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5525
+--- !u!114 &-3033831328552306002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetFarewell
+  Guid:
+    Data1: -1388149880
+    Data2: 1128318401
+    Data3: -2057546340
+    Data4: -607610803
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
+--- !u!114 &-2985159662065939087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesSurprised
+  Guid:
+    Data1: -987894553
+    Data2: 1232128573
+    Data3: -799837514
+    Data4: 1473939199
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 860
+--- !u!114 &-2822792914138997571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetFearful
+  Guid:
+    Data1: 387801692
+    Data2: 1086936714
+    Data3: -695232384
+    Data4: 87260300
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1782
+--- !u!114 &-2812720523171813693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Prologue Music/PrologueCharacters
+  m_EditorClassIdentifier: 
+  Name: PrologueCharacters
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 845413677
+    data2: 1341718073
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - None
+  - Jules
+  - Director
+  - Shopkeep
+  - Temperance
+  - Lady
+  Exists: 1
+--- !u!114 &-2792809113709492575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/child-thinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/child-thinking
+  Guid:
+    Data1: 2143346305
+    Data2: 1254607726
+    Data3: -1441919058
+    Data4: -1360036173
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-2511519730040003175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PrologueCharacters
+  m_EditorClassIdentifier: 
+  Name: PrologueCharacters
+  StudioPath: parameter:/PrologueCharacters
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 845413677
+    data2: 1341718073
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - None
+  - Jules
+  - Director
+  - Shopkeep
+  - Temperance
+  - Lady
+  Exists: 1
+--- !u!114 &-2187857121991277602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/child-greeting
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/child-greeting
+  Guid:
+    Data1: 1206909843
+    Data2: 1100563165
+    Data3: 785653686
+    Data4: -1939047931
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-2056335370532471975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Darling/DarlingFrustrated
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Darling/DarlingFrustrated
+  Guid:
+    Data1: -565368734
+    Data2: 1093211455
+    Data3: -1671740266
+    Data4: -551658866
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2050
+--- !u!114 &-896085762925048794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesFearful
+  Guid:
+    Data1: 1113289393
+    Data2: 1221621913
+    Data3: 1064972693
+    Data4: 580492700
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1720
+--- !u!114 &-758011237752201735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/Prologue/reflective shift
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/Prologue/reflective shift
+  Guid:
+    Data1: -1630360255
+    Data2: 1136985162
+    Data3: -1824825958
+    Data4: -1493386206
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 937
+--- !u!114 &-677154946639833662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/child-happy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/child-happy
+  Guid:
+    Data1: -2044658861
+    Data2: 1079710857
+    Data3: 2032743328
+    Data4: -1534810047
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-597544145138719249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/Prologue/Darling beep
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/Prologue/Darling beep
+  Guid:
+    Data1: -1901386215
+    Data2: 1263231704
+    Data3: -60204133
+    Data4: 164232114
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-563865353245830848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesFarewell
+  Guid:
+    Data1: -521744007
+    Data2: 1337554580
+    Data3: -1829855319
+    Data4: -1335001740
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1320
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 7704761900061420789}
+  - {fileID: -3183584489734680474}
+  EditorEvents:
+  - {fileID: 3826924016316647418}
+  - {fileID: -597544145138719249}
+  - {fileID: -5221956148653350518}
+  - {fileID: -3101581901042768319}
+  - {fileID: 1834721117657556377}
+  - {fileID: -7541668111580751235}
+  - {fileID: -758011237752201735}
+  - {fileID: 4546518706113585642}
+  - {fileID: 4048159037302615946}
+  - {fileID: -677154946639833662}
+  - {fileID: 4579493871170650496}
+  - {fileID: -2822792914138997571}
+  - {fileID: -2056335370532471975}
+  - {fileID: -4637173531119214379}
+  - {fileID: 7403928407834625385}
+  - {fileID: -5125644055680285194}
+  - {fileID: 3951654527074145855}
+  - {fileID: -7685664243588881451}
+  - {fileID: -563865353245830848}
+  - {fileID: 1781715200769084185}
+  - {fileID: 643296593924697340}
+  - {fileID: -2792809113709492575}
+  - {fileID: 3073588881722235701}
+  - {fileID: 1946570506559529709}
+  - {fileID: 355117766915084339}
+  - {fileID: -3033831328552306002}
+  - {fileID: 4643501914764626944}
+  - {fileID: -2187857121991277602}
+  - {fileID: 5513444158595293055}
+  - {fileID: 5598150010774439516}
+  - {fileID: 4030622388000630510}
+  - {fileID: -6229483177310163345}
+  - {fileID: 8260034280264196493}
+  - {fileID: -896085762925048794}
+  - {fileID: -8213966858911250916}
+  - {fileID: 1561129966026767980}
+  - {fileID: -3696548196555861732}
+  - {fileID: 8481454871713415175}
+  - {fileID: -2985159662065939087}
+  - {fileID: 3529095647531669992}
+  - {fileID: -6848649016797136906}
+  - {fileID: -8321437274029424146}
+  EditorParameters:
+  - {fileID: -2511519730040003175}
+  - {fileID: 3363450570680894778}
+  - {fileID: 2023947534758245186}
+  - {fileID: 3882664145774764211}
+  MasterBanks:
+  - {fileID: -3183584489734680474}
+  StringsBanks:
+  - {fileID: 7704761900061420789}
+  cacheTime: 638124505442834712
+  cacheVersion: 131593
+--- !u!114 &355117766915084339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetSurprised
+  Guid:
+    Data1: -219337848
+    Data2: 1131762898
+    Data3: 2019115657
+    Data4: 668700923
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1251
+--- !u!114 &643296593924697340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1375,7 +859,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 434
---- !u!114 &8195735315995706889
+--- !u!114 &1561129966026767980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1385,14 +869,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Menu
+  m_Name: event:/Character Barks/Bennet Crabb/BennetElection
   m_EditorClassIdentifier: 
-  Path: event:/Music/Menu
+  Path: event:/Character Barks/Bennet Crabb/BennetElection
   Guid:
-    Data1: 1671346805
-    Data2: 1259976472
-    Data3: -1409978234
-    Data4: 1814319559
+    Data1: 1745704381
+    Data2: 1192319231
+    Data3: -337885035
+    Data4: 252172132
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &1781715200769084185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menu 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menu 1
+  Guid:
+    Data1: 632105853
+    Data2: 1311647097
+    Data3: -434599236
+    Data4: -1142792155
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 1
@@ -1401,8 +912,257 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 418927
---- !u!114 &8943678803710146826
+  Length: 236382
+--- !u!114 &1834721117657556377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/child-surprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/child-surprised
+  Guid:
+    Data1: -1767653848
+    Data2: 1107544188
+    Data3: 2008295345
+    Data4: 324689698
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &1946570506559529709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/Ambience/Prologue Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/Ambience/Prologue Ambience
+  Guid:
+    Data1: -313426553
+    Data2: 1201361279
+    Data3: 1517753005
+    Data4: -2019646816
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4200116718852736757}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 920000
+--- !u!114 &2023947534758245186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PrologueAmbience
+  m_EditorClassIdentifier: 
+  Name: PrologueAmbience
+  StudioPath: parameter:/PrologueAmbience
+  Min: 0
+  Max: 13
+  Default: 5
+  ID:
+    data1: 1375732493
+    data2: 2781776819
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - LibHushed
+  - LibConstruction
+  - LibBusy
+  - LibEmpty
+  - LibEarthquake
+  - LibFire
+  - LabWorking
+  - LabFair
+  - LabEarthquake
+  - LabFire
+  - MarketBusy
+  - MarketHushed
+  - MarketPanic
+  - MarketEmpty
+  Exists: 1
+--- !u!114 &3073588881722235701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Darling/DarlingThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Darling/DarlingThinking
+  Guid:
+    Data1: -1425252986
+    Data2: 1099879163
+    Data3: 2024753820
+    Data4: 1366382250
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3200
+--- !u!114 &3363450570680894778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PrologueTime
+  m_EditorClassIdentifier: 
+  Name: PrologueTime
+  StudioPath: parameter:/PrologueTime
+  Min: 1
+  Max: 10
+  Default: 5
+  ID:
+    data1: 3668109488
+    data2: 1880677348
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &3529095647531669992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Time Travel
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/UI/Time Travel
+  Guid:
+    Data1: 2130411753
+    Data2: 1113764614
+    Data3: 457073548
+    Data4: 1211333345
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2667
+--- !u!114 &3826924016316647418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetThinking
+  Guid:
+    Data1: 1021323021
+    Data2: 1320070092
+    Data3: 417751978
+    Data4: 2118828109
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 900
+--- !u!114 &3882664145774764211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PrologueMusic
+  m_EditorClassIdentifier: 
+  Name: PrologueMusic
+  StudioPath: parameter:/PrologueMusic
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 124468092
+    data2: 265481084
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &3951654527074145855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetAnnouncement
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetAnnouncement
+  Guid:
+    Data1: 1428673646
+    Data2: 1160857909
+    Data3: 128259512
+    Data4: 410471254
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3200
+--- !u!114 &4030622388000630510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1429,3 +1189,293 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2444
+--- !u!114 &4048159037302615946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesSad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesSad
+  Guid:
+    Data1: 642622287
+    Data2: 1118013146
+    Data3: -1321042284
+    Data4: 1468694057
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 900
+--- !u!114 &4546518706113585642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Jules/JulesGreeting
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Jules/JulesGreeting
+  Guid:
+    Data1: -21470391
+    Data2: 1258673414
+    Data3: 699730620
+    Data4: 286873633
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &4579493871170650496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound/SFX/UI/Journal open
+  m_EditorClassIdentifier: 
+  Path: event:/Sound/SFX/UI/Journal open
+  Guid:
+    Data1: -1383792300
+    Data2: 1095533105
+    Data3: -1048589433
+    Data4: 550350651
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1436
+--- !u!114 &4643501914764626944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetGreeting
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetGreeting
+  Guid:
+    Data1: 1621072019
+    Data2: 1212848603
+    Data3: -856384615
+    Data4: -1567208882
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1100
+--- !u!114 &5513444158595293055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/child-sad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/child-sad
+  Guid:
+    Data1: 206695839
+    Data2: 1206571088
+    Data3: 221429664
+    Data4: 109241623
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &5598150010774439516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Darling/DarlingDisappointed
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Darling/DarlingDisappointed
+  Guid:
+    Data1: -1323515231
+    Data2: 1113462342
+    Data3: 1349702309
+    Data4: -155760043
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2280
+--- !u!114 &6527101526895472154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Prologue Music/PrologueMusic
+  m_EditorClassIdentifier: 
+  Name: PrologueMusic
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 124468092
+    data2: 265481084
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &7403928407834625385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/child-angry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/child-angry
+  Guid:
+    Data1: 958628199
+    Data2: 1135935857
+    Data3: 1785347769
+    Data4: 1121639344
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &7704761900061420789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638124505442834712
+  FileSizes:
+  - Name: Desktop
+    Value: 2994
+  Exists: 1
+--- !u!114 &8260034280264196493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Prologue Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Prologue Music
+  Guid:
+    Data1: 741668272
+    Data2: 1151044406
+    Data3: 841038235
+    Data4: -1740942269
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5119996785337854615}
+  - {fileID: -2812720523171813693}
+  - {fileID: 6527101526895472154}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 96000
+--- !u!114 &8481454871713415175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Bennet Crabb/BennetHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Bennet Crabb/BennetHappy
+  Guid:
+    Data1: 2124112103
+    Data2: 1252097612
+    Data3: -2000175982
+    Data4: 2122516818
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1200

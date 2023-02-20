@@ -46,6 +46,7 @@ But, most of all, I dreamed of the star system lost.
 Atlantis.
 
 ~TOGGLE_FILTER(true)
+~SET_PARAMETER("PrologueMusic", 5)
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 #background:Library_Interior
 #sprite:Alistair_Sad 
@@ -204,6 +205,7 @@ Let's see....
 #speaker:D4RL1N6
 "We should investigate the vault further now that it is not too hot for your human hands."
 ~inTutorial = false
+~SET_PARAMETER("PrologueMusic", 0)
 -> LIBRARY
 
 
@@ -918,6 +920,7 @@ The treasure’s most likely melted by now anyways.
 ===Election===
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~ seenElection = true
+~SET_PARAMETER("PrologueMusic", 5)
 There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
 It would be impossible for me to get a word in. 
 As crowds of people close in on the board members, I push and wriggle my way closer to the front.
@@ -1032,6 +1035,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 -> DONE
 
 =JulesSpeechGood
+~SET_PARAMETER("PrologueMusic", 5)
 #speaker:Jules
 #NPC:Jules_Neutral
 "Hello everyone."
@@ -1046,6 +1050,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 "Please, come to me at any time with them and we can discuss."
 "Thank you."
 ~ seenSpeech = true
+~SET_PARAMETER("PrologueMusic", 0)
 {helpComplete == 3: -> DirectorCheck| -> END}
 
 = DirectorCheck

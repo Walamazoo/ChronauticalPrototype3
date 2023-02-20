@@ -222,9 +222,11 @@ Who should I talk to?
     #speaker:Alistair
     "Jules? Is that you?"
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesGreeting")
     #speaker:Jules
     "Alistair!"
     "Alistair, you-"
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
@@ -234,6 +236,7 @@ Who should I talk to?
     
     #speaker:Jules
     "I'm sorry, it is good to see you too..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
     +[Been out and about] 
@@ -256,6 +259,7 @@ Who should I talk to?
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
     +[Adventuring] 
@@ -279,6 +283,7 @@ Who should I talk to?
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> JULES
 
