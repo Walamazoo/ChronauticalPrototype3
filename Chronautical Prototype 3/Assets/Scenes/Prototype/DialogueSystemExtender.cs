@@ -317,4 +317,148 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
             yield return fadeInTween.WaitForCompletion();
         }
     }
+
+    protected override void OnPrepareConversationLine(DialogueEntry entry)
+    {
+        if (entry.id == 0 || !storyDict.ContainsKey(entry.conversationID))
+            {
+                // START entry or not a fake Ink conversation: Do nothing special.
+                return;
+            }
+            var activeStory = storyDict[entry.conversationID];
+            var inkConversation = (lastInkConversation != null && lastInkConversation.id == entry.conversationID) ? lastInkConversation
+                : DialogueManager.masterDatabase.GetConversation(entry.conversationID);
+            lastInkConversation = inkConversation;
+
+            if (debug) Debug.Log($"[{Time.frameCount}] PrepareLine [{entry.conversationID}:{entry.id}]");
+
+            //-----------------------------------------------------------------------------------------------------------------------------
+            // If entry id 1, continue Ink story and show next Ink content as subtitle (or player menu if always force player menu):
+            if (entry.id == 1)
+            {
+                // If jump is specified, jump there:
+                if (!string.IsNullOrEmpty(jumpToKnot))
+                {
+                    activeStory.ChoosePathString(jumpToKnot);
+                    jumpToKnot = string.Empty;
+                }
+
+                entry.outgoingLinks.Clear();
+                inkConversation.dialogueEntries.RemoveAll(x => x.id >= 2);
+
+                // If we can't continue, show choices or stop conversation: (early exit)
+                if (!activeStory.canContinue)
+                {
+                    if (activeStory.currentChoices.Count > 0)
+                    {
+                        entry.DialogueText = activeStory.currentText;
+                        AddChoices(activeStory, inkConversation, entry);
+                    }
+                    else
+                    {
+                        entry.DialogueText = string.Empty;
+                        entry.Sequence = "Continue()";
+                        return;
+                    }
+                }
+
+                // Get next story text:
+                var text = isResuming ? activeStory.currentText : activeStory.Continue();
+                Debug.Log(text);
+
+                if (isPlayerSpeaking)
+                {
+                    if (!string.IsNullOrEmpty(lastPlayerChoice) && !text.StartsWith(lastPlayerChoice))
+                    {
+                        // Player line was silent, so this is the next line:
+                        isPlayerSpeaking = false;
+                    }
+                }
+                lastPlayerChoice = string.Empty;
+                if (trimText) text = text.Trim();
+                var currentStoryPlayerID = GetCurrentPlayerID(entry.conversationID);
+                var currentStoryActorID = GetCurrentActorID(entry.conversationID);
+                entry.ActorID = isPlayerSpeaking ? currentStoryPlayerID : currentStoryActorID;
+                entry.ConversantID = isPlayerSpeaking ? currentStoryActorID : currentStoryPlayerID;
+                if (isPlayerSpeaking && appendNewlineToPlayerResponses) text += "\n";
+                isResuming = false;
+                if (actorNamesPrecedeLines) TryExtractPrependedActor(ref text, entry);
+                ProcessTags(activeStory, entry);
+                entry.DialogueText = text;
+                entry.Sequence = string.Empty;
+                var isPlayerLine = entry.ActorID == PlayerActorID || 
+                    (storyPlayerIDDict.ContainsKey(entry.conversationID) && entry.ActorID == storyPlayerIDDict[entry.conversationID]);
+                var hasChoices = activeStory.currentChoices.Count > 0;
+                var forceSingleChoiceMenu = !isPlayerSpeaking && !hasChoices && isPlayerLine && DialogueManager.displaySettings.inputSettings.alwaysForceResponseMenu;
+                isPlayerSpeaking = false;
+
+                // Prepare outgoing links:
+                if (forceSingleChoiceMenu)
+                {
+                    AddForcedResponse(activeStory, inkConversation, entry);
+                }
+                else if (hasChoices)
+                {
+                    AddChoices(activeStory, inkConversation, entry);
+                }
+                else if (activeStory.canContinue)
+                {
+                    // Add loopback entry:
+                    var loopEntry = template.CreateDialogueEntry(2, inkConversation.id, "Forced Choice");
+                    loopEntry.ActorID = currentStoryActorID;
+                    loopEntry.Sequence = "Continue()";
+                    loopEntry.outgoingLinks.Add(new Link(inkConversation.id, 2, inkConversation.id, 1));
+                    inkConversation.dialogueEntries.Add(loopEntry);
+                    entry.outgoingLinks.Add(new Link(inkConversation.id, 1, inkConversation.id, 2));
+                }
+            }
+
+            //-----------------------------------------------------------------------------------------------------------------------------
+            // If looping back from forced choice, reset entry 1:
+            else if (entry.Title == "Forced Choice")
+            {
+                if (debug) Debug.Log($"[{Time.frameCount}] Loopback from forced choice [{entry.conversationID}]");
+
+                var entry1 = inkConversation.dialogueEntries.Find(x => x.id == 1);
+                entry1.ActorID = StoryActorID; // Prevent menu.
+            }
+
+            //-----------------------------------------------------------------------------------------------------------------------------
+            // Choice entry: Choose choice.
+            else
+            {
+                var choiceIndex = Field.LookupInt(entry.fields, "Choice Index");
+
+                if (debug) Debug.Log($"[{Time.frameCount}] ChooseChoice [{entry.conversationID}:{entry.id}] {choiceIndex}");
+
+                if (!(0 <= choiceIndex && choiceIndex < activeStory.currentChoices.Count))
+                {
+                    Debug.LogWarning($"Dialogue System: Internal Ink integration error. Choice index is {choiceIndex} but story only has {activeStory.currentChoices.Count} choices.");
+                }
+                else
+                {
+                    activeStory.ChooseChoiceIndex(choiceIndex);
+                }
+
+                var entry1 = inkConversation.dialogueEntries.Find(x => x.id == 1);
+                entry1.ActorID = StoryActorID; // Prevent menu.
+                isPlayerSpeaking = true;
+                lastPlayerChoice = entry.subtitleText;
+                if (activeStory.canContinue)
+                {
+                    var savedState = activeStory.state.ToJson();
+                    activeStory.Continue();
+                    if (!string.IsNullOrEmpty(activeStory.currentText.Trim()))
+                    {
+                        //Debug.Log("<color=yellow>Keeping next line after: </color>" + lastPlayerChoice + ":[" + activeStory.currentText + "]");
+                        activeStory.state.LoadJson(savedState);
+                    }
+                    else
+                    {
+                        //Debug.Log("<color=yellow>Dumping blank line after:</color> " + lastPlayerChoice);
+                    }
+                }
+            }
+    }
+
 }
