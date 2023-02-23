@@ -187,7 +187,6 @@ Let's see....
 
 #speaker:D4RL1N6
 "It seems that even without the fire the vault can not be opened." 
-"We need a code."
 "But, we now have valuable information we can put in the journal."
 ~TOGGLE_JOURNAL(true)
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
@@ -809,7 +808,6 @@ Let's see...
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Vault
 The vault is a marvel in and of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
-In the center, I see a series of numbers: 0-9. 
 {seenPepTalk: | ->DarlingPepTalk}
     + [Pry open door] 
         I squeeze my fingers into the door frame and put my foot on the door.
@@ -822,8 +820,8 @@ In the center, I see a series of numbers: 0-9.
         The only indication that I had kicked the thing at all was the slight pain that's growing in my foot.
         Ouch.
         -> InvestigateVault
-    * {hasCode} [Input code]
-        ->Ending
+    * {hasCode} [Open vault]
+        ->EndingWarning
     //~ TOGGLE_SLIDER_INTERACTABLE(true)
     + [Do nothing] -> END 
 
@@ -832,15 +830,17 @@ In the center, I see a series of numbers: 0-9.
 ===DarlingPepTalk===
 ~seenPepTalk=true
 #speaker:Alistair
-"I've seen the vault opened before. It needs a code to be opened."
+"I've seen the vault opened before."
+"It doesn't need a code."
+"These circles here have to be turned in a specific order then it'll open."
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingThinking")
 #speaker:D4RL1N6
 #NPC:Darling_Neutral
-"Did you see what the code was?"
+"Did you see what the order was?"
 
 #speaker:Alistair
-"Well, yes, but the code is changed everytime by the Lab Director."
+"Well, yes, but the order is changed everytime by the Lab Director."
 "They take security very seriously here."
 "Unfortunately."
 
@@ -856,7 +856,6 @@ In the center, I see a series of numbers: 0-9.
 "We may also be able to gather information from exploring this place."
 "There must be other people in different places or times that could help us."
 ~TOGGLE_MINIMAP(true)
-
 
 #speaker:Alistair
 "You're right, as usual."
@@ -947,17 +946,17 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~SET_PARAMETER("PrologueCharacters", 4)
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
         #speaker:Temperance
-        #NPC:Temperance-teen_Neutral
+        #NPC:Temperance_teen_Neutral
         "Okay..."
         "Well."
         "Um, so."
         "I know I'm not very old."
-        #NPC:Temperance-teen_Confident
+        //#NPC:Temperance-teen_Confident
         "But when I was little, I wanted to work on the core."
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
         "I wanted to see all the artifacts the lab gets from all over the universe."
         "I..."
-        #NPC:Temperance-teen_Neutral
+        //#NPC:Temperance-teen_Neutral
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
         ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
@@ -1929,7 +1928,7 @@ The lab employees are silent but a few dip their heads.
 Beyond the lab's foyer, groups of people crowd into the Director's office.
 Jules' office.
 The room is packed with people from the city and lab employees, but within the center of the crowd, I find Jules.
-    + [Speak to Jules] -> Julestalk
+    * [Speak to Jules] -> Julestalk
     + [Leave for now] -> LAB
 
 =Julestalk
@@ -2109,12 +2108,29 @@ The room is packed with people from the city and lab employees, but within the c
     "Don't act so surprised!"
     "You know I've never been a stickler for rules!"
     
-    #speaker:
+    #speaker:Alistair
     Jules opens the vault with a simple turning of dials and circles.
+    The vault is open.
+    ~hasCode = true
+    ->EndingWarning
+    
+===EndingWarning===
+    #speaker:D4RL1N6
+    "Alistair."
+    "Once we get your treasure from the vault, it is best if we leave the planet."
+    "There is still much work to do."
+    
+    + [Go into vault]
+    -> EndingVault
+    + [Look around more]
+    #speaker:Alistair
+    "I want to look around more before we leave."
+    -> LIBRARY
+    
+===EndingVault===
     As the vault door opens, I rush inside.
     My cubby is just as I left it.
     Inside, I find the plaque and my notebook.
-    Jules waits at the door, but there is hardly time for goodbyes.
     
     #speaker:D4RL1N6
     #NPC:Darling
@@ -2153,7 +2169,7 @@ The words engraved into the metal are bareily legible.
 //black background
 #speaker:???
 "Ugh..."
-"My head flipping hurts..."
+"My flippin' head hurts..."
 //cuss word that's specific to Chronautical
 //background change
 
@@ -2173,7 +2189,6 @@ And the notebook.
 (But those are his things?)
 (If those are here,)
 (Then where the hell is Alistair!)
-//is hell gucci?
 //FADE TO BLACK
 ~CHANGE_SCENE("credits")
 -> END
