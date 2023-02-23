@@ -116,6 +116,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                         break;
                     case SPEAKER_TAG:
                         speakerText.GetComponent<Text>().text = tagValue;
+                        JournalManager.AddToJournalDialogueLog(tagValue + ": ");
                         break;
                     case SPRITE_TAG:
                         string[] spriteStrings = tagValue.Split('_');
@@ -318,6 +319,10 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         }
     }
 
+    private void AddToDialogueLog(string adder){
+        JournalManager.AddToJournalDialogueLog(adder);
+    }
+
     protected override void OnPrepareConversationLine(DialogueEntry entry)
     {
         if (entry.id == 0 || !storyDict.ContainsKey(entry.conversationID))
@@ -364,7 +369,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
                 // Get next story text:
                 var text = isResuming ? activeStory.currentText : activeStory.Continue();
-                Debug.Log(text);
+                var text2 = text;
 
                 if (isPlayerSpeaking)
                 {
@@ -384,6 +389,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                 isResuming = false;
                 if (actorNamesPrecedeLines) TryExtractPrependedActor(ref text, entry);
                 ProcessTags(activeStory, entry);
+                AddToDialogueLog(text2);
                 entry.DialogueText = text;
                 entry.Sequence = string.Empty;
                 var isPlayerLine = entry.ActorID == PlayerActorID || 

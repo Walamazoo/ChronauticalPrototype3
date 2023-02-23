@@ -56,6 +56,7 @@ public class JournalManager : MonoBehaviour
     //The current list the player is looking at.
     private List<JournalObject> currentList;
 
+    [SerializeField] GameObject dialogueLog;
     [SerializeField] TimeChanged hand;
     [SerializeField] GameObject highlight;
     Tween fadeInTween;
@@ -377,5 +378,9 @@ public class JournalManager : MonoBehaviour
         }
         fadeOutTween = highlight.GetComponent<Image>().DOFade(0, 0.25f);
         yield return fadeOutTween.WaitForCompletion();
+    }
+
+    public void AddToJournalDialogueLog(string adder){
+        dialogueLog.GetComponent<Text>().text += adder + System.Environment.NewLine;
     }
 }
