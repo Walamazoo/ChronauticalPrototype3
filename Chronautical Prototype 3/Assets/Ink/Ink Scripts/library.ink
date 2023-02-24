@@ -858,7 +858,7 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
 "Did you see what the order was?"
 
 #speaker:Alistair
-"Well, yes, but the order is changed everytime by the Lab Director."
+"Well, yes, but the order is changed every time by the Lab Director."
 "They take security very seriously here."
 "Unfortunately."
 
@@ -870,7 +870,7 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
-"Do not be so melodramatic. We will find a way. We must aquire your treasure."
+"Do not be so melodramatic. We will find a way. We must acquire your treasure."
 "We may also be able to gather information from exploring this place."
 "There must be other people in different places or times that could help us."
 ~TOGGLE_MINIMAP(true)
@@ -878,7 +878,7 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
 #speaker:Alistair
 "You're right, as usual."
 "We'll find a way to get my 'treasure.'"
-"If I remember corrently, the Director is usually somewhere in the lab."
+"If I remember correctly, the Director is usually somewhere in the lab."
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
 #NPC:None
 ->DONE
@@ -994,16 +994,16 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         A few board members shake their heads and cast their eyes downward.
         #NPC:Miriam_Confident
         "Yes!"
-        "Yes, you all complain and sqwauk because you know you are about to hear everything you wish not to accept as truth!"
+        "Yes, you all complain and squawk because you know you are about to hear everything you wish not to accept as truth!"
         "I will open your eyes- Listen now!"
         "The planet will not be destroyed- Elor-Nabyke will not fall!"
         #NPC:Miriam_Neutral
         "They are distracting us- lying to us!"
         "Our planet does not matter."
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
-        "And there are contraptions of extordinatary power, they are hiding them from us! To collect it for themselves and-"
+        "And there are contraptions of extraordinary power, they are hiding them from us! To collect it for themselves and-"
         #NPC:Miriam_Confident
-        The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a creshendo.
+        The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crescendo.
         ~SET_PARAMETER("PrologueCharacters", 2)
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 #speaker:Lab Director
@@ -1045,7 +1045,7 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 "I'm sure you all have many questions and concerns."
 "And I am more than happy to {addressFix: address|a dress- ah- excuse me, address} them with you."
 #NPC:Jules_Nervous
-Jules' speech was littered with uncertainities and filler words, but his heart was in the right place.
+Jules' speech was littered with uncertainties and filler words, but his heart was in the right place.
 ~ seenSpeech = true
 //~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
@@ -1056,7 +1056,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
 #speaker:Jules
 #NPC:Jules_Neutral
 "Hello everyone."
-"I'm speaking to you today to announce that I am putting forth my opposition to Bennet Crabb's relection." 
+"I'm speaking to you today to announce that I am putting forth my opposition to Bennet Crabb's reelection." 
 "If you'll give me your time, I want to speak on what I would address as Director."
 #NPC:Jules_Confident
 "These are extremely troubling times and I would call upon the lab to formally apologize to the people of Elore-Nabyke for the mistreatment of the core and the lax reaction to such a catastrophic mistake."
@@ -1110,7 +1110,7 @@ Jules' speech was littered with uncertainities and filler words, but his heart w
     {SET_PARAMETER("PrologueAmbience", 6)}
     {SET_PARAMETER("PrologueCharacters", 1)}
 - 6:    
-    ~ roomDescription = "Room is empty but lots of noise coming from the library. "
+    ~ roomDescription = "Room is empty but lots of noise is coming from the library. "
     ~SET_PARAMETER("PrologueTime", 5)
     {SET_PARAMETER("PrologueAmbience", 7)}
     {SET_PARAMETER("PrologueCharacters", 0)}
@@ -1165,7 +1165,7 @@ Let's see...
             -> END
         - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
             -> END
-        - 10:   What was once a lab has now been completely swallowed up by a monsterous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
+        - 10:   What was once a lab has now been completely swallowed up by a monstrous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
             -> END
         }
         //-> lab
@@ -1196,7 +1196,7 @@ Let's see...
             -> END
         - 9:    A layer of dust covers everything in the lab, but there was hardly anything for it to cover besides the floor and walls. I feel a quiet and deep rumbling far below me.
             -> END
-        - 10:   What was once a lab has now been completely swallowed up by a monsterous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
+        - 10:   What was once a lab has now been completely swallowed up by a monstrous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
             -> END
 }
    
@@ -1316,7 +1316,7 @@ Let's see...
 #speaker:Jules
 "Ah!"
 "Yes, the lab is hosting the planet's annual HESF!"
-"That is- the Higher Education Sceience Fair."
+"That is- the Higher Education Science Fair."
 "It's exciting, isn't it?"
 "There's so many fresh faces and new experiments all in one place."
 
@@ -1325,7 +1325,7 @@ Let's see...
 
 #speaker:Jules
 "Of course!"
-"Though I'm afriad it's a bit of a secret!"
+"Though I'm afraid it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
@@ -1340,7 +1340,7 @@ Let's see...
 "Actually, there is! Something quite new."
 "Well..."
 "Christa and I got engaged a few months ago."
-"We're not quite sure on a date yet, but do you think you'll be on planet in few months?"
+"We're not quite sure on a date yet, but do you think you'll be on planet in a few months?"
     
 #speaker:Alistair
 #sprite:Alistair_Nervous
@@ -1485,7 +1485,7 @@ Let's see...
 "..."
 "A Trade Seam to the Gold Belt opened up."
 "Trade and artifacts are moving through the lab like water."
-"Each artifact must be dated, catagorized, analyzed."
+"Each artifact must be dated, categorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
 "Begone."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -1498,7 +1498,7 @@ Let's see...
 "Any thoughts on the booths in the lab?"
 
 #speaker:Bennet
-"It is a neccesary distraction for now."
+"It is a necessary distraction for now."
 "It is a way for those interested in working for the lab in the future to show off their knowledge and ability."
 "I have seen some promising experiments on display."
 "But few will be able to reach the level of excellence we demand."
@@ -1523,11 +1523,11 @@ Let's see...
 
 #speaker:Bennet
 "Nothing that concerns you."
-"Details on the artifacts we work with are not discussed with civilans."
+"Details on the artifacts we work with are not discussed with civilians."
 
 #speaker:Alistair
 #sprite:Alistair_Embarassed
-"But I'm not quite just a civilan, aren't I?"
+"But I'm not quite just a civilian, aren't I?"
 "I worked here!"
 
 #speaker:Bennet
@@ -1554,7 +1554,7 @@ Let's see...
 
 #speaker:Bennet
 "That's preposterous."
-"You are no longer employed here and you should know that civilians are strictly prohibited access to any of the vault’s highly classified materials."
+"You are no longer employed here and you should know that civilians are strictly prohibited from accessing any of the vault’s highly classified materials."
     + [I need it]
         #speaker:Alistair
         #sprite:Alistair_Confident
@@ -1641,15 +1641,15 @@ Let's see...
 ===OtherPlanetAnnounce===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 I move closer to the crowd to listen in.
-A small projected version of the lab's Director, Bennet Crabb, stands on a pedastal in the center of the crowd.
+A small projected version of the lab's Director, Bennet Crabb, stands on a pedestal in the center of the crowd.
 
 #speaker:Bennet
 #sprite:Director_Neutral
 "In further announcements..."
 "As some of you may have already heard..."
-"Rumors have been circulating that the planet PLANETNAME has been destroyed under mysterious circumstances."
+"Rumors have been circulating that the planet Xitis has been destroyed under mysterious circumstances."
 "However, it is best not to feed into gossip until we can determine what it was that caused this disaster."
-"It is more than likely that the planet's core malfunctioned, which is a very rare occurance."
+"It is more than likely that the planet's core malfunctioned, which is a very rare occurrence."
 "There is no need to worry."
 "Indeed. Next month, the lab will host a festival..."
 -> LAB
@@ -1675,7 +1675,7 @@ Everyone is silent, just looking up.
 "It is no secret that our planet's core is a mechanical thing prone to wear and tear. 
 "We at the lab take great care in maintaining the core with the goal of extending the life of our planet by some 50 to 100 years."
 "But."
-"It was discovered this morning that the core has taken on more damages than we had anticipated."
+"It was discovered this morning that the core has taken on more damage than we had anticipated."
 "The damage to the core is... Mysterious in nature."
 "We do not know where it originated, though we are investigating."
 "It is with my..."
@@ -1764,7 +1764,7 @@ The room is packed with people from the city and lab employees, but within the c
 #speaker:Alistair
 "I'm..."
 "Well, I forgot something in the vault."
-"I left it on accident and I just really need it back."
+"I left it by accident and I just really need it back."
 "So..."
 
 #speaker:Jules
@@ -1918,7 +1918,7 @@ The room is packed with people from the city and lab employees, but within the c
 A flash falls over my eyes and I see the familiar hull of my ship all around me.
 It feels like it's been years.
 As I slump back in my ship, I hold the plaque in my lap.
-The words engraved into the metal are bareily legible.
+The words engraved into the metal are barely legible.
 (Could he even read this now?)
 (Perhaps it was never meant to be...)
 (...)
@@ -1948,7 +1948,7 @@ A figure of a tiny looking ship.
 The funky looking gadget.
 He called it an Astrolabe?
 A plaque.
-And a jounral.
+And a journal.
 
 (But those are his things.)
 (If those are here,)
@@ -2038,7 +2038,7 @@ Let's see...
             -> END
         - 8:    The marketplace is full of random and seemingly useless items. Clothes, trinkets, junk, books, pens, and all sorts of furniture.
             -> END
-        - 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
+        - 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expression as they wait to board.
             -> END
         - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shutters violently.
             -> END
@@ -2069,7 +2069,7 @@ Let's see...
             -> END
 - 8:    The marketplace is full of random and seemingly useless items. Clothes, trinkets, junk, books, pens, and all sorts of furniture.
             -> END
-- 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expresion as they wait to board.
+- 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expression as they wait to board.
             -> END
 - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shutters violently.
             -> END
@@ -2177,7 +2177,7 @@ Let's see...
 
 #speaker:Jules
 "Ah, well, I'm still doing lab work. I've been tasked with making sure artifacts that need to be examined, well, end up getting examined."
-"A lot of what's here is very intruiging."
+"A lot of what's here is very intriguing."
 
 #speaker:Alistair
 + [Any side benefits?] 
@@ -2196,7 +2196,7 @@ Let's see...
     (... So much will be lost...)
         -> Questions
     
-+ [You sure are dilligent] 
++ [You sure are diligent] 
     #speaker:Alistair
     "You're quite the hard worker, to do all this. It's always been impressive."
     
@@ -2218,13 +2218,13 @@ Let's see...
 =Okay
 #speaker:Alistair
     "Jules! Are you alright?"
-    "You seem... Not all yourself."
+    "You seem... Not yourself."
     
 #speaker:Jules
     "Alistair..."
     "It's just... The lives of all these people, laid out to be pawned off."
     "I came to see what I could possibly get for Christa and myself, but..."
-    "Seeing it all just... It's all suddenly hit me."
+    "Seeing it all just... It suddenly hit me."
     
 #speaker:Alistair
     "I'm... Sorry."
@@ -2251,9 +2251,9 @@ Let's see...
         #speaker:Alistair
         "I actually... acquired my own vessel. It's parked not too far from here."
         "The Solar Winds. A fine ship."
-    + [Still have unfinished buisiness]
+    + [Still have unfinished business]
         #speaker:Alistair
-        "I... Stil have a bit of business here. I can't leave quite yet."
+        "I... Still have a bit of business here. I can't leave quite yet."
         "It's important that I stay."
     -
     #speaker:Jules
@@ -2319,7 +2319,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "Indeed. All these foreign scholars are here to see the experiments being shown off at the lab."
-"It's the perfect oppotunity for them to scout some talent."
+"It's the perfect opportunity for them to scout some talent."
 "Also a good opportunity for the scientists to get noticed."
 
 #speaker:Alistair
@@ -2381,7 +2381,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + ["We?"]
         #speaker:Alistair
         "You said 'we,' did you mean the people of Elore-Nabyke?"
-+ [Even through the planet dying?]
++ [Even though the planet is dying?]
         #speaker:Alistair
         "The planet will be destroyed."
         "How can that be overcome?"
@@ -2390,7 +2390,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "My family lives on-planet."
-"Though I'm often out and about travelling the trade seams or here at the market, I'd do anythign it takes to provide for them."
+"Though I'm often out and about traveling the trade seams or here at the market, I'd do anything it takes to provide for them."
 "That's my priority, my loved ones."
 
 #speaker:Alistair
@@ -2413,7 +2413,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "You would think planning for the future would entail getting supplies."
 
 #speaker: Alistair
-"What would people need suplies for?"
+"What would people need supplies for?"
 
 #speaker:Uriah
 "I heard that the evacuation is going to happen in just a couple years."
@@ -2431,7 +2431,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Uriah
 "There's been talk about the lab director election."
 "People have been saying how the lab organizing the evacuation should have taken precedence."
-"Though the evacutaion was probably how the director managed to get elected. Makes a strong campaign platform."
+"Though the evacuation was probably how the director managed to get elected. Makes a strong campaign platform."
 
 #speaker:Alistair
 "I suppose those two events are linked."
@@ -2448,25 +2448,25 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Shouldn't you be preparing to leave?"
 
 #speaker:Uriah
-"I am. A number of the items on sale are my family's old possesions."
+"I am. A number of the items on sale are my family's old possessions."
 "It's a shame to see them go, but we can't take things like furniture with us."
 "I also get to keep an eye for any good things being put on sale."
 
 #speaker:Alistair
-+ [Gotten anything good?]
++ [Have anything good?]
         #speaker:Alistair
         "I see, that's a smart way of looking at it."
         "Have you managed to find anything of value?"
 + [Isn't it all just junk though?]
         #speaker:Alistair
         "Isn't everything being put up for sale for the same reason?"
-        "If they're not willing or able to bring it with, how does that change if you have it?"
+        "If they're not willing or able to bring it, how does that change if you have it?"
     -
 
 #speaker:Uriah
 "One person's trash is another one's treasure."
 "I managed to get something special. A large blanket."
-"People travelling by themselves have no need for something so bulky."
+"People traveling by themselves have no need for something so bulky."
 "But I'll be with my family."
 "I'm planning on using it for us to sit on, or to huddle together."
 "It's good quality fabric, too. It was quite a bargain!"
@@ -2520,7 +2520,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
 -> childmarketplace
 
 =Questions
@@ -2579,7 +2579,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "It's my dream."
 
 #speaker:Alistair
-(Urgh. Curses. Good going Alistair, you've runied a child's dream.)
+(Urgh. Curses. Good going Alistair, you've ruined a child's dream.)
 "Well... work hard and I'm sure you'll make it."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
@@ -2624,12 +2624,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     
 #speaker:Temperance
 #NPC:Temperance_Neutral
-"Some other kids think it's boring, but I think that reserch stuff is the best part."
+"Some other kids think it's boring, but I think that research stuff is the best part."
 "It's fun to know things."
 
 #speaker:Alistair
 "That's a wonderful mindset you have there."
-"You should check out the showcae they're having next year."
+"You should check out the showcase they're having next year."
 "Lots of interesting topics there."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-surprised")
@@ -2659,7 +2659,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "Most of her 'stories' are wild rumors."
 + [She does perform for anyone]
         #speaker:Alistair
-        "I suppose she does have certain charm in that she doesn't discriminate."
+        "I suppose she does have a certain charm in that she doesn't discriminate."
     -
     
 #speaker:Temperance
@@ -2692,20 +2692,19 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Temperance
 "The lab director?"
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
-"What does it matter anyway."
+"What does it matter anyway?"
 
 #speaker:Alistair
 (Uh oh.)
 + [Did you want someone else to win?]
         #speaker:Alistair
         "Are you unsatisfied with the election results?"
-        "Even if you are there's always..."
-        "..."
-        "There will be a next time."
+        "Even if you are, there's always next time."
+        "... I suppose."
 + [Is it about the planet?]
         #speaker:Alistair
         "Do you say that because the planet is dying?"
-        "Even if we loose the physical lab, the people will live."
+        "Even if we lose the physical lab, the people will live."
         "The research they've done will persist."
         "Knowledge doesn't die."
     -
@@ -2716,7 +2715,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
 #NPC:Temperance-teen_Distant
 "And now we just have to run away?"
-"That'll always be the the same, I've realized."
+"That'll always be the same, I've realized."
 ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
 "They're not willing to fight for it. Not willing to change."
 
@@ -2759,7 +2758,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "You-! Mmph..."
 (Breathe, Alistair. Breathe.)
 (I'm letting my friendship with Jules make this personal.)
-"I uderstand that you're upset."
+"I understand that you're upset."
 + [But there's nothing he can do]
         #speaker:Alistair
         "He's just a man."
@@ -2830,7 +2829,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Storyteller? My dear boy, I am no mere storyteller, I am a purveyor of truth!"
 #speaker:Miriam
 "They all doubt old Miriam, but they'll soon see!"
-"The dissapearance of Xitis is a sign of things to come!"
+"The disappearance of Xitis is a sign of things to come!"
 
 #speaker:Alistair
 (Ah yes... Miriam.)
@@ -2855,7 +2854,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
-+ {time == 1} [Dissapearance of Xitis?] ->Dissapearance
++ {time == 1} [Disappearance of Xitis?] ->Dissapearance
 + {time == 2} [Busy day?] ->Busy
 + {time == 3} [Can't get a crowd?] ->Crowd
 + {time == 4} [Who are you talking to?] ->Who
@@ -2867,7 +2866,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Dissapearance
 #speaker:Alistair
-"I think I overheard you say somethig about Xitis... Dissapearing?"
+"I think I overheard you say something about Xitis... Disappearing?"
 "The Director said it was destroyed."
 
 #speaker:Miriam
@@ -2875,11 +2874,11 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "You see, Xitis was not destroyed, but lost! Lost in the cosmic web!"
 "The Strings that connect our vast universe are deeper than you could ever imagine..."
 "So deep, even a planet could be swallowed up, lost in the space between spaces!"
-"Not even the most travelled trade seams are truly safe..."
+"Not even the most traveled trade seams are truly safe..."
 
 #speaker:Alistair
 (She's not... Entirely incorrect.)
-(Maybe Xitis's been thrown off by what's happening here?)
+(Maybe Xitis' been thrown off by what's happening here?)
 (Focus, Alistair. You can't chase every loose end, not now at least.)
 
 #speaker:Miriam
@@ -2906,7 +2905,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Hello there! A busy day, isn't it?"
 
 #speaker:Miriam
-"Busy! Well! Try frusterating! I can hardly think with all this racket."
+"Busy! Well!"
+"Try frustrating! I can hardly think with all this racket."
 "How am I supposed to spread truth like this? A sudden boom of products and everyone seems content to ignore the big picture..."
 
 #speaker:Alistair
@@ -2918,14 +2918,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "Who wouldn't be giddy to see it all?"
 + [I'm here, I could listen]
         #speaker:Alistair
-        "You're not entirely ingnored."
+        "You're not entirely ignored."
         "Why, here I am. Why don't you tell me a tale?"
-    //throws up error and ends script
     -
 
 #speaker:Miriam
-"Oh? Then let me tell you, these boubles are just a taste of the true wonders those lab people wish to obtain."
-"Have you every heard of the Inventor? A true miracle worker!"
+"Oh? Then let me tell you, these baubles are just a taste of the true wonders those lab people wish to obtain."
+"Have you ever heard of the Inventor? A true miracle worker!"
 "Wars have been fought over their inventions..."
 "A disk that makes machines work as if they were new!"
 "A ring entirely impervious to harm!"
@@ -2949,12 +2948,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Miriam
 "That's just it! I must warn them of the danger!"
-"Out there, travelling from planet to planet..."
-"The Sirens coud lead them Adrift!"
+"Out there, traveling from planet to planet..."
+"The Sirens could lead them Adrift!"
 
 #speaker:Alistair
 (She gets crazier and crazier by the day...)
-(But I should humor her, in the off chance something could be useful for me... Or for... Him.)
+(But I should humor her, on the off chance something could be useful for me... Or for... Him.)
 + [Sirens?]
         #speaker:Alistair
         "Sirens? You mean like alarms?"
@@ -2971,7 +2970,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "They lure others away from safety, into the horrors of a raw string!"
 "The crew hears their dying words on repeat.."
 "Before the vessel gets pushed to the edge of the universe, devoid of life."
-"Or worse, becomes a ghost ship!"
+"Or worse, it becomes a ghost ship!"
 "These dire warnings must be heeded!"
 
 #speaker:Alistair
@@ -2996,7 +2995,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 "Ah, but my boy, you're here, yes? Here, at this intersection of fate."
 "There are grand things about, grand things, oh so grand."
-"Have you heard it?"
+"Have you heard of it?"
 
 #speaker:Alistair
 (Uh oh.)
@@ -3022,7 +3021,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "We are on the cusp of a great transition."
 "The cold maw of space yawns wide for us"
 "And I can hear it. I hear it because I listen."
-"So I'm here, telling to anyone who is not so fortunate as I."
+"So I'm here, talking to anyone who is not so fortunate as I."
 
 #speaker:Alistair
 "I..."
