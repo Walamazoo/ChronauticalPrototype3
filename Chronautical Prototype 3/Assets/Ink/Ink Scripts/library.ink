@@ -128,9 +128,6 @@ It's clear even from this distance that touching the handle would burn my skin.
 "One year in the past should be sufficient for now."
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
 "Pull the slider to the year you would like to travel to, then activiate."
-//Cue Timeline will appear, handle will flash
-//The player can only select time 9
-//Minimap and journal not currently enabled
 ~TOGGLE_SLIDER(true)
 ->END
 
@@ -186,13 +183,13 @@ Let's see....
 "Perhaps now we can find a way into the vault."
 
 #speaker:D4RL1N6
+#NPC:Darling_Neutral
 "It seems that even without the fire the vault can not be opened." 
 "But, we now have valuable information we can put in the journal."
 ~TOGGLE_JOURNAL(true)
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
 ~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~TOGGLE_SLIDER(true)
-//Could include something here to make the player open the journal before continuing
 
 #speaker:D4RL1N6
 "This is the end of the safety protocol."
@@ -1671,7 +1668,7 @@ The lab employees are silent but a few dip their heads.
 -> LAB
 
 ===Congratsparty===
-#speaker:
+#speaker:Alistair
 Beyond the lab's foyer, groups of people crowd into the Director's office.
 Jules' office.
 The room is packed with people from the city and lab employees, but within the center of the crowd, I find Jules.
@@ -1680,34 +1677,33 @@ The room is packed with people from the city and lab employees, but within the c
 
 =Julestalk
 #speaker:Jules
-//NPC happy Jules
+#NPC:Jules_Neutral
 "Alistair! You're here!"
 
 #speaker:Alistair
-//sprite embarrassed/happy
+//SPRITE ALISTAIR
 "Of course, I wouldn't miss your congrats party."
 
 #speaker:Jules
-//NPC Jules happy said
+#NPC:Jules_Confident
 "Thank you, Alistair."
 "I couldn't have done it without you."
 "..."
-//NPC Jules somber
+#NPC:Jules_Neutral
 "... Regardless, enjoy yourself. There's a snack tray somewhere around here and something to drink."
 
 #speaker:Alistair
-//SPRITE embarrassed
+//SPRITE ALISTAIR
 "Well..."
     + [Time to talk?]
     #speaker:Alistair
     "I was actually wondering if you had some time to talk."
     
     #speaker:Jules
-    //NPC sus
     "Oh? What about?"
     
     #speaker:Alistair
-    //SPRITE sadd
+    //SPRITE ALISTAIR
     "Uh."
     "It might be best if we speak in private..."
     
@@ -1729,39 +1725,36 @@ The room is packed with people from the city and lab employees, but within the c
     -> Ending
 
 ===Ending===
-//SETTING BACKGROUND TO VAULT
-#NPC:Jules
+//BACKGROUND CHANGE
+#NPC:Jules_Neutral
 #speaker:Jules
 "The vault?"
 "I suppose this place is private enough."
 "What did you want to talk about Alistair?"
 
-#sprite:ALISTAIRSPRITE
+//SPRITE ALISTAIR
 #speaker:Alistair
 "Actually, it has to do with the vault..."
 
-#NPC:Jules
 #speaker:Jules
 "Oh?"
 
-#sprite:ALISTAIRSPRITE
+//SPRITE ALISTAIR
 #speaker:Alistair
 "I'm..."
 "Well, I forgot something in the vault."
 "I left it on accident and I just really need it back."
 "So..."
 
-#NPC:Jules
 #speaker:Jules
 "You want me to open the vault?"
 
-#sprite:ALISTAIRSPRITE
+//SPRITE ALISTAIR
 #speaker:Alistair
 "Yes."
 "And I know it's against protocol-"
 "But I really need what I left in there."
 
-#NPC:Jules
 #speaker:Jules
 "What did you leave behind?"
 
@@ -1779,13 +1772,12 @@ The room is packed with people from the city and lab employees, but within the c
     #speaker:Jules
     "Notes on what?"
     - 
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     #speaker:Alistair
     "..."
     "I'm sorry, Jules, I can't tell you."
     "But you just have to trust me."
 
-#speaker:Jules
 #NPC:Jules
 "..."
 "I must admit."
@@ -1795,62 +1787,63 @@ The room is packed with people from the city and lab employees, but within the c
 "You've helped me in such specific ways."
 
 #speaker:Alistair
-#sprite:ALISTAIRSPRITE
+//SPRITE ALISTAIR
 (Does he suspect me?)
     + [Don't know what you mean]
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     "I don't know what you could be talking about..."
     + [Just trust me]
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     "Please Jules."
     "Just trust me."
     -
     #speaker:Jules
-    #NPC:Jules
     "Alistair."
     "Did you help me get elected just to open the vault for you?"
     
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //ALISTAIR SPRITE
     "Wha-"
     "No, Jules, that's not it at all!"
     "I just wanted to help out my friend."
+    "Really, you deserve this."
     
     #speaker:Jules
-    #NPC:Jules
+    #NPC:Jules_Confident
     "That is a relief to hear..."
     "I am sorry for even suggesting such a thing."
+    #NPC:Jules_Neutral
     "You've just acted..."
     "A bit off since you've returned."
     "It's very troubling."
     
     + [Nothing to worry about]
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     "I am sorry Jules."
     "But I assure you, you don't have to worry about little old me."
     + [Can explain in time]
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     "I am sorry Jules."
     "Perhaps in time I can explain but..."
     "Not yet."
     -
     #speaker:Jules
-    #NPC:Jules
+    #NPC:Jules_Neutral
     "I understand..."
     "But, you know you can tell me anything Alistair?"
     "You've done me a great service, I want to be able to help you."
     "Now and in the future."
     
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     "Thank you Jules..."
     
     #speaker:Jules
-    #NPC:Jules
+    #NPC:Jules_Confident
     "Now, let me get that vault open for you."
     "Don't act so surprised!"
     "You know I've never been a stickler for rules!"
@@ -1863,6 +1856,7 @@ The room is packed with people from the city and lab employees, but within the c
     
 ===EndingWarning===
     #speaker:D4RL1N6
+    #NPC:Darling_Neutral
     "Alistair."
     "Once we get your treasure from the vault, it is best if we leave the planet."
     "There is still much work to do."
@@ -1880,26 +1874,26 @@ The room is packed with people from the city and lab employees, but within the c
     Inside, I find the plaque and my notebook.
     
     #speaker:D4RL1N6
-    #NPC:Darling
+    #NPC:Darling_Neutral
     "We should return to the ship, Alistair."
     "You can return for goodbyes in another time."
     
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     "I know..."
     "Let's return then."
     
     #speaker:D4RL1N6
-    #NPC:Darling
+    #NPC:Darling_Neutral
     "Ready?"
     
     #speaker:Alistair
-    #sprite:ALISTAIRSPRITE
+    //SPRITE ALISTAIR
     "Let's go."
 
-//visual effect?
-//background change
-#speaker:
+//visual effect? Warpy wwoowowowowww
+//background change (to black or to interior)
+#speaker:Alistair
 A flash falls over my eyes and I see the familiar hull of my ship all around me.
 It feels like it's been years.
 As I slump back in my ship, I hold the plaque in my lap.
@@ -1909,7 +1903,7 @@ The words engraved into the metal are bareily legible.
 (...)
 (Maybe it doesn't matter.)
 (Perhaps remembering him will be enough.)
-//FADE TO BLACK
+//FADE TO BLACK (if not already black)
 -> Teaser
 
 ===Teaser===
@@ -1917,29 +1911,29 @@ The words engraved into the metal are bareily legible.
 #speaker:???
 "Ugh..."
 "My flippin' head hurts..."
-//cuss word that's specific to Chronautical
-//background change
+//background change to clinic interior
 
 #speaker:Jack
 #sprite:JACKSPRITE
 "Where am I...?"
-
+My head is ringing.
+(I'm in a cot?)
 (I'm in the Doc's clinic!)
-(I guess I must have really gotten smacked hard.)
-
-Beside my cot, I see some unusual items.
-The ship mini.
+(I guess I must've gotten smacked pretty darn hard...)
+(But... wait-)
+(Where is...?)
+As I sit up, I see some unusual items beside me.
+A figure of a tiny looking ship.
 The funky looking gadget.
-The plaque.
-And the notebook.
+He called it an Astrolabe?
+A plaque.
+And a jounral.
 
-(But those are his things?)
+(But those are his things.)
 (If those are here,)
-(Then where the hell is Alistair!)
-//FADE TO BLACK
+(Then where the hell is Alistair?!)
 ~CHANGE_SCENE("credits")
 -> END
-//Send back to main menu scene?
 
 ===MARKETPLACE===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
