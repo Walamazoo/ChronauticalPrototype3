@@ -127,7 +127,7 @@ It's clear even from this distance that touching the handle would burn my skin.
 "You will have to use your Astrolabe to return to a time before all this destruction." 
 "One year in the past should be sufficient for now."
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
-"Pull the slider to the year you would like to travel to, then activiate."
+"Pull the slider to the year you would like to travel to, then activate."
 ~TOGGLE_SLIDER(true)
 ->END
 
@@ -196,7 +196,7 @@ Let's see....
 
 #speaker:Alistair
 "Thank you."
-"Now, I'd better find someway into this vault..."
+"Now, I'd better find some way into this vault..."
 
 #speaker:D4RL1N6
 "We should investigate the vault further now that it is not too hot for your human hands."
@@ -216,18 +216,18 @@ Let's see....
         ~SET_PARAMETER("PrologueAmbience", 0)
         ~SET_PARAMETER("PrologueCharacters", 0)
 - 2:    
-        ~ roomDescription = "Under rennovations and filled with security."
+        ~ roomDescription = "Under renovations and filled with security."
         ~SET_PARAMETER("PrologueTime", 1)
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
 - 3:    
-        ~ roomDescription = "Under rennovations and filled with security."
+        ~ roomDescription = "Under renovations and filled with security."
         ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
 
 - 4:    
-        ~ roomDescription = "Nearly done with rennovations but filled with security."
+        ~ roomDescription = "Nearly done with renovations but filled with security."
         ~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 1)
         ~SET_PARAMETER("PrologueCharacters", 0)
@@ -279,7 +279,7 @@ Let's see...
         - 3:    Carpenters dip their brushes into fine lacquers to coat the rows of shelves as masons repair chipped floors. The room is sectioned off and lab security stands at attention. 
                 +Investigate the vault -> Security
                 +Check elsewhere -> END
-        - 4:    A foreman paces around the renovated library carrying a clipboard, lab security following her every step. Looks like rennovations are almost done. 
+        - 4:    A foreman paces around the renovated library carrying a clipboard, lab security following her every step. Looks like renovations are almost done. 
                 +Investigate the vault -> Security
                 +Check elsewhere -> END
         - 5:     Lab employees gather around to marvel at the library that shines with newfound gusto. Even the books seem a little newer.
@@ -291,7 +291,7 @@ Let's see...
         - 7:    The library sits silently and shines coldly. Lab employees huddle like silent vultures over their books.
                 +Investigate the vault -> InvestigateVault
                 +Check elsewhere -> END
-        - 8:    The library is steeped in gloom. Shelves of books soar to the cieling in the darkness and some tomes have been abandoned where they lay open on reading desks.
+        - 8:    The library is steeped in gloom. Shelves of books soar to the ceiling in the darkness and some tomes have been abandoned where they lay open on reading desks.
                 +Investigate the vault -> InvestigateVault
                 +Check elsewhere -> END
         - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly, then hold still once more. 
@@ -414,7 +414,7 @@ Let's see...
 "Everyone will be off the planet soon..."
 "But the library reminds me of our time as interns here at the lab."
 "Remember that time?"
-"It's truely nostalgic..."
+"It's truly nostalgic..."
         ->juleslibrary
 
 =WhatUp
@@ -462,7 +462,7 @@ Let's see...
 ===vault===
 #speaker:Alistair
 #sprite:Alistair_Nervous
-"Jules, I was hoping to ask you something about the labratory's vault..."
+"Jules, I was hoping to ask you something about the laboratory's vault..."
 
 #speaker:Jules
 "The vault?"
@@ -542,6 +542,27 @@ Let's see...
 
 ===runfordirector===
 ~julesRun = true
+{time > 5: ->CannotRun|->CanRun}
+
+=CannotRun
+#speaker:Alistair
+"Jules, have you ever thought about running for Director?"
+
+#NPC:Jules_Nervous
+#speaker:Jules
+"Me- Running?"
+"No!"
+"Not to mention, there won't be another election for many years, Alistair."
+"We just had one not that long ago."
+
+#speaker:Alistair
+//SPRITE ALISTAIR
+"Ah, that's right."
+"Forget I said anything."
+(Interesting.)
+-> END
+
+=CanRun
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
@@ -612,7 +633,7 @@ Let's see...
 
 #speaker:Alistair
 "Oh- I mean, just for the lab to be more transparent with the people of the planet."
-"Right now, the lab and the people feel very seperate, don't you think?"
+"Right now, the lab and the people feel very separate, don't you think?"
 
 #speaker:Jules
 #NPC:Jules_Neutral
@@ -737,7 +758,7 @@ Let's see...
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
 -> childlibrary
 
 =Questions
@@ -2335,7 +2356,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Indeed. Last year was busier, but this is normal."
 "A good amount of business."
 "Oh! That's right!"
-"I believe I heard the library's rennovations are nearly complete, or at least they should be by next year."
+"I believe I heard the library's renovations are nearly complete, or at least they should be by next year."
 
 #speaker:Alistair
 "Perhaps I'll take a look, then."
