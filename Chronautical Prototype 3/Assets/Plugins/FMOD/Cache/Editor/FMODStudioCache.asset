@@ -305,6 +305,33 @@ MonoBehaviour:
   - MarketPanic
   - MarketEmpty
   Exists: 1
+--- !u!114 &-3731581502615630267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahAngry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahAngry
+  Guid:
+    Data1: 2121640473
+    Data2: 1166679794
+    Data3: 389106054
+    Data4: -894761332
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2360
 --- !u!114 &-3696548196555861732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +359,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 100
+--- !u!114 &-3579301601747088574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahGreeting
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahGreeting
+  Guid:
+    Data1: -1335894900
+    Data2: 1087050637
+    Data3: -1520025970
+    Data4: -250780487
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1460
 --- !u!114 &-3183584489734680474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,10 +401,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638126939367609140
+  lastModified: 638130445039175778
   FileSizes:
   - Name: Desktop
-    Value: 20761088
+    Value: 21197952
   Exists: 1
 --- !u!114 &-3101581901042768319
 MonoBehaviour:
@@ -601,6 +655,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2050
+--- !u!114 &-1890322751066618728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahSad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahSad
+  Guid:
+    Data1: 1927922868
+    Data2: 1136423912
+    Data3: -2144711780
+    Data4: -2025260922
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1740
+--- !u!114 &-1554853275275384903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahThinking
+  Guid:
+    Data1: 360220681
+    Data2: 1096652244
+    Data3: -1577178967
+    Data4: -1938623377
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2221
 --- !u!114 &-896085762925048794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,6 +736,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1720
+--- !u!114 &-821360425164762999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahFarewell
+  Guid:
+    Data1: 1448498843
+    Data2: 1114259410
+    Data3: 93580945
+    Data4: 1054419137
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2340
 --- !u!114 &-758011237752201735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,6 +929,14 @@ MonoBehaviour:
   - {fileID: 3529095647531669992}
   - {fileID: -6848649016797136906}
   - {fileID: -8321437274029424146}
+  - {fileID: -1554853275275384903}
+  - {fileID: -3731581502615630267}
+  - {fileID: -3579301601747088574}
+  - {fileID: -821360425164762999}
+  - {fileID: -1890322751066618728}
+  - {fileID: 8040061739893028947}
+  - {fileID: 6685165871554364970}
+  - {fileID: 1191885461044787889}
   EditorParameters:
   - {fileID: -2511519730040003175}
   - {fileID: 3363450570680894778}
@@ -803,7 +946,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638126939367609140
+  cacheTime: 638130445039185660
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -859,6 +1002,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 434
+--- !u!114 &1191885461044787889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahFearful
+  Guid:
+    Data1: 1383634408
+    Data2: 1122311575
+    Data3: -1665232980
+    Data4: 36187961
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1700
 --- !u!114 &1561129966026767980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,6 +1545,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &6685165871554364970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahSurprised
+  Guid:
+    Data1: 1204491725
+    Data2: 1158752515
+    Data3: -580591480
+    Data4: 1048127692
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 980
 --- !u!114 &7403928407834625385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,11 +1614,38 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638125022216285814
+  lastModified: 638130445039185660
   FileSizes:
   - Name: Desktop
-    Value: 2994
+    Value: 3340
   Exists: 1
+--- !u!114 &8040061739893028947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Uriah/UriahHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Uriah/UriahHappy
+  Guid:
+    Data1: -1559296570
+    Data2: 1216795424
+    Data3: -1658989406
+    Data4: 1855721978
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1700
 --- !u!114 &8260034280264196493
 MonoBehaviour:
   m_ObjectHideFlags: 0
