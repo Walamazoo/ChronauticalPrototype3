@@ -455,7 +455,7 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638130443616582509
+  lastModified: 638130474480164632
   FileSizes:
   - Name: Desktop
     Value: 21197952
@@ -946,7 +946,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638130443616737378
+  cacheTime: 638130474480174602
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -1641,7 +1641,7 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638130443616737378
+  lastModified: 638130474480174602
   FileSizes:
   - Name: Desktop
     Value: 3340
