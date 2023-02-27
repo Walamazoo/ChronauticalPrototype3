@@ -978,13 +978,17 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         #NPC:Uriah_Neutral
         "I can speak first."
         "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
+        ~PLAY_SOUND("event:/Character Barks/Uriah/UriahAngry")
         "But."
         "I think I also speak for the community when I say that we find the lab and the director's handling of the evacuation of the planet to be entirely abhorrent."
         "Is it not the lab itself that discovered the core's damaged state? 
+        ~PLAY_SOUND("event:/Character Barks/Uriah/UriahFearful")
         "Why have you not put more time into fixing it? Why must we abandon our home?"
         "Why is the lab still functioning as if the planet is not going to explode in a few years?"
         "I feel that the lab is entirely too closed off from the rest of the planet."
+        ~PLAY_SOUND("event:/Character Barks/Uriah/UriahAngry")
         "I pose these questions not as a way to tear down all the work you all have done, but this is our planet too that you are asking us to leave!"
+        ~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
         "I won't take much more of your time. But I don't believe that Bennet Crabb is suited to deal with this catastrophe. Perhaps it is time for someone younger, with more gumption, to lead us."
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
@@ -2381,6 +2385,7 @@ Let's see...
 "I was wondering if I could perchance peruse your wares, and perhaps be made aware of any local news, as well."
 I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahHappy")
 #speaker:Uriah
 "Why of course, sir! I carry a wide variety of wares, feel free to take a look."
 "Are you from around here?"
@@ -2395,6 +2400,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 -> shopownermarketplace
 
 =Questions
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahGreeting")
 #speaker:Uriah
 #NPC:Uriah_Neutral
 "What can I do for you today?"
@@ -2404,6 +2410,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + {time == 7} [Any good gossip?] ->Gossip
 + {time == 8} [Preparing to leave?] ->Preparing
 + [Nothing for now]
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahFarewell")
 "Come back anytime!"
 -> END
 
@@ -2430,8 +2437,10 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     -
     
 #speaker:Uriah
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahHappy")
 "Of course! The drinks of Elore-Nabyke are universe-renowned."
 "Our method of bubbling, our colors..."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
 "Perhaps you'd care for one?"
 
 #speaker:Alistair
@@ -2450,6 +2459,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Uriah
 "Indeed. Last year was busier, but this is normal."
 "A good amount of business."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahSurprised")
 "Oh! That's right!"
 "I believe I heard the library's renovations are nearly complete, or at least they should be by next year."
 
@@ -2470,6 +2480,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "Well, we've always handled whatever has come our way."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahSad")
 "It's... Heartbreaking, but we'll find a way past it."
 
 #speaker:Alistair
@@ -2504,6 +2515,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "It seems everyone here today is rather talkative."
 
 #speaker:Uriah
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahSad")
 "Indeed. Though I wish they'd do a bit more shopping."
 "You would think planning for the future would entail getting supplies."
 
@@ -2512,6 +2524,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "I heard that the evacuation is going to happen in just a couple years."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
 "Atmos vessels are nice and all, but I know I for one would like to have a travel bag."
 
 #speaker:Alistair
@@ -2525,6 +2538,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "There's been talk about the lab director election."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahFearful")
 "People have been saying how the lab organizing the evacuation should have taken precedence."
 "Though the evacuation was probably how the director managed to get elected. Makes a strong campaign platform."
 
@@ -2544,6 +2558,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "I am. A number of the items on sale are my family's old possessions."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahSad")
 "It's a shame to see them go, but we can't take things like furniture with us."
 "I also get to keep an eye for any good things being put on sale."
 
@@ -2558,12 +2573,14 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "If they're not willing or able to bring it, how does that change if you have it?"
     -
 
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
 #speaker:Uriah
 "One person's trash is another one's treasure."
 "I managed to get something special. A large blanket."
 "People traveling by themselves have no need for something so bulky."
 "But I'll be with my family."
 "I'm planning on using it for us to sit on, or to huddle together."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahHappy")
 "It's good quality fabric, too. It was quite a bargain!"
 
 #speaker:Alistair
@@ -2577,6 +2594,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 "It's Alistair."
 
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahHappy")
 #speaker:Uriah
 "Well then, have a nice day, Alistair!"
 
