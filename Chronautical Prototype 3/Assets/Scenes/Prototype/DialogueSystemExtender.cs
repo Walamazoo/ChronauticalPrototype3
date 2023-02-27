@@ -167,6 +167,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSlider(true);
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleSliderInteractable(true);
         customInkFunctions.GetComponent<CustomInkFunctions>().ToggleFilterInteractable(true);
+        customInkFunctions.GetComponent<CustomInkFunctions>().ToggleFilterVisisble(true);
         ending();
         
     }

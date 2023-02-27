@@ -60,6 +60,14 @@ public class CustomInkFunctions : MonoBehaviour
             }
         }
     }
+
+    public void ToggleFilterVisisble(bool state){
+        foreach(Transform child in environmentFilter.currentFilter.transform){
+            if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
+                spriteInteraction.ToggleVisible(state);
+            }
+        }
+    }
     
     public void PlayMusic (string music)
     {

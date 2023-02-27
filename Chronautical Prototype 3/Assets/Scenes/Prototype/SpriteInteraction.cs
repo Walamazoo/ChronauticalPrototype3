@@ -12,22 +12,38 @@ public class SpriteInteraction : MonoBehaviour
     private bool interactable= false;
 
     private Color startcolor;
+    private new SpriteRenderer renderer;
 
     public void ToggleInteraction(bool state){
         interactable = state;
     }
 
+    public void ToggleVisible(bool state){
+        renderer = GetComponent<SpriteRenderer>();
+        Color childColor = renderer.color;
+        if(state == true){
+            renderer.color = new Color(childColor.r,childColor.g,childColor.b,1f);
+        }
+        else{
+            renderer.color = new Color(childColor.r,childColor.g,childColor.b,0f);
+        }
+    }
+
     void OnMouseDown(){
         if(interactable){
             trigger.OnUse();
+            ToggleVisible(false);
         }
     }
 
     void OnMouseEnter()
     {
         startcolor = GetComponent<SpriteRenderer>().material.color;
-        GetComponent<SpriteRenderer>().material.color = Color.yellow;
-     }
+        if(interactable){
+            GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 0.64f, 0.0f);
+        }
+    }
+
     void OnMouseExit()
     {
         GetComponent<SpriteRenderer>().material.color= startcolor;
