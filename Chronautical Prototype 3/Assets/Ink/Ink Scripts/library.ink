@@ -320,12 +320,14 @@ Let's see...
     #speaker:Alistair
     "Jules? Is that you?"
     
-    #speaker: 
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesGreeting")
+    #speaker:
     Jules’s face breaks into a shocked smile, caught off guard by the familiar voice.
     
     #speaker:Jules
     "Alistair!"
     "Alistair, you-"
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
@@ -335,6 +337,7 @@ Let's see...
     
     #speaker:Jules
     "I'm sorry, it is good to see you too..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
     +[Been out and about] 
@@ -347,6 +350,7 @@ Let's see...
         #speaker:Alistair
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -358,6 +362,7 @@ Let's see...
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
 
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> juleslibrary
     +[Adventuring] 
@@ -371,6 +376,7 @@ Let's see...
         #speaker:Alistair
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -380,6 +386,7 @@ Let's see...
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> juleslibrary
 //Choices for what player can ask
@@ -409,6 +416,7 @@ Let's see...
 "Ah."
 "Well."
 "I wanted to see the library again."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
 "The planet will fold in on itself within a few years."
 "And evacuation plans are underway."
 "Everyone will be off the planet soon..."
@@ -424,6 +432,7 @@ Let's see...
 #speaker:Jules
 "So much has changed since we were interns here at the lab."
 "Many of the people we used to know have moved off planet."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 "And well, I have a family now. It's funny how having children can change your perspective."
 "... But you haven't changed much Alistair."
     + [Have changed] 
@@ -448,6 +457,7 @@ Let's see...
             #speaker:Alistair
             "I'm not sure Jules, there's..."
             
+            ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
             #speaker:Jules
             "What is it Alistair?"
             
@@ -456,6 +466,7 @@ Let's see...
             "It's complicated..."
             "I'll tell you some other time, alright?"
             
+            ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
             #speaker:Jules
             "Of course."
                 -> juleslibrary
@@ -464,6 +475,7 @@ Let's see...
 #sprite:Alistair_Nervous
 "Jules, I was hoping to ask you something about the laboratory's vault..."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
 #speaker:Jules
 "The vault?"
 
@@ -483,6 +495,7 @@ Let's see...
 #sprite:Alistair_Embarrassed
 "I only need what I left behind, he spoke as if I were planning a heist!"
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
 #speaker:Jules
 "Bennet is a stickler for rules."
 
@@ -500,6 +513,7 @@ Let's see...
 #speaker:Jules
 "Alistair, only the Director can open the vault."
 "Bennet has a device in his office to open the vault, a key."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "But, please, do not consider stealing it."
 
 #speaker:Alistair
@@ -514,10 +528,12 @@ Let's see...
 #sprite:Alistair_Sad
 "And get stuck in bureaucratic hell..."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
 #speaker:Jules
 "Oh Alistair."
 "I am sorry, I wish I could help you."
 
+~PLAY_SOUND("event:/Character Barks/Darling/DarlingDisappointed")
 #NPC:Darling_Upset
 #speaker:D4RL1N6
 "Do not give up yet Alistair."
@@ -548,6 +564,7 @@ Let's see...
 #speaker:Alistair
 "Jules, have you ever thought about running for Director?"
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 #NPC:Jules_Nervous
 #speaker:Jules
 "Me- Running?"
@@ -566,6 +583,7 @@ Let's see...
 #speaker:Alistair
 "Jules, how often does the Director election process take place?"
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
 #NPC:Jules_Neutral
 #speaker:Jules
 "That's a strange question coming from you, Alistair!"
@@ -578,6 +596,7 @@ Let's see...
 #sprite:Alistair_Confident
 "Don't you think someone should?"
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #speaker:Jules
 "Well..."
 "Yes, it would be healthy for the lab to have some change in leadership."
@@ -587,6 +606,7 @@ Let's see...
 #sprite:Alistair_Embarassed
 "I think you should run against Bennet."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
 #speaker:Jules
 #NPC:Jules_Nervous
 "What-"
@@ -599,12 +619,14 @@ Let's see...
 
 #speaker:Jules
 "Perhaps so- but..."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "Ahh... It is unlikely I would win. Even if the council does want Bennet gone."
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
 "But what's the harm in trying? The election is still quite far away."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #speaker:Jules
 "... Perhaps, I will think about it."
 "But I do doubt I would have much success."
@@ -619,6 +641,7 @@ Let's see...
 #sprite:Alistair_Suspicious
 "Jules, I was thinking, what sort of things do you think the people of Elore-Nabyke would like the Director to talk about?"
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
 #speaker:Jules
 #NPC:Jules_Nervous
 "That's... a strange question."
@@ -635,6 +658,7 @@ Let's see...
 "Oh- I mean, just for the lab to be more transparent with the people of the planet."
 "Right now, the lab and the people feel very separate, don't you think?"
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #speaker:Jules
 #NPC:Jules_Neutral
 "Hm."
@@ -669,6 +693,7 @@ Let's see...
 #sprite:Alistair_Neutral
 "Okay, good. Address. Let's practice saying it."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 #speaker:Jules
 "Alistair, are you okay? Did something happen...?"
 
@@ -701,6 +726,7 @@ Let's see...
 #speaker:Alistair
 "You know, I think you would be a good Director."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
 #speaker:Jules
 #NPC:Jules_Nervous
 "Oh?"
@@ -719,6 +745,7 @@ Let's see...
 #speaker:Alistair
 "See, this is why you'd be great as a Director."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 #speaker:Jules
 #NPC:Jules_Confident
 "Thanks Alistair."
@@ -1041,10 +1068,12 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 "I wanted to just announce that I am going to be running against Doctor Bennet Crabb."
 #NPC:Jules_Nervous
 "If you'll allow me, I wanted to speak a bit on what I would want to address if I were to become Director."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "I know I'm not very experienced, but as Director, I would want to focus on the evacuation of the planet in the coming years and to help establish the lab on a new planet."
 #NPC:Jules_Neutral
 "I'm sure you all have many questions and concerns."
 "And I am more than happy to {addressFix: address|a dress- ah- excuse me, address} them with you."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 #NPC:Jules_Nervous
 Jules' speech was littered with uncertainties and filler words, but his heart was in the right place.
 ~ seenSpeech = true
@@ -1061,6 +1090,7 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 "If you'll give me your time, I want to speak on what I would address as Director."
 #NPC:Jules_Confident
 "These are extremely troubling times and I would call upon the lab to formally apologize to the people of Elore-Nabyke for the mistreatment of the core and the lax reaction to such a catastrophic mistake."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #NPC:Jules_Neutral
 "In addition, as Director, I would work with the community to establish an evacuation of the planet as quickly and as comfortably as possible. I would also establish weekly reports to the community that the lab serves to promote full transparency in the years to come."
 "I am sure you all have many questions and concerns for me to {addressFix: address."|a dress-a-excuse me, address."}
@@ -1225,9 +1255,11 @@ Let's see...
     #sprite:Alistair_Nervous
     "Jules? Is that you?"
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesGreeting")
     #speaker:Jules
     "Alistair!"
     "Alistair, you-"
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
@@ -1238,6 +1270,7 @@ Let's see...
     
     #speaker:Jules
     "I'm sorry, it is good to see you too..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Where have you been?"
     "You were gone for so long, we were all worried something had happened."
     
@@ -1253,6 +1286,7 @@ Let's see...
         #sprite:Alistair_Nervous
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -1263,6 +1297,7 @@ Let's see...
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> juleslab
     +[Adventuring] 
@@ -1277,6 +1312,7 @@ Let's see...
         #sprite:Alistair_Nervous
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -1287,6 +1323,7 @@ Let's see...
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> juleslab
 
@@ -1303,6 +1340,7 @@ Let's see...
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
     "Let's speak again soon, Alistair."
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -1316,6 +1354,7 @@ Let's see...
 
 #speaker:Jules
 "Ah!"
+~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 "Yes, the lab is hosting the planet's annual HESF!"
 "That is- the Higher Education Science Fair."
 "It's exciting, isn't it?"
@@ -1338,6 +1377,7 @@ Let's see...
 
 #speaker:Jules
 "Oh-"
+~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 "Actually, there is! Something quite new."
 "Well..."
 "Christa and I got engaged a few months ago."
@@ -1359,10 +1399,12 @@ Let's see...
     "No, I don't think so, I'm all over the place."
     "I'm sorry."
     - 
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     #speaker:Jules
     "It's alright, Alistair."
     "I know you're busy doing..."
     "Whatever it is you do out in the universe."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Just come back and visit us more often, alright?"
     
     #speaker:Alistair
@@ -1379,6 +1421,7 @@ Let's see...
 
 #speaker:Jules
 "Yes..."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "It's very disturbing news."
 "The core can no longer sustain itself, it's only a matter of time 'till it is destroyed and the planet with it."
 
@@ -1388,7 +1431,9 @@ Let's see...
 
 #speaker:Jules
 "Five years, give or take."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "It should be enough time to evacuate, but..."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -1716,6 +1761,7 @@ The room is packed with people from the city and lab employees, but within the c
     + [Leave for now] -> LAB
 
 =Julestalk
+~PLAY_SOUND("event:/Character Barks/Jules/JulesGreeting")
 #speaker:Jules
 #NPC:Jules_Neutral
 "Alistair! You're here!"
@@ -1726,8 +1772,10 @@ The room is packed with people from the city and lab employees, but within the c
 
 #speaker:Jules
 #NPC:Jules_Confident
+~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 "Thank you, Alistair."
 "I couldn't have done it without you."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 "..."
 #NPC:Jules_Neutral
 "... Regardless, enjoy yourself. There's a snack tray somewhere around here and something to drink."
@@ -1739,6 +1787,7 @@ The room is packed with people from the city and lab employees, but within the c
     #speaker:Alistair
     "I was actually wondering if you had some time to talk."
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
     #speaker:Jules
     "Oh? What about?"
     
@@ -1747,18 +1796,21 @@ The room is packed with people from the city and lab employees, but within the c
     "Uh."
     "It might be best if we speak in private..."
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
     #speaker:Jules
     "I see."
     + [Have to talk privately]
     #speaker:Alistair
     "I have to talk to you, Jules, in private."
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
     #speaker: Jules
     "Oh? Why so mysterious?"
     
     #speaker:Alistair
     "I'll explain, but not where there are prying eyes."
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
     #speaker:Jules
     "I see."
     -
@@ -1776,6 +1828,7 @@ The room is packed with people from the city and lab employees, but within the c
 #speaker:Alistair
 "Actually, it has to do with the vault..."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
 #speaker:Jules
 "Oh?"
 
@@ -1786,6 +1839,7 @@ The room is packed with people from the city and lab employees, but within the c
 "I left it by accident and I just really need it back."
 "So..."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 #speaker:Jules
 "You want me to open the vault?"
 
@@ -1820,10 +1874,12 @@ The room is packed with people from the city and lab employees, but within the c
 
 #NPC:Jules
 "..."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 "I must admit."
 "You've been acting very suspicious lately, Alistair."
 "Beyond this..."
 "Breach of protocol,"
+~PLAY_SOUND("event:/Character Barks/Jules/JulesAngry")
 "You've helped me in such specific ways."
 
 #speaker:Alistair
@@ -1839,6 +1895,7 @@ The room is packed with people from the city and lab employees, but within the c
     "Please Jules."
     "Just trust me."
     -
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesAngry")
     #speaker:Jules
     "Alistair."
     "Did you help me get elected just to open the vault for you?"
@@ -1856,6 +1913,7 @@ The room is packed with people from the city and lab employees, but within the c
     "I am sorry for even suggesting such a thing."
     #NPC:Jules_Neutral
     "You've just acted..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
     "A bit off since you've returned."
     "It's very troubling."
     
@@ -1885,6 +1943,7 @@ The room is packed with people from the city and lab employees, but within the c
     #speaker:Jules
     #NPC:Jules_Confident
     "Now, let me get that vault open for you."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
     "Don't act so surprised!"
     "You know I've never been a stickler for rules!"
     
@@ -1895,6 +1954,7 @@ The room is packed with people from the city and lab employees, but within the c
     ->EndingWarning
     
 ===EndingWarning===
+    ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
     #speaker:D4RL1N6
     #NPC:Darling_Neutral
     "Alistair."
@@ -1923,6 +1983,7 @@ The room is packed with people from the city and lab employees, but within the c
     "I know..."
     "Let's return then."
     
+    ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
     #speaker:D4RL1N6
     #NPC:Darling_Neutral
     "Ready?"
@@ -2110,9 +2171,11 @@ Let's see...
     #speaker:Alistair
     "Jules? Is that you?"
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesGreeting")
     #speaker:Jules
     "Alistair!"
     "Alistair, you-"
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "You've been gone for so long."
     "Of all times, why are you back now?"
     
@@ -2122,6 +2185,7 @@ Let's see...
     
     #speaker:Jules
     "I'm sorry, it is good to see you too..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
     +[Been out and about] 
@@ -2134,6 +2198,7 @@ Let's see...
         #speaker:Alistair
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -2144,6 +2209,7 @@ Let's see...
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> julesmarketplace
     +[Adventuring] 
@@ -2157,6 +2223,7 @@ Let's see...
         #speaker:Alistair
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -2167,6 +2234,7 @@ Let's see...
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> julesmarketplace
 
@@ -2183,6 +2251,7 @@ Let's see...
 * {seenElection == true} [Election] ->runfordirector
 * {julesRun == true} [Ego boost!] ->speechpeptalk
 + [Nothing for now]
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
     "Let's speak again soon, Alistair."
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -2194,6 +2263,7 @@ Let's see...
 #speaker:Alistair
 "Sure is busy, huh? I would have expected you to be in the lab with all this going on."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #speaker:Jules
 "Ah, well, I'm still doing lab work. I've been tasked with making sure artifacts that need to be examined, well, end up getting examined."
 "A lot of what's here is very intriguing."
@@ -2204,6 +2274,7 @@ Let's see...
     "And I'm sure you benefit from getting the first look."
     "In case any of it makes it back to market, I mean."
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
     #speaker:Jules
     "Oh come now, you know how the lab operates. I'd be lucky if these get to see the light of day again!"
     "Probably out of my price range, too." 
@@ -2230,6 +2301,7 @@ Let's see...
     
     #speaker:Jules
     "Well then, thank you, Alistair. I wish you luck."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Now if you'll excuse me, I really must be going."
     "These boxes won't label themselves!"
         -> Questions
@@ -2241,8 +2313,10 @@ Let's see...
     
 #speaker:Jules
     "Alistair..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "It's just... The lives of all these people, laid out to be pawned off."
     "I came to see what I could possibly get for Christa and myself, but..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Seeing it all just... It suddenly hit me."
     
 #speaker:Alistair
@@ -2262,6 +2336,7 @@ Let's see...
     
 #speaker:Jules
     "Thank you. You as well."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
     "Wait... You are going to leave as well, correct? Why aren't you in line?"
     
 #speaker:Alistair
@@ -2281,6 +2356,7 @@ Let's see...
     #speaker:
     Before Jules can finish, the Atmos security personnel calls for him to be checked. Jules spares one last look at me before turning to go.
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
     #speaker:Jules
     "Please, be safe."
     
