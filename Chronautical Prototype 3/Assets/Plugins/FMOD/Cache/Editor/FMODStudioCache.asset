@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1700
+--- !u!114 &-8841488636159971277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/TeenAngry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/TeenAngry
+  Guid:
+    Data1: -1377833026
+    Data2: 1258311792
+    Data3: -2093697876
+    Data4: -541294629
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8321437274029424146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,33 +81,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1380
---- !u!114 &-8213966858911250916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-fearful
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-fearful
-  Guid:
-    Data1: 1426618806
-    Data2: 1227221646
-    Data3: -1906473296
-    Data4: 1166337245
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &-7685664243588881451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,33 +108,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 418927
---- !u!114 &-7541668111580751235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-farewell
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-farewell
-  Guid:
-    Data1: 1578428200
-    Data2: 1300039962
-    Data3: -1775779699
-    Data4: 1352984934
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &-7523111261533600831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2360
+--- !u!114 &-7508592310323154617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/ChildSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/ChildSurprised
+  Guid:
+    Data1: 1621460107
+    Data2: 1099562490
+    Data3: -827036747
+    Data4: 296765917
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
 --- !u!114 &-6848649016797136906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +348,87 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-5036990664606294421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/TeenSad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/TeenSad
+  Guid:
+    Data1: 474923823
+    Data2: 1168151556
+    Data3: 1469693343
+    Data4: 1153974921
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4868559340522774684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/TeenThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/TeenThinking
+  Guid:
+    Data1: 1313633301
+    Data2: 1233726848
+    Data3: 1236131997
+    Data4: 1080009294
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4777938634016080951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/ChildFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/ChildFarewell
+  Guid:
+    Data1: 1846540054
+    Data2: 1167758384
+    Data3: 916473019
+    Data4: 1769881835
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1460
 --- !u!114 &-4637173531119214379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +494,33 @@ MonoBehaviour:
   - MarketPanic
   - MarketEmpty
   Exists: 1
+--- !u!114 &-3812087510366312438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/ChildHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/ChildHappy
+  Guid:
+    Data1: 1363449387
+    Data2: 1221234838
+    Data3: -721335676
+    Data4: 582799917
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1160
 --- !u!114 &-3696548196555861732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,10 +563,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638130474480164632
+  lastModified: 638130650827823896
   FileSizes:
   - Name: Desktop
-    Value: 21197952
+    Value: 21579552
   Exists: 1
 --- !u!114 &-3101581901042768319
 MonoBehaviour:
@@ -598,7 +706,7 @@ MonoBehaviour:
   - Temperance
   - Lady
   Exists: 1
---- !u!114 &-2792809113709492575
+--- !u!114 &-2548927011580333032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -608,14 +716,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-thinking
+  m_Name: event:/Character Barks/Temperance/TeenHappy
   m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-thinking
+  Path: event:/Character Barks/Temperance/TeenHappy
   Guid:
-    Data1: 2143346305
-    Data2: 1254607726
-    Data3: -1441919058
-    Data4: -1360036173
+    Data1: 662951153
+    Data2: 1102720713
+    Data3: 420032160
+    Data4: 388769646
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 0
@@ -624,7 +732,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 0
 --- !u!114 &-2511519730040003175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,33 +763,6 @@ MonoBehaviour:
   - Temperance
   - Lady
   Exists: 1
---- !u!114 &-2187857121991277602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-greeting
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-greeting
-  Guid:
-    Data1: 1206909843
-    Data2: 1100563165
-    Data3: 785653686
-    Data4: -1939047931
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &-2056335370532471975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +790,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2050
+--- !u!114 &-1176309006468972317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/ChildAngry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/ChildAngry
+  Guid:
+    Data1: 1643518218
+    Data2: 1243506066
+    Data3: 1504493216
+    Data4: -1364100095
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1100
 --- !u!114 &-896085762925048794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,33 +871,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 937
---- !u!114 &-677154946639833662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-happy
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-happy
-  Guid:
-    Data1: -2044658861
-    Data2: 1079710857
-    Data3: 2032743328
-    Data4: -1534810047
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &-672283632046990307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,37 +972,29 @@ MonoBehaviour:
   - {fileID: -597544145138719249}
   - {fileID: -5221956148653350518}
   - {fileID: -3101581901042768319}
-  - {fileID: 1834721117657556377}
-  - {fileID: -7541668111580751235}
   - {fileID: -758011237752201735}
   - {fileID: 4546518706113585642}
   - {fileID: 4048159037302615946}
-  - {fileID: -677154946639833662}
   - {fileID: 4579493871170650496}
   - {fileID: -2822792914138997571}
   - {fileID: -2056335370532471975}
   - {fileID: -4637173531119214379}
-  - {fileID: 7403928407834625385}
   - {fileID: -5125644055680285194}
   - {fileID: 3951654527074145855}
   - {fileID: -7685664243588881451}
   - {fileID: -563865353245830848}
   - {fileID: 1781715200769084185}
   - {fileID: 643296593924697340}
-  - {fileID: -2792809113709492575}
   - {fileID: 3073588881722235701}
   - {fileID: 1946570506559529709}
   - {fileID: 355117766915084339}
   - {fileID: -3033831328552306002}
   - {fileID: 4643501914764626944}
-  - {fileID: -2187857121991277602}
-  - {fileID: 5513444158595293055}
   - {fileID: 5598150010774439516}
   - {fileID: 4030622388000630510}
   - {fileID: -6229483177310163345}
   - {fileID: 8260034280264196493}
   - {fileID: -896085762925048794}
-  - {fileID: -8213966858911250916}
   - {fileID: 1561129966026767980}
   - {fileID: -3696548196555861732}
   - {fileID: 8481454871713415175}
@@ -937,6 +1010,22 @@ MonoBehaviour:
   - {fileID: -9156053914311521318}
   - {fileID: -6453269226753330898}
   - {fileID: -672283632046990307}
+  - {fileID: 2893536059781226453}
+  - {fileID: -1176309006468972317}
+  - {fileID: -4868559340522774684}
+  - {fileID: 1151545631658012681}
+  - {fileID: -4777938634016080951}
+  - {fileID: -3812087510366312438}
+  - {fileID: -5036990664606294421}
+  - {fileID: 9182345111086810031}
+  - {fileID: 2685275193706255162}
+  - {fileID: 7165486863519127408}
+  - {fileID: 4718856761399745063}
+  - {fileID: -7508592310323154617}
+  - {fileID: 1054242313892913009}
+  - {fileID: 5319364441209334513}
+  - {fileID: -8841488636159971277}
+  - {fileID: -2548927011580333032}
   EditorParameters:
   - {fileID: -2511519730040003175}
   - {fileID: 3363450570680894778}
@@ -946,7 +1035,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638130474480174602
+  cacheTime: 638130650827823896
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -1002,6 +1091,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 434
+--- !u!114 &1054242313892913009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/TeenFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/TeenFearful
+  Guid:
+    Data1: 1851118224
+    Data2: 1132935636
+    Data3: 1878665396
+    Data4: -1610153131
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1151545631658012681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/ChildSad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/ChildSad
+  Guid:
+    Data1: 809341462
+    Data2: 1191793731
+    Data3: -1467745906
+    Data4: 1420884423
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2228
 --- !u!114 &1561129966026767980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,33 +1226,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 236382
---- !u!114 &1834721117657556377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-surprised
-  m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-surprised
-  Guid:
-    Data1: -1767653848
-    Data2: 1107544188
-    Data3: 2008295345
-    Data4: 324689698
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &1946570506559529709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1292,60 @@ MonoBehaviour:
   - MarketPanic
   - MarketEmpty
   Exists: 1
+--- !u!114 &2685275193706255162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/TeenSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/TeenSurprised
+  Guid:
+    Data1: -1916042407
+    Data2: 1193862076
+    Data3: 626045327
+    Data4: -502363413
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2893536059781226453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/TeenFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/TeenFarewell
+  Guid:
+    Data1: -1192389367
+    Data2: 1290759005
+    Data3: 1508655024
+    Data4: 1570092880
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3073588881722235701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,6 +1637,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1100
+--- !u!114 &4718856761399745063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/ChildFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/ChildFearful
+  Guid:
+    Data1: 1969683072
+    Data2: 1106984664
+    Data3: 1811234732
+    Data4: -1008975037
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2249
 --- !u!114 &5210752950496021232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,7 +1691,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1460
---- !u!114 &5513444158595293055
+--- !u!114 &5319364441209334513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1504,14 +1701,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-sad
+  m_Name: event:/Character Barks/Temperance/ChildGreeting
   m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-sad
+  Path: event:/Character Barks/Temperance/ChildGreeting
   Guid:
-    Data1: 206695839
-    Data2: 1206571088
-    Data3: 221429664
-    Data4: 109241623
+    Data1: -1648363604
+    Data2: 1238014217
+    Data3: -771037293
+    Data4: 1252486814
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 0
@@ -1520,7 +1717,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 1660
 --- !u!114 &5598150010774439516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,7 +1796,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &7403928407834625385
+--- !u!114 &7165486863519127408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1609,14 +1806,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character Barks/Temperance/child-angry
+  m_Name: event:/Character Barks/Temperance/TeenGreeting
   m_EditorClassIdentifier: 
-  Path: event:/Character Barks/Temperance/child-angry
+  Path: event:/Character Barks/Temperance/TeenGreeting
   Guid:
-    Data1: 958628199
-    Data2: 1135935857
-    Data3: 1785347769
-    Data4: 1121639344
+    Data1: 2078311779
+    Data2: 1271498603
+    Data3: 2118832547
+    Data4: 314731884
   Banks:
   - {fileID: -3183584489734680474}
   IsStream: 0
@@ -1625,7 +1822,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 0
 --- !u!114 &7704761900061420789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,10 +1838,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638130474480174602
+  lastModified: 638130650827823896
   FileSizes:
   - Name: Desktop
-    Value: 3340
+    Value: 3690
   Exists: 1
 --- !u!114 &8260034280264196493
 MonoBehaviour:
@@ -1703,3 +1900,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1200
+--- !u!114 &9182345111086810031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Temperance/ChildThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Temperance/ChildThinking
+  Guid:
+    Data1: 2127374908
+    Data2: 1306423703
+    Data3: 1835686808
+    Data4: 526654580
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1755

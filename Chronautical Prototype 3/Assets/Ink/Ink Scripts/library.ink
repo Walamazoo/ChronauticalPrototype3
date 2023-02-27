@@ -760,7 +760,7 @@ Let's see...
 ===childlibrary===
 //~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
-~PLAY_SOUND("event:/Character Barks/Temperance/child-greeting")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
 #NPC:Temperance_Neutral
 {metChild: -> Questions|-> meetChild}
 
@@ -781,7 +781,7 @@ Let's see...
     #speaker:Alistair
     "You... doing alright?"
     
-    ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+    ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
@@ -794,7 +794,7 @@ Let's see...
     + [Lost?] -> Lost
     + [Parents?] -> Parents
     + [Nothing for now]
-    ~PLAY_SOUND("event:/Character Barks/Temperance/child-farewell")
+    ~PLAY_SOUND("event:/Character Barks/Temperance/ChildFarewell")
     #speaker:Temperance
     "Fine."
         //~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -805,13 +805,13 @@ Let's see...
         #speaker:Temperance
         "I'm not lost."
         "I'm exploring."
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
         "Nobody is in the lab anyway. Everyone is getting ready to evacuate."
             ++ [You evacuate too?] 
                 #speaker:Alistair
                 "Shouldn't you be getting ready too?"
                 
-                ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+                ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
                 #speaker:Temperance
                 "I am ready. I have everything I need."
                 #speaker: Alistair
@@ -825,7 +825,7 @@ Let's see...
                 
                 #speaker:Temperance
                 "I've always wanted to see it."
-                ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
+                ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
                 "This is the only way I'm able to. When everyone is gone..."
                 #speaker: Alistair
             "Oh." 
@@ -836,13 +836,13 @@ Let's see...
 =Parents
 #speaker:Alistair
 "Do your parents know you're here?"
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-thinking")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/ChildThinking")
         #speaker:Temperance
         "No."
         "They're packing up everything."
         "We're leaving the planet on a big Spacer."
         "It'll be cool to be on one, but..."
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
         "I just wanna stay here..."
         -> childlibrary
 -> Questions
@@ -993,7 +993,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
         ~SET_PARAMETER("PrologueCharacters", 4)
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/TeenFearful")
         #speaker:Temperance
         #NPC:Temperance_teen_Neutral
         "Okay..."
@@ -1002,20 +1002,20 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I know I'm not very old."
         //#NPC:Temperance-teen_Confident
         "But when I was little, I wanted to work on the core."
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/TeenHappy")
         "I wanted to see all the artifacts the lab gets from all over the universe."
         "I..."
         //#NPC:Temperance-teen_Neutral
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
         "But you're not."
         "You just want to keep things as they are, the old way, and stay right here..."
         "The lab can move to a different planet and continue as things were..."
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
         "But our home is right here."
         "That's all I wanted to say."
-        ~PLAY_SOUND("event:/Character Barks/Temperance/child-farewell")
+        ~PLAY_SOUND("event:/Character Barks/Temperance/TeenFarewell")
         "Yeah..." ->OldLadyMono
     =OldLadyMono
         ~SET_PARAMETER("PrologueCharacters", 5)
@@ -2608,7 +2608,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ===childmarketplace===
 ~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 4)}
-~PLAY_SOUND("event:/Character Barks/Temperance/child-greeting")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
@@ -2629,7 +2629,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     #speaker:Alistair
     "You... doing alright?"
     
-    ~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+    ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
     #speaker:Temperance
     "I'm fine."
     ~metChild = true
@@ -2655,7 +2655,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Do you like the story? She's such a good speaker, isn't she?"
 "You shouldn't take her too seriously, though."
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildFearful")
 #speaker:Temperance
 "..."
 
@@ -2663,7 +2663,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I'm a fan of the story."
 "Though it does go against the lab's observations, it-"
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-surprised")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildSurprised")
 #speaker:Temperance
 #NPC:Temperance_Confident
 "You work in the lab, mister? Really? What's it like?"
@@ -2685,7 +2685,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         (Or at least Jules'. I doubt Crabb wants to see my face.)
     -
     
-~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildHappy")
 #speaker:Temperance
 "Wow... I wish I could work in the lab, too!"
 "They know so many cool things!"
@@ -2695,7 +2695,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 (Urgh. Curses. Good going Alistair, you've ruined a child's dream.)
 "Well... work hard and I'm sure you'll make it."
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildHappy")
 #speaker:Temperance
 "Thanks, mister! I will!"
 
@@ -2706,7 +2706,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Woah there! You seem excited."
 "There are some delicate goods being handled, don't bump into anyone."
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-fearful")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildFearful")
 #speaker:Temperance
 #NPC:Temperance_Neutral
 "Oh! Um, sorry mister."
@@ -2715,7 +2715,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "And steer especially clear of the lab workers."
 "Some of those artifacts cannot be replaced."
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-happy")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildHappy")
 #speaker:Temperance
 "Ah! But... That stuff's so cool! I wanna see it!"
 #NPC:Temperance_Confident
@@ -2745,7 +2745,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "You should check out the showcase they're having next year."
 "Lots of interesting topics there."
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-surprised")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildSurprised")
 #speaker:Temperance
 "Really? I will!"
 
@@ -2759,7 +2759,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Temperance
 #NPC:Temperance_Confident
 "I already looked at all that stuff."
-~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
 "All the lab people are busy talking to a bunch of snooty people."
 #NPC:Temperance_Neutral
 "Some man in a top hat shooed me away."
@@ -2792,7 +2792,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 "Hey, what's wrong?"
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
 #speaker:Temperance
 "Hmph. What makes you think something's wrong?"
 
@@ -2804,7 +2804,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Temperance
 "The lab director?"
-~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
 "What does it matter anyway?"
 
 #speaker:Alistair
@@ -2824,12 +2824,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     
 #speaker:Temperance
 "Yeah right."
-~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
 "Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
 #NPC:Temperance-teen_Distant
 "And now we just have to run away?"
 "That'll always be the same, I've realized."
-~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
 "They're not willing to fight for it. Not willing to change."
 
 #speaker:Alistair
@@ -2837,7 +2837,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The planet will barely last three years."
 "That's not enough time. People's lives are more important!"
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
 #speaker:Temperance
 #NPC:Temperance-teen_Neutral
 "They could at least try."
@@ -2861,7 +2861,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 "What was that?"
 
-~PLAY_SOUND("event:/Character Barks/Temperance/child-angry")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
 #speaker:Temperance
 "I said he probably deserves it!"
 "He works at the lab, but he's here just wasting time?"
@@ -2894,7 +2894,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "We should be supporting each other in times like this."
     -
     
-~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
 #speaker:Temperance
 #Child-teen_Distant
 "...But..."
@@ -2916,7 +2916,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Temperance
 "..."
 #NPC:Temperance-teen_Neutral
-~PLAY_SOUND("event:/Character Barks/Temperance/child-sad")
+~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
 "Thanks, mister. Alistair."
 
 #speaker:Alistair
