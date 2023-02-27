@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Text: 'Producer
 
 
-    Creatve Director
+    Creative Director
 
 
     Lead Programmer
@@ -1206,9 +1206,36 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Jae-Kyu Park\n\nNathan Gratzer\n\nMax \n\nWill Emigh\n\nNathan Mishler\n\nRush
-    Swope\n\nNorbert Herber\n\n\nOur friends and family who have supported us all
-    throughout development.\n\n\n\nIn memory of Mike Sellers"
+  m_Text: 'Jae-Kyu Park
+
+
+    Nathan Gratzer
+
+
+    Max Moreno
+
+
+    Will Emigh
+
+
+    Nathan
+    Mishler
+
+
+    Rush Swope
+
+
+    Norbert Herber
+
+
+
+    Our friends and family who
+    have supported us all throughout development.
+
+
+
+
+    In memory of Mike Sellers'
 --- !u!222 &1853460452
 CanvasRenderer:
   m_ObjectHideFlags: 0
