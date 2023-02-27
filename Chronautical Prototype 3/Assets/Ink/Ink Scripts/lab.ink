@@ -645,6 +645,7 @@ Who should I talk to?
 
 =meetDirector
 ~metDirector=true
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetGreeting")
 #speaker:Director
 "Hm?"
 "Greetings, I am Bennet Crabb, the Director of the laboratory."
@@ -659,6 +660,7 @@ Who should I talk to?
 #speaker:Director
 "Alistair?"
 "Hm..."
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
 "Of course. Alistair."
 "I would have preferred to have forgotten that name, but it seems you have returned."
 "Your poor disciplinary marks have most certainly not been forgotten."
@@ -668,6 +670,7 @@ Who should I talk to?
     "I'm-"
     "I'm not sure what you could be referencing, sir!"
     
+    ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSurprised")
     #speaker:Director
     "Do not play coy with me, boy."
     
@@ -680,6 +683,7 @@ Who should I talk to?
     #speaker:Director
     "You abandoned your duties, your job, here at the lab with nary a hint of warning."
     "That sort of behavior is most unprofessional."
+    ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
     "Do not think that your return to the planet will secure you a position once again."
     
     #speaker:Alistair
@@ -688,6 +692,7 @@ Who should I talk to?
     
     #speaker:Director
     "And visit you may."
+    ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
     "Now, be gone."
     "I have much work to attend to."
 ~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
@@ -703,6 +708,7 @@ Who should I talk to?
     + {time== 4} [Lots of work?] -> Notbusy
     * {seenPepTalk==true} [Enter vault?] -> VaultTalk
     + [Nothing for now]
+        ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
         #speaker:Director
         "Yes, yes, begone. I am quite busy."
         ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -724,10 +730,12 @@ Who should I talk to?
 
 #speaker:Director
 "..."
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetThinking")
 "A Trade Seam to the Gold Belt opened up."
 "Trade and artifacts are moving through the lab like water."
 "Each artifact must be dated, catagorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
 "Begone."
 ~ TOGGLE_SLIDER_INTERACTABLE(true)
 #NPC:None
@@ -741,6 +749,7 @@ Who should I talk to?
 #speaker:Director
 "It is a neccesary distraction for now."
 "It is a way for those interested in working for the lab in the future to show off their knowledge and ability."
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetHappy")
 "I have seen some promising experiments on display."
 "But few will be able to reach the level of excellence we demand."
 
@@ -756,6 +765,7 @@ Who should I talk to?
 #speaker:Alistair
 "Work in the lab seems pretty slow today."
 
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetHappy")
 #speaker:Director
 "Indeed..."
 
@@ -771,6 +781,7 @@ Who should I talk to?
 "But I'm not quite just a civilan, aren't I?"
 "I worked here!"
 
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
 #speaker:Director
 "Not that it would matter, but you were a mere intern."
 "Regardless, I refuse to break protocol for your curiosity..."
@@ -784,6 +795,7 @@ Who should I talk to?
 #sprite:Alistair_Embarassed
 "I believe I misplaced some of my belongings before I left."
 
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
 #speaker:Director
 "Out with it, what do you want?"
 
@@ -793,6 +805,7 @@ Who should I talk to?
 #sprite:Alistair_Assured
 "I really need them! You wouldn't mind just letting me into the vault for a moment would you?"
 
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSurprised")
 #speaker:Director
 "That's preposterous."
 "You are no longer employed here and you should know that civilians are strictly prohibited access to any of the vault’s highly classified materials."
@@ -842,6 +855,7 @@ Who should I talk to?
     - 
         #speaker:Director
         "Silence, I have already made my decision."
+        ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
         "Begone now, I am incredibly occupied at the moment."
         
 #speaker:Alistair
@@ -884,6 +898,7 @@ Who should I talk to?
 I move closer to the crowd to listen in.
 A small projected version of the lab's Director, Bennet Crabb, stands on a pedastal in the center of the crowd.
 
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAnnouncement")
 #speaker:Director
 #sprite:Director_Neutral
 "In further announcements..."
@@ -910,6 +925,7 @@ Everyone is silent, just looking up.
 #NPC:Director_Neutral
 "Ahem..."
 "..."
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAnnouncement")
 "I am speaking to you all, the entire planet of Elore-Nabyke, to make an announcement."
 "An announcement of a recent discovery."
 "..."
@@ -917,9 +933,11 @@ Everyone is silent, just looking up.
 "We at the lab take great care in maintaining the core with the goal of extending the life of our planet by some 50 to 100 years."
 "But."
 "It was discovered this morning that the core has taken on more damages than we had anticipated."
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSad")
 "The damage to the core is... Mysterious in nature."
 "We do not know where it originated, though we are investigating."
 "It is with my..."
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSad")
 "Deepest regret that I must announce that the planet will be inhabitable in 5 years time and subsequently destroyed."
 
 The lab employees are silent but a few dip their heads.

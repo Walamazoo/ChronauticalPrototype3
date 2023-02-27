@@ -249,6 +249,7 @@ Who should I talk to?
         #speaker:Alistair
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -273,6 +274,7 @@ Who should I talk to?
         #speaker:Alistair
         "It's... complicated."
         
+        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
         "What's his name then?"
@@ -295,6 +297,7 @@ Who should I talk to?
 + {time == 8} [You okay?] ->Okay
 + {time == 9} [Heading out?] ->Heading
 + [Nothing for now]
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
     "Let's speak again soon, Alistair."
     ~ TOGGLE_SLIDER_INTERACTABLE(true)
@@ -306,6 +309,7 @@ Who should I talk to?
 #speaker:Alistair
 "Sure is busy, huh? I would have expected you to be in the lab with all this going on."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #speaker:Jules
 "Ah, well, I'm still doing lab work. I've been tasked with making sure artifacts that need to be examined, well, end up getting examined."
 "A lot of what's here is very intruiging."
@@ -316,6 +320,7 @@ Who should I talk to?
     "And I'm sure you benefit from getting the first look."
     "In case any of it makes it back to market, I mean."
     
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
     #speaker:Jules
     "Oh come now, you know how the lab operates. I'd be lucky if these get to see the light of day again!"
     "Probably out of my price range, too." 
@@ -342,6 +347,7 @@ Who should I talk to?
     
     #speaker:Jules
     "Well then, thank you, Alistair. I wish you luck."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Now if you'll excuse me, I really must be going."
     "These boxes won't label themselves!"
         -> Questions
@@ -353,8 +359,10 @@ Who should I talk to?
     
 #speaker:Jules
     "Alistair..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "It's just... The lives of all these people, laid out to be pawned off."
     "I came to see what I could possibly get for Christa and myself, but..."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Seeing it all just... It's all suddenly hit me."
     
 #speaker:Alistair
@@ -374,6 +382,7 @@ Who should I talk to?
     
 #speaker:Jules
     "Thank you. You as well."
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
     "Wait... You are going to leave as well, correct? Why aren't you in line?"
     
 #speaker:Alistair
