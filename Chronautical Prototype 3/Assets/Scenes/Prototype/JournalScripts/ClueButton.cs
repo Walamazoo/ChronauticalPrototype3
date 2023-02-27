@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ClueButton : MonoBehaviour
 {
+    public GameObject background;
+    public GameObject year;
+    public GameObject description;
     [SerializeField] GameObject clueText;
     [SerializeField] GameObject clueHoverText;
     [SerializeField] GameObject clueHoverBackground;
@@ -15,16 +18,36 @@ public class ClueButton : MonoBehaviour
     }
 
     public void OnPointerEnter(){
-        clueText.SetActive(true);
-        clueHoverText.SetActive(true);
-        clueHoverBackground.SetActive(true);
+        background.SetActive(true);
+        if(type.ToLower() == "personclue"){
+            year.GetComponent<Text>().text = clueText.GetComponent<Text>().text;
+            year.GetComponent<Text>().color = Color.blue;
+            description.GetComponent<Text>().text = clueHoverText.GetComponent<Text>().text;
+            description.GetComponent<Text>().color = Color.blue;
+        }
+        else if(type.ToLower() == "itemclue"){
+            year.GetComponent<Text>().text = clueText.GetComponent<Text>().text;
+            year.GetComponent<Text>().color = Color.green;
+            description.GetComponent<Text>().text = clueHoverText.GetComponent<Text>().text;
+            description.GetComponent<Text>().color = Color.green;
+        }
+        else{
+            year.GetComponent<Text>().text = clueText.GetComponent<Text>().text;
+            year.GetComponent<Text>().color = Color.red;
+            description.GetComponent<Text>().text = clueHoverText.GetComponent<Text>().text;
+            description.GetComponent<Text>().color = Color.red;
+        }
         
     }
 
     public void OnPointerExit(){
-        clueText.SetActive(false);
-        clueHoverText.SetActive(false);
-        clueHoverBackground.SetActive(false);
+        background.SetActive(false);
+    }
+
+    public void SetYearBackgroundDescription(GameObject year1, GameObject background1, GameObject description1){
+        background = background1;
+        year = year1;
+        description = description1;
     }
 
     public void updateType(string typeIn){

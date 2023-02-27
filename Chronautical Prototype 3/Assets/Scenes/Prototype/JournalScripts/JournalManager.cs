@@ -321,12 +321,20 @@ public class JournalManager : MonoBehaviour
                     foreach(int variable in personClues.Keys){
                         List<TimelineClue> tempList = personClues[variable];
 
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(variable % 10).gameObject;
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(variable % 10).gameObject;
                         GameObject tempClue = Instantiate<GameObject>(personClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f), 
                             Quaternion.identity, timelineButton.transform) as GameObject;
                         tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
                         tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
                         tempClue.GetComponent<ClueButton>().updateType("PersonClue");
+                        if(variable % 10 > 0 && variable % 10 < 6){
+                            GameObject temp = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp.transform.GetChild(0).gameObject, temp, temp.transform.GetChild(1).gameObject);
+                        }
+                        else{
+                            GameObject temp2 = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp2.transform.GetChild(0).gameObject, temp2, temp2.transform.GetChild(1).gameObject);
+                        }
                         Debug.Log("Person is being called in update journal");
                         count++;
                         xCount += 15f;
@@ -337,12 +345,20 @@ public class JournalManager : MonoBehaviour
                     foreach(int variable in placeClues.Keys){
                         List<TimelineClue> tempList = placeClues[variable];
 
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(variable % 10).gameObject;
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(variable % 10).gameObject;
                         GameObject tempClue = Instantiate<GameObject>(exclamationClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f), 
                             Quaternion.identity, timelineButton.transform) as GameObject;
                         tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
                         tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
                         tempClue.GetComponent<ClueButton>().updateType("PlaceClue");
+                        if(variable % 10 > 0 && variable % 10 < 6){
+                            GameObject temp = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp.transform.GetChild(0).gameObject, temp, temp.transform.GetChild(1).gameObject);
+                        }
+                        else{
+                            GameObject temp2 = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp2.transform.GetChild(0).gameObject, temp2, temp2.transform.GetChild(1).gameObject);
+                        }
                         Debug.Log("Place is being called in update journal");
                         count++;
                         xCount += 15f;
@@ -353,13 +369,21 @@ public class JournalManager : MonoBehaviour
                     foreach(int variable in itemClues.Keys){
                         List<TimelineClue> tempList = itemClues[variable];
 
-                        GameObject timelineButton = JournalTimeline.transform.GetChild(variable % 10).gameObject;
+                        GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(variable % 10).gameObject;
                         GameObject tempClue = Instantiate<GameObject>(questionClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f),
                             Quaternion.identity, timelineButton.transform) as GameObject;
                         tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
                         tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
                         tempClue.GetComponent<ClueButton>().updateType("ItemClue");
                         Debug.Log("Item is being called in update journal");
+                        if(variable % 10 > 0 && variable % 10 < 6){
+                            GameObject temp = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp.transform.GetChild(0).gameObject, temp, temp.transform.GetChild(1).gameObject);
+                        }
+                        else{
+                            GameObject temp2 = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp2.transform.GetChild(0).gameObject, temp2, temp2.transform.GetChild(1).gameObject);
+                        }
                         count++;
                         xCount += 15f;
                     } 
