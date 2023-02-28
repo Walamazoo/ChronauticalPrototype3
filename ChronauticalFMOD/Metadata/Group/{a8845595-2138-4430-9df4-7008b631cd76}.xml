@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{a8845595-2138-4430-9df4-7008b631cd76}">
+		<property name="name">
+			<value>Barks</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{92996013-cbcc-46d6-bc03-7abe6946c4f3}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{dfb4734c-3e0d-4398-8bf3-38069f47012d}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{7c713b5b-d5b0-4371-8335-3215f113418e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{92996013-cbcc-46d6-bc03-7abe6946c4f3}">
+		<relationship name="effects">
+			<destination>{11bbd072-5ffc-476b-b17a-952f78784822}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{dfb4734c-3e0d-4398-8bf3-38069f47012d}" />
+	<object class="MixerBusFader" id="{11bbd072-5ffc-476b-b17a-952f78784822}" />
+</objects>
