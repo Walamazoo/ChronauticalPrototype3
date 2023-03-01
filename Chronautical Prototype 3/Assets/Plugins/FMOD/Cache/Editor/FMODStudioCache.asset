@@ -563,10 +563,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638130662186208353
+  lastModified: 638132322574942875
   FileSizes:
   - Name: Desktop
-    Value: 21579552
+    Value: 21581280
   Exists: 1
 --- !u!114 &-3101581901042768319
 MonoBehaviour:
@@ -1031,11 +1031,14 @@ MonoBehaviour:
   - {fileID: 3363450570680894778}
   - {fileID: 2023947534758245186}
   - {fileID: 3882664145774764211}
+  - {fileID: 5849859586278197601}
+  - {fileID: 3701327384239590129}
+  - {fileID: 6863754793641951076}
   MasterBanks:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638130662186228311
+  cacheTime: 638132322575071503
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -1424,6 +1427,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2667
+--- !u!114 &3701327384239590129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceVolume
+  m_EditorClassIdentifier: 
+  Name: AmbienceVolume
+  StudioPath: parameter:/AmbienceVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1339578402
+    data2: 548990021
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &3826924016316647418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,6 +1772,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2280
+--- !u!114 &5849859586278197601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicVolume
+  m_EditorClassIdentifier: 
+  Name: MusicVolume
+  StudioPath: parameter:/MusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2333130485
+    data2: 422598600
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6338490446041597177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,6 +1847,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &6863754793641951076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFXVolume
+  m_EditorClassIdentifier: 
+  Name: SFXVolume
+  StudioPath: parameter:/SFXVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2564068064
+    data2: 538290617
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7165486863519127408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,10 +1913,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638130662186228311
+  lastModified: 638132322575071503
   FileSizes:
   - Name: Desktop
-    Value: 3690
+    Value: 3888
   Exists: 1
 --- !u!114 &8260034280264196493
 MonoBehaviour:
