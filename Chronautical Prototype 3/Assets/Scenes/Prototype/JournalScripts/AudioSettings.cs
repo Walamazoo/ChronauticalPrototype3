@@ -10,12 +10,16 @@ public class AudioSettings : MonoBehaviour
     [SerializeField] Slider Ambience;
     [SerializeField] Slider SoundEffects;
 
+    FMOD.Studio.Bus MasterBus;
+
     // Start is called before the first frame update
     void Start()
     {
+        MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
         Music.value = 0.5f;
         Ambience.value = 0.5f;
         SoundEffects.value = 0.5f;
+        Master.value = 0.5f;
     }
 
     // Update is called once per frame
@@ -37,5 +41,9 @@ public class AudioSettings : MonoBehaviour
     public void AmbienceVolumeLevel(){
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AmbienceVolume", Ambience.value);
         Debug.Log(Ambience.value);
+    }
+
+    public void MasterVolumeLevel(){
+        MasterBus.setVolume(Master.value);
     }
 }
