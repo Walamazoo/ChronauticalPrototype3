@@ -2016,16 +2016,17 @@ The words engraved into the metal are barely legible.
 #speaker:???
 "Ugh..."
 "My flippin' head hurts..."
-//background change to clinic interior
+#background:Clinic
 
 #speaker:Jack
-#sprite:JACKSPRITE
+#sprite:Jack_Neutral
 "Where am I...?"
 My head is ringing.
 (I'm in a cot?)
 (I'm in the Doc's clinic!)
 (I guess I must've gotten smacked pretty darn hard...)
-(But... wait-)
+(But...)
+(Wait-)
 (Where is...?)
 As I sit up, I see some unusual items beside me.
 A figure of a tiny looking ship.
