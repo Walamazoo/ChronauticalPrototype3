@@ -12,7 +12,7 @@ public class MinimapOpenClose : MonoBehaviour
             minimapObject.GetComponent<RectTransform>().localPosition = new Vector2(-5f, -50f);
         }
         else{
-            minimapObject.GetComponent<RectTransform>().localPosition = new Vector2(-5f, 200f);
+            minimapObject.GetComponent<RectTransform>().localPosition = new Vector2(-5f, 500f);
         }
     }
 }

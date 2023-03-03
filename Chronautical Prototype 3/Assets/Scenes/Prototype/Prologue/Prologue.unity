@@ -1250,7 +1250,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: library
+  conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: 1
@@ -8315,7 +8315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSONAssets:
-  - {fileID: 4900000, guid: d5d90ad2119b34f469239b232256cc17, type: 3}
+  - {fileID: 4900000, guid: 536b3f276deae2c48a5ab1b7b3ac3d3a, type: 3}
   resetStateOnConversationStart: 0
   actorNamesPrecedeLines: 0
   caseSensitiveActorNames: 0
@@ -10482,7 +10482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000027656555, y: -110.41175}
+  m_AnchoredPosition: {x: 0.000027656555, y: -127}
   m_SizeDelta: {x: 115.9333, y: 44.2335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541390866
@@ -11708,7 +11708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0005866887, y: 0.0000193785}
+  m_AnchoredPosition: {x: -0.0005866887, y: 0.00001549943}
   m_SizeDelta: {x: -43.9772, y: 88}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &674876862
@@ -12319,7 +12319,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: library
+  conversation: prologue
   conversationConversant: {fileID: 715661801}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: 1
@@ -15686,8 +15686,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 200}
-  m_SizeDelta: {x: 150.6371, y: 180.9338}
+  m_AnchoredPosition: {x: -0.000012875, y: 202}
+  m_SizeDelta: {x: 150.6371, y: 212.5716}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &884363643
 MonoBehaviour:
@@ -15870,7 +15870,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: library
+  conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: 1
@@ -15979,7 +15979,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: library
+  conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
@@ -20155,7 +20155,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: library
+  conversation: prologue
   conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: 1
