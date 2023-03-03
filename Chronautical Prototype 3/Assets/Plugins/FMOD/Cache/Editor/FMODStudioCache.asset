@@ -53,7 +53,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1820
 --- !u!114 &-8321437274029424146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1380
+--- !u!114 &-7819069161619795392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamSad
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamSad
+  Guid:
+    Data1: -1956425446
+    Data2: 1111895020
+    Data3: -1855974503
+    Data4: -229945239
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1944
 --- !u!114 &-7685664243588881451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +270,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 830
+--- !u!114 &-5844204015579480974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Credits
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Credits
+  Guid:
+    Data1: -210534830
+    Data2: 1265124667
+    Data3: 2008730288
+    Data4: -1136826695
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5221956148653350518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +428,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1849
 --- !u!114 &-4868559340522774684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,7 +455,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1749
 --- !u!114 &-4777938634016080951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +510,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1018
+--- !u!114 &-4256542153786001479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamFarewell
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamFarewell
+  Guid:
+    Data1: -1719860080
+    Data2: 1246985152
+    Data3: 1585174435
+    Data4: 1562640489
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6696
 --- !u!114 &-4200116718852736757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,6 +602,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1160
+--- !u!114 &-3714469120123701231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamAngry
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamAngry
+  Guid:
+    Data1: 445862101
+    Data2: 1258093370
+    Data3: -1723710584
+    Data4: 515755774
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3751
 --- !u!114 &-3696548196555861732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,10 +671,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638132803257786416
+  lastModified: 638134457444702878
   FileSizes:
   - Name: Desktop
-    Value: 21581280
+    Value: 24544352
   Exists: 1
 --- !u!114 &-3101581901042768319
 MonoBehaviour:
@@ -732,7 +840,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1593
 --- !u!114 &-2511519730040003175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +1134,15 @@ MonoBehaviour:
   - {fileID: 5319364441209334513}
   - {fileID: -8841488636159971277}
   - {fileID: -2548927011580333032}
+  - {fileID: -7819069161619795392}
+  - {fileID: 7365328038366894608}
+  - {fileID: -5844204015579480974}
+  - {fileID: 5322590105529088379}
+  - {fileID: 4880664424954909497}
+  - {fileID: 2875739453728957026}
+  - {fileID: -4256542153786001479}
+  - {fileID: 8119512853139906739}
+  - {fileID: -3714469120123701231}
   EditorParameters:
   - {fileID: -2511519730040003175}
   - {fileID: 3363450570680894778}
@@ -1038,7 +1155,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638132803257792220
+  cacheTime: 638134457444702878
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -1120,7 +1237,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1960
 --- !u!114 &1151545631658012681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,7 +1438,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1775
+--- !u!114 &2875739453728957026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamFearful
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamFearful
+  Guid:
+    Data1: -1097051771
+    Data2: 1075203373
+    Data3: -563993213
+    Data4: -1720395654
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2447
 --- !u!114 &2893536059781226453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1492,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1922
 --- !u!114 &3073588881722235701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,6 +1835,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2249
+--- !u!114 &4880664424954909497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamSurprised
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamSurprised
+  Guid:
+    Data1: 1834265446
+    Data2: 1228682232
+    Data3: -1716031871
+    Data4: 977578681
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1857
 --- !u!114 &5210752950496021232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,6 +1916,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1660
+--- !u!114 &5322590105529088379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamHappy
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamHappy
+  Guid:
+    Data1: -1264647586
+    Data2: 1230552589
+    Data3: -2009946446
+    Data4: 91389404
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2286
 --- !u!114 &5598150010774439516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,7 +2095,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 2210
+--- !u!114 &7365328038366894608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamThinking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamThinking
+  Guid:
+    Data1: -172341424
+    Data2: 1245866004
+    Data3: 1346105231
+    Data4: -1373559699
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2768
 --- !u!114 &7704761900061420789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1913,11 +2138,38 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638132803257792220
+  lastModified: 638134457444702878
   FileSizes:
   - Name: Desktop
-    Value: 3888
+    Value: 4274
   Exists: 1
+--- !u!114 &8119512853139906739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Barks/Miriam/MiriamGreeting
+  m_EditorClassIdentifier: 
+  Path: event:/Character Barks/Miriam/MiriamGreeting
+  Guid:
+    Data1: 1816467920
+    Data2: 1084347758
+    Data3: -2054001480
+    Data4: 1458464846
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7429
 --- !u!114 &8260034280264196493
 MonoBehaviour:
   m_ObjectHideFlags: 0
