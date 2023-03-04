@@ -584,9 +584,6 @@ Let's see...
 #sprite:Alistair_Confident
 "I recall an election, perhaps we can find some leads there."
 }
-
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 #sprite:Alistair_Neutral
 -> DONE
 
@@ -666,8 +663,6 @@ Let's see...
 "But I do doubt I would have much success."
 #NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 ===topicschange===
@@ -702,8 +697,6 @@ Let's see...
 "Just some food for thought."
 ~ speechImproved = true
 ~ helpComplete = helpComplete +1
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 ===fumbleword===
@@ -752,8 +745,6 @@ Let's see...
 "Perfect."
 ~ helpComplete = helpComplete +1
 ~ addressFix = true
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 ===speechpeptalk===
@@ -785,8 +776,6 @@ Let's see...
 "Thanks Alistair."
 "I'll try my best."
 ~ helpComplete = helpComplete +1
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 
@@ -899,7 +888,6 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
         -> InvestigateVault
     * {hasCode} [Open vault]
         ->EndingWarning
-    //~ TOGGLE_SLIDER_INTERACTABLE(true)
     + [Do nothing] -> END 
 
 
@@ -965,35 +953,28 @@ He crosses his arms and just stands there.
         
             #speaker:Alistair
             "Oh! Apologies..."
-            //~ TOGGLE_SLIDER_INTERACTABLE(true)
             (He's not very talkative is he...)
             -> END
         ++[Nevermind] 
             #speaker:Alistair
             I just smile and turn on my heel.
-            //~ TOGGLE_SLIDER_INTERACTABLE(true)
             (Maybe I'll look elsewhere.)
             -> END 
     + [Nevermind] 
         I just smile and turn on my heel. 
-        //~ TOGGLE_SLIDER_INTERACTABLE(true)
         (Maybe I'll look elsewhere.) -> END 
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
 
 
 ===HotVault===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 The vault shimmers from the immense heat in the library. It's clear even from this distance that touching the handle would burn my skin.
 The treasure’s most likely melted by now anyways.
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
 -> DONE
 
 
 
 ===Election===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~ seenElection = true
 ~SET_PARAMETER("PrologueMusic", 5)
 There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
@@ -1087,9 +1068,6 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
     "And perhaps if we could have a friend in a high place we can access the vault."
 }
 ~SET_PARAMETER("PrologueCharacters", 0)
-
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =JulesSpeechCheck
@@ -1112,8 +1090,6 @@ It takes awhile for the room to quiet down despite the Director's shouting. Once
 #NPC:Jules_Nervous
 Jules' speech was littered with uncertainties and filler words, but his heart was in the right place.
 ~ seenSpeech = true
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =JulesSpeechGood
@@ -1138,8 +1114,6 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 
 = DirectorCheck
 ~ julesDirector = true
-//~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> END
 
 
@@ -1378,8 +1352,6 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
     "Let's speak again soon, Alistair."
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
-    #NPC:None
     -> DONE
 
 =fair
@@ -1402,8 +1374,6 @@ Let's see...
 "Of course!"
 "Though I'm afraid it's a bit of a secret!"
 "Perhaps I'll tell you about it another time."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =wedding
@@ -1446,8 +1416,6 @@ Let's see...
     #sprite:Alistair_Nervous
     "I-I will."
     "Thank you Jules..."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 =disaster
@@ -1471,8 +1439,6 @@ Let's see...
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 //Bennet Crabb
@@ -1551,8 +1517,6 @@ Let's see...
         ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
         #speaker:Bennet
         "Yes, yes, begone. I am quite busy."
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
-        #NPC:None
         -> END
 
 =Busylab
@@ -1577,8 +1541,6 @@ Let's see...
 "And there are hundreds of cases on my desk now, so-"
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
 "Begone."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 
@@ -1596,8 +1558,6 @@ Let's see...
 #speaker:Alistair
 #sprite:Alistair_Sad
 "I see."
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
 -> DONE
 
 
@@ -1848,7 +1808,6 @@ The room is packed with people from the city and lab employees, but within the c
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
     #speaker:Jules
     "I see."
-    -
     -> Ending
 
 ===Ending===
@@ -2290,9 +2249,6 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
     "Let's speak again soon, Alistair."
-    ~ TOGGLE_SLIDER_INTERACTABLE(true)
-    #speaker: 
-    #NPC:None
     -> DONE
 
 =Busy
@@ -2399,7 +2355,6 @@ Let's see...
     #speaker:Alistair
     "I promise, Jules. I promise."
     (And I hope this is a promise I won't break...)
-    
 -> END
 
 
