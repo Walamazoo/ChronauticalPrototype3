@@ -337,7 +337,7 @@ public class JournalManager : MonoBehaviour
                         }
                         Debug.Log("Person is being called in update journal");
                         count++;
-                        xCount += 15f;
+                        xCount += 20f;
                     }   
                     break;
                 case 1:
@@ -361,7 +361,7 @@ public class JournalManager : MonoBehaviour
                         }
                         Debug.Log("Place is being called in update journal");
                         count++;
-                        xCount += 15f;
+                        xCount += 20f;
                     } 
                     break;
                 case 2:
@@ -385,7 +385,7 @@ public class JournalManager : MonoBehaviour
                             tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp2.transform.GetChild(0).gameObject, temp2, temp2.transform.GetChild(1).gameObject);
                         }
                         count++;
-                        xCount += 15f;
+                        xCount += 20f;
                     } 
                     break;
             }
