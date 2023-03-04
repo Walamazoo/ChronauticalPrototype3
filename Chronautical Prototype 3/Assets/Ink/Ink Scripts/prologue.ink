@@ -128,7 +128,6 @@ It's clear even from this distance that touching the handle would burn my skin.
 "One year in the past should be sufficient for now."
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
 "Pull the slider to the year you would like to travel to, then activate."
-~TOGGLE_SLIDER(true)
 ->END
 
 
@@ -832,8 +831,6 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildFarewell")
     #speaker:Temperance
     "Fine."
-        //~ TOGGLE_SLIDER_INTERACTABLE(true)
-        #NPC:None
         -> END
 =Lost
 "Are you... lost? I don't think children are supposed to be in the lab." #speaker:Alistair
@@ -942,8 +939,6 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
 "You're right, as usual."
 "If I remember correctly, the Director is usually somewhere in the lab."
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
-#NPC:None
-
 ->DONE
 
 
