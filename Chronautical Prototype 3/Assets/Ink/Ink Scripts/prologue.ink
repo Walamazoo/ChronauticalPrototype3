@@ -30,7 +30,6 @@ INCLUDE Globals.ink
 //Content knots start
 ===beginning===
 //-> library
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~PLAY_MUSIC("event:/Music/Prologue Music")
 ~PLAY_AMBIENCE("event:/Sound/Ambience/Prologue Ambience")
 ~ time = 10
@@ -206,7 +205,7 @@ Let's see....
 
 ===LIBRARY===
 //Tutorial Check
-{inTutorial: -> Tutorial| }
+{inTutorial: -> Tutorial}
 //Room Description for Journal
 { time:
 - 1:    
@@ -342,7 +341,6 @@ Let's see...
 
 //Jules Ambrose
 ===juleslibrary===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 1)
 #NPC:Jules_Neutral
 {inTutorial: -> TutorialScold| }
@@ -437,7 +435,6 @@ Let's see...
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     #speaker:Jules
-    //~ TOGGLE_SLIDER_INTERACTABLE(true)
     "Let's speak again soon, Alistair."
     -> END
 
@@ -781,7 +778,6 @@ Let's see...
 
 //Temperance Ward
 ===childlibrary===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 ~SET_PARAMETER("PrologueCharacters", 4)
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
 #NPC:Temperance_Neutral
@@ -871,7 +867,6 @@ Let's see...
 
 //Quest/Plot Specific Knots
 ===InvestigateVault===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Vault
 The vault is a marvel in and of itself. It's a mass of bronze and golden circles that intersect messily like a bird's nest.
 {seenPepTalk: | ->DarlingPepTalk}
@@ -931,7 +926,6 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
 
 
 ===Security===
-//~ TOGGLE_SLIDER_INTERACTABLE(false)
 #speaker:Alistair
 As I approach the vault, I see one of the vault's security personnel promptly slide over and put himself directly into my path.
 He crosses his arms and just stands there.
@@ -1119,7 +1113,6 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 
 //Lab Section Starts
 ===LAB===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Lab_Interior
 #sprite:Alistair_Neutral
 //Room Description for Journal
@@ -1251,7 +1244,6 @@ Let's see...
 
 //Jules Ambrose
 ===juleslab===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
 {inTutorial: -> TutorialScold| }
@@ -1443,7 +1435,6 @@ Let's see...
 
 //Bennet Crabb
 ===directorlab===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 2)}
 #NPC:Bennet_Neutral
 {metDirector: -> Questions|-> meetDirector}
@@ -1501,9 +1492,7 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
     "Now, begone."
     "I have much work to attend to."
-~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
-~ TOGGLE_SLIDER_INTERACTABLE(true)
-#NPC:None
+~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot."))
 -> directorlab
 
 =Questions
@@ -1585,7 +1574,6 @@ Let's see...
 #speaker:Bennet
 "Not that it would matter, but you were a mere intern."
 "Regardless, I refuse to break protocol for your curiosity..."
-#NPC:None
 -> DONE
 
 =VaultTalk
@@ -1694,7 +1682,6 @@ Let's see...
 
 //Quest/Plot Knots
 ===OtherPlanetAnnounce===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 I move closer to the crowd to listen in.
 A small projected version of the lab's Director, Bennet Crabb, stands on a pedestal in the center of the crowd.
 
@@ -1717,7 +1704,6 @@ I remember doing the same when I was a fresh intern.
 -> LAB
 
 ===AnnounceDestruction===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 The Director's projected form stands tall over the group of people around him.
 Everyone is silent, just looking up.
 
@@ -2032,7 +2018,6 @@ And a journal.
 -> END
 
 ===MARKETPLACE===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 #background:Marketplace
 #sprite:Alistair_Neutral
 //Room Description for Journal
@@ -2119,7 +2104,6 @@ Let's see...
             -> END
         }
         //-> marketplace
-        ~ TOGGLE_SLIDER_INTERACTABLE(true)
         -> END
         
 
@@ -2155,7 +2139,6 @@ Let's see...
 
 //Jules Ambrose
 ===julesmarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
 {metJules: -> Questions| -> meetJules}
@@ -2245,9 +2228,8 @@ Let's see...
 * {seenElection == true} [Speech topics] ->topicschange
 * {seenElection == true} [Election] ->runfordirector
 * {julesRun == true} [Ego boost!] ->speechpeptalk
-+ [Nothing for now]
++ [Nothing for now] 
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
-    #speaker:Jules
     "Let's speak again soon, Alistair."
     -> DONE
 
@@ -2360,7 +2342,6 @@ Let's see...
 
 //Uriah Bramble
 ===shopownermarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 3)}
 #NPC:Uriah_Neutral
 {metShopowner: -> Questions| -> meetShopowner}
@@ -2593,7 +2574,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Temperance Ward
 ===childmarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 4)}
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
 {metChild: -> Questions| -> meetChild}
@@ -2915,7 +2895,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Miriam Harcourt
 ===oldladymarketplace===
-~ TOGGLE_SLIDER_INTERACTABLE(false)
 {SET_PARAMETER("PrologueCharacters", 5)}
 {metOldlady: -> Questions| -> meetOldlady}
 
