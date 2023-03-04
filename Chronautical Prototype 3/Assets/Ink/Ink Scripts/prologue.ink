@@ -814,7 +814,6 @@ Let's see...
     + [Parents?] -> Parents
     + [Nothing for now]
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildFarewell")
-    #speaker:Temperance
     "Fine."
         -> END
 =Lost
@@ -1342,7 +1341,6 @@ Let's see...
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
-    #speaker:Jules
     "Let's speak again soon, Alistair."
     -> DONE
 
@@ -1504,7 +1502,6 @@ Let's see...
     * {seenPepTalk==true} [Enter vault?] -> VaultTalk
     + [Nothing for now]
         ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
-        #speaker:Bennet
         "Yes, yes, begone. I am quite busy."
         -> END
 
@@ -2613,7 +2610,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     + {time == 7} [What's wrong?] ->Wrong
     + {time == 8} [Hey, be careful!] ->Careful
     + [Nothing for now]
-    #speaker:Temperance
     "Fine."
     -> DONE
 
@@ -2939,7 +2935,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + {time == 4} [Who are you talking to?] ->Who
 + {time == 5} [About the announcement...] ->Announcement
 + [Nothing for now]
-#speaker:Miriam
 "Whenever you seek truth, just find me again." 
 -> END
 
