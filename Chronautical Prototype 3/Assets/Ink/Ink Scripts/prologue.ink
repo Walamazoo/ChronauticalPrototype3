@@ -1020,7 +1020,6 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
         "But our home is right here."
         "That's all I wanted to say."
-        ~PLAY_SOUND("event:/Character Barks/Temperance/TeenFarewell")
         "Yeah..." ->OldLadyMono
     =OldLadyMono
         ~SET_PARAMETER("PrologueCharacters", 5)
@@ -1028,13 +1027,16 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         #NPC:Miriam_Neutral
         As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
+        ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
         #NPC:Miriam_Confident
         "Yes!"
         "Yes, you all complain and squawk because you know you are about to hear everything you wish not to accept as truth!"
+        ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
         "I will open your eyes- Listen now!"
         "The planet will not be destroyed- Elor-Nabyke will not fall!"
         #NPC:Miriam_Neutral
         "They are distracting us- lying to us!"
+        ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamSad")
         "Our planet does not matter."
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
         "And there are contraptions of extraordinary power, they are hiding them from us! To collect it for themselves and-"
@@ -1048,7 +1050,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 "Silence!"
 "I will have order!"
 #speaker:Alistair
-It takes awhile for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
+It takes a while for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 {julesRun:
     -> JulesSpeechCheck
   - else:
@@ -2789,12 +2791,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     
 #speaker:Temperance
 "Yeah right."
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 "Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
 #NPC:Temperance-teen_Distant
 "And now we just have to run away?"
 "That'll always be the same, I've realized."
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
 "They're not willing to fight for it. Not willing to change."
 
 #speaker:Alistair
@@ -2802,7 +2804,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The planet will barely last three years."
 "That's not enough time. People's lives are more important!"
 
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #speaker:Temperance
 #NPC:Temperance-teen_Neutral
 "They could at least try."
@@ -2859,7 +2861,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "We should be supporting each other in times like this."
     -
     
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
 #speaker:Temperance
 #Child-teen_Distant
 "...But..."
@@ -2881,7 +2883,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Temperance
 "..."
 #NPC:Temperance-teen_Neutral
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildSad")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
 "Thanks, mister. Alistair."
 
 #speaker:Alistair
@@ -2902,6 +2904,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #NPC:Miriam_Neutral
 "Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts. Could you-"
 
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Storyteller
 "Storyteller? My dear boy, I am no mere storyteller, I am a purveyor of truth!"
 #speaker:Miriam
@@ -2928,6 +2931,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 -> oldladymarketplace
 
 =Questions
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamGreeting")
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
@@ -2937,6 +2941,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + {time == 4} [Who are you talking to?] ->Who
 + {time == 5} [About the announcement...] ->Announcement
 + [Nothing for now]
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFarewell")
 "Whenever you seek truth, just find me again." 
 -> END
 
@@ -2949,14 +2954,16 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Aha! That's what they want you to think!"
 "You see, Xitis was not destroyed, but lost! Lost in the cosmic web!"
 "The Strings that connect our vast universe are deeper than you could ever imagine..."
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
 "So deep, even a planet could be swallowed up, lost in the space between spaces!"
 "Not even the most traveled trade seams are truly safe..."
 
 #speaker:Alistair
 (She's not... Entirely incorrect.)
-(Maybe Xitis' been thrown off by what's happening here?)
+(Maybe Xitis has been thrown off by what's happening here?)
 (Focus, Alistair. You can't chase every loose end, not now at least.)
 
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamSurprised")
 #speaker:Miriam
 "Oh? Has the truth rendered you speechless?"
 
@@ -2982,6 +2989,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Miriam
 "Busy! Well!"
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
 "Try frustrating! I can hardly think with all this racket."
 "How am I supposed to spread truth like this? A sudden boom of products and everyone seems content to ignore the big picture..."
 
@@ -3000,6 +3008,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Miriam
 "Oh? Then let me tell you, these baubles are just a taste of the true wonders those lab people wish to obtain."
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 "Have you ever heard of the Inventor? A true miracle worker!"
 "Wars have been fought over their inventions..."
 "A disk that makes machines work as if they were new!"
@@ -3025,6 +3034,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 "That's just it! I must warn them of the danger!"
 "Out there, traveling from planet to planet..."
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
 "The Sirens could lead them Adrift!"
 
 #speaker:Alistair
@@ -3047,6 +3057,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The crew hears their dying words on repeat.."
 "Before the vessel gets pushed to the edge of the universe, devoid of life."
 "Or worse, it becomes a ghost ship!"
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
 "These dire warnings must be heeded!"
 
 #speaker:Alistair
@@ -3068,6 +3079,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "You appear to not have an audience today."
 "And there isn't really anyone else."
 
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Miriam
 "Ah, but my boy, you're here, yes? Here, at this intersection of fate."
 "There are grand things about, grand things, oh so grand."
@@ -3093,6 +3105,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 "Ah. Yes. The cries."
 
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
 #speaker:Miriam
 "We are on the cusp of a great transition."
 "The cold maw of space yawns wide for us"
@@ -3121,6 +3134,7 @@ She doesn't respond, just nods and turns away.
 "What are you going to do?"
 "I mean, besides evacuate."
 
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Miriam
 "I knew it. I knew it all along. That those lab folk were hiding something."
 
@@ -3138,6 +3152,7 @@ She doesn't respond, just nods and turns away.
 
 #speaker:Miriam
 "It's just like Xitis all over again." 
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
 "Doesn't anyone see? It's a pattern! A plot!"
 
 #speaker:Alistair
