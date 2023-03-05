@@ -393,8 +393,6 @@ Let's see...
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
-
-        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> juleslibrary
     +[Adventuring] 
@@ -418,7 +416,6 @@ Let's see...
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
-        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> juleslibrary
 //Choices for what player can ask
@@ -434,6 +431,7 @@ Let's see...
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
+    ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
     "Let's speak again soon, Alistair."
     -> END
@@ -647,7 +645,7 @@ Let's see...
 
 #speaker:Jules
 "Perhaps so- but..."
-~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
+//~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "Ahh... It is unlikely I would win. Even if the council does want Bennet gone."
 
 #speaker:Alistair
@@ -735,6 +733,7 @@ Let's see...
 
 #speaker:Jules
 "Address."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 #NPC:Jules_Nervous
 "Address?"
 
@@ -852,7 +851,6 @@ Let's see...
 =Parents
 #speaker:Alistair
 "Do your parents know you're here?"
-        ~PLAY_SOUND("event:/Character Barks/Temperance/ChildThinking")
         #speaker:Temperance
         "No."
         "They're packing up everything."
@@ -1039,6 +1037,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamSad")
         "Our planet does not matter."
         "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
+        ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
         "And there are contraptions of extraordinary power, they are hiding them from us! To collect it for themselves and-"
         #NPC:Miriam_Confident
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crescendo.
@@ -1299,7 +1298,6 @@ Let's see...
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
-        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> juleslab
     +[Adventuring] 
@@ -1325,7 +1323,6 @@ Let's see...
         "I don't know what you could be talking about..."
         
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
-        ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "You are too easy to read my friend." -> juleslab
 
@@ -1426,7 +1423,6 @@ Let's see...
 
 #speaker:Jules
 "Five years, give or take."
-~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "It should be enough time to evacuate, but..."
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
 "All of this will be gone."
@@ -1527,7 +1523,6 @@ Let's see...
 "Trade and artifacts are moving through the lab like water."
 "Each artifact must be dated, categorized, analyzed."
 "And there are hundreds of cases on my desk now, so-"
-~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
 "Begone."
 -> DONE
 
@@ -1718,7 +1713,6 @@ Everyone is silent, just looking up.
 "We at the lab take great care in maintaining the core with the goal of extending the life of our planet by some 50 to 100 years."
 "But."
 "It was discovered this morning that the core has taken on more damage than we had anticipated."
-~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSad")
 "The damage to the core is... Mysterious in nature."
 "We do not know where it originated, though we are investigating."
 "It is with my..."
@@ -2288,7 +2282,7 @@ Let's see...
     
 #speaker:Jules
     "Alistair..."
-    ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
+    //~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "It's just... The lives of all these people, laid out to be pawned off."
     "I came to see what I could possibly get for Christa and myself, but..."
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
@@ -2390,6 +2384,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Uriah
 "Indeed. All these foreign scholars are here to see the experiments being shown off at the lab."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahHappy")
 "It's the perfect opportunity for them to scout some talent."
 "Also a good opportunity for the scientists to get noticed."
 
@@ -2409,7 +2404,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahHappy")
 "Of course! The drinks of Elore-Nabyke are universe-renowned."
 "Our method of bubbling, our colors..."
-~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
 "Perhaps you'd care for one?"
 
 #speaker:Alistair
@@ -2466,6 +2460,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Uriah
 "My family lives on-planet."
 "Though I'm often out and about traveling the trade seams or here at the market, I'd do anything it takes to provide for them."
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahSad")
 "That's my priority, my loved ones."
 
 #speaker:Alistair
@@ -2614,6 +2609,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     + {time == 7} [What's wrong?] ->Wrong
     + {time == 8} [Hey, be careful!] ->Careful
     + [Nothing for now]
+    ~PLAY_SOUND("event:/Character Barks/Temperance/ChildFarewell")
     "Fine."
     -> DONE
 
@@ -2725,10 +2721,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Temperance
 #NPC:Temperance_Confident
+//TEEN
 "I already looked at all that stuff."
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 "All the lab people are busy talking to a bunch of snooty people."
 #NPC:Temperance_Neutral
+//TEEN
 "Some man in a top hat shooed me away."
 
 #speaker:Alistair
@@ -2744,6 +2742,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     
 #speaker:Temperance
 "I know she says different things than the lab people..."
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenThinking")
 "But it's interesting. It's new."
 "I like fantasy stuff too, y'know."
 
@@ -2759,8 +2758,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 "Hey, what's wrong?"
 
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #speaker:Temperance
+//TEEN
 "Hmph. What makes you think something's wrong?"
 
 #speaker:Alistair
@@ -2771,7 +2771,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Temperance
 "The lab director?"
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 "What does it matter anyway?"
 
 #speaker:Alistair
@@ -2791,7 +2791,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     
 #speaker:Temperance
 "Yeah right."
-~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
+//~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 "Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
 #NPC:Temperance-teen_Distant
 "And now we just have to run away?"
@@ -2823,12 +2823,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "You could've knocked him over."
 
 #speaker:Temperance
+//TEEN
 "-erves it..."
 
 #speaker:Alistair
 "What was that?"
 
-~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #speaker:Temperance
 "I said he probably deserves it!"
 "He works at the lab, but he's here just wasting time?"
@@ -2924,6 +2925,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "Truth can sometimes be stranger than fiction."
         "I thought you may be able to tell me something I wouldn't be able to find elsewhere"
     -
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Miriam
 "Then you've come to the right place!"
 "I assure you, I know what they wish I did not!"
