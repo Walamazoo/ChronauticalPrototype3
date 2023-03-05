@@ -1777,6 +1777,8 @@ The room is packed with people from the city and lab employees, but within the c
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
     #speaker:Jules
     "I see."
+    -> Ending
+    
     + [Have to talk privately]
     #speaker:Alistair
     "I have to talk to you, Jules, in private."
