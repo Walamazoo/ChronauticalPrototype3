@@ -382,7 +382,7 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
-    +[Been out and about] 
+    +[Avoid the question] 
         
         #sprite:Alistair_Assured
         #speaker:Alistair
@@ -1463,7 +1463,7 @@ Let's see...
 #speaker:Alistair
 #sprite:Alistair_Nervous
 (Oh no.)
-(Curse these anchor points! The closet one's a year away!)
+(Curses! I can only travel one year at a time...)
     + [Maybe?]
     #speaker:Alistair
     #sprite:Alistair_Sad
@@ -3198,7 +3198,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "I'm glad someone here has the sense to listen!"
--> Questions
+-> END
 
 
 =Busy
@@ -3251,7 +3251,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Hah! As if they could handle it!"
 "Mark my words, grand things are coming."
 "Grand things..."
--> Questions
+-> END
 
 
 =Crowd
@@ -3308,7 +3308,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #sprite:Alistair_Neutral
 "..."
 "I'm glad you have my best interests in mind."
--> Questions
+-> END
 
 
 =Who
@@ -3366,7 +3366,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #sprite:Alistair_Nervous
 "I..."
 "Thank you. Miriam."
--> Questions
+-> END
 
 
 =Announcement
@@ -3423,4 +3423,4 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Miriam
 "Bah! Yes, yes..."
--> Questions
+-> END
