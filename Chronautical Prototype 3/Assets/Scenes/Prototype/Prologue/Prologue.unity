@@ -14066,6 +14066,7 @@ MonoBehaviour:
   dialogueLog: {fileID: 539389728}
   hand: {fileID: 524396829}
   highlight: {fileID: 208645330}
+  environmentFilter: {fileID: 718417592}
 --- !u!4 &771314288
 Transform:
   m_ObjectHideFlags: 0
