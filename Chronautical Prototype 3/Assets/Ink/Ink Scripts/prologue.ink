@@ -2905,7 +2905,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ~metOldlady = true
 #speaker:Alistair
 #NPC:Miriam_Neutral
-"Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts. Could you-"
+"Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts."
+"Could you-"
 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Storyteller
@@ -2915,8 +2916,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The disappearance of Xitis is a sign of things to come!"
 
 #speaker:Alistair
-(Ah yes... Miriam.)
-(A bit of a crackpot, but she's still knowledgeable.)
+(She was always known as a bit of a crackpot.)
+(But she's still knowledgeable.)
 "Ah, I see.. Well, I'm sorry if I seemed doubtful of you."
 + [I'm interested in stories]
         #speaker:Alistair
@@ -2956,16 +2957,16 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Miriam
 "Aha! That's what they want you to think!"
-"You see, Xitis was not destroyed, but lost! Lost in the cosmic web!"
+"You see, Xitis was not destroyed, but lost!"
+"Lost in the cosmic web!"
 "The Strings that connect our vast universe are deeper than you could ever imagine..."
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
 "So deep, even a planet could be swallowed up, lost in the space between spaces!"
-"Not even the most traveled trade seams are truly safe..."
+"Not even the most traveled Trade Seams are truly safe..."
 
 #speaker:Alistair
-(She's not... Entirely incorrect.)
+(She's not... entirely incorrect.)
 (Maybe Xitis has been thrown off by what's happening here?)
-(Focus, Alistair. You can't chase every loose end, not now at least.)
 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamSurprised")
 #speaker:Miriam
@@ -2987,6 +2988,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I'm glad someone here has the sense to listen!"
 -> Questions
 
+
 =Busy
 #speaker:Alistair
 "Hello there! A busy day, isn't it?"
@@ -2995,13 +2997,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Busy! Well!"
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
 "Try frustrating! I can hardly think with all this racket."
-"How am I supposed to spread truth like this? A sudden boom of products and everyone seems content to ignore the big picture..."
+"How am I supposed to spread truth like this?"
+"A sudden boom of products and everyone seems content to ignore the big picture..."
 
 #speaker:Alistair
 "Well..."
 + [It's understandable]
         #speaker:Alistair
-        "Surely you understand the people's excitement?"
         "There are many unique artifacts being imported."
         "Who wouldn't be giddy to see it all?"
 + [I'm here, I could listen]
@@ -3026,9 +3028,11 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I'm sure the Director would have a field day with those sorts of devices."
 
 #speaker:Miriam
-"Hah! As if they could handle it."
-"Mark my words, grand things are coming. Grand things..."
+"Hah! As if they could handle it!"
+"Mark my words, grand things are coming."
+"Grand things..."
 -> Questions
+
 
 =Crowd
 #speaker:Alistair
@@ -3043,7 +3047,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 (She gets crazier and crazier by the day...)
-(But I should humor her, on the off chance something could be useful for me... Or for... Him.)
+(But I should humor her, on the off chance something could be useful for me.)
+(Or Him.)
 + [Sirens?]
         #speaker:Alistair
         "Sirens? You mean like alarms?"
@@ -3052,13 +3057,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Adrift?]
         #speaker:Alistair
         "Adrift, as in lost?"
-        "These people take secure seams, they would have no chance of ending up somewhere other than their destination."
+        "These people take secure Seams, they would have no chance of ending up somewhere other than their destination."
     -
 
 #speaker:Miriam
 "The Sirens mimic the sounds of ships in distress!"
 "They lure others away from safety, into the horrors of a raw string!"
-"The crew hears their dying words on repeat.."
+"The crew hears their dying words on repeat..."
 "Before the vessel gets pushed to the edge of the universe, devoid of life."
 "Or worse, it becomes a ghost ship!"
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
@@ -3066,7 +3071,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 (What a wild rumor. Although...)
-"I see. Well, I'll be extra careful when I travel from now on, and I'll be sure to pass your advice on."
+"I see."
+"Well, I'll be extra careful when I travel from now on, and I'll be sure to pass your advice on."
 
 #speaker:Miriam
 "That would do my heart good, my boy, knowing you are safe."
@@ -3077,6 +3083,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I'm glad you have my best interests in mind."
 -> Questions
 
+
 =Who
 #speaker:Alistair
 "Er... Pardon the interruption, but who are you speaking to?"
@@ -3086,7 +3093,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Miriam
 "Ah, but my boy, you're here, yes? Here, at this intersection of fate."
-"There are grand things about, grand things, oh so grand."
+"There are grand things about."
+"Grand things."
+"Oh so grand."
 "Have you heard of it?"
 
 #speaker:Alistair
@@ -3094,7 +3103,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [I haven't...?]
         #speaker:Alistair
         "I can't say that I have."
-        "Well, I've heard a great many things, but somehow I doubt I've heard what it is you're referring to."
+        "Well, I've heard a great many things."
+        "But somehow I doubt I've heard what it is you're referring to."
         
 + [I have...?]
         #speaker:Alistair
@@ -3107,7 +3117,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The cries of the void."
 
 #speaker:Alistair
-"Ah. Yes. The cries."
+"Ah."
+"Yes."
+"The cries."
 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
 #speaker:Miriam
@@ -3118,14 +3130,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 "I..."
-(She's not far off. Is it just intuition? Or something more?)
-(Perhaps it is fate.)
-(Fate? No. I... I can change this. I can fix it.)
-(But if I can't...)
-(I must get my treasure to him.)
 "Thank you. Miriam."
-She doesn't respond, just nods and turns away.
 -> Questions
+
 
 =Announcement
 #speaker:Alistair
@@ -3143,10 +3150,11 @@ She doesn't respond, just nods and turns away.
 "I knew it. I knew it all along. That those lab folk were hiding something."
 
 #speaker:Alistair
-"I... Don't think it's their fault."
+"I..."
+"Don't think it's their fault..."
 
 #speaker:Miriam
-"Elor-Nabyke will become lost in the folds of reality."
+"Elore-Nabyke will become lost in the folds of reality."
 "All so those fools can claim their ill-gotten gains."
 "I must prepare to spread the truth."
 
@@ -3160,14 +3168,17 @@ She doesn't respond, just nods and turns away.
 "Doesn't anyone see? It's a pattern! A plot!"
 
 #speaker:Alistair
-(Curses! I can't contradict her without revealing too much!)
+(I can't contradict her without revealing too much!)
 "Please, don't do anything crazy."
-She begins muttering to herself incoherently, no longer acknowledging my presence.
+
+#speaker:Miriam
+"Mhm."
 
 #speaker:Alistair
 (Curses.)
 "I'll... See you around."
+"Be safe Miriam."
 
+#speaker:Miriam
+"Bah! Yes, yes..."
 -> Questions
-
-
