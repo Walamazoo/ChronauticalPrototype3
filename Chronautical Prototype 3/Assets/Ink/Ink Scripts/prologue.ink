@@ -1952,6 +1952,7 @@ The room is packed with people from the city and lab employees, but within the c
     -> LIBRARY
     
 ===EndingVault===
+#background:Vault
     As the vault door opens, I rush inside.
     My cubby is just as I left it.
     Inside, I find the plaque and my notebook.
