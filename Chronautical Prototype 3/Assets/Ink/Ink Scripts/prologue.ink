@@ -2630,7 +2630,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 "I'm a fan of the story."
-"Though it does go against the lab's observations, it-"
+"Though it does go against the lab's observations."
+"It-"
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSurprised")
 #speaker:Temperance
@@ -2661,14 +2662,15 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "It's my dream."
 
 #speaker:Alistair
-(Urgh. Curses. Good going Alistair, you've ruined a child's dream.)
+(Urgh. Curses.)
+(Good going Alistair, you've ruined a child's dream.)
 "Well... work hard and I'm sure you'll make it."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildHappy")
 #speaker:Temperance
 "Thanks, mister! I will!"
-
 -> Questions
+
 
 =Exciting
 #speaker:Alistair
@@ -2708,22 +2710,23 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #NPC:Temperance_Neutral
 "Some other kids think it's boring, but I think that research stuff is the best part."
 "It's fun to know things."
+"And to learn!"
 
 #speaker:Alistair
 "That's a wonderful mindset you have there."
-"You should check out the showcase they're having next year."
+"You should check out the science fair they're having next year."
 "Lots of interesting topics there."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSurprised")
 #speaker:Temperance
 "Really? I will!"
-
 -> Questions
+
 
 =Listening
 #speaker:Alistair
 "Listening to the storyteller?"
-"I would have expected you to be more interested in the lab showcase."
+"I would have expected you to be more interested in the science fair."
 
 #speaker:Temperance
 #NPC:Temperance_Confident
@@ -2736,7 +2739,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Some man in a top hat shooed me away."
 
 #speaker:Alistair
-"So you're here listening to her?"
+"So you're here listening to Miriam?"
 + [She doesn't trust the lab at all]
         #speaker:Alistair
         "She doesn't believe in the lab or any of the workers."
@@ -2750,10 +2753,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I know she says different things than the lab people..."
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenThinking")
 "But it's interesting. It's new."
-"I like fantasy stuff too, y'know."
+"The Lab can hardly know everything anyway."
+"Especially when they won't even let civilians into a science fair!
 
 #speaker:Alistair
-"Fair enough. Well, enjoy."
+"Ah, yes."
+"I suppose so."
 
 #speaker:Temperance
 "Mhm."
@@ -2804,24 +2809,19 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "That'll always be the same, I've realized."
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
 "They're not willing to fight for it. Not willing to change."
+"Doesn't matter who the Director is."
 
 #speaker:Alistair
+(Oh my...)
 "You should know that their instruments are finely tuned."
-"The planet will barely last three years."
-"That's not enough time. People's lives are more important!"
+"I would like to think that they are..."
+"Trying their best?"
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #speaker:Temperance
-#NPC:Temperance-teen_Neutral
-"They could at least try."
-
-#speaker:Alistair
-"They are."
-
-#speaker:Temperance
 "Whatever."
-
 -> Questions
+
 
 =Careful
 #speaker:Alistair
@@ -2842,24 +2842,21 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "He should be there! Fixing things!"
 
 #speaker:Alistair
-"You-! Mmph..."
+"Mmph..."
 (Breathe, Alistair. Breathe.)
 (I'm letting my friendship with Jules make this personal.)
 "I understand that you're upset."
 + [But there's nothing he can do]
         #speaker:Alistair
-        "He's just a man."
-        "Struggling for years on end against a monumental problem."
-        "One laboratory against the weight of a world."
-        "It hasn't been enough."
-        "Sometimes... Things are just out of someone's hands."
-        "When that time comes we should be there to support them."
-        "They can't handle another enemy."
+        "He's just been...struggling for years on end against a monumental problem."
+        "One scientist against the weight of a world."
+        "It's kind of poetic..."
+        "Ah- but, try to just..."
+        "Talk to the Director."
+        "Then, we can support the lab be better!"
 + [But lashing out won't fix things]
         #speaker:Alistair
         "You can't take out your feelings on him."
-        "He's probably been working harder than anyone."
-        "He has a life, a family. He wants the best for the planet."
         "The people in the lab are the ones closest to this issue."
         "It's... Infuriating."
         "To be so close to fixing something and to... To..."
@@ -2895,8 +2892,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 "Take care."
-(I'm... So sorry.)
-
+(I'm... so sorry.)
 -> Questions
 
 
