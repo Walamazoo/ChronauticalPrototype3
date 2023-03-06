@@ -580,6 +580,7 @@ Let's see...
 "I recall an election, perhaps we can find some leads there."
 }
 #sprite:Alistair_Neutral
+//CLUE, Jules can't help, only Director can open vault
 -> DONE
 
 ===runfordirector===
@@ -603,6 +604,7 @@ Let's see...
 "Ah, that's right."
 "Forget I said anything."
 (Interesting.)
+//CLUE, it's after the election has already happened, need to go back to plant the idea beforehand
 -> END
 
 =CanRun
@@ -658,6 +660,7 @@ Let's see...
 "But I do doubt I would have much success."
 #NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
+//CLUE, Jules is now running but he may need some help, I should go to the future to see the results etc
 -> DONE
 
 ===topicschange===
@@ -1062,6 +1065,7 @@ It takes a while for the room to quiet down despite the Director's shouting. Onc
     "And perhaps if we could have a friend in a high place we can access the vault."
 }
 ~SET_PARAMETER("PrologueCharacters", 0)
+//CLUE, an election happens at this year, it seems people aren't happy with the current leadership
 -> DONE
 
 =JulesSpeechCheck
@@ -1084,6 +1088,7 @@ It takes a while for the room to quiet down despite the Director's shouting. Onc
 #NPC:Jules_Nervous
 Jules' speech was littered with uncertainties and filler words, but his heart was in the right place.
 ~ seenSpeech = true
+//CLUE, speech was rough, maybe he won't get elected, go back and help him prep?
 -> DONE
 
 =JulesSpeechGood
@@ -1108,6 +1113,7 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 
 = DirectorCheck
 ~ julesDirector = true
+//CLUE, Jules' speech was pretty good, no way he's not the Director now, go in the future and check?
 -> END
 
 
@@ -1671,6 +1677,7 @@ Let's see...
 "He did always like the library in this place..."
 "Perhaps he can help since we can't get through to Bennet."
 ~ vaultDirector = true
+//CLUE, Bennet Crab absolutely refuses to open the vault, may have to be creative
 -> DONE
 
 
@@ -1941,6 +1948,7 @@ The room is packed with people from the city and lab employees, but within the c
     + [Look around more]
     #speaker:Alistair
     "I want to look around more before we leave."
+    //CLUE, if I want to leave, I should find Jules at his congrats party again etc
     -> LIBRARY
     
 ===EndingVault===
