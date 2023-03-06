@@ -2,19 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameQuit : MonoBehaviour
 {
-    // Update is called once per frame
+    [SerializeField] private GameObject conformationPopupMenu;
+    [SerializeField] private CustomInkFunctions customInkFunctions;
+
     void Update()
     {
         if (Input.GetKey("escape"))
         {
-            Application.Quit();
+            customInkFunctions.ToggleFilterInteractable(false);
+            customInkFunctions.ToggleSliderInteractable(false);
+            conformationPopupMenu.SetActive(true);
         }
-        if (Input.GetKey("r"))
-        {
-            SceneManager.LoadSceneAsync("Title Screen");
-        }
+    }
+
+    public void Confirm(){
+        Application.Quit();
     }
 }

@@ -315,8 +315,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cancel
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -455,7 +455,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1263322167}
         m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
-        m_MethodName: OnNewGameClicked
+        m_MethodName: OnConfirmClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -520,8 +520,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 246, y: -46}
-  m_SizeDelta: {x: 169.15, y: 54.0372}
+  m_AnchoredPosition: {x: 227.6763, y: -81.0361}
+  m_SizeDelta: {x: 193.5027, y: 61.817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &756354299
 GameObject:
@@ -701,8 +701,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1015,8 +1015,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.2, y: -154.08}
-  m_SizeDelta: {x: 169.15, y: 54.0372}
+  m_AnchoredPosition: {x: 194, y: -142.85}
+  m_SizeDelta: {x: 193.5027, y: 61.817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1372583123
 GameObject:
@@ -1077,8 +1077,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1211,7 +1211,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1386693551
@@ -1345,8 +1345,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Starting a new game will overwrite any existing save data. Are you sure?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1582,6 +1582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727729ee4cb17ec4f80daa68a5895032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conformationPopupMenu: {fileID: 0}
+  customInkFunctions: {fileID: 0}
 --- !u!4 &1837912898
 Transform:
   m_ObjectHideFlags: 0
@@ -1614,7 +1616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1877902818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1890,8 +1892,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Yes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
