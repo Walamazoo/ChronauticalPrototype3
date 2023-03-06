@@ -2235,7 +2235,8 @@ Let's see...
 
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #speaker:Jules
-"Ah, well, I'm still doing lab work. I've been tasked with making sure artifacts that need to be examined, well, end up getting examined."
+"Ah, well, I'm still doing lab work."
+"I've been tasked with making sure artifacts that need to be examined, well, end up getting examined."
 "A lot of what's here is very intriguing."
 
 #speaker:Alistair
@@ -2246,9 +2247,9 @@ Let's see...
     
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
     #speaker:Jules
-    "Oh come now, you know how the lab operates. I'd be lucky if these get to see the light of day again!"
+    "Oh come now, you know how the lab operates."
+    "I'd be lucky if these get to see the light of day again!"
     "Probably out of my price range, too." 
-    "I've got other things to focus on."
     
     #speaker:Alistair
     "Ha ha... Yeah, I suppose being frugal is a virtue."
@@ -2258,16 +2259,18 @@ Let's see...
     
 + [You sure are diligent] 
     #speaker:Alistair
-    "You're quite the hard worker, to do all this. It's always been impressive."
+    "You're quite the hard worker, to do all this."
+    "It's always been impressive."
     
     #speaker:Jules
     "Flattery won't get you anywhere, old friend."
     "Especially not to where you can get your hands on these very interesting and breakable artifacts."
     
     #speaker:Alistair
-    I scoff in an exaggerated manner.
-    "Jules! You wound me! Me, messing with artifacts, perish the thought!"
-    "...I meant it, though. I've been hard at work lately, and it's been encouraging to see I'm not the only one."
+    "Jules! You wound me!"
+    "Me, messing with artifacts, perish the thought!"
+    "...I meant it, though."
+    "I've been hard at work lately, and it's been encouraging to see I'm not the only one."
     
     #speaker:Jules
     "Well then, thank you, Alistair. I wish you luck."
@@ -2295,19 +2298,22 @@ Let's see...
     
 #speaker:Jules
     "No, no need for that, Alistair."
-    "Just me wallowing a bit. A bad habit as of late."
+    "Just me wallowing a bit."
+    "A bad habit as of late."
     "Seeing you, saying it out loud, has helped."
     "I'm going to look around a bit more..."
 -> Questions
 
+
 =Heading
 #speaker:Alistair
-    "Jules... Safe travels."
+"Jules... Safe travels."
     
 #speaker:Jules
-    "Thank you. You as well."
-    ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
-    "Wait... You are going to leave as well, correct? Why aren't you in line?"
+"Thank you. You as well."
+~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
+"Wait... You are going to leave as well, correct?"
+"Why aren't you in line?"
     
 #speaker:Alistair
     (Ah... That's right, it does seem strange. Hm.)
