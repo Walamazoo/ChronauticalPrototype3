@@ -563,7 +563,7 @@ Let's see...
 "I am sorry, I wish I could help you."
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingDisappointed")
-#NPC:Darling_Upset
+#NPC:Darling_Neutral
 #speaker:D4RL1N6
 "Do not give up yet Alistair."
 
@@ -1654,7 +1654,7 @@ Let's see...
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
-#NPC:Darling_Annoyed
+#NPC:Darling_Neutral
 "That was fruitless."
 
 #speaker:Alistair
@@ -1668,7 +1668,7 @@ Let's see...
 "Perhaps we can seek out another employee."
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingHappy")
-#NPC:Darling_Happy
+#NPC:Darling_Neutral
 "They may be able to help us or shed light on new information."
 
 #speaker:Alistair
