@@ -124,6 +124,12 @@ public class JournalManager : MonoBehaviour
                 person.OnorOff();
             }
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(false);
+
+            JournalItemPointer = 0;
+            ChangeJournalListPointer(1);
+            UpdateSelected();
+            ChangeJournalListPointer(2);
+            UpdateSelected();
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
         else{
@@ -195,7 +201,7 @@ public class JournalManager : MonoBehaviour
         if(currentList.Count != 0){
             tempButton.itemName.GetComponent<Text>().text = currentList[JournalItemPointer].name;
             tempButton.itemName.SetActive(true);
-            tempButton.fulldescription.GetComponent<Text>().text = currentList[JournalItemPointer].hoverDescription;
+            tempButton.fulldescription.GetComponent<Text>().text = currentList[JournalItemPointer].fullDescription;
             tempButton.photo.GetComponent<Image>().sprite = currentList[JournalItemPointer].image;
             tempButton.photo.SetActive(true);
         }

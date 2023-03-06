@@ -138,7 +138,6 @@ It's clear even from this distance that touching the handle would burn my skin.
 ~TOGGLE_JOURNAL(true)
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
 ~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
-~CREATE_TIMELINE_CLUE("Testy", "personclue", "This is a test", "This is a test")
 ~TOGGLE_SLIDER(true)
 -> LIBRARY
 
@@ -581,6 +580,7 @@ Let's see...
 }
 #sprite:Alistair_Neutral
 //CLUE, Jules can't help, only Director can open vault
+~CREATE_TIMELINE_CLUE("Jules can't help", "personclue", "this shouldn't matter", "Only the director is able to open the vault with their code, and the code changes each time the director changes. Need to either get in the director's good graces, or get a new one.")
 -> DONE
 
 ===runfordirector===
@@ -605,6 +605,7 @@ Let's see...
 "Forget I said anything."
 (Interesting.)
 //CLUE, it's after the election has already happened, need to go back to plant the idea beforehand
+~CREATE_TIMELINE_CLUE("Jules can't run at the moment", "placeclue", "this shouldn't matter", "It's too late for Jules to run for director, I'll need to go back to a time before the election takes place to get him to run.")
 -> END
 
 =CanRun
@@ -661,6 +662,7 @@ Let's see...
 #NPC:Jules_Neutral
 "That is quite far away, I'll think about it again once the time is nearer."
 //CLUE, Jules is now running but he may need some help, I should go to the future to see the results etc
+~CREATE_TIMELINE_CLUE("Jules is running", "personclue", "this shouldn't matter", "Jules is now running for director, I'll need to see if this changes anything in the future.")
 -> DONE
 
 ===topicschange===
@@ -1066,6 +1068,7 @@ It takes a while for the room to quiet down despite the Director's shouting. Onc
 }
 ~SET_PARAMETER("PrologueCharacters", 0)
 //CLUE, an election happens at this year, it seems people aren't happy with the current leadership
+~CREATE_TIMELINE_CLUE("People aren't happy", "placeclue", "this shouldn't matter", "The election for director happens this year. People seem to be displeased with how Bennet is handling evacuation for the planet. ")
 -> DONE
 
 =JulesSpeechCheck
@@ -1089,6 +1092,7 @@ It takes a while for the room to quiet down despite the Director's shouting. Onc
 Jules' speech was littered with uncertainties and filler words, but his heart was in the right place.
 ~ seenSpeech = true
 //CLUE, speech was rough, maybe he won't get elected, go back and help him prep?
+~CREATE_TIMELINE_CLUE("Jules no speech good", "personclue", "this shouldn't matter", "Jules's speech wasn't as good as it should've been, perhaps I should head back in time to help him prepare more.")
 -> DONE
 
 =JulesSpeechGood
@@ -1114,6 +1118,7 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 = DirectorCheck
 ~ julesDirector = true
 //CLUE, Jules' speech was pretty good, no way he's not the Director now, go in the future and check?
+~CREATE_TIMELINE_CLUE("Jules talk good here", "personclue", "this shouldn't matter", "The prep paid off for Jules's speech, I should be able to check the future now and see if he's been elected to director.")
 -> END
 
 
@@ -1678,6 +1683,7 @@ Let's see...
 "Perhaps he can help since we can't get through to Bennet."
 ~ vaultDirector = true
 //CLUE, Bennet Crab absolutely refuses to open the vault, may have to be creative
+~CREATE_TIMELINE_CLUE("Bennet says no", "personclue", "this shouldn't matter", "Bennet Crab, the current director, absolutely refuses to open the vault for me. I should find someone else who works at the lab, perhaps they know the code or a workaround.")
 -> DONE
 
 
@@ -1949,6 +1955,7 @@ The room is packed with people from the city and lab employees, but within the c
     #speaker:Alistair
     "I want to look around more before we leave."
     //CLUE, if I want to leave, I should find Jules at his congrats party again etc
+    ~CREATE_TIMELINE_CLUE("Ending warning", "placeclue", "this shouldn't matter", "Before I leave the planet for good I should go talk to Jules at his congratulations party in the lab.")
     -> LIBRARY
     
 ===EndingVault===

@@ -911,7 +911,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -3825,7 +3825,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -5097,7 +5097,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -6702,7 +6702,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -7155,7 +7155,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -9802,7 +9802,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -11261,7 +11261,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -13657,7 +13657,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -14412,7 +14412,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -14469,8 +14469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.3593, y: -3.0703}
-  m_SizeDelta: {x: 155.103, y: 158.6406}
+  m_AnchoredPosition: {x: -0.00053977966, y: -0.00030899}
+  m_SizeDelta: {x: 133.51, y: 161.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810361492
 MonoBehaviour:
@@ -16896,7 +16896,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -17152,8 +17152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.353, y: 3.5}
-  m_SizeDelta: {x: 133.5138, y: 196.7332}
+  m_AnchoredPosition: {x: -88.45858, y: 0.4316}
+  m_SizeDelta: {x: 131.725, y: 215.834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005882520
 MonoBehaviour:
@@ -17872,7 +17872,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -18738,7 +18738,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -19476,7 +19476,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -20254,7 +20254,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -21539,7 +21539,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -24029,7 +24029,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -24944,7 +24944,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -26906,7 +26906,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -28099,7 +28099,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -28895,7 +28895,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -30180,7 +30180,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -31096,7 +31096,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -31119,87 +31119,6 @@ MonoBehaviour:
   startConversationFullPath: 
   barkKnot: 
   barkFilePath: 
---- !u!1 &1855247772
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1855247773}
-  - component: {fileID: 1855247775}
-  - component: {fileID: 1855247774}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1855247773
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855247772}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2015488864}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1855247774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855247772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Exit
-
-    Journal'
---- !u!222 &1855247775
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855247772}
-  m_CullTransparentMesh: 1
 --- !u!1 &1858542475
 GameObject:
   m_ObjectHideFlags: 0
@@ -31695,7 +31614,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -33471,15 +33390,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1855247773}
+  m_Children: []
   m_Father: {fileID: 2110489527}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -395, y: 268.92}
-  m_SizeDelta: {x: 70.429, y: 62.1588}
+  m_AnchoredPosition: {x: 381, y: 268.92}
+  m_SizeDelta: {x: 98.2589, y: 62.1588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2015488865
 MonoBehaviour:
@@ -33570,7 +33488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 03b7779de9f440a4aa674ca4228e4e72, type: 3}
+  m_Sprite: {fileID: -6942604050329644536, guid: 9968a1610145a2b4599fabf9604bdf32, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34340,7 +34258,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -35401,7 +35319,7 @@ MonoBehaviour:
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 0
+  replace: 1
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0

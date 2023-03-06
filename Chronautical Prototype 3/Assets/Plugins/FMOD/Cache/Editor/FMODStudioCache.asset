@@ -671,7 +671,7 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638135323142945131
+  lastModified: 638136491640215436
   FileSizes:
   - Name: Desktop
     Value: 24544352
@@ -1155,7 +1155,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638135323142955111
+  cacheTime: 638136491640215436
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -1373,7 +1373,7 @@ MonoBehaviour:
   - {fileID: -4200116718852736757}
   MinDistance: 1
   MaxDistance: 20
-  Length: 920000
+  Length: 1870000
 --- !u!114 &2023947534758245186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2138,7 +2138,7 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638135323142955111
+  lastModified: 638134457444702878
   FileSizes:
   - Name: Desktop
     Value: 4274
