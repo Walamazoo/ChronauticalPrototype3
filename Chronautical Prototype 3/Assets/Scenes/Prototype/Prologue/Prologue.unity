@@ -8466,6 +8466,7 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   globalsInkFile: {fileID: 4900000, guid: da73bbf0e32783244b9a81f40e2ec768, type: 3}
   journalButton: {fileID: 840779990}
+  minimapButton: {fileID: 1996238699}
   minimap: {fileID: 1996238703}
   JournalManager: {fileID: 771314287}
   CameraParallax: {fileID: 1698210390}
