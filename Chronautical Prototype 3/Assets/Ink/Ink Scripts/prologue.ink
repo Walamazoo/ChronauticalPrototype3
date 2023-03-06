@@ -39,7 +39,6 @@ INCLUDE Globals.ink
 #background:Silhouette_Intro
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
-
 It was full of what I would become; dreams of adventure in the stars piercing through the dark emptiness.
 I was gripped with a frenzy to explore beyond my bubble of libraries and teahouses.
 But, most of all, I dreamed of the star system lost.
@@ -54,8 +53,7 @@ Atlantis.
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
-(But perhaps there’s... Something, anything I’m 
-missing. There has to be.
+(But perhaps there’s... Something, anything I’m missing. There has to be.
 (A book, a piece of information, I haven't found yet.)
 
 #sprite:Alistair_Neutral
@@ -2877,7 +2875,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "It's kind of poetic..."
         "Ah- but, try to just..."
         "Talk to the Director."
-        "Then, we can support the lab be better!"
+        "Then, we can support the lab to be better!"
 + [But lashing out won't fix things]
         #speaker:Alistair
         "You can't take out your feelings on him."
@@ -2970,9 +2968,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + {time == 4} [Who are you talking to?] ->Who
 + {time == 5} [About the announcement...] ->Announcement
 + [Nothing for now]
-    ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFarewell")
-    "Whenever you seek truth, just find me again." 
-    -> END
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFarewell")
+"Whenever you seek truth, just find me again." 
+-> END
 
 =Dissapearance
 #speaker:Alistair
