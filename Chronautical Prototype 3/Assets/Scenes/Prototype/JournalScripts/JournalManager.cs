@@ -59,6 +59,7 @@ public class JournalManager : MonoBehaviour
     [SerializeField] GameObject dialogueLog;
     [SerializeField] TimeChanged hand;
     [SerializeField] GameObject highlight;
+    [SerializeField] EnvironmentFilter environmentFilter;
     Tween fadeInTween;
     Tween fadeOutTween;
 
@@ -130,6 +131,7 @@ public class JournalManager : MonoBehaviour
             UpdateSelected();
             ChangeJournalListPointer(2);
             UpdateSelected();
+            ToggleFilterInteractable(false);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal open");
         }
         else{
@@ -138,6 +140,7 @@ public class JournalManager : MonoBehaviour
             currentPage.SetActive(false);
             OpenOrClose += 1;
             exitButton.SetActive(false);
+            ToggleFilterInteractable(true);
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(true);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal close");
         }
@@ -412,5 +415,13 @@ public class JournalManager : MonoBehaviour
 
     public void AddToJournalDialogueLog(string adder){
         dialogueLog.GetComponent<Text>().text += adder + System.Environment.NewLine;
+    }
+
+    public void ToggleFilterInteractable(bool state){
+        foreach(Transform child in environmentFilter.currentFilter.transform){
+            if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
+                spriteInteraction.ToggleInteraction(state);
+            }
+        }
     }
 }
