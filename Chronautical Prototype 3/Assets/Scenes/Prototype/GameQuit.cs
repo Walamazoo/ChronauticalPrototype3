@@ -19,7 +19,7 @@ public class GameQuit : MonoBehaviour
         }
     }
 
-    public void Confirm(){
+    public void ConfirmQuit(){
         Application.Quit();
     }
 }

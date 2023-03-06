@@ -2076,7 +2076,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 516432719}
         m_TargetAssemblyTypeName: GameQuit, Assembly-CSharp
-        m_MethodName: Confirm
+        m_MethodName: ConfirmQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
