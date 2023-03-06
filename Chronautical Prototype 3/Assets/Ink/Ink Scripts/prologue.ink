@@ -1689,6 +1689,8 @@ Let's see...
 "That's preposterous."
 #NPC:Bennet_Confident
 "You are no longer employed here and you should know that civilians are strictly prohibited from accessing any of the vault’s highly classified materials."
+    #speaker:Alistair
+    "But..."
     + [I need it]
         #speaker:Alistair
         #sprite:Alistair_Confident
