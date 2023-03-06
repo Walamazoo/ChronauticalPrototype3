@@ -36,6 +36,7 @@ INCLUDE Globals.ink
 ~ seenBeginning = true
 ~ inTutorial = true
 ~TOGGLE_MINIMAP(false)
+~TOGGLE_MINIMAP_INTERACTABLE(false)
 #background:Silhouette_Intro
 
 When I was a boy, I put all my thoughts and dreams into a book. Sketches, diagrams, torn-out pages.
@@ -202,6 +203,7 @@ Let's see....
 
 ~inTutorial = false
 ~SET_PARAMETER("PrologueMusic", 0)
+~TOGGLE_MINIMAP_INTERACTABLE(true)
 #speaker:D4RL1N6
 "We should investigate the vault further now that it is not too hot for your human hands."
 -> LIBRARY
