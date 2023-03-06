@@ -95,11 +95,13 @@ The planet, Elore-Nabyke, will be lost.
 "You barely gave yourself enough time to go back in time again." 
 
 #speaker:Alistair
+But...
 * [I'm a failure] "If I can't even save this planet, what's the point?"
 * [There must be a way] "There must be something I'm just not thinking of."
 
 #speaker:D4RL1N6
 - "You have done everything you can."
+#speaker:D4RL1N6
 "I am sorry, Alistair, this quest of yours is futile. You need to save what is important."
 
 #sprite:Alistair_Sad
@@ -479,8 +481,8 @@ Let's see...
 #speaker:Jules
 "So much has changed since we were interns here at the lab."
 "Many of the people we used to know have moved off planet."
-#NPC:Jules_Nervous
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
+#NPC:Jules_Nervous
 "And well, I have a family now. It's funny how having children can change your perspective."
 #NPC:Jules_Neutral
 "... But you haven't changed much Alistair."
@@ -1496,8 +1498,8 @@ Let's see...
 
 #speaker:Jules
 "Yes..."
-#NPC:Jules_Nervous
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
+#NPC:Jules_Nervous
 "It's very disturbing news."
 #NPC:Jules_Neutral
 "The core can no longer sustain itself, it's only a matter of time 'till it is destroyed and the planet with it."
@@ -1539,8 +1541,8 @@ Let's see...
 #speaker:Bennet
 "Alistair?"
 "Hm..."
-#NPC:Bennet_Confident
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
+#NPC:Bennet_Confident
 "Of course. Alistair."
 #NPC:Bennet_Neutral
 "I would have preferred to have forgotten that name, but it seems you have returned."
@@ -1847,9 +1849,9 @@ The room is packed with people from the city and lab employees, but within the c
 #sprite:Alistair_Assured
 "Of course, I wouldn't miss your congrats party."
 
+~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 #speaker:Jules
 #NPC:Jules_Confident
-~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 "Thank you, Alistair."
 "I couldn't have done it without you."
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
@@ -2642,8 +2644,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Heard anything interesting lately?"
 "It seems everyone here today is rather talkative."
 
-#speaker:Uriah
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahSad")
+#speaker:Uriah
 "Indeed. Though I wish they'd do a bit more shopping!"
 "You would think planning for the future would entail getting some supplies."
 
@@ -2754,6 +2756,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "Hello there! What's your name?"
     
     #speaker:Child
+    #NPC:Temperance_Neutral
     "...Temperance."
     
     #speaker:Alistair
@@ -3253,7 +3256,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Crowd
 #speaker:Alistair
-#spite:Alistair_Suspicious
+#sprite:Alistair_Suspicious
 "What a crowd! And so many from off planet, seeing the sights."
 "I think you'll have trouble getting an audience today."
 
@@ -3264,13 +3267,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The Sirens could lead them Adrift!"
 
 #speaker:Alistair
-#spite:Alistair_Nervous
+#sprite:Alistair_Nervous
 (She gets crazier and crazier by the day...)
 (But I should humor her, on the off chance something could be useful for me.)
 (Or Him.)
 + [Sirens?]
         #speaker:Alistair
-        #spite:Alistair_Suspicious
+        #sprite:Alistair_Suspicious
         "Sirens? You mean like alarms?"
         "How would that lead anyone Adrift?"
         
@@ -3291,7 +3294,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "These dire warnings must be heeded!"
 
 #speaker:Alistair
-#spite:Alistair_Distant
+#sprite:Alistair_Distant
 (What a wild rumor. Although...)
 "I see."
 "Well, I'll be extra careful when I travel from now on, and I'll be sure to pass your advice on."
@@ -3302,7 +3305,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "And that you keep your eyes open to the truth beneath the lies fed to us by those on high!"
 
 #speaker:Alistair
-#spite:Alistair_Neutral
+#sprite:Alistair_Neutral
 "..."
 "I'm glad you have my best interests in mind."
 -> Questions
@@ -3310,7 +3313,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Who
 #speaker:Alistair
-#spite:Alistair_Suspicious
+#sprite:Alistair_Suspicious
 "Er... Pardon the interruption, but who are you speaking to?"
 "You appear to not have an audience today."
 "And there isn't really anyone else."
@@ -3324,18 +3327,18 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Have you heard of it?"
 
 #speaker:Alistair
-#spite:Alistair_Nervous
+#sprite:Alistair_Nervous
 (Uh oh.)
 + [I haven't...?]
         #speaker:Alistair
-        #spite:Alistair_Sad
+        #sprite:Alistair_Sad
         "I can't say that I have."
         "Well, I've heard a great many things."
         "But somehow I doubt I've heard what it is you're referring to."
         
 + [I have...?]
         #speaker:Alistair
-        #spite:Alistair_Assured
+        #sprite:Alistair_Assured
         "I certainly get around to many places, and hear many things."
         "I think I may know what you mean."
         (Hopefully she bought that.)
@@ -3345,11 +3348,11 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "The cries of the void."
 
 #speaker:Alistair
-#spite:Alistair_Neutral
+#sprite:Alistair_Neutral
 "Ah."
-#spite:Alistair_Distant
+#sprite:Alistair_Distant
 "Yes."
-#spite:Alistair_Neutral
+#sprite:Alistair_Neutral
 "The cries."
 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
@@ -3360,7 +3363,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "So I'm here, talking to anyone who is not so fortunate as I."
 
 #speaker:Alistair
-#spite:Alistair_Nervous
+#sprite:Alistair_Nervous
 "I..."
 "Thank you. Miriam."
 -> Questions
@@ -3368,14 +3371,14 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 =Announcement
 #speaker:Alistair
-#spite:Alistair_Sad
+#sprite:Alistair_Sad
 "Miriam. I assume you've heard the announcement."
 
 #speaker:Miriam
 "Yes. The time has come."
 
 #speaker:Alistair
-#spite:Alistair_Nervous
+#sprite:Alistair_Nervous
 "What are you going to do?"
 "I mean, besides evacuate."
 
@@ -3385,7 +3388,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I knew it. I knew it all along. That those lab folk were hiding something."
 
 #speaker:Alistair
-#spite:Alistair_Distant
+#sprite:Alistair_Distant
 "I..."
 "Don't think it's their fault..."
 
@@ -3396,7 +3399,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I must prepare to spread the truth."
 
 #speaker:Alistair
-#spite:Alistair_Sad
+#sprite:Alistair_Sad
 "What do you mean?"
 "The Director said the planet would be destroyed."
 
@@ -3406,7 +3409,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Doesn't anyone see? It's a pattern! A plot!"
 
 #speaker:Alistair
-#spite:Alistair_Nervous
+#sprite:Alistair_Nervous
 (I can't contradict her without revealing too much!)
 "Please, don't do anything crazy."
 
