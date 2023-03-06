@@ -1087,12 +1087,12 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Yeah..." ->OldLadyMono
     =OldLadyMono
         ~SET_PARAMETER("PrologueCharacters", 5)
-        #speaker:Miriam
         #NPC:Miriam_Neutral
         As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
         ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
         #NPC:Miriam_Confident
+        #speaker:Miriam
         "Yes!"
         "Yes, you all complain and squawk because you know you are about to hear everything you wish not to accept as truth!"
         ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
@@ -1106,17 +1106,19 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
         "And there are contraptions of extraordinary power, they are hiding them from us! To collect it for themselves and-"
         #NPC:Miriam_Confident
+        #speaker: 
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crescendo.
         ~SET_PARAMETER("PrologueCharacters", 2)
         I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetElection")
-#speaker:Lab Director
+#speaker:Bennet
 #NPC:Bennet_Confident
 "Silence!"
 "I will have order!"
-#speaker:Alistair
+#speaker: 
 #sprite:Alistair_Nervous
-It takes a while for the room to quiet down despite the Director's shouting. Once the Director can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
+It takes a while for the room to quiet down despite the Director's shouting.
+Once Bennet can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 {julesRun:
     -> JulesSpeechCheck
   - else:
