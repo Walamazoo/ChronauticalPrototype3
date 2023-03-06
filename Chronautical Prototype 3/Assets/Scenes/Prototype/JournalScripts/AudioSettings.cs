@@ -16,10 +16,10 @@ public class AudioSettings : MonoBehaviour
     void Start()
     {
         MasterBus = FMODUnity.RuntimeManager.GetBus("bus:/");
-        Music.value = 0.5f;
-        Ambience.value = 0.5f;
-        SoundEffects.value = 0.5f;
-        Master.value = 0.5f;
+        Music.value = 1f;
+        Ambience.value = 1f;
+        SoundEffects.value = 1f;
+        Master.value = 1f;
     }
 
     // Update is called once per frame
