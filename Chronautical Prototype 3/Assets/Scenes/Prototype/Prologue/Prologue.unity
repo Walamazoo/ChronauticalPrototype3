@@ -18359,7 +18359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072143327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5182, y: -2.3319, z: 0}
+  m_LocalPosition: {x: -3.97, y: -2.3319, z: 0}
   m_LocalScale: {x: 0.1983224, y: 0.19700888, z: 0.17750148}
   m_Children: []
   m_Father: {fileID: 1162906324}
@@ -19771,8 +19771,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Yes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21085,8 +21085,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cancel
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24669,7 +24669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445041164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.75, y: -1.02, z: 0}
+  m_LocalPosition: {x: 0.66, y: -0.72, z: 0}
   m_LocalScale: {x: 0.27361807, y: 0.27361807, z: 0.27361807}
   m_Children: []
   m_Father: {fileID: 1904056583}
@@ -26126,8 +26126,8 @@ MonoBehaviour:
   m_text: Exiting the prologue at this time will result in the loss of all progress.
     Are you sure?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 884e229aee81a304589e9411bb978d62, type: 2}
-  m_sharedMaterial: {fileID: 2275971992912794751, guid: 884e229aee81a304589e9411bb978d62, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
+  m_sharedMaterial: {fileID: -962253366466023482, guid: dee42d9a128cdc94e9fceeac3cab7905, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31006,7 +31006,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841244597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.3, y: -2.33, z: 0}
+  m_LocalPosition: {x: -2.83, y: -2.25, z: 0}
   m_LocalScale: {x: 0.18404281, y: 0.18404281, z: 0.18404281}
   m_Children: []
   m_Father: {fileID: 1836029541}
@@ -33264,11 +33264,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: b33934c5859e9f3498f9b6e57a54b07e, type: 3}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: 42b11a953c1c0c24281bca248554368c, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -35365,7 +35365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093785818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5191, y: -2.6701, z: 0}
+  m_LocalPosition: {x: 0.29, y: -2.65, z: 0}
   m_LocalScale: {x: 0.15481141, y: 0.15481141, z: 0.15481141}
   m_Children: []
   m_Father: {fileID: 87561874}
