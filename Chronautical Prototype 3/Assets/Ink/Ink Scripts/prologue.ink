@@ -1032,6 +1032,9 @@ The treasure’s most likely melted by now anyways.
 
 
 ===Election===
+{julesRun: ->JulesSpeechCheck|->ElectionContinue}
+
+=ElectionContinue
 ~ seenElection = true
 ~SET_PARAMETER("PrologueMusic", 5)
 There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
