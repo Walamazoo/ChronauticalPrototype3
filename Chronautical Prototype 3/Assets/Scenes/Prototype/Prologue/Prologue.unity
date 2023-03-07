@@ -2076,7 +2076,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 516432719}
         m_TargetAssemblyTypeName: GameQuit, Assembly-CSharp
-        m_MethodName: Confirm
+        m_MethodName: ConfirmQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5068,7 +5068,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 715661801}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -6719,7 +6719,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -9896,7 +9896,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -11357,7 +11357,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -16967,7 +16967,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -18807,7 +18807,7 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: prologue
-  conversationConversant: {fileID: 915719199}
+  conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
@@ -19547,7 +19547,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -20459,7 +20459,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -21876,11 +21876,11 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: prologue
-  conversationConversant: {fileID: 915719199}
+  conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 1
+  replace: 0
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -24255,7 +24255,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -25023,7 +25023,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -27119,11 +27119,11 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: prologue
-  conversationConversant: {fileID: 915719199}
+  conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
-  replace: 1
+  replace: 0
   skipIfNoValidEntries: 1
   preventRestartOnSameFrameEnded: 0
   stopConversationOnTriggerExit: 0
@@ -31863,7 +31863,7 @@ MonoBehaviour:
   conversation: prologue
   conversationConversant: {fileID: 915719199}
   conversationActor: {fileID: 427082666}
-  startConversationEntryID: -1
+  startConversationEntryID: 1
   exclusive: 0
   replace: 1
   skipIfNoValidEntries: 1
@@ -32930,7 +32930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -32941,7 +32941,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 42b11a953c1c0c24281bca248554368c, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4

@@ -351,11 +351,11 @@ Let's see...
 ===juleslibrary===
 ~SET_PARAMETER("PrologueCharacters", 1)
 #NPC:Jules_Neutral
-{inTutorial: -> TutorialScold| }
+{inTutorial: -> TutorialScold}
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
-~metJules=true
+    ~metJules=true
 
     #sprite:Alistair_Suspicious
     #speaker:Alistair
@@ -523,7 +523,7 @@ Let's see...
             "I'll tell you some other time, alright?"
             
             ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
-            #Jules_Nervous
+            #NPC:Jules_Nervous
             #speaker:Jules
             "Of course."
                 -> juleslibrary
@@ -567,7 +567,7 @@ Let's see...
 "Alistair, now you sound like you really are planning a heist."
 
 #speaker:Alistair
-#sprite:Jules_Assured
+#NPC:Jules_Assured
 "All I need is what's mine."
 
 #speaker:Jules
@@ -604,8 +604,10 @@ Let's see...
 #speaker:Alistair
 "Of course."
 
+~CREATE_TIMELINE_CLUE("Jules can't help", "personclue", "this shouldn't matter", "Only the director is able to open the vault with their code, and the code changes each time the director changes. Need to either get in the director's good graces, or get a new one.")
 #NPC:Darling_Neutral
 #speaker:D4RL1N6
+#sprite:Alistair_Neutral
 "I am sure that there are more options we have not explored. Keep searching."
 
 {seenElection:
@@ -613,9 +615,7 @@ Let's see...
 #sprite:Alistair_Confident
 "I recall an election, perhaps we can find some leads there."
 }
-#sprite:Alistair_Neutral
 //CLUE, Jules can't help, only Director can open vault
-~CREATE_TIMELINE_CLUE("Jules can't help", "personclue", "this shouldn't matter", "Only the director is able to open the vault with their code, and the code changes each time the director changes. Need to either get in the director's good graces, or get a new one.")
 -> DONE
 
 ===runfordirector===
@@ -700,9 +700,9 @@ Let's see...
 "... Perhaps, I will think about it."
 "But I do doubt I would have much success."
 #NPC:Jules_Neutral
+~CREATE_TIMELINE_CLUE("Jules is running", "personclue", "this shouldn't matter", "Jules is now running for director, I'll need to see if this changes anything in the future.")
 "That is quite far away, I'll think about it again once the time is nearer."
 //CLUE, Jules is now running but he may need some help, I should go to the future to see the results etc
-~CREATE_TIMELINE_CLUE("Jules is running", "personclue", "this shouldn't matter", "Jules is now running for director, I'll need to see if this changes anything in the future.")
 -> DONE
 
 ===topicschange===
@@ -721,7 +721,7 @@ Let's see...
 "Oh, but I'm just curious. I think that perhaps the people would like to hear an apology, you know?"
 
 #speaker:Jules
-#Jules_Neutral
+#NPC:Jules_Neutral
 "An apology about what...?"
 
 #speaker:Alistair
@@ -853,14 +853,15 @@ Let's see...
     "You... doing alright?"
     
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~metChild = true
     #speaker:Temperance
     "I'm fine."
-    ~metChild = true
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
 -> childlibrary
 
 =Questions
 #speaker:Temperance
+#NPC:Temperance_Neutral
 "... What do you want?"
     + [Lost?] -> Lost
     + [Parents?] -> Parents
@@ -1032,6 +1033,9 @@ The treasure’s most likely melted by now anyways.
 
 
 ===Election===
+{julesRun: ->JulesSpeechCheck|->ElectionContinue}
+
+=ElectionContinue
 ~ seenElection = true
 ~SET_PARAMETER("PrologueMusic", 5)
 There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
@@ -1154,10 +1158,10 @@ Once Bennet can speak over the crowd, the meeting resumes as the board members b
 "And I am more than happy to {addressFix: address|a dress- ah- excuse me, address} them with you."
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 #NPC:Jules_Nervous
-Jules' speech was littered with uncertainties and filler words, but his heart was in the right place.
-~ seenSpeech = true
-//CLUE, speech was rough, maybe he won't get elected, go back and help him prep?
 ~CREATE_TIMELINE_CLUE("Jules no speech good", "personclue", "this shouldn't matter", "Jules's speech wasn't as good as it should've been, perhaps I should head back in time to help him prepare more.")
+~ seenSpeech = true
+Jules' speech was littered with uncertainties and filler words, but his heart was in the right place.
+//CLUE, speech was rough, maybe he won't get elected, go back and help him prep?
 -> DONE
 
 =JulesSpeechGood
@@ -1323,7 +1327,7 @@ Let's see...
 ===juleslab===
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
-{inTutorial: -> TutorialScold| }
+{inTutorial: -> TutorialScold}
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
@@ -1480,7 +1484,7 @@ Let's see...
     - 
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     #speaker:Jules
-    #Jules_Neutral
+    #NPC:Jules_Neutral
     "It's alright, Alistair."
     "I know you're busy doing..."
     "Whatever it is you do out in the universe."
@@ -1580,8 +1584,8 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
     #NPC:Bennet_Confident
     "Now, begone."
+    ~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
     "I have much work to attend to."
-~CREATE_JOURNAL_OBJECT("Director", "Person", "The director of the lab. A stubborn old man that keeps private matters 100% private.", "Bennet Crabb is the current lab director, a man who keeps the lab on schedule and on task without outside intervention. He's cold and not very sweet to most, and has been director for an incredibly long time. If I can get his help or replace him, I may have a shot.")
 -> directorlab
 
 =Questions
@@ -1773,10 +1777,10 @@ Let's see...
 "Jules still works for the lab. We interned together."
 "I left, but he stayed and got a full time job."
 "He did always like the library in this place..."
-"Perhaps he can help since we can't get through to Bennet."
 ~ vaultDirector = true
-//CLUE, Bennet Crab absolutely refuses to open the vault, may have to be creative
 ~CREATE_TIMELINE_CLUE("Bennet says no", "personclue", "this shouldn't matter", "Bennet Crab, the current director, absolutely refuses to open the vault for me. I should find someone else who works at the lab, perhaps they know the code or a workaround.")
+"Perhaps he can help since we can't get through to Bennet."
+//CLUE, Bennet Crab absolutely refuses to open the vault, may have to be creative
 -> DONE
 
 
@@ -2052,10 +2056,10 @@ The room is packed with people from the city and lab employees, but within the c
     + [Go into vault]
     -> EndingVault
     + [Look around more]
+    ~CREATE_TIMELINE_CLUE("Ending warning", "placeclue", "this shouldn't matter", "Before I leave the planet for good I should go talk to Jules at his congratulations party in the lab.")
     #speaker:Alistair
     "I want to look around more before we leave."
     //CLUE, if I want to leave, I should find Jules at his congrats party again etc
-    ~CREATE_TIMELINE_CLUE("Ending warning", "placeclue", "this shouldn't matter", "Before I leave the planet for good I should go talk to Jules at his congratulations party in the lab.")
     -> LIBRARY
     
 ===EndingVault===
@@ -2491,7 +2495,8 @@ Let's see...
 
 //Uriah Bramble
 ===shopownermarketplace===
-{SET_PARAMETER("PrologueCharacters", 3)}
+~SET_PARAMETER("PrologueCharacters", 3)
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahGreeting")
 #NPC:Uriah_Neutral
 {metShopowner: -> Questions| -> meetShopowner}
 
@@ -2512,14 +2517,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #sprite:Alistair_Embarassed
 "I used to be. Hoping to catch up on what I've missed."
 
-#speaker: Uriah
+#speaker:Uriah
 "I'll do my best to fill you in, then."
 "While you shop, of course."
 ~CREATE_JOURNAL_OBJECT("Shopkeep", "Person", "A shopkeep that offers a variety of different items for purchase. Always has an upbeat attitude", "Full name: Uriah Bramble, they're always happy to help and spread around information. They run the shop to provide for their family, and is certain they'll be able to handle everything that comes their way.")
 -> shopownermarketplace
 
 =Questions
-~PLAY_SOUND("event:/Character Barks/Uriah/UriahGreeting")
 #speaker:Uriah
 #NPC:Uriah_Neutral
 "What can I do for you today?"
@@ -2750,8 +2754,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Temperance Ward
 ===childmarketplace===
-{SET_PARAMETER("PrologueCharacters", 4)}
+~SET_PARAMETER("PrologueCharacters", 4)
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
+#NPC:Temperance_Neutral
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
@@ -2760,7 +2765,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "Hello there! What's your name?"
     
     #speaker:Child
-    #NPC:Temperance_Neutral
     "...Temperance."
     
     #speaker:Alistair
@@ -2775,10 +2779,10 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "You... doing alright?"
     
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
+    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~metChild = true
     #speaker:Temperance
     "I'm fine."
-    ~metChild = true
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
 -> childmarketplace
 
 =Questions
@@ -3103,13 +3107,14 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Miriam Harcourt
 ===oldladymarketplace===
-{SET_PARAMETER("PrologueCharacters", 5)}
+~SET_PARAMETER("PrologueCharacters", 5)
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamGreeting")
+#NPC:Miriam_Neutral
 {metOldlady: -> Questions| -> meetOldlady}
 
 =meetOldlady
 ~metOldlady = true
 #speaker:Alistair
-#NPC:Miriam_Neutral
 "Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts."
 "Could you-"
 
@@ -3141,12 +3146,11 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "Then you've come to the right place!"
-"I assure you, I know what they wish I did not!"
 ~CREATE_JOURNAL_OBJECT("Storyteller", "Person", "An old woman who always has an interesting story to tell.", "Full name Miriam Harcourt, she's a local who often tells stories to anyone willing to approach her. However they seem to be nothing more than fantasy, even if she claims they're truthful.")
+"I assure you, I know what they wish I did not!"
 -> oldladymarketplace
 
 =Questions
-~PLAY_SOUND("event:/Character Barks/Miriam/MiriamGreeting")
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
