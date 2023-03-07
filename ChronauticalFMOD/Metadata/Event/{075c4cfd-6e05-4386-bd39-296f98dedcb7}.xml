@@ -74,6 +74,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{b9cc5d11-942d-4003-91da-17ca749fff61}">
+		<property name="volume">
+			<value>3.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{0722a3f9-53d8-4aa9-87cb-500a880415d0}</destination>
 		</relationship>
@@ -113,6 +116,9 @@
 		</property>
 		<property name="length">
 			<value>2</value>
+		</property>
+		<property name="volume">
+			<value>5.5</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{a045a789-c8d3-41d0-8cde-6cf5635454c7}</destination>

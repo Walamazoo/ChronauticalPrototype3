@@ -671,10 +671,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638137244304723056
+  lastModified: 638137331232947191
   FileSizes:
   - Name: Desktop
-    Value: 25724864
+    Value: 25726464
   Exists: 1
 --- !u!114 &-3101581901042768319
 MonoBehaviour:
@@ -979,6 +979,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 937
+--- !u!114 &-685078190215964980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Teaser
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Teaser
+  Guid:
+    Data1: -1119478119
+    Data2: 1086841999
+    Data3: -1620127343
+    Data4: -427286338
+  Banks:
+  - {fileID: -3183584489734680474}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 418927
 --- !u!114 &-672283632046990307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,6 +1170,7 @@ MonoBehaviour:
   - {fileID: -4256542153786001479}
   - {fileID: 8119512853139906739}
   - {fileID: -3714469120123701231}
+  - {fileID: -685078190215964980}
   EditorParameters:
   - {fileID: -2511519730040003175}
   - {fileID: 3363450570680894778}
@@ -1155,7 +1183,7 @@ MonoBehaviour:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638137244304723056
+  cacheTime: 638137331233088821
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -2138,10 +2166,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638134457444702878
+  lastModified: 638137331233088821
   FileSizes:
   - Name: Desktop
-    Value: 4274
+    Value: 4312
   Exists: 1
 --- !u!114 &8119512853139906739
 MonoBehaviour:

@@ -254,17 +254,17 @@ Let's see....
         ~SET_PARAMETER("PrologueCharacters", 1)
 - 8:    
         ~ roomDescription = "Library is empty and the vault is abandoned."
-        ~SET_PARAMETER("PrologueTime", 5)
+        //~SET_PARAMETER("PrologueTime", 5)
         ~SET_PARAMETER("PrologueAmbience", 3)
         ~SET_PARAMETER("PrologueCharacters", 0)
 - 9:    
         ~ roomDescription = "Library is empty and the vault is abandoned. I feel rumbling below me."
-        ~SET_PARAMETER("PrologueTime", 10)
+        //~SET_PARAMETER("PrologueTime", 10)
         ~SET_PARAMETER("PrologueAmbience", 4)
         ~SET_PARAMETER("PrologueCharacters", 0)
 - 10:   
         ~ roomDescription = "Library is lost. Fire everywhere, metal melting, vault too hot to touch."
-        ~SET_PARAMETER("PrologueTime", 10)
+        //~SET_PARAMETER("PrologueTime", 10)
         ~SET_PARAMETER("PrologueAmbience", 5)
         ~SET_PARAMETER("PrologueCharacters", 0)
 }
