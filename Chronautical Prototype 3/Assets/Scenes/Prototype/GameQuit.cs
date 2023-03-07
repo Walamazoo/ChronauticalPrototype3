@@ -8,6 +8,8 @@ public class GameQuit : MonoBehaviour
 {
     [SerializeField] private GameObject conformationPopupMenu;
     [SerializeField] private CustomInkFunctions customInkFunctions;
+    [SerializeField] GameObject journalButton;
+    [SerializeField] GameObject minimapButton;
 
     void Update()
     {
@@ -15,11 +17,21 @@ public class GameQuit : MonoBehaviour
         {
             customInkFunctions.ToggleFilterInteractable(false);
             customInkFunctions.ToggleSliderInteractable(false);
+            journalButton.GetComponent<Button>().interactable = false;
+            minimapButton.GetComponent<Button>().interactable = false;
             conformationPopupMenu.SetActive(true);
         }
     }
 
     public void ConfirmQuit(){
         Application.Quit();
+    }
+
+    public void ConfirmCancel(){
+        customInkFunctions.ToggleFilterInteractable(true);
+        customInkFunctions.ToggleSliderInteractable(true);
+        journalButton.GetComponent<Button>().interactable = true;
+        minimapButton.GetComponent<Button>().interactable = true;
+        conformationPopupMenu.SetActive(false);
     }
 }
