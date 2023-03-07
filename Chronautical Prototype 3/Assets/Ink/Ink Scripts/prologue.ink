@@ -441,9 +441,9 @@ Let's see...
 "What can I help you with?"
     + [Why are you here?] ->WhyHere
     + [What have you been up to?] ->WhatUp
-    * {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
+    * {julesRun == true} {time == 5} [Practice address] ->fumbleword
     * {vaultDirector == true} [Help with vault?] ->vault
-    * {seenElection == true} [Speech topics] ->topicschange
+    * {julesRun == true} [Speech topics] ->topicschange
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
@@ -823,6 +823,7 @@ Let's see...
 #NPC:Jules_Confident
 "Thanks Alistair."
 "I'll try my best."
+~ speechImproved = true
 ~ helpComplete = helpComplete +1
 -> DONE
 
@@ -1429,7 +1430,6 @@ Let's see...
     * {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
     * {vaultDirector == true} [Help with vault?] ->vault
     * {seenElection == true} [Speech topics] ->topicschange
-    //^Could change speech topics to be linked to the marketplace, maybe talk to specific people or nearly everyone to get this option? Might need to revise marketplace dialogue/add new convos, will need to edit what the change in speech is
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
