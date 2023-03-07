@@ -1083,12 +1083,12 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Well."
         "Um, so."
         "I know I'm not very old."
-        //#NPC:Temperance_Teen_Distant
+        #NPC:Temperance_Teen_Distant
         "But when I was little, I wanted to work on the core."
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenHappy")
         "I wanted to see all the artifacts the lab gets from all over the universe."
         "I..."
-        //#NPC:Temperance_Teen_Neutral
+        #NPC:Temperance_Teen_Neutral
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
         "I thought that you people were just... I thought you just wanted to do that, just be dedicated to science and discovery."
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
