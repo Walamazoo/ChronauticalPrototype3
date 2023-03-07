@@ -204,7 +204,6 @@ Let's see....
 "Now, I'd better find some way into this vault..."
 
 ~inTutorial = false
-~SET_PARAMETER("PrologueMusic", 0)
 ~TOGGLE_MINIMAP_INTERACTABLE(true)
 #speaker:D4RL1N6
 "We should investigate the vault further now that it is not too hot for your human hands."
@@ -983,6 +982,7 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
 #sprite:Alistair_Assured
 "You're right, as usual."
 "If I remember correctly, the Director is usually somewhere in the lab."
+~SET_PARAMETER("PrologueMusic", 0)
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
 ->DONE
 
@@ -1122,6 +1122,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
 #speaker: 
 #sprite:Alistair_Nervous
 It takes a while for the room to quiet down despite the Director's shouting.
+~SET_PARAMETER("PrologueCharacters", 0)
 Once Bennet can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 {julesRun:
     -> JulesSpeechCheck
@@ -1131,11 +1132,11 @@ Once Bennet can speak over the crowd, the meeting resumes as the board members b
     "There seems to be much unrest here."
     "Perhaps if there were a new director, these people would find peace..."
     
+    ~SET_PARAMETER("PrologueMusic", 0)
     #speaker:Alistair
     #sprite:Alistair_Suspicious
     "And perhaps if we could have a friend in a high place we can access the vault."
 }
-~SET_PARAMETER("PrologueCharacters", 0)
 //CLUE, an election happens at this year, it seems people aren't happy with the current leadership
 ~CREATE_TIMELINE_CLUE("People aren't happy", "placeclue", "this shouldn't matter", "The election for director happens this year. People seem to be displeased with how Bennet is handling evacuation for the planet.")
 -> DONE
@@ -1166,6 +1167,7 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 
 =JulesSpeechGood
 ~SET_PARAMETER("PrologueMusic", 5)
+~SET_PARAMETER("PrologueCharacters", 1)
 #speaker:Jules
 #NPC:Jules_Neutral
 "Hello everyone."
@@ -1181,6 +1183,7 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 "Please, come to me at any time with them and we can discuss."
 "Thank you."
 ~ seenSpeech = true
+~SET_PARAMETER("PrologueCharacters", 0)
 ~SET_PARAMETER("PrologueMusic", 0)
 {helpComplete == 3: -> DirectorCheck| -> END}
 
@@ -1906,6 +1909,8 @@ The room is packed with people from the city and lab employees, but within the c
     -> Ending
 
 ===Ending===
+~SET_PARAMETER("PrologueMusic", 5)
+~SET_PARAMETER("PrologueCharacters", 1)
 #background:Vault
 #speaker:Jules
 #NPC:Jules_Neutral
@@ -2057,12 +2062,16 @@ The room is packed with people from the city and lab employees, but within the c
     -> EndingVault
     + [Look around more]
     ~CREATE_TIMELINE_CLUE("Ending warning", "placeclue", "this shouldn't matter", "Before I leave the planet for good I should go talk to Jules at his congratulations party in the lab.")
+    ~SET_PARAMETER("PrologueMusic", 0)
+    ~SET_PARAMETER("PrologueCharacters", 0)
     #speaker:Alistair
     "I want to look around more before we leave."
     //CLUE, if I want to leave, I should find Jules at his congrats party again etc
     -> LIBRARY
     
 ===EndingVault===
+~SET_PARAMETER("PrologueMusic", 10)
+~SET_PARAMETER("PrologueCharacters", 0)
 #background:Vault
     As the vault door opens, I rush inside.
     My cubby is just as I left it.
@@ -2088,6 +2097,7 @@ The room is packed with people from the city and lab employees, but within the c
     "Let's go."
 
 //visual effect? Warpy wwoowowowowww
+~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 #background:Black
 #speaker:Alistair
 #sprite:Alistair_Distant
@@ -2104,6 +2114,8 @@ The words engraved into the metal are barely legible.
 
 ===Teaser===
 //black background
+~SET_PARAMETER("TeaserGo", 1)
+~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 #speaker:???
 "Ugh..."
 "My flippin' head hurts..."
