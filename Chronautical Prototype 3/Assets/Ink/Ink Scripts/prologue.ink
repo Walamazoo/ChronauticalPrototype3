@@ -704,6 +704,7 @@ Let's see...
 ~CREATE_TIMELINE_CLUE("Jules is running", "personclue", "this shouldn't matter", "Jules is now running for director, I'll need to see if this changes anything in the future.")
 "That is quite far away, I'll think about it again once the time is nearer."
 //CLUE, Jules is now running but he may need some help, I should go to the future to see the results etc
+~julesRun = true
 -> DONE
 
 ===topicschange===
@@ -739,6 +740,7 @@ Let's see...
 "Just some food for thought."
 ~ speechImproved = true
 ~ helpComplete = helpComplete +1
+{helpComplete == 3: -> DirectorCheck| -> END}
 -> DONE
 
 ===fumbleword===
@@ -790,6 +792,7 @@ Let's see...
 "Perfect."
 ~ helpComplete = helpComplete +1
 ~ addressFix = true
+{helpComplete == 3: -> DirectorCheck| -> END}
 -> DONE
 
 ===speechpeptalk===
@@ -825,6 +828,7 @@ Let's see...
 "I'll try my best."
 ~ speechImproved = true
 ~ helpComplete = helpComplete +1
+{helpComplete == 3: -> DirectorCheck| -> END}
 -> DONE
 
 
@@ -1074,7 +1078,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~SET_PARAMETER("PrologueCharacters", 4)
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenFearful")
         #speaker:Temperance
-        #NPC:Temperance_Teen_Neutral
+        #NPC:Temperance_teen_Neutral
         "Okay..."
         "Well."
         "Um, so."
@@ -1183,7 +1187,8 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 "These are extremely troubling times and I would call upon the lab to formally apologize to the people of Elore-Nabyke for the mistreatment of the core and the lax reaction to such a catastrophic mistake."
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #NPC:Jules_Neutral
-"In addition, as Director, I would work with the community to establish an evacuation of the planet as quickly and as comfortably as possible. I would also establish weekly reports to the community that the lab serves to promote full transparency in the years to come."
+"In addition, as Director, I would work with the community to establish an evacuation of the planet as quickly and as comfortably as possible."
+"I would also establish weekly reports to the community that the lab serves to promote full transparency in the years to come."
 "I am sure you all have many questions and concerns for me to {addressFix: address."|a dress-a-excuse me, address."}
 #NPC:Jules_Confident
 "Please, come to me at any time with them and we can discuss."
@@ -1193,7 +1198,7 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 ~SET_PARAMETER("PrologueMusic", 0)
 {helpComplete == 3: -> DirectorCheck| -> END}
 
-= DirectorCheck
+===DirectorCheck===
 ~ julesDirector = true
 //CLUE, Jules' speech was pretty good, no way he's not the Director now, go in the future and check?
 ~CREATE_TIMELINE_CLUE("Jules talk good here", "personclue", "this shouldn't matter", "The prep paid off for Jules's speech, I should be able to check the future now and see if he's been elected to director.")
@@ -2106,6 +2111,7 @@ The room is packed with people from the city and lab employees, but within the c
     #speaker:Alistair
     #sprite:Alistair_Confident
     "Let's go."
+    #NPC:None
 
 //visual effect? Warpy wwoowowowowww
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
@@ -2128,6 +2134,7 @@ The words engraved into the metal are barely legible.
 ~SET_PARAMETER("TeaserGo", 1)
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 #speaker:???
+#sprite:None
 "Ugh..."
 "My flippin' head hurts..."
 #background:Clinic
