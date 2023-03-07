@@ -2495,7 +2495,8 @@ Let's see...
 
 //Uriah Bramble
 ===shopownermarketplace===
-{SET_PARAMETER("PrologueCharacters", 3)}
+~SET_PARAMETER("PrologueCharacters", 3)
+~PLAY_SOUND("event:/Character Barks/Uriah/UriahGreeting")
 #NPC:Uriah_Neutral
 {metShopowner: -> Questions| -> meetShopowner}
 
@@ -2523,7 +2524,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 -> shopownermarketplace
 
 =Questions
-~PLAY_SOUND("event:/Character Barks/Uriah/UriahGreeting")
 #speaker:Uriah
 #NPC:Uriah_Neutral
 "What can I do for you today?"
@@ -2754,7 +2754,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Temperance Ward
 ===childmarketplace===
-{SET_PARAMETER("PrologueCharacters", 4)}
+~SET_PARAMETER("PrologueCharacters", 4)
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
 #NPC:Temperance_Neutral
 {metChild: -> Questions| -> meetChild}
@@ -3107,7 +3107,8 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 //Miriam Harcourt
 ===oldladymarketplace===
-{SET_PARAMETER("PrologueCharacters", 5)}
+~SET_PARAMETER("PrologueCharacters", 5)
+~PLAY_SOUND("event:/Character Barks/Miriam/MiriamGreeting")
 #NPC:Miriam_Neutral
 {metOldlady: -> Questions| -> meetOldlady}
 
@@ -3150,7 +3151,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 -> oldladymarketplace
 
 =Questions
-~PLAY_SOUND("event:/Character Barks/Miriam/MiriamGreeting")
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
