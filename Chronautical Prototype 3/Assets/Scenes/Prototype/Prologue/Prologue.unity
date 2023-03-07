@@ -18807,7 +18807,7 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: prologue
-  conversationConversant: {fileID: 915719199}
+  conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
@@ -21876,7 +21876,7 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: prologue
-  conversationConversant: {fileID: 915719199}
+  conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
@@ -27119,7 +27119,7 @@ MonoBehaviour:
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
   conversation: prologue
-  conversationConversant: {fileID: 915719199}
+  conversationConversant: {fileID: 1132767747}
   conversationActor: {fileID: 427082666}
   startConversationEntryID: -1
   exclusive: 0
