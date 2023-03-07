@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Temperance
   m_EditorClassIdentifier: 
   Expressions:
-  - {fileID: 21300000, guid: af04d4a9b8a05a843b918a519aa243a8, type: 3}
-  - {fileID: 21300000, guid: b2311dc2c86c5844bb2e50f33cd3f44c, type: 3}
+  - {fileID: 21300000, guid: 20e8bb942ace50b49bf6d44403d58ce0, type: 3}
+  - {fileID: 21300000, guid: f925823a426e69b4a9d07c5f72c745f6, type: 3}
   - {fileID: 21300000, guid: 0f574c5abeaf04b44ab87c68a909f361, type: 3}
   - {fileID: 21300000, guid: 8076e1c4fd0c6c8418e1451a5e3fc988, type: 3}
