@@ -264,9 +264,6 @@ public class JournalManager : MonoBehaviour
             case "personclue":
                 if(personClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = personClues[currentYear];
-                    if(temp.Contains(timelineClue)){
-                        return;
-                    }
                     temp.Add(timelineClue);
                     personClues[currentYear] = temp;
                 }
@@ -280,9 +277,6 @@ public class JournalManager : MonoBehaviour
             case "itemclue":
                 if(itemClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = itemClues[currentYear];
-                    if(temp.Contains(timelineClue)){
-                        return;
-                    }
                     temp.Add(timelineClue);
                     itemClues[currentYear] = temp;
                 }
@@ -295,9 +289,6 @@ public class JournalManager : MonoBehaviour
             case "placeclue":
                 if(placeClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = placeClues[currentYear];
-                    if(temp.Contains(timelineClue)){
-                        return;
-                    }
                     temp.Add(timelineClue);
                     placeClues[currentYear] = temp;
                 }
@@ -361,12 +352,12 @@ public class JournalManager : MonoBehaviour
                         tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
                         tempClue.GetComponent<ClueButton>().updateType("PlaceClue");
                         if(variable % 10 > 0 && variable % 10 < 6){
-                            GameObject temp = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
-                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp.transform.GetChild(0).gameObject, temp, temp.transform.GetChild(1).gameObject);
+                            GameObject temp3 = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp3.transform.GetChild(0).gameObject, temp3, temp3.transform.GetChild(1).gameObject);
                         }
                         else{
-                            GameObject temp2 = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
-                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp2.transform.GetChild(0).gameObject, temp2, temp2.transform.GetChild(1).gameObject);
+                            GameObject temp4 = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
+                            tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp4.transform.GetChild(0).gameObject, temp4, temp4.transform.GetChild(1).gameObject);
                         }
                         Debug.Log("Place is being called in update journal");
                         count++;

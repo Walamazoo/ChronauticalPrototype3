@@ -351,11 +351,11 @@ Let's see...
 ===juleslibrary===
 ~SET_PARAMETER("PrologueCharacters", 1)
 #NPC:Jules_Neutral
-{inTutorial: -> TutorialScold| }
+{inTutorial: -> TutorialScold}
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
-~metJules=true
+    ~metJules=true
 
     #sprite:Alistair_Suspicious
     #speaker:Alistair
@@ -523,7 +523,7 @@ Let's see...
             "I'll tell you some other time, alright?"
             
             ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
-            #Jules_Nervous
+            #NPC:Jules_Nervous
             #speaker:Jules
             "Of course."
                 -> juleslibrary
@@ -567,7 +567,7 @@ Let's see...
 "Alistair, now you sound like you really are planning a heist."
 
 #speaker:Alistair
-#sprite:Jules_Assured
+#NPC:Jules_Assured
 "All I need is what's mine."
 
 #speaker:Jules
@@ -721,7 +721,7 @@ Let's see...
 "Oh, but I'm just curious. I think that perhaps the people would like to hear an apology, you know?"
 
 #speaker:Jules
-#Jules_Neutral
+#NPC:Jules_Neutral
 "An apology about what...?"
 
 #speaker:Alistair
@@ -861,6 +861,7 @@ Let's see...
 
 =Questions
 #speaker:Temperance
+#NPC:Temperance_Neutral
 "... What do you want?"
     + [Lost?] -> Lost
     + [Parents?] -> Parents
@@ -1326,7 +1327,7 @@ Let's see...
 ===juleslab===
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
-{inTutorial: -> TutorialScold| }
+{inTutorial: -> TutorialScold}
 {metJules: -> Questions|-> meetJules}
 
 =meetJules
@@ -1483,7 +1484,7 @@ Let's see...
     - 
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     #speaker:Jules
-    #Jules_Neutral
+    #NPC:Jules_Neutral
     "It's alright, Alistair."
     "I know you're busy doing..."
     "Whatever it is you do out in the universe."
@@ -2755,6 +2756,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ===childmarketplace===
 {SET_PARAMETER("PrologueCharacters", 4)}
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
+#NPC:Temperance_Neutral
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
@@ -2763,7 +2765,6 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "Hello there! What's your name?"
     
     #speaker:Child
-    #NPC:Temperance_Neutral
     "...Temperance."
     
     #speaker:Alistair
@@ -3107,12 +3108,12 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 //Miriam Harcourt
 ===oldladymarketplace===
 {SET_PARAMETER("PrologueCharacters", 5)}
+#NPC:Miriam_Neutral
 {metOldlady: -> Questions| -> meetOldlady}
 
 =meetOldlady
 ~metOldlady = true
 #speaker:Alistair
-#NPC:Miriam_Neutral
 "Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts."
 "Could you-"
 
