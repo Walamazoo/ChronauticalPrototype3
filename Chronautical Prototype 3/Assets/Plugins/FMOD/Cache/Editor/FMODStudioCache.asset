@@ -671,10 +671,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638137331232947191
+  lastModified: 638137363271420004
   FileSizes:
   - Name: Desktop
-    Value: 25726464
+    Value: 25726400
   Exists: 1
 --- !u!114 &-3101581901042768319
 MonoBehaviour:
@@ -898,6 +898,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2050
+--- !u!114 &-1643147595091430526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TeaserGo
+  m_EditorClassIdentifier: 
+  Name: TeaserGo
+  StudioPath: parameter:/TeaserGo
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1444055693
+    data2: 1775547705
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - None
+  - TeaserStart
+  - Value C
+  Exists: 1
 --- !u!114 &-1176309006468972317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,33 +1006,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 937
---- !u!114 &-685078190215964980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Teaser
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Teaser
-  Guid:
-    Data1: -1119478119
-    Data2: 1086841999
-    Data3: -1620127343
-    Data4: -427286338
-  Banks:
-  - {fileID: -3183584489734680474}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 418927
 --- !u!114 &-672283632046990307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,6 @@ MonoBehaviour:
   - {fileID: -4256542153786001479}
   - {fileID: 8119512853139906739}
   - {fileID: -3714469120123701231}
-  - {fileID: -685078190215964980}
   EditorParameters:
   - {fileID: -2511519730040003175}
   - {fileID: 3363450570680894778}
@@ -1179,11 +1178,12 @@ MonoBehaviour:
   - {fileID: 5849859586278197601}
   - {fileID: 3701327384239590129}
   - {fileID: 6863754793641951076}
+  - {fileID: -1643147595091430526}
   MasterBanks:
   - {fileID: -3183584489734680474}
   StringsBanks:
   - {fileID: 7704761900061420789}
-  cacheTime: 638137331233088821
+  cacheTime: 638137363271537686
   cacheVersion: 131593
 --- !u!114 &355117766915084339
 MonoBehaviour:
@@ -1439,6 +1439,33 @@ MonoBehaviour:
   - MarketHushed
   - MarketPanic
   - MarketEmpty
+  Exists: 1
+--- !u!114 &2136007359313351010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Prologue Music/TeaserGo
+  m_EditorClassIdentifier: 
+  Name: TeaserGo
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1444055693
+    data2: 1775547705
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - None
+  - TeaserStart
+  - Value C
   Exists: 1
 --- !u!114 &2685275193706255162
 MonoBehaviour:
@@ -2166,10 +2193,10 @@ MonoBehaviour:
   Path: ../ChronauticalFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638137331233088821
+  lastModified: 638137363271537686
   FileSizes:
   - Name: Desktop
-    Value: 4312
+    Value: 4314
   Exists: 1
 --- !u!114 &8119512853139906739
 MonoBehaviour:
@@ -2225,9 +2252,10 @@ MonoBehaviour:
   - {fileID: -5119996785337854615}
   - {fileID: -2812720523171813693}
   - {fileID: 6527101526895472154}
+  - {fileID: 2136007359313351010}
   MinDistance: 1
   MaxDistance: 20
-  Length: 96000
+  Length: 518994
 --- !u!114 &8481454871713415175
 MonoBehaviour:
   m_ObjectHideFlags: 0
