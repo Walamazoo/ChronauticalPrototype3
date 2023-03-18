@@ -63,33 +63,24 @@ public class EnvironmentFilter : MonoBehaviour
         }
 
         if(!isNew){
-            //Debug.Log("not new");
             foreach(Transform child in possibleFilter.transform){
-                //Debug.Log("checking children");
                 if(child.TryGetComponent<SpriteRenderer>(out var renderer)){
-                    //Debug.Log("that's a sprite");
                     Color childColor = renderer.color;
                     renderer.color = new Color(childColor.r,childColor.g,childColor.b,0.5f);
-                    //Debug.Log("setting to half alpha");
                     if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
                         spriteInteraction.ToggleInteraction(false);
-                        //Debug.Log("setting to uninteractable");
                     }
                 }
                 else{
                     foreach(Transform childChild in child.transform){
                         if(childChild.TryGetComponent<Animator>(out var animator)){
                             animator.speed=0;
-                            //Debug.Log("setting to not playing");
                         }
                     }
                 }
             }
-            //Debug.Log("Current filter is" + currentFilter);
-            //Debug.Log("Possible filter is" + possibleFilter);
         }
         else{
-            //Debug.Log("is new");
             currentFilter.SetActive(false);
             possibleFilter.SetActive(false);
             
@@ -112,17 +103,14 @@ public class EnvironmentFilter : MonoBehaviour
                 if(child.TryGetComponent<SpriteRenderer>(out var renderer)){
                     Color childColor = renderer.color;
                     renderer.color = new Color(childColor.r,childColor.g,childColor.b,1f);
-                    //Debug.Log("setting to full alpha");
                     if(child.TryGetComponent<SpriteInteraction>(out var spriteInteraction)){
                         spriteInteraction.ToggleInteraction(false);
-                        //Debug.Log("setting to interactable");
                     }
                 }
                 else{
                     foreach(Transform childChild in child.transform){
                         if(childChild.TryGetComponent<Animator>(out var animator)){
                             animator.speed=1;
-                            //Debug.Log("setting to playing");
                         }
                     }
                 }
@@ -130,8 +118,6 @@ public class EnvironmentFilter : MonoBehaviour
 
             currentFilter.SetActive(true);
             possibleFilter = blankFilter;
-            //Debug.Log("Current filter is" + currentFilter);
-            //Debug.Log("Possible filter is" + possibleFilter);
         }
     }
 }

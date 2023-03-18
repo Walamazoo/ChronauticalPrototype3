@@ -99,14 +99,9 @@ public class SliderController : MonoBehaviour
 
     public void LaunchNewTime()
     {
-        //sliderSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Time Travel");
         
         currentYearText.text = currentYear.ToString();
-
-        //DialogueSystemInkIntegration.SetInkNumber("CurrentSliderValue", currentSliderValue);
-        //DialogueSystemInkIntegration.SetInkNumber("CurrentYear", currentYear);
-
         extender.setTime((int)currentSliderValue);
         environmentFilter.setCurrentTime((int)currentSliderValue-1);
         environmentFilter.setFilter(true);
