@@ -443,7 +443,6 @@ Let's see...
     + [What have you been up to?] ->WhatUp
     * {julesRun == true} {time == 5} [Practice address] ->fumbleword
     * {vaultDirector == true} [Help with vault?] ->vault
-    * {julesRun == true} [Speech topics] ->topicschange
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
@@ -1434,7 +1433,6 @@ Let's see...
     + {time == 5} [Announcement?] ->disaster
     * {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
     * {vaultDirector == true} [Help with vault?] ->vault
-    * {seenElection == true} [Speech topics] ->topicschange
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
