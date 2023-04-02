@@ -858,7 +858,7 @@ Let's see...
     "You... doing alright?"
     
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~CREATE_JOURNAL_OBJECT("Temperance", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
     ~metChild = true
     #speaker:Temperance
     "I'm fine."
@@ -2813,7 +2813,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "You... doing alright?"
     
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~CREATE_JOURNAL_OBJECT("Temperance", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
     ~metChild = true
     #speaker:Temperance
     "I'm fine."
