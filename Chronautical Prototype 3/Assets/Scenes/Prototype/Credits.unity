@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143.93518, y: -470.5148}
-  m_SizeDelta: {x: 372.1434, y: 574.5566}
+  m_AnchoredPosition: {x: -130.07164, y: -821.4761}
+  m_SizeDelta: {x: 372.1434, y: 989.6037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194930992
 MonoBehaviour:
@@ -193,20 +193,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Producer
+  m_Text: 'Creative Director
 
 
-    Creative Director
+    Producer
 
 
-    Lead Programmer
+    Producer
+
+
+    System Designer
+
+
+    Lead
+    Programmer
 
 
     Programmer
 
 
-    System
-    Designer
+    Programmer
 
 
     Artist
@@ -215,7 +221,8 @@ MonoBehaviour:
     Composer
 
 
-    Sound Designer
+    Sound
+    Designer
 
 
     Narrative Designer
@@ -224,8 +231,17 @@ MonoBehaviour:
     Writer
 
 
-    Marketing
-    Director'
+    Writer
+
+
+    Marketing Director
+
+
+    Executive
+    Producer
+
+
+    Executive Producer'
 --- !u!222 &194930993
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -268,7 +284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.614506, y: -1392}
+  m_AnchoredPosition: {x: 55.112007, y: -1936.8586}
   m_SizeDelta: {x: 361.48, y: 47.1323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341339356
@@ -423,7 +439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77, y: -2699.81}
+  m_AnchoredPosition: {x: 64.49751, y: -3195.6687}
   m_SizeDelta: {x: 978.7603, y: 449.7419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528402174
@@ -517,7 +533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67, y: 71}
+  m_AnchoredPosition: {x: 70.00001, y: 71}
   m_SizeDelta: {x: 522.4858, y: 427.4185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619320051
@@ -592,7 +608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90.43195, y: -1066.1893}
+  m_AnchoredPosition: {x: -96.934456, y: -1594.048}
   m_SizeDelta: {x: 265.137, y: 342.7205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129313572
@@ -628,23 +644,22 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Jules
-
-
-    Bennet
-
-
-    Miriam
-
-
-    Uriah
+  m_Text: 'Miriam
 
 
     Temperance (Child)
 
 
-    Temperance
-    (Teen)'
+    Temperance (Teen)
+
+
+    Jules
+
+
+    Uriah
+
+
+    Bennet'
 --- !u!222 &1129313573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -687,7 +702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.136505, y: -1516}
+  m_AnchoredPosition: {x: 56.634018, y: -2060.8586}
   m_SizeDelta: {x: 494.955, y: 65.2583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255244577
@@ -766,7 +781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.61422, y: -862.19995}
+  m_AnchoredPosition: {x: 55.111725, y: -1390.0586}
   m_SizeDelta: {x: 494.955, y: 65.2583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476506453
@@ -1074,7 +1089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.61422, y: -91.957214}
+  m_AnchoredPosition: {x: 64.61423, y: -91.957214}
   m_SizeDelta: {x: 494.955, y: 65.2583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742775031
@@ -1153,8 +1168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176.13647, y: -471.83832}
-  m_SizeDelta: {x: 228, y: 577.2034}
+  m_AnchoredPosition: {x: 189.99998, y: -829.99976}
+  m_SizeDelta: {x: 228, y: 1006.6505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789414608
 MonoBehaviour:
@@ -1189,10 +1204,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Steven Wren
+  m_Text: 'Aeris Meadows
 
 
-    Aeris Meadows
+    Jae-Kyu Park
 
 
     Steven Wren
@@ -1201,27 +1216,43 @@ MonoBehaviour:
     Aidan Molina
 
 
-    Aidan
-    Molina
+    Steven
+    Wren
+
+
+    Nathan Gratzer
+
+
+    Aidan Molina
 
 
     Aeris Meadows
 
 
-    Shannon Master
+    Shannon
+    Master
 
 
     Shannon Master
-
-
-    Emma
-    Callahan
 
 
     Emma Callahan
 
 
-    Shannon Master'
+    Emma Callahan
+
+
+    Max
+    Moreno
+
+
+    Shannon Master
+
+
+    Will Emigh
+
+
+    Nathan Mishler'
 --- !u!222 &1789414609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1339,8 +1370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.136505, y: -1946.472}
-  m_SizeDelta: {x: 361.48, y: 795.632}
+  m_AnchoredPosition: {x: 57, y: -2493.9998}
+  m_SizeDelta: {x: 563.8038, y: 795.632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853460451
 MonoBehaviour:
@@ -1375,23 +1406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Jae-Kyu Park
-
-
-    Nathan Gratzer
-
-
-    Caitlyn Betar
-
-
-    Max Moreno
-
-
-    Will
-    Emigh
-
-
-    Nathan Mishler
+  m_Text: 'Caitlyn Betar
 
 
     Rush Swope
@@ -1400,19 +1415,26 @@ MonoBehaviour:
     Norbert Herber
 
 
-
-    Our friends
-    and family who have supported us all throughout development
-
-
-
-    And you!
+    Ian Sundstrom
 
 
 
 
-    In
-    memory of Mike Sellers'
+    Our
+    friends and family who have supported us all throughout development
+
+
+
+
+    And
+    you!
+
+
+
+
+
+
+    In memory of Mike Sellers'
 --- !u!222 &1853460452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1455,8 +1477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55, y: -2675}
-  m_SizeDelta: {x: 232.5633, y: 310.0844}
+  m_AnchoredPosition: {x: 64, y: -3175}
+  m_SizeDelta: {x: 461.4806, y: 341.3785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935457685
 MonoBehaviour:
@@ -1478,7 +1500,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5cb8a2111e03c54b943f608b7e44ea2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 773c6f18daf1e4748aa6b99a1edd5729, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1631,7 +1653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 192.50247, y: -1071.1411}
+  m_AnchoredPosition: {x: 185.99998, y: -1598.9998}
   m_SizeDelta: {x: 260.7321, y: 352.6231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026898304
@@ -1667,23 +1689,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Aidan Molina
+  m_Text: 'Marceline Hileman
 
 
-    Steven Wren
+    Shannon Master
 
 
-    Marceline Hileman
+    Shannon Master
+
+
+    Aidan
+    Molina
 
 
     Aidan Molina
 
 
-    Shannon
-    Master
-
-
-    Shannon Master'
+    Steven Wren'
 --- !u!222 &2026898305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1726,7 +1748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.614506, y: -1354.2}
+  m_AnchoredPosition: {x: 55.112007, y: -1899.0586}
   m_SizeDelta: {x: 494.955, y: 65.2583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119126968
