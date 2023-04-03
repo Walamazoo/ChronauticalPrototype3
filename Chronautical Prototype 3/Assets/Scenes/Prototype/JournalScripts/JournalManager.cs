@@ -312,8 +312,6 @@ public class JournalManager : MonoBehaviour
     public void updateTimeline(){
         int count = 0;
         float xCount = 0f;
-        int personCount = 0;
-        int placeCount = 0;
         for(int i = 0; i < 3; i++){
             switch(i){
                 case 0:
@@ -339,7 +337,6 @@ public class JournalManager : MonoBehaviour
                             }
                             Debug.Log("Person is being called in update journal");
                             count++;
-                            personCount++;
                             xCount += 20f; 
                         }
                     }   
@@ -347,7 +344,12 @@ public class JournalManager : MonoBehaviour
                 case 1:
                 count = 0;
                     foreach(int variable in placeClues.Keys){
-                        xCount = personCount * 20f;
+                        if(personClues.ContainsKey(variable)){
+                            xCount = personClues[variable].Count * 20;
+                        }
+                        else{
+                            xCount = 0;
+                        }
                         List<TimelineClue> tempList = placeClues[variable];
 
                         foreach(TimelineClue clue in tempList){
@@ -367,7 +369,6 @@ public class JournalManager : MonoBehaviour
                             }
                             Debug.Log("Place is being called in update journal");
                             count++;
-                            placeCount++;
                             xCount += 20f;
                         }
                     } 
@@ -376,8 +377,6 @@ public class JournalManager : MonoBehaviour
                 count = 0;
                     foreach(int variable in itemClues.Keys){
                         List<TimelineClue> tempList = itemClues[variable];
-                        xCount = (personCount + placeCount) * 20;
-                        
                         foreach(TimelineClue clue in tempList){
                             GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(variable % 10).gameObject;
                             GameObject tempClue = Instantiate<GameObject>(questionClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f),
@@ -426,11 +425,8 @@ public class JournalManager : MonoBehaviour
 
     public void AddToJournalDialogueLog(string adder){
         dialogueLog.GetComponent<Text>().text += adder + System.Environment.NewLine;
-        Debug.Log(dialogueLog.GetComponent<Text>().text.Length);
         if(dialogueLog.GetComponent<Text>().text.Length > 5000){
-            Debug.Log("Over 5000");
             int difference = dialogueLog.GetComponent<Text>().text.Length - 5000;
-            Debug.Log(difference);
             dialogueLog.GetComponent<Text>().text = dialogueLog.GetComponent<Text>().text.Remove(0, difference + 1);
         }
     }
