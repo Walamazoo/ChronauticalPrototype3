@@ -292,6 +292,7 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         if(currentSprite.Equals(playerSprite)){
             if(spriteName == "None" || expressionName == "None"){
                 currentSprite.GetComponent<Image>().sprite = null;
+                 currentSprite.GetComponent<Image>().color = new Color32(217,198,155,100);
                 return;
             }
         }
