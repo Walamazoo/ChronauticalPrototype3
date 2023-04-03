@@ -13,7 +13,8 @@ public class CreditConvoEnder : MonoBehaviour
     void Start()
     {
         dialogueSystem = FindObjectOfType<DialogueSystemExtender>().gameObject;
-        dialogueSystem.SetActive(false);
+        PixelCrushers.DialogueSystem.DialogueManager.StopAllConversations();
+        //dialogueSystem.SetActive(false);
         
     }
 
