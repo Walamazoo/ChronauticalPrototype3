@@ -404,11 +404,10 @@ public class JournalManager : MonoBehaviour
     }
 
     void DestroyChildren(){
-        int year = 1;
-        while(year <= 10){
+        for(int year = 1; year <= 10; year++){
             GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(year % 10).gameObject;
-            while(timelineButton.transform.childCount > 0){
-                Destroy(timelineButton.transform.GetChild(0).gameObject);
+            foreach (Transform child in timelineButton.transform) {
+                GameObject.Destroy(child.gameObject);
             }
         }
     }
@@ -427,9 +426,9 @@ public class JournalManager : MonoBehaviour
 
     public void AddToJournalDialogueLog(string adder){
         dialogueLog.GetComponent<Text>().text += adder + System.Environment.NewLine;
-        while(dialogueLog.GetComponent<Text>().text.Length > 1500){
-            dialogueLog.GetComponent<Text>().text.Remove(0, 50);
-        }
+        //while(dialogueLog.GetComponent<Text>().text.Length > 1500){
+        //    dialogueLog.GetComponent<Text>().text.Remove(0, 50);
+        //}
     }
 
     public void ToggleFilterInteractable(bool state){
