@@ -123,6 +123,9 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
                         JournalManager.AddToJournalDialogueLog(tagValue + ": ");
                         break;
                     case SPRITE_TAG:
+                        if(tagValue == "None"){
+                            SetSprite("None", "None", playerSprite);
+                        }
                         string[] spriteStrings = tagValue.Split('_');
                         string spriteName = spriteStrings[0].Trim();
                         string spriteExpression = tagValue;
@@ -286,9 +289,17 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
     private void SetSprite(string spriteName, string expressionName, GameObject currentSprite)
     {
-        if(spriteName == "None" || expressionName == "None"){
-            currentSprite.GetComponent<SpriteRenderer>().sprite = null;
-            return;
+        if(currentSprite.Equals(playerSprite)){
+            if(spriteName == "None" || expressionName == "None"){
+                currentSprite.GetComponent<Image>().sprite = null;
+                return;
+            }
+        }
+        else{
+            if(spriteName == "None" || expressionName == "None"){
+                currentSprite.GetComponent<SpriteRenderer>().sprite = null;
+                return;
+            }
         }
         foreach (CharacterSprite character in spriteList.characterSprites)
         {

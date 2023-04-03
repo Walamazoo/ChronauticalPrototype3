@@ -144,7 +144,6 @@ It's clear even from this distance that touching the handle would burn my skin.
 #sprite:Alistair_Neutral 
 ~TOGGLE_JOURNAL(true)
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
-//~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~TOGGLE_SLIDER(true)
 -> LIBRARY
 
