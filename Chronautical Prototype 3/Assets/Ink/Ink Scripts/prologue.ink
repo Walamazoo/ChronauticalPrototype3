@@ -54,7 +54,7 @@ Atlantis.
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
-(But perhaps there’s... Something, anything I’m missing. There has to be.
+(But perhaps there’s... Something, anything I’m missing. There has to be.)
 (A book, a piece of information, I haven't found yet.)
 
 #sprite:Alistair_Neutral
@@ -1846,7 +1846,7 @@ Everyone is silent, just looking up.
 "It is with my..."
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSad")
 #NPC:Bennet_Neutral
-"Deepest regret that I must announce that the planet will be inhabitable in 5 years time and subsequently destroyed."
+"Deepest regret that I must announce that the planet will be uninhabitable in 5 years time and subsequently destroyed."
 
 The lab employees are silent but a few dip their heads.
 
