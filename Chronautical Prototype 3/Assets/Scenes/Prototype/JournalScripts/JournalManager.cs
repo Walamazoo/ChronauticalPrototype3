@@ -426,9 +426,13 @@ public class JournalManager : MonoBehaviour
 
     public void AddToJournalDialogueLog(string adder){
         dialogueLog.GetComponent<Text>().text += adder + System.Environment.NewLine;
-        //while(dialogueLog.GetComponent<Text>().text.Length > 1500){
-        //    dialogueLog.GetComponent<Text>().text.Remove(0, 50);
-        //}
+        Debug.Log(dialogueLog.GetComponent<Text>().text.Length);
+        if(dialogueLog.GetComponent<Text>().text.Length > 5000){
+            Debug.Log("Over 5000");
+            int difference = dialogueLog.GetComponent<Text>().text.Length - 5000;
+            Debug.Log(difference);
+            dialogueLog.GetComponent<Text>().text = dialogueLog.GetComponent<Text>().text.Remove(0, difference + 1);
+        }
     }
 
     public void ToggleFilterInteractable(bool state){
