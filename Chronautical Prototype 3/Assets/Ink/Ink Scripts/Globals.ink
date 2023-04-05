@@ -67,6 +67,8 @@ EXTERNAL TOGGLE_MINIMAP_INTERACTABLE(state)
 
 EXTERNAL PLAY_MUSIC(music)
 EXTERNAL PLAY_AMBIENCE(ambience)
+EXTERNAL STOP_MUSIC()
+EXTERNAL STOP_AMBIENCE()
 EXTERNAL SET_PARAMETER(parName, value)
 EXTERNAL PLAY_SOUND(sound)
 
@@ -98,6 +100,10 @@ EXTERNAL CHANGE_SCENE(sceneName)
     ~return music
 === function PLAY_AMBIENCE(ambience) ===
     ~return ambience
+=== function STOP_MUSIC() ===
+    ~return
+=== function STOP_AMBIENCE() ===
+    ~return
 === function SET_PARAMETER(parName, value) ===
     ~return parName
     ~return value

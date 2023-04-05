@@ -81,9 +81,14 @@ public class CustomInkFunctions : MonoBehaviour
         gameAmbience.start();
     }
 
-    public void Stop ()
+    public void StopMusic ()
     {
         gameMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void StopAmbience ()
+    {
+        gameAmbience.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void PlaySound (string sound)

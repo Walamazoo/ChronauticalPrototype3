@@ -1856,6 +1856,7 @@ The lab employees are silent but a few dip their heads.
 -> LAB
 
 ===Congratsparty===
+~SET_PARAMETER("PrologueAmbience", 7)
 #speaker:Alistair
 Beyond the lab's foyer, groups of people crowd into the Director's office.
 Jules' office.
@@ -1924,6 +1925,7 @@ The room is packed with people from the city and lab employees, but within the c
 ===Ending===
 ~SET_PARAMETER("PrologueMusic", 5)
 ~SET_PARAMETER("PrologueCharacters", 1)
+~STOP_AMBIENCE()
 #background:Vault
 #speaker:Jules
 #NPC:Jules_Neutral
@@ -2156,6 +2158,7 @@ And a journal.
 (But those are his things.)
 (If those are here,)
 (Then where the hell is Alistair?!)
+~STOP_MUSIC()
 ~CHANGE_SCENE("credits")
 -> END
 

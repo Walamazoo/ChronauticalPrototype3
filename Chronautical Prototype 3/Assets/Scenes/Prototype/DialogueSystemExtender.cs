@@ -64,7 +64,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
         
         story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
         story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
-        story.BindExternalFunction("STOP_MUSIC", () => {customInkFunctions.GetComponent<CustomInkFunctions>().Stop();});
+        story.BindExternalFunction("STOP_MUSIC", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopMusic();});
+        story.BindExternalFunction("STOP_AMBIENCE", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopAmbience();});
         story.BindExternalFunction("PLAY_SOUND", (string sound) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlaySound(sound);});
         story.BindExternalFunction("START_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StartEmitter();});
         story.BindExternalFunction("STOP_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopEmitter();});
@@ -97,7 +98,8 @@ public class DialogueSystemExtender : DialogueSystemInkIntegration
 
             story.BindExternalFunction("PLAY_MUSIC", (string music) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayMusic(music);});
             story.BindExternalFunction("PLAY_AMBIENCE", (string ambience) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlayAmbience(ambience);});
-            story.BindExternalFunction("STOP_MUSIC", () => {customInkFunctions.GetComponent<CustomInkFunctions>().Stop();});
+            story.BindExternalFunction("STOP_MUSIC", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopMusic();});
+            story.BindExternalFunction("STOP_AMBIENCE", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopAmbience();});
             story.BindExternalFunction("PLAY_SOUND", (string sound) => {customInkFunctions.GetComponent<CustomInkFunctions>().PlaySound(sound);});
             story.BindExternalFunction("START_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StartEmitter();});
             story.BindExternalFunction("STOP_EMITTER", () => {customInkFunctions.GetComponent<CustomInkFunctions>().StopEmitter();});
