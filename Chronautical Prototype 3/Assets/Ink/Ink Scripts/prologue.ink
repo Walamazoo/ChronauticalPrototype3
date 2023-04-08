@@ -2264,6 +2264,7 @@ Let's see...
                 -> END
 - 5:    Everyone in the marketplace is gathered around a large projection of the Director, {directorName}. 
             -> END
+            //LINK TO ANNOUNCEDESTRUTION AND EDIT IT PLS
 - 6:    The marketplace is completely empty. Booths and stalls still line the square, but no trinkets or produce are displayed and there's not a soul in sight. 
             -> END
 - 7:    The people in the market are bubbling with hushed chatter and gossip. 
