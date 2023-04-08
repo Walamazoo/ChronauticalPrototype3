@@ -141,6 +141,7 @@ public class JournalManager : MonoBehaviour
             OpenOrClose += 1;
             exitButton.SetActive(false);
             ToggleFilterInteractable(true);
+            DestroyChildren();
             //MainCamera.GetComponent<CameraParallax>().CameraCanMove(true);
             FMODUnity.RuntimeManager.PlayOneShot("event:/Sound/SFX/UI/Journal close");
         }
@@ -316,16 +317,17 @@ public class JournalManager : MonoBehaviour
                 case 0:
                 count = 0;
                     foreach(int variable in personClues.Keys){
+                        xCount = 0;
                         List<TimelineClue> tempList = personClues[variable];
 
                         foreach(TimelineClue clue in tempList){
                             GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(variable % 10).gameObject;
                             GameObject tempClue = Instantiate<GameObject>(personClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f), 
                                 Quaternion.identity, timelineButton.transform) as GameObject;
-                            tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
+                            tempClue.transform.GetChild(1).GetComponent<Text>().text = clue.fullDescription;
                             tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
                             tempClue.GetComponent<ClueButton>().updateType("PersonClue");
-                            if(variable % 10 > 0 && variable % 10 < 6){
+                            if((variable % 10) > 0 && (variable % 10) < 6){
                                 GameObject temp = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
                                 tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp.transform.GetChild(0).gameObject, temp, temp.transform.GetChild(1).gameObject);
                             }
@@ -342,16 +344,22 @@ public class JournalManager : MonoBehaviour
                 case 1:
                 count = 0;
                     foreach(int variable in placeClues.Keys){
+                        if(personClues.ContainsKey(variable)){
+                            xCount = personClues[variable].Count * 20;
+                        }
+                        else{
+                            xCount = 0;
+                        }
                         List<TimelineClue> tempList = placeClues[variable];
 
                         foreach(TimelineClue clue in tempList){
                             GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(variable % 10).gameObject;
                             GameObject tempClue = Instantiate<GameObject>(exclamationClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f), 
                                 Quaternion.identity, timelineButton.transform) as GameObject;
-                            tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
+                            tempClue.transform.GetChild(1).GetComponent<Text>().text = clue.fullDescription;
                             tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
                             tempClue.GetComponent<ClueButton>().updateType("PlaceClue");
-                            if(variable % 10 > 0 && variable % 10 < 6){
+                            if((variable % 10) > 0 && (variable % 10) < 6){
                                 GameObject temp3 = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
                                 tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp3.transform.GetChild(0).gameObject, temp3, temp3.transform.GetChild(1).gameObject);
                             }
@@ -369,16 +377,15 @@ public class JournalManager : MonoBehaviour
                 count = 0;
                     foreach(int variable in itemClues.Keys){
                         List<TimelineClue> tempList = itemClues[variable];
-                        
                         foreach(TimelineClue clue in tempList){
                             GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(variable % 10).gameObject;
                             GameObject tempClue = Instantiate<GameObject>(questionClue, timelineButton.transform.position + new Vector3(xCount, 0f, 0f),
                                 Quaternion.identity, timelineButton.transform) as GameObject;
-                            tempClue.transform.GetChild(1).GetComponent<Text>().text = tempList[count].fullDescription;
+                            tempClue.transform.GetChild(1).GetComponent<Text>().text = clue.fullDescription;
                             tempClue.transform.GetChild(2).GetComponent<Text>().text = variable.ToString();
                             tempClue.GetComponent<ClueButton>().updateType("ItemClue");
                             Debug.Log("Item is being called in update journal");
-                            if(variable % 10 > 0 && variable % 10 < 6){
+                            if((variable % 10) > 0 && (variable % 10) < 6){
                                 GameObject temp = JournalTimeline.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
                                 tempClue.GetComponent<ClueButton>().SetYearBackgroundDescription(temp.transform.GetChild(0).gameObject, temp, temp.transform.GetChild(1).gameObject);
                             }
@@ -391,6 +398,15 @@ public class JournalManager : MonoBehaviour
                         }
                     } 
                     break;
+            }
+        }
+    }
+
+    void DestroyChildren(){
+        for(int year = 1; year <= 10; year++){
+            GameObject timelineButton = JournalTimeline.transform.GetChild(0).gameObject.transform.GetChild(year % 10).gameObject;
+            foreach (Transform child in timelineButton.transform) {
+                GameObject.Destroy(child.gameObject);
             }
         }
     }
@@ -409,6 +425,10 @@ public class JournalManager : MonoBehaviour
 
     public void AddToJournalDialogueLog(string adder){
         dialogueLog.GetComponent<Text>().text += adder + System.Environment.NewLine;
+        if(dialogueLog.GetComponent<Text>().text.Length > 5000){
+            int difference = dialogueLog.GetComponent<Text>().text.Length - 5000;
+            dialogueLog.GetComponent<Text>().text = dialogueLog.GetComponent<Text>().text.Remove(0, difference + 1);
+        }
     }
 
     public void ToggleFilterInteractable(bool state){

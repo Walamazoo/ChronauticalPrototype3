@@ -54,7 +54,7 @@ Atlantis.
 My colleagues are all gone. 
 The lab will be lost.
 The planet will be lost.
-(But perhaps there’s... Something, anything I’m missing. There has to be.
+(But perhaps there’s... Something, anything I’m missing. There has to be.)
 (A book, a piece of information, I haven't found yet.)
 
 #sprite:Alistair_Neutral
@@ -144,7 +144,6 @@ It's clear even from this distance that touching the handle would burn my skin.
 #sprite:Alistair_Neutral 
 ~TOGGLE_JOURNAL(true)
 ~CREATE_JOURNAL_OBJECT("D4RL1N6", "Person", "My robot companion that helps to keep me on task.", "I built D4RL1N6 myself, and he's quickly become one of my best friends as he keeps me company when no one else will.")
-//~CREATE_TIMELINE_CLUE("End of beginning", "placeclue", "No way to save the planet.", "All of my attempts have failed to save Elore-Nabyke. I have to retrieve what's in the vault instead.")
 ~TOGGLE_SLIDER(true)
 -> LIBRARY
 
@@ -858,7 +857,7 @@ Let's see...
     "You... doing alright?"
     
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~CREATE_JOURNAL_OBJECT("Temperance", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
     ~metChild = true
     #speaker:Temperance
     "I'm fine."
@@ -1847,7 +1846,7 @@ Everyone is silent, just looking up.
 "It is with my..."
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSad")
 #NPC:Bennet_Neutral
-"Deepest regret that I must announce that the planet will be inhabitable in 5 years time and subsequently destroyed."
+"Deepest regret that I must announce that the planet will be uninhabitable in 5 years time and subsequently destroyed."
 
 The lab employees are silent but a few dip their heads.
 
@@ -1857,6 +1856,7 @@ The lab employees are silent but a few dip their heads.
 -> LAB
 
 ===Congratsparty===
+~SET_PARAMETER("PrologueAmbience", 7)
 #speaker:Alistair
 Beyond the lab's foyer, groups of people crowd into the Director's office.
 Jules' office.
@@ -1925,6 +1925,7 @@ The room is packed with people from the city and lab employees, but within the c
 ===Ending===
 ~SET_PARAMETER("PrologueMusic", 5)
 ~SET_PARAMETER("PrologueCharacters", 1)
+~STOP_AMBIENCE()
 #background:Vault
 #speaker:Jules
 #NPC:Jules_Neutral
@@ -2157,6 +2158,7 @@ And a journal.
 (But those are his things.)
 (If those are here,)
 (Then where the hell is Alistair?!)
+~STOP_MUSIC()
 ~CHANGE_SCENE("credits")
 -> END
 
@@ -2814,7 +2816,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "You... doing alright?"
     
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
-    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~CREATE_JOURNAL_OBJECT("Temperance", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
     ~metChild = true
     #speaker:Temperance
     "I'm fine."
