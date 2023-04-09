@@ -1350,9 +1350,6 @@ Let's see...
     "Jules? Is that you?"
     
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesGreeting")
-    #speaker:
-    Jules’s face breaks into a shocked smile, caught off guard by the familiar voice.
-    
     #speaker:Jules
     "Alistair!"
     "Alistair, you-"
@@ -1366,9 +1363,16 @@ Let's see...
     "But it's good to see you again!"
     
     #speaker:Jules
-    "I'm sorry, it is good to see you too..."
+    "I'm sorry, I got ahead of myself, it is good to see you too..."
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
-    "Where have you been? You were gone for so long, we were all worried something had happened."
+    "You were gone for so long, we were all worried something had happened."
+    "Did you leave Strale?"
+    
+    #speaker:Alistair
+    "Actually, I went off planet, off Elore-Nabyke."
+    
+    #speaker:Jules
+    "Where did you go? What were you doing?"
     
     +[Been out and about] 
         
@@ -1396,7 +1400,7 @@ Let's see...
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
-        "Ha! You are too easy to read my friend." -> juleslab
+        "Ha! You are too easy to read my friend."
     +[Adventuring] 
         
         #sprite:Alistair_Assured
@@ -1422,7 +1426,15 @@ Let's see...
         ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
-        "Ha! You are too easy to read my friend." -> juleslab
+        "Ha! You are too easy to read."
+        
+        -
+        #speaker:Jules
+        "Regardless..."
+        "I'm happy you're back, my friend."
+        
+        #speaker:Alistair
+        "Me too, it's too to see you again." -> juleslab
 
 =Questions
 #speaker:Jules
