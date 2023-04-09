@@ -1554,7 +1554,7 @@ Let's see...
 
 #speaker:Alistair
 #sprite:Alistair_Embarassed
-"Ah-"
+(Here goes nothing.)
 "Sir, do you not remember me?"
 "I'm Alistair!"
 "I was a junior researcher here at OPAL with Jules Ambrose?"
@@ -1569,12 +1569,16 @@ Let's see...
 #NPC:Bennet_Neutral
 "I would have preferred to have forgotten that name."
 "But your history of poor disciplinary marks have made it taxing..."
+
+#speaker:Alistair
+(I see Bennet hasn't changed...)
 //lore check
     + [What marks?]
     #speaker:Alistair
     "I'm..."
     #sprite:Alistair_Nervous
     "I'm not sure what you could be referencing, sir!"
+    (Hopefully nothing to do with the core...)
     
     ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSurprised")
     #speaker:Bennet
@@ -1584,6 +1588,7 @@ Let's see...
     #speaker:Alistair
     #sprite:Alistair_Nervous
     "I am quite sorry, sir."
+    (Hopefully he's not thinking of anything to do with the core...)
     "But I assure you I'm not the same young researcher you remember."
     
     - 
@@ -1628,22 +1633,26 @@ Let's see...
 
 #speaker:Bennet
 #NPC:Bennet_Confident
-"Yes, it's been quite busy for a few weeks now."
-"Which is why I have very little time for idle chatter..."
+"Indeed..."
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
-"Did something happen? Why is the lab so busy?"
+"Did something happen? Why're there so many people?"
 
 #speaker:Bennet
 "..."
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetThinking")
 #NPC:Bennet_Neutral
 "A Trade Seam to the Gold Belt opened up."
+//lore check
 "Trade and artifacts are moving through the lab like water."
-"Each artifact must be dated, categorized, analyzed."
-"And there are hundreds of cases on my desk now, so-"
-"Begone."
+"Each must be dated, categorized, analyzed..."
+"And there are hundreds of cases on my desk now."
+"So leave be me."
+
+#speaker:Alistair
+(Usually that sort of work is for junior researchers...)
+(Guess the lab must really be busy.)
 -> DONE
 
 
@@ -1654,7 +1663,8 @@ Let's see...
 
 #speaker:Bennet
 "It is a necessary distraction for now."
-"It is a way for those interested in working for the lab in the future to show off their knowledge and ability."
+"In the past, we have found promising young scientists from the Fair."
+"Many partake to display their knowledge and ability to one day work for OPAL."
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetHappy")
 "I have seen some promising experiments on display."
 "But few will be able to reach the level of excellence we demand."
@@ -1662,7 +1672,22 @@ Let's see...
 
 #speaker:Alistair
 #sprite:Alistair_Sad
-"I see."
+"I see..."
+
+#sprite:Alistair_Neutral
+"Do you recall the experiment Jules and I had at our booth?"
+
+#speaker:Bennet
+"Hmph..."
+"Yes."
+"SOMETHING COOL AND SMART"
+//lore check
+"Impressive for mere students of the College..."
+"Now, I have no time for reminiscing, there is much work to be done."
+
+#speaker:Alistair
+(That experiment is what got Jules and I positions at the Lab.)
+(Though Bennet would never admit that.)
 -> DONE
 
 
@@ -1690,16 +1715,19 @@ Let's see...
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
 #speaker:Bennet
 #NPC:Bennet_Confient
-"Not that it would matter, but you were a mere intern."
+"Not that it would matter, but you were a mere junior researcher."
 "Regardless, I refuse to break protocol for your curiosity..."
+
+#speaker:Alistair
+(It was worth a shot.)
 -> DONE
 
 =VaultTalk
 #speaker:Alistair
-"Hello doctor!"
+"Hello Bennet!"
 "I wanted to inquire about, well..."
 #sprite:Alistair_Embarassed
-"I believe I misplaced some of my belongings before I left."
+"Something."
 
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
 #speaker:Bennet
@@ -1707,15 +1735,17 @@ Let's see...
 
 #speaker:Alistair
 "You see..."
-"I left behind some of my belongings in the vault, but-"
+"I believe I misplaced some of my belongings in the vault, but-"
 #sprite:Alistair_Assured
-"I really need them! You wouldn't mind just letting me into the vault for a moment would you?"
+"I really need them!"
+"You wouldn't mind just letting me into the vault for a moment would you?"
 
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSurprised")
 #speaker:Bennet
 "That's preposterous."
 #NPC:Bennet_Confident
-"You are no longer employed here and you should know that civilians are strictly prohibited from accessing any of the vault’s highly classified materials."
+"You are no longer employed here."
+"You should know that civilians are strictly prohibited from accessing any of the vault’s highly classified materials."
     #speaker:Alistair
     "But..."
     + [I need it]
@@ -1727,11 +1757,10 @@ Let's see...
         #speaker:Alistair
         #sprite:Alistair_Sad
         "Sir, please."
-        "I know that this is a breach of protocol, but perhaps you could make an exception for an ex-intern?"
+        "I know that this is a breach of protocol, but perhaps you could make an exception for an ex-employee?"
     - 
         #speaker:Bennet
         #NPC:Bennet_Neutral
-        "Hmph."
         "What even is it that you want from the vault?"
     + [Notes]
         #speaker:Alistair
@@ -1741,6 +1770,7 @@ Let's see...
         #speaker:Bennet
         "Those notes belong to the lab now."
         "When you left your position, those materials became part of the collective research of the lab."
+        //lore check
         
     + [Something?]
         #speaker:Alistair
@@ -1752,8 +1782,7 @@ Let's see...
     - 
         #speaker:Bennet
         "Absolutely not."
-        "No, access to the vault is prohibited."
-        "It matters not what it is you want from it."
+        "It matters not what it is you want from the vault."
     + [I must]
         #speaker:Alistair
         #sprite:Alistair_Confident
@@ -1767,13 +1796,16 @@ Let's see...
         #NPC:Bennet_Confident
         "Silence, I have already made my decision."
         ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
-        "Begone now, I am incredibly occupied at the moment."
+        "You have already done enough damage, Alistair."
+        //lore check (does anyone know Alistair messed with the core?)
+        "I don't need you meddling where you do not belong..."
+        "Now leave, I have much work to attend to."
         
 #speaker:Alistair
 #sprite:Alistair_Sad
 #NPC:None
-(How infuriating!)
-(Speaking to Bennet is like talking to a wall...)
+(Ouch...)
+(That got me nowhere...)
 
 ~PLAY_SOUND("event:/Character Barks/Darling/DarlingFrustrated")
 #speaker:D4RL1N6
@@ -1795,13 +1827,12 @@ Let's see...
 "They may be able to help us or shed light on new information."
 
 #speaker:Alistair
-"Jules still works for the lab. We interned together."
-"I left, but he stayed and got a full time job."
+"Jules still works for the lab.."
+"I left, but he stayed and continued to work for the Lab."
 "He did always like the library in this place..."
 ~ vaultDirector = true
 ~CREATE_TIMELINE_CLUE("Bennet says no", "personclue", "this shouldn't matter", "Bennet Crab, the current director, absolutely refuses to open the vault for me. I should find someone else who works at the lab, perhaps they know the code or a workaround.")
 "Perhaps he can help since we can't get through to Bennet."
-//CLUE, Bennet Crab absolutely refuses to open the vault, may have to be creative
 -> DONE
 
 
