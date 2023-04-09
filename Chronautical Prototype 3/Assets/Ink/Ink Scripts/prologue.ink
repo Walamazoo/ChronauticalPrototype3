@@ -1435,8 +1435,6 @@ Let's see...
     * {seenElection == true} [Election] ->runfordirector
     * {julesRun == true} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
-    #speaker:Alistair
-    "I should go for now."
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
     "Let's speak again soon, Alistair."
@@ -1453,17 +1451,32 @@ Let's see...
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 "Yes, the lab is hosting the planet's annual HESF!"
 "That is- the Higher Education Science Fair."
+//lore check
 "It's exciting, isn't it?"
-"There's so many fresh faces and new experiments all in one place."
+"There's so many new faces and experiments all in one place."
+"It reminds me of when we were fresh graduates with our own booth here."
 
 #speaker:Alistair
 #sprite:Alistair_Confident
-"Do you have an experiment set up here?"
+"Do you have an experiment set up?"
 
 #speaker:Jules
 "Of course!"
-"Though I'm afraid it's a bit of a secret!"
-"Perhaps I'll tell you about it another time."
+"Though I'm afraid it's a bit of a secret."
+
+#speaker:Alistair
+"Why is that?"
+
+#speaker:Jules
+"You know, Bennet takes these things very seriously."
+"He doesn't want me or any of the other employees revealing our personal projects till they've been approved."
+
+#speaker:Alistair
+"Ah. I see."
+(Of course.)
+
+#speaker:Jules
+"I'm sorry, Alistair."
 -> DONE
 
 =wedding
@@ -1481,13 +1494,14 @@ Let's see...
     
 #speaker:Alistair
 #sprite:Alistair_Nervous
-(Oh no.)
-(Curses! I can only travel one year at a time...)
+(Curses!)
+(I can only travel one year at a time...)
     + [Maybe?]
     #speaker:Alistair
     #sprite:Alistair_Sad
-    "Uh- Maybe. I'm really not sure, Jules, I'm all over the place, but maybe?"
-    "I'm really sorry-"
+    "Uh..."
+    "I'm really not sure, Jules, I'm all over the place, but maybe?"
+    "I'm really sorry."
     + [No]
     #speaker:Alistair
     #sprite:Alistair_Sad
@@ -1513,7 +1527,7 @@ Let's see...
 =disaster
 #speaker:Alistair
 #sprite:Alistair_Sad
-"Did you hear the announcement that the Director is giving?"
+"Did you hear the announcement Bennet is giving?"
 
 #speaker:Jules
 "Yes..."
@@ -1534,6 +1548,13 @@ Let's see...
 #NPC:Jules_Nervous
 "All of this will be gone."
 "I just hope Crabb knows what he's doing."
+
+#speaker:Alistair
+"I hope so too..."
+(Should I tell him?)
+(No. No, it's too late.)
+(I just have to fix what I can...)
+//lore check
 -> DONE
 
 //Bennet Crabb
@@ -1827,7 +1848,7 @@ Let's see...
 "They may be able to help us or shed light on new information."
 
 #speaker:Alistair
-"Jules still works for the lab.."
+"Jules still works here..."
 "I left, but he stayed and continued to work for the Lab."
 "He did always like the library in this place..."
 ~ vaultDirector = true
