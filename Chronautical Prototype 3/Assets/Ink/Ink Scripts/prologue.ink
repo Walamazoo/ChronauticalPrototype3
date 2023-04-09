@@ -299,7 +299,7 @@ Let's see...
         - 8:    The library is steeped in gloom. Shelves of books soar to the ceiling in the darkness and some tomes have been abandoned where they lay open on reading desks.
                 +Investigate the vault -> InvestigateVault
                 +{seenPepTalk}Check elsewhere -> END
-        - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly, then hold still once more. 
+        - 9:    The floor vibrates and occasionally shudders under my feet. The books lining the library shift briefly, then hold still once more. 
                 +Investigate the vault -> InvestigateVault
                 +{seenPepTalk}Check elsewhere -> END
         - 10:   Flames have claimed the library. Any metal is now liquid and only aids the fire in its quest for destruction.
@@ -334,7 +334,7 @@ Let's see...
         - 8:    The library is steeped in gloom. Shelves of books soar to the ceiling in the darkness and some tomes have been abandoned where they lay open on reading desks.
                 +Investigate the vault -> InvestigateVault
                 +{seenPepTalk}Check elsewhere -> END
-        - 9:    The floor vibrates and occasionally shutters under my feet. The books lining the library shift briefly, then hold still once more. 
+        - 9:    The floor vibrates and occasionally shudders under my feet. The books lining the library shift briefly, then hold still once more. 
                 +Investigate the vault -> InvestigateVault
                 +{seenPepTalk}Check elsewhere -> END
         - 10:   Flames have claimed the library. Any metal is now liquid and only aids the fire in its quest for destruction.
@@ -1608,7 +1608,7 @@ Let's see...
 
 =Questions
 #speaker:Bennet
-"What do you want?"
+"What do you want now?"
     + {time== 2} [Lab is busy?] -> Busylab
     + {time== 3} [Booths?] -> Booths
     + {time== 4} [Lots of work?] -> Notbusy
@@ -1618,7 +1618,7 @@ Let's see...
         "I should go for now."
         ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
         #speaker:Bennet
-        "Yes, yes, begone. I am quite busy."
+        "Yes, yes, go. I am quite busy."
         -> END
 
 =Busylab
@@ -2250,7 +2250,7 @@ Let's see...
             -> END
         - 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expression as they wait to board.
             -> END
-        - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shutters violently.
+        - 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shudders violently.
             -> END
         }
         -> END
@@ -2280,7 +2280,7 @@ Let's see...
             -> END
 - 9:    Atmos vessels rest in and near the marketplace as lines of people make their way onto them. Most everyone has a suitcase and a somber expression as they wait to board.
             -> END
-- 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shutters violently.
+- 10:   A once large marketplace has now been replaced with empty, collapsing stalls and overgrown walkways. The stench of smoke fills the market. Some shops crumble as the planet shudders violently.
             -> END
 
 }
