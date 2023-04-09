@@ -1547,15 +1547,18 @@ Let's see...
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetGreeting")
 #speaker:Director
 "Hm?"
-"Greetings, I am Bennet Crabb, the Director of the laboratory."
+"Greetings, I am Bennet Crabb, the Director of Off-Planet Artifact Labratories."
+//lore check
 #speaker:Bennet
-"How can I help you?"
+"Do you require something of me?"
 
 #speaker:Alistair
 #sprite:Alistair_Embarassed
 "Ah-"
 "Sir, do you not remember me?"
-"I'm Alistair! I interned here with Jules Ambrose?"
+"I'm Alistair!"
+"I was a junior researcher here at OPAL with Jules Ambrose?"
+//lore check
 
 #speaker:Bennet
 "Alistair?"
@@ -1564,12 +1567,13 @@ Let's see...
 #NPC:Bennet_Confident
 "Of course. Alistair."
 #NPC:Bennet_Neutral
-"I would have preferred to have forgotten that name, but it seems you have returned."
-"Your poor disciplinary marks have most certainly not been forgotten."
+"I would have preferred to have forgotten that name."
+"But your history of poor disciplinary marks have made it taxing..."
+//lore check
     + [What marks?]
     #speaker:Alistair
+    "I'm..."
     #sprite:Alistair_Nervous
-    "I'm-"
     "I'm not sure what you could be referencing, sir!"
     
     ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSurprised")
@@ -1579,14 +1583,15 @@ Let's see...
     + [Sorry]
     #speaker:Alistair
     #sprite:Alistair_Nervous
-    "I am quite sorry, sir. My sincerest apologies."
+    "I am quite sorry, sir."
+    "But I assure you I'm not the same young researcher you remember."
     
     - 
     #speaker:Bennet
-    "You abandoned your duties, your job, here at the lab with nary a hint of warning."
-    "That sort of behavior is most unprofessional."
+    "You abandoned your duties - your job - at the lab with nary a hint of warning."
+    //lore check
     ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
-    "Do not think that your return to the planet will secure you a position once again."
+    "Do not think that your return to Strale will secure you a position once again."
     
     #speaker:Alistair
     "Of course not sir."
