@@ -1165,6 +1165,12 @@ Once Bennet can speak over the crowd, the meeting resumes as the board members b
 #NPC:Jules_Neutral
 "I'm sure you all have many questions and concerns."
 "And I am more than happy to {addressFix: address|a dress- ah- excuse me, address} them with you."
+{addressFix:
+    #speaker:Alistair
+    Good, he got it right that time.
+    - else:
+        ~CREATE_TIMELINE_CLUE("Address fuck up", "personclue", "this shouldn't matter", "Jules messed up saying the word 'address' I'll have to help him practice it.")
+}
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 #NPC:Jules_Nervous
 ~CREATE_TIMELINE_CLUE("Jules no speech good", "personclue", "this shouldn't matter", "Jules's speech wasn't as good as it should've been, perhaps I should head back in time to help him prepare more.")
