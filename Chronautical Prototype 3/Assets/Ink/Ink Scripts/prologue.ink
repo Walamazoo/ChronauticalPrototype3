@@ -349,8 +349,18 @@ Let's see...
 ===juleslibrary===
 ~SET_PARAMETER("PrologueCharacters", 1)
 #NPC:Jules_Neutral
-{inTutorial: -> TutorialScold}
-{metJules: -> Questions|-> meetJules}
+{inTutorial: 
+    -> TutorialScold
+    - else:
+    {metJules: -> Questions|-> meetJules}
+}
+
+=TutorialScold
+#speaker:Alistair
+#sprite:Alistair_Distant
+"That's Jules, my friend from when I worked at the lab."
+"But I don't need to talk to him right now, I should focus on getting into the vault."
+-> END
 
 =meetJules
     ~metJules=true
@@ -440,10 +450,10 @@ Let's see...
 "What can I help you with?"
     + [Why are you here?] ->WhyHere
     + [What have you been up to?] ->WhatUp
-    * {julesRun == true} {time == 5} [Practice address] ->fumbleword
+    * {julesRun == true && time < 6 && addressFix == false} [Practice address] ->fumbleword
     * {vaultDirector == true} [Help with vault?] ->vault
     * {seenElection == true} [Election] ->runfordirector
-    * {julesRun == true} [Ego boost!] ->speechpeptalk
+    //* {julesRun == true && boosted == false}  [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     #speaker:Alistair
     "I should go for now."
@@ -618,7 +628,6 @@ Let's see...
 -> DONE
 
 ===runfordirector===
-~julesRun = true
 {time > 5: ->CannotRun|->CanRun}
 
 =CannotRun
@@ -824,7 +833,7 @@ Let's see...
 #NPC:Jules_Confident
 "Thanks Alistair."
 "I'll try my best."
-~ speechImproved = true
+~ boosted = true
 ~ helpComplete = helpComplete +1
 {helpComplete == 3: -> DirectorCheck| -> END}
 -> DONE
@@ -948,7 +957,10 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
         -> InvestigateVault
     * {hasCode} [Open vault]
         ->EndingWarning
-    + [Do nothing] -> END 
+    + [Do nothing] 
+        #background:Library_Interior
+        "Hm."
+        -> END 
 
 
 ->DarlingPepTalk
@@ -991,6 +1003,7 @@ The vault is a marvel in and of itself. It's a mass of bronze and golden circles
 "You're right, as usual."
 "If I remember correctly, the Director is usually somewhere in the lab."
 ~SET_PARAMETER("PrologueMusic", 0)
+#background:Library_Interior
 "Jules used to say that he slept in his office, it seemed like the Director never left!"
 ->DONE
 
@@ -1076,7 +1089,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~SET_PARAMETER("PrologueCharacters", 4)
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenFearful")
         #speaker:Temperance
-        #NPC:Temperance_teen_Neutral
+        #NPC:Temperance_Teen_Neutral
         "Okay..."
         "Well."
         "Um, so."
@@ -1099,6 +1112,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Yeah..." ->OldLadyMono
     =OldLadyMono
         ~SET_PARAMETER("PrologueCharacters", 5)
+        #speaker:
         #NPC:Miriam_Neutral
         As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
         A few board members shake their heads and cast their eyes downward.
@@ -1134,7 +1148,7 @@ It takes a while for the room to quiet down despite the Director's shouting.
 Once Bennet can speak over the crowd, the meeting resumes as the board members begin to resume their deliberations monotonously. 
 {julesRun:
     -> JulesSpeechCheck
-  - else:
+    - else:
     #speaker:D4RL1N6
     #NPC:Darling_Neutral
     "There seems to be much unrest here."
@@ -1169,6 +1183,8 @@ Once Bennet can speak over the crowd, the meeting resumes as the board members b
     #speaker:Alistair
     Good, he got it right that time.
     - else:
+    #speaker:Alistair
+    Curses, he flubbed "address!" I wonder if I can prevent that...
         ~CREATE_TIMELINE_CLUE("Address fuck up", "personclue", "this shouldn't matter", "Jules messed up saying the word 'address' I'll have to help him practice it.")
 }
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
@@ -1197,6 +1213,14 @@ Jules' speech was littered with uncertainties and filler words, but his heart wa
 #NPC:Jules_Confident
 "Please, come to me at any time with them and we can discuss."
 "Thank you."
+{addressFix:
+    #speaker:Alistair
+    Good, he got it right that time.
+    - else:
+    #speaker:Alistair
+    Curses, he flubbed "address!" I wonder if I can prevent that...
+        ~CREATE_TIMELINE_CLUE("Address fuck up", "personclue", "this shouldn't matter", "Jules messed up saying the word 'address' I'll have to help him practice it.")
+}
 ~ seenSpeech = true
 ~SET_PARAMETER("PrologueCharacters", 0)
 ~SET_PARAMETER("PrologueMusic", 0)
@@ -1334,19 +1358,23 @@ Let's see...
 
 
 //NPCs Convos
-===TutorialScold===
-#speaker:Alistair
-#sprite:Alsitair_Distant
-"That's Jules, my friend from when I interned at the lab."
-"But I don't need to talk to him right now, I should focus on getting into the vault."
-->END
 
 //Jules Ambrose
 ===juleslab===
 {SET_PARAMETER("PrologueCharacters", 1)}
 #NPC:Jules_Neutral
-{inTutorial: -> TutorialScold}
-{metJules: -> Questions|-> meetJules}
+//{inTutorial: 
+    //-> TutorialScold
+    //- else:
+    {metJules: -> Questions|-> meetJules}
+//}
+
+//=TutorialScold
+//#speaker:Alistair
+//"That's Jules, my friend from when I worked at the lab."
+//#sprite:Alistair_Distant
+//"But I don't need to talk to him right now, I should focus on getting into the vault."
+//-> END
 
 =meetJules
 ~metJules=true
@@ -1380,7 +1408,7 @@ Let's see...
     #speaker:Jules
     "Where did you go? What were you doing?"
     
-    +[Been out and about] 
+    +[Avoid the question] 
         
         #sprite:Alistair_Assured
         #speaker:Alistair
@@ -1448,10 +1476,10 @@ Let's see...
     + {time == 3} [Booths?] ->fair
     + {time == 4} [What's new?] ->wedding
     + {time == 5} [Announcement?] ->disaster
-    * {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
+    * {seenSpeech == true && time < 6 && addressFix == false} [Practice address] ->fumbleword
     * {vaultDirector == true} [Help with vault?] ->vault
     * {seenElection == true} [Election] ->runfordirector
-    * {julesRun == true} [Ego boost!] ->speechpeptalk
+    * {julesRun == true && boosted == false} [Ego boost!] ->speechpeptalk
     + [Nothing for now]
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesFarewell")
     #speaker:Jules
@@ -2393,7 +2421,7 @@ Let's see...
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
     "Where have you been? You were gone for so long, we were all worried something had happened."
     
-    +[Been out and about] 
+    +[Avoid the question] 
         
         #sprite:Alistair_Assured
         #speaker:Alistair
@@ -2454,11 +2482,11 @@ Let's see...
 + {time == 2} [Busy?] ->Busy
 + {time == 8} [You okay?] ->Okay
 + {time == 9} [Heading out?] ->Heading
-* {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
+* {seenSpeech == true && time < 6 && addressFix == false} [Practice address] ->fumbleword
 * {vaultDirector == true} [Help with vault?] ->vault
-* {seenElection == true} [Speech topics] ->topicschange
+* {seenElection == true && speechImproved == false && time < 6} [Speech topics] ->topicschange
 * {seenElection == true} [Election] ->runfordirector
-* {julesRun == true} [Ego boost!] ->speechpeptalk
+* {julesRun == true && boosted == false && time < 6} [Ego boost!] ->speechpeptalk
 + [Nothing for now] 
     #speaker:Alistair
     "I should go for now."

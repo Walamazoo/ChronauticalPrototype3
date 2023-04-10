@@ -38,6 +38,8 @@ VAR speechImproved = false
 VAR addressFix = false
 //Variable for if the player has seen Jules' speech
 VAR seenSpeech = false
+//Variable for if the player boosted Jules' ego
+VAR boosted = false
 
 //NPC Variables
 VAR julesPresent = false
