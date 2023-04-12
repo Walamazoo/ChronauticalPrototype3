@@ -1951,8 +1951,6 @@ Everyone is silent, just looking up.
 #NPC:Bennet_Neutral
 "Deepest regret that I must announce that the planet will be uninhabitable in 5 years time and subsequently destroyed."
 
-The lab employees are silent but a few dip their heads.
-
 #speaker:Alistair
 #sprite:Alistair_Suspicious
 (I wonder how many already knew of this?)
@@ -2369,7 +2367,8 @@ Let's see...
                 -> END
 - 5:    Everyone in the marketplace is gathered around a large projection of the Director, {directorName}. 
             -> END
-            //LINK TO ANNOUNCEDESTRUTION AND EDIT IT PLS
+            + [Investigate] -> AnnounceDestruction
+            + Check Elsewhere -> END
 - 6:    The marketplace is completely empty. Booths and stalls still line the square, but no trinkets or produce are displayed and there's not a soul in sight. 
             -> END
 - 7:    The people in the market are bubbling with hushed chatter and gossip. 
