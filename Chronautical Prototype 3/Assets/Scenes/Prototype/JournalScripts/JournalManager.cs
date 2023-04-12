@@ -258,13 +258,22 @@ public class JournalManager : MonoBehaviour
         Debug.Log("Create timeline clue called");
         TimelineClue timelineClue = new TimelineClue(name, type, hoverDescription, fullDescription);
         int currentYear = sliderController.currentYear;
+        bool doAdd = true;
 
         switch(type.ToLower()){
             case "personclue":
                 if(personClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = personClues[currentYear];
-                    temp.Add(timelineClue);
-                    personClues[currentYear] = temp;
+                    foreach(TimelineClue tempTimelineClue in temp){
+                        if (tempTimelineClue.fullDescription.Equals(timelineClue.fullDescription)){
+                            doAdd = false;
+                            break;
+                        }
+                    }
+                    if(doAdd){
+                        temp.Add(timelineClue);
+                        personClues[currentYear] = temp;
+                    }
                 }
                 else{
                     List<TimelineClue> temp = new List<TimelineClue>();
@@ -275,8 +284,16 @@ public class JournalManager : MonoBehaviour
             case "itemclue":
                 if(itemClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = itemClues[currentYear];
-                    temp.Add(timelineClue);
-                    itemClues[currentYear] = temp;
+                    foreach(TimelineClue tempTimelineClue in temp){
+                        if (tempTimelineClue.fullDescription.Equals(timelineClue.fullDescription)){
+                            doAdd = false;
+                            break;
+                        }
+                    }
+                    if(doAdd){
+                        temp.Add(timelineClue);
+                        itemClues[currentYear] = temp;
+                    }
                 }
                 else{
                     List<TimelineClue> temp = new List<TimelineClue>();
@@ -287,8 +304,16 @@ public class JournalManager : MonoBehaviour
             case "placeclue":
                 if(placeClues.ContainsKey(currentYear)){
                     List<TimelineClue> temp = placeClues[currentYear];
-                    temp.Add(timelineClue);
-                    placeClues[currentYear] = temp;
+                    foreach(TimelineClue tempTimelineClue in temp){
+                        if (tempTimelineClue.fullDescription.Equals(timelineClue.fullDescription)){
+                            doAdd = false;
+                            break;
+                        }
+                    }
+                    if(doAdd){
+                        temp.Add(timelineClue);
+                        placeClues[currentYear] = temp;
+                    }
                 }
                 else{
                     List<TimelineClue> temp = new List<TimelineClue>();
