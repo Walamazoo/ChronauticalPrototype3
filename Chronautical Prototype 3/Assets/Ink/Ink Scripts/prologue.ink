@@ -1497,7 +1497,7 @@ Let's see...
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesHappy")
 "Yes, the lab is hosting the planet's annual HESF!"
 "That is- the Higher Education Science Fair."
-//lore check
+//lore check, epic
 "It's exciting, isn't it?"
 "There's so many new faces and experiments all in one place."
 "It reminds me of when we were fresh graduates with our own booth here."
@@ -1600,7 +1600,6 @@ Let's see...
 (Should I tell him?)
 (No. No, it's too late.)
 (I just have to fix what I can...)
-//lore check
 -> DONE
 
 //Bennet Crabb
@@ -1615,7 +1614,6 @@ Let's see...
 #speaker:Director
 "Hm?"
 "Greetings, I am Bennet Crabb, the Director of Off-Planet Artifact Labratories."
-//lore check
 #speaker:Bennet
 "Do you require something of me?"
 
@@ -1625,7 +1623,6 @@ Let's see...
 "Sir, do you not remember me?"
 "I'm Alistair!"
 "I was a junior researcher here at OPAL with Jules Ambrose?"
-//lore check
 
 #speaker:Bennet
 "Alistair?"
@@ -1639,7 +1636,6 @@ Let's see...
 
 #speaker:Alistair
 (I see Bennet hasn't changed...)
-//lore check
     + [What marks?]
     #speaker:Alistair
     "I'm..."
@@ -1661,7 +1657,6 @@ Let's see...
     - 
     #speaker:Bennet
     "You abandoned your duties - your job - at the lab with nary a hint of warning."
-    //lore check
     ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetAngry")
     "Do not think that your return to Strale will secure you a position once again."
     
@@ -1710,8 +1705,7 @@ Let's see...
 "..."
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetThinking")
 #NPC:Bennet_Neutral
-"A Trade Seam to the Gold Belt opened up."
-//lore check
+"A Trade Seam to the Gold Belt reopened up."
 "Trade and artifacts are moving through the lab like water."
 "Each must be dated, categorized, analyzed..."
 "And there are hundreds of cases on my desk now."
@@ -1747,9 +1741,9 @@ Let's see...
 #speaker:Bennet
 "Hmph..."
 "Yes."
-"SOMETHING COOL AND SMART"
-//lore check
-"Impressive for mere students of the College..."
+"A transmatter machine was it?"
+//lighting song, painting with bacteria beh, transmatter, lore check, maybe come back
+"Ice becoming iron, impressive for mere students of the College..."
 "Now, I have no time for reminiscing, there is much work to be done."
 
 #speaker:Alistair
@@ -1837,7 +1831,10 @@ Let's see...
         #speaker:Bennet
         "Those notes belong to the lab now."
         "When you left your position, those materials became part of the collective research of the lab."
-        //lore check
+        
+        #speaker:Alistair
+        #sprite:Alistair_Sad
+        (My work was confiscated...)
         
     + [Something?]
         #speaker:Alistair
@@ -1864,7 +1861,6 @@ Let's see...
         "Silence, I have already made my decision."
         ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetFarewell")
         "You have already done enough damage, Alistair."
-        //lore check (does anyone know Alistair messed with the core?)
         "I don't need you meddling where you do not belong..."
         "Now leave, I have much work to attend to."
         
