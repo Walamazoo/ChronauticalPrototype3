@@ -21,21 +21,21 @@ public class ClueButton : MonoBehaviour
         background.SetActive(true);
         if(type.ToLower() == "personclue"){
             year.GetComponent<Text>().text = clueText.GetComponent<Text>().text;
-            year.GetComponent<Text>().color = Color.blue;
+            year.GetComponent<Text>().color = new Color32(0, 0, 125, 255);
             description.GetComponent<Text>().text = clueHoverText.GetComponent<Text>().text;
-            description.GetComponent<Text>().color = Color.blue;
+            description.GetComponent<Text>().color = new Color32(0, 0, 125, 255);
         }
         else if(type.ToLower() == "itemclue"){
             year.GetComponent<Text>().text = clueText.GetComponent<Text>().text;
-            year.GetComponent<Text>().color = Color.green;
+            year.GetComponent<Text>().color = new Color32(0, 125, 0, 255);
             description.GetComponent<Text>().text = clueHoverText.GetComponent<Text>().text;
-            description.GetComponent<Text>().color = Color.green;
+            description.GetComponent<Text>().color = new Color32(0, 125, 0, 255);
         }
         else{
             year.GetComponent<Text>().text = clueText.GetComponent<Text>().text;
-            year.GetComponent<Text>().color = Color.red;
+            year.GetComponent<Text>().color = new Color32(125, 0, 0, 255);
             description.GetComponent<Text>().text = clueHoverText.GetComponent<Text>().text;
-            description.GetComponent<Text>().color = Color.red;
+            description.GetComponent<Text>().color = new Color32(125, 0, 0, 255);
         }
         
     }
@@ -53,18 +53,18 @@ public class ClueButton : MonoBehaviour
     public void updateType(string typeIn){
         if(typeIn.ToLower() == "personclue"){
             type = "PersonClue";
-            clueText.GetComponent<Text>().color = Color.blue;
-            clueHoverText.GetComponent<Text>().color = Color.blue;
+            clueText.GetComponent<Text>().color = new Color32(0, 0, 125, 255);
+            clueHoverText.GetComponent<Text>().color = new Color32(0, 0, 125, 255);
         }
         else if(typeIn.ToLower() == "itemclue"){
             type = "ItemClue";
-            clueText.GetComponent<Text>().color = Color.green;
-            clueHoverText.GetComponent<Text>().color = Color.green;
+            clueText.GetComponent<Text>().color = new Color32(0, 125, 0, 255);
+            clueHoverText.GetComponent<Text>().color = new Color32(0, 125, 0, 255);
         }
         else{
             type = "PlaceClue";
-            clueText.GetComponent<Text>().color = Color.red;
-            clueHoverText.GetComponent<Text>().color = Color.red;
+            clueText.GetComponent<Text>().color = new Color32(125, 0, 0, 255);
+            clueHoverText.GetComponent<Text>().color = new Color32(125, 0, 0, 255);
         }
     }
 }
