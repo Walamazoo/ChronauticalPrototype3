@@ -1323,7 +1323,6 @@ Let's see...
         - 10:   What was once a lab has now been completely swallowed up by a monstrous hole. Fire has consumed most of the other sections of the building, but the hole seems to shoot straight down to the center of the planet.
             -> END
         }
-        //-> lab
 -> END
 
 === evaluatelab ===
@@ -1915,12 +1914,16 @@ A small projected version of the lab's Director, Bennet Crabb, stands on a pedes
 "It is more than likely that the planet's core malfunctioned, which is a very rare occurrence."
 "There is no need to worry."
 "Indeed. Next month, the lab will host a festival..."
+As Bennet moves onto less sensational news, onlookers begin to drift away.
 -> LAB
 
 ===ScienceFair===
 Booth upon booth line the lab's walls. 
 Young and old scientists stand in front of their experiments to demonstrate their discoveries and to discuss with judges their findings.
-I remember doing the same when I was a fresh intern.
+I remember doing the same when I was in college with Jules.
+
+#speaker:Alistair
+(That feels so long ago now...)
 -> LAB
 
 ===AnnounceDestruction===
@@ -1936,11 +1939,12 @@ Everyone is silent, just looking up.
 "An announcement of a recent discovery."
 #NPC:Bennet_Confident
 "..."
-"It is no secret that our planet's core is a mechanical thing prone to wear and tear. 
+"It is no secret that our planet's core is a mechanical contraption prone to wear and tear." 
 "We at the lab take great care in maintaining the core with the goal of extending the life of our planet by some 50 to 100 years."
 "But."
 "It was discovered this morning that the core has taken on more damage than we had anticipated."
-"The damage to the core is... Mysterious in nature."
+"The damage to the core is..."
+"Mysterious in nature."
 "We do not know where it originated, though we are investigating."
 "It is with my..."
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSad")
@@ -1948,8 +1952,9 @@ Everyone is silent, just looking up.
 "Deepest regret that I must announce that the planet will be uninhabitable in 5 years time and subsequently destroyed."
 
 #speaker:Alistair
-#sprite:Alistair_Suspicious
-(I wonder how many already knew of this?)
+#sprite:Alistair_Sad
+(I thought the core's state would have been discovered years ago.)
+(Bennet must have known sooner...)
 -> LAB
 
 ===Congratsparty===
@@ -1959,6 +1964,7 @@ Beyond the lab's foyer, groups of people crowd into the Director's office.
 Jules' office.
 The room is packed with people from the city and lab employees, but within the center of the crowd, I find Jules.
     * [Speak to Jules] -> Julestalk
+    //+ [Find Bennet] -> BennetConclusion
     + [Leave for now] -> LAB
 
 =Julestalk
@@ -2168,7 +2174,7 @@ The room is packed with people from the city and lab employees, but within the c
     #NPC:Darling_Neutral
     "Alistair."
     "Once we get your treasure from the vault, it is best if we leave the planet."
-    "There is still much work to do."
+    "There is still much work to do elsewhere in the universe."
     
     + [Go into vault]
     -> EndingVault
@@ -2178,7 +2184,6 @@ The room is packed with people from the city and lab employees, but within the c
     ~SET_PARAMETER("PrologueCharacters", 0)
     #speaker:Alistair
     "I want to look around more before we leave."
-    //CLUE, if I want to leave, I should find Jules at his congrats party again etc
     -> LIBRARY
     
 ===EndingVault===
@@ -2209,7 +2214,7 @@ The room is packed with people from the city and lab employees, but within the c
     "Let's go."
     #NPC:None
 
-//visual effect? Warpy wwoowowowowww
+
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
 #background:Black
 #speaker:Alistair
