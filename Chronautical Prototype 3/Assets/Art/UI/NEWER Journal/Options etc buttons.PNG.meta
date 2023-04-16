@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: -2653998438692628379
     second: Options etc buttons_0
+  - first:
+      213: 1760045510691077067
+    second: Options etc buttons_1
+  - first:
+      213: -3533816662724215509
+    second: Options etc buttons_2
+  - first:
+      213: 4268789797375380910
+    second: Options etc buttons_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,10 +106,10 @@ TextureImporter:
       name: Options etc buttons_0
       rect:
         serializedVersion: 2
-        x: 493
-        y: 242
-        width: 765
-        height: 999
+        x: 530
+        y: 1084
+        width: 727
+        height: 157
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,6 +119,69 @@ TextureImporter:
       bones: []
       spriteID: 568d8434b7a1b2bd0800000000000000
       internalID: -2653998438692628379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options etc buttons_1
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 809
+        width: 694
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb334d1110fc6810800000000000000
+      internalID: 1760045510691077067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options etc buttons_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 517
+        width: 726
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d77fcd77c55fec0800000000000000
+      internalID: -3533816662724215509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Options etc buttons_3
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 242
+        width: 694
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead0f5524b9cd3b30800000000000000
+      internalID: 4268789797375380910
       vertices: []
       indices: 
       edges: []
