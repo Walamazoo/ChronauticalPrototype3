@@ -150,38 +150,48 @@ It's clear even from this distance that touching the handle would burn my skin.
 ===Tutorial===
 Let's see....
 { time:
-- 1:    #speaker:D4RL1N6
+- 1:    ~SET_PARAMETER("PrologueAmbience", 0)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
-- 2:    #speaker:D4RL1N6
+- 2:    ~SET_PARAMETER("PrologueAmbience", 1)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
-- 3:    #speaker:D4RL1N6
+- 3:    ~SET_PARAMETER("PrologueAmbience", 1)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
-- 4:    #speaker:D4RL1N6
+- 4:    ~SET_PARAMETER("PrologueAmbience", 1)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
-- 5:    #speaker:D4RL1N6
+- 5:    ~SET_PARAMETER("PrologueAmbience", 0)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
-- 6:    #speaker:D4RL1N6
+- 6:    ~SET_PARAMETER("PrologueAmbience", 2)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
-- 7:    #speaker:D4RL1N6
+- 7:    ~SET_PARAMETER("PrologueAmbience", 0)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
-- 8:    #speaker:D4RL1N6
+- 8:    ~SET_PARAMETER("PrologueAmbience", 3)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
 - 9:    -> TutorialMinimap
-- 10:   #speaker:D4RL1N6
+- 10:   ~SET_PARAMETER("PrologueAmbience", 5)
+        #speaker:D4RL1N6
         #NPC:Darling_Neutral
         "This isn't the right time, Alistair. Go to the year 3929."
 }
 -> END
 
 =TutorialMinimap
+~SET_PARAMETER("PrologueAmbience", 4)
 #speaker:Alistair
 "Perhaps now we can find a way into the vault."
 
