@@ -1811,7 +1811,7 @@ Let's see...
 "I really need them!"
 "You wouldn't mind just letting me into the vault for a moment would you?"
 
-~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetSurprised")
+~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetPreposterous")
 #speaker:Bennet
 "That's preposterous."
 #NPC:Bennet_Confident
