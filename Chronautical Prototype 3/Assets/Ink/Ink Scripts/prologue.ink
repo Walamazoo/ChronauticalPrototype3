@@ -2246,6 +2246,8 @@ The words engraved into the metal are barely legible.
 //black background
 ~SET_PARAMETER("TeaserGo", 1)
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
+~TOGGLE_MINIMAP(false)
+~TOGGLE_MINIMAP_INTERACTABLE(false)
 #speaker:???
 #sprite:None
 "Ugh..."
