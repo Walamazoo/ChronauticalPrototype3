@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130.07164, y: -821.4761}
-  m_SizeDelta: {x: 372.1434, y: 989.6037}
+  m_AnchoredPosition: {x: -130.07164, y: -782}
+  m_SizeDelta: {x: 372.1434, y: 982.0084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194930992
 MonoBehaviour:
@@ -234,11 +234,14 @@ MonoBehaviour:
     Writer
 
 
-    Marketing Director
+    Writer
 
 
-    Executive
-    Producer
+    Marketing
+    Director
+
+
+    Executive Producer
 
 
     Executive Producer'
@@ -284,7 +287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55.112007, y: -1936.8586}
+  m_AnchoredPosition: {x: 55.112007, y: -1919}
   m_SizeDelta: {x: 361.48, y: 47.1323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341339356
@@ -475,7 +478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Thank you for playing the demo!
+  m_Text: 'Thank you for playing the prologue!
 
 
 
@@ -489,8 +492,8 @@ MonoBehaviour:
 
 
 
-    "Run away with me, somewhere
-    among the stars."'
+    "Run away with me,
+    somewhere among the stars."'
 --- !u!222 &528402175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1168,7 +1171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 189.99998, y: -829.99976}
+  m_AnchoredPosition: {x: 189.99998, y: -794.3213}
   m_SizeDelta: {x: 228, y: 1006.6505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789414608
@@ -1242,8 +1245,11 @@ MonoBehaviour:
     Emma Callahan
 
 
-    Max
-    Moreno
+    Aeris
+    Meadows
+
+
+    Max Moreno
 
 
     Shannon Master
@@ -1748,7 +1754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 55.112007, y: -1899.0586}
+  m_AnchoredPosition: {x: 55.112007, y: -1881.2}
   m_SizeDelta: {x: 494.955, y: 65.2583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119126968
