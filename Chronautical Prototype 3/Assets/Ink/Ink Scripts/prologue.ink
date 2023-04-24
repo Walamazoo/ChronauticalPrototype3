@@ -424,7 +424,7 @@ Let's see...
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> juleslibrary
@@ -450,7 +450,7 @@ Let's see...
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> juleslibrary
@@ -487,8 +487,8 @@ Let's see...
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
 "The planet will fold in on itself within a few years."
 "And evacuation plans are underway."
-"Everyone will be off the planet soon..."
-"But the library reminds me of our time as interns here at the lab."
+"Everyone will be off the planet soon."
+"But the library reminds me of when we both worked here at the lab..."
 #NPC:Jules_Neutral
 "Remember that time?"
 "It's truly nostalgic..."
@@ -499,11 +499,12 @@ Let's see...
 "What have you been up to while I've been away?"
         
 #speaker:Jules
-"So much has changed since we were interns here at the lab."
+"So much has changed since we were fresh recruits here at the lab."
 "Many of the people we used to know have moved off planet."
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
 #NPC:Jules_Nervous
-"And well, I have a family now. It's funny how having children can change your perspective."
+"And well, I have a family now."
+"It's funny how having children can change your perspective on so, so much."
 #NPC:Jules_Neutral
 "... But you haven't changed much Alistair."
     + [Have changed] 
@@ -593,7 +594,8 @@ Let's see...
 #speaker:Jules
 #NPC:Jules_Neutral
 "Alistair, only the Director can open the vault."
-"Bennet has a device in his office to open the vault, a key."
+"Bennet has a device in his office to open the vault, a device that generates a code."
+"And the code changes everytime the vault is opened."
 ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
 "But, please, do not consider stealing it."
 
@@ -1070,23 +1072,22 @@ The treasure’s most likely melted by now anyways.
 =ElectionContinue
 ~ seenElection = true
 ~SET_PARAMETER("PrologueMusic", 5)
-There are hundreds of people stuffed into the library, all listening intently to the dozen board members speaking at the front of the room.
-It would be impossible for me to get a word in. 
+There are hundreds of people stuffed into the library, all listening to the dozen board members speaking at the front of the room.
 As crowds of people close in on the board members, I push and wriggle my way closer to the front.
-Now that I'm closer, I can hear a bit more of the board members' speech.
+Now, I can hear a bit more of the board members' speech.
 #speaker:Board Member
 "Come forth, any of you who wish to speak."
-"The floor is open for community comments on the appointment of Bennet Crabb as Lab Director or otherwise miscellaneous topics kindred to the community's concerns." -> ShopownerMono
+"The floor is open for community comments on the appointment of Bennet Crabb as Lab Director of Off-Planet Artifact Labratories." -> ShopownerMono
     =ShopownerMono
         ~SET_PARAMETER("PrologueCharacters", 3)
         #speaker:Uriah
         #NPC:Uriah_Neutral
         "I can speak first."
-        "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Doctor Crabb has devoted to the lab and to Elore-Nabyke."
+        "I think I speak on behalf of the entire community when I say that we are all very thankful for the years of dedicated work Director Crabb has devoted to OPAL, Strale, and Elore-Nabyke."
         ~PLAY_SOUND("event:/Character Barks/Uriah/UriahAngry")
         "But."
-        "I think I also speak for the community when I say that we find the lab and the director's handling of the evacuation of the planet to be entirely abhorrent."
-        "Is it not the lab itself that discovered the core's damaged state? 
+        "I think I also speak for the community when I say that we find the Lab and the Director's handling of the evacuation of the planet to be entirely abhorrent."
+        "Was it not the Lab itself that discovered the core's damaged state? 
         ~PLAY_SOUND("event:/Character Barks/Uriah/UriahFearful")
         "Why have you not put more time into fixing it? Why must we abandon our home?"
         "Why is the lab still functioning as if the planet is not going to explode in a few years?"
@@ -1095,6 +1096,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "I pose these questions not as a way to tear down all the work you all have done, but this is our planet too that you are asking us to leave!"
         ~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
         "I won't take much more of your time. But I don't believe that Bennet Crabb is suited to deal with this catastrophe. Perhaps it is time for someone younger, with more gumption, to lead us."
+        #speaker: 
         The faces of the board remain steely, but I hear the crowd around me murmur turbulently in excitement and concern. -> ChildMono
     =ChildMono
         ~SET_PARAMETER("PrologueCharacters", 4)
@@ -1106,9 +1108,9 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "Um, so."
         "I know I'm not very old."
         #NPC:Temperance_Teen_Distant
-        "But when I was little, I wanted to work on the core."
+        "But when I was little, I wanted to work at the Lab."
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenHappy")
-        "I wanted to see all the artifacts the lab gets from all over the universe."
+        "I wanted to see all the artifacts the Lab gets from all over the universe!"
         "I..."
         #NPC:Temperance_Teen_Neutral
         ~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
@@ -1125,8 +1127,7 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         ~SET_PARAMETER("PrologueCharacters", 5)
         #speaker:
         #NPC:Miriam_Neutral
-        As the storyteller Miriam steps up to speak, I hear the crowd sigh and groan.
-        A few board members shake their heads and cast their eyes downward.
+        As the storyteller Miriam steps up to speak, the crowd sighs and groans.
         ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
         #NPC:Miriam_Confident
         #speaker:Miriam
@@ -1139,14 +1140,14 @@ Now that I'm closer, I can hear a bit more of the board members' speech.
         "They are distracting us- lying to us!"
         ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamSad")
         "Our planet does not matter."
-        "There are hidden planets in the multiverse, hidden in the strings that we can not see!"
+        "There are hidden planets in the multiverse, hidden in the Strings that we can not see!"
         ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
         "And there are contraptions of extraordinary power, they are hiding them from us! To collect it for themselves and-"
         #NPC:Miriam_Confident
         #speaker: 
         The Old Lady's ravings are drowned out as the crowd's murmuring and muttering rise to a crescendo.
         ~SET_PARAMETER("PrologueCharacters", 2)
-        I can't hear her words, but the woman writhes and grins at the board as spittle sprays in their direction.
+        I can't hear her words, but the storyteller writhes and grins at the board as defiant spittle sprays in their direction.
 ~PLAY_SOUND("event:/Character Barks/Bennet Crabb/BennetElection")
 #speaker:Bennet
 #NPC:Bennet_Confident
@@ -1441,7 +1442,7 @@ Let's see...
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
         "Ha! You are too easy to read my friend."
@@ -1467,7 +1468,7 @@ Let's see...
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
         "Ha! You are too easy to read."
@@ -2455,7 +2456,7 @@ Let's see...
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
         
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> julesmarketplace
@@ -2481,7 +2482,7 @@ Let's see...
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
         "Ha! You are too easy to read my friend." -> julesmarketplace
