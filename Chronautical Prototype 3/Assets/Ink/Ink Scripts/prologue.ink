@@ -2246,8 +2246,6 @@ The words engraved into the metal are barely legible.
 //black background
 ~SET_PARAMETER("TeaserGo", 1)
 ~PLAY_SOUND("event:/Sound/SFX/Prologue/reflective shift")
-~TOGGLE_MINIMAP(false)
-~TOGGLE_MINIMAP_INTERACTABLE(false)
 #speaker:???
 #sprite:None
 "Ugh..."
@@ -2428,21 +2426,21 @@ Let's see...
     #sprite:Alistair_Confident
     #speaker:Alistair
     "Well, it's quite a long story..."
-    "But it's good to see you again!"
+    "But it's so good to see you again, my friend."
     
     #speaker:Jules
     "I'm sorry, it is good to see you too..."
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSad")
-    "Where have you been? You were gone for so long, we were all worried something had happened."
+    "Where have you been? After you were removed from OPAL we all feared the worst."
     
-    +[Avoid the question] 
+    +[Been out and about] 
         
         #sprite:Alistair_Assured
         #speaker:Alistair
         "Oh, I've been out and about."
         
         #speaker:Jules
-        "Out and about? Why so coy Alistair?"
+        "Out and about? Are you okay? You know you can trust me."
         
         #speaker:Alistair
         "It's... complicated."
@@ -2450,18 +2448,17 @@ Let's see...
         ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
-        "What's his name then?"
+        "Complicated? Adventure? Girl troubles? …boy troubles?"
         
         #sprite:Alistair_Embarassed
         #speaker:Alistair
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
-        
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
-        "Ha! You are too easy to read my friend." -> julesmarketplace
+        "Ha! There's no shame in that, my friend." -> julesmarketplace
     +[Adventuring] 
         
         #sprite:Alistair_Assured
@@ -2469,7 +2466,7 @@ Let's see...
         "Oh I've been... adventuring."
         
          #speaker:Jules
-        "Adventuring? Where? Why so coy Alistair?"
+        "Just adventuring? Are you okay? You know you can trust me."
         
         #speaker:Alistair
         "It's... complicated."
@@ -2477,17 +2474,17 @@ Let's see...
         ~PLAY_SOUND("event:/Character Barks/Jules/JulesThinking")
         #speaker:Jules
         "I see." 
-        "What's his name then?"
+        "Complicated? Adventuring? Girl troubles? …boy troubles?"
         
         #sprite:Alistair_Embarassed
         #speaker:Alistair
         "Wha-"
         (How'd he guess that?!)
         "I don't know what you could be talking about..."
-        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I went to university and worked with him, he'll always be someone I can trust to help me and tell me the truth.")
+        ~CREATE_JOURNAL_OBJECT("Jules", "Person", "An old friend that I went to university with.", "Jules is a trusted friend and colleague. I interned and went to university with him, he'll always be someone I can trust to help me and tell me the truth.")
         #NPC:Jules_Confident
         #speaker:Jules
-        "Ha! You are too easy to read my friend." -> julesmarketplace
+        "Ha! There's no shame in that, my friend." -> julesmarketplace
 
 =Questions
 #speaker:Jules
@@ -2496,11 +2493,11 @@ Let's see...
 + {time == 2} [Busy?] ->Busy
 + {time == 8} [You okay?] ->Okay
 + {time == 9} [Heading out?] ->Heading
-* {seenSpeech == true && time < 6 && addressFix == false} [Practice address] ->fumbleword
+* {seenSpeech == true} {time == 5} [Practice address] ->fumbleword
 * {vaultDirector == true} [Help with vault?] ->vault
-* {seenElection == true && speechImproved == false && time < 6} [Speech topics] ->topicschange
+* {seenElection == true} [Speech topics] ->topicschange
 * {seenElection == true} [Election] ->runfordirector
-* {julesRun == true && boosted == false && time < 6} [Ego boost!] ->speechpeptalk
+* {julesRun == true} [Ego boost!] ->speechpeptalk
 + [Nothing for now] 
     #speaker:Alistair
     "I should go for now."
@@ -2525,22 +2522,21 @@ Let's see...
 + [Any side benefits?] 
     #speaker:Alistair
     #sprite:Alistair_Assured
-    "And I'm sure you benefit from getting the first look."
-    "In case any of it makes it back to market, I mean."
+    "How is that? Anything interesting?"
+    "Anything I need to know about?"
     
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesSurprised")
     #speaker:Jules
     #NPC:Jules_Neutral
     "Oh come now, you know how the lab operates."
-    "I'd be lucky if these get to see the light of day again!"
-    "Probably out of my price range, too." 
+    "Most things I get to see are quite trivial."
+    "I doubt we'll see most of that stuff again!" 
     
     #speaker:Alistair
     #sprite:Alistair_Embarassed
-    "Ha ha... Yeah, I suppose being frugal is a virtue."
+    "Oh well, that's life I suppose. Things come and go."
     #sprite:Alistair_Sad
-    (Never see the light of day, huh?)
-    (... So much will be lost...)
+    (Everything. Everything will go.)
         -> Questions
     
 + [You sure are diligent] 
@@ -2618,7 +2614,7 @@ Let's see...
         #speaker:Alistair
         #sprite:Alistair_Assured
         "I actually... acquired my own vessel. It's parked not too far from here."
-        "The Solar Winds. A fine ship."
+        "The Solar Winds. A fine ship. Never seen a thing like it."
     + [Still have unfinished business]
         #speaker:Alistair
         #sprite:Alistair_Distant
@@ -2631,7 +2627,7 @@ Let's see...
     
     #speaker:
     #NPC:Jules_Neutral
-    Before Jules can finish, the Atmos security personnel calls for him to be checked. Jules spares one last look at me before turning to go.
+    Before Jules can finish, the Élore-Nabyke Spacer security personnel calls for him to be checked. Jules spares one last look at me before turning to go.
     
     ~PLAY_SOUND("event:/Character Barks/Jules/JulesFearful")
     #speaker:Jules
@@ -2655,7 +2651,7 @@ Let's see...
 ~metShopowner = true
 #speaker:Alistair
 #sprite:Alistair_Suspicious
-"Hello there, shopkeep."
+"Hello there, friend."
 "I was wondering if I could perchance take a look at your wares, and be made aware of any local news as well."
 I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
@@ -2708,28 +2704,28 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Those must sell well]
         #speaker:Alistair
         #sprite:Alistair_Assured
-        "Elore-Nabyke is known for its drinks, right?"
-        "I'm sure people from off-planet find them delightful."
+        "Your home planet is known for its drinks, right?"
+        "Thean-C, beautiful place in the summer."
 + [Are they interested in something like that?]
         #speaker:Alistair
         #sprite:Alistair_Nervous
-        "I feel like the scholarly sort wouldn't be interested."
+        "I feel like the scholarly sort wouldn't be interested, too stuck up."
         "Are you making any sales?"
     -
     
 #speaker:Uriah
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahHappy")
-"Of course! The drinks of Elore-Nabyke are universe-renowned."
+"Of course! The drinks of Thean-C are sector-renowned."
 "Our method of bubbling, our colors..."
 "Have you tried one before?"
 
 #speaker:Alistair
 #sprite:Alistair_Assured
-"Of course, had them all the time in my intern days."
+"Never had the chance to, but I’d walk by on the way to work in my junior tech days."
 
 #speaker:Uriah
 "Oh yes of course!"
-"You mentioned you've returned."
+"It seems you've returned?"
 "Well, if you'd like some more, I'll be here!"
 -> Questions
 
@@ -2781,10 +2777,9 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         "The planet will be destroyed."
         "How can that be overcome?"
         (Perhaps they can give me some advice...)
-    -
-
+-
 #speaker:Uriah
-"My family lives on-planet."
+"My family lives on-planet now. Immigrated."
 "Though I'm often out and about traveling the Trade Seams or here at the market, I'd do anything it takes to provide for them."
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahSad")
 "That's my priority, my loved ones."
@@ -2818,7 +2813,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Uriah
 "I heard that the evacuation is going to happen in just a couple years."
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
-"Atmos vessels are nice and all, but I know I for one would like to have a travel bag."
+"Spacer vessels are nice and all, but I know I for one would like to have a travel bag."
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
@@ -2828,14 +2823,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Any other news?]
         #speaker:Alistair
         "Have you heard any other news?
-    -
-
+-
 #speaker:Uriah
 "There's been talk about the lab director election."
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahFearful")
 "People have been saying how the lab organizing the evacuation should have taken precedence."
 "Though the evacuation was probably how the director managed to get elected."
-"Sure does makes a strong campaign platform!"
+"Sure does make a strong campaign platform!"
 
 #speaker:Alistair
 #sprite:Alistair_Embarassed
@@ -2857,6 +2851,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "I am. A number of the items on sale are my family's old possessions."
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahSad")
 "It's a shame to see them go, but we can't take things like furniture with us."
+"Though then again, who can? People with bigger ships, I imagine."
 "I also have to keep an eye for any good things on sale."
 
 #speaker:Alistair
@@ -2870,8 +2865,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #sprite:Alistair_Distant
         "Isn't everything being put up for sale for the same reason?"
         "If they're not willing or able to bring it, how does that change if you have it?"
-    -
-
+-
 ~PLAY_SOUND("event:/Character Barks/Uriah/UriahThinking")
 #speaker:Uriah
 "One person's trash is another one's treasure!"
@@ -2884,7 +2878,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 #sprite:Alistair_Sad
-"That's... Lovely."
+"That's good. I'm glad you're finding even small successes here at the end."
 (I could use some of that optimism.)
 #sprite:Alistair_Confident
 "I wish you nothing but the best."
@@ -2916,13 +2910,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 =meetChild
 #speaker:Alistair
 #sprite:Alistair_Neutral
-    "Hello there! What's your name?"
+    "Hello there! Do you need help? What's your name?"
     
     #speaker:Child
-    "...Temperance."
+    "...Temperance… um. Mister."
     
     #speaker:Alistair
-    "Oh, well..."
+    "You don’t have to call me that,"
     "My name is Alistair!"
     
     #speaker:Temperance
@@ -2930,13 +2924,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     
     #speaker:Alistair
     #sprite:Alistair_Nervous
-    "You... doing alright?"
+    "You... doing alright? Your mother's stall is nearby, right?"
     
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
-    ~CREATE_JOURNAL_OBJECT("Temperance", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
+    ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
     ~metChild = true
     #speaker:Temperance
-    "I'm fine."
+    "I'm okay."
 -> childmarketplace
 
 =Questions
@@ -2953,29 +2947,29 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     "I should go for now."
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildFarewell")
     #speaker:Temperance
-    "Fine."
+    "Okay."
     -> DONE
 
 =Story
 #speaker:Alistair
 #sprite:Alistair_Assured
 "Do you like the story? She's such a good speaker, isn't she?"
-"You shouldn't take her too seriously, though."
+"I think she’s really interesting!"
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildFearful")
 #speaker:Temperance
-"..."
+"... Kinda loud lady."
 
 #speaker:Alistair
 #sprite:Alistair_Embarassed
 "I'm a fan of the story."
-"Though it does go against the lab's observations."
+"I’m glad she brings another perspective to the Lab’s observations."
 "It-"
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSurprised")
 #speaker:Temperance
 #NPC:Temperance_Confident
-"You work in the lab, mister? Really? What's it like?"
+"Do you go to the Lab? Do you work there?"
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
@@ -2984,24 +2978,24 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [Yes. I work at the lab. Definitely]
         #speaker:Alistair
         #sprite:Alistair_Assured
-        "Yes! I mean, yes. I do. Been there awhile."
+        "Sure! I mean, yes. I do. Been there awhile."
         "I get to see all the cool things they have."
-        "Access to the vault and everything."
+        "Definitely, access to the vault and everything."
         (I wish.)
 + [Not anymore, but I used to]
         #speaker:Alistair
         #sprite:Alistair_Embarassed
         "Oh, well, not anymore. I had to leave and head elsewhere for a while."
         "But I worked under Director Crabb, and alongside a good friend of mine."
-        "So I'm still in the lab's good graces."
+        "So I'm still… around. Let in."
         (Or at least Jules'. I doubt Crabb wants to see my face.)
     -
     
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildHappy")
 #speaker:Temperance
-"Wow... I wish I could work in the lab, too!"
-"They know so many cool things!"
-"It's my dream."
+"Wow... I wish I could work in the lab, too! Just like my big brothers!"
+"They do so many cool things!"
+"It's my dream. Momma says dream big!"
 
 #speaker:Alistair
 #sprite:Alistair_Sad
@@ -3019,7 +3013,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Alistair
 #sprite:Alistair_Confident
 "Woah there! You seem excited."
-"There are some delicate goods being handled, don't bump into anyone."
+"There’s a lot of people running around, I don’t want you to get hurt."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildFearful")
 #speaker:Temperance
@@ -3028,43 +3022,43 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 #sprite:Alistair_Distant
-"And steer especially clear of the lab workers."
-"Some of those artifacts cannot be replaced."
+"And watch out for the lab workers."
+"They might be too busy with their artifacts to watch out for you."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildHappy")
 #speaker:Temperance
 "Ah! But... That stuff's so cool! I wanna see it!"
 #NPC:Temperance_Confident
-"All that lab stuff is so cool."
+"What if they have, like, a sciencey floating cat!"
 
 #speaker:Alistair
 + [They do a bunch of boring stuff too, though]
         #speaker:Alistair
         #sprite:Alistair_Neutral
         "Well, I'm glad you're excited."
-        "However, it's not just holding cool devices."
-        "They do a lot of boring research and tests, too."
-        "And they have lots of regulations."
+        "It can be kinda boring sometimes too."
+        "Lots of looking at the same rocks."
+        "And they have soooooo many regulations."
 + [It really is the coolest]
         #speaker:Alistair
         #sprite:Alistair_Assured
-        "Yeah. Those folks at the lab work really hard."
-        "They really are cool. They do groundbreaking research every day. They change the world."
+        "Yeah. There’s so much cool research to do, especially at OPAL."
+        "You get to see parts of the universe coming through that lab! Changing the world!"
         #sprite:Alistair_Sad
         (...Not always for the better, in my case.)
     -
     
 #speaker:Temperance
 #NPC:Temperance_Neutral
-"Some other kids think it's boring, but I think that research stuff is the best part."
-"It's fun to know things."
-"And to learn!"
+"The other kids call it boring. But they don’t know how super cool it is!"
+"It’s okay, I know better."
+"I want to see the universe’s rocks!"
 
 #speaker:Alistair
  #sprite:Alistair_Confident
-"That's a wonderful mindset you have there."
-"You should check out the science fair they're having next year."
-"Lots of interesting topics there."
+"I’m so glad you’re interested!"
+"There’s a science fair next year, you should go!"
+"Lot’s of cool space rocks there."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSurprised")
 #speaker:Temperance
@@ -3081,39 +3075,39 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Temperance
 #NPC:Temperance_Confident
-"I already looked at all that stuff."
+"I already looked at all that stuff. I’m a really fast walker."
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 "All the lab people are busy talking to a bunch of snooty people."
 #NPC:Temperance_Neutral
-"Some man in a top hat shooed me away."
+"Some man in a top hat shooed me away. Meanie."
 
 #speaker:Alistair
 "So you're here listening to Miriam?"
-+ [She doesn't trust the lab at all]
++ [She’s pretty different]
         #speaker:Alistair
         #sprite:Alistair_Nervous
-        "She doesn't believe in the lab or any of the workers."
-        "Most of her 'stories' are wild rumors."
-+ [She does perform for anyone]
+        "She doesn't believe the normal stuff, like the lab statements."
+        "She brings a whole new perspective, huh."
++ [She’s quite the performer]
         #speaker:Alistair
         #sprite:Alistair_Embarassed
-        "I suppose she does have a certain charm in that she doesn't discriminate."
+        "She has a great way of speaking to what’s going on."
     -
     
 #speaker:Temperance
 "I know she says different things than the lab people..."
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenThinking")
-"But it's interesting. It's new."
-"The Lab can hardly know everything anyway."
-"Especially when they won't even let civilians into a science fair!
+"But it's good. Momma says think different!"
+"The Lab doesn't know all the things."
+"Especially when they won’t let me into the science fair!”
 
 #speaker:Alistair
 #sprite:Alistair_Distant
 "Ah, yes."
-"I suppose so."
+"Very true."
 
 #speaker:Temperance
-"Mhm."
+“Yeah!"
 
 -> Questions
 
@@ -3125,130 +3119,119 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #speaker:Temperance
 #NPC:Temperance_Teen_Neutral
-"Hmph. What makes you think something's wrong?"
+"I dunno, everything, I guess."
 
 #speaker:Alistair
 #sprite:Alistair_Assured
-(Hm. Seems she's in her rebellious phase. Nothing I can't handle.)
-"Well, you just seem a bit unenergetic."
+(Hm, I’m really not sure how to help her.)
+"Well, what’s bothering you?."
 "The results of the election for lab director's still hot news."
-"I figured it'd be something to be excited about."
+"There’s ah, other local upsets?"
 
 #speaker:Temperance
 "The lab director?"
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #NPC:Temperance_Teen_Distant
-"What does it matter anyway?"
+"How can it even matter now?"
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
-(Uh oh.)
+(Ah, I see.)
 + [Did you want someone else to win?]
         #speaker:Alistair
-        "Are you unsatisfied with the election results?"
-        "Even if you are, there's always next time."
-        "... I suppose."
+        "Do you not like the result?"
+        "I’m sure there will be more."
 + [Is it about the planet?]
         #speaker:Alistair
-        "Do you say that because the planet is dying?"
-        "Even if we lose the physical lab, the people will live."
-        "The research they've done will persist."
-        "Knowledge doesn't die."
+        "Because the planet will die?"
+        "I know it’s hard."
+        "It was really unexpected."
     -
     
 #speaker:Temperance
-"Yeah right."
+"Yeah, I know."
 //~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
-"Look mister, Those lab people, with all their fancy equipment, couldn't even notice the planet's core dying."
+"I just trusted them. The lab. They should have seen it."
 "And now we just have to run away?"
-"That'll always be the same, I've realized."
+"It should have been different."
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
-"They're not willing to fight for it. Not willing to change."
-"Doesn't matter who the Director is."
+"I wanted to be here longer and now I can’t."
+"Strale is my home. Where will I go now?"
 
 #speaker:Alistair
 #sprite:Alistair_Sad
-(Oh my...)
-"You should know that their instruments are finely tuned."
-"I would like to think that they are..."
-"Trying their best?"
+(Oh. I understand how that feels.)
+"I think they did everything they could."
+"I wish we could have seen it sooner too, I’m sure they all do."
+"I’m sorry you have to leave here, Temperance, I wish we could stay."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #speaker:Temperance
 #NPC:Temperance_Teen_Neutral
-"Whatever."
+“Yeah."
 -> Questions
 
 
 =Careful
 #speaker:Alistair
 #sprite:Alistair_Suspicious
-"Be careful there!"
-"You could've knocked him over."
+"Oh, careful!"
+"I almost ran into you, are you okay?"
 
 #speaker:Temperance
 #NPC:Temperance_Teen_Neutral
-"-erves it..."
+"I… I’m. I’m fine."
 
 #speaker:Alistair
-"What was that?"
+"Where are you rushing off to?"
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenAngry")
 #speaker:Temperance
 #NPC:Temperance_Teen_Distant
-"I said he probably deserves it!"
-"He works at the lab, but he's here just wasting time?"
-"He should be there! Fixing things!"
+"I don’t know!"
+"I’m not fine, I think!"
+"I feel like I should be doing something!"
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
-"Mmph..."
-(Breathe, Alistair. Breathe.)
+"Oh dear, there’s nothing you can do."
+(Maybe I should take this advice.)
 #sprite:Alistair_Distant
-(I'm letting my friendship with Jules make this personal.)
+(I’m sorry Jack. I’m so sorry for what I must do. There’s no other choice.)
 #sprite:Alistair_Sad
 "I understand that you're upset."
-+ [But there's nothing he can do]
++ [But there's nothing we can do]
         #speaker:Alistair
-        "He's just been...struggling for years on end against a monumental problem."
-        "One scientist against the weight of a world."
-        "It's kind of poetic..."
-        "Ah- but, try to just..."
-        "Talk to the Director."
-        "Then, we can support the lab to be better!"
-+ [But lashing out won't fix things]
+        "I know you feel like you need to do something,"
+        "But we can’t do anything now."
+        "We just have to evacuate when we can."
++ [But worrying won’t fix things]
         #speaker:Alistair
-        "You can't take out your feelings on him."
-        "The people in the lab are the ones closest to this issue."
-        "It's... Infuriating."
-        #sprite:Alistair_Distant
-        "To be so close to fixing something and to... To..."
-        "Not be able to fix it."
-        "..."
-        #sprite:Alistair_Sad
-        "We should be supporting each other in times like this."
+        "You can’t let the worry tear you up, okay? "
+        "I know it’s hard to know that we have to go."
+        "But we can’t do anything now."
     -
     
 ~PLAY_SOUND("event:/Character Barks/Temperance/TeenSad")
 #speaker:Temperance
 #NPC:Temperance_Teen_Neutral
 "...But..."
-"...Then who'll support me?"
+"That’s the problem, I’m powerless,"
 "I don't want the planet to die."
-"What about my feelings?"
+"What can I do?"
 
 #speaker:Alistair
 #sprite:Alistair_Embarassed
-"We support each other. If you reach out a hand, you'll be offered a hand back."
+"We can support each other. If you reach out a hand, you'll be offered a hand back."
 "There are always people who will care about you."
 
 #speaker:Temperance
 "..."
-"Do you... Care?"
+"Do you care?"
 
 #speaker:Alistair
 #sprite:Alistair_Confident
-"Yes."
+"Yes. Probably too much, about everything."
 
 #speaker:Temperance
 "..."
@@ -3257,7 +3240,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 #sprite:Alistair_Sad
-"Take care."
+"Take care. And good luck Temperance."
 (I'm... so sorry.)
 -> Questions
 
@@ -3272,46 +3255,46 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 =meetOldlady
 ~metOldlady = true
 #speaker:Alistair
-"Hello, ma'am. I couldn't help but notice, you appear to be a storyteller of sorts."
-"Could you-"
+"Good morning Miriam! How’s the crowd?"
+"Anyone picking up the stories today?"
 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Storyteller
 #NPC:Miriam_Confident
-"Storyteller? My dear boy, I am no mere storyteller, I am a purveyor of truth!"
+"Oh Alistair, they’re not just stories, my dear boy!"
 #speaker:Miriam
-"They all doubt old Miriam, but they'll soon see!"
-"The disappearance of Xitis is a sign of things to come!"
+"You should know, star-chaser."
+"Everyone can tell, Xitis’ imploding was funded from within."
 
 #speaker:Alistair
 #sprite:Alistair_Suspicious
-(She was always known as a bit of a crackpot.)
-(But she's still knowledgeable.)
-"Ah, I see.. Well, I'm sorry if I seemed doubtful of you."
+(She might be the only one who knows something around here.)
+(But no one can see that, of course.)
+"Oh I don’t mean to doubt you."
 + [I'm interested in stories]
         #speaker:Alistair
         #sprite:Alistair_Assured
-        "I merely thought you may have tales worth hearing."
         "Even stories can hold some truth."
+        "Fables are a reflection of our world, after all."
 + [I'm looking for truth]
         #speaker:Alistair
         #sprite:Alistair_Assured
-        "Truth can sometimes be stranger than fiction."
-        "I thought you may be able to tell me something I wouldn't be able to find elsewhere"
+        "You know the truth, its hidden in every story,"
+        "And I’m looking for truth I can’t find anywhere else."
     -
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Miriam
 #NPC:Miriam_Neutral
-"Then you've come to the right place!"
-~CREATE_JOURNAL_OBJECT("Storyteller", "Person", "An old woman who always has an interesting story to tell.", "Full name Miriam Harcourt, she's a local who often tells stories to anyone willing to approach her. However they seem to be nothing more than fantasy, even if she claims they're truthful.")
-"I assure you, I know what they wish I did not!"
+"I’ve got just the thing for you, dear boy!"
+~CREATE_JOURNAL_OBJECT("Storyteller", "Person", "An old woman who always has an interesting story to tell.", "Full name Miriam Harcourt, she's a local who often tells stories to anyone willing to approach her. She used to hold a high position, but left it to speak her truths, although no one believes her.")
+"Oh, they only wish they knew what I know, they only wish..."
 -> oldladymarketplace
 
 =Questions
 #speaker:Miriam
 #NPC:Miriam_Neutral
 "What curiosity do you hold, young man? I have all the answers!"
-+ {time == 1} [Disappearance of Xitis?] ->Dissapearance
++ {time == 1} [Disappearance of Xitis?] ->Disappearance
 + {time == 2} [Busy day?] ->Busy
 + {time == 3} [Can't get a crowd?] ->Crowd
 + {time == 4} [Who are you talking to?] ->Who
@@ -3324,30 +3307,29 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Whenever you seek truth, just find me again." 
 -> END
 
-=Dissapearance
+=Disappearance
 #speaker:Alistair
 #sprite:Alistair_Nervous
 "I think I overheard you say something about Xitis... Disappearing?"
-"The Director said it was destroyed."
+"The Director seems to think it was destroyed."
 
 #speaker:Miriam
-"Aha! That's what they want you to think!"
-"You see, Xitis was not destroyed, but lost!"
-"Lost in the cosmic web!"
-"The Strings that connect our vast universe are deeper than you could ever imagine..."
+"Oh of course he would say that…"
+"Xitis imploded! Corruption from within!"
+"Sound familiar?"
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
-"So deep, even a planet could be swallowed up, lost in the space between spaces!"
-"Not even the most traveled Trade Seams are truly safe..."
+"A planet’s life tied to conflicting egos…"
+"Many a planet has gone out that way, and Xitis is only an Anchor away."
 
 #speaker:Alistair
 #sprite:Alistair_Suspicious
-(She's not... entirely incorrect.)
-(Maybe Xitis has been thrown off by what's happening here with the Great Machine part?)
+(This will be a surprise later I’m sure.)
+(Well, at least I had no hand in Xitis’ fate.)
 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamSurprised")
 #speaker:Miriam
 #NPC:Miriam_Confident
-"Oh? Has the truth rendered you speechless?"
+"Oh? Young Alistair has had a thought, hmm?"
 
 #speaker:Alistair
 "Ah, I'm sorry..."
@@ -3356,38 +3338,37 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
         #sprite:Alistair_Distant
         "I'm just lost in my own thoughts, I'm sorry."
         "I find myself questioning the decisions I've made..."
-+ [I'm awed by your words]
++ [I’m feeling shocked]
         #speaker:Alistair
-        #sprite:Alistair_Assured
-        "I'm simply rattled by such a possibility...:
+        #sprite:Alistair_Distant
+        "I’m worried about that fate for other planets to come.”
         "Truly, you have opened my eyes."
     -
 
 #speaker:Miriam
 #NPC:Miriam_Neutral
-"I'm glad someone here has the sense to listen!"
+"You always were my best audience, my dear boy."
 -> END
 
 
 =Busy
 #speaker:Alistair
 #sprite:Alistair_Confident
-"Hello there! A busy day, isn't it?"
+"Good morning Miriam! Busy day, hmm?"
 
 #speaker:Miriam
-"Busy! Well!"
+"Busy! Pish! That isn’t the half of it!"
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
-"Try frustrating! I can hardly think with all this racket."
-"How am I supposed to spread truth like this?"
-"A sudden boom of products and everyone seems content to ignore the big picture..."
+"How’s a woman to preach if the crowd can’t listen?"
+"A shiny new toy and no one can see anything else anymore."
 
 #speaker:Alistair
 "Well..."
 + [It's understandable]
         #speaker:Alistair
         #sprite:Alistair_Assured
-        "There are many unique artifacts being imported."
-        "Who wouldn't be giddy to see it all?"
+        "Come on, Miriam, let the kiddies enjoy their toys."
+        "There are some pretty rare artifacts moving through here!"
 + [I'm here, I could listen]
         #speaker:Alistair
         #sprite:Alistair_Embarassed
@@ -3397,27 +3378,30 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Miriam
 #NPC:Miriam_Confident
-"Oh? Then let me tell you, these baubles are just a taste of the true wonders those lab people wish to obtain."
+"Alright what do I have for you today…."
+"Ah! Something better than a shiny new toy! Something ancient!"
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
-"Have you ever heard of the Inventor? A true miracle worker!"
-"Wars have been fought over their inventions..."
-"A disk that makes machines work as if they were new!"
-"A ring entirely impervious to harm!"
-"But the Inventor never seems to stay in one place..."
-"It's almost as if they are a ghost from the far future!"
+"You know I’ve traveled a lot, dear boy, all over this dusty blue galaxy,"
+"There’s whispers of a tale, a man of many names, many faces,"
+"Saving worlds, damning others, can you imagine?"
+"A star-chaser like you, never staying in one place."
+"The rumor is he turned the tide of a thousand battles,"
+"But no one’s seen him in a thousand years."
+"Ah well. They can’t all stay forever."
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
-"Ah... Well, er, that's very interesting."
+"Ah… I see. Too bad about that I guess."
 #sprite:Alistair_Distant
-(The future? More like a ghost from a very dark past...)
+(I’m sorry Jack, I’ll find you again, I promise.)
+(If it’s the last thing I do…)
 #sprite:Alistair_Neutral
-"I'm sure the Director would have a field day with those sorts of devices."
+"I'm sure the Director would want that guy under his thumb, huh?."
 
 #speaker:Miriam
 #NPC:Miriam_Neutral
-"Hah! As if they could handle it!"
-"Mark my words, grand things are coming."
+"Hah! As if they could handle him!"
+"Mark my words, more grand things are coming."
 "Grand things..."
 -> END
 
@@ -3425,91 +3409,88 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 =Crowd
 #speaker:Alistair
 #sprite:Alistair_Suspicious
-"What a crowd! And so many from off planet, seeing the sights."
-"I think you'll have trouble getting an audience today."
+"What a large crowd! All off-planet, seeing our sights."
+"Are you having trouble drawing them in?"
 
 #speaker:Miriam
-"That's just it! I must warn them of the danger!"
-"Out there, traveling from planet to planet..."
+"Oh travelers, so much trust in the Anchor transport cruises."
+"So much ignorant faith in our dying machines."
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamFearful")
-"The Sirens could lead them Adrift!"
+"Don’t they know it’s crumbling? More go Adrift every day!"
+"There’s even Siren spotted two Anchors away!"
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
-(She gets crazier and crazier by the day...)
-(But I should humor her, on the off chance something could be useful for me.)
+(I mean, who can fix them now? With Atlantis lost, all their tech is unrepairable. )
+(She might have something newer than I know, gods know how. Useful for me.)
 (Or Him.)
 + [Sirens?]
         #speaker:Alistair
         #sprite:Alistair_Suspicious
-        "Sirens? You mean like alarms?"
-        "How would that lead anyone Adrift?"
+        "Sirens? You don't mean what I think you mean, right?"
+        "I haven’t heard of one in… a while."
         
 + [Adrift?]
         #speaker:Alistair
         "Adrift, as in lost?"
-        "These people take secure Seams, they would have no chance of ending up somewhere other than their destination."
+        "There hasn’t been a known Adrift ship since they increased training at the Anchor facilities"
+        "Then again… known. Huh."
     -
 
 #speaker:Miriam
 #NPC:Miriam_Confident
-"The Sirens mimic the sounds of ships in distress!"
-"They lure others away from safety, into the horrors of a raw string!"
-"The crew hears their dying words on repeat..."
-"Before the vessel gets pushed to the edge of the universe, devoid of life."
-"Or worse, it becomes a ghost ship!"
+"Sirens… last sighting, oh, one hundred years ago? Cheeky, Alistair."
+"It’s too dangerous out there for a traveler like you, hearing those phantom distress calls."
+"Mimicking that call for help…"
+"Only to be lured into a trap for the kindhearted! "
+"How can one send crowds to travel at a time like this!"
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
 "These dire warnings must be heeded!"
 
 #speaker:Alistair
 #sprite:Alistair_Distant
-(What a wild rumor. Although...)
-"I see."
-"Well, I'll be extra careful when I travel from now on, and I'll be sure to pass your advice on."
+(Damn, was it one hundred years ago?)
+"It’s too dangerous out there, I’ll do what I can. Spread the word."
 
 #speaker:Miriam
 #NPC:Miriam_Neutral
-"That would do my heart good, my boy, knowing you are safe."
-"And that you keep your eyes open to the truth beneath the lies fed to us by those on high!"
+"That would do my heart good, my dear boy, knowing you are safe."
+"Keep your eyes open to the truth."
 
 #speaker:Alistair
 #sprite:Alistair_Neutral
-"..."
-"I'm glad you have my best interests in mind."
+"Thank you, Miriam, I hope you find your audience."
 -> END
 
 
 =Who
 #speaker:Alistair
 #sprite:Alistair_Suspicious
-"Er... Pardon the interruption, but who are you speaking to?"
-"You appear to not have an audience today."
-"And there isn't really anyone else."
+"Who is your audience today, Miriam?"
+"I don’t see anyone around today."
 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
 #speaker:Miriam
-"Ah, but my boy, you're here, yes? Here, at this intersection of fate."
-"There are grand things about."
-"Grand things."
-"Oh so grand."
-"Have you heard of it?"
+"My dear boy! My favorite audience of one!"
+"Fate has us together once more!"
+"There are grand things afoot!"
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
-(Uh oh.)
+(Oh?)
 + [I haven't...?]
         #speaker:Alistair
         #sprite:Alistair_Sad
         "I can't say that I have."
-        "Well, I've heard a great many things."
-        "But somehow I doubt I've heard what it is you're referring to."
+        "Well, there’s been a variety of news abound."
+        "But nothing big enough for the great Miriam."
         
 + [I have...?]
         #speaker:Alistair
         #sprite:Alistair_Assured
         "I certainly get around to many places, and hear many things."
         "I think I may know what you mean."
-        (Hopefully she bought that.)
+        (Ah… Not just lying to my friends now…)
     -
 
 #speaker:Miriam
@@ -3543,7 +3524,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "Miriam. I assume you've heard the announcement."
 
 #speaker:Miriam
-"Yes. The time has come."
+"Yes. The time has come. As unto Xitis, unto us as well."
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
@@ -3557,8 +3538,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 
 #speaker:Alistair
 #sprite:Alistair_Distant
-"I..."
-"Don't think it's their fault..."
+"I mean, we all try. I would hope."
 
 #speaker:Miriam
 #NPC:Miriam_Neutral
@@ -3574,21 +3554,22 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 #speaker:Miriam
 "It's just like Xitis all over again." 
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamAngry")
-"Doesn't anyone see? It's a pattern! A plot!"
+"Doesn't anyone see? Our lives will just be another story!"
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
-(I can't contradict her without revealing too much!)
-"Please, don't do anything crazy."
+(I’m sorry, I’m so sorry.)
+"Please, just tell the story well, keep it alive for me."
 
 #speaker:Miriam
-"Mhm."
+"I will, my dear boy. I will."
 
 #speaker:Alistair
-(Curses.)
+(There’s nothing I could do.)
 "I'll... See you around."
 "Be safe Miriam."
 
 #speaker:Miriam
 "Bah! Yes, yes..."
 -> END
+
