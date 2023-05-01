@@ -3058,7 +3058,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
  #sprite:Alistair_Confident
 "I’m so glad you’re interested!"
 "There’s a science fair next year, you should go!"
-"Lot’s of cool space rocks there."
+"Lots of cool space rocks there."
 
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildSurprised")
 #speaker:Temperance
@@ -3396,7 +3396,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 (I’m sorry Jack, I’ll find you again, I promise.)
 (If it’s the last thing I do…)
 #sprite:Alistair_Neutral
-"I'm sure the Director would want that guy under his thumb, huh?."
+"I'm sure the Director would want that guy under his thumb, huh?"
 
 #speaker:Miriam
 #NPC:Miriam_Neutral
@@ -3474,6 +3474,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 "My dear boy! My favorite audience of one!"
 "Fate has us together once more!"
 "There are grand things afoot!"
+"Have you heard?"
 
 #speaker:Alistair
 #sprite:Alistair_Nervous
