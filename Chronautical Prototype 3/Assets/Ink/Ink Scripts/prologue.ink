@@ -2904,7 +2904,13 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 ===childmarketplace===
 ~SET_PARAMETER("PrologueCharacters", 4)
 ~PLAY_SOUND("event:/Character Barks/Temperance/ChildGreeting")
-#NPC:Temperance_Neutral
+{ time < 5:
+	#NPC:Temperance_Neutral
+	"Hm?"
+- else:
+	#NPC:Temperance_Teen_Neutral
+	"Hm?"
+}
 {metChild: -> Questions| -> meetChild}
 
 =meetChild
@@ -2926,16 +2932,16 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
     #sprite:Alistair_Nervous
     "You... doing alright? Your mother's stall is nearby, right?"
     
+    #speaker:Temperance
+    "Yeah."
     ~PLAY_SOUND("event:/Character Barks/Temperance/ChildAngry")
     ~CREATE_JOURNAL_OBJECT("Child", "Person", "A young child who wishes to work in the lab one day. Her parents are leaving the planet with her early.", "Temperance Ward is her full name, a young person who always seems to speak her mind regardless of the situation. She wishes to work at the lab, but that's nothing but a pipe dream now.")
     ~metChild = true
-    #speaker:Temperance
     "I'm okay."
 -> childmarketplace
 
 =Questions
 #speaker:Temperance
-#NPC:Temperance_Neutral
 "... What do you want?"
     + {time == 1} [Like the story?] ->Story
     + {time == 2} [Exciting stuff, huh?] ->Exciting

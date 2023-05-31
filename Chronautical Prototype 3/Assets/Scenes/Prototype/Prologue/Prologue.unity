@@ -9360,7 +9360,7 @@ GameObject:
   - component: {fileID: 413359325}
   - component: {fileID: 413359326}
   m_Layer: 0
-  m_Name: Temperance
+  m_Name: Child
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
