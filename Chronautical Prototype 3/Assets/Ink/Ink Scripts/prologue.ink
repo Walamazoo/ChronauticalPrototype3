@@ -3279,7 +3279,7 @@ I glance at their nametag. 'Uriah Bramble.' They greet me with a warm smile.
 + [I'm looking for truth]
         #speaker:Alistair
         #sprite:Alistair_Assured
-        "You know the truth, its hidden in every story,"
+        "You know the truth, it's hidden in every story,"
         "And I’m looking for truth I can’t find anywhere else."
     -
 ~PLAY_SOUND("event:/Character Barks/Miriam/MiriamHappy")
